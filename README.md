@@ -1,6 +1,6 @@
 <img src="http://mypy-lang.org/static/mypy_light.svg" alt="mypy logo" width="300px"/>
 
-# Mypy stubs for the PySide2 (Python for Qt5)
+# Mypy stubs for the PySide2 (Qt5 for Python)
 
 This repository holds the stubs of the *Qt5 for Python/PySide2* framework. The stubs are based on the stubs
 which are delivered with the *Qt5 for python/PySide2*.
