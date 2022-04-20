@@ -12284,6 +12284,12 @@ class Signal(object):
     @staticmethod
     def __init__(*types:type, name:typing.Optional[str]=..., arguments:typing.Optional[str]=...) -> None: ...
 
+    @typing.overload
+    def __get__(self, instance: None, owner: typing.Type["QObject"]) -> "Signal": ...
+    @typing.overload
+    def __get__(self, instance: "QObject", owner: typing.Type["QObject"]) -> "SignalInstance": ...
+
+reveal_type(Signal)
 
 class SignalInstance(object):
     @staticmethod
