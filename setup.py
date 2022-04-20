@@ -5,7 +5,7 @@ from version import PYSIDE2_VERSION, STUB_VERSION
 
 setup(
     name="PySide2-stubs",
-    url="",
+    url="https://github.com/bluebird75/pyside2-stubs",
     author="Philippe Fremy",
     maintainer_email="phil.fremy@free.fr",
     description="PEP561 stub files for the PySide2/Qt5 for Python framework",
