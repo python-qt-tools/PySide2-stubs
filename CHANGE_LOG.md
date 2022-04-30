@@ -6,3 +6,4 @@
 * fix QTreeWidget.topLevelItem() returning possibly None
 * fix QMessageBox.StandardButton or combinations
 * fix QProcess.ExitStatus enum conversion to int
+* fix QAction.setShortcut() to accept string as argument
