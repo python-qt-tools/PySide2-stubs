@@ -3,6 +3,7 @@ from pathlib import Path
 
 import pytest
 from mypy import api
+from PySide2.QtWidgets import QApplication
 
 TESTS_DIR = Path(__file__).parent
 
@@ -13,6 +14,15 @@ def gen_file_list():
         if not path.name.startswith("test_") and not path.name.startswith('X'):
             yield path
 
+
+
+@pytest.fixture(name="qapplication", scope="session")
+def qapplication_fixture():
+    application = QApplication.instance()
+    if application is None:
+        application = QApplication([])
+
+    return application
 
 @pytest.mark.parametrize(
     "filepath",
@@ -35,7 +45,7 @@ def test_stubs(filepath: Path) -> None:
 @pytest.mark.parametrize(
     "filepath", list(gen_file_list()), ids=[v.name for v in gen_file_list()]
 )
-def test_files(filepath):
+def test_files(filepath, qapplication):
     """Run the test files to make sure they work properly."""
     code = filepath.read_text(encoding="utf-8")
     exec(compile(code, filepath, "exec"), {})

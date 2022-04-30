@@ -18,8 +18,6 @@ class SomeClassWithSignal(QObject):
         pass
 
 
-app = QCoreApplication([])
-
 instance = SomeClassWithSignal()
 
 instance.signal_no_arg.connect(instance.my_slot_no_arg)
