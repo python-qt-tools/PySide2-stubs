@@ -7,3 +7,4 @@
 * fix QMessageBox.StandardButton or combinations
 * fix QProcess.ExitStatus enum conversion to int
 * fix QAction.setShortcut() to accept string as argument
+* fix QTreeWidgetItem comparison with < 
