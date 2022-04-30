@@ -6698,6 +6698,7 @@ class QProcess(PySide2.QtCore.QIODevice):
     class ExitStatus(object):
         NormalExit               : QProcess.ExitStatus = ... # 0x0
         CrashExit                : QProcess.ExitStatus = ... # 0x1
+        def __index__(self) -> int: ...
 
     class InputChannelMode(object):
         ManagedInputChannel      : QProcess.InputChannelMode = ... # 0x0

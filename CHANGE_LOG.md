@@ -5,3 +5,4 @@
 * fix QProgressDialog.setCancelButton() accepting None
 * fix QTreeWidget.topLevelItem() returning possibly None
 * fix QMessageBox.StandardButton or combinations
+* fix QProcess.ExitStatus enum conversion to int
