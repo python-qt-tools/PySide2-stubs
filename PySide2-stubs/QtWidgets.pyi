@@ -5534,49 +5534,56 @@ class QMenuBar(PySide2.QtWidgets.QWidget):
 
 
 class QMessageBox(PySide2.QtWidgets.QDialog):
-    ButtonMask               : QMessageBox = ... # -0x301
-    InvalidRole              : QMessageBox = ... # -0x1
-    AcceptRole               : QMessageBox = ... # 0x0
-    NoButton                 : QMessageBox = ... # 0x0
-    NoIcon                   : QMessageBox = ... # 0x0
-    Information              : QMessageBox = ... # 0x1
-    RejectRole               : QMessageBox = ... # 0x1
-    DestructiveRole          : QMessageBox = ... # 0x2
-    Warning                  : QMessageBox = ... # 0x2
-    ActionRole               : QMessageBox = ... # 0x3
-    Critical                 : QMessageBox = ... # 0x3
-    HelpRole                 : QMessageBox = ... # 0x4
-    Question                 : QMessageBox = ... # 0x4
-    YesRole                  : QMessageBox = ... # 0x5
-    NoRole                   : QMessageBox = ... # 0x6
-    ResetRole                : QMessageBox = ... # 0x7
-    ApplyRole                : QMessageBox = ... # 0x8
-    NRoles                   : QMessageBox = ... # 0x9
-    Default                  : QMessageBox = ... # 0x100
-    Escape                   : QMessageBox = ... # 0x200
-    FlagMask                 : QMessageBox = ... # 0x300
-    FirstButton              : QMessageBox = ... # 0x400
-    Ok                       : QMessageBox = ... # 0x400
-    Save                     : QMessageBox = ... # 0x800
-    SaveAll                  : QMessageBox = ... # 0x1000
-    Open                     : QMessageBox = ... # 0x2000
-    Yes                      : QMessageBox = ... # 0x4000
-    YesAll                   : QMessageBox = ... # 0x8000
-    YesToAll                 : QMessageBox = ... # 0x8000
-    No                       : QMessageBox = ... # 0x10000
-    NoAll                    : QMessageBox = ... # 0x20000
-    NoToAll                  : QMessageBox = ... # 0x20000
-    Abort                    : QMessageBox = ... # 0x40000
-    Retry                    : QMessageBox = ... # 0x80000
-    Ignore                   : QMessageBox = ... # 0x100000
-    Close                    : QMessageBox = ... # 0x200000
-    Cancel                   : QMessageBox = ... # 0x400000
-    Discard                  : QMessageBox = ... # 0x800000
-    Help                     : QMessageBox = ... # 0x1000000
-    Apply                    : QMessageBox = ... # 0x2000000
-    Reset                    : QMessageBox = ... # 0x4000000
-    LastButton               : QMessageBox = ... # 0x8000000
-    RestoreDefaults          : QMessageBox = ... # 0x8000000
+
+    # ButtonRole
+    InvalidRole:    QMessageBox.ButtonRole = ...  # -0x1
+    AcceptRole:     QMessageBox.ButtonRole = ...  # 0x0
+    RejectRole:     QMessageBox.ButtonRole = ...  # 0x1
+    DestructiveRole:QMessageBox.ButtonRole = ...  # 0x2
+    ActionRole:     QMessageBox.ButtonRole = ...  # 0x3
+    HelpRole:       QMessageBox.ButtonRole = ...  # 0x4
+    YesRole:        QMessageBox.ButtonRole = ...  # 0x5
+    NoRole:         QMessageBox.ButtonRole = ...  # 0x6
+    ResetRole:      QMessageBox.ButtonRole = ...  # 0x7
+    ApplyRole:      QMessageBox.ButtonRole = ...  # 0x8
+    NRoles:         QMessageBox.ButtonRole = ...  # 0x9
+
+    # Icon
+    NoIcon:         QMessageBox.Icon = ...  # 0x0
+    Information:    QMessageBox.Icon = ...  # 0x1
+    Warning:        QMessageBox.Icon = ...  # 0x2
+    Critical:       QMessageBox.Icon = ...  # 0x3
+    Question:       QMessageBox.Icon = ...  # 0x4
+
+    # StandardButton
+    ButtonMask:     QMessageBox.StandardButton = ...  # -0x301
+    NoButton:       QMessageBox.StandardButton = ...  # 0x0
+    Default:        QMessageBox.StandardButton = ...  # 0x100
+    Escape:         QMessageBox.StandardButton = ...  # 0x200
+    FlagMask:       QMessageBox.StandardButton = ...  # 0x300
+    FirstButton:    QMessageBox.StandardButton = ...  # 0x400
+    Ok:             QMessageBox.StandardButton = ...  # 0x400
+    Save:           QMessageBox.StandardButton = ...  # 0x800
+    SaveAll:        QMessageBox.StandardButton = ...  # 0x1000
+    Open:           QMessageBox.StandardButton = ...  # 0x2000
+    Yes:            QMessageBox.StandardButton = ...  # 0x4000
+    YesAll:         QMessageBox.StandardButton = ...  # 0x8000
+    YesToAll:       QMessageBox.StandardButton = ...  # 0x8000
+    No:             QMessageBox.StandardButton = ...  # 0x10000
+    NoAll:          QMessageBox.StandardButton = ...  # 0x20000
+    NoToAll:        QMessageBox.StandardButton = ...  # 0x20000
+    Abort:          QMessageBox.StandardButton = ...  # 0x40000
+    Retry:          QMessageBox.StandardButton = ...  # 0x80000
+    Ignore:         QMessageBox.StandardButton = ...  # 0x100000
+    Close:          QMessageBox.StandardButton = ...  # 0x200000
+    Cancel:         QMessageBox.StandardButton = ...  # 0x400000
+    Discard:        QMessageBox.StandardButton = ...  # 0x800000
+    Help:           QMessageBox.StandardButton = ...  # 0x1000000
+    Apply:          QMessageBox.StandardButton = ...  # 0x2000000
+    Reset:          QMessageBox.StandardButton = ...  # 0x4000000
+    LastButton:     QMessageBox.StandardButton = ...  # 0x8000000
+    RestoreDefaults: QMessageBox.StandardButton = ...  # 0x8000000
+
 
     class ButtonRole(object):
         InvalidRole              : QMessageBox.ButtonRole = ... # -0x1
@@ -5627,7 +5634,12 @@ class QMessageBox(PySide2.QtWidgets.QDialog):
         LastButton               : QMessageBox.StandardButton = ... # 0x8000000
         RestoreDefaults          : QMessageBox.StandardButton = ... # 0x8000000
 
-    class StandardButtons(object): ...
+        def __init__(self, other: typing.Union[QMessageBox.StandardButton, int] = ...) -> QMessageBox.StandardButtons: ...
+        def __or__(self, other: typing.Union[QMessageBox.StandardButton, int]) -> QMessageBox.StandardButtons: ...
+
+    class StandardButtons(object):
+        def __init__(self, other: typing.Union[QMessageBox.StandardButtons, QMessageBox.StandardButton, int] = ...) -> QMessageBox.StandardButtons: ...
+        def __or__(self, other: typing.Union[QMessageBox.StandardButtons, QMessageBox.StandardButton, int]) -> QMessageBox.StandardButtons: ...
 
     @typing.overload
     def __init__(self, icon:PySide2.QtWidgets.QMessageBox.Icon, title:str, text:str, buttons:PySide2.QtWidgets.QMessageBox.StandardButtons=..., parent:typing.Optional[PySide2.QtWidgets.QWidget]=..., flags:PySide2.QtCore.Qt.WindowFlags=...) -> None: ...
