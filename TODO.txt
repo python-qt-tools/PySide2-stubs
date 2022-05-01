@@ -1,0 +1,13 @@
+- Signal.connect() arguments are dead wrong
+- All nested QFlags are incorrect in the parent class
+    Example:
+
+    class Qt:
+        [...]
+        AnchorLeft: Qt = ...
+
+    [...]
+    class AnchorPoint:
+        AnchorLeft: AnchorPoint = ...
+
+    The first declaration has an incorrect type
