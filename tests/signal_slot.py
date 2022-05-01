@@ -1,6 +1,6 @@
 import typing
 
-from PySide2.QtCore import Signal, QCoreApplication, QObject
+from PySide2.QtCore import Signal, QObject
 
 
 class SomeClassWithSignal(QObject):
@@ -20,11 +20,14 @@ class SomeClassWithSignal(QObject):
 
 instance = SomeClassWithSignal()
 
-instance.signal_no_arg.connect(instance.my_slot_no_arg)
+connection = True
+connection = instance.signal_no_arg.connect(instance.my_slot_no_arg)
 instance.signal_no_arg.emit()
 
-instance.signal_str.connect(instance.my_slot_str)
+connection = instance.signal_str.connect(instance.my_slot_str)
 instance.signal_str.emit('toto')
+
+
 # instance.signal.disconnect(connection)
 
 # SomeClassWithSignal.signal.__get__

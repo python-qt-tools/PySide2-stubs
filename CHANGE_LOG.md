@@ -8,3 +8,4 @@
 * fix QProcess.ExitStatus enum conversion to int
 * fix QAction.setShortcut() to accept string as argument
 * fix QTreeWidgetItem comparison with < 
+* fix Signal.connect() return value to bool instead of None
