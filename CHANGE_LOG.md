@@ -10,3 +10,4 @@
 * fix QTreeWidgetItem comparison with < 
 * fix Signal.connect() return value to bool instead of None
 * fix QTimer.timeout undeclared signal
+* support all QSize and QSizeF operations
