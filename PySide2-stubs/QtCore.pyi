@@ -8826,6 +8826,8 @@ class QTimeZone(Shiboken.Object):
 
 class QTimer(PySide2.QtCore.QObject):
 
+    timeout = Signal()
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def interval(self) -> int: ...

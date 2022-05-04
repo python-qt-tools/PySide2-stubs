@@ -9,3 +9,4 @@
 * fix QAction.setShortcut() to accept string as argument
 * fix QTreeWidgetItem comparison with < 
 * fix Signal.connect() return value to bool instead of None
+* fix QTimer.timeout undeclared signal
