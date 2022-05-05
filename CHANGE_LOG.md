@@ -11,4 +11,5 @@
 * fix Signal.connect() return value to bool instead of None
 * fix QTimer.timeout undeclared signal
 * support all QSize and QSizeF operations
-* improve signatore of operations on QPolygon
+* improve signature of operations on QPolygon
+* improve QPainter methods which use lists of QPoint in entry
