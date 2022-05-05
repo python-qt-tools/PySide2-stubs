@@ -13,3 +13,4 @@
 * support all QSize and QSizeF operations
 * improve signature of operations on QPolygon
 * improve QPainter methods which use lists of QPoint in entry
+* improve QObject.findChildren() type information
