@@ -15,3 +15,4 @@
 * improve QPainter methods which use lists of QPoint in entry
 * improve QObject.findChildren() type information
 * fix QLineEdit.setText() to accept None
+* add QDialogButtonBox.StandardButton __or__ operations
