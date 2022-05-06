@@ -14,3 +14,4 @@
 * improve signature of operations on QPolygon
 * improve QPainter methods which use lists of QPoint in entry
 * improve QObject.findChildren() type information
+* fix QLineEdit.setText() to accept None
