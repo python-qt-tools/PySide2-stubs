@@ -16,3 +16,4 @@
 * improve QObject.findChildren() type information
 * fix QLineEdit.setText() to accept None
 * add QDialogButtonBox.StandardButton __or__ operations
+* fix Slot() argument and return value type-checking
