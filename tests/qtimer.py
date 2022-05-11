@@ -1,9 +1,9 @@
-from typing_extensions import assert_type
+# from typing_extensions import assert_type
 from PySide2.QtCore import QTimer, Signal, SignalInstance
 
-assert_type(QTimer.timeout, Signal)
+timout_sig_unbound: Signal = QTimer.timeout
 
 timer = QTimer()
-assert_type(timer.timeout, SignalInstance)
+timeout_sig_bount: SignalInstance = timer.timeout
 
 timer.timeout.connect(lambda: None)
