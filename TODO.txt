@@ -1,3 +1,6 @@
+
+General TODO:
+=============
 - Signal.connect() arguments are dead wrong
 - All nested QFlags are incorrect in the parent class
     Example:
@@ -11,3 +14,21 @@
         AnchorLeft: AnchorPoint = ...
 
     The first declaration has an incorrect type
+
+- QGuiApplication() and QApplication() are missing the instance() method
+- all method in QCoreApplication are static ???
+- all classes are missing signals
+- some functions are decorated with @staticmethod !
+- more tests from PyQt5-stubs
+
+
+
+First Release:
+==============
+- CI running in GitHub
+- setup.cfg working
+- all platform specific stubs
+
+Done:
+====
+- all tests from PyQt5 working
