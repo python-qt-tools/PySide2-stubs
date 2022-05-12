@@ -20,7 +20,7 @@ def gen_file_list():
 def qapplication_fixture():
     application = QApplication.instance()
     if application is None:
-        application = QApplication([])
+        application = QApplication(['-platform', 'minimal'])
 
     return application
 
