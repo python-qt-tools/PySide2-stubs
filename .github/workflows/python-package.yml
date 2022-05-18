@@ -10,7 +10,7 @@ on:
 jobs:
   test-ubuntu-python36:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     strategy:
       fail-fast: true
       matrix:
@@ -27,6 +27,7 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install pytest
         pip install -e .
+        pip freeze
     - name: Test with pytest
       run: |
         pytest
