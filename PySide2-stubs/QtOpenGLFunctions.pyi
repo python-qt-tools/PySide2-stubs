@@ -45,17 +45,9 @@ PySide2.QtOpenGLFunctions, except for defaults which are replaced by "...".
 
 # Module PySide2.QtOpenGLFunctions
 import PySide2
-try:
-    import typing
-except ImportError:
-    from PySide2.support.signature import typing
-from PySide2.support.signature.mapping import (
-    Virtual, Missing, Invalid, Default, Instance)
-
-class Object(object): pass
+import typing
 
 import shiboken2 as Shiboken
-Shiboken.Object = Object
 
 import PySide2.QtGui
 import PySide2.QtOpenGLFunctions

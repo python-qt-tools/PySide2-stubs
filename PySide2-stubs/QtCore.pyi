@@ -43,15 +43,12 @@ This file contains the exact signatures for all functions in module
 PySide2.QtCore, except for defaults which are replaced by "...".
 """
 
-import typing
-
 # Module PySide2.QtCore
 import PySide2
 
-class Object(object): pass
+import typing
 
 import shiboken2 as Shiboken
-Shiboken.Object = Object
 
 import PySide2.QtCore
 
