@@ -17,3 +17,4 @@
 * fix QLineEdit.setText() to accept None
 * add QDialogButtonBox.StandardButton __or__ operations
 * fix Slot() argument and return value type-checking
+* fix missing methods being undetected for all Qt objects
