@@ -1,12 +1,14 @@
 <img src="http://mypy-lang.org/static/mypy_light.svg" alt="mypy logo" width="300px"/>
+[![Continuous Integration](https://github.com/python-qt-tools/PySide2-stubs/actions/workflows/python-package.yml/badge.svg)](https://github.com/python-qt-tools/PySide2-stubs/actions/workflows/python-package.yml)
+
 
 # Mypy stubs for the PySide2 (Qt5 for Python)
 
-Maintainer: Philippe Fremy, with inspiration from the PyQt5-stubs project.
+Maintainer: Philippe Fremy, with inspiration from the [PyQt5-stubs project](https://github.com/python-qt-tools/PyQt5-stubs/).
 
 If you want to use `mypy` with your `PySide2` project and found the official stubs to be of insufficient quality, 
-you are at the right place. This project improves significantly the official stubs delivered by Qt for PySide2.
-The work here takes heavy inspiration from the PyQt5-stubs and PyQt6-stubs projects.
+you are at the right place. This project improves significantly the official stubs delivered by [Qt for PySide2](https://pypi.org/project/PySide2/).
+The work here takes heavy inspiration from the [PyQt5-stubs](https://github.com/python-qt-tools/PyQt5-stubs/) and [PyQt6-stubs](https://github.com/python-qt-tools/PyQt6-stubs/) projects.
 
 Improvements include:
 * fix Signal to make it accept method emit()
@@ -21,7 +23,7 @@ Improvements include:
 * support all QSize and QSizeF operations
 * improve signature of operations on QPolygon
 * fix QLineEdit.setText() to accept None
-* add QDialogButtonBox.StandardButton __or__ operations
+* add QDialogButtonBox.StandardButton `__or__` operations
 * fix missing methods being undetected for all Qt objects
 
 See CHANGE_LOG.md for more details.
