@@ -1,6 +1,6 @@
 <img src="http://mypy-lang.org/static/mypy_light.svg" alt="mypy logo" width="300px"/>
 
-[![CI](https://github.com/python-qt-tools/PySide2-stubs/actions/workflows/python-package.yml/badge.svg)](https://github.com/python-qt-tools/PySide2-stubs/actions/workflows/python-package.yml)
+[![CI](https://github.com/python-qt-tools/PySide2-stubs/actions/workflows/ci.yml/badge.svg)](https://github.com/python-qt-tools/PySide2-stubs/actions/workflows/ci.yml)
 
 
 # Mypy stubs for the PySide2 (Qt5 for Python)
