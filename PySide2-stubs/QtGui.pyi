@@ -43,6 +43,8 @@ This file contains the exact signatures for all functions in module
 PySide2.QtGui, except for defaults which are replaced by "...".
 """
 
+import sys
+
 # Module PySide2.QtGui
 import PySide2
 import typing
@@ -902,6 +904,8 @@ class QColor(Shiboken.Object):
     def __init__(self, r:int, g:int, b:int, a:int=...) -> None: ...
     @typing.overload
     def __init__(self, rgb:int) -> None: ...
+    @typing.overload
+    def __init__(self, spec:PySide2.QtGui.QColor.Spec, a1:int, a2:int, a3:int, a4:int, a5:int=...) -> None: ...
 
     @staticmethod
     def __copy__() -> None: ...

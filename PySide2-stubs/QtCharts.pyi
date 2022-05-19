@@ -43,6 +43,8 @@ This file contains the exact signatures for all functions in module
 PySide2.QtCharts, except for defaults which are replaced by "...".
 """
 
+import sys
+
 # Module PySide2.QtCharts
 import PySide2
 import typing
@@ -684,6 +686,8 @@ class QtCharts(Shiboken.Object):
         def rubberBand(self) -> PySide2.QtCharts.QtCharts.QChartView.RubberBands: ...
         def setChart(self, chart:PySide2.QtCharts.QtCharts.QChart) -> None: ...
         def setRubberBand(self, rubberBands:PySide2.QtCharts.QtCharts.QChartView.RubberBands) -> None: ...
+        if sys.platform() == 'darwin':
+            def wheelEvent(self, event:PySide2.QtGui.QWheelEvent) -> None: ...
 
     class QDateTimeAxis(PySide2.QtCharts.QAbstractAxis):
 

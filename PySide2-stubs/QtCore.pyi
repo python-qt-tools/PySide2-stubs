@@ -43,6 +43,8 @@ This file contains the exact signatures for all functions in module
 PySide2.QtCore, except for defaults which are replaced by "...".
 """
 
+import sys
+
 # Module PySide2.QtCore
 import PySide2
 
@@ -146,7 +148,8 @@ class QAbstractEventDispatcher(PySide2.QtCore.QObject):
     def instance(thread:typing.Optional[PySide2.QtCore.QThread]=...) -> PySide2.QtCore.QAbstractEventDispatcher: ...
     def interrupt(self) -> None: ...
     def processEvents(self, flags:PySide2.QtCore.QEventLoop.ProcessEventsFlags) -> bool: ...
-    def registerEventNotifier(self, notifier:PySide2.QtCore.QWinEventNotifier) -> bool: ...
+    if sys.platform() == 'win32':
+        def registerEventNotifier(self, notifier:PySide2.QtCore.QWinEventNotifier) -> bool: ...
     def registerSocketNotifier(self, notifier:PySide2.QtCore.QSocketNotifier) -> None: ...
     @typing.overload
     def registerTimer(self, interval:int, timerType:PySide2.QtCore.Qt.TimerType, object:PySide2.QtCore.QObject) -> int: ...
@@ -156,7 +159,8 @@ class QAbstractEventDispatcher(PySide2.QtCore.QObject):
     def remainingTime(self, timerId:int) -> int: ...
     def removeNativeEventFilter(self, filterObj:PySide2.QtCore.QAbstractNativeEventFilter) -> None: ...
     def startingUp(self) -> None: ...
-    def unregisterEventNotifier(self, notifier:PySide2.QtCore.QWinEventNotifier) -> None: ...
+    if sys.platform() == 'win32':
+        def unregisterEventNotifier(self, notifier:PySide2.QtCore.QWinEventNotifier) -> None: ...
     def unregisterSocketNotifier(self, notifier:PySide2.QtCore.QSocketNotifier) -> None: ...
     def unregisterTimer(self, timerId:int) -> bool: ...
     def unregisterTimers(self, object:PySide2.QtCore.QObject) -> bool: ...
@@ -6745,7 +6749,8 @@ class QProcess(PySide2.QtCore.QIODevice):
     def inputChannelMode(self) -> PySide2.QtCore.QProcess.InputChannelMode: ...
     def isSequential(self) -> bool: ...
     def kill(self) -> None: ...
-    def nativeArguments(self) -> str: ...
+    if sys.platform() == 'win32':
+        def nativeArguments(self) -> str: ...
     @staticmethod
     def nullDevice() -> str: ...
     def open(self, mode:PySide2.QtCore.QIODevice.OpenMode=...) -> bool: ...
@@ -6761,7 +6766,8 @@ class QProcess(PySide2.QtCore.QIODevice):
     def setArguments(self, arguments:typing.Sequence) -> None: ...
     def setEnvironment(self, environment:typing.Sequence) -> None: ...
     def setInputChannelMode(self, mode:PySide2.QtCore.QProcess.InputChannelMode) -> None: ...
-    def setNativeArguments(self, arguments:str) -> None: ...
+    if sys.platform() == 'win32':
+        def setNativeArguments(self, arguments:str) -> None: ...
     def setProcessChannelMode(self, mode:PySide2.QtCore.QProcess.ProcessChannelMode) -> None: ...
     def setProcessEnvironment(self, environment:PySide2.QtCore.QProcessEnvironment) -> None: ...
     def setProcessState(self, state:PySide2.QtCore.QProcess.ProcessState) -> None: ...
@@ -7467,8 +7473,9 @@ class QSettings(PySide2.QtCore.QObject):
     IniFormat                : QSettings = ... # 0x1
     SystemScope              : QSettings = ... # 0x1
     FormatError              : QSettings = ... # 0x2
-    Registry32Format         : QSettings = ... # 0x2
-    Registry64Format         : QSettings = ... # 0x3
+    if sys.platform() == 'win32':
+        Registry32Format         : QSettings = ... # 0x2
+        Registry64Format         : QSettings = ... # 0x3
     InvalidFormat            : QSettings = ... # 0x10
     CustomFormat1            : QSettings = ... # 0x11
     CustomFormat2            : QSettings = ... # 0x12
@@ -7490,8 +7497,9 @@ class QSettings(PySide2.QtCore.QObject):
     class Format(object):
         NativeFormat             : QSettings.Format = ... # 0x0
         IniFormat                : QSettings.Format = ... # 0x1
-        Registry32Format         : QSettings.Format = ... # 0x2
-        Registry64Format         : QSettings.Format = ... # 0x3
+        if sys.platform() == 'win32':
+            Registry32Format         : QSettings.Format = ... # 0x2
+            Registry64Format         : QSettings.Format = ... # 0x3
         InvalidFormat            : QSettings.Format = ... # 0x10
         CustomFormat1            : QSettings.Format = ... # 0x11
         CustomFormat2            : QSettings.Format = ... # 0x12
@@ -7739,7 +7747,8 @@ class QSocketDescriptor(Shiboken.Object):
     @staticmethod
     def __copy__() -> None: ...
     def isValid(self) -> bool: ...
-    def winHandle(self) -> int: ...
+    if sys.platform() == 'win32':
+        def winHandle(self) -> int: ...
 
 
 class QSocketNotifier(PySide2.QtCore.QObject):
@@ -8094,40 +8103,194 @@ class QStringListModel(PySide2.QtCore.QAbstractListModel):
 
 class QSysInfo(Shiboken.Object):
     BigEndian                : QSysInfo = ... # 0x0
-    WV_None                  : QSysInfo = ... # 0x0
     ByteOrder                : QSysInfo = ... # 0x1
     LittleEndian             : QSysInfo = ... # 0x1
-    WV_32s                   : QSysInfo = ... # 0x1
-    WV_95                    : QSysInfo = ... # 0x2
-    WV_98                    : QSysInfo = ... # 0x3
-    WV_Me                    : QSysInfo = ... # 0x4
-    WV_DOS_based             : QSysInfo = ... # 0xf
-    WV_4_0                   : QSysInfo = ... # 0x10
-    WV_NT                    : QSysInfo = ... # 0x10
-    WV_2000                  : QSysInfo = ... # 0x20
-    WV_5_0                   : QSysInfo = ... # 0x20
-    WV_5_1                   : QSysInfo = ... # 0x30
-    WV_XP                    : QSysInfo = ... # 0x30
-    WV_2003                  : QSysInfo = ... # 0x40
-    WV_5_2                   : QSysInfo = ... # 0x40
     WordSize                 : QSysInfo = ... # 0x40
-    WV_6_0                   : QSysInfo = ... # 0x80
-    WV_VISTA                 : QSysInfo = ... # 0x80
-    WV_6_1                   : QSysInfo = ... # 0x90
-    WV_WINDOWS7              : QSysInfo = ... # 0x90
-    WV_6_2                   : QSysInfo = ... # 0xa0
-    WV_WINDOWS8              : QSysInfo = ... # 0xa0
-    WV_6_3                   : QSysInfo = ... # 0xb0
-    WV_WINDOWS8_1            : QSysInfo = ... # 0xb0
-    WV_10_0                  : QSysInfo = ... # 0xc0
-    WV_WINDOWS10             : QSysInfo = ... # 0xc0
-    WindowsVersion           : QSysInfo = ... # 0xc0
-    WV_NT_based              : QSysInfo = ... # 0xf0
-    WV_CE                    : QSysInfo = ... # 0x100
-    WV_CENET                 : QSysInfo = ... # 0x200
-    WV_CE_5                  : QSysInfo = ... # 0x300
-    WV_CE_6                  : QSysInfo = ... # 0x400
-    WV_CE_based              : QSysInfo = ... # 0xf00
+
+    if sys.platform() == 'win32':
+        WV_None                  : QSysInfo = ... # 0x0
+        WV_32s                   : QSysInfo = ... # 0x1
+        WV_95                    : QSysInfo = ... # 0x2
+        WV_98                    : QSysInfo = ... # 0x3
+        WV_Me                    : QSysInfo = ... # 0x4
+        WV_DOS_based             : QSysInfo = ... # 0xf
+        WV_4_0                   : QSysInfo = ... # 0x10
+        WV_NT                    : QSysInfo = ... # 0x10
+        WV_2000                  : QSysInfo = ... # 0x20
+        WV_5_0                   : QSysInfo = ... # 0x20
+        WV_5_1                   : QSysInfo = ... # 0x30
+        WV_XP                    : QSysInfo = ... # 0x30
+        WV_2003                  : QSysInfo = ... # 0x40
+        WV_5_2                   : QSysInfo = ... # 0x40
+        WV_6_0                   : QSysInfo = ... # 0x80
+        WV_VISTA                 : QSysInfo = ... # 0x80
+        WV_6_1                   : QSysInfo = ... # 0x90
+        WV_WINDOWS7              : QSysInfo = ... # 0x90
+        WV_6_2                   : QSysInfo = ... # 0xa0
+        WV_WINDOWS8              : QSysInfo = ... # 0xa0
+        WV_6_3                   : QSysInfo = ... # 0xb0
+        WV_WINDOWS8_1            : QSysInfo = ... # 0xb0
+        WV_10_0                  : QSysInfo = ... # 0xc0
+        WV_WINDOWS10             : QSysInfo = ... # 0xc0
+        WindowsVersion           : QSysInfo = ... # 0xc0
+        WV_NT_based              : QSysInfo = ... # 0xf0
+        WV_CE                    : QSysInfo = ... # 0x100
+        WV_CENET                 : QSysInfo = ... # 0x200
+        WV_CE_5                  : QSysInfo = ... # 0x300
+        WV_CE_6                  : QSysInfo = ... # 0x400
+        WV_CE_based              : QSysInfo = ... # 0xf00
+
+        class WinVersion(object):
+            WV_None                  : QSysInfo.WinVersion = ... # 0x0
+            WV_32s                   : QSysInfo.WinVersion = ... # 0x1
+            WV_95                    : QSysInfo.WinVersion = ... # 0x2
+            WV_98                    : QSysInfo.WinVersion = ... # 0x3
+            WV_Me                    : QSysInfo.WinVersion = ... # 0x4
+            WV_DOS_based             : QSysInfo.WinVersion = ... # 0xf
+            WV_4_0                   : QSysInfo.WinVersion = ... # 0x10
+            WV_NT                    : QSysInfo.WinVersion = ... # 0x10
+            WV_2000                  : QSysInfo.WinVersion = ... # 0x20
+            WV_5_0                   : QSysInfo.WinVersion = ... # 0x20
+            WV_5_1                   : QSysInfo.WinVersion = ... # 0x30
+            WV_XP                    : QSysInfo.WinVersion = ... # 0x30
+            WV_2003                  : QSysInfo.WinVersion = ... # 0x40
+            WV_5_2                   : QSysInfo.WinVersion = ... # 0x40
+            WV_6_0                   : QSysInfo.WinVersion = ... # 0x80
+            WV_VISTA                 : QSysInfo.WinVersion = ... # 0x80
+            WV_6_1                   : QSysInfo.WinVersion = ... # 0x90
+            WV_WINDOWS7              : QSysInfo.WinVersion = ... # 0x90
+            WV_6_2                   : QSysInfo.WinVersion = ... # 0xa0
+            WV_WINDOWS8              : QSysInfo.WinVersion = ... # 0xa0
+            WV_6_3                   : QSysInfo.WinVersion = ... # 0xb0
+            WV_WINDOWS8_1            : QSysInfo.WinVersion = ... # 0xb0
+            WV_10_0                  : QSysInfo.WinVersion = ... # 0xc0
+            WV_WINDOWS10             : QSysInfo.WinVersion = ... # 0xc0
+            WV_NT_based              : QSysInfo.WinVersion = ... # 0xf0
+            WV_CE                    : QSysInfo.WinVersion = ... # 0x100
+            WV_CENET                 : QSysInfo.WinVersion = ... # 0x200
+            WV_CE_5                  : QSysInfo.WinVersion = ... # 0x300
+            WV_CE_6                  : QSysInfo.WinVersion = ... # 0x400
+            WV_CE_based              : QSysInfo.WinVersion = ... # 0xf00
+
+
+    if sys.platform() == 'darwin':
+        MV_Unknown               : QSysInfo = ... # 0x0
+        MV_9                     : QSysInfo = ... # 0x1
+        MV_10_0                  : QSysInfo = ... # 0x2
+        MV_CHEETAH               : QSysInfo = ... # 0x2
+        MV_10_1                  : QSysInfo = ... # 0x3
+        MV_PUMA                  : QSysInfo = ... # 0x3
+        MV_10_2                  : QSysInfo = ... # 0x4
+        MV_JAGUAR                : QSysInfo = ... # 0x4
+        MV_10_3                  : QSysInfo = ... # 0x5
+        MV_PANTHER               : QSysInfo = ... # 0x5
+        MV_10_4                  : QSysInfo = ... # 0x6
+        MV_TIGER                 : QSysInfo = ... # 0x6
+        MV_10_5                  : QSysInfo = ... # 0x7
+        MV_LEOPARD               : QSysInfo = ... # 0x7
+        MV_10_6                  : QSysInfo = ... # 0x8
+        MV_SNOWLEOPARD           : QSysInfo = ... # 0x8
+        MV_10_7                  : QSysInfo = ... # 0x9
+        MV_LION                  : QSysInfo = ... # 0x9
+        MV_10_8                  : QSysInfo = ... # 0xa
+        MV_MOUNTAINLION          : QSysInfo = ... # 0xa
+        MV_10_9                  : QSysInfo = ... # 0xb
+        MV_MAVERICKS             : QSysInfo = ... # 0xb
+        MV_10_10                 : QSysInfo = ... # 0xc
+        MV_YOSEMITE              : QSysInfo = ... # 0xc
+        MV_10_11                 : QSysInfo = ... # 0xd
+        MV_ELCAPITAN             : QSysInfo = ... # 0xd
+        MV_10_12                 : QSysInfo = ... # 0xe
+        MV_SIERRA                : QSysInfo = ... # 0xe
+        MacintoshVersion         : QSysInfo = ... # 0xf
+        MV_IOS                   : QSysInfo = ... # 0x100
+        MV_IOS_4_3               : QSysInfo = ... # 0x143
+        MV_IOS_5_0               : QSysInfo = ... # 0x150
+        MV_IOS_5_1               : QSysInfo = ... # 0x151
+        MV_IOS_6_0               : QSysInfo = ... # 0x160
+        MV_IOS_6_1               : QSysInfo = ... # 0x161
+        MV_IOS_7_0               : QSysInfo = ... # 0x170
+        MV_IOS_7_1               : QSysInfo = ... # 0x171
+        MV_IOS_8_0               : QSysInfo = ... # 0x180
+        MV_IOS_8_1               : QSysInfo = ... # 0x181
+        MV_IOS_8_2               : QSysInfo = ... # 0x182
+        MV_IOS_8_3               : QSysInfo = ... # 0x183
+        MV_IOS_8_4               : QSysInfo = ... # 0x184
+        MV_IOS_9_0               : QSysInfo = ... # 0x190
+        MV_IOS_9_1               : QSysInfo = ... # 0x191
+        MV_IOS_9_2               : QSysInfo = ... # 0x192
+        MV_IOS_9_3               : QSysInfo = ... # 0x193
+        MV_IOS_10_0              : QSysInfo = ... # 0x1a0
+        MV_TVOS                  : QSysInfo = ... # 0x200
+        MV_TVOS_9_0              : QSysInfo = ... # 0x290
+        MV_TVOS_9_1              : QSysInfo = ... # 0x291
+        MV_TVOS_9_2              : QSysInfo = ... # 0x292
+        MV_TVOS_10_0             : QSysInfo = ... # 0x2a0
+        MV_WATCHOS               : QSysInfo = ... # 0x400
+        MV_WATCHOS_2_0           : QSysInfo = ... # 0x420
+        MV_WATCHOS_2_1           : QSysInfo = ... # 0x421
+        MV_WATCHOS_2_2           : QSysInfo = ... # 0x422
+        MV_WATCHOS_3_0           : QSysInfo = ... # 0x430
+        MV_None                  : QSysInfo = ... # 0xffff
+    
+        class MacVersion(object):
+            MV_Unknown               : QSysInfo.MacVersion = ... # 0x0
+            MV_9                     : QSysInfo.MacVersion = ... # 0x1
+            MV_10_0                  : QSysInfo.MacVersion = ... # 0x2
+            MV_CHEETAH               : QSysInfo.MacVersion = ... # 0x2
+            MV_10_1                  : QSysInfo.MacVersion = ... # 0x3
+            MV_PUMA                  : QSysInfo.MacVersion = ... # 0x3
+            MV_10_2                  : QSysInfo.MacVersion = ... # 0x4
+            MV_JAGUAR                : QSysInfo.MacVersion = ... # 0x4
+            MV_10_3                  : QSysInfo.MacVersion = ... # 0x5
+            MV_PANTHER               : QSysInfo.MacVersion = ... # 0x5
+            MV_10_4                  : QSysInfo.MacVersion = ... # 0x6
+            MV_TIGER                 : QSysInfo.MacVersion = ... # 0x6
+            MV_10_5                  : QSysInfo.MacVersion = ... # 0x7
+            MV_LEOPARD               : QSysInfo.MacVersion = ... # 0x7
+            MV_10_6                  : QSysInfo.MacVersion = ... # 0x8
+            MV_SNOWLEOPARD           : QSysInfo.MacVersion = ... # 0x8
+            MV_10_7                  : QSysInfo.MacVersion = ... # 0x9
+            MV_LION                  : QSysInfo.MacVersion = ... # 0x9
+            MV_10_8                  : QSysInfo.MacVersion = ... # 0xa
+            MV_MOUNTAINLION          : QSysInfo.MacVersion = ... # 0xa
+            MV_10_9                  : QSysInfo.MacVersion = ... # 0xb
+            MV_MAVERICKS             : QSysInfo.MacVersion = ... # 0xb
+            MV_10_10                 : QSysInfo.MacVersion = ... # 0xc
+            MV_YOSEMITE              : QSysInfo.MacVersion = ... # 0xc
+            MV_10_11                 : QSysInfo.MacVersion = ... # 0xd
+            MV_ELCAPITAN             : QSysInfo.MacVersion = ... # 0xd
+            MV_10_12                 : QSysInfo.MacVersion = ... # 0xe
+            MV_SIERRA                : QSysInfo.MacVersion = ... # 0xe
+            MV_IOS                   : QSysInfo.MacVersion = ... # 0x100
+            MV_IOS_4_3               : QSysInfo.MacVersion = ... # 0x143
+            MV_IOS_5_0               : QSysInfo.MacVersion = ... # 0x150
+            MV_IOS_5_1               : QSysInfo.MacVersion = ... # 0x151
+            MV_IOS_6_0               : QSysInfo.MacVersion = ... # 0x160
+            MV_IOS_6_1               : QSysInfo.MacVersion = ... # 0x161
+            MV_IOS_7_0               : QSysInfo.MacVersion = ... # 0x170
+            MV_IOS_7_1               : QSysInfo.MacVersion = ... # 0x171
+            MV_IOS_8_0               : QSysInfo.MacVersion = ... # 0x180
+            MV_IOS_8_1               : QSysInfo.MacVersion = ... # 0x181
+            MV_IOS_8_2               : QSysInfo.MacVersion = ... # 0x182
+            MV_IOS_8_3               : QSysInfo.MacVersion = ... # 0x183
+            MV_IOS_8_4               : QSysInfo.MacVersion = ... # 0x184
+            MV_IOS_9_0               : QSysInfo.MacVersion = ... # 0x190
+            MV_IOS_9_1               : QSysInfo.MacVersion = ... # 0x191
+            MV_IOS_9_2               : QSysInfo.MacVersion = ... # 0x192
+            MV_IOS_9_3               : QSysInfo.MacVersion = ... # 0x193
+            MV_IOS_10_0              : QSysInfo.MacVersion = ... # 0x1a0
+            MV_TVOS                  : QSysInfo.MacVersion = ... # 0x200
+            MV_TVOS_9_0              : QSysInfo.MacVersion = ... # 0x290
+            MV_TVOS_9_1              : QSysInfo.MacVersion = ... # 0x291
+            MV_TVOS_9_2              : QSysInfo.MacVersion = ... # 0x292
+            MV_TVOS_10_0             : QSysInfo.MacVersion = ... # 0x2a0
+            MV_WATCHOS               : QSysInfo.MacVersion = ... # 0x400
+            MV_WATCHOS_2_0           : QSysInfo.MacVersion = ... # 0x420
+            MV_WATCHOS_2_1           : QSysInfo.MacVersion = ... # 0x421
+            MV_WATCHOS_2_2           : QSysInfo.MacVersion = ... # 0x422
+            MV_WATCHOS_3_0           : QSysInfo.MacVersion = ... # 0x430
+            MV_None                  : QSysInfo.MacVersion = ... # 0xffff
 
     class Endian(object):
         BigEndian                : QSysInfo.Endian = ... # 0x0
@@ -8137,37 +8300,6 @@ class QSysInfo(Shiboken.Object):
     class Sizes(object):
         WordSize                 : QSysInfo.Sizes = ... # 0x40
 
-    class WinVersion(object):
-        WV_None                  : QSysInfo.WinVersion = ... # 0x0
-        WV_32s                   : QSysInfo.WinVersion = ... # 0x1
-        WV_95                    : QSysInfo.WinVersion = ... # 0x2
-        WV_98                    : QSysInfo.WinVersion = ... # 0x3
-        WV_Me                    : QSysInfo.WinVersion = ... # 0x4
-        WV_DOS_based             : QSysInfo.WinVersion = ... # 0xf
-        WV_4_0                   : QSysInfo.WinVersion = ... # 0x10
-        WV_NT                    : QSysInfo.WinVersion = ... # 0x10
-        WV_2000                  : QSysInfo.WinVersion = ... # 0x20
-        WV_5_0                   : QSysInfo.WinVersion = ... # 0x20
-        WV_5_1                   : QSysInfo.WinVersion = ... # 0x30
-        WV_XP                    : QSysInfo.WinVersion = ... # 0x30
-        WV_2003                  : QSysInfo.WinVersion = ... # 0x40
-        WV_5_2                   : QSysInfo.WinVersion = ... # 0x40
-        WV_6_0                   : QSysInfo.WinVersion = ... # 0x80
-        WV_VISTA                 : QSysInfo.WinVersion = ... # 0x80
-        WV_6_1                   : QSysInfo.WinVersion = ... # 0x90
-        WV_WINDOWS7              : QSysInfo.WinVersion = ... # 0x90
-        WV_6_2                   : QSysInfo.WinVersion = ... # 0xa0
-        WV_WINDOWS8              : QSysInfo.WinVersion = ... # 0xa0
-        WV_6_3                   : QSysInfo.WinVersion = ... # 0xb0
-        WV_WINDOWS8_1            : QSysInfo.WinVersion = ... # 0xb0
-        WV_10_0                  : QSysInfo.WinVersion = ... # 0xc0
-        WV_WINDOWS10             : QSysInfo.WinVersion = ... # 0xc0
-        WV_NT_based              : QSysInfo.WinVersion = ... # 0xf0
-        WV_CE                    : QSysInfo.WinVersion = ... # 0x100
-        WV_CENET                 : QSysInfo.WinVersion = ... # 0x200
-        WV_CE_5                  : QSysInfo.WinVersion = ... # 0x300
-        WV_CE_6                  : QSysInfo.WinVersion = ... # 0x400
-        WV_CE_based              : QSysInfo.WinVersion = ... # 0xf00
 
     def __init__(self) -> None: ...
 
@@ -8193,8 +8325,12 @@ class QSysInfo(Shiboken.Object):
     def productType() -> str: ...
     @staticmethod
     def productVersion() -> str: ...
-    @staticmethod
-    def windowsVersion() -> PySide2.QtCore.QSysInfo.WinVersion: ...
+    if sys.platform() == 'win32':
+        @staticmethod
+        def windowsVersion() -> PySide2.QtCore.QSysInfo.WinVersion: ...
+    if sys.platform() == 'darwin':
+        @staticmethod
+        def macVersion() -> PySide2.QtCore.QSysInfo.MacVersion: ...
 
 
 class QSystemSemaphore(Shiboken.Object):
@@ -9262,18 +9398,19 @@ class QWaitCondition(Shiboken.Object):
     def wakeOne(self) -> None: ...
 
 
-class QWinEventNotifier(PySide2.QtCore.QObject):
+if sys.platform() == 'win32':
+    class QWinEventNotifier(PySide2.QtCore.QObject):
 
-    @typing.overload
-    def __init__(self, hEvent:int, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
-    @typing.overload
-    def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
+        @typing.overload
+        def __init__(self, hEvent:int, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
+        @typing.overload
+        def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
-    def event(self, e:PySide2.QtCore.QEvent) -> bool: ...
-    def handle(self) -> int: ...
-    def isEnabled(self) -> bool: ...
-    def setEnabled(self, enable:bool) -> None: ...
-    def setHandle(self, hEvent:int) -> None: ...
+        def event(self, e:PySide2.QtCore.QEvent) -> bool: ...
+        def handle(self) -> int: ...
+        def isEnabled(self) -> bool: ...
+        def setEnabled(self, enable:bool) -> None: ...
+        def setHandle(self, hEvent:int) -> None: ...
 
 
 class QWriteLocker(Shiboken.Object):
