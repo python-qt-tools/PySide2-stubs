@@ -5,12 +5,12 @@
 
 # Mypy stubs for the PySide2 (Qt5 for Python)
 
-Maintainer: Philippe Fremy, with inspiration from the [PyQt5-stubs project](https://github.com/python-qt-tools/PyQt5-stubs/).
+*Author :* Philippe Fremy (with inspiration from the [PyQt5-stubs project](https://github.com/python-qt-tools/PyQt5-stubs/))
 
 If you want to use `mypy` with your `PySide2` project and found the official stubs to be of insufficient quality, 
 you are at the right place. This project improves the official stubs delivered by [Qt5 for Python/PySide2](https://pypi.org/project/PySide2/).
 
-###Improvements:
+### Improvements:
 * fix Signal to make it accept method emit()
 * fix qVersion() returning string, not bytes
 * fix QMessageBox.warning, information, critical, question, about, aboutQt to accept None as parent argument
