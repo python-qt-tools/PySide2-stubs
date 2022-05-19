@@ -18,3 +18,4 @@
 * add QDialogButtonBox.StandardButton __or__ operations
 * fix Slot() argument and return value type-checking
 * fix missing methods being undetected for all Qt objects
+* add platform-specific stubs: QMacExtras, QWinExtras, QX11Extras
