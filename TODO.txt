@@ -25,9 +25,12 @@ General TODO:
 
 First Release:
 ==============
-- CI running in GitHub
-- setup.cfg working
+- [done] CI running in GitHub
+- [done] setup.cfg working
 - all platform specific stubs
+- [bof] run mypy locally on our stubs and fix errors
+- [done] add show error codes to mypy call
+- update README properly
 
 Done:
 ====
