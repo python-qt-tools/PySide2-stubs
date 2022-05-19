@@ -1,4 +1,5 @@
 <img src="http://mypy-lang.org/static/mypy_light.svg" alt="mypy logo" width="300px"/>
+
 [![Continuous Integration](https://github.com/python-qt-tools/PySide2-stubs/actions/workflows/python-package.yml/badge.svg)](https://github.com/python-qt-tools/PySide2-stubs/actions/workflows/python-package.yml)
 
 
