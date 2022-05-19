@@ -1,4 +1,10 @@
 
+
+
+Version 5.15.2.1.0:
+===================
+Initial release for PySide2 v5.15.2.1
+
 * fix Signal to make it accept method emit()
 * fix qVersion() returns string, not bytes
 * fix QMessageBox.warning, information, critical, question, about, aboutQt to accept None as parent argument

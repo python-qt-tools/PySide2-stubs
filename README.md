@@ -27,7 +27,7 @@ Improvements include:
 * add QDialogButtonBox.StandardButton `__or__` operations
 * fix missing methods being undetected for all Qt objects
 
-See (CHANGELOG.md)[CHANGELOG.md] for more details.
+See [CHANGELOG.md](CHANGELOG.md) for more details.
 
 Please note that this work is far from complete. Don't hesitate to report problems or propose improvements.
 
