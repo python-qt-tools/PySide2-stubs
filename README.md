@@ -11,20 +11,13 @@ If you want to use `mypy` with your `PySide2` project and found the official stu
 you are at the right place. This project improves the official stubs delivered by [Qt5 for Python/PySide2](https://pypi.org/project/PySide2/).
 
 ### Improvements:
-* fix Signal to make it accept method emit()
+* fix Signal with method emit()
 * fix qVersion() returning string, not bytes
 * fix QMessageBox.warning, information, critical, question, about, aboutQt to accept None as parent argument
-* fix QProgressDialog.setCancelButton() to accept None
-* fix QTreeWidget.topLevelItem() returning possibly None
-* fix QMessageBox.StandardButton combinations with or
 * fix QAction.setShortcut() to accept string as argument
 * fix QTreeWidgetItem comparison with <
 * fix QTimer.timeout undeclared signal
-* support all QSize and QSizeF operations
-* improve signature of operations on QPolygon
 * fix QLineEdit.setText() to accept None
-* add QDialogButtonBox.StandardButton `__or__` operations
-* fix missing methods being undetected for all Qt objects
 
 See [CHANGELOG.md](CHANGELOG.md) for more details.
 
@@ -37,14 +30,13 @@ As a derived work from PySide2, the stubs are delivered under the LGPL v2.1 . Se
 
 # Installation
 
-Simply install PySide2-stubs with pip:
+Simply install the official PySide2-stubs with pip:
 
     $ pip install PySide2-stubs
 
-Or clone the latest version from Github and install it via Python setuptools:
+Or use the latest version from Github:
 
-    $ git clone https://github.com/bluebird75/PySide2-stubs
-    $ pip install .
+    $ pip install git+https://github.com/bluebird75/PySide2-stubs
 
 That's it, the new stubs are picked up automatically by `mypy`. Typechecking process should be much better.
 
