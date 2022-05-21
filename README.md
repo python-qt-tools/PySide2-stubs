@@ -38,7 +38,8 @@ Or use the latest version from Github:
 
     $ pip install git+https://github.com/bluebird75/PySide2-stubs
 
-That's it, the new stubs are picked up automatically by `mypy`. Typechecking process should be much better.
+
+That's it, in both cases, the new stubs are picked up automatically by `mypy`. Typechecking process should be much better.
 
 
 # Help improve the stubs
