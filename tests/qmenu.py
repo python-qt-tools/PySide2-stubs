@@ -1,12 +1,21 @@
-from PySide2.QtWidgets import QMenu
+from typing import Any
+from PySide2.QtWidgets import QMenu, QTreeWidget
 
 # the default version of pyside2 stubs would not detect missing attributes
 # this test verifies that this is fixed
 
-m = QMenu()
-try:
-    # exec() is actually not available
-    m.exec()    # type: ignore[attr-defined]
-    assert False, 'Should not reach here'
-except AttributeError:
-    pass
+class Toto(QTreeWidget):
+
+    m: QMenu
+
+    def __init__(self, *args: Any) -> None:
+        super().__init__(*args)
+        self.m = QMenu()
+
+    def toto(self) -> None:
+        try:
+            # exec() is actually not available
+            self.m.exec()    # type: ignore[attr-defined]
+            assert False, 'Should not reach here'
+        except AttributeError:
+            pass
