@@ -79,12 +79,13 @@ class TypingTransformer(cst.CSTTransformer):
         declared_type = cst.helpers.get_full_name_for_node(original_node.annotation.annotation)
         if not fqn_names_match(collected_type, declared_type, self.mod_name):
             simple_type = strip_pyside2_modname(collected_type, self.mod_name)
-            print(f'  Changing {fqn_attr}: {declared_type} -> {simple_type}')
-            return updated_node.with_changes(
-                annotation=updated_node.annotation.with_changes(
-                    annotation=cst.parse_expression(simple_type)
+            if simple_type != declared_type:
+                print(f'  Changing {fqn_attr}: {declared_type} -> {simple_type}')
+                return updated_node.with_changes(
+                    annotation=updated_node.annotation.with_changes(
+                        annotation=cst.parse_expression(simple_type)
+                    )
                 )
-            )
         return updated_node
 
 
