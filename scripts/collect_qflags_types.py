@@ -13,7 +13,8 @@ def collect_qflags_types_for_module(module_name: str, d: Dict[str, str]) -> None
     try:
         m = importlib.import_module(f'PySide2.{module_name}')
     except ModuleNotFoundError:
-        # platform-specific modules can not be imported for example
+        print('... Module not available!')
+        # platform-specific modules can not be imported for example on other platforms
         return
 
     for class_name, class_type in m.__dict__.items():
@@ -49,13 +50,13 @@ def collect_qflags_types_for_class(class_fqn: str, class_type: Type, d: Dict[str
 
 
 def main():
-    # x = open(JSON_OUTPUT_FNAME, 'w')
     d = {}
     for fpath in (pathlib.Path(__file__).parent.parent / 'PySide2-stubs').glob('*.pyi'):
         module_name = fpath.stem
         collect_qflags_types_for_module(module_name, d)
 
-    print(json.dumps(d, indent=4))
+    with open(JSON_OUTPUT_FNAME, 'w') as f:
+        json.dump(d, f, indent=4)
 
 
 
