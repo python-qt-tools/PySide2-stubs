@@ -45,12 +45,7 @@ PySide2.QtX11Extras, except for defaults which are replaced by "...".
 
 # Module PySide2.QtX11Extras
 import PySide2
-try:
-    import typing
-except ImportError:
-    from PySide2.support.signature import typing
-from PySide2.support.signature.mapping import (
-    Virtual, Missing, Invalid, Default, Instance)
+import typing
 
 class Object(object): pass
 
@@ -62,8 +57,8 @@ import PySide2.QtX11Extras
 
 
 class QX11Info(Shiboken.Object):
-    PeekDefault              : QX11Info = ... # 0x0
-    PeekFromCachedIndex      : QX11Info = ... # 0x1
+    PeekDefault              : QX11Info.PeekOption = ... # 0x0
+    PeekFromCachedIndex      : QX11Info.PeekOption = ... # 0x1
 
     class PeekOption(object):
         PeekDefault              : QX11Info.PeekOption = ... # 0x0
