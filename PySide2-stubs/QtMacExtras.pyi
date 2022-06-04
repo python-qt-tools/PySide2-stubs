@@ -45,12 +45,7 @@ PySide2.QtMacExtras, except for defaults which are replaced by "...".
 
 # Module PySide2.QtMacExtras
 import PySide2
-try:
-    import typing
-except ImportError:
-    from PySide2.support.signature import typing
-from PySide2.support.signature.mapping import (
-    Virtual, Missing, Invalid, Default, Instance)
+import typing
 
 class Object(object): pass
 
@@ -63,11 +58,11 @@ import PySide2.QtMacExtras
 
 
 class QMacPasteboardMime(Shiboken.Object):
-    MIME_DND                 : QMacPasteboardMime = ... # 0x1
-    MIME_CLIP                : QMacPasteboardMime = ... # 0x2
-    MIME_ALL                 : QMacPasteboardMime = ... # 0x3
-    MIME_QT_CONVERTOR        : QMacPasteboardMime = ... # 0x4
-    MIME_QT3_CONVERTOR       : QMacPasteboardMime = ... # 0x8
+    MIME_DND                 : QMacPasteboardMime.QMacPasteboardMimeType = ... # 0x1
+    MIME_CLIP                : QMacPasteboardMime.QMacPasteboardMimeType = ... # 0x2
+    MIME_ALL                 : QMacPasteboardMime.QMacPasteboardMimeType = ... # 0x3
+    MIME_QT_CONVERTOR        : QMacPasteboardMime.QMacPasteboardMimeType = ... # 0x4
+    MIME_QT3_CONVERTOR       : QMacPasteboardMime.QMacPasteboardMimeType = ... # 0x8
 
     class QMacPasteboardMimeType(object):
         MIME_DND                 : QMacPasteboardMime.QMacPasteboardMimeType = ... # 0x1
