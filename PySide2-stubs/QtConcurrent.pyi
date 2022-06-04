@@ -127,11 +127,11 @@ class QFutureWatcherVoid(PySide2.QtCore.QObject):
 
 
 class QtConcurrent(Shiboken.Object):
-    ThrottleThread           : QtConcurrent = ... # 0x0
-    ThreadFinished           : QtConcurrent = ... # 0x1
-    UnorderedReduce          : QtConcurrent = ... # 0x1
-    OrderedReduce            : QtConcurrent = ... # 0x2
-    SequentialReduce         : QtConcurrent = ... # 0x4
+    ThrottleThread           : QtConcurrent.ThreadFunctionResult = ... # 0x0
+    ThreadFinished           : QtConcurrent.ThreadFunctionResult = ... # 0x1
+    UnorderedReduce          : QtConcurrent.ReduceOption = ... # 0x1
+    OrderedReduce            : QtConcurrent.ReduceOption = ... # 0x2
+    SequentialReduce         : QtConcurrent.ReduceOption = ... # 0x4
 
     class ReduceOption(object):
         UnorderedReduce          : QtConcurrent.ReduceOption = ... # 0x1

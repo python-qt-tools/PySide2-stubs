@@ -130,17 +130,17 @@ class QAbstractAudioOutput(PySide2.QtCore.QObject):
 
 
 class QAbstractVideoBuffer(Shiboken.Object):
-    NoHandle                 : QAbstractVideoBuffer = ... # 0x0
-    NotMapped                : QAbstractVideoBuffer = ... # 0x0
-    GLTextureHandle          : QAbstractVideoBuffer = ... # 0x1
-    ReadOnly                 : QAbstractVideoBuffer = ... # 0x1
-    WriteOnly                : QAbstractVideoBuffer = ... # 0x2
-    XvShmImageHandle         : QAbstractVideoBuffer = ... # 0x2
-    CoreImageHandle          : QAbstractVideoBuffer = ... # 0x3
-    ReadWrite                : QAbstractVideoBuffer = ... # 0x3
-    QPixmapHandle            : QAbstractVideoBuffer = ... # 0x4
-    EGLImageHandle           : QAbstractVideoBuffer = ... # 0x5
-    UserHandle               : QAbstractVideoBuffer = ... # 0x3e8
+    NoHandle                 : QAbstractVideoBuffer.HandleType = ... # 0x0
+    NotMapped                : QAbstractVideoBuffer.MapMode = ... # 0x0
+    GLTextureHandle          : QAbstractVideoBuffer.HandleType = ... # 0x1
+    ReadOnly                 : QAbstractVideoBuffer.MapMode = ... # 0x1
+    WriteOnly                : QAbstractVideoBuffer.MapMode = ... # 0x2
+    XvShmImageHandle         : QAbstractVideoBuffer.HandleType = ... # 0x2
+    CoreImageHandle          : QAbstractVideoBuffer.HandleType = ... # 0x3
+    ReadWrite                : QAbstractVideoBuffer.MapMode = ... # 0x3
+    QPixmapHandle            : QAbstractVideoBuffer.HandleType = ... # 0x4
+    EGLImageHandle           : QAbstractVideoBuffer.HandleType = ... # 0x5
+    UserHandle               : QAbstractVideoBuffer.HandleType = ... # 0x3e8
 
     class HandleType(object):
         NoHandle                 : QAbstractVideoBuffer.HandleType = ... # 0x0
@@ -176,11 +176,11 @@ class QAbstractVideoFilter(PySide2.QtCore.QObject):
 
 
 class QAbstractVideoSurface(PySide2.QtCore.QObject):
-    NoError                  : QAbstractVideoSurface = ... # 0x0
-    UnsupportedFormatError   : QAbstractVideoSurface = ... # 0x1
-    IncorrectFormatError     : QAbstractVideoSurface = ... # 0x2
-    StoppedError             : QAbstractVideoSurface = ... # 0x3
-    ResourceError            : QAbstractVideoSurface = ... # 0x4
+    NoError                  : QAbstractVideoSurface.Error = ... # 0x0
+    UnsupportedFormatError   : QAbstractVideoSurface.Error = ... # 0x1
+    IncorrectFormatError     : QAbstractVideoSurface.Error = ... # 0x2
+    StoppedError             : QAbstractVideoSurface.Error = ... # 0x3
+    ResourceError            : QAbstractVideoSurface.Error = ... # 0x4
 
     class Error(object):
         NoError                  : QAbstractVideoSurface.Error = ... # 0x0
@@ -206,33 +206,33 @@ class QAbstractVideoSurface(PySide2.QtCore.QObject):
 
 
 class QAudio(Shiboken.Object):
-    ActiveState              : QAudio = ... # 0x0
-    AudioInput               : QAudio = ... # 0x0
-    LinearVolumeScale        : QAudio = ... # 0x0
-    NoError                  : QAudio = ... # 0x0
-    UnknownRole              : QAudio = ... # 0x0
-    AudioOutput              : QAudio = ... # 0x1
-    CubicVolumeScale         : QAudio = ... # 0x1
-    MusicRole                : QAudio = ... # 0x1
-    OpenError                : QAudio = ... # 0x1
-    SuspendedState           : QAudio = ... # 0x1
-    IOError                  : QAudio = ... # 0x2
-    LogarithmicVolumeScale   : QAudio = ... # 0x2
-    StoppedState             : QAudio = ... # 0x2
-    VideoRole                : QAudio = ... # 0x2
-    DecibelVolumeScale       : QAudio = ... # 0x3
-    IdleState                : QAudio = ... # 0x3
-    UnderrunError            : QAudio = ... # 0x3
-    VoiceCommunicationRole   : QAudio = ... # 0x3
-    AlarmRole                : QAudio = ... # 0x4
-    FatalError               : QAudio = ... # 0x4
-    InterruptedState         : QAudio = ... # 0x4
-    NotificationRole         : QAudio = ... # 0x5
-    RingtoneRole             : QAudio = ... # 0x6
-    AccessibilityRole        : QAudio = ... # 0x7
-    SonificationRole         : QAudio = ... # 0x8
-    GameRole                 : QAudio = ... # 0x9
-    CustomRole               : QAudio = ... # 0xa
+    ActiveState              : QAudio.State = ... # 0x0
+    AudioInput               : QAudio.Mode = ... # 0x0
+    LinearVolumeScale        : QAudio.VolumeScale = ... # 0x0
+    NoError                  : QAudio.Error = ... # 0x0
+    UnknownRole              : QAudio.Role = ... # 0x0
+    AudioOutput              : QAudio.Mode = ... # 0x1
+    CubicVolumeScale         : QAudio.VolumeScale = ... # 0x1
+    MusicRole                : QAudio.Role = ... # 0x1
+    OpenError                : QAudio.Error = ... # 0x1
+    SuspendedState           : QAudio.State = ... # 0x1
+    IOError                  : QAudio.Error = ... # 0x2
+    LogarithmicVolumeScale   : QAudio.VolumeScale = ... # 0x2
+    StoppedState             : QAudio.State = ... # 0x2
+    VideoRole                : QAudio.Role = ... # 0x2
+    DecibelVolumeScale       : QAudio.VolumeScale = ... # 0x3
+    IdleState                : QAudio.State = ... # 0x3
+    UnderrunError            : QAudio.Error = ... # 0x3
+    VoiceCommunicationRole   : QAudio.Role = ... # 0x3
+    AlarmRole                : QAudio.Role = ... # 0x4
+    FatalError               : QAudio.Error = ... # 0x4
+    InterruptedState         : QAudio.State = ... # 0x4
+    NotificationRole         : QAudio.Role = ... # 0x5
+    RingtoneRole             : QAudio.Role = ... # 0x6
+    AccessibilityRole        : QAudio.Role = ... # 0x7
+    SonificationRole         : QAudio.Role = ... # 0x8
+    GameRole                 : QAudio.Role = ... # 0x9
+    CustomRole               : QAudio.Role = ... # 0xa
 
     class Error(object):
         NoError                  : QAudio.Error = ... # 0x0
@@ -299,13 +299,13 @@ class QAudioBuffer(Shiboken.Object):
 
 
 class QAudioDecoder(PySide2.QtMultimedia.QMediaObject):
-    NoError                  : QAudioDecoder = ... # 0x0
-    StoppedState             : QAudioDecoder = ... # 0x0
-    DecodingState            : QAudioDecoder = ... # 0x1
-    ResourceError            : QAudioDecoder = ... # 0x1
-    FormatError              : QAudioDecoder = ... # 0x2
-    AccessDeniedError        : QAudioDecoder = ... # 0x3
-    ServiceMissingError      : QAudioDecoder = ... # 0x4
+    NoError                  : QAudioDecoder.Error = ... # 0x0
+    StoppedState             : QAudioDecoder.State = ... # 0x0
+    DecodingState            : QAudioDecoder.State = ... # 0x1
+    ResourceError            : QAudioDecoder.Error = ... # 0x1
+    FormatError              : QAudioDecoder.Error = ... # 0x2
+    AccessDeniedError        : QAudioDecoder.Error = ... # 0x3
+    ServiceMissingError      : QAudioDecoder.Error = ... # 0x4
 
     class Error(object):
         NoError                  : QAudioDecoder.Error = ... # 0x0
@@ -428,12 +428,12 @@ class QAudioEncoderSettingsControl(PySide2.QtMultimedia.QMediaControl):
 
 
 class QAudioFormat(Shiboken.Object):
-    BigEndian                : QAudioFormat = ... # 0x0
-    Unknown                  : QAudioFormat = ... # 0x0
-    LittleEndian             : QAudioFormat = ... # 0x1
-    SignedInt                : QAudioFormat = ... # 0x1
-    UnSignedInt              : QAudioFormat = ... # 0x2
-    Float                    : QAudioFormat = ... # 0x3
+    BigEndian                : QAudioFormat.Endian = ... # 0x0
+    Unknown                  : QAudioFormat.SampleType = ... # 0x0
+    LittleEndian             : QAudioFormat.Endian = ... # 0x1
+    SignedInt                : QAudioFormat.SampleType = ... # 0x1
+    UnSignedInt              : QAudioFormat.SampleType = ... # 0x2
+    Float                    : QAudioFormat.SampleType = ... # 0x3
 
     class Endian(object):
         BigEndian                : QAudioFormat.Endian = ... # 0x0
@@ -590,41 +590,41 @@ class QAudioRoleControl(PySide2.QtMultimedia.QMediaControl):
 
 
 class QCamera(PySide2.QtMultimedia.QMediaObject):
-    CaptureViewfinder        : QCamera = ... # 0x0
-    NoError                  : QCamera = ... # 0x0
-    NoLock                   : QCamera = ... # 0x0
-    UnavailableStatus        : QCamera = ... # 0x0
-    UnloadedState            : QCamera = ... # 0x0
-    Unlocked                 : QCamera = ... # 0x0
-    UnspecifiedPosition      : QCamera = ... # 0x0
-    UserRequest              : QCamera = ... # 0x0
-    BackFace                 : QCamera = ... # 0x1
-    CameraError              : QCamera = ... # 0x1
-    CaptureStillImage        : QCamera = ... # 0x1
-    LoadedState              : QCamera = ... # 0x1
-    LockAcquired             : QCamera = ... # 0x1
-    LockExposure             : QCamera = ... # 0x1
-    Searching                : QCamera = ... # 0x1
-    UnloadedStatus           : QCamera = ... # 0x1
-    ActiveState              : QCamera = ... # 0x2
-    CaptureVideo             : QCamera = ... # 0x2
-    FrontFace                : QCamera = ... # 0x2
-    InvalidRequestError      : QCamera = ... # 0x2
-    LoadingStatus            : QCamera = ... # 0x2
-    LockFailed               : QCamera = ... # 0x2
-    LockWhiteBalance         : QCamera = ... # 0x2
-    Locked                   : QCamera = ... # 0x2
-    LockLost                 : QCamera = ... # 0x3
-    ServiceMissingError      : QCamera = ... # 0x3
-    UnloadingStatus          : QCamera = ... # 0x3
-    LoadedStatus             : QCamera = ... # 0x4
-    LockFocus                : QCamera = ... # 0x4
-    LockTemporaryLost        : QCamera = ... # 0x4
-    NotSupportedFeatureError : QCamera = ... # 0x4
-    StandbyStatus            : QCamera = ... # 0x5
-    StartingStatus           : QCamera = ... # 0x6
-    StoppingStatus           : QCamera = ... # 0x7
-    ActiveStatus             : QCamera = ... # 0x8
+    CaptureViewfinder        : QCamera.CaptureMode = ... # 0x0
+    NoError                  : QCamera.Error = ... # 0x0
+    NoLock                   : QCamera.LockType = ... # 0x0
+    UnavailableStatus        : QCamera.Status = ... # 0x0
+    UnloadedState            : QCamera.State = ... # 0x0
+    Unlocked                 : QCamera.LockStatus = ... # 0x0
+    UnspecifiedPosition      : QCamera.Position = ... # 0x0
+    UserRequest              : QCamera.LockChangeReason = ... # 0x0
+    BackFace                 : QCamera.Position = ... # 0x1
+    CameraError              : QCamera.Error = ... # 0x1
+    CaptureStillImage        : QCamera.CaptureMode = ... # 0x1
+    LoadedState              : QCamera.State = ... # 0x1
+    LockAcquired             : QCamera.LockChangeReason = ... # 0x1
+    LockExposure             : QCamera.LockType = ... # 0x1
+    Searching                : QCamera.LockStatus = ... # 0x1
+    UnloadedStatus           : QCamera.Status = ... # 0x1
+    ActiveState              : QCamera.State = ... # 0x2
+    CaptureVideo             : QCamera.CaptureMode = ... # 0x2
+    FrontFace                : QCamera.Position = ... # 0x2
+    InvalidRequestError      : QCamera.Error = ... # 0x2
+    LoadingStatus            : QCamera.Status = ... # 0x2
+    LockFailed               : QCamera.LockChangeReason = ... # 0x2
+    LockWhiteBalance         : QCamera.LockType = ... # 0x2
+    Locked                   : QCamera.LockStatus = ... # 0x2
+    LockLost                 : QCamera.LockChangeReason = ... # 0x3
+    ServiceMissingError      : QCamera.Error = ... # 0x3
+    UnloadingStatus          : QCamera.Status = ... # 0x3
+    LoadedStatus             : QCamera.Status = ... # 0x4
+    LockFocus                : QCamera.LockType = ... # 0x4
+    LockTemporaryLost        : QCamera.LockChangeReason = ... # 0x4
+    NotSupportedFeatureError : QCamera.Error = ... # 0x4
+    StandbyStatus            : QCamera.Status = ... # 0x5
+    StartingStatus           : QCamera.Status = ... # 0x6
+    StoppingStatus           : QCamera.Status = ... # 0x7
+    ActiveStatus             : QCamera.Status = ... # 0x8
 
     class CaptureMode(object):
         CaptureViewfinder        : QCamera.CaptureMode = ... # 0x0
@@ -768,11 +768,11 @@ class QCameraCaptureDestinationControl(PySide2.QtMultimedia.QMediaControl):
 
 
 class QCameraControl(PySide2.QtMultimedia.QMediaControl):
-    CaptureMode              : QCameraControl = ... # 0x1
-    ImageEncodingSettings    : QCameraControl = ... # 0x2
-    VideoEncodingSettings    : QCameraControl = ... # 0x3
-    Viewfinder               : QCameraControl = ... # 0x4
-    ViewfinderSettings       : QCameraControl = ... # 0x5
+    CaptureMode              : QCameraControl.PropertyChangeType = ... # 0x1
+    ImageEncodingSettings    : QCameraControl.PropertyChangeType = ... # 0x2
+    VideoEncodingSettings    : QCameraControl.PropertyChangeType = ... # 0x3
+    Viewfinder               : QCameraControl.PropertyChangeType = ... # 0x4
+    ViewfinderSettings       : QCameraControl.PropertyChangeType = ... # 0x5
 
     class PropertyChangeType(object):
         CaptureMode              : QCameraControl.PropertyChangeType = ... # 0x1
@@ -793,41 +793,41 @@ class QCameraControl(PySide2.QtMultimedia.QMediaControl):
 
 
 class QCameraExposure(PySide2.QtCore.QObject):
-    ExposureAuto             : QCameraExposure = ... # 0x0
-    ExposureManual           : QCameraExposure = ... # 0x1
-    FlashAuto                : QCameraExposure = ... # 0x1
-    MeteringMatrix           : QCameraExposure = ... # 0x1
-    ExposurePortrait         : QCameraExposure = ... # 0x2
-    FlashOff                 : QCameraExposure = ... # 0x2
-    MeteringAverage          : QCameraExposure = ... # 0x2
-    ExposureNight            : QCameraExposure = ... # 0x3
-    MeteringSpot             : QCameraExposure = ... # 0x3
-    ExposureBacklight        : QCameraExposure = ... # 0x4
-    FlashOn                  : QCameraExposure = ... # 0x4
-    ExposureSpotlight        : QCameraExposure = ... # 0x5
-    ExposureSports           : QCameraExposure = ... # 0x6
-    ExposureSnow             : QCameraExposure = ... # 0x7
-    ExposureBeach            : QCameraExposure = ... # 0x8
-    FlashRedEyeReduction     : QCameraExposure = ... # 0x8
-    ExposureLargeAperture    : QCameraExposure = ... # 0x9
-    ExposureSmallAperture    : QCameraExposure = ... # 0xa
-    ExposureAction           : QCameraExposure = ... # 0xb
-    ExposureLandscape        : QCameraExposure = ... # 0xc
-    ExposureNightPortrait    : QCameraExposure = ... # 0xd
-    ExposureTheatre          : QCameraExposure = ... # 0xe
-    ExposureSunset           : QCameraExposure = ... # 0xf
-    ExposureSteadyPhoto      : QCameraExposure = ... # 0x10
-    FlashFill                : QCameraExposure = ... # 0x10
-    ExposureFireworks        : QCameraExposure = ... # 0x11
-    ExposureParty            : QCameraExposure = ... # 0x12
-    ExposureCandlelight      : QCameraExposure = ... # 0x13
-    ExposureBarcode          : QCameraExposure = ... # 0x14
-    FlashTorch               : QCameraExposure = ... # 0x20
-    FlashVideoLight          : QCameraExposure = ... # 0x40
-    FlashSlowSyncFrontCurtain: QCameraExposure = ... # 0x80
-    FlashSlowSyncRearCurtain : QCameraExposure = ... # 0x100
-    FlashManual              : QCameraExposure = ... # 0x200
-    ExposureModeVendor       : QCameraExposure = ... # 0x3e8
+    ExposureAuto             : QCameraExposure.ExposureMode = ... # 0x0
+    ExposureManual           : QCameraExposure.ExposureMode = ... # 0x1
+    FlashAuto                : QCameraExposure.FlashMode = ... # 0x1
+    MeteringMatrix           : QCameraExposure.MeteringMode = ... # 0x1
+    ExposurePortrait         : QCameraExposure.ExposureMode = ... # 0x2
+    FlashOff                 : QCameraExposure.FlashMode = ... # 0x2
+    MeteringAverage          : QCameraExposure.MeteringMode = ... # 0x2
+    ExposureNight            : QCameraExposure.ExposureMode = ... # 0x3
+    MeteringSpot             : QCameraExposure.MeteringMode = ... # 0x3
+    ExposureBacklight        : QCameraExposure.ExposureMode = ... # 0x4
+    FlashOn                  : QCameraExposure.FlashMode = ... # 0x4
+    ExposureSpotlight        : QCameraExposure.ExposureMode = ... # 0x5
+    ExposureSports           : QCameraExposure.ExposureMode = ... # 0x6
+    ExposureSnow             : QCameraExposure.ExposureMode = ... # 0x7
+    ExposureBeach            : QCameraExposure.ExposureMode = ... # 0x8
+    FlashRedEyeReduction     : QCameraExposure.FlashMode = ... # 0x8
+    ExposureLargeAperture    : QCameraExposure.ExposureMode = ... # 0x9
+    ExposureSmallAperture    : QCameraExposure.ExposureMode = ... # 0xa
+    ExposureAction           : QCameraExposure.ExposureMode = ... # 0xb
+    ExposureLandscape        : QCameraExposure.ExposureMode = ... # 0xc
+    ExposureNightPortrait    : QCameraExposure.ExposureMode = ... # 0xd
+    ExposureTheatre          : QCameraExposure.ExposureMode = ... # 0xe
+    ExposureSunset           : QCameraExposure.ExposureMode = ... # 0xf
+    ExposureSteadyPhoto      : QCameraExposure.ExposureMode = ... # 0x10
+    FlashFill                : QCameraExposure.FlashMode = ... # 0x10
+    ExposureFireworks        : QCameraExposure.ExposureMode = ... # 0x11
+    ExposureParty            : QCameraExposure.ExposureMode = ... # 0x12
+    ExposureCandlelight      : QCameraExposure.ExposureMode = ... # 0x13
+    ExposureBarcode          : QCameraExposure.ExposureMode = ... # 0x14
+    FlashTorch               : QCameraExposure.FlashMode = ... # 0x20
+    FlashVideoLight          : QCameraExposure.FlashMode = ... # 0x40
+    FlashSlowSyncFrontCurtain: QCameraExposure.FlashMode = ... # 0x80
+    FlashSlowSyncRearCurtain : QCameraExposure.FlashMode = ... # 0x100
+    FlashManual              : QCameraExposure.FlashMode = ... # 0x200
+    ExposureModeVendor       : QCameraExposure.ExposureMode = ... # 0x3e8
 
     class ExposureMode(object):
         ExposureAuto             : QCameraExposure.ExposureMode = ... # 0x0
@@ -901,17 +901,17 @@ class QCameraExposure(PySide2.QtCore.QObject):
 
 
 class QCameraExposureControl(PySide2.QtMultimedia.QMediaControl):
-    ISO                      : QCameraExposureControl = ... # 0x0
-    Aperture                 : QCameraExposureControl = ... # 0x1
-    ShutterSpeed             : QCameraExposureControl = ... # 0x2
-    ExposureCompensation     : QCameraExposureControl = ... # 0x3
-    FlashPower               : QCameraExposureControl = ... # 0x4
-    FlashCompensation        : QCameraExposureControl = ... # 0x5
-    TorchPower               : QCameraExposureControl = ... # 0x6
-    SpotMeteringPoint        : QCameraExposureControl = ... # 0x7
-    ExposureMode             : QCameraExposureControl = ... # 0x8
-    MeteringMode             : QCameraExposureControl = ... # 0x9
-    ExtendedExposureParameter: QCameraExposureControl = ... # 0x3e8
+    ISO                      : QCameraExposureControl.ExposureParameter = ... # 0x0
+    Aperture                 : QCameraExposureControl.ExposureParameter = ... # 0x1
+    ShutterSpeed             : QCameraExposureControl.ExposureParameter = ... # 0x2
+    ExposureCompensation     : QCameraExposureControl.ExposureParameter = ... # 0x3
+    FlashPower               : QCameraExposureControl.ExposureParameter = ... # 0x4
+    FlashCompensation        : QCameraExposureControl.ExposureParameter = ... # 0x5
+    TorchPower               : QCameraExposureControl.ExposureParameter = ... # 0x6
+    SpotMeteringPoint        : QCameraExposureControl.ExposureParameter = ... # 0x7
+    ExposureMode             : QCameraExposureControl.ExposureParameter = ... # 0x8
+    MeteringMode             : QCameraExposureControl.ExposureParameter = ... # 0x9
+    ExtendedExposureParameter: QCameraExposureControl.ExposureParameter = ... # 0x3e8
 
     class ExposureParameter(object):
         ISO                      : QCameraExposureControl.ExposureParameter = ... # 0x0
@@ -935,17 +935,17 @@ class QCameraExposureControl(PySide2.QtMultimedia.QMediaControl):
 
 
 class QCameraFeedbackControl(PySide2.QtMultimedia.QMediaControl):
-    ViewfinderStarted        : QCameraFeedbackControl = ... # 0x1
-    ViewfinderStopped        : QCameraFeedbackControl = ... # 0x2
-    ImageCaptured            : QCameraFeedbackControl = ... # 0x3
-    ImageSaved               : QCameraFeedbackControl = ... # 0x4
-    ImageError               : QCameraFeedbackControl = ... # 0x5
-    RecordingStarted         : QCameraFeedbackControl = ... # 0x6
-    RecordingInProgress      : QCameraFeedbackControl = ... # 0x7
-    RecordingStopped         : QCameraFeedbackControl = ... # 0x8
-    AutoFocusInProgress      : QCameraFeedbackControl = ... # 0x9
-    AutoFocusLocked          : QCameraFeedbackControl = ... # 0xa
-    AutoFocusFailed          : QCameraFeedbackControl = ... # 0xb
+    ViewfinderStarted        : QCameraFeedbackControl.EventType = ... # 0x1
+    ViewfinderStopped        : QCameraFeedbackControl.EventType = ... # 0x2
+    ImageCaptured            : QCameraFeedbackControl.EventType = ... # 0x3
+    ImageSaved               : QCameraFeedbackControl.EventType = ... # 0x4
+    ImageError               : QCameraFeedbackControl.EventType = ... # 0x5
+    RecordingStarted         : QCameraFeedbackControl.EventType = ... # 0x6
+    RecordingInProgress      : QCameraFeedbackControl.EventType = ... # 0x7
+    RecordingStopped         : QCameraFeedbackControl.EventType = ... # 0x8
+    AutoFocusInProgress      : QCameraFeedbackControl.EventType = ... # 0x9
+    AutoFocusLocked          : QCameraFeedbackControl.EventType = ... # 0xa
+    AutoFocusFailed          : QCameraFeedbackControl.EventType = ... # 0xb
 
     class EventType(object):
         ViewfinderStarted        : QCameraFeedbackControl.EventType = ... # 0x1
@@ -980,16 +980,16 @@ class QCameraFlashControl(PySide2.QtMultimedia.QMediaControl):
 
 
 class QCameraFocus(PySide2.QtCore.QObject):
-    FocusPointAuto           : QCameraFocus = ... # 0x0
-    FocusPointCenter         : QCameraFocus = ... # 0x1
-    ManualFocus              : QCameraFocus = ... # 0x1
-    FocusPointFaceDetection  : QCameraFocus = ... # 0x2
-    HyperfocalFocus          : QCameraFocus = ... # 0x2
-    FocusPointCustom         : QCameraFocus = ... # 0x3
-    InfinityFocus            : QCameraFocus = ... # 0x4
-    AutoFocus                : QCameraFocus = ... # 0x8
-    ContinuousFocus          : QCameraFocus = ... # 0x10
-    MacroFocus               : QCameraFocus = ... # 0x20
+    FocusPointAuto           : QCameraFocus.FocusPointMode = ... # 0x0
+    FocusPointCenter         : QCameraFocus.FocusPointMode = ... # 0x1
+    ManualFocus              : QCameraFocus.FocusMode = ... # 0x1
+    FocusPointFaceDetection  : QCameraFocus.FocusPointMode = ... # 0x2
+    HyperfocalFocus          : QCameraFocus.FocusMode = ... # 0x2
+    FocusPointCustom         : QCameraFocus.FocusPointMode = ... # 0x3
+    InfinityFocus            : QCameraFocus.FocusMode = ... # 0x4
+    AutoFocus                : QCameraFocus.FocusMode = ... # 0x8
+    ContinuousFocus          : QCameraFocus.FocusMode = ... # 0x10
+    MacroFocus               : QCameraFocus.FocusMode = ... # 0x20
 
     class FocusMode(object):
         ManualFocus              : QCameraFocus.FocusMode = ... # 0x1
@@ -1039,10 +1039,10 @@ class QCameraFocusControl(PySide2.QtMultimedia.QMediaControl):
 
 
 class QCameraFocusZone(Shiboken.Object):
-    Invalid                  : QCameraFocusZone = ... # 0x0
-    Unused                   : QCameraFocusZone = ... # 0x1
-    Selected                 : QCameraFocusZone = ... # 0x2
-    Focused                  : QCameraFocusZone = ... # 0x3
+    Invalid                  : QCameraFocusZone.FocusZoneStatus = ... # 0x0
+    Unused                   : QCameraFocusZone.FocusZoneStatus = ... # 0x1
+    Selected                 : QCameraFocusZone.FocusZoneStatus = ... # 0x2
+    Focused                  : QCameraFocusZone.FocusZoneStatus = ... # 0x3
 
     class FocusZoneStatus(object):
         Invalid                  : QCameraFocusZone.FocusZoneStatus = ... # 0x0
@@ -1066,15 +1066,15 @@ class QCameraFocusZone(Shiboken.Object):
 
 
 class QCameraImageCapture(PySide2.QtCore.QObject, PySide2.QtMultimedia.QMediaBindableInterface):
-    NoError                  : QCameraImageCapture = ... # 0x0
-    SingleImageCapture       : QCameraImageCapture = ... # 0x0
-    CaptureToFile            : QCameraImageCapture = ... # 0x1
-    NotReadyError            : QCameraImageCapture = ... # 0x1
-    CaptureToBuffer          : QCameraImageCapture = ... # 0x2
-    ResourceError            : QCameraImageCapture = ... # 0x2
-    OutOfSpaceError          : QCameraImageCapture = ... # 0x3
-    NotSupportedFeatureError : QCameraImageCapture = ... # 0x4
-    FormatError              : QCameraImageCapture = ... # 0x5
+    NoError                  : QCameraImageCapture.Error = ... # 0x0
+    SingleImageCapture       : QCameraImageCapture.DriveMode = ... # 0x0
+    CaptureToFile            : QCameraImageCapture.CaptureDestination = ... # 0x1
+    NotReadyError            : QCameraImageCapture.Error = ... # 0x1
+    CaptureToBuffer          : QCameraImageCapture.CaptureDestination = ... # 0x2
+    ResourceError            : QCameraImageCapture.Error = ... # 0x2
+    OutOfSpaceError          : QCameraImageCapture.Error = ... # 0x3
+    NotSupportedFeatureError : QCameraImageCapture.Error = ... # 0x4
+    FormatError              : QCameraImageCapture.Error = ... # 0x5
 
     class CaptureDestination(object):
         CaptureToFile            : QCameraImageCapture.CaptureDestination = ... # 0x1
@@ -1128,26 +1128,26 @@ class QCameraImageCaptureControl(PySide2.QtMultimedia.QMediaControl):
 
 
 class QCameraImageProcessing(PySide2.QtCore.QObject):
-    ColorFilterNone          : QCameraImageProcessing = ... # 0x0
-    WhiteBalanceAuto         : QCameraImageProcessing = ... # 0x0
-    ColorFilterGrayscale     : QCameraImageProcessing = ... # 0x1
-    WhiteBalanceManual       : QCameraImageProcessing = ... # 0x1
-    ColorFilterNegative      : QCameraImageProcessing = ... # 0x2
-    WhiteBalanceSunlight     : QCameraImageProcessing = ... # 0x2
-    ColorFilterSolarize      : QCameraImageProcessing = ... # 0x3
-    WhiteBalanceCloudy       : QCameraImageProcessing = ... # 0x3
-    ColorFilterSepia         : QCameraImageProcessing = ... # 0x4
-    WhiteBalanceShade        : QCameraImageProcessing = ... # 0x4
-    ColorFilterPosterize     : QCameraImageProcessing = ... # 0x5
-    WhiteBalanceTungsten     : QCameraImageProcessing = ... # 0x5
-    ColorFilterWhiteboard    : QCameraImageProcessing = ... # 0x6
-    WhiteBalanceFluorescent  : QCameraImageProcessing = ... # 0x6
-    ColorFilterBlackboard    : QCameraImageProcessing = ... # 0x7
-    WhiteBalanceFlash        : QCameraImageProcessing = ... # 0x7
-    ColorFilterAqua          : QCameraImageProcessing = ... # 0x8
-    WhiteBalanceSunset       : QCameraImageProcessing = ... # 0x8
-    ColorFilterVendor        : QCameraImageProcessing = ... # 0x3e8
-    WhiteBalanceVendor       : QCameraImageProcessing = ... # 0x3e8
+    ColorFilterNone          : QCameraImageProcessing.ColorFilter = ... # 0x0
+    WhiteBalanceAuto         : QCameraImageProcessing.WhiteBalanceMode = ... # 0x0
+    ColorFilterGrayscale     : QCameraImageProcessing.ColorFilter = ... # 0x1
+    WhiteBalanceManual       : QCameraImageProcessing.WhiteBalanceMode = ... # 0x1
+    ColorFilterNegative      : QCameraImageProcessing.ColorFilter = ... # 0x2
+    WhiteBalanceSunlight     : QCameraImageProcessing.WhiteBalanceMode = ... # 0x2
+    ColorFilterSolarize      : QCameraImageProcessing.ColorFilter = ... # 0x3
+    WhiteBalanceCloudy       : QCameraImageProcessing.WhiteBalanceMode = ... # 0x3
+    ColorFilterSepia         : QCameraImageProcessing.ColorFilter = ... # 0x4
+    WhiteBalanceShade        : QCameraImageProcessing.WhiteBalanceMode = ... # 0x4
+    ColorFilterPosterize     : QCameraImageProcessing.ColorFilter = ... # 0x5
+    WhiteBalanceTungsten     : QCameraImageProcessing.WhiteBalanceMode = ... # 0x5
+    ColorFilterWhiteboard    : QCameraImageProcessing.ColorFilter = ... # 0x6
+    WhiteBalanceFluorescent  : QCameraImageProcessing.WhiteBalanceMode = ... # 0x6
+    ColorFilterBlackboard    : QCameraImageProcessing.ColorFilter = ... # 0x7
+    WhiteBalanceFlash        : QCameraImageProcessing.WhiteBalanceMode = ... # 0x7
+    ColorFilterAqua          : QCameraImageProcessing.ColorFilter = ... # 0x8
+    WhiteBalanceSunset       : QCameraImageProcessing.WhiteBalanceMode = ... # 0x8
+    ColorFilterVendor        : QCameraImageProcessing.ColorFilter = ... # 0x3e8
+    WhiteBalanceVendor       : QCameraImageProcessing.WhiteBalanceMode = ... # 0x3e8
 
     class ColorFilter(object):
         ColorFilterNone          : QCameraImageProcessing.ColorFilter = ... # 0x0
@@ -1194,20 +1194,20 @@ class QCameraImageProcessing(PySide2.QtCore.QObject):
 
 
 class QCameraImageProcessingControl(PySide2.QtMultimedia.QMediaControl):
-    WhiteBalancePreset       : QCameraImageProcessingControl = ... # 0x0
-    ColorTemperature         : QCameraImageProcessingControl = ... # 0x1
-    Contrast                 : QCameraImageProcessingControl = ... # 0x2
-    Saturation               : QCameraImageProcessingControl = ... # 0x3
-    Brightness               : QCameraImageProcessingControl = ... # 0x4
-    Sharpening               : QCameraImageProcessingControl = ... # 0x5
-    Denoising                : QCameraImageProcessingControl = ... # 0x6
-    ContrastAdjustment       : QCameraImageProcessingControl = ... # 0x7
-    SaturationAdjustment     : QCameraImageProcessingControl = ... # 0x8
-    BrightnessAdjustment     : QCameraImageProcessingControl = ... # 0x9
-    SharpeningAdjustment     : QCameraImageProcessingControl = ... # 0xa
-    DenoisingAdjustment      : QCameraImageProcessingControl = ... # 0xb
-    ColorFilter              : QCameraImageProcessingControl = ... # 0xc
-    ExtendedParameter        : QCameraImageProcessingControl = ... # 0x3e8
+    WhiteBalancePreset       : QCameraImageProcessingControl.ProcessingParameter = ... # 0x0
+    ColorTemperature         : QCameraImageProcessingControl.ProcessingParameter = ... # 0x1
+    Contrast                 : QCameraImageProcessingControl.ProcessingParameter = ... # 0x2
+    Saturation               : QCameraImageProcessingControl.ProcessingParameter = ... # 0x3
+    Brightness               : QCameraImageProcessingControl.ProcessingParameter = ... # 0x4
+    Sharpening               : QCameraImageProcessingControl.ProcessingParameter = ... # 0x5
+    Denoising                : QCameraImageProcessingControl.ProcessingParameter = ... # 0x6
+    ContrastAdjustment       : QCameraImageProcessingControl.ProcessingParameter = ... # 0x7
+    SaturationAdjustment     : QCameraImageProcessingControl.ProcessingParameter = ... # 0x8
+    BrightnessAdjustment     : QCameraImageProcessingControl.ProcessingParameter = ... # 0x9
+    SharpeningAdjustment     : QCameraImageProcessingControl.ProcessingParameter = ... # 0xa
+    DenoisingAdjustment      : QCameraImageProcessingControl.ProcessingParameter = ... # 0xb
+    ColorFilter              : QCameraImageProcessingControl.ProcessingParameter = ... # 0xc
+    ExtendedParameter        : QCameraImageProcessingControl.ProcessingParameter = ... # 0x3e8
 
     class ProcessingParameter(object):
         WhiteBalancePreset       : QCameraImageProcessingControl.ProcessingParameter = ... # 0x0
@@ -1303,12 +1303,12 @@ class QCameraViewfinderSettings(Shiboken.Object):
 
 
 class QCameraViewfinderSettingsControl(PySide2.QtMultimedia.QMediaControl):
-    Resolution               : QCameraViewfinderSettingsControl = ... # 0x0
-    PixelAspectRatio         : QCameraViewfinderSettingsControl = ... # 0x1
-    MinimumFrameRate         : QCameraViewfinderSettingsControl = ... # 0x2
-    MaximumFrameRate         : QCameraViewfinderSettingsControl = ... # 0x3
-    PixelFormat              : QCameraViewfinderSettingsControl = ... # 0x4
-    UserParameter            : QCameraViewfinderSettingsControl = ... # 0x3e8
+    Resolution               : QCameraViewfinderSettingsControl.ViewfinderParameter = ... # 0x0
+    PixelAspectRatio         : QCameraViewfinderSettingsControl.ViewfinderParameter = ... # 0x1
+    MinimumFrameRate         : QCameraViewfinderSettingsControl.ViewfinderParameter = ... # 0x2
+    MaximumFrameRate         : QCameraViewfinderSettingsControl.ViewfinderParameter = ... # 0x3
+    PixelFormat              : QCameraViewfinderSettingsControl.ViewfinderParameter = ... # 0x4
+    UserParameter            : QCameraViewfinderSettingsControl.ViewfinderParameter = ... # 0x3e8
 
     class ViewfinderParameter(object):
         Resolution               : QCameraViewfinderSettingsControl.ViewfinderParameter = ... # 0x0
@@ -1492,28 +1492,28 @@ class QMediaObject(PySide2.QtCore.QObject):
 
 
 class QMediaPlayer(PySide2.QtMultimedia.QMediaObject):
-    NoError                  : QMediaPlayer = ... # 0x0
-    StoppedState             : QMediaPlayer = ... # 0x0
-    UnknownMediaStatus       : QMediaPlayer = ... # 0x0
-    LowLatency               : QMediaPlayer = ... # 0x1
-    NoMedia                  : QMediaPlayer = ... # 0x1
-    PlayingState             : QMediaPlayer = ... # 0x1
-    ResourceError            : QMediaPlayer = ... # 0x1
-    FormatError              : QMediaPlayer = ... # 0x2
-    LoadingMedia             : QMediaPlayer = ... # 0x2
-    PausedState              : QMediaPlayer = ... # 0x2
-    StreamPlayback           : QMediaPlayer = ... # 0x2
-    LoadedMedia              : QMediaPlayer = ... # 0x3
-    NetworkError             : QMediaPlayer = ... # 0x3
-    AccessDeniedError        : QMediaPlayer = ... # 0x4
-    StalledMedia             : QMediaPlayer = ... # 0x4
-    VideoSurface             : QMediaPlayer = ... # 0x4
-    BufferingMedia           : QMediaPlayer = ... # 0x5
-    ServiceMissingError      : QMediaPlayer = ... # 0x5
-    BufferedMedia            : QMediaPlayer = ... # 0x6
-    MediaIsPlaylist          : QMediaPlayer = ... # 0x6
-    EndOfMedia               : QMediaPlayer = ... # 0x7
-    InvalidMedia             : QMediaPlayer = ... # 0x8
+    NoError                  : QMediaPlayer.Error = ... # 0x0
+    StoppedState             : QMediaPlayer.State = ... # 0x0
+    UnknownMediaStatus       : QMediaPlayer.MediaStatus = ... # 0x0
+    LowLatency               : QMediaPlayer.Flag = ... # 0x1
+    NoMedia                  : QMediaPlayer.MediaStatus = ... # 0x1
+    PlayingState             : QMediaPlayer.State = ... # 0x1
+    ResourceError            : QMediaPlayer.Error = ... # 0x1
+    FormatError              : QMediaPlayer.Error = ... # 0x2
+    LoadingMedia             : QMediaPlayer.MediaStatus = ... # 0x2
+    PausedState              : QMediaPlayer.State = ... # 0x2
+    StreamPlayback           : QMediaPlayer.Flag = ... # 0x2
+    LoadedMedia              : QMediaPlayer.MediaStatus = ... # 0x3
+    NetworkError             : QMediaPlayer.Error = ... # 0x3
+    AccessDeniedError        : QMediaPlayer.Error = ... # 0x4
+    StalledMedia             : QMediaPlayer.MediaStatus = ... # 0x4
+    VideoSurface             : QMediaPlayer.Flag = ... # 0x4
+    BufferingMedia           : QMediaPlayer.MediaStatus = ... # 0x5
+    ServiceMissingError      : QMediaPlayer.Error = ... # 0x5
+    BufferedMedia            : QMediaPlayer.MediaStatus = ... # 0x6
+    MediaIsPlaylist          : QMediaPlayer.Error = ... # 0x6
+    EndOfMedia               : QMediaPlayer.MediaStatus = ... # 0x7
+    InvalidMedia             : QMediaPlayer.MediaStatus = ... # 0x8
 
     class Error(object):
         NoError                  : QMediaPlayer.Error = ... # 0x0
@@ -1629,16 +1629,16 @@ class QMediaPlayerControl(PySide2.QtMultimedia.QMediaControl):
 
 
 class QMediaPlaylist(PySide2.QtCore.QObject, PySide2.QtMultimedia.QMediaBindableInterface):
-    CurrentItemOnce          : QMediaPlaylist = ... # 0x0
-    NoError                  : QMediaPlaylist = ... # 0x0
-    CurrentItemInLoop        : QMediaPlaylist = ... # 0x1
-    FormatError              : QMediaPlaylist = ... # 0x1
-    FormatNotSupportedError  : QMediaPlaylist = ... # 0x2
-    Sequential               : QMediaPlaylist = ... # 0x2
-    Loop                     : QMediaPlaylist = ... # 0x3
-    NetworkError             : QMediaPlaylist = ... # 0x3
-    AccessDeniedError        : QMediaPlaylist = ... # 0x4
-    Random                   : QMediaPlaylist = ... # 0x4
+    CurrentItemOnce          : QMediaPlaylist.PlaybackMode = ... # 0x0
+    NoError                  : QMediaPlaylist.Error = ... # 0x0
+    CurrentItemInLoop        : QMediaPlaylist.PlaybackMode = ... # 0x1
+    FormatError              : QMediaPlaylist.Error = ... # 0x1
+    FormatNotSupportedError  : QMediaPlaylist.Error = ... # 0x2
+    Sequential               : QMediaPlaylist.PlaybackMode = ... # 0x2
+    Loop                     : QMediaPlaylist.PlaybackMode = ... # 0x3
+    NetworkError             : QMediaPlaylist.Error = ... # 0x3
+    AccessDeniedError        : QMediaPlaylist.Error = ... # 0x4
+    Random                   : QMediaPlaylist.PlaybackMode = ... # 0x4
 
     class Error(object):
         NoError                  : QMediaPlaylist.Error = ... # 0x0
@@ -1701,21 +1701,21 @@ class QMediaPlaylist(PySide2.QtCore.QObject, PySide2.QtMultimedia.QMediaBindable
 
 
 class QMediaRecorder(PySide2.QtCore.QObject, PySide2.QtMultimedia.QMediaBindableInterface):
-    NoError                  : QMediaRecorder = ... # 0x0
-    StoppedState             : QMediaRecorder = ... # 0x0
-    UnavailableStatus        : QMediaRecorder = ... # 0x0
-    RecordingState           : QMediaRecorder = ... # 0x1
-    ResourceError            : QMediaRecorder = ... # 0x1
-    UnloadedStatus           : QMediaRecorder = ... # 0x1
-    FormatError              : QMediaRecorder = ... # 0x2
-    LoadingStatus            : QMediaRecorder = ... # 0x2
-    PausedState              : QMediaRecorder = ... # 0x2
-    LoadedStatus             : QMediaRecorder = ... # 0x3
-    OutOfSpaceError          : QMediaRecorder = ... # 0x3
-    StartingStatus           : QMediaRecorder = ... # 0x4
-    RecordingStatus          : QMediaRecorder = ... # 0x5
-    PausedStatus             : QMediaRecorder = ... # 0x6
-    FinalizingStatus         : QMediaRecorder = ... # 0x7
+    NoError                  : QMediaRecorder.Error = ... # 0x0
+    StoppedState             : QMediaRecorder.State = ... # 0x0
+    UnavailableStatus        : QMediaRecorder.Status = ... # 0x0
+    RecordingState           : QMediaRecorder.State = ... # 0x1
+    ResourceError            : QMediaRecorder.Error = ... # 0x1
+    UnloadedStatus           : QMediaRecorder.Status = ... # 0x1
+    FormatError              : QMediaRecorder.Error = ... # 0x2
+    LoadingStatus            : QMediaRecorder.Status = ... # 0x2
+    PausedState              : QMediaRecorder.State = ... # 0x2
+    LoadedStatus             : QMediaRecorder.Status = ... # 0x3
+    OutOfSpaceError          : QMediaRecorder.Error = ... # 0x3
+    StartingStatus           : QMediaRecorder.Status = ... # 0x4
+    RecordingStatus          : QMediaRecorder.Status = ... # 0x5
+    PausedStatus             : QMediaRecorder.Status = ... # 0x6
+    FinalizingStatus         : QMediaRecorder.Status = ... # 0x7
 
     class Error(object):
         NoError                  : QMediaRecorder.Error = ... # 0x0
@@ -1867,15 +1867,15 @@ class QMediaServiceFeaturesInterface(Shiboken.Object):
 
 
 class QMediaServiceProviderHint(Shiboken.Object):
-    Null                     : QMediaServiceProviderHint = ... # 0x0
-    ContentType              : QMediaServiceProviderHint = ... # 0x1
-    LowLatencyPlayback       : QMediaServiceProviderHint = ... # 0x1
-    Device                   : QMediaServiceProviderHint = ... # 0x2
-    RecordingSupport         : QMediaServiceProviderHint = ... # 0x2
-    SupportedFeatures        : QMediaServiceProviderHint = ... # 0x3
-    CameraPosition           : QMediaServiceProviderHint = ... # 0x4
-    StreamPlayback           : QMediaServiceProviderHint = ... # 0x4
-    VideoSurface             : QMediaServiceProviderHint = ... # 0x8
+    Null                     : QMediaServiceProviderHint.Type = ... # 0x0
+    ContentType              : QMediaServiceProviderHint.Type = ... # 0x1
+    LowLatencyPlayback       : QMediaServiceProviderHint.Feature = ... # 0x1
+    Device                   : QMediaServiceProviderHint.Type = ... # 0x2
+    RecordingSupport         : QMediaServiceProviderHint.Feature = ... # 0x2
+    SupportedFeatures        : QMediaServiceProviderHint.Type = ... # 0x3
+    CameraPosition           : QMediaServiceProviderHint.Type = ... # 0x4
+    StreamPlayback           : QMediaServiceProviderHint.Feature = ... # 0x4
+    VideoSurface             : QMediaServiceProviderHint.Feature = ... # 0x8
 
     class Feature(object):
         LowLatencyPlayback       : QMediaServiceProviderHint.Feature = ... # 0x1
@@ -1933,11 +1933,11 @@ class QMediaServiceSupportedFormatsInterface(Shiboken.Object):
 
 
 class QMediaStreamsControl(PySide2.QtMultimedia.QMediaControl):
-    UnknownStream            : QMediaStreamsControl = ... # 0x0
-    VideoStream              : QMediaStreamsControl = ... # 0x1
-    AudioStream              : QMediaStreamsControl = ... # 0x2
-    SubPictureStream         : QMediaStreamsControl = ... # 0x3
-    DataStream               : QMediaStreamsControl = ... # 0x4
+    UnknownStream            : QMediaStreamsControl.StreamType = ... # 0x0
+    VideoStream              : QMediaStreamsControl.StreamType = ... # 0x1
+    AudioStream              : QMediaStreamsControl.StreamType = ... # 0x2
+    SubPictureStream         : QMediaStreamsControl.StreamType = ... # 0x3
+    DataStream               : QMediaStreamsControl.StreamType = ... # 0x4
 
     class StreamType(object):
         UnknownStream            : QMediaStreamsControl.StreamType = ... # 0x0
@@ -2042,23 +2042,23 @@ class QMetaDataWriterControl(PySide2.QtMultimedia.QMediaControl):
 
 
 class QMultimedia(Shiboken.Object):
-    Available                : QMultimedia = ... # 0x0
-    ConstantQualityEncoding  : QMultimedia = ... # 0x0
-    NotSupported             : QMultimedia = ... # 0x0
-    VeryLowQuality           : QMultimedia = ... # 0x0
-    ConstantBitRateEncoding  : QMultimedia = ... # 0x1
-    LowQuality               : QMultimedia = ... # 0x1
-    MaybeSupported           : QMultimedia = ... # 0x1
-    ServiceMissing           : QMultimedia = ... # 0x1
-    AverageBitRateEncoding   : QMultimedia = ... # 0x2
-    Busy                     : QMultimedia = ... # 0x2
-    NormalQuality            : QMultimedia = ... # 0x2
-    ProbablySupported        : QMultimedia = ... # 0x2
-    HighQuality              : QMultimedia = ... # 0x3
-    PreferredService         : QMultimedia = ... # 0x3
-    ResourceError            : QMultimedia = ... # 0x3
-    TwoPassEncoding          : QMultimedia = ... # 0x3
-    VeryHighQuality          : QMultimedia = ... # 0x4
+    Available                : QMultimedia.AvailabilityStatus = ... # 0x0
+    ConstantQualityEncoding  : QMultimedia.EncodingMode = ... # 0x0
+    NotSupported             : QMultimedia.SupportEstimate = ... # 0x0
+    VeryLowQuality           : QMultimedia.EncodingQuality = ... # 0x0
+    ConstantBitRateEncoding  : QMultimedia.EncodingMode = ... # 0x1
+    LowQuality               : QMultimedia.EncodingQuality = ... # 0x1
+    MaybeSupported           : QMultimedia.SupportEstimate = ... # 0x1
+    ServiceMissing           : QMultimedia.AvailabilityStatus = ... # 0x1
+    AverageBitRateEncoding   : QMultimedia.EncodingMode = ... # 0x2
+    Busy                     : QMultimedia.AvailabilityStatus = ... # 0x2
+    NormalQuality            : QMultimedia.EncodingQuality = ... # 0x2
+    ProbablySupported        : QMultimedia.SupportEstimate = ... # 0x2
+    HighQuality              : QMultimedia.EncodingQuality = ... # 0x3
+    PreferredService         : QMultimedia.SupportEstimate = ... # 0x3
+    ResourceError            : QMultimedia.AvailabilityStatus = ... # 0x3
+    TwoPassEncoding          : QMultimedia.EncodingMode = ... # 0x3
+    VeryHighQuality          : QMultimedia.EncodingQuality = ... # 0x4
 
     class AvailabilityStatus(object):
         Available                : QMultimedia.AvailabilityStatus = ... # 0x0
@@ -2087,58 +2087,58 @@ class QMultimedia(Shiboken.Object):
 
 
 class QRadioData(PySide2.QtCore.QObject, PySide2.QtMultimedia.QMediaBindableInterface):
-    NoError                  : QRadioData = ... # 0x0
-    Undefined                : QRadioData = ... # 0x0
-    News                     : QRadioData = ... # 0x1
-    ResourceError            : QRadioData = ... # 0x1
-    CurrentAffairs           : QRadioData = ... # 0x2
-    OpenError                : QRadioData = ... # 0x2
-    Information              : QRadioData = ... # 0x3
-    OutOfRangeError          : QRadioData = ... # 0x3
-    Sport                    : QRadioData = ... # 0x4
-    Education                : QRadioData = ... # 0x5
-    Drama                    : QRadioData = ... # 0x6
-    Culture                  : QRadioData = ... # 0x7
-    Science                  : QRadioData = ... # 0x8
-    Varied                   : QRadioData = ... # 0x9
-    PopMusic                 : QRadioData = ... # 0xa
-    RockMusic                : QRadioData = ... # 0xb
-    EasyListening            : QRadioData = ... # 0xc
-    LightClassical           : QRadioData = ... # 0xd
-    SeriousClassical         : QRadioData = ... # 0xe
-    OtherMusic               : QRadioData = ... # 0xf
-    Weather                  : QRadioData = ... # 0x10
-    Finance                  : QRadioData = ... # 0x11
-    ChildrensProgrammes      : QRadioData = ... # 0x12
-    SocialAffairs            : QRadioData = ... # 0x13
-    Religion                 : QRadioData = ... # 0x14
-    PhoneIn                  : QRadioData = ... # 0x15
-    Travel                   : QRadioData = ... # 0x16
-    Leisure                  : QRadioData = ... # 0x17
-    JazzMusic                : QRadioData = ... # 0x18
-    CountryMusic             : QRadioData = ... # 0x19
-    NationalMusic            : QRadioData = ... # 0x1a
-    OldiesMusic              : QRadioData = ... # 0x1b
-    FolkMusic                : QRadioData = ... # 0x1c
-    Documentary              : QRadioData = ... # 0x1d
-    AlarmTest                : QRadioData = ... # 0x1e
-    Alarm                    : QRadioData = ... # 0x1f
-    Talk                     : QRadioData = ... # 0x20
-    ClassicRock              : QRadioData = ... # 0x21
-    AdultHits                : QRadioData = ... # 0x22
-    SoftRock                 : QRadioData = ... # 0x23
-    Top40                    : QRadioData = ... # 0x24
-    Soft                     : QRadioData = ... # 0x25
-    Nostalgia                : QRadioData = ... # 0x26
-    Classical                : QRadioData = ... # 0x27
-    RhythmAndBlues           : QRadioData = ... # 0x28
-    SoftRhythmAndBlues       : QRadioData = ... # 0x29
-    Language                 : QRadioData = ... # 0x2a
-    ReligiousMusic           : QRadioData = ... # 0x2b
-    ReligiousTalk            : QRadioData = ... # 0x2c
-    Personality              : QRadioData = ... # 0x2d
-    Public                   : QRadioData = ... # 0x2e
-    College                  : QRadioData = ... # 0x2f
+    NoError                  : QRadioData.Error = ... # 0x0
+    Undefined                : QRadioData.ProgramType = ... # 0x0
+    News                     : QRadioData.ProgramType = ... # 0x1
+    ResourceError            : QRadioData.Error = ... # 0x1
+    CurrentAffairs           : QRadioData.ProgramType = ... # 0x2
+    OpenError                : QRadioData.Error = ... # 0x2
+    Information              : QRadioData.ProgramType = ... # 0x3
+    OutOfRangeError          : QRadioData.Error = ... # 0x3
+    Sport                    : QRadioData.ProgramType = ... # 0x4
+    Education                : QRadioData.ProgramType = ... # 0x5
+    Drama                    : QRadioData.ProgramType = ... # 0x6
+    Culture                  : QRadioData.ProgramType = ... # 0x7
+    Science                  : QRadioData.ProgramType = ... # 0x8
+    Varied                   : QRadioData.ProgramType = ... # 0x9
+    PopMusic                 : QRadioData.ProgramType = ... # 0xa
+    RockMusic                : QRadioData.ProgramType = ... # 0xb
+    EasyListening            : QRadioData.ProgramType = ... # 0xc
+    LightClassical           : QRadioData.ProgramType = ... # 0xd
+    SeriousClassical         : QRadioData.ProgramType = ... # 0xe
+    OtherMusic               : QRadioData.ProgramType = ... # 0xf
+    Weather                  : QRadioData.ProgramType = ... # 0x10
+    Finance                  : QRadioData.ProgramType = ... # 0x11
+    ChildrensProgrammes      : QRadioData.ProgramType = ... # 0x12
+    SocialAffairs            : QRadioData.ProgramType = ... # 0x13
+    Religion                 : QRadioData.ProgramType = ... # 0x14
+    PhoneIn                  : QRadioData.ProgramType = ... # 0x15
+    Travel                   : QRadioData.ProgramType = ... # 0x16
+    Leisure                  : QRadioData.ProgramType = ... # 0x17
+    JazzMusic                : QRadioData.ProgramType = ... # 0x18
+    CountryMusic             : QRadioData.ProgramType = ... # 0x19
+    NationalMusic            : QRadioData.ProgramType = ... # 0x1a
+    OldiesMusic              : QRadioData.ProgramType = ... # 0x1b
+    FolkMusic                : QRadioData.ProgramType = ... # 0x1c
+    Documentary              : QRadioData.ProgramType = ... # 0x1d
+    AlarmTest                : QRadioData.ProgramType = ... # 0x1e
+    Alarm                    : QRadioData.ProgramType = ... # 0x1f
+    Talk                     : QRadioData.ProgramType = ... # 0x20
+    ClassicRock              : QRadioData.ProgramType = ... # 0x21
+    AdultHits                : QRadioData.ProgramType = ... # 0x22
+    SoftRock                 : QRadioData.ProgramType = ... # 0x23
+    Top40                    : QRadioData.ProgramType = ... # 0x24
+    Soft                     : QRadioData.ProgramType = ... # 0x25
+    Nostalgia                : QRadioData.ProgramType = ... # 0x26
+    Classical                : QRadioData.ProgramType = ... # 0x27
+    RhythmAndBlues           : QRadioData.ProgramType = ... # 0x28
+    SoftRhythmAndBlues       : QRadioData.ProgramType = ... # 0x29
+    Language                 : QRadioData.ProgramType = ... # 0x2a
+    ReligiousMusic           : QRadioData.ProgramType = ... # 0x2b
+    ReligiousTalk            : QRadioData.ProgramType = ... # 0x2c
+    Personality              : QRadioData.ProgramType = ... # 0x2d
+    Public                   : QRadioData.ProgramType = ... # 0x2e
+    College                  : QRadioData.ProgramType = ... # 0x2f
 
     class Error(object):
         NoError                  : QRadioData.Error = ... # 0x0
@@ -2228,22 +2228,22 @@ class QRadioDataControl(PySide2.QtMultimedia.QMediaControl):
 
 
 class QRadioTuner(PySide2.QtMultimedia.QMediaObject):
-    AM                       : QRadioTuner = ... # 0x0
-    ActiveState              : QRadioTuner = ... # 0x0
-    ForceStereo              : QRadioTuner = ... # 0x0
-    NoError                  : QRadioTuner = ... # 0x0
-    SearchFast               : QRadioTuner = ... # 0x0
-    FM                       : QRadioTuner = ... # 0x1
-    ForceMono                : QRadioTuner = ... # 0x1
-    ResourceError            : QRadioTuner = ... # 0x1
-    SearchGetStationId       : QRadioTuner = ... # 0x1
-    StoppedState             : QRadioTuner = ... # 0x1
-    Auto                     : QRadioTuner = ... # 0x2
-    OpenError                : QRadioTuner = ... # 0x2
-    SW                       : QRadioTuner = ... # 0x2
-    LW                       : QRadioTuner = ... # 0x3
-    OutOfRangeError          : QRadioTuner = ... # 0x3
-    FM2                      : QRadioTuner = ... # 0x4
+    AM                       : QRadioTuner.Band = ... # 0x0
+    ActiveState              : QRadioTuner.State = ... # 0x0
+    ForceStereo              : QRadioTuner.StereoMode = ... # 0x0
+    NoError                  : QRadioTuner.Error = ... # 0x0
+    SearchFast               : QRadioTuner.SearchMode = ... # 0x0
+    FM                       : QRadioTuner.Band = ... # 0x1
+    ForceMono                : QRadioTuner.StereoMode = ... # 0x1
+    ResourceError            : QRadioTuner.Error = ... # 0x1
+    SearchGetStationId       : QRadioTuner.SearchMode = ... # 0x1
+    StoppedState             : QRadioTuner.State = ... # 0x1
+    Auto                     : QRadioTuner.StereoMode = ... # 0x2
+    OpenError                : QRadioTuner.Error = ... # 0x2
+    SW                       : QRadioTuner.Band = ... # 0x2
+    LW                       : QRadioTuner.Band = ... # 0x3
+    OutOfRangeError          : QRadioTuner.Error = ... # 0x3
+    FM2                      : QRadioTuner.Band = ... # 0x4
 
     class Band(object):
         AM                       : QRadioTuner.Band = ... # 0x0
@@ -2336,7 +2336,7 @@ class QRadioTunerControl(PySide2.QtMultimedia.QMediaControl):
 
 
 class QSound(PySide2.QtCore.QObject):
-    Infinite                 : QSound = ... # -0x1
+    Infinite                 : QSound.Loop = ... # -0x1
 
     class Loop(object):
         Infinite                 : QSound.Loop = ... # -0x1
@@ -2357,11 +2357,11 @@ class QSound(PySide2.QtCore.QObject):
 
 
 class QSoundEffect(PySide2.QtCore.QObject):
-    Infinite                 : QSoundEffect = ... # -0x2
-    Null                     : QSoundEffect = ... # 0x0
-    Loading                  : QSoundEffect = ... # 0x1
-    Ready                    : QSoundEffect = ... # 0x2
-    Error                    : QSoundEffect = ... # 0x3
+    Infinite                 : QSoundEffect.Loop = ... # -0x2
+    Null                     : QSoundEffect.Status = ... # 0x0
+    Loading                  : QSoundEffect.Status = ... # 0x1
+    Ready                    : QSoundEffect.Status = ... # 0x2
+    Error                    : QSoundEffect.Status = ... # 0x3
 
     class Loop(object):
         Infinite                 : QSoundEffect.Loop = ... # -0x2
@@ -2451,7 +2451,7 @@ class QVideoEncoderSettingsControl(PySide2.QtMultimedia.QMediaControl):
 
 
 class QVideoFilterRunnable(Shiboken.Object):
-    LastInChain              : QVideoFilterRunnable = ... # 0x1
+    LastInChain              : QVideoFilterRunnable.RunFlag = ... # 0x1
 
     class RunFlag(object):
         LastInChain              : QVideoFilterRunnable.RunFlag = ... # 0x1
@@ -2464,47 +2464,47 @@ class QVideoFilterRunnable(Shiboken.Object):
 
 
 class QVideoFrame(Shiboken.Object):
-    Format_Invalid           : QVideoFrame = ... # 0x0
-    ProgressiveFrame         : QVideoFrame = ... # 0x0
-    Format_ARGB32            : QVideoFrame = ... # 0x1
-    TopField                 : QVideoFrame = ... # 0x1
-    BottomField              : QVideoFrame = ... # 0x2
-    Format_ARGB32_Premultiplied: QVideoFrame = ... # 0x2
-    Format_RGB32             : QVideoFrame = ... # 0x3
-    InterlacedFrame          : QVideoFrame = ... # 0x3
-    Format_RGB24             : QVideoFrame = ... # 0x4
-    Format_RGB565            : QVideoFrame = ... # 0x5
-    Format_RGB555            : QVideoFrame = ... # 0x6
-    Format_ARGB8565_Premultiplied: QVideoFrame = ... # 0x7
-    Format_BGRA32            : QVideoFrame = ... # 0x8
-    Format_BGRA32_Premultiplied: QVideoFrame = ... # 0x9
-    Format_BGR32             : QVideoFrame = ... # 0xa
-    Format_BGR24             : QVideoFrame = ... # 0xb
-    Format_BGR565            : QVideoFrame = ... # 0xc
-    Format_BGR555            : QVideoFrame = ... # 0xd
-    Format_BGRA5658_Premultiplied: QVideoFrame = ... # 0xe
-    Format_AYUV444           : QVideoFrame = ... # 0xf
-    Format_AYUV444_Premultiplied: QVideoFrame = ... # 0x10
-    Format_YUV444            : QVideoFrame = ... # 0x11
-    Format_YUV420P           : QVideoFrame = ... # 0x12
-    Format_YV12              : QVideoFrame = ... # 0x13
-    Format_UYVY              : QVideoFrame = ... # 0x14
-    Format_YUYV              : QVideoFrame = ... # 0x15
-    Format_NV12              : QVideoFrame = ... # 0x16
-    Format_NV21              : QVideoFrame = ... # 0x17
-    Format_IMC1              : QVideoFrame = ... # 0x18
-    Format_IMC2              : QVideoFrame = ... # 0x19
-    Format_IMC3              : QVideoFrame = ... # 0x1a
-    Format_IMC4              : QVideoFrame = ... # 0x1b
-    Format_Y8                : QVideoFrame = ... # 0x1c
-    Format_Y16               : QVideoFrame = ... # 0x1d
-    Format_Jpeg              : QVideoFrame = ... # 0x1e
-    Format_CameraRaw         : QVideoFrame = ... # 0x1f
-    Format_AdobeDng          : QVideoFrame = ... # 0x20
-    Format_ABGR32            : QVideoFrame = ... # 0x21
-    Format_YUV422P           : QVideoFrame = ... # 0x22
-    NPixelFormats            : QVideoFrame = ... # 0x23
-    Format_User              : QVideoFrame = ... # 0x3e8
+    Format_Invalid           : QVideoFrame.PixelFormat = ... # 0x0
+    ProgressiveFrame         : QVideoFrame.FieldType = ... # 0x0
+    Format_ARGB32            : QVideoFrame.PixelFormat = ... # 0x1
+    TopField                 : QVideoFrame.FieldType = ... # 0x1
+    BottomField              : QVideoFrame.FieldType = ... # 0x2
+    Format_ARGB32_Premultiplied: QVideoFrame.PixelFormat = ... # 0x2
+    Format_RGB32             : QVideoFrame.PixelFormat = ... # 0x3
+    InterlacedFrame          : QVideoFrame.FieldType = ... # 0x3
+    Format_RGB24             : QVideoFrame.PixelFormat = ... # 0x4
+    Format_RGB565            : QVideoFrame.PixelFormat = ... # 0x5
+    Format_RGB555            : QVideoFrame.PixelFormat = ... # 0x6
+    Format_ARGB8565_Premultiplied: QVideoFrame.PixelFormat = ... # 0x7
+    Format_BGRA32            : QVideoFrame.PixelFormat = ... # 0x8
+    Format_BGRA32_Premultiplied: QVideoFrame.PixelFormat = ... # 0x9
+    Format_BGR32             : QVideoFrame.PixelFormat = ... # 0xa
+    Format_BGR24             : QVideoFrame.PixelFormat = ... # 0xb
+    Format_BGR565            : QVideoFrame.PixelFormat = ... # 0xc
+    Format_BGR555            : QVideoFrame.PixelFormat = ... # 0xd
+    Format_BGRA5658_Premultiplied: QVideoFrame.PixelFormat = ... # 0xe
+    Format_AYUV444           : QVideoFrame.PixelFormat = ... # 0xf
+    Format_AYUV444_Premultiplied: QVideoFrame.PixelFormat = ... # 0x10
+    Format_YUV444            : QVideoFrame.PixelFormat = ... # 0x11
+    Format_YUV420P           : QVideoFrame.PixelFormat = ... # 0x12
+    Format_YV12              : QVideoFrame.PixelFormat = ... # 0x13
+    Format_UYVY              : QVideoFrame.PixelFormat = ... # 0x14
+    Format_YUYV              : QVideoFrame.PixelFormat = ... # 0x15
+    Format_NV12              : QVideoFrame.PixelFormat = ... # 0x16
+    Format_NV21              : QVideoFrame.PixelFormat = ... # 0x17
+    Format_IMC1              : QVideoFrame.PixelFormat = ... # 0x18
+    Format_IMC2              : QVideoFrame.PixelFormat = ... # 0x19
+    Format_IMC3              : QVideoFrame.PixelFormat = ... # 0x1a
+    Format_IMC4              : QVideoFrame.PixelFormat = ... # 0x1b
+    Format_Y8                : QVideoFrame.PixelFormat = ... # 0x1c
+    Format_Y16               : QVideoFrame.PixelFormat = ... # 0x1d
+    Format_Jpeg              : QVideoFrame.PixelFormat = ... # 0x1e
+    Format_CameraRaw         : QVideoFrame.PixelFormat = ... # 0x1f
+    Format_AdobeDng          : QVideoFrame.PixelFormat = ... # 0x20
+    Format_ABGR32            : QVideoFrame.PixelFormat = ... # 0x21
+    Format_YUV422P           : QVideoFrame.PixelFormat = ... # 0x22
+    NPixelFormats            : QVideoFrame.PixelFormat = ... # 0x23
+    Format_User              : QVideoFrame.PixelFormat = ... # 0x3e8
 
     class FieldType(object):
         ProgressiveFrame         : QVideoFrame.FieldType = ... # 0x0
@@ -2621,15 +2621,15 @@ class QVideoRendererControl(PySide2.QtMultimedia.QMediaControl):
 
 
 class QVideoSurfaceFormat(Shiboken.Object):
-    TopToBottom              : QVideoSurfaceFormat = ... # 0x0
-    YCbCr_Undefined          : QVideoSurfaceFormat = ... # 0x0
-    BottomToTop              : QVideoSurfaceFormat = ... # 0x1
-    YCbCr_BT601              : QVideoSurfaceFormat = ... # 0x1
-    YCbCr_BT709              : QVideoSurfaceFormat = ... # 0x2
-    YCbCr_xvYCC601           : QVideoSurfaceFormat = ... # 0x3
-    YCbCr_xvYCC709           : QVideoSurfaceFormat = ... # 0x4
-    YCbCr_JPEG               : QVideoSurfaceFormat = ... # 0x5
-    YCbCr_CustomMatrix       : QVideoSurfaceFormat = ... # 0x6
+    TopToBottom              : QVideoSurfaceFormat.Direction = ... # 0x0
+    YCbCr_Undefined          : QVideoSurfaceFormat.YCbCrColorSpace = ... # 0x0
+    BottomToTop              : QVideoSurfaceFormat.Direction = ... # 0x1
+    YCbCr_BT601              : QVideoSurfaceFormat.YCbCrColorSpace = ... # 0x1
+    YCbCr_BT709              : QVideoSurfaceFormat.YCbCrColorSpace = ... # 0x2
+    YCbCr_xvYCC601           : QVideoSurfaceFormat.YCbCrColorSpace = ... # 0x3
+    YCbCr_xvYCC709           : QVideoSurfaceFormat.YCbCrColorSpace = ... # 0x4
+    YCbCr_JPEG               : QVideoSurfaceFormat.YCbCrColorSpace = ... # 0x5
+    YCbCr_CustomMatrix       : QVideoSurfaceFormat.YCbCrColorSpace = ... # 0x6
 
     class Direction(object):
         TopToBottom              : QVideoSurfaceFormat.Direction = ... # 0x0

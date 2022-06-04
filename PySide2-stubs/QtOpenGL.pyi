@@ -56,28 +56,28 @@ import PySide2.QtOpenGL
 
 
 class QGL(Shiboken.Object):
-    DoubleBuffer             : QGL = ... # 0x1
-    DepthBuffer              : QGL = ... # 0x2
-    Rgba                     : QGL = ... # 0x4
-    AlphaChannel             : QGL = ... # 0x8
-    AccumBuffer              : QGL = ... # 0x10
-    StencilBuffer            : QGL = ... # 0x20
-    StereoBuffers            : QGL = ... # 0x40
-    DirectRendering          : QGL = ... # 0x80
-    HasOverlay               : QGL = ... # 0x100
-    SampleBuffers            : QGL = ... # 0x200
-    DeprecatedFunctions      : QGL = ... # 0x400
-    SingleBuffer             : QGL = ... # 0x10000
-    NoDepthBuffer            : QGL = ... # 0x20000
-    ColorIndex               : QGL = ... # 0x40000
-    NoAlphaChannel           : QGL = ... # 0x80000
-    NoAccumBuffer            : QGL = ... # 0x100000
-    NoStencilBuffer          : QGL = ... # 0x200000
-    NoStereoBuffers          : QGL = ... # 0x400000
-    IndirectRendering        : QGL = ... # 0x800000
-    NoOverlay                : QGL = ... # 0x1000000
-    NoSampleBuffers          : QGL = ... # 0x2000000
-    NoDeprecatedFunctions    : QGL = ... # 0x4000000
+    DoubleBuffer             : QGL.FormatOption = ... # 0x1
+    DepthBuffer              : QGL.FormatOption = ... # 0x2
+    Rgba                     : QGL.FormatOption = ... # 0x4
+    AlphaChannel             : QGL.FormatOption = ... # 0x8
+    AccumBuffer              : QGL.FormatOption = ... # 0x10
+    StencilBuffer            : QGL.FormatOption = ... # 0x20
+    StereoBuffers            : QGL.FormatOption = ... # 0x40
+    DirectRendering          : QGL.FormatOption = ... # 0x80
+    HasOverlay               : QGL.FormatOption = ... # 0x100
+    SampleBuffers            : QGL.FormatOption = ... # 0x200
+    DeprecatedFunctions      : QGL.FormatOption = ... # 0x400
+    SingleBuffer             : QGL.FormatOption = ... # 0x10000
+    NoDepthBuffer            : QGL.FormatOption = ... # 0x20000
+    ColorIndex               : QGL.FormatOption = ... # 0x40000
+    NoAlphaChannel           : QGL.FormatOption = ... # 0x80000
+    NoAccumBuffer            : QGL.FormatOption = ... # 0x100000
+    NoStencilBuffer          : QGL.FormatOption = ... # 0x200000
+    NoStereoBuffers          : QGL.FormatOption = ... # 0x400000
+    IndirectRendering        : QGL.FormatOption = ... # 0x800000
+    NoOverlay                : QGL.FormatOption = ... # 0x1000000
+    NoSampleBuffers          : QGL.FormatOption = ... # 0x2000000
+    NoDeprecatedFunctions    : QGL.FormatOption = ... # 0x4000000
 
     class FormatOption(object):
         DoubleBuffer             : QGL.FormatOption = ... # 0x1
@@ -107,22 +107,22 @@ class QGL(Shiboken.Object):
 
 
 class QGLBuffer(Shiboken.Object):
-    VertexBuffer             : QGLBuffer = ... # 0x8892
-    IndexBuffer              : QGLBuffer = ... # 0x8893
-    ReadOnly                 : QGLBuffer = ... # 0x88b8
-    WriteOnly                : QGLBuffer = ... # 0x88b9
-    ReadWrite                : QGLBuffer = ... # 0x88ba
-    StreamDraw               : QGLBuffer = ... # 0x88e0
-    StreamRead               : QGLBuffer = ... # 0x88e1
-    StreamCopy               : QGLBuffer = ... # 0x88e2
-    StaticDraw               : QGLBuffer = ... # 0x88e4
-    StaticRead               : QGLBuffer = ... # 0x88e5
-    StaticCopy               : QGLBuffer = ... # 0x88e6
-    DynamicDraw              : QGLBuffer = ... # 0x88e8
-    DynamicRead              : QGLBuffer = ... # 0x88e9
-    DynamicCopy              : QGLBuffer = ... # 0x88ea
-    PixelPackBuffer          : QGLBuffer = ... # 0x88eb
-    PixelUnpackBuffer        : QGLBuffer = ... # 0x88ec
+    VertexBuffer             : QGLBuffer.Type = ... # 0x8892
+    IndexBuffer              : QGLBuffer.Type = ... # 0x8893
+    ReadOnly                 : QGLBuffer.Access = ... # 0x88b8
+    WriteOnly                : QGLBuffer.Access = ... # 0x88b9
+    ReadWrite                : QGLBuffer.Access = ... # 0x88ba
+    StreamDraw               : QGLBuffer.UsagePattern = ... # 0x88e0
+    StreamRead               : QGLBuffer.UsagePattern = ... # 0x88e1
+    StreamCopy               : QGLBuffer.UsagePattern = ... # 0x88e2
+    StaticDraw               : QGLBuffer.UsagePattern = ... # 0x88e4
+    StaticRead               : QGLBuffer.UsagePattern = ... # 0x88e5
+    StaticCopy               : QGLBuffer.UsagePattern = ... # 0x88e6
+    DynamicDraw              : QGLBuffer.UsagePattern = ... # 0x88e8
+    DynamicRead              : QGLBuffer.UsagePattern = ... # 0x88e9
+    DynamicCopy              : QGLBuffer.UsagePattern = ... # 0x88ea
+    PixelPackBuffer          : QGLBuffer.Type = ... # 0x88eb
+    PixelUnpackBuffer        : QGLBuffer.Type = ... # 0x88ec
 
     class Access(object):
         ReadOnly                 : QGLBuffer.Access = ... # 0x88b8
@@ -201,16 +201,16 @@ class QGLColormap(Shiboken.Object):
 
 
 class QGLContext(Shiboken.Object):
-    NoBindOption             : QGLContext = ... # 0x0
-    InvertedYBindOption      : QGLContext = ... # 0x1
-    MipmapBindOption         : QGLContext = ... # 0x2
-    PremultipliedAlphaBindOption: QGLContext = ... # 0x4
-    LinearFilteringBindOption: QGLContext = ... # 0x8
-    DefaultBindOption        : QGLContext = ... # 0xb
-    MemoryManagedBindOption  : QGLContext = ... # 0x10
-    InternalBindOption       : QGLContext = ... # 0x14
-    CanFlipNativePixmapBindOption: QGLContext = ... # 0x20
-    TemporarilyCachedBindOption: QGLContext = ... # 0x40
+    NoBindOption             : QGLContext.BindOption = ... # 0x0
+    InvertedYBindOption      : QGLContext.BindOption = ... # 0x1
+    MipmapBindOption         : QGLContext.BindOption = ... # 0x2
+    PremultipliedAlphaBindOption: QGLContext.BindOption = ... # 0x4
+    LinearFilteringBindOption: QGLContext.BindOption = ... # 0x8
+    DefaultBindOption        : QGLContext.BindOption = ... # 0xb
+    MemoryManagedBindOption  : QGLContext.BindOption = ... # 0x10
+    InternalBindOption       : QGLContext.BindOption = ... # 0x14
+    CanFlipNativePixmapBindOption: QGLContext.BindOption = ... # 0x20
+    TemporarilyCachedBindOption: QGLContext.BindOption = ... # 0x40
 
     class BindOption(object):
         NoBindOption             : QGLContext.BindOption = ... # 0x0
@@ -279,30 +279,30 @@ class QGLContext(Shiboken.Object):
 
 
 class QGLFormat(Shiboken.Object):
-    NoProfile                : QGLFormat = ... # 0x0
-    OpenGL_Version_None      : QGLFormat = ... # 0x0
-    CoreProfile              : QGLFormat = ... # 0x1
-    OpenGL_Version_1_1       : QGLFormat = ... # 0x1
-    CompatibilityProfile     : QGLFormat = ... # 0x2
-    OpenGL_Version_1_2       : QGLFormat = ... # 0x2
-    OpenGL_Version_1_3       : QGLFormat = ... # 0x4
-    OpenGL_Version_1_4       : QGLFormat = ... # 0x8
-    OpenGL_Version_1_5       : QGLFormat = ... # 0x10
-    OpenGL_Version_2_0       : QGLFormat = ... # 0x20
-    OpenGL_Version_2_1       : QGLFormat = ... # 0x40
-    OpenGL_ES_Common_Version_1_0: QGLFormat = ... # 0x80
-    OpenGL_ES_CommonLite_Version_1_0: QGLFormat = ... # 0x100
-    OpenGL_ES_Common_Version_1_1: QGLFormat = ... # 0x200
-    OpenGL_ES_CommonLite_Version_1_1: QGLFormat = ... # 0x400
-    OpenGL_ES_Version_2_0    : QGLFormat = ... # 0x800
-    OpenGL_Version_3_0       : QGLFormat = ... # 0x1000
-    OpenGL_Version_3_1       : QGLFormat = ... # 0x2000
-    OpenGL_Version_3_2       : QGLFormat = ... # 0x4000
-    OpenGL_Version_3_3       : QGLFormat = ... # 0x8000
-    OpenGL_Version_4_0       : QGLFormat = ... # 0x10000
-    OpenGL_Version_4_1       : QGLFormat = ... # 0x20000
-    OpenGL_Version_4_2       : QGLFormat = ... # 0x40000
-    OpenGL_Version_4_3       : QGLFormat = ... # 0x80000
+    NoProfile                : QGLFormat.OpenGLContextProfile = ... # 0x0
+    OpenGL_Version_None      : QGLFormat.OpenGLVersionFlag = ... # 0x0
+    CoreProfile              : QGLFormat.OpenGLContextProfile = ... # 0x1
+    OpenGL_Version_1_1       : QGLFormat.OpenGLVersionFlag = ... # 0x1
+    CompatibilityProfile     : QGLFormat.OpenGLContextProfile = ... # 0x2
+    OpenGL_Version_1_2       : QGLFormat.OpenGLVersionFlag = ... # 0x2
+    OpenGL_Version_1_3       : QGLFormat.OpenGLVersionFlag = ... # 0x4
+    OpenGL_Version_1_4       : QGLFormat.OpenGLVersionFlag = ... # 0x8
+    OpenGL_Version_1_5       : QGLFormat.OpenGLVersionFlag = ... # 0x10
+    OpenGL_Version_2_0       : QGLFormat.OpenGLVersionFlag = ... # 0x20
+    OpenGL_Version_2_1       : QGLFormat.OpenGLVersionFlag = ... # 0x40
+    OpenGL_ES_Common_Version_1_0: QGLFormat.OpenGLVersionFlag = ... # 0x80
+    OpenGL_ES_CommonLite_Version_1_0: QGLFormat.OpenGLVersionFlag = ... # 0x100
+    OpenGL_ES_Common_Version_1_1: QGLFormat.OpenGLVersionFlag = ... # 0x200
+    OpenGL_ES_CommonLite_Version_1_1: QGLFormat.OpenGLVersionFlag = ... # 0x400
+    OpenGL_ES_Version_2_0    : QGLFormat.OpenGLVersionFlag = ... # 0x800
+    OpenGL_Version_3_0       : QGLFormat.OpenGLVersionFlag = ... # 0x1000
+    OpenGL_Version_3_1       : QGLFormat.OpenGLVersionFlag = ... # 0x2000
+    OpenGL_Version_3_2       : QGLFormat.OpenGLVersionFlag = ... # 0x4000
+    OpenGL_Version_3_3       : QGLFormat.OpenGLVersionFlag = ... # 0x8000
+    OpenGL_Version_4_0       : QGLFormat.OpenGLVersionFlag = ... # 0x10000
+    OpenGL_Version_4_1       : QGLFormat.OpenGLVersionFlag = ... # 0x20000
+    OpenGL_Version_4_2       : QGLFormat.OpenGLVersionFlag = ... # 0x40000
+    OpenGL_Version_4_3       : QGLFormat.OpenGLVersionFlag = ... # 0x80000
 
     class OpenGLContextProfile(object):
         NoProfile                : QGLFormat.OpenGLContextProfile = ... # 0x0
@@ -411,9 +411,9 @@ class QGLFormat(Shiboken.Object):
 
 
 class QGLFramebufferObject(PySide2.QtGui.QPaintDevice):
-    NoAttachment             : QGLFramebufferObject = ... # 0x0
-    CombinedDepthStencil     : QGLFramebufferObject = ... # 0x1
-    Depth                    : QGLFramebufferObject = ... # 0x2
+    NoAttachment             : QGLFramebufferObject.Attachment = ... # 0x0
+    CombinedDepthStencil     : QGLFramebufferObject.Attachment = ... # 0x1
+    Depth                    : QGLFramebufferObject.Attachment = ... # 0x2
 
     class Attachment(object):
         NoAttachment             : QGLFramebufferObject.Attachment = ... # 0x0
@@ -519,9 +519,9 @@ class QGLPixelBuffer(PySide2.QtGui.QPaintDevice):
 
 
 class QGLShader(PySide2.QtCore.QObject):
-    Vertex                   : QGLShader = ... # 0x1
-    Fragment                 : QGLShader = ... # 0x2
-    Geometry                 : QGLShader = ... # 0x4
+    Vertex                   : QGLShader.ShaderTypeBit = ... # 0x1
+    Fragment                 : QGLShader.ShaderTypeBit = ... # 0x2
+    Geometry                 : QGLShader.ShaderTypeBit = ... # 0x4
 
     class ShaderType(object): ...
 

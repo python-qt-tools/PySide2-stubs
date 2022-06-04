@@ -55,20 +55,20 @@ import PySide2.QtSql
 
 
 class QSql(Shiboken.Object):
-    AfterLastRow             : QSql = ... # -0x2
-    BeforeFirstRow           : QSql = ... # -0x1
-    HighPrecision            : QSql = ... # 0x0
-    In                       : QSql = ... # 0x1
-    LowPrecisionInt32        : QSql = ... # 0x1
-    Tables                   : QSql = ... # 0x1
-    LowPrecisionInt64        : QSql = ... # 0x2
-    Out                      : QSql = ... # 0x2
-    SystemTables             : QSql = ... # 0x2
-    InOut                    : QSql = ... # 0x3
-    Binary                   : QSql = ... # 0x4
-    LowPrecisionDouble       : QSql = ... # 0x4
-    Views                    : QSql = ... # 0x4
-    AllTables                : QSql = ... # 0xff
+    AfterLastRow             : QSql.Location = ... # -0x2
+    BeforeFirstRow           : QSql.Location = ... # -0x1
+    HighPrecision            : QSql.NumericalPrecisionPolicy = ... # 0x0
+    In                       : QSql.ParamTypeFlag = ... # 0x1
+    LowPrecisionInt32        : QSql.NumericalPrecisionPolicy = ... # 0x1
+    Tables                   : QSql.TableType = ... # 0x1
+    LowPrecisionInt64        : QSql.NumericalPrecisionPolicy = ... # 0x2
+    Out                      : QSql.ParamTypeFlag = ... # 0x2
+    SystemTables             : QSql.TableType = ... # 0x2
+    InOut                    : QSql.ParamTypeFlag = ... # 0x3
+    Binary                   : QSql.ParamTypeFlag = ... # 0x4
+    LowPrecisionDouble       : QSql.NumericalPrecisionPolicy = ... # 0x4
+    Views                    : QSql.TableType = ... # 0x4
+    AllTables                : QSql.TableType = ... # 0xff
 
     class Location(object):
         AfterLastRow             : QSql.Location = ... # -0x2
@@ -170,40 +170,40 @@ class QSqlDatabase(Shiboken.Object):
 
 
 class QSqlDriver(PySide2.QtCore.QObject):
-    FieldName                : QSqlDriver = ... # 0x0
-    Transactions             : QSqlDriver = ... # 0x0
-    UnknownDbms              : QSqlDriver = ... # 0x0
-    UnknownSource            : QSqlDriver = ... # 0x0
-    WhereStatement           : QSqlDriver = ... # 0x0
-    MSSqlServer              : QSqlDriver = ... # 0x1
-    QuerySize                : QSqlDriver = ... # 0x1
-    SelectStatement          : QSqlDriver = ... # 0x1
-    SelfSource               : QSqlDriver = ... # 0x1
-    TableName                : QSqlDriver = ... # 0x1
-    BLOB                     : QSqlDriver = ... # 0x2
-    MySqlServer              : QSqlDriver = ... # 0x2
-    OtherSource              : QSqlDriver = ... # 0x2
-    UpdateStatement          : QSqlDriver = ... # 0x2
-    InsertStatement          : QSqlDriver = ... # 0x3
-    PostgreSQL               : QSqlDriver = ... # 0x3
-    Unicode                  : QSqlDriver = ... # 0x3
-    DeleteStatement          : QSqlDriver = ... # 0x4
-    Oracle                   : QSqlDriver = ... # 0x4
-    PreparedQueries          : QSqlDriver = ... # 0x4
-    NamedPlaceholders        : QSqlDriver = ... # 0x5
-    Sybase                   : QSqlDriver = ... # 0x5
-    PositionalPlaceholders   : QSqlDriver = ... # 0x6
-    SQLite                   : QSqlDriver = ... # 0x6
-    Interbase                : QSqlDriver = ... # 0x7
-    LastInsertId             : QSqlDriver = ... # 0x7
-    BatchOperations          : QSqlDriver = ... # 0x8
-    DB2                      : QSqlDriver = ... # 0x8
-    SimpleLocking            : QSqlDriver = ... # 0x9
-    LowPrecisionNumbers      : QSqlDriver = ... # 0xa
-    EventNotifications       : QSqlDriver = ... # 0xb
-    FinishQuery              : QSqlDriver = ... # 0xc
-    MultipleResultSets       : QSqlDriver = ... # 0xd
-    CancelQuery              : QSqlDriver = ... # 0xe
+    FieldName                : QSqlDriver.IdentifierType = ... # 0x0
+    Transactions             : QSqlDriver.DriverFeature = ... # 0x0
+    UnknownDbms              : QSqlDriver.DbmsType = ... # 0x0
+    UnknownSource            : QSqlDriver.NotificationSource = ... # 0x0
+    WhereStatement           : QSqlDriver.StatementType = ... # 0x0
+    MSSqlServer              : QSqlDriver.DbmsType = ... # 0x1
+    QuerySize                : QSqlDriver.DriverFeature = ... # 0x1
+    SelectStatement          : QSqlDriver.StatementType = ... # 0x1
+    SelfSource               : QSqlDriver.NotificationSource = ... # 0x1
+    TableName                : QSqlDriver.IdentifierType = ... # 0x1
+    BLOB                     : QSqlDriver.DriverFeature = ... # 0x2
+    MySqlServer              : QSqlDriver.DbmsType = ... # 0x2
+    OtherSource              : QSqlDriver.NotificationSource = ... # 0x2
+    UpdateStatement          : QSqlDriver.StatementType = ... # 0x2
+    InsertStatement          : QSqlDriver.StatementType = ... # 0x3
+    PostgreSQL               : QSqlDriver.DbmsType = ... # 0x3
+    Unicode                  : QSqlDriver.DriverFeature = ... # 0x3
+    DeleteStatement          : QSqlDriver.StatementType = ... # 0x4
+    Oracle                   : QSqlDriver.DbmsType = ... # 0x4
+    PreparedQueries          : QSqlDriver.DriverFeature = ... # 0x4
+    NamedPlaceholders        : QSqlDriver.DriverFeature = ... # 0x5
+    Sybase                   : QSqlDriver.DbmsType = ... # 0x5
+    PositionalPlaceholders   : QSqlDriver.DriverFeature = ... # 0x6
+    SQLite                   : QSqlDriver.DbmsType = ... # 0x6
+    Interbase                : QSqlDriver.DbmsType = ... # 0x7
+    LastInsertId             : QSqlDriver.DriverFeature = ... # 0x7
+    BatchOperations          : QSqlDriver.DriverFeature = ... # 0x8
+    DB2                      : QSqlDriver.DbmsType = ... # 0x8
+    SimpleLocking            : QSqlDriver.DriverFeature = ... # 0x9
+    LowPrecisionNumbers      : QSqlDriver.DriverFeature = ... # 0xa
+    EventNotifications       : QSqlDriver.DriverFeature = ... # 0xb
+    FinishQuery              : QSqlDriver.DriverFeature = ... # 0xc
+    MultipleResultSets       : QSqlDriver.DriverFeature = ... # 0xd
+    CancelQuery              : QSqlDriver.DriverFeature = ... # 0xe
 
     class DbmsType(object):
         UnknownDbms              : QSqlDriver.DbmsType = ... # 0x0
@@ -289,11 +289,11 @@ class QSqlDriverCreatorBase(Shiboken.Object):
 
 
 class QSqlError(Shiboken.Object):
-    NoError                  : QSqlError = ... # 0x0
-    ConnectionError          : QSqlError = ... # 0x1
-    StatementError           : QSqlError = ... # 0x2
-    TransactionError         : QSqlError = ... # 0x3
-    UnknownError             : QSqlError = ... # 0x4
+    NoError                  : QSqlError.ErrorType = ... # 0x0
+    ConnectionError          : QSqlError.ErrorType = ... # 0x1
+    StatementError           : QSqlError.ErrorType = ... # 0x2
+    TransactionError         : QSqlError.ErrorType = ... # 0x3
+    UnknownError             : QSqlError.ErrorType = ... # 0x4
 
     class ErrorType(object):
         NoError                  : QSqlError.ErrorType = ... # 0x0
@@ -326,9 +326,9 @@ class QSqlError(Shiboken.Object):
 
 
 class QSqlField(Shiboken.Object):
-    Unknown                  : QSqlField = ... # -0x1
-    Optional                 : QSqlField = ... # 0x0
-    Required                 : QSqlField = ... # 0x1
+    Unknown                  : QSqlField.RequiredStatus = ... # -0x1
+    Optional                 : QSqlField.RequiredStatus = ... # 0x0
+    Required                 : QSqlField.RequiredStatus = ... # 0x1
 
     class RequiredStatus(object):
         Unknown                  : QSqlField.RequiredStatus = ... # -0x1
@@ -396,8 +396,8 @@ class QSqlIndex(PySide2.QtSql.QSqlRecord):
 
 
 class QSqlQuery(Shiboken.Object):
-    ValuesAsRows             : QSqlQuery = ... # 0x0
-    ValuesAsColumns          : QSqlQuery = ... # 0x1
+    ValuesAsRows             : QSqlQuery.BatchExecutionMode = ... # 0x0
+    ValuesAsColumns          : QSqlQuery.BatchExecutionMode = ... # 0x1
 
     class BatchExecutionMode(object):
         ValuesAsRows             : QSqlQuery.BatchExecutionMode = ... # 0x0
@@ -584,8 +584,8 @@ class QSqlRelationalDelegate(PySide2.QtWidgets.QItemDelegate):
 
 
 class QSqlRelationalTableModel(PySide2.QtSql.QSqlTableModel):
-    InnerJoin                : QSqlRelationalTableModel = ... # 0x0
-    LeftJoin                 : QSqlRelationalTableModel = ... # 0x1
+    InnerJoin                : QSqlRelationalTableModel.JoinMode = ... # 0x0
+    LeftJoin                 : QSqlRelationalTableModel.JoinMode = ... # 0x1
 
     class JoinMode(object):
         InnerJoin                : QSqlRelationalTableModel.JoinMode = ... # 0x0
@@ -611,8 +611,8 @@ class QSqlRelationalTableModel(PySide2.QtSql.QSqlTableModel):
 
 
 class QSqlResult(Shiboken.Object):
-    PositionalBinding        : QSqlResult = ... # 0x0
-    NamedBinding             : QSqlResult = ... # 0x1
+    PositionalBinding        : QSqlResult.BindingSyntax = ... # 0x0
+    NamedBinding             : QSqlResult.BindingSyntax = ... # 0x1
 
     class BindingSyntax(object):
         PositionalBinding        : QSqlResult.BindingSyntax = ... # 0x0
@@ -679,9 +679,9 @@ class QSqlResult(Shiboken.Object):
 
 
 class QSqlTableModel(PySide2.QtSql.QSqlQueryModel):
-    OnFieldChange            : QSqlTableModel = ... # 0x0
-    OnRowChange              : QSqlTableModel = ... # 0x1
-    OnManualSubmit           : QSqlTableModel = ... # 0x2
+    OnFieldChange            : QSqlTableModel.EditStrategy = ... # 0x0
+    OnRowChange              : QSqlTableModel.EditStrategy = ... # 0x1
+    OnManualSubmit           : QSqlTableModel.EditStrategy = ... # 0x2
 
     class EditStrategy(object):
         OnFieldChange            : QSqlTableModel.EditStrategy = ... # 0x0

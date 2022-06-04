@@ -55,16 +55,16 @@ import PySide2.Qt3DCore
 
 
 class Qt3DCore(Shiboken.Object):
-    AllChanges               : Qt3DCore = ... # -0x1
-    NodeCreated              : Qt3DCore = ... # 0x1
-    NodeDeleted              : Qt3DCore = ... # 0x2
-    PropertyUpdated          : Qt3DCore = ... # 0x4
-    PropertyValueAdded       : Qt3DCore = ... # 0x8
-    PropertyValueRemoved     : Qt3DCore = ... # 0x10
-    ComponentAdded           : Qt3DCore = ... # 0x20
-    ComponentRemoved         : Qt3DCore = ... # 0x40
-    CommandRequested         : Qt3DCore = ... # 0x80
-    CallbackTriggered        : Qt3DCore = ... # 0x100
+    AllChanges               : Qt3DCore.ChangeFlag = ... # -0x1
+    NodeCreated              : Qt3DCore.ChangeFlag = ... # 0x1
+    NodeDeleted              : Qt3DCore.ChangeFlag = ... # 0x2
+    PropertyUpdated          : Qt3DCore.ChangeFlag = ... # 0x4
+    PropertyValueAdded       : Qt3DCore.ChangeFlag = ... # 0x8
+    PropertyValueRemoved     : Qt3DCore.ChangeFlag = ... # 0x10
+    ComponentAdded           : Qt3DCore.ChangeFlag = ... # 0x20
+    ComponentRemoved         : Qt3DCore.ChangeFlag = ... # 0x40
+    CommandRequested         : Qt3DCore.ChangeFlag = ... # 0x80
+    CallbackTriggered        : Qt3DCore.ChangeFlag = ... # 0x100
 
     class ChangeFlag(object):
         AllChanges               : Qt3DCore.ChangeFlag = ... # -0x1
@@ -98,8 +98,8 @@ class Qt3DCore(Shiboken.Object):
         def skeleton(self) -> PySide2.Qt3DCore.Qt3DCore.QAbstractSkeleton: ...
 
     class QAspectEngine(PySide2.QtCore.QObject):
-        Manual                   : Qt3DCore.QAspectEngine = ... # 0x0
-        Automatic                : Qt3DCore.QAspectEngine = ... # 0x1
+        Manual                   : Qt3DCore.QAspectEngine.RunMode = ... # 0x0
+        Automatic                : Qt3DCore.QAspectEngine.RunMode = ... # 0x1
 
         class RunMode(object):
             Manual                   : Qt3DCore.QAspectEngine.RunMode = ... # 0x0
@@ -128,8 +128,8 @@ class Qt3DCore(Shiboken.Object):
         def run(self) -> None: ...
 
     class QBackendNode(Shiboken.Object):
-        ReadOnly                 : Qt3DCore.QBackendNode = ... # 0x0
-        ReadWrite                : Qt3DCore.QBackendNode = ... # 0x1
+        ReadOnly                 : Qt3DCore.QBackendNode.Mode = ... # 0x0
+        ReadWrite                : Qt3DCore.QBackendNode.Mode = ... # 0x1
 
         class Mode(object):
             ReadOnly                 : Qt3DCore.QBackendNode.Mode = ... # 0x0
@@ -216,9 +216,9 @@ class Qt3DCore(Shiboken.Object):
         def translation(self) -> PySide2.QtGui.QVector3D: ...
 
     class QNode(PySide2.QtCore.QObject):
-        TrackFinalValues         : Qt3DCore.QNode = ... # 0x0
-        DontTrackValues          : Qt3DCore.QNode = ... # 0x1
-        TrackAllValues           : Qt3DCore.QNode = ... # 0x2
+        TrackFinalValues         : Qt3DCore.QNode.PropertyTrackingMode = ... # 0x0
+        DontTrackValues          : Qt3DCore.QNode.PropertyTrackingMode = ... # 0x1
+        TrackAllValues           : Qt3DCore.QNode.PropertyTrackingMode = ... # 0x2
 
         class PropertyTrackingMode(object):
             TrackFinalValues         : Qt3DCore.QNode.PropertyTrackingMode = ... # 0x0
@@ -345,9 +345,9 @@ class Qt3DCore(Shiboken.Object):
 
 
     class QSceneChange(Shiboken.Object):
-        BackendNodes             : Qt3DCore.QSceneChange = ... # 0x1
-        Nodes                    : Qt3DCore.QSceneChange = ... # 0x10
-        DeliverToAll             : Qt3DCore.QSceneChange = ... # 0x11
+        BackendNodes             : Qt3DCore.QSceneChange.DeliveryFlag = ... # 0x1
+        Nodes                    : Qt3DCore.QSceneChange.DeliveryFlag = ... # 0x10
+        DeliverToAll             : Qt3DCore.QSceneChange.DeliveryFlag = ... # 0x11
 
         class DeliveryFlag(object):
             BackendNodes             : Qt3DCore.QSceneChange.DeliveryFlag = ... # 0x1
@@ -371,9 +371,9 @@ class Qt3DCore(Shiboken.Object):
         def setRootJoint(self, rootJoint:PySide2.Qt3DCore.Qt3DCore.QJoint) -> None: ...
 
     class QSkeletonLoader(PySide2.Qt3DCore.QAbstractSkeleton):
-        NotReady                 : Qt3DCore.QSkeletonLoader = ... # 0x0
-        Ready                    : Qt3DCore.QSkeletonLoader = ... # 0x1
-        Error                    : Qt3DCore.QSkeletonLoader = ... # 0x2
+        NotReady                 : Qt3DCore.QSkeletonLoader.Status = ... # 0x0
+        Ready                    : Qt3DCore.QSkeletonLoader.Status = ... # 0x1
+        Error                    : Qt3DCore.QSkeletonLoader.Status = ... # 0x2
 
         class Status(object):
             NotReady                 : Qt3DCore.QSkeletonLoader.Status = ... # 0x0

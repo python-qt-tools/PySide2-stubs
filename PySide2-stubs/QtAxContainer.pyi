@@ -109,8 +109,8 @@ class QAxObject(PySide2.QtCore.QObject, PySide2.QtAxContainer.QAxBase):
 
 
 class QAxScript(PySide2.QtCore.QObject):
-    FunctionNames            : QAxScript = ... # 0x0
-    FunctionSignatures       : QAxScript = ... # 0x1
+    FunctionNames            : QAxScript.FunctionFlags = ... # 0x0
+    FunctionSignatures       : QAxScript.FunctionFlags = ... # 0x1
 
     class FunctionFlags(object):
         FunctionNames            : QAxScript.FunctionFlags = ... # 0x0
@@ -130,12 +130,12 @@ class QAxScript(PySide2.QtCore.QObject):
 
 
 class QAxScriptEngine(PySide2.QtAxContainer.QAxObject):
-    Uninitialized            : QAxScriptEngine = ... # 0x0
-    Started                  : QAxScriptEngine = ... # 0x1
-    Connected                : QAxScriptEngine = ... # 0x2
-    Disconnected             : QAxScriptEngine = ... # 0x3
-    Closed                   : QAxScriptEngine = ... # 0x4
-    Initialized              : QAxScriptEngine = ... # 0x5
+    Uninitialized            : QAxScriptEngine.State = ... # 0x0
+    Started                  : QAxScriptEngine.State = ... # 0x1
+    Connected                : QAxScriptEngine.State = ... # 0x2
+    Disconnected             : QAxScriptEngine.State = ... # 0x3
+    Closed                   : QAxScriptEngine.State = ... # 0x4
+    Initialized              : QAxScriptEngine.State = ... # 0x5
 
     class State(object):
         Uninitialized            : QAxScriptEngine.State = ... # 0x0
@@ -178,9 +178,9 @@ class QAxScriptManager(PySide2.QtCore.QObject):
 
 
 class QAxSelect(PySide2.QtWidgets.QDialog):
-    SandboxingNone           : QAxSelect = ... # 0x0
-    SandboxingProcess        : QAxSelect = ... # 0x1
-    SandboxingLowIntegrity   : QAxSelect = ... # 0x2
+    SandboxingNone           : QAxSelect.SandboxingLevel = ... # 0x0
+    SandboxingProcess        : QAxSelect.SandboxingLevel = ... # 0x1
+    SandboxingLowIntegrity   : QAxSelect.SandboxingLevel = ... # 0x2
 
     class SandboxingLevel(object):
         SandboxingNone           : QAxSelect.SandboxingLevel = ... # 0x0

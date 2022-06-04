@@ -59,9 +59,9 @@ import PySide2.Qt3DAnimation
 class Qt3DAnimation(Shiboken.Object):
 
     class QAbstractAnimation(PySide2.QtCore.QObject):
-        KeyframeAnimation        : Qt3DAnimation.QAbstractAnimation = ... # 0x1
-        MorphingAnimation        : Qt3DAnimation.QAbstractAnimation = ... # 0x2
-        VertexBlendAnimation     : Qt3DAnimation.QAbstractAnimation = ... # 0x3
+        KeyframeAnimation        : Qt3DAnimation.QAbstractAnimation.AnimationType = ... # 0x1
+        MorphingAnimation        : Qt3DAnimation.QAbstractAnimation.AnimationType = ... # 0x2
+        VertexBlendAnimation     : Qt3DAnimation.QAbstractAnimation.AnimationType = ... # 0x3
 
         class AnimationType(object):
             KeyframeAnimation        : Qt3DAnimation.QAbstractAnimation.AnimationType = ... # 0x1
@@ -81,7 +81,7 @@ class Qt3DAnimation(Shiboken.Object):
     class QAbstractChannelMapping(PySide2.Qt3DCore.QNode): ...
 
     class QAbstractClipAnimator(PySide2.Qt3DCore.QComponent):
-        Infinite                 : Qt3DAnimation.QAbstractClipAnimator = ... # -0x1
+        Infinite                 : Qt3DAnimation.QAbstractClipAnimator.Loops = ... # -0x1
 
         class Loops(object):
             Infinite                 : Qt3DAnimation.QAbstractClipAnimator.Loops = ... # -0x1
@@ -121,8 +121,8 @@ class Qt3DAnimation(Shiboken.Object):
 
 
     class QAnimationCallback(Shiboken.Object):
-        OnOwningThread           : Qt3DAnimation.QAnimationCallback = ... # 0x0
-        OnThreadPool             : Qt3DAnimation.QAnimationCallback = ... # 0x1
+        OnOwningThread           : Qt3DAnimation.QAnimationCallback.Flag = ... # 0x0
+        OnThreadPool             : Qt3DAnimation.QAnimationCallback.Flag = ... # 0x1
 
         class Flag(object):
             OnOwningThread           : Qt3DAnimation.QAnimationCallback.Flag = ... # 0x0
@@ -138,9 +138,9 @@ class Qt3DAnimation(Shiboken.Object):
 
 
     class QAnimationClipLoader(PySide2.Qt3DAnimation.QAbstractAnimationClip):
-        NotReady                 : Qt3DAnimation.QAnimationClipLoader = ... # 0x0
-        Ready                    : Qt3DAnimation.QAnimationClipLoader = ... # 0x1
-        Error                    : Qt3DAnimation.QAnimationClipLoader = ... # 0x2
+        NotReady                 : Qt3DAnimation.QAnimationClipLoader.Status = ... # 0x0
+        Ready                    : Qt3DAnimation.QAnimationClipLoader.Status = ... # 0x1
+        Error                    : Qt3DAnimation.QAnimationClipLoader.Status = ... # 0x2
 
         class Status(object):
             NotReady                 : Qt3DAnimation.QAnimationClipLoader.Status = ... # 0x0
@@ -215,9 +215,9 @@ class Qt3DAnimation(Shiboken.Object):
         def setPlaybackRate(self, playbackRate:float) -> None: ...
 
     class QKeyFrame(Shiboken.Object):
-        ConstantInterpolation    : Qt3DAnimation.QKeyFrame = ... # 0x0
-        LinearInterpolation      : Qt3DAnimation.QKeyFrame = ... # 0x1
-        BezierInterpolation      : Qt3DAnimation.QKeyFrame = ... # 0x2
+        ConstantInterpolation    : Qt3DAnimation.QKeyFrame.InterpolationType = ... # 0x0
+        LinearInterpolation      : Qt3DAnimation.QKeyFrame.InterpolationType = ... # 0x1
+        BezierInterpolation      : Qt3DAnimation.QKeyFrame.InterpolationType = ... # 0x2
 
         class InterpolationType(object):
             ConstantInterpolation    : Qt3DAnimation.QKeyFrame.InterpolationType = ... # 0x0
@@ -241,9 +241,9 @@ class Qt3DAnimation(Shiboken.Object):
         def setRightControlPoint(self, rh:PySide2.QtGui.QVector2D) -> None: ...
 
     class QKeyframeAnimation(PySide2.Qt3DAnimation.QAbstractAnimation):
-        None_                    : Qt3DAnimation.QKeyframeAnimation = ... # 0x0
-        Constant                 : Qt3DAnimation.QKeyframeAnimation = ... # 0x1
-        Repeat                   : Qt3DAnimation.QKeyframeAnimation = ... # 0x2
+        None_                    : Qt3DAnimation.QKeyframeAnimation.RepeatMode = ... # 0x0
+        Constant                 : Qt3DAnimation.QKeyframeAnimation.RepeatMode = ... # 0x1
+        Repeat                   : Qt3DAnimation.QKeyframeAnimation.RepeatMode = ... # 0x2
 
         class RepeatMode(object):
             None_                    : Qt3DAnimation.QKeyframeAnimation.RepeatMode = ... # 0x0
@@ -293,8 +293,8 @@ class Qt3DAnimation(Shiboken.Object):
         def setAttributes(self, attributes:typing.List) -> None: ...
 
     class QMorphingAnimation(PySide2.Qt3DAnimation.QAbstractAnimation):
-        Normalized               : Qt3DAnimation.QMorphingAnimation = ... # 0x0
-        Relative                 : Qt3DAnimation.QMorphingAnimation = ... # 0x1
+        Normalized               : Qt3DAnimation.QMorphingAnimation.Method = ... # 0x0
+        Relative                 : Qt3DAnimation.QMorphingAnimation.Method = ... # 0x1
 
         class Method(object):
             Normalized               : Qt3DAnimation.QMorphingAnimation.Method = ... # 0x0

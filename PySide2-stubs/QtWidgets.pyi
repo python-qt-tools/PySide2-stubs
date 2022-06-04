@@ -115,11 +115,11 @@ class QAbstractGraphicsShapeItem(PySide2.QtWidgets.QGraphicsItem):
 
 
 class QAbstractItemDelegate(PySide2.QtCore.QObject):
-    NoHint                   : QAbstractItemDelegate = ... # 0x0
-    EditNextItem             : QAbstractItemDelegate = ... # 0x1
-    EditPreviousItem         : QAbstractItemDelegate = ... # 0x2
-    SubmitModelCache         : QAbstractItemDelegate = ... # 0x3
-    RevertModelCache         : QAbstractItemDelegate = ... # 0x4
+    NoHint                   : QAbstractItemDelegate.EndEditHint = ... # 0x0
+    EditNextItem             : QAbstractItemDelegate.EndEditHint = ... # 0x1
+    EditPreviousItem         : QAbstractItemDelegate.EndEditHint = ... # 0x2
+    SubmitModelCache         : QAbstractItemDelegate.EndEditHint = ... # 0x3
+    RevertModelCache         : QAbstractItemDelegate.EndEditHint = ... # 0x4
 
     class EndEditHint(object):
         NoHint                   : QAbstractItemDelegate.EndEditHint = ... # 0x0
@@ -145,53 +145,53 @@ class QAbstractItemDelegate(PySide2.QtCore.QObject):
 
 
 class QAbstractItemView(PySide2.QtWidgets.QAbstractScrollArea):
-    EnsureVisible            : QAbstractItemView = ... # 0x0
-    MoveUp                   : QAbstractItemView = ... # 0x0
-    NoDragDrop               : QAbstractItemView = ... # 0x0
-    NoEditTriggers           : QAbstractItemView = ... # 0x0
-    NoSelection              : QAbstractItemView = ... # 0x0
-    NoState                  : QAbstractItemView = ... # 0x0
-    OnItem                   : QAbstractItemView = ... # 0x0
-    ScrollPerItem            : QAbstractItemView = ... # 0x0
-    SelectItems              : QAbstractItemView = ... # 0x0
-    AboveItem                : QAbstractItemView = ... # 0x1
-    CurrentChanged           : QAbstractItemView = ... # 0x1
-    DragOnly                 : QAbstractItemView = ... # 0x1
-    DraggingState            : QAbstractItemView = ... # 0x1
-    MoveDown                 : QAbstractItemView = ... # 0x1
-    PositionAtTop            : QAbstractItemView = ... # 0x1
-    ScrollPerPixel           : QAbstractItemView = ... # 0x1
-    SelectRows               : QAbstractItemView = ... # 0x1
-    SingleSelection          : QAbstractItemView = ... # 0x1
-    BelowItem                : QAbstractItemView = ... # 0x2
-    DoubleClicked            : QAbstractItemView = ... # 0x2
-    DragSelectingState       : QAbstractItemView = ... # 0x2
-    DropOnly                 : QAbstractItemView = ... # 0x2
-    MoveLeft                 : QAbstractItemView = ... # 0x2
-    MultiSelection           : QAbstractItemView = ... # 0x2
-    PositionAtBottom         : QAbstractItemView = ... # 0x2
-    SelectColumns            : QAbstractItemView = ... # 0x2
-    DragDrop                 : QAbstractItemView = ... # 0x3
-    EditingState             : QAbstractItemView = ... # 0x3
-    ExtendedSelection        : QAbstractItemView = ... # 0x3
-    MoveRight                : QAbstractItemView = ... # 0x3
-    OnViewport               : QAbstractItemView = ... # 0x3
-    PositionAtCenter         : QAbstractItemView = ... # 0x3
-    ContiguousSelection      : QAbstractItemView = ... # 0x4
-    ExpandingState           : QAbstractItemView = ... # 0x4
-    InternalMove             : QAbstractItemView = ... # 0x4
-    MoveHome                 : QAbstractItemView = ... # 0x4
-    SelectedClicked          : QAbstractItemView = ... # 0x4
-    CollapsingState          : QAbstractItemView = ... # 0x5
-    MoveEnd                  : QAbstractItemView = ... # 0x5
-    AnimatingState           : QAbstractItemView = ... # 0x6
-    MovePageUp               : QAbstractItemView = ... # 0x6
-    MovePageDown             : QAbstractItemView = ... # 0x7
-    EditKeyPressed           : QAbstractItemView = ... # 0x8
-    MoveNext                 : QAbstractItemView = ... # 0x8
-    MovePrevious             : QAbstractItemView = ... # 0x9
-    AnyKeyPressed            : QAbstractItemView = ... # 0x10
-    AllEditTriggers          : QAbstractItemView = ... # 0x1f
+    EnsureVisible            : QAbstractItemView.ScrollHint = ... # 0x0
+    MoveUp                   : QAbstractItemView.CursorAction = ... # 0x0
+    NoDragDrop               : QAbstractItemView.DragDropMode = ... # 0x0
+    NoEditTriggers           : QAbstractItemView.EditTrigger = ... # 0x0
+    NoSelection              : QAbstractItemView.SelectionMode = ... # 0x0
+    NoState                  : QAbstractItemView.State = ... # 0x0
+    OnItem                   : QAbstractItemView.DropIndicatorPosition = ... # 0x0
+    ScrollPerItem            : QAbstractItemView.ScrollMode = ... # 0x0
+    SelectItems              : QAbstractItemView.SelectionBehavior = ... # 0x0
+    AboveItem                : QAbstractItemView.DropIndicatorPosition = ... # 0x1
+    CurrentChanged           : QAbstractItemView.EditTrigger = ... # 0x1
+    DragOnly                 : QAbstractItemView.DragDropMode = ... # 0x1
+    DraggingState            : QAbstractItemView.State = ... # 0x1
+    MoveDown                 : QAbstractItemView.CursorAction = ... # 0x1
+    PositionAtTop            : QAbstractItemView.ScrollHint = ... # 0x1
+    ScrollPerPixel           : QAbstractItemView.ScrollMode = ... # 0x1
+    SelectRows               : QAbstractItemView.SelectionBehavior = ... # 0x1
+    SingleSelection          : QAbstractItemView.SelectionMode = ... # 0x1
+    BelowItem                : QAbstractItemView.DropIndicatorPosition = ... # 0x2
+    DoubleClicked            : QAbstractItemView.EditTrigger = ... # 0x2
+    DragSelectingState       : QAbstractItemView.State = ... # 0x2
+    DropOnly                 : QAbstractItemView.DragDropMode = ... # 0x2
+    MoveLeft                 : QAbstractItemView.CursorAction = ... # 0x2
+    MultiSelection           : QAbstractItemView.SelectionMode = ... # 0x2
+    PositionAtBottom         : QAbstractItemView.ScrollHint = ... # 0x2
+    SelectColumns            : QAbstractItemView.SelectionBehavior = ... # 0x2
+    DragDrop                 : QAbstractItemView.DragDropMode = ... # 0x3
+    EditingState             : QAbstractItemView.State = ... # 0x3
+    ExtendedSelection        : QAbstractItemView.SelectionMode = ... # 0x3
+    MoveRight                : QAbstractItemView.CursorAction = ... # 0x3
+    OnViewport               : QAbstractItemView.DropIndicatorPosition = ... # 0x3
+    PositionAtCenter         : QAbstractItemView.ScrollHint = ... # 0x3
+    ContiguousSelection      : QAbstractItemView.SelectionMode = ... # 0x4
+    ExpandingState           : QAbstractItemView.State = ... # 0x4
+    InternalMove             : QAbstractItemView.DragDropMode = ... # 0x4
+    MoveHome                 : QAbstractItemView.CursorAction = ... # 0x4
+    SelectedClicked          : QAbstractItemView.EditTrigger = ... # 0x4
+    CollapsingState          : QAbstractItemView.State = ... # 0x5
+    MoveEnd                  : QAbstractItemView.CursorAction = ... # 0x5
+    AnimatingState           : QAbstractItemView.State = ... # 0x6
+    MovePageUp               : QAbstractItemView.CursorAction = ... # 0x6
+    MovePageDown             : QAbstractItemView.CursorAction = ... # 0x7
+    EditKeyPressed           : QAbstractItemView.EditTrigger = ... # 0x8
+    MoveNext                 : QAbstractItemView.CursorAction = ... # 0x8
+    MovePrevious             : QAbstractItemView.CursorAction = ... # 0x9
+    AnyKeyPressed            : QAbstractItemView.EditTrigger = ... # 0x10
+    AllEditTriggers          : QAbstractItemView.EditTrigger = ... # 0x1f
 
     class CursorAction(object):
         MoveUp                   : QAbstractItemView.CursorAction = ... # 0x0
@@ -402,9 +402,9 @@ class QAbstractItemView(PySide2.QtWidgets.QAbstractScrollArea):
 
 
 class QAbstractScrollArea(PySide2.QtWidgets.QFrame):
-    AdjustIgnored            : QAbstractScrollArea = ... # 0x0
-    AdjustToContentsOnFirstShow: QAbstractScrollArea = ... # 0x1
-    AdjustToContents         : QAbstractScrollArea = ... # 0x2
+    AdjustIgnored            : QAbstractScrollArea.SizeAdjustPolicy = ... # 0x0
+    AdjustToContentsOnFirstShow: QAbstractScrollArea.SizeAdjustPolicy = ... # 0x1
+    AdjustToContents         : QAbstractScrollArea.SizeAdjustPolicy = ... # 0x2
 
     class SizeAdjustPolicy(object):
         AdjustIgnored            : QAbstractScrollArea.SizeAdjustPolicy = ... # 0x0
@@ -459,18 +459,18 @@ class QAbstractScrollArea(PySide2.QtWidgets.QFrame):
 
 
 class QAbstractSlider(PySide2.QtWidgets.QWidget):
-    SliderNoAction           : QAbstractSlider = ... # 0x0
-    SliderRangeChange        : QAbstractSlider = ... # 0x0
-    SliderOrientationChange  : QAbstractSlider = ... # 0x1
-    SliderSingleStepAdd      : QAbstractSlider = ... # 0x1
-    SliderSingleStepSub      : QAbstractSlider = ... # 0x2
-    SliderStepsChange        : QAbstractSlider = ... # 0x2
-    SliderPageStepAdd        : QAbstractSlider = ... # 0x3
-    SliderValueChange        : QAbstractSlider = ... # 0x3
-    SliderPageStepSub        : QAbstractSlider = ... # 0x4
-    SliderToMinimum          : QAbstractSlider = ... # 0x5
-    SliderToMaximum          : QAbstractSlider = ... # 0x6
-    SliderMove               : QAbstractSlider = ... # 0x7
+    SliderNoAction           : QAbstractSlider.SliderAction = ... # 0x0
+    SliderRangeChange        : QAbstractSlider.SliderChange = ... # 0x0
+    SliderOrientationChange  : QAbstractSlider.SliderChange = ... # 0x1
+    SliderSingleStepAdd      : QAbstractSlider.SliderAction = ... # 0x1
+    SliderSingleStepSub      : QAbstractSlider.SliderAction = ... # 0x2
+    SliderStepsChange        : QAbstractSlider.SliderChange = ... # 0x2
+    SliderPageStepAdd        : QAbstractSlider.SliderAction = ... # 0x3
+    SliderValueChange        : QAbstractSlider.SliderChange = ... # 0x3
+    SliderPageStepSub        : QAbstractSlider.SliderAction = ... # 0x4
+    SliderToMinimum          : QAbstractSlider.SliderAction = ... # 0x5
+    SliderToMaximum          : QAbstractSlider.SliderAction = ... # 0x6
+    SliderMove               : QAbstractSlider.SliderAction = ... # 0x7
 
     class SliderAction(object):
         SliderNoAction           : QAbstractSlider.SliderAction = ... # 0x0
@@ -525,16 +525,16 @@ class QAbstractSlider(PySide2.QtWidgets.QWidget):
 
 
 class QAbstractSpinBox(PySide2.QtWidgets.QWidget):
-    CorrectToPreviousValue   : QAbstractSpinBox = ... # 0x0
-    DefaultStepType          : QAbstractSpinBox = ... # 0x0
-    StepNone                 : QAbstractSpinBox = ... # 0x0
-    UpDownArrows             : QAbstractSpinBox = ... # 0x0
-    AdaptiveDecimalStepType  : QAbstractSpinBox = ... # 0x1
-    CorrectToNearestValue    : QAbstractSpinBox = ... # 0x1
-    PlusMinus                : QAbstractSpinBox = ... # 0x1
-    StepUpEnabled            : QAbstractSpinBox = ... # 0x1
-    NoButtons                : QAbstractSpinBox = ... # 0x2
-    StepDownEnabled          : QAbstractSpinBox = ... # 0x2
+    CorrectToPreviousValue   : QAbstractSpinBox.CorrectionMode = ... # 0x0
+    DefaultStepType          : QAbstractSpinBox.StepType = ... # 0x0
+    StepNone                 : QAbstractSpinBox.StepEnabledFlag = ... # 0x0
+    UpDownArrows             : QAbstractSpinBox.ButtonSymbols = ... # 0x0
+    AdaptiveDecimalStepType  : QAbstractSpinBox.StepType = ... # 0x1
+    CorrectToNearestValue    : QAbstractSpinBox.CorrectionMode = ... # 0x1
+    PlusMinus                : QAbstractSpinBox.ButtonSymbols = ... # 0x1
+    StepUpEnabled            : QAbstractSpinBox.StepEnabledFlag = ... # 0x1
+    NoButtons                : QAbstractSpinBox.ButtonSymbols = ... # 0x2
+    StepDownEnabled          : QAbstractSpinBox.StepEnabledFlag = ... # 0x2
 
     class ButtonSymbols(object):
         UpDownArrows             : QAbstractSpinBox.ButtonSymbols = ... # 0x0
@@ -642,18 +642,18 @@ class QAccessibleWidget(PySide2.QtGui.QAccessibleObject):
 
 
 class QAction(PySide2.QtCore.QObject):
-    LowPriority              : QAction = ... # 0x0
-    NoRole                   : QAction = ... # 0x0
-    Trigger                  : QAction = ... # 0x0
-    Hover                    : QAction = ... # 0x1
-    TextHeuristicRole        : QAction = ... # 0x1
-    ApplicationSpecificRole  : QAction = ... # 0x2
-    AboutQtRole              : QAction = ... # 0x3
-    AboutRole                : QAction = ... # 0x4
-    PreferencesRole          : QAction = ... # 0x5
-    QuitRole                 : QAction = ... # 0x6
-    NormalPriority           : QAction = ... # 0x80
-    HighPriority             : QAction = ... # 0x100
+    LowPriority              : QAction.Priority = ... # 0x0
+    NoRole                   : QAction.MenuRole = ... # 0x0
+    Trigger                  : QAction.ActionEvent = ... # 0x0
+    Hover                    : QAction.ActionEvent = ... # 0x1
+    TextHeuristicRole        : QAction.MenuRole = ... # 0x1
+    ApplicationSpecificRole  : QAction.MenuRole = ... # 0x2
+    AboutQtRole              : QAction.MenuRole = ... # 0x3
+    AboutRole                : QAction.MenuRole = ... # 0x4
+    PreferencesRole          : QAction.MenuRole = ... # 0x5
+    QuitRole                 : QAction.MenuRole = ... # 0x6
+    NormalPriority           : QAction.Priority = ... # 0x80
+    HighPriority             : QAction.Priority = ... # 0x100
 
     class ActionEvent(object):
         Trigger                  : QAction.ActionEvent = ... # 0x0
@@ -771,9 +771,9 @@ class QActionGroup(PySide2.QtCore.QObject):
 
 
 class QApplication(PySide2.QtGui.QGuiApplication):
-    NormalColor              : QApplication = ... # 0x0
-    CustomColor              : QApplication = ... # 0x1
-    ManyColor                : QApplication = ... # 0x2
+    NormalColor              : QApplication.ColorSpec = ... # 0x0
+    CustomColor              : QApplication.ColorSpec = ... # 0x1
+    ManyColor                : QApplication.ColorSpec = ... # 0x2
 
     class ColorSpec(object):
         NormalColor              : QApplication.ColorSpec = ... # 0x0
@@ -912,12 +912,12 @@ class QApplication(PySide2.QtGui.QGuiApplication):
 
 
 class QBoxLayout(PySide2.QtWidgets.QLayout):
-    LeftToRight              : QBoxLayout = ... # 0x0
-    RightToLeft              : QBoxLayout = ... # 0x1
-    Down                     : QBoxLayout = ... # 0x2
-    TopToBottom              : QBoxLayout = ... # 0x2
-    BottomToTop              : QBoxLayout = ... # 0x3
-    Up                       : QBoxLayout = ... # 0x3
+    LeftToRight              : QBoxLayout.Direction = ... # 0x0
+    RightToLeft              : QBoxLayout.Direction = ... # 0x1
+    Down                     : QBoxLayout.Direction = ... # 0x2
+    TopToBottom              : QBoxLayout.Direction = ... # 0x2
+    BottomToTop              : QBoxLayout.Direction = ... # 0x3
+    Up                       : QBoxLayout.Direction = ... # 0x3
 
     class Direction(object):
         LeftToRight              : QBoxLayout.Direction = ... # 0x0
@@ -986,14 +986,14 @@ class QButtonGroup(PySide2.QtCore.QObject):
 
 
 class QCalendarWidget(PySide2.QtWidgets.QWidget):
-    NoHorizontalHeader       : QCalendarWidget = ... # 0x0
-    NoSelection              : QCalendarWidget = ... # 0x0
-    NoVerticalHeader         : QCalendarWidget = ... # 0x0
-    ISOWeekNumbers           : QCalendarWidget = ... # 0x1
-    SingleLetterDayNames     : QCalendarWidget = ... # 0x1
-    SingleSelection          : QCalendarWidget = ... # 0x1
-    ShortDayNames            : QCalendarWidget = ... # 0x2
-    LongDayNames             : QCalendarWidget = ... # 0x3
+    NoHorizontalHeader       : QCalendarWidget.HorizontalHeaderFormat = ... # 0x0
+    NoSelection              : QCalendarWidget.SelectionMode = ... # 0x0
+    NoVerticalHeader         : QCalendarWidget.VerticalHeaderFormat = ... # 0x0
+    ISOWeekNumbers           : QCalendarWidget.VerticalHeaderFormat = ... # 0x1
+    SingleLetterDayNames     : QCalendarWidget.HorizontalHeaderFormat = ... # 0x1
+    SingleSelection          : QCalendarWidget.SelectionMode = ... # 0x1
+    ShortDayNames            : QCalendarWidget.HorizontalHeaderFormat = ... # 0x2
+    LongDayNames             : QCalendarWidget.HorizontalHeaderFormat = ... # 0x3
 
     class HorizontalHeaderFormat(object):
         NoHorizontalHeader       : QCalendarWidget.HorizontalHeaderFormat = ... # 0x0
@@ -1089,9 +1089,9 @@ class QCheckBox(PySide2.QtWidgets.QAbstractButton):
 
 
 class QColorDialog(PySide2.QtWidgets.QDialog):
-    ShowAlphaChannel         : QColorDialog = ... # 0x1
-    NoButtons                : QColorDialog = ... # 0x2
-    DontUseNativeDialog      : QColorDialog = ... # 0x4
+    ShowAlphaChannel         : QColorDialog.ColorDialogOption = ... # 0x1
+    NoButtons                : QColorDialog.ColorDialogOption = ... # 0x2
+    DontUseNativeDialog      : QColorDialog.ColorDialogOption = ... # 0x4
 
     class ColorDialogOption(object):
         ShowAlphaChannel         : QColorDialog.ColorDialogOption = ... # 0x1
@@ -1134,9 +1134,9 @@ class QColorDialog(PySide2.QtWidgets.QDialog):
 
 
 class QColormap(Shiboken.Object):
-    Direct                   : QColormap = ... # 0x0
-    Indexed                  : QColormap = ... # 0x1
-    Gray                     : QColormap = ... # 0x2
+    Direct                   : QColormap.Mode = ... # 0x0
+    Indexed                  : QColormap.Mode = ... # 0x1
+    Gray                     : QColormap.Mode = ... # 0x2
 
     class Mode(object):
         Direct                   : QColormap.Mode = ... # 0x0
@@ -1194,17 +1194,17 @@ class QColumnView(PySide2.QtWidgets.QAbstractItemView):
 
 
 class QComboBox(PySide2.QtWidgets.QWidget):
-    AdjustToContents         : QComboBox = ... # 0x0
-    NoInsert                 : QComboBox = ... # 0x0
-    AdjustToContentsOnFirstShow: QComboBox = ... # 0x1
-    InsertAtTop              : QComboBox = ... # 0x1
-    AdjustToMinimumContentsLength: QComboBox = ... # 0x2
-    InsertAtCurrent          : QComboBox = ... # 0x2
-    AdjustToMinimumContentsLengthWithIcon: QComboBox = ... # 0x3
-    InsertAtBottom           : QComboBox = ... # 0x3
-    InsertAfterCurrent       : QComboBox = ... # 0x4
-    InsertBeforeCurrent      : QComboBox = ... # 0x5
-    InsertAlphabetically     : QComboBox = ... # 0x6
+    AdjustToContents         : QComboBox.SizeAdjustPolicy = ... # 0x0
+    NoInsert                 : QComboBox.InsertPolicy = ... # 0x0
+    AdjustToContentsOnFirstShow: QComboBox.SizeAdjustPolicy = ... # 0x1
+    InsertAtTop              : QComboBox.InsertPolicy = ... # 0x1
+    AdjustToMinimumContentsLength: QComboBox.SizeAdjustPolicy = ... # 0x2
+    InsertAtCurrent          : QComboBox.InsertPolicy = ... # 0x2
+    AdjustToMinimumContentsLengthWithIcon: QComboBox.SizeAdjustPolicy = ... # 0x3
+    InsertAtBottom           : QComboBox.InsertPolicy = ... # 0x3
+    InsertAfterCurrent       : QComboBox.InsertPolicy = ... # 0x4
+    InsertBeforeCurrent      : QComboBox.InsertPolicy = ... # 0x5
+    InsertAlphabetically     : QComboBox.InsertPolicy = ... # 0x6
 
     class InsertPolicy(object):
         NoInsert                 : QComboBox.InsertPolicy = ... # 0x0
@@ -1368,12 +1368,12 @@ class QCommonStyle(PySide2.QtWidgets.QStyle):
 
 
 class QCompleter(PySide2.QtCore.QObject):
-    PopupCompletion          : QCompleter = ... # 0x0
-    UnsortedModel            : QCompleter = ... # 0x0
-    CaseSensitivelySortedModel: QCompleter = ... # 0x1
-    UnfilteredPopupCompletion: QCompleter = ... # 0x1
-    CaseInsensitivelySortedModel: QCompleter = ... # 0x2
-    InlineCompletion         : QCompleter = ... # 0x2
+    PopupCompletion          : QCompleter.CompletionMode = ... # 0x0
+    UnsortedModel            : QCompleter.ModelSorting = ... # 0x0
+    CaseSensitivelySortedModel: QCompleter.ModelSorting = ... # 0x1
+    UnfilteredPopupCompletion: QCompleter.CompletionMode = ... # 0x1
+    CaseInsensitivelySortedModel: QCompleter.ModelSorting = ... # 0x2
+    InlineCompletion         : QCompleter.CompletionMode = ... # 0x2
 
     class CompletionMode(object):
         PopupCompletion          : QCompleter.CompletionMode = ... # 0x0
@@ -1430,8 +1430,8 @@ class QCompleter(PySide2.QtCore.QObject):
 
 
 class QDataWidgetMapper(PySide2.QtCore.QObject):
-    AutoSubmit               : QDataWidgetMapper = ... # 0x0
-    ManualSubmit             : QDataWidgetMapper = ... # 0x1
+    AutoSubmit               : QDataWidgetMapper.SubmitPolicy = ... # 0x0
+    ManualSubmit             : QDataWidgetMapper.SubmitPolicy = ... # 0x1
 
     class SubmitPolicy(object):
         AutoSubmit               : QDataWidgetMapper.SubmitPolicy = ... # 0x0
@@ -1478,17 +1478,17 @@ class QDateEdit(PySide2.QtWidgets.QDateTimeEdit):
 
 
 class QDateTimeEdit(PySide2.QtWidgets.QAbstractSpinBox):
-    NoSection                : QDateTimeEdit = ... # 0x0
-    AmPmSection              : QDateTimeEdit = ... # 0x1
-    MSecSection              : QDateTimeEdit = ... # 0x2
-    SecondSection            : QDateTimeEdit = ... # 0x4
-    MinuteSection            : QDateTimeEdit = ... # 0x8
-    HourSection              : QDateTimeEdit = ... # 0x10
-    TimeSections_Mask        : QDateTimeEdit = ... # 0x1f
-    DaySection               : QDateTimeEdit = ... # 0x100
-    MonthSection             : QDateTimeEdit = ... # 0x200
-    YearSection              : QDateTimeEdit = ... # 0x400
-    DateSections_Mask        : QDateTimeEdit = ... # 0x700
+    NoSection                : QDateTimeEdit.Section = ... # 0x0
+    AmPmSection              : QDateTimeEdit.Section = ... # 0x1
+    MSecSection              : QDateTimeEdit.Section = ... # 0x2
+    SecondSection            : QDateTimeEdit.Section = ... # 0x4
+    MinuteSection            : QDateTimeEdit.Section = ... # 0x8
+    HourSection              : QDateTimeEdit.Section = ... # 0x10
+    TimeSections_Mask        : QDateTimeEdit.Section = ... # 0x1f
+    DaySection               : QDateTimeEdit.Section = ... # 0x100
+    MonthSection             : QDateTimeEdit.Section = ... # 0x200
+    YearSection              : QDateTimeEdit.Section = ... # 0x400
+    DateSections_Mask        : QDateTimeEdit.Section = ... # 0x700
 
     class Section(object):
         NoSection                : QDateTimeEdit.Section = ... # 0x0
@@ -1635,8 +1635,8 @@ class QDial(PySide2.QtWidgets.QAbstractSlider):
 
 
 class QDialog(PySide2.QtWidgets.QWidget):
-    Rejected                 : QDialog = ... # 0x0
-    Accepted                 : QDialog = ... # 0x1
+    Rejected                 : QDialog.DialogCode = ... # 0x0
+    Accepted                 : QDialog.DialogCode = ... # 0x1
 
     class DialogCode(object):
         Rejected                 : QDialog.DialogCode = ... # 0x0
@@ -1672,43 +1672,43 @@ class QDialog(PySide2.QtWidgets.QWidget):
 
 
 class QDialogButtonBox(PySide2.QtWidgets.QWidget):
-    InvalidRole              : QDialogButtonBox = ... # -0x1
-    AcceptRole               : QDialogButtonBox = ... # 0x0
-    NoButton                 : QDialogButtonBox = ... # 0x0
-    WinLayout                : QDialogButtonBox = ... # 0x0
-    MacLayout                : QDialogButtonBox = ... # 0x1
-    RejectRole               : QDialogButtonBox = ... # 0x1
-    DestructiveRole          : QDialogButtonBox = ... # 0x2
-    KdeLayout                : QDialogButtonBox = ... # 0x2
-    ActionRole               : QDialogButtonBox = ... # 0x3
-    GnomeLayout              : QDialogButtonBox = ... # 0x3
-    HelpRole                 : QDialogButtonBox = ... # 0x4
-    AndroidLayout            : QDialogButtonBox = ... # 0x5
-    YesRole                  : QDialogButtonBox = ... # 0x5
-    NoRole                   : QDialogButtonBox = ... # 0x6
-    ResetRole                : QDialogButtonBox = ... # 0x7
-    ApplyRole                : QDialogButtonBox = ... # 0x8
-    NRoles                   : QDialogButtonBox = ... # 0x9
-    FirstButton              : QDialogButtonBox = ... # 0x400
-    Ok                       : QDialogButtonBox = ... # 0x400
-    Save                     : QDialogButtonBox = ... # 0x800
-    SaveAll                  : QDialogButtonBox = ... # 0x1000
-    Open                     : QDialogButtonBox = ... # 0x2000
-    Yes                      : QDialogButtonBox = ... # 0x4000
-    YesToAll                 : QDialogButtonBox = ... # 0x8000
-    No                       : QDialogButtonBox = ... # 0x10000
-    NoToAll                  : QDialogButtonBox = ... # 0x20000
-    Abort                    : QDialogButtonBox = ... # 0x40000
-    Retry                    : QDialogButtonBox = ... # 0x80000
-    Ignore                   : QDialogButtonBox = ... # 0x100000
-    Close                    : QDialogButtonBox = ... # 0x200000
-    Cancel                   : QDialogButtonBox = ... # 0x400000
-    Discard                  : QDialogButtonBox = ... # 0x800000
-    Help                     : QDialogButtonBox = ... # 0x1000000
-    Apply                    : QDialogButtonBox = ... # 0x2000000
-    Reset                    : QDialogButtonBox = ... # 0x4000000
-    LastButton               : QDialogButtonBox = ... # 0x8000000
-    RestoreDefaults          : QDialogButtonBox = ... # 0x8000000
+    InvalidRole              : QDialogButtonBox.ButtonRole = ... # -0x1
+    AcceptRole               : QDialogButtonBox.ButtonRole = ... # 0x0
+    NoButton                 : QDialogButtonBox.StandardButton = ... # 0x0
+    WinLayout                : QDialogButtonBox.ButtonLayout = ... # 0x0
+    MacLayout                : QDialogButtonBox.ButtonLayout = ... # 0x1
+    RejectRole               : QDialogButtonBox.ButtonRole = ... # 0x1
+    DestructiveRole          : QDialogButtonBox.ButtonRole = ... # 0x2
+    KdeLayout                : QDialogButtonBox.ButtonLayout = ... # 0x2
+    ActionRole               : QDialogButtonBox.ButtonRole = ... # 0x3
+    GnomeLayout              : QDialogButtonBox.ButtonLayout = ... # 0x3
+    HelpRole                 : QDialogButtonBox.ButtonRole = ... # 0x4
+    AndroidLayout            : QDialogButtonBox.ButtonLayout = ... # 0x5
+    YesRole                  : QDialogButtonBox.ButtonRole = ... # 0x5
+    NoRole                   : QDialogButtonBox.ButtonRole = ... # 0x6
+    ResetRole                : QDialogButtonBox.ButtonRole = ... # 0x7
+    ApplyRole                : QDialogButtonBox.ButtonRole = ... # 0x8
+    NRoles                   : QDialogButtonBox.ButtonRole = ... # 0x9
+    FirstButton              : QDialogButtonBox.StandardButton = ... # 0x400
+    Ok                       : QDialogButtonBox.StandardButton = ... # 0x400
+    Save                     : QDialogButtonBox.StandardButton = ... # 0x800
+    SaveAll                  : QDialogButtonBox.StandardButton = ... # 0x1000
+    Open                     : QDialogButtonBox.StandardButton = ... # 0x2000
+    Yes                      : QDialogButtonBox.StandardButton = ... # 0x4000
+    YesToAll                 : QDialogButtonBox.StandardButton = ... # 0x8000
+    No                       : QDialogButtonBox.StandardButton = ... # 0x10000
+    NoToAll                  : QDialogButtonBox.StandardButton = ... # 0x20000
+    Abort                    : QDialogButtonBox.StandardButton = ... # 0x40000
+    Retry                    : QDialogButtonBox.StandardButton = ... # 0x80000
+    Ignore                   : QDialogButtonBox.StandardButton = ... # 0x100000
+    Close                    : QDialogButtonBox.StandardButton = ... # 0x200000
+    Cancel                   : QDialogButtonBox.StandardButton = ... # 0x400000
+    Discard                  : QDialogButtonBox.StandardButton = ... # 0x800000
+    Help                     : QDialogButtonBox.StandardButton = ... # 0x1000000
+    Apply                    : QDialogButtonBox.StandardButton = ... # 0x2000000
+    Reset                    : QDialogButtonBox.StandardButton = ... # 0x4000000
+    LastButton               : QDialogButtonBox.StandardButton = ... # 0x8000000
+    RestoreDefaults          : QDialogButtonBox.StandardButton = ... # 0x8000000
 
     class ButtonLayout(object):
         WinLayout                : QDialogButtonBox.ButtonLayout = ... # 0x0
@@ -1794,9 +1794,9 @@ class QDialogButtonBox(PySide2.QtWidgets.QWidget):
 
 
 class QDirModel(PySide2.QtCore.QAbstractItemModel):
-    FileIconRole             : QDirModel = ... # 0x1
-    FilePathRole             : QDirModel = ... # 0x101
-    FileNameRole             : QDirModel = ... # 0x102
+    FileIconRole             : QDirModel.Roles = ... # 0x1
+    FilePathRole             : QDirModel.Roles = ... # 0x101
+    FileNameRole             : QDirModel.Roles = ... # 0x102
 
     class Roles(object):
         FileIconRole             : QDirModel.Roles = ... # 0x1
@@ -1854,14 +1854,14 @@ class QDirModel(PySide2.QtCore.QAbstractItemModel):
 
 
 class QDockWidget(PySide2.QtWidgets.QWidget):
-    NoDockWidgetFeatures     : QDockWidget = ... # 0x0
-    DockWidgetClosable       : QDockWidget = ... # 0x1
-    DockWidgetMovable        : QDockWidget = ... # 0x2
-    DockWidgetFloatable      : QDockWidget = ... # 0x4
-    AllDockWidgetFeatures    : QDockWidget = ... # 0x7
-    DockWidgetVerticalTitleBar: QDockWidget = ... # 0x8
-    DockWidgetFeatureMask    : QDockWidget = ... # 0xf
-    Reserved                 : QDockWidget = ... # 0xff
+    NoDockWidgetFeatures     : QDockWidget.DockWidgetFeature = ... # 0x0
+    DockWidgetClosable       : QDockWidget.DockWidgetFeature = ... # 0x1
+    DockWidgetMovable        : QDockWidget.DockWidgetFeature = ... # 0x2
+    DockWidgetFloatable      : QDockWidget.DockWidgetFeature = ... # 0x4
+    AllDockWidgetFeatures    : QDockWidget.DockWidgetFeature = ... # 0x7
+    DockWidgetVerticalTitleBar: QDockWidget.DockWidgetFeature = ... # 0x8
+    DockWidgetFeatureMask    : QDockWidget.DockWidgetFeature = ... # 0xf
+    Reserved                 : QDockWidget.DockWidgetFeature = ... # 0xff
 
     class DockWidgetFeature(object):
         NoDockWidgetFeatures     : QDockWidget.DockWidgetFeature = ... # 0x0
@@ -1942,28 +1942,28 @@ class QErrorMessage(PySide2.QtWidgets.QDialog):
 
 
 class QFileDialog(PySide2.QtWidgets.QDialog):
-    AcceptOpen               : QFileDialog = ... # 0x0
-    AnyFile                  : QFileDialog = ... # 0x0
-    Detail                   : QFileDialog = ... # 0x0
-    LookIn                   : QFileDialog = ... # 0x0
-    AcceptSave               : QFileDialog = ... # 0x1
-    ExistingFile             : QFileDialog = ... # 0x1
-    FileName                 : QFileDialog = ... # 0x1
-    List                     : QFileDialog = ... # 0x1
-    ShowDirsOnly             : QFileDialog = ... # 0x1
-    Directory                : QFileDialog = ... # 0x2
-    DontResolveSymlinks      : QFileDialog = ... # 0x2
-    FileType                 : QFileDialog = ... # 0x2
-    Accept                   : QFileDialog = ... # 0x3
-    ExistingFiles            : QFileDialog = ... # 0x3
-    DirectoryOnly            : QFileDialog = ... # 0x4
-    DontConfirmOverwrite     : QFileDialog = ... # 0x4
-    Reject                   : QFileDialog = ... # 0x4
-    DontUseSheet             : QFileDialog = ... # 0x8
-    DontUseNativeDialog      : QFileDialog = ... # 0x10
-    ReadOnly                 : QFileDialog = ... # 0x20
-    HideNameFilterDetails    : QFileDialog = ... # 0x40
-    DontUseCustomDirectoryIcons: QFileDialog = ... # 0x80
+    AcceptOpen               : QFileDialog.AcceptMode = ... # 0x0
+    AnyFile                  : QFileDialog.FileMode = ... # 0x0
+    Detail                   : QFileDialog.ViewMode = ... # 0x0
+    LookIn                   : QFileDialog.DialogLabel = ... # 0x0
+    AcceptSave               : QFileDialog.AcceptMode = ... # 0x1
+    ExistingFile             : QFileDialog.FileMode = ... # 0x1
+    FileName                 : QFileDialog.DialogLabel = ... # 0x1
+    List                     : QFileDialog.ViewMode = ... # 0x1
+    ShowDirsOnly             : QFileDialog.Option = ... # 0x1
+    Directory                : QFileDialog.FileMode = ... # 0x2
+    DontResolveSymlinks      : QFileDialog.Option = ... # 0x2
+    FileType                 : QFileDialog.DialogLabel = ... # 0x2
+    Accept                   : QFileDialog.DialogLabel = ... # 0x3
+    ExistingFiles            : QFileDialog.FileMode = ... # 0x3
+    DirectoryOnly            : QFileDialog.FileMode = ... # 0x4
+    DontConfirmOverwrite     : QFileDialog.Option = ... # 0x4
+    Reject                   : QFileDialog.DialogLabel = ... # 0x4
+    DontUseSheet             : QFileDialog.Option = ... # 0x8
+    DontUseNativeDialog      : QFileDialog.Option = ... # 0x10
+    ReadOnly                 : QFileDialog.Option = ... # 0x20
+    HideNameFilterDetails    : QFileDialog.Option = ... # 0x40
+    DontUseCustomDirectoryIcons: QFileDialog.Option = ... # 0x80
 
     class AcceptMode(object):
         AcceptOpen               : QFileDialog.AcceptMode = ... # 0x0
@@ -2091,14 +2091,14 @@ class QFileDialog(PySide2.QtWidgets.QDialog):
 
 
 class QFileIconProvider(Shiboken.Object):
-    Computer                 : QFileIconProvider = ... # 0x0
-    Desktop                  : QFileIconProvider = ... # 0x1
-    DontUseCustomDirectoryIcons: QFileIconProvider = ... # 0x1
-    Trashcan                 : QFileIconProvider = ... # 0x2
-    Network                  : QFileIconProvider = ... # 0x3
-    Drive                    : QFileIconProvider = ... # 0x4
-    Folder                   : QFileIconProvider = ... # 0x5
-    File                     : QFileIconProvider = ... # 0x6
+    Computer                 : QFileIconProvider.IconType = ... # 0x0
+    Desktop                  : QFileIconProvider.IconType = ... # 0x1
+    DontUseCustomDirectoryIcons: QFileIconProvider.Option = ... # 0x1
+    Trashcan                 : QFileIconProvider.IconType = ... # 0x2
+    Network                  : QFileIconProvider.IconType = ... # 0x3
+    Drive                    : QFileIconProvider.IconType = ... # 0x4
+    Folder                   : QFileIconProvider.IconType = ... # 0x5
+    File                     : QFileIconProvider.IconType = ... # 0x6
 
     class IconType(object):
         Computer                 : QFileIconProvider.IconType = ... # 0x0
@@ -2126,13 +2126,13 @@ class QFileIconProvider(Shiboken.Object):
 
 
 class QFileSystemModel(PySide2.QtCore.QAbstractItemModel):
-    DontWatchForChanges      : QFileSystemModel = ... # 0x1
-    FileIconRole             : QFileSystemModel = ... # 0x1
-    DontResolveSymlinks      : QFileSystemModel = ... # 0x2
-    DontUseCustomDirectoryIcons: QFileSystemModel = ... # 0x4
-    FilePathRole             : QFileSystemModel = ... # 0x101
-    FileNameRole             : QFileSystemModel = ... # 0x102
-    FilePermissions          : QFileSystemModel = ... # 0x103
+    DontWatchForChanges      : QFileSystemModel.Option = ... # 0x1
+    FileIconRole             : QFileSystemModel.Roles = ... # 0x1
+    DontResolveSymlinks      : QFileSystemModel.Option = ... # 0x2
+    DontUseCustomDirectoryIcons: QFileSystemModel.Option = ... # 0x4
+    FilePathRole             : QFileSystemModel.Roles = ... # 0x101
+    FileNameRole             : QFileSystemModel.Roles = ... # 0x102
+    FilePermissions          : QFileSystemModel.Roles = ... # 0x103
 
     class Option(object):
         DontWatchForChanges      : QFileSystemModel.Option = ... # 0x1
@@ -2220,11 +2220,11 @@ class QFocusFrame(PySide2.QtWidgets.QWidget):
 
 
 class QFontComboBox(PySide2.QtWidgets.QComboBox):
-    AllFonts                 : QFontComboBox = ... # 0x0
-    ScalableFonts            : QFontComboBox = ... # 0x1
-    NonScalableFonts         : QFontComboBox = ... # 0x2
-    MonospacedFonts          : QFontComboBox = ... # 0x4
-    ProportionalFonts        : QFontComboBox = ... # 0x8
+    AllFonts                 : QFontComboBox.FontFilter = ... # 0x0
+    ScalableFonts            : QFontComboBox.FontFilter = ... # 0x1
+    NonScalableFonts         : QFontComboBox.FontFilter = ... # 0x2
+    MonospacedFonts          : QFontComboBox.FontFilter = ... # 0x4
+    ProportionalFonts        : QFontComboBox.FontFilter = ... # 0x8
 
     class FontFilter(object):
         AllFonts                 : QFontComboBox.FontFilter = ... # 0x0
@@ -2248,12 +2248,12 @@ class QFontComboBox(PySide2.QtWidgets.QComboBox):
 
 
 class QFontDialog(PySide2.QtWidgets.QDialog):
-    NoButtons                : QFontDialog = ... # 0x1
-    DontUseNativeDialog      : QFontDialog = ... # 0x2
-    ScalableFonts            : QFontDialog = ... # 0x4
-    NonScalableFonts         : QFontDialog = ... # 0x8
-    MonospacedFonts          : QFontDialog = ... # 0x10
-    ProportionalFonts        : QFontDialog = ... # 0x20
+    NoButtons                : QFontDialog.FontDialogOption = ... # 0x1
+    DontUseNativeDialog      : QFontDialog.FontDialogOption = ... # 0x2
+    ScalableFonts            : QFontDialog.FontDialogOption = ... # 0x4
+    NonScalableFonts         : QFontDialog.FontDialogOption = ... # 0x8
+    MonospacedFonts          : QFontDialog.FontDialogOption = ... # 0x10
+    ProportionalFonts        : QFontDialog.FontDialogOption = ... # 0x20
 
     class FontDialogOption(object):
         NoButtons                : QFontDialog.FontDialogOption = ... # 0x1
@@ -2294,15 +2294,15 @@ class QFontDialog(PySide2.QtWidgets.QDialog):
 
 
 class QFormLayout(PySide2.QtWidgets.QLayout):
-    DontWrapRows             : QFormLayout = ... # 0x0
-    FieldsStayAtSizeHint     : QFormLayout = ... # 0x0
-    LabelRole                : QFormLayout = ... # 0x0
-    ExpandingFieldsGrow      : QFormLayout = ... # 0x1
-    FieldRole                : QFormLayout = ... # 0x1
-    WrapLongRows             : QFormLayout = ... # 0x1
-    AllNonFixedFieldsGrow    : QFormLayout = ... # 0x2
-    SpanningRole             : QFormLayout = ... # 0x2
-    WrapAllRows              : QFormLayout = ... # 0x2
+    DontWrapRows             : QFormLayout.RowWrapPolicy = ... # 0x0
+    FieldsStayAtSizeHint     : QFormLayout.FieldGrowthPolicy = ... # 0x0
+    LabelRole                : QFormLayout.ItemRole = ... # 0x0
+    ExpandingFieldsGrow      : QFormLayout.FieldGrowthPolicy = ... # 0x1
+    FieldRole                : QFormLayout.ItemRole = ... # 0x1
+    WrapLongRows             : QFormLayout.RowWrapPolicy = ... # 0x1
+    AllNonFixedFieldsGrow    : QFormLayout.FieldGrowthPolicy = ... # 0x2
+    SpanningRole             : QFormLayout.ItemRole = ... # 0x2
+    WrapAllRows              : QFormLayout.RowWrapPolicy = ... # 0x2
 
     class FieldGrowthPolicy(object):
         FieldsStayAtSizeHint     : QFormLayout.FieldGrowthPolicy = ... # 0x0
@@ -2393,18 +2393,18 @@ class QFormLayout(PySide2.QtWidgets.QLayout):
 
 
 class QFrame(PySide2.QtWidgets.QWidget):
-    NoFrame                  : QFrame = ... # 0x0
-    Box                      : QFrame = ... # 0x1
-    Panel                    : QFrame = ... # 0x2
-    WinPanel                 : QFrame = ... # 0x3
-    HLine                    : QFrame = ... # 0x4
-    VLine                    : QFrame = ... # 0x5
-    StyledPanel              : QFrame = ... # 0x6
-    Shape_Mask               : QFrame = ... # 0xf
-    Plain                    : QFrame = ... # 0x10
-    Raised                   : QFrame = ... # 0x20
-    Sunken                   : QFrame = ... # 0x30
-    Shadow_Mask              : QFrame = ... # 0xf0
+    NoFrame                  : QFrame.Shape = ... # 0x0
+    Box                      : QFrame.Shape = ... # 0x1
+    Panel                    : QFrame.Shape = ... # 0x2
+    WinPanel                 : QFrame.Shape = ... # 0x3
+    HLine                    : QFrame.Shape = ... # 0x4
+    VLine                    : QFrame.Shape = ... # 0x5
+    StyledPanel              : QFrame.Shape = ... # 0x6
+    Shape_Mask               : QFrame.StyleMask = ... # 0xf
+    Plain                    : QFrame.Shadow = ... # 0x10
+    Raised                   : QFrame.Shadow = ... # 0x20
+    Sunken                   : QFrame.Shadow = ... # 0x30
+    Shadow_Mask              : QFrame.StyleMask = ... # 0xf0
 
     class Shadow(object):
         Plain                    : QFrame.Shadow = ... # 0x10
@@ -2448,8 +2448,8 @@ class QFrame(PySide2.QtWidgets.QWidget):
 
 
 class QGesture(PySide2.QtCore.QObject):
-    CancelNone               : QGesture = ... # 0x0
-    CancelAllInContext       : QGesture = ... # 0x1
+    CancelNone               : QGesture.GestureCancelPolicy = ... # 0x0
+    CancelAllInContext       : QGesture.GestureCancelPolicy = ... # 0x1
 
     class GestureCancelPolicy(object):
         CancelNone               : QGesture.GestureCancelPolicy = ... # 0x0
@@ -2505,14 +2505,14 @@ class QGestureEvent(PySide2.QtCore.QEvent):
 
 
 class QGestureRecognizer(Shiboken.Object):
-    Ignore                   : QGestureRecognizer = ... # 0x1
-    MayBeGesture             : QGestureRecognizer = ... # 0x2
-    TriggerGesture           : QGestureRecognizer = ... # 0x4
-    FinishGesture            : QGestureRecognizer = ... # 0x8
-    CancelGesture            : QGestureRecognizer = ... # 0x10
-    ResultState_Mask         : QGestureRecognizer = ... # 0xff
-    ConsumeEventHint         : QGestureRecognizer = ... # 0x100
-    ResultHint_Mask          : QGestureRecognizer = ... # 0xff00
+    Ignore                   : QGestureRecognizer.ResultFlag = ... # 0x1
+    MayBeGesture             : QGestureRecognizer.ResultFlag = ... # 0x2
+    TriggerGesture           : QGestureRecognizer.ResultFlag = ... # 0x4
+    FinishGesture            : QGestureRecognizer.ResultFlag = ... # 0x8
+    CancelGesture            : QGestureRecognizer.ResultFlag = ... # 0x10
+    ResultState_Mask         : QGestureRecognizer.ResultFlag = ... # 0xff
+    ConsumeEventHint         : QGestureRecognizer.ResultFlag = ... # 0x100
+    ResultHint_Mask          : QGestureRecognizer.ResultFlag = ... # 0xff00
 
     class Result(object): ...
 
@@ -2567,9 +2567,9 @@ class QGraphicsAnchorLayout(PySide2.QtWidgets.QGraphicsLayout):
 
 
 class QGraphicsBlurEffect(PySide2.QtWidgets.QGraphicsEffect):
-    PerformanceHint          : QGraphicsBlurEffect = ... # 0x0
-    QualityHint              : QGraphicsBlurEffect = ... # 0x1
-    AnimationHint            : QGraphicsBlurEffect = ... # 0x2
+    PerformanceHint          : QGraphicsBlurEffect.BlurHint = ... # 0x0
+    QualityHint              : QGraphicsBlurEffect.BlurHint = ... # 0x1
+    AnimationHint            : QGraphicsBlurEffect.BlurHint = ... # 0x2
 
     class BlurHint(object):
         PerformanceHint          : QGraphicsBlurEffect.BlurHint = ... # 0x0
@@ -2623,13 +2623,13 @@ class QGraphicsDropShadowEffect(PySide2.QtWidgets.QGraphicsEffect):
 
 
 class QGraphicsEffect(PySide2.QtCore.QObject):
-    NoPad                    : QGraphicsEffect = ... # 0x0
-    PadToTransparentBorder   : QGraphicsEffect = ... # 0x1
-    SourceAttached           : QGraphicsEffect = ... # 0x1
-    PadToEffectiveBoundingRect: QGraphicsEffect = ... # 0x2
-    SourceDetached           : QGraphicsEffect = ... # 0x2
-    SourceBoundingRectChanged: QGraphicsEffect = ... # 0x4
-    SourceInvalidated        : QGraphicsEffect = ... # 0x8
+    NoPad                    : QGraphicsEffect.PixmapPadMode = ... # 0x0
+    PadToTransparentBorder   : QGraphicsEffect.PixmapPadMode = ... # 0x1
+    SourceAttached           : QGraphicsEffect.ChangeFlag = ... # 0x1
+    PadToEffectiveBoundingRect: QGraphicsEffect.PixmapPadMode = ... # 0x2
+    SourceDetached           : QGraphicsEffect.ChangeFlag = ... # 0x2
+    SourceBoundingRectChanged: QGraphicsEffect.ChangeFlag = ... # 0x4
+    SourceInvalidated        : QGraphicsEffect.ChangeFlag = ... # 0x8
 
     class ChangeFlag(object):
         SourceAttached           : QGraphicsEffect.ChangeFlag = ... # 0x1
@@ -2744,67 +2744,67 @@ class QGraphicsGridLayout(PySide2.QtWidgets.QGraphicsLayout):
 
 
 class QGraphicsItem(Shiboken.Object):
-    UserExtension            : QGraphicsItem = ... # -0x80000000
-    ItemPositionChange       : QGraphicsItem = ... # 0x0
-    NoCache                  : QGraphicsItem = ... # 0x0
-    NonModal                 : QGraphicsItem = ... # 0x0
-    ItemCoordinateCache      : QGraphicsItem = ... # 0x1
-    ItemIsMovable            : QGraphicsItem = ... # 0x1
-    ItemMatrixChange         : QGraphicsItem = ... # 0x1
-    PanelModal               : QGraphicsItem = ... # 0x1
-    DeviceCoordinateCache    : QGraphicsItem = ... # 0x2
-    ItemIsSelectable         : QGraphicsItem = ... # 0x2
-    ItemVisibleChange        : QGraphicsItem = ... # 0x2
-    SceneModal               : QGraphicsItem = ... # 0x2
-    ItemEnabledChange        : QGraphicsItem = ... # 0x3
-    ItemIsFocusable          : QGraphicsItem = ... # 0x4
-    ItemSelectedChange       : QGraphicsItem = ... # 0x4
-    ItemParentChange         : QGraphicsItem = ... # 0x5
-    ItemChildAddedChange     : QGraphicsItem = ... # 0x6
-    ItemChildRemovedChange   : QGraphicsItem = ... # 0x7
-    ItemClipsToShape         : QGraphicsItem = ... # 0x8
-    ItemTransformChange      : QGraphicsItem = ... # 0x8
-    ItemPositionHasChanged   : QGraphicsItem = ... # 0x9
-    ItemTransformHasChanged  : QGraphicsItem = ... # 0xa
-    ItemSceneChange          : QGraphicsItem = ... # 0xb
-    ItemVisibleHasChanged    : QGraphicsItem = ... # 0xc
-    ItemEnabledHasChanged    : QGraphicsItem = ... # 0xd
-    ItemSelectedHasChanged   : QGraphicsItem = ... # 0xe
-    ItemParentHasChanged     : QGraphicsItem = ... # 0xf
-    ItemClipsChildrenToShape : QGraphicsItem = ... # 0x10
-    ItemSceneHasChanged      : QGraphicsItem = ... # 0x10
-    ItemCursorChange         : QGraphicsItem = ... # 0x11
-    ItemCursorHasChanged     : QGraphicsItem = ... # 0x12
-    ItemToolTipChange        : QGraphicsItem = ... # 0x13
-    ItemToolTipHasChanged    : QGraphicsItem = ... # 0x14
-    ItemFlagsChange          : QGraphicsItem = ... # 0x15
-    ItemFlagsHaveChanged     : QGraphicsItem = ... # 0x16
-    ItemZValueChange         : QGraphicsItem = ... # 0x17
-    ItemZValueHasChanged     : QGraphicsItem = ... # 0x18
-    ItemOpacityChange        : QGraphicsItem = ... # 0x19
-    ItemOpacityHasChanged    : QGraphicsItem = ... # 0x1a
-    ItemScenePositionHasChanged: QGraphicsItem = ... # 0x1b
-    ItemRotationChange       : QGraphicsItem = ... # 0x1c
-    ItemRotationHasChanged   : QGraphicsItem = ... # 0x1d
-    ItemScaleChange          : QGraphicsItem = ... # 0x1e
-    ItemScaleHasChanged      : QGraphicsItem = ... # 0x1f
-    ItemIgnoresTransformations: QGraphicsItem = ... # 0x20
-    ItemTransformOriginPointChange: QGraphicsItem = ... # 0x20
-    ItemTransformOriginPointHasChanged: QGraphicsItem = ... # 0x21
-    ItemIgnoresParentOpacity : QGraphicsItem = ... # 0x40
-    ItemDoesntPropagateOpacityToChildren: QGraphicsItem = ... # 0x80
-    ItemStacksBehindParent   : QGraphicsItem = ... # 0x100
-    ItemUsesExtendedStyleOption: QGraphicsItem = ... # 0x200
-    ItemHasNoContents        : QGraphicsItem = ... # 0x400
-    ItemSendsGeometryChanges : QGraphicsItem = ... # 0x800
-    ItemAcceptsInputMethod   : QGraphicsItem = ... # 0x1000
-    ItemNegativeZStacksBehindParent: QGraphicsItem = ... # 0x2000
-    ItemIsPanel              : QGraphicsItem = ... # 0x4000
-    ItemIsFocusScope         : QGraphicsItem = ... # 0x8000
-    ItemSendsScenePositionChanges: QGraphicsItem = ... # 0x10000
-    ItemStopsClickFocusPropagation: QGraphicsItem = ... # 0x20000
-    ItemStopsFocusHandling   : QGraphicsItem = ... # 0x40000
-    ItemContainsChildrenInShape: QGraphicsItem = ... # 0x80000
+    UserExtension            : QGraphicsItem.Extension = ... # -0x80000000
+    ItemPositionChange       : QGraphicsItem.GraphicsItemChange = ... # 0x0
+    NoCache                  : QGraphicsItem.CacheMode = ... # 0x0
+    NonModal                 : QGraphicsItem.PanelModality = ... # 0x0
+    ItemCoordinateCache      : QGraphicsItem.CacheMode = ... # 0x1
+    ItemIsMovable            : QGraphicsItem.GraphicsItemFlag = ... # 0x1
+    ItemMatrixChange         : QGraphicsItem.GraphicsItemChange = ... # 0x1
+    PanelModal               : QGraphicsItem.PanelModality = ... # 0x1
+    DeviceCoordinateCache    : QGraphicsItem.CacheMode = ... # 0x2
+    ItemIsSelectable         : QGraphicsItem.GraphicsItemFlag = ... # 0x2
+    ItemVisibleChange        : QGraphicsItem.GraphicsItemChange = ... # 0x2
+    SceneModal               : QGraphicsItem.PanelModality = ... # 0x2
+    ItemEnabledChange        : QGraphicsItem.GraphicsItemChange = ... # 0x3
+    ItemIsFocusable          : QGraphicsItem.GraphicsItemFlag = ... # 0x4
+    ItemSelectedChange       : QGraphicsItem.GraphicsItemChange = ... # 0x4
+    ItemParentChange         : QGraphicsItem.GraphicsItemChange = ... # 0x5
+    ItemChildAddedChange     : QGraphicsItem.GraphicsItemChange = ... # 0x6
+    ItemChildRemovedChange   : QGraphicsItem.GraphicsItemChange = ... # 0x7
+    ItemClipsToShape         : QGraphicsItem.GraphicsItemFlag = ... # 0x8
+    ItemTransformChange      : QGraphicsItem.GraphicsItemChange = ... # 0x8
+    ItemPositionHasChanged   : QGraphicsItem.GraphicsItemChange = ... # 0x9
+    ItemTransformHasChanged  : QGraphicsItem.GraphicsItemChange = ... # 0xa
+    ItemSceneChange          : QGraphicsItem.GraphicsItemChange = ... # 0xb
+    ItemVisibleHasChanged    : QGraphicsItem.GraphicsItemChange = ... # 0xc
+    ItemEnabledHasChanged    : QGraphicsItem.GraphicsItemChange = ... # 0xd
+    ItemSelectedHasChanged   : QGraphicsItem.GraphicsItemChange = ... # 0xe
+    ItemParentHasChanged     : QGraphicsItem.GraphicsItemChange = ... # 0xf
+    ItemClipsChildrenToShape : QGraphicsItem.GraphicsItemFlag = ... # 0x10
+    ItemSceneHasChanged      : QGraphicsItem.GraphicsItemChange = ... # 0x10
+    ItemCursorChange         : QGraphicsItem.GraphicsItemChange = ... # 0x11
+    ItemCursorHasChanged     : QGraphicsItem.GraphicsItemChange = ... # 0x12
+    ItemToolTipChange        : QGraphicsItem.GraphicsItemChange = ... # 0x13
+    ItemToolTipHasChanged    : QGraphicsItem.GraphicsItemChange = ... # 0x14
+    ItemFlagsChange          : QGraphicsItem.GraphicsItemChange = ... # 0x15
+    ItemFlagsHaveChanged     : QGraphicsItem.GraphicsItemChange = ... # 0x16
+    ItemZValueChange         : QGraphicsItem.GraphicsItemChange = ... # 0x17
+    ItemZValueHasChanged     : QGraphicsItem.GraphicsItemChange = ... # 0x18
+    ItemOpacityChange        : QGraphicsItem.GraphicsItemChange = ... # 0x19
+    ItemOpacityHasChanged    : QGraphicsItem.GraphicsItemChange = ... # 0x1a
+    ItemScenePositionHasChanged: QGraphicsItem.GraphicsItemChange = ... # 0x1b
+    ItemRotationChange       : QGraphicsItem.GraphicsItemChange = ... # 0x1c
+    ItemRotationHasChanged   : QGraphicsItem.GraphicsItemChange = ... # 0x1d
+    ItemScaleChange          : QGraphicsItem.GraphicsItemChange = ... # 0x1e
+    ItemScaleHasChanged      : QGraphicsItem.GraphicsItemChange = ... # 0x1f
+    ItemIgnoresTransformations: QGraphicsItem.GraphicsItemFlag = ... # 0x20
+    ItemTransformOriginPointChange: QGraphicsItem.GraphicsItemChange = ... # 0x20
+    ItemTransformOriginPointHasChanged: QGraphicsItem.GraphicsItemChange = ... # 0x21
+    ItemIgnoresParentOpacity : QGraphicsItem.GraphicsItemFlag = ... # 0x40
+    ItemDoesntPropagateOpacityToChildren: QGraphicsItem.GraphicsItemFlag = ... # 0x80
+    ItemStacksBehindParent   : QGraphicsItem.GraphicsItemFlag = ... # 0x100
+    ItemUsesExtendedStyleOption: QGraphicsItem.GraphicsItemFlag = ... # 0x200
+    ItemHasNoContents        : QGraphicsItem.GraphicsItemFlag = ... # 0x400
+    ItemSendsGeometryChanges : QGraphicsItem.GraphicsItemFlag = ... # 0x800
+    ItemAcceptsInputMethod   : QGraphicsItem.GraphicsItemFlag = ... # 0x1000
+    ItemNegativeZStacksBehindParent: QGraphicsItem.GraphicsItemFlag = ... # 0x2000
+    ItemIsPanel              : QGraphicsItem.GraphicsItemFlag = ... # 0x4000
+    ItemIsFocusScope         : QGraphicsItem.GraphicsItemFlag = ... # 0x8000
+    ItemSendsScenePositionChanges: QGraphicsItem.GraphicsItemFlag = ... # 0x10000
+    ItemStopsClickFocusPropagation: QGraphicsItem.GraphicsItemFlag = ... # 0x20000
+    ItemStopsFocusHandling   : QGraphicsItem.GraphicsItemFlag = ... # 0x40000
+    ItemContainsChildrenInShape: QGraphicsItem.GraphicsItemFlag = ... # 0x80000
 
     class CacheMode(object):
         NoCache                  : QGraphicsItem.CacheMode = ... # 0x0
@@ -3369,9 +3369,9 @@ class QGraphicsPathItem(PySide2.QtWidgets.QAbstractGraphicsShapeItem):
 
 
 class QGraphicsPixmapItem(PySide2.QtWidgets.QGraphicsItem):
-    MaskShape                : QGraphicsPixmapItem = ... # 0x0
-    BoundingRectShape        : QGraphicsPixmapItem = ... # 0x1
-    HeuristicMaskShape       : QGraphicsPixmapItem = ... # 0x2
+    MaskShape                : QGraphicsPixmapItem.ShapeMode = ... # 0x0
+    BoundingRectShape        : QGraphicsPixmapItem.ShapeMode = ... # 0x1
+    HeuristicMaskShape       : QGraphicsPixmapItem.ShapeMode = ... # 0x2
 
     class ShapeMode(object):
         MaskShape                : QGraphicsPixmapItem.ShapeMode = ... # 0x0
@@ -3524,12 +3524,12 @@ class QGraphicsScale(PySide2.QtWidgets.QGraphicsTransform):
 
 
 class QGraphicsScene(PySide2.QtCore.QObject):
-    NoIndex                  : QGraphicsScene = ... # -0x1
-    BspTreeIndex             : QGraphicsScene = ... # 0x0
-    ItemLayer                : QGraphicsScene = ... # 0x1
-    BackgroundLayer          : QGraphicsScene = ... # 0x2
-    ForegroundLayer          : QGraphicsScene = ... # 0x4
-    AllLayers                : QGraphicsScene = ... # 0xffff
+    NoIndex                  : QGraphicsScene.ItemIndexMethod = ... # -0x1
+    BspTreeIndex             : QGraphicsScene.ItemIndexMethod = ... # 0x0
+    ItemLayer                : QGraphicsScene.SceneLayer = ... # 0x1
+    BackgroundLayer          : QGraphicsScene.SceneLayer = ... # 0x2
+    ForegroundLayer          : QGraphicsScene.SceneLayer = ... # 0x4
+    AllLayers                : QGraphicsScene.SceneLayer = ... # 0xffff
 
     class ItemIndexMethod(object):
         NoIndex                  : QGraphicsScene.ItemIndexMethod = ... # -0x1
@@ -3677,9 +3677,9 @@ class QGraphicsScene(PySide2.QtCore.QObject):
 
 
 class QGraphicsSceneContextMenuEvent(PySide2.QtWidgets.QGraphicsSceneEvent):
-    Mouse                    : QGraphicsSceneContextMenuEvent = ... # 0x0
-    Keyboard                 : QGraphicsSceneContextMenuEvent = ... # 0x1
-    Other                    : QGraphicsSceneContextMenuEvent = ... # 0x2
+    Mouse                    : QGraphicsSceneContextMenuEvent.Reason = ... # 0x0
+    Keyboard                 : QGraphicsSceneContextMenuEvent.Reason = ... # 0x1
+    Other                    : QGraphicsSceneContextMenuEvent.Reason = ... # 0x2
 
     class Reason(object):
         Mouse                    : QGraphicsSceneContextMenuEvent.Reason = ... # 0x0
@@ -3925,23 +3925,23 @@ class QGraphicsTransform(PySide2.QtCore.QObject):
 
 
 class QGraphicsView(PySide2.QtWidgets.QAbstractScrollArea):
-    CacheNone                : QGraphicsView = ... # 0x0
-    FullViewportUpdate       : QGraphicsView = ... # 0x0
-    NoAnchor                 : QGraphicsView = ... # 0x0
-    NoDrag                   : QGraphicsView = ... # 0x0
-    AnchorViewCenter         : QGraphicsView = ... # 0x1
-    CacheBackground          : QGraphicsView = ... # 0x1
-    DontClipPainter          : QGraphicsView = ... # 0x1
-    MinimalViewportUpdate    : QGraphicsView = ... # 0x1
-    ScrollHandDrag           : QGraphicsView = ... # 0x1
-    AnchorUnderMouse         : QGraphicsView = ... # 0x2
-    DontSavePainterState     : QGraphicsView = ... # 0x2
-    RubberBandDrag           : QGraphicsView = ... # 0x2
-    SmartViewportUpdate      : QGraphicsView = ... # 0x2
-    NoViewportUpdate         : QGraphicsView = ... # 0x3
-    BoundingRectViewportUpdate: QGraphicsView = ... # 0x4
-    DontAdjustForAntialiasing: QGraphicsView = ... # 0x4
-    IndirectPainting         : QGraphicsView = ... # 0x8
+    CacheNone                : QGraphicsView.CacheModeFlag = ... # 0x0
+    FullViewportUpdate       : QGraphicsView.ViewportUpdateMode = ... # 0x0
+    NoAnchor                 : QGraphicsView.ViewportAnchor = ... # 0x0
+    NoDrag                   : QGraphicsView.DragMode = ... # 0x0
+    AnchorViewCenter         : QGraphicsView.ViewportAnchor = ... # 0x1
+    CacheBackground          : QGraphicsView.CacheModeFlag = ... # 0x1
+    DontClipPainter          : QGraphicsView.OptimizationFlag = ... # 0x1
+    MinimalViewportUpdate    : QGraphicsView.ViewportUpdateMode = ... # 0x1
+    ScrollHandDrag           : QGraphicsView.DragMode = ... # 0x1
+    AnchorUnderMouse         : QGraphicsView.ViewportAnchor = ... # 0x2
+    DontSavePainterState     : QGraphicsView.OptimizationFlag = ... # 0x2
+    RubberBandDrag           : QGraphicsView.DragMode = ... # 0x2
+    SmartViewportUpdate      : QGraphicsView.ViewportUpdateMode = ... # 0x2
+    NoViewportUpdate         : QGraphicsView.ViewportUpdateMode = ... # 0x3
+    BoundingRectViewportUpdate: QGraphicsView.ViewportUpdateMode = ... # 0x4
+    DontAdjustForAntialiasing: QGraphicsView.OptimizationFlag = ... # 0x4
+    IndirectPainting         : QGraphicsView.OptimizationFlag = ... # 0x8
 
     class CacheMode(object): ...
 
@@ -4316,11 +4316,11 @@ class QHBoxLayout(PySide2.QtWidgets.QBoxLayout):
 
 
 class QHeaderView(PySide2.QtWidgets.QAbstractItemView):
-    Interactive              : QHeaderView = ... # 0x0
-    Stretch                  : QHeaderView = ... # 0x1
-    Custom                   : QHeaderView = ... # 0x2
-    Fixed                    : QHeaderView = ... # 0x2
-    ResizeToContents         : QHeaderView = ... # 0x3
+    Interactive              : QHeaderView.ResizeMode = ... # 0x0
+    Stretch                  : QHeaderView.ResizeMode = ... # 0x1
+    Custom                   : QHeaderView.ResizeMode = ... # 0x2
+    Fixed                    : QHeaderView.ResizeMode = ... # 0x2
+    ResizeToContents         : QHeaderView.ResizeMode = ... # 0x3
 
     class ResizeMode(object):
         Interactive              : QHeaderView.ResizeMode = ... # 0x0
@@ -4445,12 +4445,12 @@ class QHeaderView(PySide2.QtWidgets.QAbstractItemView):
 
 
 class QInputDialog(PySide2.QtWidgets.QDialog):
-    TextInput                : QInputDialog = ... # 0x0
-    IntInput                 : QInputDialog = ... # 0x1
-    NoButtons                : QInputDialog = ... # 0x1
-    DoubleInput              : QInputDialog = ... # 0x2
-    UseListViewForComboBoxItems: QInputDialog = ... # 0x2
-    UsePlainTextEditForTextInput: QInputDialog = ... # 0x4
+    TextInput                : QInputDialog.InputMode = ... # 0x0
+    IntInput                 : QInputDialog.InputMode = ... # 0x1
+    NoButtons                : QInputDialog.InputDialogOption = ... # 0x1
+    DoubleInput              : QInputDialog.InputMode = ... # 0x2
+    UseListViewForComboBoxItems: QInputDialog.InputDialogOption = ... # 0x2
+    UsePlainTextEditForTextInput: QInputDialog.InputDialogOption = ... # 0x4
 
     class InputDialogOption(object):
         NoButtons                : QInputDialog.InputDialogOption = ... # 0x1
@@ -4609,13 +4609,13 @@ class QKeySequenceEdit(PySide2.QtWidgets.QWidget):
 
 
 class QLCDNumber(PySide2.QtWidgets.QFrame):
-    Hex                      : QLCDNumber = ... # 0x0
-    Outline                  : QLCDNumber = ... # 0x0
-    Dec                      : QLCDNumber = ... # 0x1
-    Filled                   : QLCDNumber = ... # 0x1
-    Flat                     : QLCDNumber = ... # 0x2
-    Oct                      : QLCDNumber = ... # 0x2
-    Bin                      : QLCDNumber = ... # 0x3
+    Hex                      : QLCDNumber.Mode = ... # 0x0
+    Outline                  : QLCDNumber.SegmentStyle = ... # 0x0
+    Dec                      : QLCDNumber.Mode = ... # 0x1
+    Filled                   : QLCDNumber.SegmentStyle = ... # 0x1
+    Flat                     : QLCDNumber.SegmentStyle = ... # 0x2
+    Oct                      : QLCDNumber.Mode = ... # 0x2
+    Bin                      : QLCDNumber.Mode = ... # 0x3
 
     class Mode(object):
         Hex                      : QLCDNumber.Mode = ... # 0x0
@@ -4721,12 +4721,12 @@ class QLabel(PySide2.QtWidgets.QFrame):
 
 
 class QLayout(PySide2.QtCore.QObject, PySide2.QtWidgets.QLayoutItem):
-    SetDefaultConstraint     : QLayout = ... # 0x0
-    SetNoConstraint          : QLayout = ... # 0x1
-    SetMinimumSize           : QLayout = ... # 0x2
-    SetFixedSize             : QLayout = ... # 0x3
-    SetMaximumSize           : QLayout = ... # 0x4
-    SetMinAndMaxSize         : QLayout = ... # 0x5
+    SetDefaultConstraint     : QLayout.SizeConstraint = ... # 0x0
+    SetNoConstraint          : QLayout.SizeConstraint = ... # 0x1
+    SetMinimumSize           : QLayout.SizeConstraint = ... # 0x2
+    SetFixedSize             : QLayout.SizeConstraint = ... # 0x3
+    SetMaximumSize           : QLayout.SizeConstraint = ... # 0x4
+    SetMinAndMaxSize         : QLayout.SizeConstraint = ... # 0x5
 
     class SizeConstraint(object):
         SetDefaultConstraint     : QLayout.SizeConstraint = ... # 0x0
@@ -4826,12 +4826,12 @@ class QLayoutItem(Shiboken.Object):
 
 
 class QLineEdit(PySide2.QtWidgets.QWidget):
-    LeadingPosition          : QLineEdit = ... # 0x0
-    Normal                   : QLineEdit = ... # 0x0
-    NoEcho                   : QLineEdit = ... # 0x1
-    TrailingPosition         : QLineEdit = ... # 0x1
-    Password                 : QLineEdit = ... # 0x2
-    PasswordEchoOnEdit       : QLineEdit = ... # 0x3
+    LeadingPosition          : QLineEdit.ActionPosition = ... # 0x0
+    Normal                   : QLineEdit.EchoMode = ... # 0x0
+    NoEcho                   : QLineEdit.EchoMode = ... # 0x1
+    TrailingPosition         : QLineEdit.ActionPosition = ... # 0x1
+    Password                 : QLineEdit.EchoMode = ... # 0x2
+    PasswordEchoOnEdit       : QLineEdit.EchoMode = ... # 0x3
 
     class ActionPosition(object):
         LeadingPosition          : QLineEdit.ActionPosition = ... # 0x0
@@ -4948,17 +4948,17 @@ class QLineEdit(PySide2.QtWidgets.QWidget):
 
 
 class QListView(PySide2.QtWidgets.QAbstractItemView):
-    Fixed                    : QListView = ... # 0x0
-    LeftToRight              : QListView = ... # 0x0
-    ListMode                 : QListView = ... # 0x0
-    SinglePass               : QListView = ... # 0x0
-    Static                   : QListView = ... # 0x0
-    Adjust                   : QListView = ... # 0x1
-    Batched                  : QListView = ... # 0x1
-    Free                     : QListView = ... # 0x1
-    IconMode                 : QListView = ... # 0x1
-    TopToBottom              : QListView = ... # 0x1
-    Snap                     : QListView = ... # 0x2
+    Fixed                    : QListView.ResizeMode = ... # 0x0
+    LeftToRight              : QListView.Flow = ... # 0x0
+    ListMode                 : QListView.ViewMode = ... # 0x0
+    SinglePass               : QListView.LayoutMode = ... # 0x0
+    Static                   : QListView.Movement = ... # 0x0
+    Adjust                   : QListView.ResizeMode = ... # 0x1
+    Batched                  : QListView.LayoutMode = ... # 0x1
+    Free                     : QListView.Movement = ... # 0x1
+    IconMode                 : QListView.ViewMode = ... # 0x1
+    TopToBottom              : QListView.Flow = ... # 0x1
+    Snap                     : QListView.Movement = ... # 0x2
 
     class Flow(object):
         LeftToRight              : QListView.Flow = ... # 0x0
@@ -5127,8 +5127,8 @@ class QListWidget(PySide2.QtWidgets.QListView):
 
 
 class QListWidgetItem(Shiboken.Object):
-    Type                     : QListWidgetItem = ... # 0x0
-    UserType                 : QListWidgetItem = ... # 0x3e8
+    Type                     : QListWidgetItem.ItemType = ... # 0x0
+    UserType                 : QListWidgetItem.ItemType = ... # 0x3e8
 
     class ItemType(object):
         Type                     : QListWidgetItem.ItemType = ... # 0x0
@@ -5187,12 +5187,12 @@ class QListWidgetItem(Shiboken.Object):
 
 
 class QMainWindow(PySide2.QtWidgets.QWidget):
-    AnimatedDocks            : QMainWindow = ... # 0x1
-    AllowNestedDocks         : QMainWindow = ... # 0x2
-    AllowTabbedDocks         : QMainWindow = ... # 0x4
-    ForceTabbedDocks         : QMainWindow = ... # 0x8
-    VerticalTabs             : QMainWindow = ... # 0x10
-    GroupedDragging          : QMainWindow = ... # 0x20
+    AnimatedDocks            : QMainWindow.DockOption = ... # 0x1
+    AllowNestedDocks         : QMainWindow.DockOption = ... # 0x2
+    AllowTabbedDocks         : QMainWindow.DockOption = ... # 0x4
+    ForceTabbedDocks         : QMainWindow.DockOption = ... # 0x8
+    VerticalTabs             : QMainWindow.DockOption = ... # 0x10
+    GroupedDragging          : QMainWindow.DockOption = ... # 0x20
 
     class DockOption(object):
         AnimatedDocks            : QMainWindow.DockOption = ... # 0x1
@@ -5268,12 +5268,12 @@ class QMainWindow(PySide2.QtWidgets.QWidget):
 
 
 class QMdiArea(PySide2.QtWidgets.QAbstractScrollArea):
-    CreationOrder            : QMdiArea = ... # 0x0
-    SubWindowView            : QMdiArea = ... # 0x0
-    DontMaximizeSubWindowOnActivation: QMdiArea = ... # 0x1
-    StackingOrder            : QMdiArea = ... # 0x1
-    TabbedView               : QMdiArea = ... # 0x1
-    ActivationHistoryOrder   : QMdiArea = ... # 0x2
+    CreationOrder            : QMdiArea.WindowOrder = ... # 0x0
+    SubWindowView            : QMdiArea.ViewMode = ... # 0x0
+    DontMaximizeSubWindowOnActivation: QMdiArea.AreaOption = ... # 0x1
+    StackingOrder            : QMdiArea.WindowOrder = ... # 0x1
+    TabbedView               : QMdiArea.ViewMode = ... # 0x1
+    ActivationHistoryOrder   : QMdiArea.WindowOrder = ... # 0x2
 
     class AreaOption(object):
         DontMaximizeSubWindowOnActivation: QMdiArea.AreaOption = ... # 0x1
@@ -5336,10 +5336,10 @@ class QMdiArea(PySide2.QtWidgets.QAbstractScrollArea):
 
 
 class QMdiSubWindow(PySide2.QtWidgets.QWidget):
-    AllowOutsideAreaHorizontally: QMdiSubWindow = ... # 0x1
-    AllowOutsideAreaVertically: QMdiSubWindow = ... # 0x2
-    RubberBandResize         : QMdiSubWindow = ... # 0x4
-    RubberBandMove           : QMdiSubWindow = ... # 0x8
+    AllowOutsideAreaHorizontally: QMdiSubWindow.SubWindowOption = ... # 0x1
+    AllowOutsideAreaVertically: QMdiSubWindow.SubWindowOption = ... # 0x2
+    RubberBandResize         : QMdiSubWindow.SubWindowOption = ... # 0x4
+    RubberBandMove           : QMdiSubWindow.SubWindowOption = ... # 0x8
 
     class SubWindowOption(object):
         AllowOutsideAreaHorizontally: QMdiSubWindow.SubWindowOption = ... # 0x1
@@ -5753,8 +5753,8 @@ class QMouseEventTransition(PySide2.QtCore.QEventTransition):
 
 
 class QOpenGLWidget(PySide2.QtWidgets.QWidget):
-    NoPartialUpdate          : QOpenGLWidget = ... # 0x0
-    PartialUpdate            : QOpenGLWidget = ... # 0x1
+    NoPartialUpdate          : QOpenGLWidget.UpdateBehavior = ... # 0x0
+    PartialUpdate            : QOpenGLWidget.UpdateBehavior = ... # 0x1
 
     class UpdateBehavior(object):
         NoPartialUpdate          : QOpenGLWidget.UpdateBehavior = ... # 0x0
@@ -5799,9 +5799,9 @@ class QPanGesture(PySide2.QtWidgets.QGesture):
 
 
 class QPinchGesture(PySide2.QtWidgets.QGesture):
-    ScaleFactorChanged       : QPinchGesture = ... # 0x1
-    RotationAngleChanged     : QPinchGesture = ... # 0x2
-    CenterPointChanged       : QPinchGesture = ... # 0x4
+    ScaleFactorChanged       : QPinchGesture.ChangeFlag = ... # 0x1
+    RotationAngleChanged     : QPinchGesture.ChangeFlag = ... # 0x2
+    CenterPointChanged       : QPinchGesture.ChangeFlag = ... # 0x4
 
     class ChangeFlag(object):
         ScaleFactorChanged       : QPinchGesture.ChangeFlag = ... # 0x1
@@ -5854,8 +5854,8 @@ class QPlainTextDocumentLayout(PySide2.QtGui.QAbstractTextDocumentLayout):
 
 
 class QPlainTextEdit(PySide2.QtWidgets.QAbstractScrollArea):
-    NoWrap                   : QPlainTextEdit = ... # 0x0
-    WidgetWidth              : QPlainTextEdit = ... # 0x1
+    NoWrap                   : QPlainTextEdit.LineWrapMode = ... # 0x0
+    WidgetWidth              : QPlainTextEdit.LineWrapMode = ... # 0x1
 
     class LineWrapMode(object):
         NoWrap                   : QPlainTextEdit.LineWrapMode = ... # 0x0
@@ -5982,8 +5982,8 @@ class QPlainTextEdit(PySide2.QtWidgets.QAbstractScrollArea):
 
 
 class QProgressBar(PySide2.QtWidgets.QWidget):
-    TopToBottom              : QProgressBar = ... # 0x0
-    BottomToTop              : QProgressBar = ... # 0x1
+    TopToBottom              : QProgressBar.Direction = ... # 0x0
+    BottomToTop              : QProgressBar.Direction = ... # 0x1
 
     class Direction(object):
         TopToBottom              : QProgressBar.Direction = ... # 0x0
@@ -6149,8 +6149,8 @@ class QRadioButton(PySide2.QtWidgets.QAbstractButton):
 
 
 class QRubberBand(PySide2.QtWidgets.QWidget):
-    Line                     : QRubberBand = ... # 0x0
-    Rectangle                : QRubberBand = ... # 0x1
+    Line                     : QRubberBand.Shape = ... # 0x0
+    Rectangle                : QRubberBand.Shape = ... # 0x1
 
     class Shape(object):
         Line                     : QRubberBand.Shape = ... # 0x0
@@ -6223,17 +6223,17 @@ class QScrollBar(PySide2.QtWidgets.QAbstractSlider):
 
 
 class QScroller(PySide2.QtCore.QObject):
-    Inactive                 : QScroller = ... # 0x0
-    TouchGesture             : QScroller = ... # 0x0
-    InputPress               : QScroller = ... # 0x1
-    LeftMouseButtonGesture   : QScroller = ... # 0x1
-    Pressed                  : QScroller = ... # 0x1
-    Dragging                 : QScroller = ... # 0x2
-    InputMove                : QScroller = ... # 0x2
-    RightMouseButtonGesture  : QScroller = ... # 0x2
-    InputRelease             : QScroller = ... # 0x3
-    MiddleMouseButtonGesture : QScroller = ... # 0x3
-    Scrolling                : QScroller = ... # 0x3
+    Inactive                 : QScroller.State = ... # 0x0
+    TouchGesture             : QScroller.ScrollerGestureType = ... # 0x0
+    InputPress               : QScroller.Input = ... # 0x1
+    LeftMouseButtonGesture   : QScroller.ScrollerGestureType = ... # 0x1
+    Pressed                  : QScroller.State = ... # 0x1
+    Dragging                 : QScroller.State = ... # 0x2
+    InputMove                : QScroller.Input = ... # 0x2
+    RightMouseButtonGesture  : QScroller.ScrollerGestureType = ... # 0x2
+    InputRelease             : QScroller.Input = ... # 0x3
+    MiddleMouseButtonGesture : QScroller.ScrollerGestureType = ... # 0x3
+    Scrolling                : QScroller.State = ... # 0x3
 
     class Input(object):
         InputPress               : QScroller.Input = ... # 0x1
@@ -6292,34 +6292,34 @@ class QScroller(PySide2.QtCore.QObject):
 
 
 class QScrollerProperties(Shiboken.Object):
-    MousePressEventDelay     : QScrollerProperties = ... # 0x0
-    OvershootWhenScrollable  : QScrollerProperties = ... # 0x0
-    Standard                 : QScrollerProperties = ... # 0x0
-    DragStartDistance        : QScrollerProperties = ... # 0x1
-    Fps60                    : QScrollerProperties = ... # 0x1
-    OvershootAlwaysOff       : QScrollerProperties = ... # 0x1
-    DragVelocitySmoothingFactor: QScrollerProperties = ... # 0x2
-    Fps30                    : QScrollerProperties = ... # 0x2
-    OvershootAlwaysOn        : QScrollerProperties = ... # 0x2
-    AxisLockThreshold        : QScrollerProperties = ... # 0x3
-    Fps20                    : QScrollerProperties = ... # 0x3
-    ScrollingCurve           : QScrollerProperties = ... # 0x4
-    DecelerationFactor       : QScrollerProperties = ... # 0x5
-    MinimumVelocity          : QScrollerProperties = ... # 0x6
-    MaximumVelocity          : QScrollerProperties = ... # 0x7
-    MaximumClickThroughVelocity: QScrollerProperties = ... # 0x8
-    AcceleratingFlickMaximumTime: QScrollerProperties = ... # 0x9
-    AcceleratingFlickSpeedupFactor: QScrollerProperties = ... # 0xa
-    SnapPositionRatio        : QScrollerProperties = ... # 0xb
-    SnapTime                 : QScrollerProperties = ... # 0xc
-    OvershootDragResistanceFactor: QScrollerProperties = ... # 0xd
-    OvershootDragDistanceFactor: QScrollerProperties = ... # 0xe
-    OvershootScrollDistanceFactor: QScrollerProperties = ... # 0xf
-    OvershootScrollTime      : QScrollerProperties = ... # 0x10
-    HorizontalOvershootPolicy: QScrollerProperties = ... # 0x11
-    VerticalOvershootPolicy  : QScrollerProperties = ... # 0x12
-    FrameRate                : QScrollerProperties = ... # 0x13
-    ScrollMetricCount        : QScrollerProperties = ... # 0x14
+    MousePressEventDelay     : QScrollerProperties.ScrollMetric = ... # 0x0
+    OvershootWhenScrollable  : QScrollerProperties.OvershootPolicy = ... # 0x0
+    Standard                 : QScrollerProperties.FrameRates = ... # 0x0
+    DragStartDistance        : QScrollerProperties.ScrollMetric = ... # 0x1
+    Fps60                    : QScrollerProperties.FrameRates = ... # 0x1
+    OvershootAlwaysOff       : QScrollerProperties.OvershootPolicy = ... # 0x1
+    DragVelocitySmoothingFactor: QScrollerProperties.ScrollMetric = ... # 0x2
+    Fps30                    : QScrollerProperties.FrameRates = ... # 0x2
+    OvershootAlwaysOn        : QScrollerProperties.OvershootPolicy = ... # 0x2
+    AxisLockThreshold        : QScrollerProperties.ScrollMetric = ... # 0x3
+    Fps20                    : QScrollerProperties.FrameRates = ... # 0x3
+    ScrollingCurve           : QScrollerProperties.ScrollMetric = ... # 0x4
+    DecelerationFactor       : QScrollerProperties.ScrollMetric = ... # 0x5
+    MinimumVelocity          : QScrollerProperties.ScrollMetric = ... # 0x6
+    MaximumVelocity          : QScrollerProperties.ScrollMetric = ... # 0x7
+    MaximumClickThroughVelocity: QScrollerProperties.ScrollMetric = ... # 0x8
+    AcceleratingFlickMaximumTime: QScrollerProperties.ScrollMetric = ... # 0x9
+    AcceleratingFlickSpeedupFactor: QScrollerProperties.ScrollMetric = ... # 0xa
+    SnapPositionRatio        : QScrollerProperties.ScrollMetric = ... # 0xb
+    SnapTime                 : QScrollerProperties.ScrollMetric = ... # 0xc
+    OvershootDragResistanceFactor: QScrollerProperties.ScrollMetric = ... # 0xd
+    OvershootDragDistanceFactor: QScrollerProperties.ScrollMetric = ... # 0xe
+    OvershootScrollDistanceFactor: QScrollerProperties.ScrollMetric = ... # 0xf
+    OvershootScrollTime      : QScrollerProperties.ScrollMetric = ... # 0x10
+    HorizontalOvershootPolicy: QScrollerProperties.ScrollMetric = ... # 0x11
+    VerticalOvershootPolicy  : QScrollerProperties.ScrollMetric = ... # 0x12
+    FrameRate                : QScrollerProperties.ScrollMetric = ... # 0x13
+    ScrollMetricCount        : QScrollerProperties.ScrollMetric = ... # 0x14
 
     class FrameRates(object):
         Standard                 : QScrollerProperties.FrameRates = ... # 0x0
@@ -6412,32 +6412,32 @@ class QSizeGrip(PySide2.QtWidgets.QWidget):
 
 
 class QSizePolicy(Shiboken.Object):
-    Fixed                    : QSizePolicy = ... # 0x0
-    DefaultType              : QSizePolicy = ... # 0x1
-    GrowFlag                 : QSizePolicy = ... # 0x1
-    Minimum                  : QSizePolicy = ... # 0x1
-    ButtonBox                : QSizePolicy = ... # 0x2
-    ExpandFlag               : QSizePolicy = ... # 0x2
-    MinimumExpanding         : QSizePolicy = ... # 0x3
-    CheckBox                 : QSizePolicy = ... # 0x4
-    Maximum                  : QSizePolicy = ... # 0x4
-    ShrinkFlag               : QSizePolicy = ... # 0x4
-    Preferred                : QSizePolicy = ... # 0x5
-    Expanding                : QSizePolicy = ... # 0x7
-    ComboBox                 : QSizePolicy = ... # 0x8
-    IgnoreFlag               : QSizePolicy = ... # 0x8
-    Ignored                  : QSizePolicy = ... # 0xd
-    Frame                    : QSizePolicy = ... # 0x10
-    GroupBox                 : QSizePolicy = ... # 0x20
-    Label                    : QSizePolicy = ... # 0x40
-    Line                     : QSizePolicy = ... # 0x80
-    LineEdit                 : QSizePolicy = ... # 0x100
-    PushButton               : QSizePolicy = ... # 0x200
-    RadioButton              : QSizePolicy = ... # 0x400
-    Slider                   : QSizePolicy = ... # 0x800
-    SpinBox                  : QSizePolicy = ... # 0x1000
-    TabWidget                : QSizePolicy = ... # 0x2000
-    ToolButton               : QSizePolicy = ... # 0x4000
+    Fixed                    : QSizePolicy.Policy = ... # 0x0
+    DefaultType              : QSizePolicy.ControlType = ... # 0x1
+    GrowFlag                 : QSizePolicy.PolicyFlag = ... # 0x1
+    Minimum                  : QSizePolicy.Policy = ... # 0x1
+    ButtonBox                : QSizePolicy.ControlType = ... # 0x2
+    ExpandFlag               : QSizePolicy.PolicyFlag = ... # 0x2
+    MinimumExpanding         : QSizePolicy.Policy = ... # 0x3
+    CheckBox                 : QSizePolicy.ControlType = ... # 0x4
+    Maximum                  : QSizePolicy.Policy = ... # 0x4
+    ShrinkFlag               : QSizePolicy.PolicyFlag = ... # 0x4
+    Preferred                : QSizePolicy.Policy = ... # 0x5
+    Expanding                : QSizePolicy.Policy = ... # 0x7
+    ComboBox                 : QSizePolicy.ControlType = ... # 0x8
+    IgnoreFlag               : QSizePolicy.PolicyFlag = ... # 0x8
+    Ignored                  : QSizePolicy.Policy = ... # 0xd
+    Frame                    : QSizePolicy.ControlType = ... # 0x10
+    GroupBox                 : QSizePolicy.ControlType = ... # 0x20
+    Label                    : QSizePolicy.ControlType = ... # 0x40
+    Line                     : QSizePolicy.ControlType = ... # 0x80
+    LineEdit                 : QSizePolicy.ControlType = ... # 0x100
+    PushButton               : QSizePolicy.ControlType = ... # 0x200
+    RadioButton              : QSizePolicy.ControlType = ... # 0x400
+    Slider                   : QSizePolicy.ControlType = ... # 0x800
+    SpinBox                  : QSizePolicy.ControlType = ... # 0x1000
+    TabWidget                : QSizePolicy.ControlType = ... # 0x2000
+    ToolButton               : QSizePolicy.ControlType = ... # 0x4000
 
     class ControlType(object):
         DefaultType              : QSizePolicy.ControlType = ... # 0x1
@@ -6504,12 +6504,12 @@ class QSizePolicy(Shiboken.Object):
 
 
 class QSlider(PySide2.QtWidgets.QAbstractSlider):
-    NoTicks                  : QSlider = ... # 0x0
-    TicksAbove               : QSlider = ... # 0x1
-    TicksLeft                : QSlider = ... # 0x1
-    TicksBelow               : QSlider = ... # 0x2
-    TicksRight               : QSlider = ... # 0x2
-    TicksBothSides           : QSlider = ... # 0x3
+    NoTicks                  : QSlider.TickPosition = ... # 0x0
+    TicksAbove               : QSlider.TickPosition = ... # 0x1
+    TicksLeft                : QSlider.TickPosition = ... # 0x1
+    TicksBelow               : QSlider.TickPosition = ... # 0x2
+    TicksRight               : QSlider.TickPosition = ... # 0x2
+    TicksBothSides           : QSlider.TickPosition = ... # 0x3
 
     class TickPosition(object):
         NoTicks                  : QSlider.TickPosition = ... # 0x0
@@ -6668,8 +6668,8 @@ class QSplitterHandle(PySide2.QtWidgets.QWidget):
 
 
 class QStackedLayout(PySide2.QtWidgets.QLayout):
-    StackOne                 : QStackedLayout = ... # 0x0
-    StackAll                 : QStackedLayout = ... # 0x1
+    StackOne                 : QStackedLayout.StackingMode = ... # 0x0
+    StackAll                 : QStackedLayout.StackingMode = ... # 0x1
 
     class StackingMode(object):
         StackOne                 : QStackedLayout.StackingMode = ... # 0x0
@@ -6745,574 +6745,574 @@ class QStatusBar(PySide2.QtWidgets.QWidget):
 
 
 class QStyle(PySide2.QtCore.QObject):
-    CC_CustomBase            : QStyle = ... # -0x10000000
-    CE_CustomBase            : QStyle = ... # -0x10000000
-    CT_CustomBase            : QStyle = ... # -0x10000000
-    PM_CustomBase            : QStyle = ... # -0x10000000
-    SC_CustomBase            : QStyle = ... # -0x10000000
-    SE_CustomBase            : QStyle = ... # -0x10000000
-    SH_CustomBase            : QStyle = ... # -0x10000000
-    SP_CustomBase            : QStyle = ... # -0x10000000
-    SC_All                   : QStyle = ... # -0x1
-    CC_SpinBox               : QStyle = ... # 0x0
-    CE_PushButton            : QStyle = ... # 0x0
-    CT_PushButton            : QStyle = ... # 0x0
-    PE_Frame                 : QStyle = ... # 0x0
-    PM_ButtonMargin          : QStyle = ... # 0x0
-    RSIP_OnMouseClickAndAlreadyFocused: QStyle = ... # 0x0
-    SC_None                  : QStyle = ... # 0x0
-    SE_PushButtonContents    : QStyle = ... # 0x0
-    SH_EtchDisabledText      : QStyle = ... # 0x0
-    SP_TitleBarMenuButton    : QStyle = ... # 0x0
-    State_None               : QStyle = ... # 0x0
-    CC_ComboBox              : QStyle = ... # 0x1
-    CE_PushButtonBevel       : QStyle = ... # 0x1
-    CT_CheckBox              : QStyle = ... # 0x1
-    PE_FrameDefaultButton    : QStyle = ... # 0x1
-    PM_ButtonDefaultIndicator: QStyle = ... # 0x1
-    RSIP_OnMouseClick        : QStyle = ... # 0x1
-    SC_ComboBoxFrame         : QStyle = ... # 0x1
-    SC_DialGroove            : QStyle = ... # 0x1
-    SC_GroupBoxCheckBox      : QStyle = ... # 0x1
-    SC_MdiMinButton          : QStyle = ... # 0x1
-    SC_ScrollBarAddLine      : QStyle = ... # 0x1
-    SC_SliderGroove          : QStyle = ... # 0x1
-    SC_SpinBoxUp             : QStyle = ... # 0x1
-    SC_TitleBarSysMenu       : QStyle = ... # 0x1
-    SC_ToolButton            : QStyle = ... # 0x1
-    SE_PushButtonFocusRect   : QStyle = ... # 0x1
-    SH_DitherDisabledText    : QStyle = ... # 0x1
-    SP_TitleBarMinButton     : QStyle = ... # 0x1
-    State_Enabled            : QStyle = ... # 0x1
-    CC_ScrollBar             : QStyle = ... # 0x2
-    CE_PushButtonLabel       : QStyle = ... # 0x2
-    CT_RadioButton           : QStyle = ... # 0x2
-    PE_FrameDockWidget       : QStyle = ... # 0x2
-    PM_MenuButtonIndicator   : QStyle = ... # 0x2
-    SC_ComboBoxEditField     : QStyle = ... # 0x2
-    SC_DialHandle            : QStyle = ... # 0x2
-    SC_GroupBoxLabel         : QStyle = ... # 0x2
-    SC_MdiNormalButton       : QStyle = ... # 0x2
-    SC_ScrollBarSubLine      : QStyle = ... # 0x2
-    SC_SliderHandle          : QStyle = ... # 0x2
-    SC_SpinBoxDown           : QStyle = ... # 0x2
-    SC_TitleBarMinButton     : QStyle = ... # 0x2
-    SC_ToolButtonMenu        : QStyle = ... # 0x2
-    SE_CheckBoxIndicator     : QStyle = ... # 0x2
-    SH_ScrollBar_MiddleClickAbsolutePosition: QStyle = ... # 0x2
-    SP_TitleBarMaxButton     : QStyle = ... # 0x2
-    State_Raised             : QStyle = ... # 0x2
-    CC_Slider                : QStyle = ... # 0x3
-    CE_CheckBox              : QStyle = ... # 0x3
-    CT_ToolButton            : QStyle = ... # 0x3
-    PE_FrameFocusRect        : QStyle = ... # 0x3
-    PM_ButtonShiftHorizontal : QStyle = ... # 0x3
-    SE_CheckBoxContents      : QStyle = ... # 0x3
-    SH_ScrollBar_ScrollWhenPointerLeavesControl: QStyle = ... # 0x3
-    SP_TitleBarCloseButton   : QStyle = ... # 0x3
-    CC_ToolButton            : QStyle = ... # 0x4
-    CE_CheckBoxLabel         : QStyle = ... # 0x4
-    CT_ComboBox              : QStyle = ... # 0x4
-    PE_FrameGroupBox         : QStyle = ... # 0x4
-    PM_ButtonShiftVertical   : QStyle = ... # 0x4
-    SC_ComboBoxArrow         : QStyle = ... # 0x4
-    SC_DialTickmarks         : QStyle = ... # 0x4
-    SC_GroupBoxContents      : QStyle = ... # 0x4
-    SC_MdiCloseButton        : QStyle = ... # 0x4
-    SC_ScrollBarAddPage      : QStyle = ... # 0x4
-    SC_SliderTickmarks       : QStyle = ... # 0x4
-    SC_SpinBoxFrame          : QStyle = ... # 0x4
-    SC_TitleBarMaxButton     : QStyle = ... # 0x4
-    SE_CheckBoxFocusRect     : QStyle = ... # 0x4
-    SH_TabBar_SelectMouseType: QStyle = ... # 0x4
-    SP_TitleBarNormalButton  : QStyle = ... # 0x4
-    State_Sunken             : QStyle = ... # 0x4
-    CC_TitleBar              : QStyle = ... # 0x5
-    CE_RadioButton           : QStyle = ... # 0x5
-    CT_Splitter              : QStyle = ... # 0x5
-    PE_FrameLineEdit         : QStyle = ... # 0x5
-    PM_DefaultFrameWidth     : QStyle = ... # 0x5
-    SE_CheckBoxClickRect     : QStyle = ... # 0x5
-    SH_TabBar_Alignment      : QStyle = ... # 0x5
-    SP_TitleBarShadeButton   : QStyle = ... # 0x5
-    CC_Dial                  : QStyle = ... # 0x6
-    CE_RadioButtonLabel      : QStyle = ... # 0x6
-    CT_ProgressBar           : QStyle = ... # 0x6
-    PE_FrameMenu             : QStyle = ... # 0x6
-    PM_SpinBoxFrameWidth     : QStyle = ... # 0x6
-    SE_RadioButtonIndicator  : QStyle = ... # 0x6
-    SH_Header_ArrowAlignment : QStyle = ... # 0x6
-    SP_TitleBarUnshadeButton : QStyle = ... # 0x6
-    CC_GroupBox              : QStyle = ... # 0x7
-    CE_TabBarTab             : QStyle = ... # 0x7
-    CT_MenuItem              : QStyle = ... # 0x7
-    PE_FrameStatusBar        : QStyle = ... # 0x7
-    PE_FrameStatusBarItem    : QStyle = ... # 0x7
-    PM_ComboBoxFrameWidth    : QStyle = ... # 0x7
-    SE_RadioButtonContents   : QStyle = ... # 0x7
-    SH_Slider_SnapToValue    : QStyle = ... # 0x7
-    SP_TitleBarContextHelpButton: QStyle = ... # 0x7
-    CC_MdiControls           : QStyle = ... # 0x8
-    CE_TabBarTabShape        : QStyle = ... # 0x8
-    CT_MenuBarItem           : QStyle = ... # 0x8
-    PE_FrameTabWidget        : QStyle = ... # 0x8
-    PM_MaximumDragDistance   : QStyle = ... # 0x8
-    SC_ComboBoxListBoxPopup  : QStyle = ... # 0x8
-    SC_GroupBoxFrame         : QStyle = ... # 0x8
-    SC_ScrollBarSubPage      : QStyle = ... # 0x8
-    SC_SpinBoxEditField      : QStyle = ... # 0x8
-    SC_TitleBarCloseButton   : QStyle = ... # 0x8
-    SE_RadioButtonFocusRect  : QStyle = ... # 0x8
-    SH_Slider_SloppyKeyEvents: QStyle = ... # 0x8
-    SP_DockWidgetCloseButton : QStyle = ... # 0x8
-    State_Off                : QStyle = ... # 0x8
-    CE_TabBarTabLabel        : QStyle = ... # 0x9
-    CT_MenuBar               : QStyle = ... # 0x9
-    PE_FrameWindow           : QStyle = ... # 0x9
-    PM_ScrollBarExtent       : QStyle = ... # 0x9
-    SE_RadioButtonClickRect  : QStyle = ... # 0x9
-    SH_ProgressDialog_CenterCancelButton: QStyle = ... # 0x9
-    SP_MessageBoxInformation : QStyle = ... # 0x9
-    CE_ProgressBar           : QStyle = ... # 0xa
-    CT_Menu                  : QStyle = ... # 0xa
-    PE_FrameButtonBevel      : QStyle = ... # 0xa
-    PM_ScrollBarSliderMin    : QStyle = ... # 0xa
-    SE_ComboBoxFocusRect     : QStyle = ... # 0xa
-    SH_ProgressDialog_TextLabelAlignment: QStyle = ... # 0xa
-    SP_MessageBoxWarning     : QStyle = ... # 0xa
-    CE_ProgressBarGroove     : QStyle = ... # 0xb
-    CT_TabBarTab             : QStyle = ... # 0xb
-    PE_FrameButtonTool       : QStyle = ... # 0xb
-    PM_SliderThickness       : QStyle = ... # 0xb
-    SE_SliderFocusRect       : QStyle = ... # 0xb
-    SH_PrintDialog_RightAlignButtons: QStyle = ... # 0xb
-    SP_MessageBoxCritical    : QStyle = ... # 0xb
-    CE_ProgressBarContents   : QStyle = ... # 0xc
-    CT_Slider                : QStyle = ... # 0xc
-    PE_FrameTabBarBase       : QStyle = ... # 0xc
-    PM_SliderControlThickness: QStyle = ... # 0xc
-    SE_ProgressBarGroove     : QStyle = ... # 0xc
-    SH_MainWindow_SpaceBelowMenuBar: QStyle = ... # 0xc
-    SP_MessageBoxQuestion    : QStyle = ... # 0xc
-    CE_ProgressBarLabel      : QStyle = ... # 0xd
-    CT_ScrollBar             : QStyle = ... # 0xd
-    PE_PanelButtonCommand    : QStyle = ... # 0xd
-    PM_SliderLength          : QStyle = ... # 0xd
-    SE_ProgressBarContents   : QStyle = ... # 0xd
-    SH_FontDialog_SelectAssociatedText: QStyle = ... # 0xd
-    SP_DesktopIcon           : QStyle = ... # 0xd
-    CE_MenuItem              : QStyle = ... # 0xe
-    CT_LineEdit              : QStyle = ... # 0xe
-    PE_PanelButtonBevel      : QStyle = ... # 0xe
-    PM_SliderTickmarkOffset  : QStyle = ... # 0xe
-    SE_ProgressBarLabel      : QStyle = ... # 0xe
-    SH_Menu_AllowActiveAndDisabled: QStyle = ... # 0xe
-    SP_TrashIcon             : QStyle = ... # 0xe
-    CE_MenuScroller          : QStyle = ... # 0xf
-    CT_SpinBox               : QStyle = ... # 0xf
-    PE_PanelButtonTool       : QStyle = ... # 0xf
-    PM_SliderSpaceAvailable  : QStyle = ... # 0xf
-    SE_ToolBoxTabContents    : QStyle = ... # 0xf
-    SH_Menu_SpaceActivatesItem: QStyle = ... # 0xf
-    SP_ComputerIcon          : QStyle = ... # 0xf
-    CE_MenuVMargin           : QStyle = ... # 0x10
-    CT_SizeGrip              : QStyle = ... # 0x10
-    PE_PanelMenuBar          : QStyle = ... # 0x10
-    PM_DockWidgetSeparatorExtent: QStyle = ... # 0x10
-    SC_ScrollBarFirst        : QStyle = ... # 0x10
-    SC_TitleBarNormalButton  : QStyle = ... # 0x10
-    SE_HeaderLabel           : QStyle = ... # 0x10
-    SH_Menu_SubMenuPopupDelay: QStyle = ... # 0x10
-    SP_DriveFDIcon           : QStyle = ... # 0x10
-    State_NoChange           : QStyle = ... # 0x10
-    CE_MenuHMargin           : QStyle = ... # 0x11
-    CT_TabWidget             : QStyle = ... # 0x11
-    PE_PanelToolBar          : QStyle = ... # 0x11
-    PM_DockWidgetHandleExtent: QStyle = ... # 0x11
-    SE_HeaderArrow           : QStyle = ... # 0x11
-    SH_ScrollView_FrameOnlyAroundContents: QStyle = ... # 0x11
-    SP_DriveHDIcon           : QStyle = ... # 0x11
-    CE_MenuTearoff           : QStyle = ... # 0x12
-    CT_DialogButtons         : QStyle = ... # 0x12
-    PE_PanelLineEdit         : QStyle = ... # 0x12
-    PM_DockWidgetFrameWidth  : QStyle = ... # 0x12
-    SE_TabWidgetTabBar       : QStyle = ... # 0x12
-    SH_MenuBar_AltKeyNavigation: QStyle = ... # 0x12
-    SP_DriveCDIcon           : QStyle = ... # 0x12
-    CE_MenuEmptyArea         : QStyle = ... # 0x13
-    CT_HeaderSection         : QStyle = ... # 0x13
-    PE_IndicatorArrowDown    : QStyle = ... # 0x13
-    PM_TabBarTabOverlap      : QStyle = ... # 0x13
-    SE_TabWidgetTabPane      : QStyle = ... # 0x13
-    SH_ComboBox_ListMouseTracking: QStyle = ... # 0x13
-    SP_DriveDVDIcon          : QStyle = ... # 0x13
-    CE_MenuBarItem           : QStyle = ... # 0x14
-    CT_GroupBox              : QStyle = ... # 0x14
-    PE_IndicatorArrowLeft    : QStyle = ... # 0x14
-    PM_TabBarTabHSpace       : QStyle = ... # 0x14
-    SE_TabWidgetTabContents  : QStyle = ... # 0x14
-    SH_Menu_MouseTracking    : QStyle = ... # 0x14
-    SP_DriveNetIcon          : QStyle = ... # 0x14
-    CE_MenuBarEmptyArea      : QStyle = ... # 0x15
-    CT_MdiControls           : QStyle = ... # 0x15
-    PE_IndicatorArrowRight   : QStyle = ... # 0x15
-    PM_TabBarTabVSpace       : QStyle = ... # 0x15
-    SE_TabWidgetLeftCorner   : QStyle = ... # 0x15
-    SH_MenuBar_MouseTracking : QStyle = ... # 0x15
-    SP_DirOpenIcon           : QStyle = ... # 0x15
-    CE_ToolButtonLabel       : QStyle = ... # 0x16
-    CT_ItemViewItem          : QStyle = ... # 0x16
-    PE_IndicatorArrowUp      : QStyle = ... # 0x16
-    PM_TabBarBaseHeight      : QStyle = ... # 0x16
-    SE_TabWidgetRightCorner  : QStyle = ... # 0x16
-    SH_ItemView_ChangeHighlightOnFocus: QStyle = ... # 0x16
-    SP_DirClosedIcon         : QStyle = ... # 0x16
-    CE_Header                : QStyle = ... # 0x17
-    PE_IndicatorBranch       : QStyle = ... # 0x17
-    PM_TabBarBaseOverlap     : QStyle = ... # 0x17
-    SE_ItemViewItemCheckIndicator: QStyle = ... # 0x17
-    SE_ViewItemCheckIndicator: QStyle = ... # 0x17
-    SH_Widget_ShareActivation: QStyle = ... # 0x17
-    SP_DirLinkIcon           : QStyle = ... # 0x17
-    CE_HeaderSection         : QStyle = ... # 0x18
-    PE_IndicatorButtonDropDown: QStyle = ... # 0x18
-    PM_ProgressBarChunkWidth : QStyle = ... # 0x18
-    SE_TabBarTearIndicator   : QStyle = ... # 0x18
-    SE_TabBarTearIndicatorLeft: QStyle = ... # 0x18
-    SH_Workspace_FillSpaceOnMaximize: QStyle = ... # 0x18
-    SP_DirLinkOpenIcon       : QStyle = ... # 0x18
-    CE_HeaderLabel           : QStyle = ... # 0x19
-    PE_IndicatorItemViewItemCheck: QStyle = ... # 0x19
-    PE_IndicatorViewItemCheck: QStyle = ... # 0x19
-    PM_SplitterWidth         : QStyle = ... # 0x19
-    SE_TreeViewDisclosureItem: QStyle = ... # 0x19
-    SH_ComboBox_Popup        : QStyle = ... # 0x19
-    SP_FileIcon              : QStyle = ... # 0x19
-    CE_ToolBoxTab            : QStyle = ... # 0x1a
-    PE_IndicatorCheckBox     : QStyle = ... # 0x1a
-    PM_TitleBarHeight        : QStyle = ... # 0x1a
-    SE_LineEditContents      : QStyle = ... # 0x1a
-    SH_TitleBar_NoBorder     : QStyle = ... # 0x1a
-    SP_FileLinkIcon          : QStyle = ... # 0x1a
-    CE_SizeGrip              : QStyle = ... # 0x1b
-    PE_IndicatorDockWidgetResizeHandle: QStyle = ... # 0x1b
-    PM_MenuScrollerHeight    : QStyle = ... # 0x1b
-    SE_FrameContents         : QStyle = ... # 0x1b
-    SH_ScrollBar_StopMouseOverSlider: QStyle = ... # 0x1b
-    SH_Slider_StopMouseOverSlider: QStyle = ... # 0x1b
-    SP_ToolBarHorizontalExtensionButton: QStyle = ... # 0x1b
-    CE_Splitter              : QStyle = ... # 0x1c
-    PE_IndicatorHeaderArrow  : QStyle = ... # 0x1c
-    PM_MenuHMargin           : QStyle = ... # 0x1c
-    SE_DockWidgetCloseButton : QStyle = ... # 0x1c
-    SH_BlinkCursorWhenTextSelected: QStyle = ... # 0x1c
-    SP_ToolBarVerticalExtensionButton: QStyle = ... # 0x1c
-    CE_RubberBand            : QStyle = ... # 0x1d
-    PE_IndicatorMenuCheckMark: QStyle = ... # 0x1d
-    PM_MenuVMargin           : QStyle = ... # 0x1d
-    SE_DockWidgetFloatButton : QStyle = ... # 0x1d
-    SH_RichText_FullWidthSelection: QStyle = ... # 0x1d
-    SP_FileDialogStart       : QStyle = ... # 0x1d
-    CE_DockWidgetTitle       : QStyle = ... # 0x1e
-    PE_IndicatorProgressChunk: QStyle = ... # 0x1e
-    PM_MenuPanelWidth        : QStyle = ... # 0x1e
-    SE_DockWidgetTitleBarText: QStyle = ... # 0x1e
-    SH_Menu_Scrollable       : QStyle = ... # 0x1e
-    SP_FileDialogEnd         : QStyle = ... # 0x1e
-    CE_ScrollBarAddLine      : QStyle = ... # 0x1f
-    PE_IndicatorRadioButton  : QStyle = ... # 0x1f
-    PM_MenuTearoffHeight     : QStyle = ... # 0x1f
-    SE_DockWidgetIcon        : QStyle = ... # 0x1f
-    SH_GroupBox_TextLabelVerticalAlignment: QStyle = ... # 0x1f
-    SP_FileDialogToParent    : QStyle = ... # 0x1f
-    CE_ScrollBarSubLine      : QStyle = ... # 0x20
-    PE_IndicatorSpinDown     : QStyle = ... # 0x20
-    PM_MenuDesktopFrameWidth : QStyle = ... # 0x20
-    SC_ScrollBarLast         : QStyle = ... # 0x20
-    SC_TitleBarShadeButton   : QStyle = ... # 0x20
-    SE_CheckBoxLayoutItem    : QStyle = ... # 0x20
-    SH_GroupBox_TextLabelColor: QStyle = ... # 0x20
-    SP_FileDialogNewFolder   : QStyle = ... # 0x20
-    State_On                 : QStyle = ... # 0x20
-    CE_ScrollBarAddPage      : QStyle = ... # 0x21
-    PE_IndicatorSpinMinus    : QStyle = ... # 0x21
-    PM_MenuBarPanelWidth     : QStyle = ... # 0x21
-    SE_ComboBoxLayoutItem    : QStyle = ... # 0x21
-    SH_Menu_SloppySubMenus   : QStyle = ... # 0x21
-    SP_FileDialogDetailedView: QStyle = ... # 0x21
-    CE_ScrollBarSubPage      : QStyle = ... # 0x22
-    PE_IndicatorSpinPlus     : QStyle = ... # 0x22
-    PM_MenuBarItemSpacing    : QStyle = ... # 0x22
-    SE_DateTimeEditLayoutItem: QStyle = ... # 0x22
-    SH_Table_GridLineColor   : QStyle = ... # 0x22
-    SP_FileDialogInfoView    : QStyle = ... # 0x22
-    CE_ScrollBarSlider       : QStyle = ... # 0x23
-    PE_IndicatorSpinUp       : QStyle = ... # 0x23
-    PM_MenuBarVMargin        : QStyle = ... # 0x23
-    SE_DialogButtonBoxLayoutItem: QStyle = ... # 0x23
-    SH_LineEdit_PasswordCharacter: QStyle = ... # 0x23
-    SP_FileDialogContentsView: QStyle = ... # 0x23
-    CE_ScrollBarFirst        : QStyle = ... # 0x24
-    PE_IndicatorToolBarHandle: QStyle = ... # 0x24
-    PM_MenuBarHMargin        : QStyle = ... # 0x24
-    SE_LabelLayoutItem       : QStyle = ... # 0x24
-    SH_DialogButtons_DefaultButton: QStyle = ... # 0x24
-    SP_FileDialogListView    : QStyle = ... # 0x24
-    CE_ScrollBarLast         : QStyle = ... # 0x25
-    PE_IndicatorToolBarSeparator: QStyle = ... # 0x25
-    PM_IndicatorWidth        : QStyle = ... # 0x25
-    SE_ProgressBarLayoutItem : QStyle = ... # 0x25
-    SH_ToolBox_SelectedPageTitleBold: QStyle = ... # 0x25
-    SP_FileDialogBack        : QStyle = ... # 0x25
-    CE_FocusFrame            : QStyle = ... # 0x26
-    PE_PanelTipLabel         : QStyle = ... # 0x26
-    PM_IndicatorHeight       : QStyle = ... # 0x26
-    SE_PushButtonLayoutItem  : QStyle = ... # 0x26
-    SH_TabBar_PreferNoArrows : QStyle = ... # 0x26
-    SP_DirIcon               : QStyle = ... # 0x26
-    CE_ComboBoxLabel         : QStyle = ... # 0x27
-    PE_IndicatorTabTear      : QStyle = ... # 0x27
-    PE_IndicatorTabTearLeft  : QStyle = ... # 0x27
-    PM_ExclusiveIndicatorWidth: QStyle = ... # 0x27
-    SE_RadioButtonLayoutItem : QStyle = ... # 0x27
-    SH_ScrollBar_LeftClickAbsolutePosition: QStyle = ... # 0x27
-    SP_DialogOkButton        : QStyle = ... # 0x27
-    CE_ToolBar               : QStyle = ... # 0x28
-    PE_PanelScrollAreaCorner : QStyle = ... # 0x28
-    PM_ExclusiveIndicatorHeight: QStyle = ... # 0x28
-    SE_SliderLayoutItem      : QStyle = ... # 0x28
-    SH_ListViewExpand_SelectMouseType: QStyle = ... # 0x28
-    SP_DialogCancelButton    : QStyle = ... # 0x28
-    CE_ToolBoxTabShape       : QStyle = ... # 0x29
-    PE_Widget                : QStyle = ... # 0x29
-    PM_DialogButtonsSeparator: QStyle = ... # 0x29
-    SE_SpinBoxLayoutItem     : QStyle = ... # 0x29
-    SH_UnderlineShortcut     : QStyle = ... # 0x29
-    SP_DialogHelpButton      : QStyle = ... # 0x29
-    CE_ToolBoxTabLabel       : QStyle = ... # 0x2a
-    PE_IndicatorColumnViewArrow: QStyle = ... # 0x2a
-    PM_DialogButtonsButtonWidth: QStyle = ... # 0x2a
-    SE_ToolButtonLayoutItem  : QStyle = ... # 0x2a
-    SH_SpinBox_AnimateButton : QStyle = ... # 0x2a
-    SP_DialogOpenButton      : QStyle = ... # 0x2a
-    CE_HeaderEmptyArea       : QStyle = ... # 0x2b
-    PE_IndicatorItemViewItemDrop: QStyle = ... # 0x2b
-    PM_DialogButtonsButtonHeight: QStyle = ... # 0x2b
-    SE_FrameLayoutItem       : QStyle = ... # 0x2b
-    SH_SpinBox_KeyPressAutoRepeatRate: QStyle = ... # 0x2b
-    SP_DialogSaveButton      : QStyle = ... # 0x2b
-    CE_ColumnViewGrip        : QStyle = ... # 0x2c
-    PE_PanelItemViewItem     : QStyle = ... # 0x2c
-    PM_MDIFrameWidth         : QStyle = ... # 0x2c
-    PM_MdiSubWindowFrameWidth: QStyle = ... # 0x2c
-    SE_GroupBoxLayoutItem    : QStyle = ... # 0x2c
-    SH_SpinBox_ClickAutoRepeatRate: QStyle = ... # 0x2c
-    SP_DialogCloseButton     : QStyle = ... # 0x2c
-    CE_ItemViewItem          : QStyle = ... # 0x2d
-    PE_PanelItemViewRow      : QStyle = ... # 0x2d
-    PM_MDIMinimizedWidth     : QStyle = ... # 0x2d
-    PM_MdiSubWindowMinimizedWidth: QStyle = ... # 0x2d
-    SE_TabWidgetLayoutItem   : QStyle = ... # 0x2d
-    SH_Menu_FillScreenWithScroll: QStyle = ... # 0x2d
-    SP_DialogApplyButton     : QStyle = ... # 0x2d
-    CE_ShapedFrame           : QStyle = ... # 0x2e
-    PE_PanelStatusBar        : QStyle = ... # 0x2e
-    PM_HeaderMargin          : QStyle = ... # 0x2e
-    SE_ItemViewItemDecoration: QStyle = ... # 0x2e
-    SH_ToolTipLabel_Opacity  : QStyle = ... # 0x2e
-    SP_DialogResetButton     : QStyle = ... # 0x2e
-    PE_IndicatorTabClose     : QStyle = ... # 0x2f
-    PM_HeaderMarkSize        : QStyle = ... # 0x2f
-    SE_ItemViewItemText      : QStyle = ... # 0x2f
-    SH_DrawMenuBarSeparator  : QStyle = ... # 0x2f
-    SP_DialogDiscardButton   : QStyle = ... # 0x2f
-    PE_PanelMenu             : QStyle = ... # 0x30
-    PM_HeaderGripMargin      : QStyle = ... # 0x30
-    SE_ItemViewItemFocusRect : QStyle = ... # 0x30
-    SH_TitleBar_ModifyNotification: QStyle = ... # 0x30
-    SP_DialogYesButton       : QStyle = ... # 0x30
-    PE_IndicatorTabTearRight : QStyle = ... # 0x31
-    PM_TabBarTabShiftHorizontal: QStyle = ... # 0x31
-    SE_TabBarTabLeftButton   : QStyle = ... # 0x31
-    SH_Button_FocusPolicy    : QStyle = ... # 0x31
-    SP_DialogNoButton        : QStyle = ... # 0x31
-    PM_TabBarTabShiftVertical: QStyle = ... # 0x32
-    SE_TabBarTabRightButton  : QStyle = ... # 0x32
-    SH_MessageBox_UseBorderForButtonSpacing: QStyle = ... # 0x32
-    SP_ArrowUp               : QStyle = ... # 0x32
-    PM_TabBarScrollButtonWidth: QStyle = ... # 0x33
-    SE_TabBarTabText         : QStyle = ... # 0x33
-    SH_TitleBar_AutoRaise    : QStyle = ... # 0x33
-    SP_ArrowDown             : QStyle = ... # 0x33
-    PM_ToolBarFrameWidth     : QStyle = ... # 0x34
-    SE_ShapedFrameContents   : QStyle = ... # 0x34
-    SH_ToolButton_PopupDelay : QStyle = ... # 0x34
-    SP_ArrowLeft             : QStyle = ... # 0x34
-    PM_ToolBarHandleExtent   : QStyle = ... # 0x35
-    SE_ToolBarHandle         : QStyle = ... # 0x35
-    SH_FocusFrame_Mask       : QStyle = ... # 0x35
-    SP_ArrowRight            : QStyle = ... # 0x35
-    PM_ToolBarItemSpacing    : QStyle = ... # 0x36
-    SE_TabBarScrollLeftButton: QStyle = ... # 0x36
-    SH_RubberBand_Mask       : QStyle = ... # 0x36
-    SP_ArrowBack             : QStyle = ... # 0x36
-    PM_ToolBarItemMargin     : QStyle = ... # 0x37
-    SE_TabBarScrollRightButton: QStyle = ... # 0x37
-    SH_WindowFrame_Mask      : QStyle = ... # 0x37
-    SP_ArrowForward          : QStyle = ... # 0x37
-    PM_ToolBarSeparatorExtent: QStyle = ... # 0x38
-    SE_TabBarTearIndicatorRight: QStyle = ... # 0x38
-    SH_SpinControls_DisableOnBounds: QStyle = ... # 0x38
-    SP_DirHomeIcon           : QStyle = ... # 0x38
-    PM_ToolBarExtensionExtent: QStyle = ... # 0x39
-    SE_PushButtonBevel       : QStyle = ... # 0x39
-    SH_Dial_BackgroundRole   : QStyle = ... # 0x39
-    SP_CommandLink           : QStyle = ... # 0x39
-    PM_SpinBoxSliderHeight   : QStyle = ... # 0x3a
-    SH_ComboBox_LayoutDirection: QStyle = ... # 0x3a
-    SP_VistaShield           : QStyle = ... # 0x3a
-    PM_DefaultTopLevelMargin : QStyle = ... # 0x3b
-    SH_ItemView_EllipsisLocation: QStyle = ... # 0x3b
-    SP_BrowserReload         : QStyle = ... # 0x3b
-    PM_DefaultChildMargin    : QStyle = ... # 0x3c
-    SH_ItemView_ShowDecorationSelected: QStyle = ... # 0x3c
-    SP_BrowserStop           : QStyle = ... # 0x3c
-    PM_DefaultLayoutSpacing  : QStyle = ... # 0x3d
-    SH_ItemView_ActivateItemOnSingleClick: QStyle = ... # 0x3d
-    SP_MediaPlay             : QStyle = ... # 0x3d
-    PM_ToolBarIconSize       : QStyle = ... # 0x3e
-    SH_ScrollBar_ContextMenu : QStyle = ... # 0x3e
-    SP_MediaStop             : QStyle = ... # 0x3e
-    PM_ListViewIconSize      : QStyle = ... # 0x3f
-    SH_ScrollBar_RollBetweenButtons: QStyle = ... # 0x3f
-    SP_MediaPause            : QStyle = ... # 0x3f
-    PM_IconViewIconSize      : QStyle = ... # 0x40
-    SC_ScrollBarSlider       : QStyle = ... # 0x40
-    SC_TitleBarUnshadeButton : QStyle = ... # 0x40
-    SH_Slider_AbsoluteSetButtons: QStyle = ... # 0x40
-    SP_MediaSkipForward      : QStyle = ... # 0x40
-    State_DownArrow          : QStyle = ... # 0x40
-    PM_SmallIconSize         : QStyle = ... # 0x41
-    SH_Slider_PageSetButtons : QStyle = ... # 0x41
-    SP_MediaSkipBackward     : QStyle = ... # 0x41
-    PM_LargeIconSize         : QStyle = ... # 0x42
-    SH_Menu_KeyboardSearch   : QStyle = ... # 0x42
-    SP_MediaSeekForward      : QStyle = ... # 0x42
-    PM_FocusFrameVMargin     : QStyle = ... # 0x43
-    SH_TabBar_ElideMode      : QStyle = ... # 0x43
-    SP_MediaSeekBackward     : QStyle = ... # 0x43
-    PM_FocusFrameHMargin     : QStyle = ... # 0x44
-    SH_DialogButtonLayout    : QStyle = ... # 0x44
-    SP_MediaVolume           : QStyle = ... # 0x44
-    PM_ToolTipLabelFrameWidth: QStyle = ... # 0x45
-    SH_ComboBox_PopupFrameStyle: QStyle = ... # 0x45
-    SP_MediaVolumeMuted      : QStyle = ... # 0x45
-    PM_CheckBoxLabelSpacing  : QStyle = ... # 0x46
-    SH_MessageBox_TextInteractionFlags: QStyle = ... # 0x46
-    SP_LineEditClearButton   : QStyle = ... # 0x46
-    PM_TabBarIconSize        : QStyle = ... # 0x47
-    SH_DialogButtonBox_ButtonsHaveIcons: QStyle = ... # 0x47
-    SP_DialogYesToAllButton  : QStyle = ... # 0x47
-    PM_SizeGripSize          : QStyle = ... # 0x48
-    SH_SpellCheckUnderlineStyle: QStyle = ... # 0x48
-    SP_DialogNoToAllButton   : QStyle = ... # 0x48
-    PM_DockWidgetTitleMargin : QStyle = ... # 0x49
-    SH_MessageBox_CenterButtons: QStyle = ... # 0x49
-    SP_DialogSaveAllButton   : QStyle = ... # 0x49
-    PM_MessageBoxIconSize    : QStyle = ... # 0x4a
-    SH_Menu_SelectionWrap    : QStyle = ... # 0x4a
-    SP_DialogAbortButton     : QStyle = ... # 0x4a
-    PM_ButtonIconSize        : QStyle = ... # 0x4b
-    SH_ItemView_MovementWithoutUpdatingSelection: QStyle = ... # 0x4b
-    SP_DialogRetryButton     : QStyle = ... # 0x4b
-    PM_DockWidgetTitleBarButtonMargin: QStyle = ... # 0x4c
-    SH_ToolTip_Mask          : QStyle = ... # 0x4c
-    SP_DialogIgnoreButton    : QStyle = ... # 0x4c
-    PM_RadioButtonLabelSpacing: QStyle = ... # 0x4d
-    SH_FocusFrame_AboveWidget: QStyle = ... # 0x4d
-    SP_RestoreDefaultsButton : QStyle = ... # 0x4d
-    PM_LayoutLeftMargin      : QStyle = ... # 0x4e
-    SH_TextControl_FocusIndicatorTextCharFormat: QStyle = ... # 0x4e
-    PM_LayoutTopMargin       : QStyle = ... # 0x4f
-    SH_WizardStyle           : QStyle = ... # 0x4f
-    PM_LayoutRightMargin     : QStyle = ... # 0x50
-    SH_ItemView_ArrowKeysNavigateIntoChildren: QStyle = ... # 0x50
-    PM_LayoutBottomMargin    : QStyle = ... # 0x51
-    SH_Menu_Mask             : QStyle = ... # 0x51
-    PM_LayoutHorizontalSpacing: QStyle = ... # 0x52
-    SH_Menu_FlashTriggeredItem: QStyle = ... # 0x52
-    PM_LayoutVerticalSpacing : QStyle = ... # 0x53
-    SH_Menu_FadeOutOnHide    : QStyle = ... # 0x53
-    PM_TabBar_ScrollButtonOverlap: QStyle = ... # 0x54
-    SH_SpinBox_ClickAutoRepeatThreshold: QStyle = ... # 0x54
-    PM_TextCursorWidth       : QStyle = ... # 0x55
-    SH_ItemView_PaintAlternatingRowColorsForEmptyArea: QStyle = ... # 0x55
-    PM_TabCloseIndicatorWidth: QStyle = ... # 0x56
-    SH_FormLayoutWrapPolicy  : QStyle = ... # 0x56
-    PM_TabCloseIndicatorHeight: QStyle = ... # 0x57
-    SH_TabWidget_DefaultTabPosition: QStyle = ... # 0x57
-    PM_ScrollView_ScrollBarSpacing: QStyle = ... # 0x58
-    SH_ToolBar_Movable       : QStyle = ... # 0x58
-    PM_ScrollView_ScrollBarOverlap: QStyle = ... # 0x59
-    SH_FormLayoutFieldGrowthPolicy: QStyle = ... # 0x59
-    PM_SubMenuOverlap        : QStyle = ... # 0x5a
-    SH_FormLayoutFormAlignment: QStyle = ... # 0x5a
-    PM_TreeViewIndentation   : QStyle = ... # 0x5b
-    SH_FormLayoutLabelAlignment: QStyle = ... # 0x5b
-    PM_HeaderDefaultSectionSizeHorizontal: QStyle = ... # 0x5c
-    SH_ItemView_DrawDelegateFrame: QStyle = ... # 0x5c
-    PM_HeaderDefaultSectionSizeVertical: QStyle = ... # 0x5d
-    SH_TabBar_CloseButtonPosition: QStyle = ... # 0x5d
-    PM_TitleBarButtonIconSize: QStyle = ... # 0x5e
-    SH_DockWidget_ButtonsHaveFrame: QStyle = ... # 0x5e
-    PM_TitleBarButtonSize    : QStyle = ... # 0x5f
-    SH_ToolButtonStyle       : QStyle = ... # 0x5f
-    SH_RequestSoftwareInputPanel: QStyle = ... # 0x60
-    SH_ScrollBar_Transient   : QStyle = ... # 0x61
-    SH_Menu_SupportsSections : QStyle = ... # 0x62
-    SH_ToolTip_WakeUpDelay   : QStyle = ... # 0x63
-    SH_ToolTip_FallAsleepDelay: QStyle = ... # 0x64
-    SH_Widget_Animate        : QStyle = ... # 0x65
-    SH_Splitter_OpaqueResize : QStyle = ... # 0x66
-    SH_ComboBox_UseNativePopup: QStyle = ... # 0x67
-    SH_LineEdit_PasswordMaskDelay: QStyle = ... # 0x68
-    SH_TabBar_ChangeCurrentDelay: QStyle = ... # 0x69
-    SH_Menu_SubMenuUniDirection: QStyle = ... # 0x6a
-    SH_Menu_SubMenuUniDirectionFailCount: QStyle = ... # 0x6b
-    SH_Menu_SubMenuSloppySelectOtherActions: QStyle = ... # 0x6c
-    SH_Menu_SubMenuSloppyCloseTimeout: QStyle = ... # 0x6d
-    SH_Menu_SubMenuResetWhenReenteringParent: QStyle = ... # 0x6e
-    SH_Menu_SubMenuDontStartSloppyOnLeave: QStyle = ... # 0x6f
-    SH_ItemView_ScrollMode   : QStyle = ... # 0x70
-    SH_TitleBar_ShowToolTipsOnButtons: QStyle = ... # 0x71
-    SH_Widget_Animation_Duration: QStyle = ... # 0x72
-    SH_ComboBox_AllowWheelScrolling: QStyle = ... # 0x73
-    SH_SpinBox_ButtonsInsideFrame: QStyle = ... # 0x74
-    SH_SpinBox_StepModifier  : QStyle = ... # 0x75
-    SC_ScrollBarGroove       : QStyle = ... # 0x80
-    SC_TitleBarContextHelpButton: QStyle = ... # 0x80
-    State_Horizontal         : QStyle = ... # 0x80
-    SC_TitleBarLabel         : QStyle = ... # 0x100
-    State_HasFocus           : QStyle = ... # 0x100
-    State_Top                : QStyle = ... # 0x200
-    State_Bottom             : QStyle = ... # 0x400
-    State_FocusAtBorder      : QStyle = ... # 0x800
-    State_AutoRaise          : QStyle = ... # 0x1000
-    State_MouseOver          : QStyle = ... # 0x2000
-    State_UpArrow            : QStyle = ... # 0x4000
-    State_Selected           : QStyle = ... # 0x8000
-    State_Active             : QStyle = ... # 0x10000
-    State_Window             : QStyle = ... # 0x20000
-    State_Open               : QStyle = ... # 0x40000
-    State_Children           : QStyle = ... # 0x80000
-    State_Item               : QStyle = ... # 0x100000
-    State_Sibling            : QStyle = ... # 0x200000
-    State_Editing            : QStyle = ... # 0x400000
-    State_KeyboardFocusChange: QStyle = ... # 0x800000
-    State_ReadOnly           : QStyle = ... # 0x2000000
-    State_Small              : QStyle = ... # 0x4000000
-    State_Mini               : QStyle = ... # 0x8000000
-    PE_CustomBase            : QStyle = ... # 0xf000000
+    CC_CustomBase            : QStyle.ComplexControl = ... # -0x10000000
+    CE_CustomBase            : QStyle.ControlElement = ... # -0x10000000
+    CT_CustomBase            : QStyle.ContentsType = ... # -0x10000000
+    PM_CustomBase            : QStyle.PixelMetric = ... # -0x10000000
+    SC_CustomBase            : QStyle.SubControl = ... # -0x10000000
+    SE_CustomBase            : QStyle.SubElement = ... # -0x10000000
+    SH_CustomBase            : QStyle.StyleHint = ... # -0x10000000
+    SP_CustomBase            : QStyle.StandardPixmap = ... # -0x10000000
+    SC_All                   : QStyle.SubControl = ... # -0x1
+    CC_SpinBox               : QStyle.ComplexControl = ... # 0x0
+    CE_PushButton            : QStyle.ControlElement = ... # 0x0
+    CT_PushButton            : QStyle.ContentsType = ... # 0x0
+    PE_Frame                 : QStyle.PrimitiveElement = ... # 0x0
+    PM_ButtonMargin          : QStyle.PixelMetric = ... # 0x0
+    RSIP_OnMouseClickAndAlreadyFocused: QStyle.RequestSoftwareInputPanel = ... # 0x0
+    SC_None                  : QStyle.SubControl = ... # 0x0
+    SE_PushButtonContents    : QStyle.SubElement = ... # 0x0
+    SH_EtchDisabledText      : QStyle.StyleHint = ... # 0x0
+    SP_TitleBarMenuButton    : QStyle.StandardPixmap = ... # 0x0
+    State_None               : QStyle.StateFlag = ... # 0x0
+    CC_ComboBox              : QStyle.ComplexControl = ... # 0x1
+    CE_PushButtonBevel       : QStyle.ControlElement = ... # 0x1
+    CT_CheckBox              : QStyle.ContentsType = ... # 0x1
+    PE_FrameDefaultButton    : QStyle.PrimitiveElement = ... # 0x1
+    PM_ButtonDefaultIndicator: QStyle.PixelMetric = ... # 0x1
+    RSIP_OnMouseClick        : QStyle.RequestSoftwareInputPanel = ... # 0x1
+    SC_ComboBoxFrame         : QStyle.SubControl = ... # 0x1
+    SC_DialGroove            : QStyle.SubControl = ... # 0x1
+    SC_GroupBoxCheckBox      : QStyle.SubControl = ... # 0x1
+    SC_MdiMinButton          : QStyle.SubControl = ... # 0x1
+    SC_ScrollBarAddLine      : QStyle.SubControl = ... # 0x1
+    SC_SliderGroove          : QStyle.SubControl = ... # 0x1
+    SC_SpinBoxUp             : QStyle.SubControl = ... # 0x1
+    SC_TitleBarSysMenu       : QStyle.SubControl = ... # 0x1
+    SC_ToolButton            : QStyle.SubControl = ... # 0x1
+    SE_PushButtonFocusRect   : QStyle.SubElement = ... # 0x1
+    SH_DitherDisabledText    : QStyle.StyleHint = ... # 0x1
+    SP_TitleBarMinButton     : QStyle.StandardPixmap = ... # 0x1
+    State_Enabled            : QStyle.StateFlag = ... # 0x1
+    CC_ScrollBar             : QStyle.ComplexControl = ... # 0x2
+    CE_PushButtonLabel       : QStyle.ControlElement = ... # 0x2
+    CT_RadioButton           : QStyle.ContentsType = ... # 0x2
+    PE_FrameDockWidget       : QStyle.PrimitiveElement = ... # 0x2
+    PM_MenuButtonIndicator   : QStyle.PixelMetric = ... # 0x2
+    SC_ComboBoxEditField     : QStyle.SubControl = ... # 0x2
+    SC_DialHandle            : QStyle.SubControl = ... # 0x2
+    SC_GroupBoxLabel         : QStyle.SubControl = ... # 0x2
+    SC_MdiNormalButton       : QStyle.SubControl = ... # 0x2
+    SC_ScrollBarSubLine      : QStyle.SubControl = ... # 0x2
+    SC_SliderHandle          : QStyle.SubControl = ... # 0x2
+    SC_SpinBoxDown           : QStyle.SubControl = ... # 0x2
+    SC_TitleBarMinButton     : QStyle.SubControl = ... # 0x2
+    SC_ToolButtonMenu        : QStyle.SubControl = ... # 0x2
+    SE_CheckBoxIndicator     : QStyle.SubElement = ... # 0x2
+    SH_ScrollBar_MiddleClickAbsolutePosition: QStyle.StyleHint = ... # 0x2
+    SP_TitleBarMaxButton     : QStyle.StandardPixmap = ... # 0x2
+    State_Raised             : QStyle.StateFlag = ... # 0x2
+    CC_Slider                : QStyle.ComplexControl = ... # 0x3
+    CE_CheckBox              : QStyle.ControlElement = ... # 0x3
+    CT_ToolButton            : QStyle.ContentsType = ... # 0x3
+    PE_FrameFocusRect        : QStyle.PrimitiveElement = ... # 0x3
+    PM_ButtonShiftHorizontal : QStyle.PixelMetric = ... # 0x3
+    SE_CheckBoxContents      : QStyle.SubElement = ... # 0x3
+    SH_ScrollBar_ScrollWhenPointerLeavesControl: QStyle.StyleHint = ... # 0x3
+    SP_TitleBarCloseButton   : QStyle.StandardPixmap = ... # 0x3
+    CC_ToolButton            : QStyle.ComplexControl = ... # 0x4
+    CE_CheckBoxLabel         : QStyle.ControlElement = ... # 0x4
+    CT_ComboBox              : QStyle.ContentsType = ... # 0x4
+    PE_FrameGroupBox         : QStyle.PrimitiveElement = ... # 0x4
+    PM_ButtonShiftVertical   : QStyle.PixelMetric = ... # 0x4
+    SC_ComboBoxArrow         : QStyle.SubControl = ... # 0x4
+    SC_DialTickmarks         : QStyle.SubControl = ... # 0x4
+    SC_GroupBoxContents      : QStyle.SubControl = ... # 0x4
+    SC_MdiCloseButton        : QStyle.SubControl = ... # 0x4
+    SC_ScrollBarAddPage      : QStyle.SubControl = ... # 0x4
+    SC_SliderTickmarks       : QStyle.SubControl = ... # 0x4
+    SC_SpinBoxFrame          : QStyle.SubControl = ... # 0x4
+    SC_TitleBarMaxButton     : QStyle.SubControl = ... # 0x4
+    SE_CheckBoxFocusRect     : QStyle.SubElement = ... # 0x4
+    SH_TabBar_SelectMouseType: QStyle.StyleHint = ... # 0x4
+    SP_TitleBarNormalButton  : QStyle.StandardPixmap = ... # 0x4
+    State_Sunken             : QStyle.StateFlag = ... # 0x4
+    CC_TitleBar              : QStyle.ComplexControl = ... # 0x5
+    CE_RadioButton           : QStyle.ControlElement = ... # 0x5
+    CT_Splitter              : QStyle.ContentsType = ... # 0x5
+    PE_FrameLineEdit         : QStyle.PrimitiveElement = ... # 0x5
+    PM_DefaultFrameWidth     : QStyle.PixelMetric = ... # 0x5
+    SE_CheckBoxClickRect     : QStyle.SubElement = ... # 0x5
+    SH_TabBar_Alignment      : QStyle.StyleHint = ... # 0x5
+    SP_TitleBarShadeButton   : QStyle.StandardPixmap = ... # 0x5
+    CC_Dial                  : QStyle.ComplexControl = ... # 0x6
+    CE_RadioButtonLabel      : QStyle.ControlElement = ... # 0x6
+    CT_ProgressBar           : QStyle.ContentsType = ... # 0x6
+    PE_FrameMenu             : QStyle.PrimitiveElement = ... # 0x6
+    PM_SpinBoxFrameWidth     : QStyle.PixelMetric = ... # 0x6
+    SE_RadioButtonIndicator  : QStyle.SubElement = ... # 0x6
+    SH_Header_ArrowAlignment : QStyle.StyleHint = ... # 0x6
+    SP_TitleBarUnshadeButton : QStyle.StandardPixmap = ... # 0x6
+    CC_GroupBox              : QStyle.ComplexControl = ... # 0x7
+    CE_TabBarTab             : QStyle.ControlElement = ... # 0x7
+    CT_MenuItem              : QStyle.ContentsType = ... # 0x7
+    PE_FrameStatusBar        : QStyle.PrimitiveElement = ... # 0x7
+    PE_FrameStatusBarItem    : QStyle.PrimitiveElement = ... # 0x7
+    PM_ComboBoxFrameWidth    : QStyle.PixelMetric = ... # 0x7
+    SE_RadioButtonContents   : QStyle.SubElement = ... # 0x7
+    SH_Slider_SnapToValue    : QStyle.StyleHint = ... # 0x7
+    SP_TitleBarContextHelpButton: QStyle.StandardPixmap = ... # 0x7
+    CC_MdiControls           : QStyle.ComplexControl = ... # 0x8
+    CE_TabBarTabShape        : QStyle.ControlElement = ... # 0x8
+    CT_MenuBarItem           : QStyle.ContentsType = ... # 0x8
+    PE_FrameTabWidget        : QStyle.PrimitiveElement = ... # 0x8
+    PM_MaximumDragDistance   : QStyle.PixelMetric = ... # 0x8
+    SC_ComboBoxListBoxPopup  : QStyle.SubControl = ... # 0x8
+    SC_GroupBoxFrame         : QStyle.SubControl = ... # 0x8
+    SC_ScrollBarSubPage      : QStyle.SubControl = ... # 0x8
+    SC_SpinBoxEditField      : QStyle.SubControl = ... # 0x8
+    SC_TitleBarCloseButton   : QStyle.SubControl = ... # 0x8
+    SE_RadioButtonFocusRect  : QStyle.SubElement = ... # 0x8
+    SH_Slider_SloppyKeyEvents: QStyle.StyleHint = ... # 0x8
+    SP_DockWidgetCloseButton : QStyle.StandardPixmap = ... # 0x8
+    State_Off                : QStyle.StateFlag = ... # 0x8
+    CE_TabBarTabLabel        : QStyle.ControlElement = ... # 0x9
+    CT_MenuBar               : QStyle.ContentsType = ... # 0x9
+    PE_FrameWindow           : QStyle.PrimitiveElement = ... # 0x9
+    PM_ScrollBarExtent       : QStyle.PixelMetric = ... # 0x9
+    SE_RadioButtonClickRect  : QStyle.SubElement = ... # 0x9
+    SH_ProgressDialog_CenterCancelButton: QStyle.StyleHint = ... # 0x9
+    SP_MessageBoxInformation : QStyle.StandardPixmap = ... # 0x9
+    CE_ProgressBar           : QStyle.ControlElement = ... # 0xa
+    CT_Menu                  : QStyle.ContentsType = ... # 0xa
+    PE_FrameButtonBevel      : QStyle.PrimitiveElement = ... # 0xa
+    PM_ScrollBarSliderMin    : QStyle.PixelMetric = ... # 0xa
+    SE_ComboBoxFocusRect     : QStyle.SubElement = ... # 0xa
+    SH_ProgressDialog_TextLabelAlignment: QStyle.StyleHint = ... # 0xa
+    SP_MessageBoxWarning     : QStyle.StandardPixmap = ... # 0xa
+    CE_ProgressBarGroove     : QStyle.ControlElement = ... # 0xb
+    CT_TabBarTab             : QStyle.ContentsType = ... # 0xb
+    PE_FrameButtonTool       : QStyle.PrimitiveElement = ... # 0xb
+    PM_SliderThickness       : QStyle.PixelMetric = ... # 0xb
+    SE_SliderFocusRect       : QStyle.SubElement = ... # 0xb
+    SH_PrintDialog_RightAlignButtons: QStyle.StyleHint = ... # 0xb
+    SP_MessageBoxCritical    : QStyle.StandardPixmap = ... # 0xb
+    CE_ProgressBarContents   : QStyle.ControlElement = ... # 0xc
+    CT_Slider                : QStyle.ContentsType = ... # 0xc
+    PE_FrameTabBarBase       : QStyle.PrimitiveElement = ... # 0xc
+    PM_SliderControlThickness: QStyle.PixelMetric = ... # 0xc
+    SE_ProgressBarGroove     : QStyle.SubElement = ... # 0xc
+    SH_MainWindow_SpaceBelowMenuBar: QStyle.StyleHint = ... # 0xc
+    SP_MessageBoxQuestion    : QStyle.StandardPixmap = ... # 0xc
+    CE_ProgressBarLabel      : QStyle.ControlElement = ... # 0xd
+    CT_ScrollBar             : QStyle.ContentsType = ... # 0xd
+    PE_PanelButtonCommand    : QStyle.PrimitiveElement = ... # 0xd
+    PM_SliderLength          : QStyle.PixelMetric = ... # 0xd
+    SE_ProgressBarContents   : QStyle.SubElement = ... # 0xd
+    SH_FontDialog_SelectAssociatedText: QStyle.StyleHint = ... # 0xd
+    SP_DesktopIcon           : QStyle.StandardPixmap = ... # 0xd
+    CE_MenuItem              : QStyle.ControlElement = ... # 0xe
+    CT_LineEdit              : QStyle.ContentsType = ... # 0xe
+    PE_PanelButtonBevel      : QStyle.PrimitiveElement = ... # 0xe
+    PM_SliderTickmarkOffset  : QStyle.PixelMetric = ... # 0xe
+    SE_ProgressBarLabel      : QStyle.SubElement = ... # 0xe
+    SH_Menu_AllowActiveAndDisabled: QStyle.StyleHint = ... # 0xe
+    SP_TrashIcon             : QStyle.StandardPixmap = ... # 0xe
+    CE_MenuScroller          : QStyle.ControlElement = ... # 0xf
+    CT_SpinBox               : QStyle.ContentsType = ... # 0xf
+    PE_PanelButtonTool       : QStyle.PrimitiveElement = ... # 0xf
+    PM_SliderSpaceAvailable  : QStyle.PixelMetric = ... # 0xf
+    SE_ToolBoxTabContents    : QStyle.SubElement = ... # 0xf
+    SH_Menu_SpaceActivatesItem: QStyle.StyleHint = ... # 0xf
+    SP_ComputerIcon          : QStyle.StandardPixmap = ... # 0xf
+    CE_MenuVMargin           : QStyle.ControlElement = ... # 0x10
+    CT_SizeGrip              : QStyle.ContentsType = ... # 0x10
+    PE_PanelMenuBar          : QStyle.PrimitiveElement = ... # 0x10
+    PM_DockWidgetSeparatorExtent: QStyle.PixelMetric = ... # 0x10
+    SC_ScrollBarFirst        : QStyle.SubControl = ... # 0x10
+    SC_TitleBarNormalButton  : QStyle.SubControl = ... # 0x10
+    SE_HeaderLabel           : QStyle.SubElement = ... # 0x10
+    SH_Menu_SubMenuPopupDelay: QStyle.StyleHint = ... # 0x10
+    SP_DriveFDIcon           : QStyle.StandardPixmap = ... # 0x10
+    State_NoChange           : QStyle.StateFlag = ... # 0x10
+    CE_MenuHMargin           : QStyle.ControlElement = ... # 0x11
+    CT_TabWidget             : QStyle.ContentsType = ... # 0x11
+    PE_PanelToolBar          : QStyle.PrimitiveElement = ... # 0x11
+    PM_DockWidgetHandleExtent: QStyle.PixelMetric = ... # 0x11
+    SE_HeaderArrow           : QStyle.SubElement = ... # 0x11
+    SH_ScrollView_FrameOnlyAroundContents: QStyle.StyleHint = ... # 0x11
+    SP_DriveHDIcon           : QStyle.StandardPixmap = ... # 0x11
+    CE_MenuTearoff           : QStyle.ControlElement = ... # 0x12
+    CT_DialogButtons         : QStyle.ContentsType = ... # 0x12
+    PE_PanelLineEdit         : QStyle.PrimitiveElement = ... # 0x12
+    PM_DockWidgetFrameWidth  : QStyle.PixelMetric = ... # 0x12
+    SE_TabWidgetTabBar       : QStyle.SubElement = ... # 0x12
+    SH_MenuBar_AltKeyNavigation: QStyle.StyleHint = ... # 0x12
+    SP_DriveCDIcon           : QStyle.StandardPixmap = ... # 0x12
+    CE_MenuEmptyArea         : QStyle.ControlElement = ... # 0x13
+    CT_HeaderSection         : QStyle.ContentsType = ... # 0x13
+    PE_IndicatorArrowDown    : QStyle.PrimitiveElement = ... # 0x13
+    PM_TabBarTabOverlap      : QStyle.PixelMetric = ... # 0x13
+    SE_TabWidgetTabPane      : QStyle.SubElement = ... # 0x13
+    SH_ComboBox_ListMouseTracking: QStyle.StyleHint = ... # 0x13
+    SP_DriveDVDIcon          : QStyle.StandardPixmap = ... # 0x13
+    CE_MenuBarItem           : QStyle.ControlElement = ... # 0x14
+    CT_GroupBox              : QStyle.ContentsType = ... # 0x14
+    PE_IndicatorArrowLeft    : QStyle.PrimitiveElement = ... # 0x14
+    PM_TabBarTabHSpace       : QStyle.PixelMetric = ... # 0x14
+    SE_TabWidgetTabContents  : QStyle.SubElement = ... # 0x14
+    SH_Menu_MouseTracking    : QStyle.StyleHint = ... # 0x14
+    SP_DriveNetIcon          : QStyle.StandardPixmap = ... # 0x14
+    CE_MenuBarEmptyArea      : QStyle.ControlElement = ... # 0x15
+    CT_MdiControls           : QStyle.ContentsType = ... # 0x15
+    PE_IndicatorArrowRight   : QStyle.PrimitiveElement = ... # 0x15
+    PM_TabBarTabVSpace       : QStyle.PixelMetric = ... # 0x15
+    SE_TabWidgetLeftCorner   : QStyle.SubElement = ... # 0x15
+    SH_MenuBar_MouseTracking : QStyle.StyleHint = ... # 0x15
+    SP_DirOpenIcon           : QStyle.StandardPixmap = ... # 0x15
+    CE_ToolButtonLabel       : QStyle.ControlElement = ... # 0x16
+    CT_ItemViewItem          : QStyle.ContentsType = ... # 0x16
+    PE_IndicatorArrowUp      : QStyle.PrimitiveElement = ... # 0x16
+    PM_TabBarBaseHeight      : QStyle.PixelMetric = ... # 0x16
+    SE_TabWidgetRightCorner  : QStyle.SubElement = ... # 0x16
+    SH_ItemView_ChangeHighlightOnFocus: QStyle.StyleHint = ... # 0x16
+    SP_DirClosedIcon         : QStyle.StandardPixmap = ... # 0x16
+    CE_Header                : QStyle.ControlElement = ... # 0x17
+    PE_IndicatorBranch       : QStyle.PrimitiveElement = ... # 0x17
+    PM_TabBarBaseOverlap     : QStyle.PixelMetric = ... # 0x17
+    SE_ItemViewItemCheckIndicator: QStyle.SubElement = ... # 0x17
+    SE_ViewItemCheckIndicator: QStyle.SubElement = ... # 0x17
+    SH_Widget_ShareActivation: QStyle.StyleHint = ... # 0x17
+    SP_DirLinkIcon           : QStyle.StandardPixmap = ... # 0x17
+    CE_HeaderSection         : QStyle.ControlElement = ... # 0x18
+    PE_IndicatorButtonDropDown: QStyle.PrimitiveElement = ... # 0x18
+    PM_ProgressBarChunkWidth : QStyle.PixelMetric = ... # 0x18
+    SE_TabBarTearIndicator   : QStyle.SubElement = ... # 0x18
+    SE_TabBarTearIndicatorLeft: QStyle.SubElement = ... # 0x18
+    SH_Workspace_FillSpaceOnMaximize: QStyle.StyleHint = ... # 0x18
+    SP_DirLinkOpenIcon       : QStyle.StandardPixmap = ... # 0x18
+    CE_HeaderLabel           : QStyle.ControlElement = ... # 0x19
+    PE_IndicatorItemViewItemCheck: QStyle.PrimitiveElement = ... # 0x19
+    PE_IndicatorViewItemCheck: QStyle.PrimitiveElement = ... # 0x19
+    PM_SplitterWidth         : QStyle.PixelMetric = ... # 0x19
+    SE_TreeViewDisclosureItem: QStyle.SubElement = ... # 0x19
+    SH_ComboBox_Popup        : QStyle.StyleHint = ... # 0x19
+    SP_FileIcon              : QStyle.StandardPixmap = ... # 0x19
+    CE_ToolBoxTab            : QStyle.ControlElement = ... # 0x1a
+    PE_IndicatorCheckBox     : QStyle.PrimitiveElement = ... # 0x1a
+    PM_TitleBarHeight        : QStyle.PixelMetric = ... # 0x1a
+    SE_LineEditContents      : QStyle.SubElement = ... # 0x1a
+    SH_TitleBar_NoBorder     : QStyle.StyleHint = ... # 0x1a
+    SP_FileLinkIcon          : QStyle.StandardPixmap = ... # 0x1a
+    CE_SizeGrip              : QStyle.ControlElement = ... # 0x1b
+    PE_IndicatorDockWidgetResizeHandle: QStyle.PrimitiveElement = ... # 0x1b
+    PM_MenuScrollerHeight    : QStyle.PixelMetric = ... # 0x1b
+    SE_FrameContents         : QStyle.SubElement = ... # 0x1b
+    SH_ScrollBar_StopMouseOverSlider: QStyle.StyleHint = ... # 0x1b
+    SH_Slider_StopMouseOverSlider: QStyle.StyleHint = ... # 0x1b
+    SP_ToolBarHorizontalExtensionButton: QStyle.StandardPixmap = ... # 0x1b
+    CE_Splitter              : QStyle.ControlElement = ... # 0x1c
+    PE_IndicatorHeaderArrow  : QStyle.PrimitiveElement = ... # 0x1c
+    PM_MenuHMargin           : QStyle.PixelMetric = ... # 0x1c
+    SE_DockWidgetCloseButton : QStyle.SubElement = ... # 0x1c
+    SH_BlinkCursorWhenTextSelected: QStyle.StyleHint = ... # 0x1c
+    SP_ToolBarVerticalExtensionButton: QStyle.StandardPixmap = ... # 0x1c
+    CE_RubberBand            : QStyle.ControlElement = ... # 0x1d
+    PE_IndicatorMenuCheckMark: QStyle.PrimitiveElement = ... # 0x1d
+    PM_MenuVMargin           : QStyle.PixelMetric = ... # 0x1d
+    SE_DockWidgetFloatButton : QStyle.SubElement = ... # 0x1d
+    SH_RichText_FullWidthSelection: QStyle.StyleHint = ... # 0x1d
+    SP_FileDialogStart       : QStyle.StandardPixmap = ... # 0x1d
+    CE_DockWidgetTitle       : QStyle.ControlElement = ... # 0x1e
+    PE_IndicatorProgressChunk: QStyle.PrimitiveElement = ... # 0x1e
+    PM_MenuPanelWidth        : QStyle.PixelMetric = ... # 0x1e
+    SE_DockWidgetTitleBarText: QStyle.SubElement = ... # 0x1e
+    SH_Menu_Scrollable       : QStyle.StyleHint = ... # 0x1e
+    SP_FileDialogEnd         : QStyle.StandardPixmap = ... # 0x1e
+    CE_ScrollBarAddLine      : QStyle.ControlElement = ... # 0x1f
+    PE_IndicatorRadioButton  : QStyle.PrimitiveElement = ... # 0x1f
+    PM_MenuTearoffHeight     : QStyle.PixelMetric = ... # 0x1f
+    SE_DockWidgetIcon        : QStyle.SubElement = ... # 0x1f
+    SH_GroupBox_TextLabelVerticalAlignment: QStyle.StyleHint = ... # 0x1f
+    SP_FileDialogToParent    : QStyle.StandardPixmap = ... # 0x1f
+    CE_ScrollBarSubLine      : QStyle.ControlElement = ... # 0x20
+    PE_IndicatorSpinDown     : QStyle.PrimitiveElement = ... # 0x20
+    PM_MenuDesktopFrameWidth : QStyle.PixelMetric = ... # 0x20
+    SC_ScrollBarLast         : QStyle.SubControl = ... # 0x20
+    SC_TitleBarShadeButton   : QStyle.SubControl = ... # 0x20
+    SE_CheckBoxLayoutItem    : QStyle.SubElement = ... # 0x20
+    SH_GroupBox_TextLabelColor: QStyle.StyleHint = ... # 0x20
+    SP_FileDialogNewFolder   : QStyle.StandardPixmap = ... # 0x20
+    State_On                 : QStyle.StateFlag = ... # 0x20
+    CE_ScrollBarAddPage      : QStyle.ControlElement = ... # 0x21
+    PE_IndicatorSpinMinus    : QStyle.PrimitiveElement = ... # 0x21
+    PM_MenuBarPanelWidth     : QStyle.PixelMetric = ... # 0x21
+    SE_ComboBoxLayoutItem    : QStyle.SubElement = ... # 0x21
+    SH_Menu_SloppySubMenus   : QStyle.StyleHint = ... # 0x21
+    SP_FileDialogDetailedView: QStyle.StandardPixmap = ... # 0x21
+    CE_ScrollBarSubPage      : QStyle.ControlElement = ... # 0x22
+    PE_IndicatorSpinPlus     : QStyle.PrimitiveElement = ... # 0x22
+    PM_MenuBarItemSpacing    : QStyle.PixelMetric = ... # 0x22
+    SE_DateTimeEditLayoutItem: QStyle.SubElement = ... # 0x22
+    SH_Table_GridLineColor   : QStyle.StyleHint = ... # 0x22
+    SP_FileDialogInfoView    : QStyle.StandardPixmap = ... # 0x22
+    CE_ScrollBarSlider       : QStyle.ControlElement = ... # 0x23
+    PE_IndicatorSpinUp       : QStyle.PrimitiveElement = ... # 0x23
+    PM_MenuBarVMargin        : QStyle.PixelMetric = ... # 0x23
+    SE_DialogButtonBoxLayoutItem: QStyle.SubElement = ... # 0x23
+    SH_LineEdit_PasswordCharacter: QStyle.StyleHint = ... # 0x23
+    SP_FileDialogContentsView: QStyle.StandardPixmap = ... # 0x23
+    CE_ScrollBarFirst        : QStyle.ControlElement = ... # 0x24
+    PE_IndicatorToolBarHandle: QStyle.PrimitiveElement = ... # 0x24
+    PM_MenuBarHMargin        : QStyle.PixelMetric = ... # 0x24
+    SE_LabelLayoutItem       : QStyle.SubElement = ... # 0x24
+    SH_DialogButtons_DefaultButton: QStyle.StyleHint = ... # 0x24
+    SP_FileDialogListView    : QStyle.StandardPixmap = ... # 0x24
+    CE_ScrollBarLast         : QStyle.ControlElement = ... # 0x25
+    PE_IndicatorToolBarSeparator: QStyle.PrimitiveElement = ... # 0x25
+    PM_IndicatorWidth        : QStyle.PixelMetric = ... # 0x25
+    SE_ProgressBarLayoutItem : QStyle.SubElement = ... # 0x25
+    SH_ToolBox_SelectedPageTitleBold: QStyle.StyleHint = ... # 0x25
+    SP_FileDialogBack        : QStyle.StandardPixmap = ... # 0x25
+    CE_FocusFrame            : QStyle.ControlElement = ... # 0x26
+    PE_PanelTipLabel         : QStyle.PrimitiveElement = ... # 0x26
+    PM_IndicatorHeight       : QStyle.PixelMetric = ... # 0x26
+    SE_PushButtonLayoutItem  : QStyle.SubElement = ... # 0x26
+    SH_TabBar_PreferNoArrows : QStyle.StyleHint = ... # 0x26
+    SP_DirIcon               : QStyle.StandardPixmap = ... # 0x26
+    CE_ComboBoxLabel         : QStyle.ControlElement = ... # 0x27
+    PE_IndicatorTabTear      : QStyle.PrimitiveElement = ... # 0x27
+    PE_IndicatorTabTearLeft  : QStyle.PrimitiveElement = ... # 0x27
+    PM_ExclusiveIndicatorWidth: QStyle.PixelMetric = ... # 0x27
+    SE_RadioButtonLayoutItem : QStyle.SubElement = ... # 0x27
+    SH_ScrollBar_LeftClickAbsolutePosition: QStyle.StyleHint = ... # 0x27
+    SP_DialogOkButton        : QStyle.StandardPixmap = ... # 0x27
+    CE_ToolBar               : QStyle.ControlElement = ... # 0x28
+    PE_PanelScrollAreaCorner : QStyle.PrimitiveElement = ... # 0x28
+    PM_ExclusiveIndicatorHeight: QStyle.PixelMetric = ... # 0x28
+    SE_SliderLayoutItem      : QStyle.SubElement = ... # 0x28
+    SH_ListViewExpand_SelectMouseType: QStyle.StyleHint = ... # 0x28
+    SP_DialogCancelButton    : QStyle.StandardPixmap = ... # 0x28
+    CE_ToolBoxTabShape       : QStyle.ControlElement = ... # 0x29
+    PE_Widget                : QStyle.PrimitiveElement = ... # 0x29
+    PM_DialogButtonsSeparator: QStyle.PixelMetric = ... # 0x29
+    SE_SpinBoxLayoutItem     : QStyle.SubElement = ... # 0x29
+    SH_UnderlineShortcut     : QStyle.StyleHint = ... # 0x29
+    SP_DialogHelpButton      : QStyle.StandardPixmap = ... # 0x29
+    CE_ToolBoxTabLabel       : QStyle.ControlElement = ... # 0x2a
+    PE_IndicatorColumnViewArrow: QStyle.PrimitiveElement = ... # 0x2a
+    PM_DialogButtonsButtonWidth: QStyle.PixelMetric = ... # 0x2a
+    SE_ToolButtonLayoutItem  : QStyle.SubElement = ... # 0x2a
+    SH_SpinBox_AnimateButton : QStyle.StyleHint = ... # 0x2a
+    SP_DialogOpenButton      : QStyle.StandardPixmap = ... # 0x2a
+    CE_HeaderEmptyArea       : QStyle.ControlElement = ... # 0x2b
+    PE_IndicatorItemViewItemDrop: QStyle.PrimitiveElement = ... # 0x2b
+    PM_DialogButtonsButtonHeight: QStyle.PixelMetric = ... # 0x2b
+    SE_FrameLayoutItem       : QStyle.SubElement = ... # 0x2b
+    SH_SpinBox_KeyPressAutoRepeatRate: QStyle.StyleHint = ... # 0x2b
+    SP_DialogSaveButton      : QStyle.StandardPixmap = ... # 0x2b
+    CE_ColumnViewGrip        : QStyle.ControlElement = ... # 0x2c
+    PE_PanelItemViewItem     : QStyle.PrimitiveElement = ... # 0x2c
+    PM_MDIFrameWidth         : QStyle.PixelMetric = ... # 0x2c
+    PM_MdiSubWindowFrameWidth: QStyle.PixelMetric = ... # 0x2c
+    SE_GroupBoxLayoutItem    : QStyle.SubElement = ... # 0x2c
+    SH_SpinBox_ClickAutoRepeatRate: QStyle.StyleHint = ... # 0x2c
+    SP_DialogCloseButton     : QStyle.StandardPixmap = ... # 0x2c
+    CE_ItemViewItem          : QStyle.ControlElement = ... # 0x2d
+    PE_PanelItemViewRow      : QStyle.PrimitiveElement = ... # 0x2d
+    PM_MDIMinimizedWidth     : QStyle.PixelMetric = ... # 0x2d
+    PM_MdiSubWindowMinimizedWidth: QStyle.PixelMetric = ... # 0x2d
+    SE_TabWidgetLayoutItem   : QStyle.SubElement = ... # 0x2d
+    SH_Menu_FillScreenWithScroll: QStyle.StyleHint = ... # 0x2d
+    SP_DialogApplyButton     : QStyle.StandardPixmap = ... # 0x2d
+    CE_ShapedFrame           : QStyle.ControlElement = ... # 0x2e
+    PE_PanelStatusBar        : QStyle.PrimitiveElement = ... # 0x2e
+    PM_HeaderMargin          : QStyle.PixelMetric = ... # 0x2e
+    SE_ItemViewItemDecoration: QStyle.SubElement = ... # 0x2e
+    SH_ToolTipLabel_Opacity  : QStyle.StyleHint = ... # 0x2e
+    SP_DialogResetButton     : QStyle.StandardPixmap = ... # 0x2e
+    PE_IndicatorTabClose     : QStyle.PrimitiveElement = ... # 0x2f
+    PM_HeaderMarkSize        : QStyle.PixelMetric = ... # 0x2f
+    SE_ItemViewItemText      : QStyle.SubElement = ... # 0x2f
+    SH_DrawMenuBarSeparator  : QStyle.StyleHint = ... # 0x2f
+    SP_DialogDiscardButton   : QStyle.StandardPixmap = ... # 0x2f
+    PE_PanelMenu             : QStyle.PrimitiveElement = ... # 0x30
+    PM_HeaderGripMargin      : QStyle.PixelMetric = ... # 0x30
+    SE_ItemViewItemFocusRect : QStyle.SubElement = ... # 0x30
+    SH_TitleBar_ModifyNotification: QStyle.StyleHint = ... # 0x30
+    SP_DialogYesButton       : QStyle.StandardPixmap = ... # 0x30
+    PE_IndicatorTabTearRight : QStyle.PrimitiveElement = ... # 0x31
+    PM_TabBarTabShiftHorizontal: QStyle.PixelMetric = ... # 0x31
+    SE_TabBarTabLeftButton   : QStyle.SubElement = ... # 0x31
+    SH_Button_FocusPolicy    : QStyle.StyleHint = ... # 0x31
+    SP_DialogNoButton        : QStyle.StandardPixmap = ... # 0x31
+    PM_TabBarTabShiftVertical: QStyle.PixelMetric = ... # 0x32
+    SE_TabBarTabRightButton  : QStyle.SubElement = ... # 0x32
+    SH_MessageBox_UseBorderForButtonSpacing: QStyle.StyleHint = ... # 0x32
+    SP_ArrowUp               : QStyle.StandardPixmap = ... # 0x32
+    PM_TabBarScrollButtonWidth: QStyle.PixelMetric = ... # 0x33
+    SE_TabBarTabText         : QStyle.SubElement = ... # 0x33
+    SH_TitleBar_AutoRaise    : QStyle.StyleHint = ... # 0x33
+    SP_ArrowDown             : QStyle.StandardPixmap = ... # 0x33
+    PM_ToolBarFrameWidth     : QStyle.PixelMetric = ... # 0x34
+    SE_ShapedFrameContents   : QStyle.SubElement = ... # 0x34
+    SH_ToolButton_PopupDelay : QStyle.StyleHint = ... # 0x34
+    SP_ArrowLeft             : QStyle.StandardPixmap = ... # 0x34
+    PM_ToolBarHandleExtent   : QStyle.PixelMetric = ... # 0x35
+    SE_ToolBarHandle         : QStyle.SubElement = ... # 0x35
+    SH_FocusFrame_Mask       : QStyle.StyleHint = ... # 0x35
+    SP_ArrowRight            : QStyle.StandardPixmap = ... # 0x35
+    PM_ToolBarItemSpacing    : QStyle.PixelMetric = ... # 0x36
+    SE_TabBarScrollLeftButton: QStyle.SubElement = ... # 0x36
+    SH_RubberBand_Mask       : QStyle.StyleHint = ... # 0x36
+    SP_ArrowBack             : QStyle.StandardPixmap = ... # 0x36
+    PM_ToolBarItemMargin     : QStyle.PixelMetric = ... # 0x37
+    SE_TabBarScrollRightButton: QStyle.SubElement = ... # 0x37
+    SH_WindowFrame_Mask      : QStyle.StyleHint = ... # 0x37
+    SP_ArrowForward          : QStyle.StandardPixmap = ... # 0x37
+    PM_ToolBarSeparatorExtent: QStyle.PixelMetric = ... # 0x38
+    SE_TabBarTearIndicatorRight: QStyle.SubElement = ... # 0x38
+    SH_SpinControls_DisableOnBounds: QStyle.StyleHint = ... # 0x38
+    SP_DirHomeIcon           : QStyle.StandardPixmap = ... # 0x38
+    PM_ToolBarExtensionExtent: QStyle.PixelMetric = ... # 0x39
+    SE_PushButtonBevel       : QStyle.SubElement = ... # 0x39
+    SH_Dial_BackgroundRole   : QStyle.StyleHint = ... # 0x39
+    SP_CommandLink           : QStyle.StandardPixmap = ... # 0x39
+    PM_SpinBoxSliderHeight   : QStyle.PixelMetric = ... # 0x3a
+    SH_ComboBox_LayoutDirection: QStyle.StyleHint = ... # 0x3a
+    SP_VistaShield           : QStyle.StandardPixmap = ... # 0x3a
+    PM_DefaultTopLevelMargin : QStyle.PixelMetric = ... # 0x3b
+    SH_ItemView_EllipsisLocation: QStyle.StyleHint = ... # 0x3b
+    SP_BrowserReload         : QStyle.StandardPixmap = ... # 0x3b
+    PM_DefaultChildMargin    : QStyle.PixelMetric = ... # 0x3c
+    SH_ItemView_ShowDecorationSelected: QStyle.StyleHint = ... # 0x3c
+    SP_BrowserStop           : QStyle.StandardPixmap = ... # 0x3c
+    PM_DefaultLayoutSpacing  : QStyle.PixelMetric = ... # 0x3d
+    SH_ItemView_ActivateItemOnSingleClick: QStyle.StyleHint = ... # 0x3d
+    SP_MediaPlay             : QStyle.StandardPixmap = ... # 0x3d
+    PM_ToolBarIconSize       : QStyle.PixelMetric = ... # 0x3e
+    SH_ScrollBar_ContextMenu : QStyle.StyleHint = ... # 0x3e
+    SP_MediaStop             : QStyle.StandardPixmap = ... # 0x3e
+    PM_ListViewIconSize      : QStyle.PixelMetric = ... # 0x3f
+    SH_ScrollBar_RollBetweenButtons: QStyle.StyleHint = ... # 0x3f
+    SP_MediaPause            : QStyle.StandardPixmap = ... # 0x3f
+    PM_IconViewIconSize      : QStyle.PixelMetric = ... # 0x40
+    SC_ScrollBarSlider       : QStyle.SubControl = ... # 0x40
+    SC_TitleBarUnshadeButton : QStyle.SubControl = ... # 0x40
+    SH_Slider_AbsoluteSetButtons: QStyle.StyleHint = ... # 0x40
+    SP_MediaSkipForward      : QStyle.StandardPixmap = ... # 0x40
+    State_DownArrow          : QStyle.StateFlag = ... # 0x40
+    PM_SmallIconSize         : QStyle.PixelMetric = ... # 0x41
+    SH_Slider_PageSetButtons : QStyle.StyleHint = ... # 0x41
+    SP_MediaSkipBackward     : QStyle.StandardPixmap = ... # 0x41
+    PM_LargeIconSize         : QStyle.PixelMetric = ... # 0x42
+    SH_Menu_KeyboardSearch   : QStyle.StyleHint = ... # 0x42
+    SP_MediaSeekForward      : QStyle.StandardPixmap = ... # 0x42
+    PM_FocusFrameVMargin     : QStyle.PixelMetric = ... # 0x43
+    SH_TabBar_ElideMode      : QStyle.StyleHint = ... # 0x43
+    SP_MediaSeekBackward     : QStyle.StandardPixmap = ... # 0x43
+    PM_FocusFrameHMargin     : QStyle.PixelMetric = ... # 0x44
+    SH_DialogButtonLayout    : QStyle.StyleHint = ... # 0x44
+    SP_MediaVolume           : QStyle.StandardPixmap = ... # 0x44
+    PM_ToolTipLabelFrameWidth: QStyle.PixelMetric = ... # 0x45
+    SH_ComboBox_PopupFrameStyle: QStyle.StyleHint = ... # 0x45
+    SP_MediaVolumeMuted      : QStyle.StandardPixmap = ... # 0x45
+    PM_CheckBoxLabelSpacing  : QStyle.PixelMetric = ... # 0x46
+    SH_MessageBox_TextInteractionFlags: QStyle.StyleHint = ... # 0x46
+    SP_LineEditClearButton   : QStyle.StandardPixmap = ... # 0x46
+    PM_TabBarIconSize        : QStyle.PixelMetric = ... # 0x47
+    SH_DialogButtonBox_ButtonsHaveIcons: QStyle.StyleHint = ... # 0x47
+    SP_DialogYesToAllButton  : QStyle.StandardPixmap = ... # 0x47
+    PM_SizeGripSize          : QStyle.PixelMetric = ... # 0x48
+    SH_SpellCheckUnderlineStyle: QStyle.StyleHint = ... # 0x48
+    SP_DialogNoToAllButton   : QStyle.StandardPixmap = ... # 0x48
+    PM_DockWidgetTitleMargin : QStyle.PixelMetric = ... # 0x49
+    SH_MessageBox_CenterButtons: QStyle.StyleHint = ... # 0x49
+    SP_DialogSaveAllButton   : QStyle.StandardPixmap = ... # 0x49
+    PM_MessageBoxIconSize    : QStyle.PixelMetric = ... # 0x4a
+    SH_Menu_SelectionWrap    : QStyle.StyleHint = ... # 0x4a
+    SP_DialogAbortButton     : QStyle.StandardPixmap = ... # 0x4a
+    PM_ButtonIconSize        : QStyle.PixelMetric = ... # 0x4b
+    SH_ItemView_MovementWithoutUpdatingSelection: QStyle.StyleHint = ... # 0x4b
+    SP_DialogRetryButton     : QStyle.StandardPixmap = ... # 0x4b
+    PM_DockWidgetTitleBarButtonMargin: QStyle.PixelMetric = ... # 0x4c
+    SH_ToolTip_Mask          : QStyle.StyleHint = ... # 0x4c
+    SP_DialogIgnoreButton    : QStyle.StandardPixmap = ... # 0x4c
+    PM_RadioButtonLabelSpacing: QStyle.PixelMetric = ... # 0x4d
+    SH_FocusFrame_AboveWidget: QStyle.StyleHint = ... # 0x4d
+    SP_RestoreDefaultsButton : QStyle.StandardPixmap = ... # 0x4d
+    PM_LayoutLeftMargin      : QStyle.PixelMetric = ... # 0x4e
+    SH_TextControl_FocusIndicatorTextCharFormat: QStyle.StyleHint = ... # 0x4e
+    PM_LayoutTopMargin       : QStyle.PixelMetric = ... # 0x4f
+    SH_WizardStyle           : QStyle.StyleHint = ... # 0x4f
+    PM_LayoutRightMargin     : QStyle.PixelMetric = ... # 0x50
+    SH_ItemView_ArrowKeysNavigateIntoChildren: QStyle.StyleHint = ... # 0x50
+    PM_LayoutBottomMargin    : QStyle.PixelMetric = ... # 0x51
+    SH_Menu_Mask             : QStyle.StyleHint = ... # 0x51
+    PM_LayoutHorizontalSpacing: QStyle.PixelMetric = ... # 0x52
+    SH_Menu_FlashTriggeredItem: QStyle.StyleHint = ... # 0x52
+    PM_LayoutVerticalSpacing : QStyle.PixelMetric = ... # 0x53
+    SH_Menu_FadeOutOnHide    : QStyle.StyleHint = ... # 0x53
+    PM_TabBar_ScrollButtonOverlap: QStyle.PixelMetric = ... # 0x54
+    SH_SpinBox_ClickAutoRepeatThreshold: QStyle.StyleHint = ... # 0x54
+    PM_TextCursorWidth       : QStyle.PixelMetric = ... # 0x55
+    SH_ItemView_PaintAlternatingRowColorsForEmptyArea: QStyle.StyleHint = ... # 0x55
+    PM_TabCloseIndicatorWidth: QStyle.PixelMetric = ... # 0x56
+    SH_FormLayoutWrapPolicy  : QStyle.StyleHint = ... # 0x56
+    PM_TabCloseIndicatorHeight: QStyle.PixelMetric = ... # 0x57
+    SH_TabWidget_DefaultTabPosition: QStyle.StyleHint = ... # 0x57
+    PM_ScrollView_ScrollBarSpacing: QStyle.PixelMetric = ... # 0x58
+    SH_ToolBar_Movable       : QStyle.StyleHint = ... # 0x58
+    PM_ScrollView_ScrollBarOverlap: QStyle.PixelMetric = ... # 0x59
+    SH_FormLayoutFieldGrowthPolicy: QStyle.StyleHint = ... # 0x59
+    PM_SubMenuOverlap        : QStyle.PixelMetric = ... # 0x5a
+    SH_FormLayoutFormAlignment: QStyle.StyleHint = ... # 0x5a
+    PM_TreeViewIndentation   : QStyle.PixelMetric = ... # 0x5b
+    SH_FormLayoutLabelAlignment: QStyle.StyleHint = ... # 0x5b
+    PM_HeaderDefaultSectionSizeHorizontal: QStyle.PixelMetric = ... # 0x5c
+    SH_ItemView_DrawDelegateFrame: QStyle.StyleHint = ... # 0x5c
+    PM_HeaderDefaultSectionSizeVertical: QStyle.PixelMetric = ... # 0x5d
+    SH_TabBar_CloseButtonPosition: QStyle.StyleHint = ... # 0x5d
+    PM_TitleBarButtonIconSize: QStyle.PixelMetric = ... # 0x5e
+    SH_DockWidget_ButtonsHaveFrame: QStyle.StyleHint = ... # 0x5e
+    PM_TitleBarButtonSize    : QStyle.PixelMetric = ... # 0x5f
+    SH_ToolButtonStyle       : QStyle.StyleHint = ... # 0x5f
+    SH_RequestSoftwareInputPanel: QStyle.StyleHint = ... # 0x60
+    SH_ScrollBar_Transient   : QStyle.StyleHint = ... # 0x61
+    SH_Menu_SupportsSections : QStyle.StyleHint = ... # 0x62
+    SH_ToolTip_WakeUpDelay   : QStyle.StyleHint = ... # 0x63
+    SH_ToolTip_FallAsleepDelay: QStyle.StyleHint = ... # 0x64
+    SH_Widget_Animate        : QStyle.StyleHint = ... # 0x65
+    SH_Splitter_OpaqueResize : QStyle.StyleHint = ... # 0x66
+    SH_ComboBox_UseNativePopup: QStyle.StyleHint = ... # 0x67
+    SH_LineEdit_PasswordMaskDelay: QStyle.StyleHint = ... # 0x68
+    SH_TabBar_ChangeCurrentDelay: QStyle.StyleHint = ... # 0x69
+    SH_Menu_SubMenuUniDirection: QStyle.StyleHint = ... # 0x6a
+    SH_Menu_SubMenuUniDirectionFailCount: QStyle.StyleHint = ... # 0x6b
+    SH_Menu_SubMenuSloppySelectOtherActions: QStyle.StyleHint = ... # 0x6c
+    SH_Menu_SubMenuSloppyCloseTimeout: QStyle.StyleHint = ... # 0x6d
+    SH_Menu_SubMenuResetWhenReenteringParent: QStyle.StyleHint = ... # 0x6e
+    SH_Menu_SubMenuDontStartSloppyOnLeave: QStyle.StyleHint = ... # 0x6f
+    SH_ItemView_ScrollMode   : QStyle.StyleHint = ... # 0x70
+    SH_TitleBar_ShowToolTipsOnButtons: QStyle.StyleHint = ... # 0x71
+    SH_Widget_Animation_Duration: QStyle.StyleHint = ... # 0x72
+    SH_ComboBox_AllowWheelScrolling: QStyle.StyleHint = ... # 0x73
+    SH_SpinBox_ButtonsInsideFrame: QStyle.StyleHint = ... # 0x74
+    SH_SpinBox_StepModifier  : QStyle.StyleHint = ... # 0x75
+    SC_ScrollBarGroove       : QStyle.SubControl = ... # 0x80
+    SC_TitleBarContextHelpButton: QStyle.SubControl = ... # 0x80
+    State_Horizontal         : QStyle.StateFlag = ... # 0x80
+    SC_TitleBarLabel         : QStyle.SubControl = ... # 0x100
+    State_HasFocus           : QStyle.StateFlag = ... # 0x100
+    State_Top                : QStyle.StateFlag = ... # 0x200
+    State_Bottom             : QStyle.StateFlag = ... # 0x400
+    State_FocusAtBorder      : QStyle.StateFlag = ... # 0x800
+    State_AutoRaise          : QStyle.StateFlag = ... # 0x1000
+    State_MouseOver          : QStyle.StateFlag = ... # 0x2000
+    State_UpArrow            : QStyle.StateFlag = ... # 0x4000
+    State_Selected           : QStyle.StateFlag = ... # 0x8000
+    State_Active             : QStyle.StateFlag = ... # 0x10000
+    State_Window             : QStyle.StateFlag = ... # 0x20000
+    State_Open               : QStyle.StateFlag = ... # 0x40000
+    State_Children           : QStyle.StateFlag = ... # 0x80000
+    State_Item               : QStyle.StateFlag = ... # 0x100000
+    State_Sibling            : QStyle.StateFlag = ... # 0x200000
+    State_Editing            : QStyle.StateFlag = ... # 0x400000
+    State_KeyboardFocusChange: QStyle.StateFlag = ... # 0x800000
+    State_ReadOnly           : QStyle.StateFlag = ... # 0x2000000
+    State_Small              : QStyle.StateFlag = ... # 0x4000000
+    State_Mini               : QStyle.StateFlag = ... # 0x8000000
+    PE_CustomBase            : QStyle.PrimitiveElement = ... # 0xf000000
 
     class ComplexControl(object):
         CC_CustomBase            : QStyle.ComplexControl = ... # -0x10000000
@@ -7965,11 +7965,11 @@ class QStyleFactory(Shiboken.Object):
 
 
 class QStyleHintReturn(Shiboken.Object):
-    Version                  : QStyleHintReturn = ... # 0x1
-    SH_Default               : QStyleHintReturn = ... # 0xf000
-    Type                     : QStyleHintReturn = ... # 0xf000
-    SH_Mask                  : QStyleHintReturn = ... # 0xf001
-    SH_Variant               : QStyleHintReturn = ... # 0xf002
+    Version                  : QStyleHintReturn.StyleOptionVersion = ... # 0x1
+    SH_Default               : QStyleHintReturn.HintReturnType = ... # 0xf000
+    Type                     : QStyleHintReturn.StyleOptionType = ... # 0xf000
+    SH_Mask                  : QStyleHintReturn.HintReturnType = ... # 0xf001
+    SH_Variant               : QStyleHintReturn.HintReturnType = ... # 0xf002
 
     class HintReturnType(object):
         SH_Default               : QStyleHintReturn.HintReturnType = ... # 0xf000
@@ -7986,8 +7986,8 @@ class QStyleHintReturn(Shiboken.Object):
 
 
 class QStyleHintReturnMask(PySide2.QtWidgets.QStyleHintReturn):
-    Version                  : QStyleHintReturnMask = ... # 0x1
-    Type                     : QStyleHintReturnMask = ... # 0xf001
+    Version                  : QStyleHintReturnMask.StyleOptionVersion = ... # 0x1
+    Type                     : QStyleHintReturnMask.StyleOptionType = ... # 0xf001
 
     class StyleOptionType(object):
         Type                     : QStyleHintReturnMask.StyleOptionType = ... # 0xf001
@@ -7999,8 +7999,8 @@ class QStyleHintReturnMask(PySide2.QtWidgets.QStyleHintReturn):
 
 
 class QStyleHintReturnVariant(PySide2.QtWidgets.QStyleHintReturn):
-    Version                  : QStyleHintReturnVariant = ... # 0x1
-    Type                     : QStyleHintReturnVariant = ... # 0xf002
+    Version                  : QStyleHintReturnVariant.StyleOptionVersion = ... # 0x1
+    Type                     : QStyleHintReturnVariant.StyleOptionType = ... # 0xf002
 
     class StyleOptionType(object):
         Type                     : QStyleHintReturnVariant.StyleOptionType = ... # 0xf002
@@ -8012,34 +8012,34 @@ class QStyleHintReturnVariant(PySide2.QtWidgets.QStyleHintReturn):
 
 
 class QStyleOption(Shiboken.Object):
-    SO_Default               : QStyleOption = ... # 0x0
-    Type                     : QStyleOption = ... # 0x0
-    SO_FocusRect             : QStyleOption = ... # 0x1
-    Version                  : QStyleOption = ... # 0x1
-    SO_Button                : QStyleOption = ... # 0x2
-    SO_Tab                   : QStyleOption = ... # 0x3
-    SO_MenuItem              : QStyleOption = ... # 0x4
-    SO_Frame                 : QStyleOption = ... # 0x5
-    SO_ProgressBar           : QStyleOption = ... # 0x6
-    SO_ToolBox               : QStyleOption = ... # 0x7
-    SO_Header                : QStyleOption = ... # 0x8
-    SO_DockWidget            : QStyleOption = ... # 0x9
-    SO_ViewItem              : QStyleOption = ... # 0xa
-    SO_TabWidgetFrame        : QStyleOption = ... # 0xb
-    SO_TabBarBase            : QStyleOption = ... # 0xc
-    SO_RubberBand            : QStyleOption = ... # 0xd
-    SO_ToolBar               : QStyleOption = ... # 0xe
-    SO_GraphicsItem          : QStyleOption = ... # 0xf
-    SO_CustomBase            : QStyleOption = ... # 0xf00
-    SO_Complex               : QStyleOption = ... # 0xf0000
-    SO_Slider                : QStyleOption = ... # 0xf0001
-    SO_SpinBox               : QStyleOption = ... # 0xf0002
-    SO_ToolButton            : QStyleOption = ... # 0xf0003
-    SO_ComboBox              : QStyleOption = ... # 0xf0004
-    SO_TitleBar              : QStyleOption = ... # 0xf0005
-    SO_GroupBox              : QStyleOption = ... # 0xf0006
-    SO_SizeGrip              : QStyleOption = ... # 0xf0007
-    SO_ComplexCustomBase     : QStyleOption = ... # 0xf000000
+    SO_Default               : QStyleOption.OptionType = ... # 0x0
+    Type                     : QStyleOption.StyleOptionType = ... # 0x0
+    SO_FocusRect             : QStyleOption.OptionType = ... # 0x1
+    Version                  : QStyleOption.StyleOptionVersion = ... # 0x1
+    SO_Button                : QStyleOption.OptionType = ... # 0x2
+    SO_Tab                   : QStyleOption.OptionType = ... # 0x3
+    SO_MenuItem              : QStyleOption.OptionType = ... # 0x4
+    SO_Frame                 : QStyleOption.OptionType = ... # 0x5
+    SO_ProgressBar           : QStyleOption.OptionType = ... # 0x6
+    SO_ToolBox               : QStyleOption.OptionType = ... # 0x7
+    SO_Header                : QStyleOption.OptionType = ... # 0x8
+    SO_DockWidget            : QStyleOption.OptionType = ... # 0x9
+    SO_ViewItem              : QStyleOption.OptionType = ... # 0xa
+    SO_TabWidgetFrame        : QStyleOption.OptionType = ... # 0xb
+    SO_TabBarBase            : QStyleOption.OptionType = ... # 0xc
+    SO_RubberBand            : QStyleOption.OptionType = ... # 0xd
+    SO_ToolBar               : QStyleOption.OptionType = ... # 0xe
+    SO_GraphicsItem          : QStyleOption.OptionType = ... # 0xf
+    SO_CustomBase            : QStyleOption.OptionType = ... # 0xf00
+    SO_Complex               : QStyleOption.OptionType = ... # 0xf0000
+    SO_Slider                : QStyleOption.OptionType = ... # 0xf0001
+    SO_SpinBox               : QStyleOption.OptionType = ... # 0xf0002
+    SO_ToolButton            : QStyleOption.OptionType = ... # 0xf0003
+    SO_ComboBox              : QStyleOption.OptionType = ... # 0xf0004
+    SO_TitleBar              : QStyleOption.OptionType = ... # 0xf0005
+    SO_GroupBox              : QStyleOption.OptionType = ... # 0xf0006
+    SO_SizeGrip              : QStyleOption.OptionType = ... # 0xf0007
+    SO_ComplexCustomBase     : QStyleOption.OptionType = ... # 0xf000000
 
     class OptionType(object):
         SO_Default               : QStyleOption.OptionType = ... # 0x0
@@ -8085,14 +8085,14 @@ class QStyleOption(Shiboken.Object):
 
 
 class QStyleOptionButton(PySide2.QtWidgets.QStyleOption):
-    None_                    : QStyleOptionButton = ... # 0x0
-    Flat                     : QStyleOptionButton = ... # 0x1
-    Version                  : QStyleOptionButton = ... # 0x1
-    HasMenu                  : QStyleOptionButton = ... # 0x2
-    Type                     : QStyleOptionButton = ... # 0x2
-    DefaultButton            : QStyleOptionButton = ... # 0x4
-    AutoDefaultButton        : QStyleOptionButton = ... # 0x8
-    CommandLinkButton        : QStyleOptionButton = ... # 0x10
+    None_                    : QStyleOptionButton.ButtonFeature = ... # 0x0
+    Flat                     : QStyleOptionButton.ButtonFeature = ... # 0x1
+    Version                  : QStyleOptionButton.StyleOptionVersion = ... # 0x1
+    HasMenu                  : QStyleOptionButton.ButtonFeature = ... # 0x2
+    Type                     : QStyleOptionButton.StyleOptionType = ... # 0x2
+    DefaultButton            : QStyleOptionButton.ButtonFeature = ... # 0x4
+    AutoDefaultButton        : QStyleOptionButton.ButtonFeature = ... # 0x8
+    CommandLinkButton        : QStyleOptionButton.ButtonFeature = ... # 0x10
 
     class ButtonFeature(object):
         None_                    : QStyleOptionButton.ButtonFeature = ... # 0x0
@@ -8119,8 +8119,8 @@ class QStyleOptionButton(PySide2.QtWidgets.QStyleOption):
 
 
 class QStyleOptionComboBox(PySide2.QtWidgets.QStyleOptionComplex):
-    Version                  : QStyleOptionComboBox = ... # 0x1
-    Type                     : QStyleOptionComboBox = ... # 0xf0004
+    Version                  : QStyleOptionComboBox.StyleOptionVersion = ... # 0x1
+    Type                     : QStyleOptionComboBox.StyleOptionType = ... # 0xf0004
 
     class StyleOptionType(object):
         Type                     : QStyleOptionComboBox.StyleOptionType = ... # 0xf0004
@@ -8137,8 +8137,8 @@ class QStyleOptionComboBox(PySide2.QtWidgets.QStyleOptionComplex):
 
 
 class QStyleOptionComplex(PySide2.QtWidgets.QStyleOption):
-    Version                  : QStyleOptionComplex = ... # 0x1
-    Type                     : QStyleOptionComplex = ... # 0xf0000
+    Version                  : QStyleOptionComplex.StyleOptionVersion = ... # 0x1
+    Type                     : QStyleOptionComplex.StyleOptionType = ... # 0xf0000
 
     class StyleOptionType(object):
         Type                     : QStyleOptionComplex.StyleOptionType = ... # 0xf0000
@@ -8153,8 +8153,8 @@ class QStyleOptionComplex(PySide2.QtWidgets.QStyleOption):
 
 
 class QStyleOptionDockWidget(PySide2.QtWidgets.QStyleOption):
-    Version                  : QStyleOptionDockWidget = ... # 0x2
-    Type                     : QStyleOptionDockWidget = ... # 0x9
+    Version                  : QStyleOptionDockWidget.StyleOptionVersion = ... # 0x2
+    Type                     : QStyleOptionDockWidget.StyleOptionType = ... # 0x9
 
     class StyleOptionType(object):
         Type                     : QStyleOptionDockWidget.StyleOptionType = ... # 0x9
@@ -8171,8 +8171,8 @@ class QStyleOptionDockWidget(PySide2.QtWidgets.QStyleOption):
 
 
 class QStyleOptionFocusRect(PySide2.QtWidgets.QStyleOption):
-    Type                     : QStyleOptionFocusRect = ... # 0x1
-    Version                  : QStyleOptionFocusRect = ... # 0x1
+    Type                     : QStyleOptionFocusRect.StyleOptionType = ... # 0x1
+    Version                  : QStyleOptionFocusRect.StyleOptionVersion = ... # 0x1
 
     class StyleOptionType(object):
         Type                     : QStyleOptionFocusRect.StyleOptionType = ... # 0x1
@@ -8189,11 +8189,11 @@ class QStyleOptionFocusRect(PySide2.QtWidgets.QStyleOption):
 
 
 class QStyleOptionFrame(PySide2.QtWidgets.QStyleOption):
-    None_                    : QStyleOptionFrame = ... # 0x0
-    Flat                     : QStyleOptionFrame = ... # 0x1
-    Rounded                  : QStyleOptionFrame = ... # 0x2
-    Version                  : QStyleOptionFrame = ... # 0x3
-    Type                     : QStyleOptionFrame = ... # 0x5
+    None_                    : QStyleOptionFrame.FrameFeature = ... # 0x0
+    Flat                     : QStyleOptionFrame.FrameFeature = ... # 0x1
+    Rounded                  : QStyleOptionFrame.FrameFeature = ... # 0x2
+    Version                  : QStyleOptionFrame.StyleOptionVersion = ... # 0x3
+    Type                     : QStyleOptionFrame.StyleOptionType = ... # 0x5
 
     class FrameFeature(object):
         None_                    : QStyleOptionFrame.FrameFeature = ... # 0x0
@@ -8217,8 +8217,8 @@ class QStyleOptionFrame(PySide2.QtWidgets.QStyleOption):
 
 
 class QStyleOptionGraphicsItem(PySide2.QtWidgets.QStyleOption):
-    Version                  : QStyleOptionGraphicsItem = ... # 0x1
-    Type                     : QStyleOptionGraphicsItem = ... # 0xf
+    Version                  : QStyleOptionGraphicsItem.StyleOptionVersion = ... # 0x1
+    Type                     : QStyleOptionGraphicsItem.StyleOptionType = ... # 0xf
 
     class StyleOptionType(object):
         Type                     : QStyleOptionGraphicsItem.StyleOptionType = ... # 0xf
@@ -8238,8 +8238,8 @@ class QStyleOptionGraphicsItem(PySide2.QtWidgets.QStyleOption):
 
 
 class QStyleOptionGroupBox(PySide2.QtWidgets.QStyleOptionComplex):
-    Version                  : QStyleOptionGroupBox = ... # 0x1
-    Type                     : QStyleOptionGroupBox = ... # 0xf0006
+    Version                  : QStyleOptionGroupBox.StyleOptionVersion = ... # 0x1
+    Type                     : QStyleOptionGroupBox.StyleOptionType = ... # 0xf0006
 
     class StyleOptionType(object):
         Type                     : QStyleOptionGroupBox.StyleOptionType = ... # 0xf0006
@@ -8256,19 +8256,19 @@ class QStyleOptionGroupBox(PySide2.QtWidgets.QStyleOptionComplex):
 
 
 class QStyleOptionHeader(PySide2.QtWidgets.QStyleOption):
-    Beginning                : QStyleOptionHeader = ... # 0x0
-    None_                    : QStyleOptionHeader = ... # 0x0
-    NotAdjacent              : QStyleOptionHeader = ... # 0x0
-    Middle                   : QStyleOptionHeader = ... # 0x1
-    NextIsSelected           : QStyleOptionHeader = ... # 0x1
-    SortUp                   : QStyleOptionHeader = ... # 0x1
-    Version                  : QStyleOptionHeader = ... # 0x1
-    End                      : QStyleOptionHeader = ... # 0x2
-    PreviousIsSelected       : QStyleOptionHeader = ... # 0x2
-    SortDown                 : QStyleOptionHeader = ... # 0x2
-    NextAndPreviousAreSelected: QStyleOptionHeader = ... # 0x3
-    OnlyOneSection           : QStyleOptionHeader = ... # 0x3
-    Type                     : QStyleOptionHeader = ... # 0x8
+    Beginning                : QStyleOptionHeader.SectionPosition = ... # 0x0
+    None_                    : QStyleOptionHeader.SortIndicator = ... # 0x0
+    NotAdjacent              : QStyleOptionHeader.SelectedPosition = ... # 0x0
+    Middle                   : QStyleOptionHeader.SectionPosition = ... # 0x1
+    NextIsSelected           : QStyleOptionHeader.SelectedPosition = ... # 0x1
+    SortUp                   : QStyleOptionHeader.SortIndicator = ... # 0x1
+    Version                  : QStyleOptionHeader.StyleOptionVersion = ... # 0x1
+    End                      : QStyleOptionHeader.SectionPosition = ... # 0x2
+    PreviousIsSelected       : QStyleOptionHeader.SelectedPosition = ... # 0x2
+    SortDown                 : QStyleOptionHeader.SortIndicator = ... # 0x2
+    NextAndPreviousAreSelected: QStyleOptionHeader.SelectedPosition = ... # 0x3
+    OnlyOneSection           : QStyleOptionHeader.SectionPosition = ... # 0x3
+    Type                     : QStyleOptionHeader.StyleOptionType = ... # 0x8
 
     class SectionPosition(object):
         Beginning                : QStyleOptionHeader.SectionPosition = ... # 0x0
@@ -8302,19 +8302,19 @@ class QStyleOptionHeader(PySide2.QtWidgets.QStyleOption):
 
 
 class QStyleOptionMenuItem(PySide2.QtWidgets.QStyleOption):
-    Normal                   : QStyleOptionMenuItem = ... # 0x0
-    NotCheckable             : QStyleOptionMenuItem = ... # 0x0
-    DefaultItem              : QStyleOptionMenuItem = ... # 0x1
-    Exclusive                : QStyleOptionMenuItem = ... # 0x1
-    Version                  : QStyleOptionMenuItem = ... # 0x1
-    NonExclusive             : QStyleOptionMenuItem = ... # 0x2
-    Separator                : QStyleOptionMenuItem = ... # 0x2
-    SubMenu                  : QStyleOptionMenuItem = ... # 0x3
-    Scroller                 : QStyleOptionMenuItem = ... # 0x4
-    Type                     : QStyleOptionMenuItem = ... # 0x4
-    TearOff                  : QStyleOptionMenuItem = ... # 0x5
-    Margin                   : QStyleOptionMenuItem = ... # 0x6
-    EmptyArea                : QStyleOptionMenuItem = ... # 0x7
+    Normal                   : QStyleOptionMenuItem.MenuItemType = ... # 0x0
+    NotCheckable             : QStyleOptionMenuItem.CheckType = ... # 0x0
+    DefaultItem              : QStyleOptionMenuItem.MenuItemType = ... # 0x1
+    Exclusive                : QStyleOptionMenuItem.CheckType = ... # 0x1
+    Version                  : QStyleOptionMenuItem.StyleOptionVersion = ... # 0x1
+    NonExclusive             : QStyleOptionMenuItem.CheckType = ... # 0x2
+    Separator                : QStyleOptionMenuItem.MenuItemType = ... # 0x2
+    SubMenu                  : QStyleOptionMenuItem.MenuItemType = ... # 0x3
+    Scroller                 : QStyleOptionMenuItem.MenuItemType = ... # 0x4
+    Type                     : QStyleOptionMenuItem.StyleOptionType = ... # 0x4
+    TearOff                  : QStyleOptionMenuItem.MenuItemType = ... # 0x5
+    Margin                   : QStyleOptionMenuItem.MenuItemType = ... # 0x6
+    EmptyArea                : QStyleOptionMenuItem.MenuItemType = ... # 0x7
 
     class CheckType(object):
         NotCheckable             : QStyleOptionMenuItem.CheckType = ... # 0x0
@@ -8346,8 +8346,8 @@ class QStyleOptionMenuItem(PySide2.QtWidgets.QStyleOption):
 
 
 class QStyleOptionProgressBar(PySide2.QtWidgets.QStyleOption):
-    Version                  : QStyleOptionProgressBar = ... # 0x2
-    Type                     : QStyleOptionProgressBar = ... # 0x6
+    Version                  : QStyleOptionProgressBar.StyleOptionVersion = ... # 0x2
+    Type                     : QStyleOptionProgressBar.StyleOptionType = ... # 0x6
 
     class StyleOptionType(object):
         Type                     : QStyleOptionProgressBar.StyleOptionType = ... # 0x6
@@ -8364,8 +8364,8 @@ class QStyleOptionProgressBar(PySide2.QtWidgets.QStyleOption):
 
 
 class QStyleOptionRubberBand(PySide2.QtWidgets.QStyleOption):
-    Version                  : QStyleOptionRubberBand = ... # 0x1
-    Type                     : QStyleOptionRubberBand = ... # 0xd
+    Version                  : QStyleOptionRubberBand.StyleOptionVersion = ... # 0x1
+    Type                     : QStyleOptionRubberBand.StyleOptionType = ... # 0xd
 
     class StyleOptionType(object):
         Type                     : QStyleOptionRubberBand.StyleOptionType = ... # 0xd
@@ -8382,8 +8382,8 @@ class QStyleOptionRubberBand(PySide2.QtWidgets.QStyleOption):
 
 
 class QStyleOptionSizeGrip(PySide2.QtWidgets.QStyleOptionComplex):
-    Version                  : QStyleOptionSizeGrip = ... # 0x1
-    Type                     : QStyleOptionSizeGrip = ... # 0xf0007
+    Version                  : QStyleOptionSizeGrip.StyleOptionVersion = ... # 0x1
+    Type                     : QStyleOptionSizeGrip.StyleOptionType = ... # 0xf0007
 
     class StyleOptionType(object):
         Type                     : QStyleOptionSizeGrip.StyleOptionType = ... # 0xf0007
@@ -8400,8 +8400,8 @@ class QStyleOptionSizeGrip(PySide2.QtWidgets.QStyleOptionComplex):
 
 
 class QStyleOptionSlider(PySide2.QtWidgets.QStyleOptionComplex):
-    Version                  : QStyleOptionSlider = ... # 0x1
-    Type                     : QStyleOptionSlider = ... # 0xf0001
+    Version                  : QStyleOptionSlider.StyleOptionVersion = ... # 0x1
+    Type                     : QStyleOptionSlider.StyleOptionType = ... # 0xf0001
 
     class StyleOptionType(object):
         Type                     : QStyleOptionSlider.StyleOptionType = ... # 0xf0001
@@ -8418,8 +8418,8 @@ class QStyleOptionSlider(PySide2.QtWidgets.QStyleOptionComplex):
 
 
 class QStyleOptionSpinBox(PySide2.QtWidgets.QStyleOptionComplex):
-    Version                  : QStyleOptionSpinBox = ... # 0x1
-    Type                     : QStyleOptionSpinBox = ... # 0xf0002
+    Version                  : QStyleOptionSpinBox.StyleOptionVersion = ... # 0x1
+    Type                     : QStyleOptionSpinBox.StyleOptionType = ... # 0xf0002
 
     class StyleOptionType(object):
         Type                     : QStyleOptionSpinBox.StyleOptionType = ... # 0xf0002
@@ -8436,20 +8436,20 @@ class QStyleOptionSpinBox(PySide2.QtWidgets.QStyleOptionComplex):
 
 
 class QStyleOptionTab(PySide2.QtWidgets.QStyleOption):
-    Beginning                : QStyleOptionTab = ... # 0x0
-    NoCornerWidgets          : QStyleOptionTab = ... # 0x0
-    None_                    : QStyleOptionTab = ... # 0x0
-    NotAdjacent              : QStyleOptionTab = ... # 0x0
-    HasFrame                 : QStyleOptionTab = ... # 0x1
-    LeftCornerWidget         : QStyleOptionTab = ... # 0x1
-    Middle                   : QStyleOptionTab = ... # 0x1
-    NextIsSelected           : QStyleOptionTab = ... # 0x1
-    End                      : QStyleOptionTab = ... # 0x2
-    PreviousIsSelected       : QStyleOptionTab = ... # 0x2
-    RightCornerWidget        : QStyleOptionTab = ... # 0x2
-    OnlyOneTab               : QStyleOptionTab = ... # 0x3
-    Type                     : QStyleOptionTab = ... # 0x3
-    Version                  : QStyleOptionTab = ... # 0x3
+    Beginning                : QStyleOptionTab.TabPosition = ... # 0x0
+    NoCornerWidgets          : QStyleOptionTab.CornerWidget = ... # 0x0
+    None_                    : QStyleOptionTab.TabFeature = ... # 0x0
+    NotAdjacent              : QStyleOptionTab.SelectedPosition = ... # 0x0
+    HasFrame                 : QStyleOptionTab.TabFeature = ... # 0x1
+    LeftCornerWidget         : QStyleOptionTab.CornerWidget = ... # 0x1
+    Middle                   : QStyleOptionTab.TabPosition = ... # 0x1
+    NextIsSelected           : QStyleOptionTab.SelectedPosition = ... # 0x1
+    End                      : QStyleOptionTab.TabPosition = ... # 0x2
+    PreviousIsSelected       : QStyleOptionTab.SelectedPosition = ... # 0x2
+    RightCornerWidget        : QStyleOptionTab.CornerWidget = ... # 0x2
+    OnlyOneTab               : QStyleOptionTab.TabPosition = ... # 0x3
+    Type                     : QStyleOptionTab.StyleOptionType = ... # 0x3
+    Version                  : QStyleOptionTab.StyleOptionVersion = ... # 0x3
 
     class CornerWidget(object):
         NoCornerWidgets          : QStyleOptionTab.CornerWidget = ... # 0x0
@@ -8490,8 +8490,8 @@ class QStyleOptionTab(PySide2.QtWidgets.QStyleOption):
 
 
 class QStyleOptionTabBarBase(PySide2.QtWidgets.QStyleOption):
-    Version                  : QStyleOptionTabBarBase = ... # 0x2
-    Type                     : QStyleOptionTabBarBase = ... # 0xc
+    Version                  : QStyleOptionTabBarBase.StyleOptionVersion = ... # 0x2
+    Type                     : QStyleOptionTabBarBase.StyleOptionType = ... # 0xc
 
     class StyleOptionType(object):
         Type                     : QStyleOptionTabBarBase.StyleOptionType = ... # 0xc
@@ -8508,8 +8508,8 @@ class QStyleOptionTabBarBase(PySide2.QtWidgets.QStyleOption):
 
 
 class QStyleOptionTabWidgetFrame(PySide2.QtWidgets.QStyleOption):
-    Version                  : QStyleOptionTabWidgetFrame = ... # 0x2
-    Type                     : QStyleOptionTabWidgetFrame = ... # 0xb
+    Version                  : QStyleOptionTabWidgetFrame.StyleOptionVersion = ... # 0x2
+    Type                     : QStyleOptionTabWidgetFrame.StyleOptionType = ... # 0xb
 
     class StyleOptionType(object):
         Type                     : QStyleOptionTabWidgetFrame.StyleOptionType = ... # 0xb
@@ -8526,8 +8526,8 @@ class QStyleOptionTabWidgetFrame(PySide2.QtWidgets.QStyleOption):
 
 
 class QStyleOptionTitleBar(PySide2.QtWidgets.QStyleOptionComplex):
-    Version                  : QStyleOptionTitleBar = ... # 0x1
-    Type                     : QStyleOptionTitleBar = ... # 0xf0005
+    Version                  : QStyleOptionTitleBar.StyleOptionVersion = ... # 0x1
+    Type                     : QStyleOptionTitleBar.StyleOptionType = ... # 0xf0005
 
     class StyleOptionType(object):
         Type                     : QStyleOptionTitleBar.StyleOptionType = ... # 0xf0005
@@ -8544,14 +8544,14 @@ class QStyleOptionTitleBar(PySide2.QtWidgets.QStyleOptionComplex):
 
 
 class QStyleOptionToolBar(PySide2.QtWidgets.QStyleOption):
-    Beginning                : QStyleOptionToolBar = ... # 0x0
-    None_                    : QStyleOptionToolBar = ... # 0x0
-    Middle                   : QStyleOptionToolBar = ... # 0x1
-    Movable                  : QStyleOptionToolBar = ... # 0x1
-    Version                  : QStyleOptionToolBar = ... # 0x1
-    End                      : QStyleOptionToolBar = ... # 0x2
-    OnlyOne                  : QStyleOptionToolBar = ... # 0x3
-    Type                     : QStyleOptionToolBar = ... # 0xe
+    Beginning                : QStyleOptionToolBar.ToolBarPosition = ... # 0x0
+    None_                    : QStyleOptionToolBar.ToolBarFeature = ... # 0x0
+    Middle                   : QStyleOptionToolBar.ToolBarPosition = ... # 0x1
+    Movable                  : QStyleOptionToolBar.ToolBarFeature = ... # 0x1
+    Version                  : QStyleOptionToolBar.StyleOptionVersion = ... # 0x1
+    End                      : QStyleOptionToolBar.ToolBarPosition = ... # 0x2
+    OnlyOne                  : QStyleOptionToolBar.ToolBarPosition = ... # 0x3
+    Type                     : QStyleOptionToolBar.StyleOptionType = ... # 0xe
 
     class StyleOptionType(object):
         Type                     : QStyleOptionToolBar.StyleOptionType = ... # 0xe
@@ -8580,15 +8580,15 @@ class QStyleOptionToolBar(PySide2.QtWidgets.QStyleOption):
 
 
 class QStyleOptionToolBox(PySide2.QtWidgets.QStyleOption):
-    Beginning                : QStyleOptionToolBox = ... # 0x0
-    NotAdjacent              : QStyleOptionToolBox = ... # 0x0
-    Middle                   : QStyleOptionToolBox = ... # 0x1
-    NextIsSelected           : QStyleOptionToolBox = ... # 0x1
-    End                      : QStyleOptionToolBox = ... # 0x2
-    PreviousIsSelected       : QStyleOptionToolBox = ... # 0x2
-    Version                  : QStyleOptionToolBox = ... # 0x2
-    OnlyOneTab               : QStyleOptionToolBox = ... # 0x3
-    Type                     : QStyleOptionToolBox = ... # 0x7
+    Beginning                : QStyleOptionToolBox.TabPosition = ... # 0x0
+    NotAdjacent              : QStyleOptionToolBox.SelectedPosition = ... # 0x0
+    Middle                   : QStyleOptionToolBox.TabPosition = ... # 0x1
+    NextIsSelected           : QStyleOptionToolBox.SelectedPosition = ... # 0x1
+    End                      : QStyleOptionToolBox.TabPosition = ... # 0x2
+    PreviousIsSelected       : QStyleOptionToolBox.SelectedPosition = ... # 0x2
+    Version                  : QStyleOptionToolBox.StyleOptionVersion = ... # 0x2
+    OnlyOneTab               : QStyleOptionToolBox.TabPosition = ... # 0x3
+    Type                     : QStyleOptionToolBox.StyleOptionType = ... # 0x7
 
     class SelectedPosition(object):
         NotAdjacent              : QStyleOptionToolBox.SelectedPosition = ... # 0x0
@@ -8616,14 +8616,14 @@ class QStyleOptionToolBox(PySide2.QtWidgets.QStyleOption):
 
 
 class QStyleOptionToolButton(PySide2.QtWidgets.QStyleOptionComplex):
-    None_                    : QStyleOptionToolButton = ... # 0x0
-    Arrow                    : QStyleOptionToolButton = ... # 0x1
-    Version                  : QStyleOptionToolButton = ... # 0x1
-    Menu                     : QStyleOptionToolButton = ... # 0x4
-    MenuButtonPopup          : QStyleOptionToolButton = ... # 0x4
-    PopupDelay               : QStyleOptionToolButton = ... # 0x8
-    HasMenu                  : QStyleOptionToolButton = ... # 0x10
-    Type                     : QStyleOptionToolButton = ... # 0xf0003
+    None_                    : QStyleOptionToolButton.ToolButtonFeature = ... # 0x0
+    Arrow                    : QStyleOptionToolButton.ToolButtonFeature = ... # 0x1
+    Version                  : QStyleOptionToolButton.StyleOptionVersion = ... # 0x1
+    Menu                     : QStyleOptionToolButton.ToolButtonFeature = ... # 0x4
+    MenuButtonPopup          : QStyleOptionToolButton.ToolButtonFeature = ... # 0x4
+    PopupDelay               : QStyleOptionToolButton.ToolButtonFeature = ... # 0x8
+    HasMenu                  : QStyleOptionToolButton.ToolButtonFeature = ... # 0x10
+    Type                     : QStyleOptionToolButton.StyleOptionType = ... # 0xf0003
 
     class StyleOptionType(object):
         Type                     : QStyleOptionToolButton.StyleOptionType = ... # 0xf0003
@@ -8650,23 +8650,23 @@ class QStyleOptionToolButton(PySide2.QtWidgets.QStyleOptionComplex):
 
 
 class QStyleOptionViewItem(PySide2.QtWidgets.QStyleOption):
-    Invalid                  : QStyleOptionViewItem = ... # 0x0
-    Left                     : QStyleOptionViewItem = ... # 0x0
-    None_                    : QStyleOptionViewItem = ... # 0x0
-    Beginning                : QStyleOptionViewItem = ... # 0x1
-    Right                    : QStyleOptionViewItem = ... # 0x1
-    WrapText                 : QStyleOptionViewItem = ... # 0x1
-    Alternate                : QStyleOptionViewItem = ... # 0x2
-    Middle                   : QStyleOptionViewItem = ... # 0x2
-    Top                      : QStyleOptionViewItem = ... # 0x2
-    Bottom                   : QStyleOptionViewItem = ... # 0x3
-    End                      : QStyleOptionViewItem = ... # 0x3
-    HasCheckIndicator        : QStyleOptionViewItem = ... # 0x4
-    OnlyOne                  : QStyleOptionViewItem = ... # 0x4
-    Version                  : QStyleOptionViewItem = ... # 0x4
-    HasDisplay               : QStyleOptionViewItem = ... # 0x8
-    Type                     : QStyleOptionViewItem = ... # 0xa
-    HasDecoration            : QStyleOptionViewItem = ... # 0x10
+    Invalid                  : QStyleOptionViewItem.ViewItemPosition = ... # 0x0
+    Left                     : QStyleOptionViewItem.Position = ... # 0x0
+    None_                    : QStyleOptionViewItem.ViewItemFeature = ... # 0x0
+    Beginning                : QStyleOptionViewItem.ViewItemPosition = ... # 0x1
+    Right                    : QStyleOptionViewItem.Position = ... # 0x1
+    WrapText                 : QStyleOptionViewItem.ViewItemFeature = ... # 0x1
+    Alternate                : QStyleOptionViewItem.ViewItemFeature = ... # 0x2
+    Middle                   : QStyleOptionViewItem.ViewItemPosition = ... # 0x2
+    Top                      : QStyleOptionViewItem.Position = ... # 0x2
+    Bottom                   : QStyleOptionViewItem.Position = ... # 0x3
+    End                      : QStyleOptionViewItem.ViewItemPosition = ... # 0x3
+    HasCheckIndicator        : QStyleOptionViewItem.ViewItemFeature = ... # 0x4
+    OnlyOne                  : QStyleOptionViewItem.ViewItemPosition = ... # 0x4
+    Version                  : QStyleOptionViewItem.StyleOptionVersion = ... # 0x4
+    HasDisplay               : QStyleOptionViewItem.ViewItemFeature = ... # 0x8
+    Type                     : QStyleOptionViewItem.StyleOptionType = ... # 0xa
+    HasDecoration            : QStyleOptionViewItem.ViewItemFeature = ... # 0x10
 
     class Position(object):
         Left                     : QStyleOptionViewItem.Position = ... # 0x0
@@ -8750,11 +8750,11 @@ class QStyledItemDelegate(PySide2.QtWidgets.QAbstractItemDelegate):
 
 
 class QSwipeGesture(PySide2.QtWidgets.QGesture):
-    NoDirection              : QSwipeGesture = ... # 0x0
-    Left                     : QSwipeGesture = ... # 0x1
-    Right                    : QSwipeGesture = ... # 0x2
-    Up                       : QSwipeGesture = ... # 0x3
-    Down                     : QSwipeGesture = ... # 0x4
+    NoDirection              : QSwipeGesture.SwipeDirection = ... # 0x0
+    Left                     : QSwipeGesture.SwipeDirection = ... # 0x1
+    Right                    : QSwipeGesture.SwipeDirection = ... # 0x2
+    Up                       : QSwipeGesture.SwipeDirection = ... # 0x3
+    Down                     : QSwipeGesture.SwipeDirection = ... # 0x4
 
     class SwipeDirection(object):
         NoDirection              : QSwipeGesture.SwipeDirection = ... # 0x0
@@ -8772,15 +8772,15 @@ class QSwipeGesture(PySide2.QtWidgets.QGesture):
 
 
 class QSystemTrayIcon(PySide2.QtCore.QObject):
-    NoIcon                   : QSystemTrayIcon = ... # 0x0
-    Unknown                  : QSystemTrayIcon = ... # 0x0
-    Context                  : QSystemTrayIcon = ... # 0x1
-    Information              : QSystemTrayIcon = ... # 0x1
-    DoubleClick              : QSystemTrayIcon = ... # 0x2
-    Warning                  : QSystemTrayIcon = ... # 0x2
-    Critical                 : QSystemTrayIcon = ... # 0x3
-    Trigger                  : QSystemTrayIcon = ... # 0x3
-    MiddleClick              : QSystemTrayIcon = ... # 0x4
+    NoIcon                   : QSystemTrayIcon.MessageIcon = ... # 0x0
+    Unknown                  : QSystemTrayIcon.ActivationReason = ... # 0x0
+    Context                  : QSystemTrayIcon.ActivationReason = ... # 0x1
+    Information              : QSystemTrayIcon.MessageIcon = ... # 0x1
+    DoubleClick              : QSystemTrayIcon.ActivationReason = ... # 0x2
+    Warning                  : QSystemTrayIcon.MessageIcon = ... # 0x2
+    Critical                 : QSystemTrayIcon.MessageIcon = ... # 0x3
+    Trigger                  : QSystemTrayIcon.ActivationReason = ... # 0x3
+    MiddleClick              : QSystemTrayIcon.ActivationReason = ... # 0x4
 
     class ActivationReason(object):
         Unknown                  : QSystemTrayIcon.ActivationReason = ... # 0x0
@@ -8823,19 +8823,19 @@ class QSystemTrayIcon(PySide2.QtCore.QObject):
 
 
 class QTabBar(PySide2.QtWidgets.QWidget):
-    LeftSide                 : QTabBar = ... # 0x0
-    RoundedNorth             : QTabBar = ... # 0x0
-    SelectLeftTab            : QTabBar = ... # 0x0
-    RightSide                : QTabBar = ... # 0x1
-    RoundedSouth             : QTabBar = ... # 0x1
-    SelectRightTab           : QTabBar = ... # 0x1
-    RoundedWest              : QTabBar = ... # 0x2
-    SelectPreviousTab        : QTabBar = ... # 0x2
-    RoundedEast              : QTabBar = ... # 0x3
-    TriangularNorth          : QTabBar = ... # 0x4
-    TriangularSouth          : QTabBar = ... # 0x5
-    TriangularWest           : QTabBar = ... # 0x6
-    TriangularEast           : QTabBar = ... # 0x7
+    LeftSide                 : QTabBar.ButtonPosition = ... # 0x0
+    RoundedNorth             : QTabBar.Shape = ... # 0x0
+    SelectLeftTab            : QTabBar.SelectionBehavior = ... # 0x0
+    RightSide                : QTabBar.ButtonPosition = ... # 0x1
+    RoundedSouth             : QTabBar.Shape = ... # 0x1
+    SelectRightTab           : QTabBar.SelectionBehavior = ... # 0x1
+    RoundedWest              : QTabBar.Shape = ... # 0x2
+    SelectPreviousTab        : QTabBar.SelectionBehavior = ... # 0x2
+    RoundedEast              : QTabBar.Shape = ... # 0x3
+    TriangularNorth          : QTabBar.Shape = ... # 0x4
+    TriangularSouth          : QTabBar.Shape = ... # 0x5
+    TriangularWest           : QTabBar.Shape = ... # 0x6
+    TriangularEast           : QTabBar.Shape = ... # 0x7
 
     class ButtonPosition(object):
         LeftSide                 : QTabBar.ButtonPosition = ... # 0x0
@@ -8940,12 +8940,12 @@ class QTabBar(PySide2.QtWidgets.QWidget):
 
 
 class QTabWidget(PySide2.QtWidgets.QWidget):
-    North                    : QTabWidget = ... # 0x0
-    Rounded                  : QTabWidget = ... # 0x0
-    South                    : QTabWidget = ... # 0x1
-    Triangular               : QTabWidget = ... # 0x1
-    West                     : QTabWidget = ... # 0x2
-    East                     : QTabWidget = ... # 0x3
+    North                    : QTabWidget.TabPosition = ... # 0x0
+    Rounded                  : QTabWidget.TabShape = ... # 0x0
+    South                    : QTabWidget.TabPosition = ... # 0x1
+    Triangular               : QTabWidget.TabShape = ... # 0x1
+    West                     : QTabWidget.TabPosition = ... # 0x2
+    East                     : QTabWidget.TabPosition = ... # 0x3
 
     class TabPosition(object):
         North                    : QTabWidget.TabPosition = ... # 0x0
@@ -9196,8 +9196,8 @@ class QTableWidget(PySide2.QtWidgets.QTableView):
 
 
 class QTableWidgetItem(Shiboken.Object):
-    Type                     : QTableWidgetItem = ... # 0x0
-    UserType                 : QTableWidgetItem = ... # 0x3e8
+    Type                     : QTableWidgetItem.ItemType = ... # 0x0
+    UserType                 : QTableWidgetItem.ItemType = ... # 0x3e8
 
     class ItemType(object):
         Type                     : QTableWidgetItem.ItemType = ... # 0x0
@@ -9334,13 +9334,13 @@ class QTextBrowser(PySide2.QtWidgets.QTextEdit):
 
 
 class QTextEdit(PySide2.QtWidgets.QAbstractScrollArea):
-    AutoAll                  : QTextEdit = ... # -0x1
-    AutoNone                 : QTextEdit = ... # 0x0
-    NoWrap                   : QTextEdit = ... # 0x0
-    AutoBulletList           : QTextEdit = ... # 0x1
-    WidgetWidth              : QTextEdit = ... # 0x1
-    FixedPixelWidth          : QTextEdit = ... # 0x2
-    FixedColumnWidth         : QTextEdit = ... # 0x3
+    AutoAll                  : QTextEdit.AutoFormattingFlag = ... # -0x1
+    AutoNone                 : QTextEdit.AutoFormattingFlag = ... # 0x0
+    NoWrap                   : QTextEdit.LineWrapMode = ... # 0x0
+    AutoBulletList           : QTextEdit.AutoFormattingFlag = ... # 0x1
+    WidgetWidth              : QTextEdit.LineWrapMode = ... # 0x1
+    FixedPixelWidth          : QTextEdit.LineWrapMode = ... # 0x2
+    FixedColumnWidth         : QTextEdit.LineWrapMode = ... # 0x3
 
     class AutoFormatting(object): ...
 
@@ -9609,9 +9609,9 @@ class QToolBox(PySide2.QtWidgets.QFrame):
 
 
 class QToolButton(PySide2.QtWidgets.QAbstractButton):
-    DelayedPopup             : QToolButton = ... # 0x0
-    MenuButtonPopup          : QToolButton = ... # 0x1
-    InstantPopup             : QToolButton = ... # 0x2
+    DelayedPopup             : QToolButton.ToolButtonPopupMode = ... # 0x0
+    MenuButtonPopup          : QToolButton.ToolButtonPopupMode = ... # 0x1
+    InstantPopup             : QToolButton.ToolButtonPopupMode = ... # 0x2
 
     class ToolButtonPopupMode(object):
         DelayedPopup             : QToolButton.ToolButtonPopupMode = ... # 0x0
@@ -9862,11 +9862,11 @@ class QTreeWidget(PySide2.QtWidgets.QTreeView):
 
 
 class QTreeWidgetItem(Shiboken.Object):
-    ShowIndicator            : QTreeWidgetItem = ... # 0x0
-    Type                     : QTreeWidgetItem = ... # 0x0
-    DontShowIndicator        : QTreeWidgetItem = ... # 0x1
-    DontShowIndicatorWhenChildless: QTreeWidgetItem = ... # 0x2
-    UserType                 : QTreeWidgetItem = ... # 0x3e8
+    ShowIndicator            : QTreeWidgetItem.ChildIndicatorPolicy = ... # 0x0
+    Type                     : QTreeWidgetItem.ItemType = ... # 0x0
+    DontShowIndicator        : QTreeWidgetItem.ChildIndicatorPolicy = ... # 0x1
+    DontShowIndicatorWhenChildless: QTreeWidgetItem.ChildIndicatorPolicy = ... # 0x2
+    UserType                 : QTreeWidgetItem.ItemType = ... # 0x3e8
 
     class ChildIndicatorPolicy(object):
         ShowIndicator            : QTreeWidgetItem.ChildIndicatorPolicy = ... # 0x0
@@ -9962,26 +9962,26 @@ class QTreeWidgetItem(Shiboken.Object):
     def __lt__(self, other: QTreeWidgetItem) -> bool: ...
 
 class QTreeWidgetItemIterator(Shiboken.Object):
-    All                      : QTreeWidgetItemIterator = ... # 0x0
-    Hidden                   : QTreeWidgetItemIterator = ... # 0x1
-    NotHidden                : QTreeWidgetItemIterator = ... # 0x2
-    Selected                 : QTreeWidgetItemIterator = ... # 0x4
-    Unselected               : QTreeWidgetItemIterator = ... # 0x8
-    Selectable               : QTreeWidgetItemIterator = ... # 0x10
-    NotSelectable            : QTreeWidgetItemIterator = ... # 0x20
-    DragEnabled              : QTreeWidgetItemIterator = ... # 0x40
-    DragDisabled             : QTreeWidgetItemIterator = ... # 0x80
-    DropEnabled              : QTreeWidgetItemIterator = ... # 0x100
-    DropDisabled             : QTreeWidgetItemIterator = ... # 0x200
-    HasChildren              : QTreeWidgetItemIterator = ... # 0x400
-    NoChildren               : QTreeWidgetItemIterator = ... # 0x800
-    Checked                  : QTreeWidgetItemIterator = ... # 0x1000
-    NotChecked               : QTreeWidgetItemIterator = ... # 0x2000
-    Enabled                  : QTreeWidgetItemIterator = ... # 0x4000
-    Disabled                 : QTreeWidgetItemIterator = ... # 0x8000
-    Editable                 : QTreeWidgetItemIterator = ... # 0x10000
-    NotEditable              : QTreeWidgetItemIterator = ... # 0x20000
-    UserFlag                 : QTreeWidgetItemIterator = ... # 0x1000000
+    All                      : QTreeWidgetItemIterator.IteratorFlag = ... # 0x0
+    Hidden                   : QTreeWidgetItemIterator.IteratorFlag = ... # 0x1
+    NotHidden                : QTreeWidgetItemIterator.IteratorFlag = ... # 0x2
+    Selected                 : QTreeWidgetItemIterator.IteratorFlag = ... # 0x4
+    Unselected               : QTreeWidgetItemIterator.IteratorFlag = ... # 0x8
+    Selectable               : QTreeWidgetItemIterator.IteratorFlag = ... # 0x10
+    NotSelectable            : QTreeWidgetItemIterator.IteratorFlag = ... # 0x20
+    DragEnabled              : QTreeWidgetItemIterator.IteratorFlag = ... # 0x40
+    DragDisabled             : QTreeWidgetItemIterator.IteratorFlag = ... # 0x80
+    DropEnabled              : QTreeWidgetItemIterator.IteratorFlag = ... # 0x100
+    DropDisabled             : QTreeWidgetItemIterator.IteratorFlag = ... # 0x200
+    HasChildren              : QTreeWidgetItemIterator.IteratorFlag = ... # 0x400
+    NoChildren               : QTreeWidgetItemIterator.IteratorFlag = ... # 0x800
+    Checked                  : QTreeWidgetItemIterator.IteratorFlag = ... # 0x1000
+    NotChecked               : QTreeWidgetItemIterator.IteratorFlag = ... # 0x2000
+    Enabled                  : QTreeWidgetItemIterator.IteratorFlag = ... # 0x4000
+    Disabled                 : QTreeWidgetItemIterator.IteratorFlag = ... # 0x8000
+    Editable                 : QTreeWidgetItemIterator.IteratorFlag = ... # 0x10000
+    NotEditable              : QTreeWidgetItemIterator.IteratorFlag = ... # 0x20000
+    UserFlag                 : QTreeWidgetItemIterator.IteratorFlag = ... # 0x1000000
 
     class IteratorFlag(object):
         All                      : QTreeWidgetItemIterator.IteratorFlag = ... # 0x0
@@ -10137,9 +10137,9 @@ class QWhatsThis(Shiboken.Object):
 
 
 class QWidget(PySide2.QtCore.QObject, PySide2.QtGui.QPaintDevice):
-    DrawWindowBackground     : QWidget = ... # 0x1
-    DrawChildren             : QWidget = ... # 0x2
-    IgnoreMask               : QWidget = ... # 0x4
+    DrawWindowBackground     : QWidget.RenderFlag = ... # 0x1
+    DrawChildren             : QWidget.RenderFlag = ... # 0x2
+    IgnoreMask               : QWidget.RenderFlag = ... # 0x4
 
     class RenderFlag(object):
         DrawWindowBackground     : QWidget.RenderFlag = ... # 0x1
@@ -10519,46 +10519,46 @@ class QWidgetItem(PySide2.QtWidgets.QLayoutItem):
 
 
 class QWizard(PySide2.QtWidgets.QDialog):
-    NoButton                 : QWizard = ... # -0x1
-    BackButton               : QWizard = ... # 0x0
-    ClassicStyle             : QWizard = ... # 0x0
-    WatermarkPixmap          : QWizard = ... # 0x0
-    IndependentPages         : QWizard = ... # 0x1
-    LogoPixmap               : QWizard = ... # 0x1
-    ModernStyle              : QWizard = ... # 0x1
-    NextButton               : QWizard = ... # 0x1
-    BannerPixmap             : QWizard = ... # 0x2
-    CommitButton             : QWizard = ... # 0x2
-    IgnoreSubTitles          : QWizard = ... # 0x2
-    MacStyle                 : QWizard = ... # 0x2
-    AeroStyle                : QWizard = ... # 0x3
-    BackgroundPixmap         : QWizard = ... # 0x3
-    FinishButton             : QWizard = ... # 0x3
-    CancelButton             : QWizard = ... # 0x4
-    ExtendedWatermarkPixmap  : QWizard = ... # 0x4
-    NPixmaps                 : QWizard = ... # 0x4
-    NStyles                  : QWizard = ... # 0x4
-    HelpButton               : QWizard = ... # 0x5
-    CustomButton1            : QWizard = ... # 0x6
-    NStandardButtons         : QWizard = ... # 0x6
-    CustomButton2            : QWizard = ... # 0x7
-    CustomButton3            : QWizard = ... # 0x8
-    NoDefaultButton          : QWizard = ... # 0x8
-    NButtons                 : QWizard = ... # 0x9
-    Stretch                  : QWizard = ... # 0x9
-    NoBackButtonOnStartPage  : QWizard = ... # 0x10
-    NoBackButtonOnLastPage   : QWizard = ... # 0x20
-    DisabledBackButtonOnLastPage: QWizard = ... # 0x40
-    HaveNextButtonOnLastPage : QWizard = ... # 0x80
-    HaveFinishButtonOnEarlyPages: QWizard = ... # 0x100
-    NoCancelButton           : QWizard = ... # 0x200
-    CancelButtonOnLeft       : QWizard = ... # 0x400
-    HaveHelpButton           : QWizard = ... # 0x800
-    HelpButtonOnRight        : QWizard = ... # 0x1000
-    HaveCustomButton1        : QWizard = ... # 0x2000
-    HaveCustomButton2        : QWizard = ... # 0x4000
-    HaveCustomButton3        : QWizard = ... # 0x8000
-    NoCancelButtonOnLastPage : QWizard = ... # 0x10000
+    NoButton                 : QWizard.WizardButton = ... # -0x1
+    BackButton               : QWizard.WizardButton = ... # 0x0
+    ClassicStyle             : QWizard.WizardStyle = ... # 0x0
+    WatermarkPixmap          : QWizard.WizardPixmap = ... # 0x0
+    IndependentPages         : QWizard.WizardOption = ... # 0x1
+    LogoPixmap               : QWizard.WizardPixmap = ... # 0x1
+    ModernStyle              : QWizard.WizardStyle = ... # 0x1
+    NextButton               : QWizard.WizardButton = ... # 0x1
+    BannerPixmap             : QWizard.WizardPixmap = ... # 0x2
+    CommitButton             : QWizard.WizardButton = ... # 0x2
+    IgnoreSubTitles          : QWizard.WizardOption = ... # 0x2
+    MacStyle                 : QWizard.WizardStyle = ... # 0x2
+    AeroStyle                : QWizard.WizardStyle = ... # 0x3
+    BackgroundPixmap         : QWizard.WizardPixmap = ... # 0x3
+    FinishButton             : QWizard.WizardButton = ... # 0x3
+    CancelButton             : QWizard.WizardButton = ... # 0x4
+    ExtendedWatermarkPixmap  : QWizard.WizardOption = ... # 0x4
+    NPixmaps                 : QWizard.WizardPixmap = ... # 0x4
+    NStyles                  : QWizard.WizardStyle = ... # 0x4
+    HelpButton               : QWizard.WizardButton = ... # 0x5
+    CustomButton1            : QWizard.WizardButton = ... # 0x6
+    NStandardButtons         : QWizard.WizardButton = ... # 0x6
+    CustomButton2            : QWizard.WizardButton = ... # 0x7
+    CustomButton3            : QWizard.WizardButton = ... # 0x8
+    NoDefaultButton          : QWizard.WizardOption = ... # 0x8
+    NButtons                 : QWizard.WizardButton = ... # 0x9
+    Stretch                  : QWizard.WizardButton = ... # 0x9
+    NoBackButtonOnStartPage  : QWizard.WizardOption = ... # 0x10
+    NoBackButtonOnLastPage   : QWizard.WizardOption = ... # 0x20
+    DisabledBackButtonOnLastPage: QWizard.WizardOption = ... # 0x40
+    HaveNextButtonOnLastPage : QWizard.WizardOption = ... # 0x80
+    HaveFinishButtonOnEarlyPages: QWizard.WizardOption = ... # 0x100
+    NoCancelButton           : QWizard.WizardOption = ... # 0x200
+    CancelButtonOnLeft       : QWizard.WizardOption = ... # 0x400
+    HaveHelpButton           : QWizard.WizardOption = ... # 0x800
+    HelpButtonOnRight        : QWizard.WizardOption = ... # 0x1000
+    HaveCustomButton1        : QWizard.WizardOption = ... # 0x2000
+    HaveCustomButton2        : QWizard.WizardOption = ... # 0x4000
+    HaveCustomButton3        : QWizard.WizardOption = ... # 0x8000
+    NoCancelButtonOnLastPage : QWizard.WizardOption = ... # 0x10000
 
     class WizardButton(object):
         NoButton                 : QWizard.WizardButton = ... # -0x1

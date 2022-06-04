@@ -88,31 +88,31 @@ class QtDataVisualization(Shiboken.Object):
         def valueAxis(self) -> PySide2.QtDataVisualization.QtDataVisualization.QValue3DAxis: ...
 
     class Q3DCamera(PySide2.QtDataVisualization.Q3DObject):
-        CameraPresetNone         : QtDataVisualization.Q3DCamera = ... # -0x1
-        CameraPresetFrontLow     : QtDataVisualization.Q3DCamera = ... # 0x0
-        CameraPresetFront        : QtDataVisualization.Q3DCamera = ... # 0x1
-        CameraPresetFrontHigh    : QtDataVisualization.Q3DCamera = ... # 0x2
-        CameraPresetLeftLow      : QtDataVisualization.Q3DCamera = ... # 0x3
-        CameraPresetLeft         : QtDataVisualization.Q3DCamera = ... # 0x4
-        CameraPresetLeftHigh     : QtDataVisualization.Q3DCamera = ... # 0x5
-        CameraPresetRightLow     : QtDataVisualization.Q3DCamera = ... # 0x6
-        CameraPresetRight        : QtDataVisualization.Q3DCamera = ... # 0x7
-        CameraPresetRightHigh    : QtDataVisualization.Q3DCamera = ... # 0x8
-        CameraPresetBehindLow    : QtDataVisualization.Q3DCamera = ... # 0x9
-        CameraPresetBehind       : QtDataVisualization.Q3DCamera = ... # 0xa
-        CameraPresetBehindHigh   : QtDataVisualization.Q3DCamera = ... # 0xb
-        CameraPresetIsometricLeft: QtDataVisualization.Q3DCamera = ... # 0xc
-        CameraPresetIsometricLeftHigh: QtDataVisualization.Q3DCamera = ... # 0xd
-        CameraPresetIsometricRight: QtDataVisualization.Q3DCamera = ... # 0xe
-        CameraPresetIsometricRightHigh: QtDataVisualization.Q3DCamera = ... # 0xf
-        CameraPresetDirectlyAbove: QtDataVisualization.Q3DCamera = ... # 0x10
-        CameraPresetDirectlyAboveCW45: QtDataVisualization.Q3DCamera = ... # 0x11
-        CameraPresetDirectlyAboveCCW45: QtDataVisualization.Q3DCamera = ... # 0x12
-        CameraPresetFrontBelow   : QtDataVisualization.Q3DCamera = ... # 0x13
-        CameraPresetLeftBelow    : QtDataVisualization.Q3DCamera = ... # 0x14
-        CameraPresetRightBelow   : QtDataVisualization.Q3DCamera = ... # 0x15
-        CameraPresetBehindBelow  : QtDataVisualization.Q3DCamera = ... # 0x16
-        CameraPresetDirectlyBelow: QtDataVisualization.Q3DCamera = ... # 0x17
+        CameraPresetNone         : QtDataVisualization.Q3DCamera.CameraPreset = ... # -0x1
+        CameraPresetFrontLow     : QtDataVisualization.Q3DCamera.CameraPreset = ... # 0x0
+        CameraPresetFront        : QtDataVisualization.Q3DCamera.CameraPreset = ... # 0x1
+        CameraPresetFrontHigh    : QtDataVisualization.Q3DCamera.CameraPreset = ... # 0x2
+        CameraPresetLeftLow      : QtDataVisualization.Q3DCamera.CameraPreset = ... # 0x3
+        CameraPresetLeft         : QtDataVisualization.Q3DCamera.CameraPreset = ... # 0x4
+        CameraPresetLeftHigh     : QtDataVisualization.Q3DCamera.CameraPreset = ... # 0x5
+        CameraPresetRightLow     : QtDataVisualization.Q3DCamera.CameraPreset = ... # 0x6
+        CameraPresetRight        : QtDataVisualization.Q3DCamera.CameraPreset = ... # 0x7
+        CameraPresetRightHigh    : QtDataVisualization.Q3DCamera.CameraPreset = ... # 0x8
+        CameraPresetBehindLow    : QtDataVisualization.Q3DCamera.CameraPreset = ... # 0x9
+        CameraPresetBehind       : QtDataVisualization.Q3DCamera.CameraPreset = ... # 0xa
+        CameraPresetBehindHigh   : QtDataVisualization.Q3DCamera.CameraPreset = ... # 0xb
+        CameraPresetIsometricLeft: QtDataVisualization.Q3DCamera.CameraPreset = ... # 0xc
+        CameraPresetIsometricLeftHigh: QtDataVisualization.Q3DCamera.CameraPreset = ... # 0xd
+        CameraPresetIsometricRight: QtDataVisualization.Q3DCamera.CameraPreset = ... # 0xe
+        CameraPresetIsometricRightHigh: QtDataVisualization.Q3DCamera.CameraPreset = ... # 0xf
+        CameraPresetDirectlyAbove: QtDataVisualization.Q3DCamera.CameraPreset = ... # 0x10
+        CameraPresetDirectlyAboveCW45: QtDataVisualization.Q3DCamera.CameraPreset = ... # 0x11
+        CameraPresetDirectlyAboveCCW45: QtDataVisualization.Q3DCamera.CameraPreset = ... # 0x12
+        CameraPresetFrontBelow   : QtDataVisualization.Q3DCamera.CameraPreset = ... # 0x13
+        CameraPresetLeftBelow    : QtDataVisualization.Q3DCamera.CameraPreset = ... # 0x14
+        CameraPresetRightBelow   : QtDataVisualization.Q3DCamera.CameraPreset = ... # 0x15
+        CameraPresetBehindBelow  : QtDataVisualization.Q3DCamera.CameraPreset = ... # 0x16
+        CameraPresetDirectlyBelow: QtDataVisualization.Q3DCamera.CameraPreset = ... # 0x17
 
         class CameraPreset(object):
             CameraPresetNone         : QtDataVisualization.Q3DCamera.CameraPreset = ... # -0x1
@@ -266,18 +266,18 @@ class QtDataVisualization(Shiboken.Object):
         def setFlipHorizontalGrid(self, flip:bool) -> None: ...
 
     class Q3DTheme(PySide2.QtCore.QObject):
-        ColorStyleUniform        : QtDataVisualization.Q3DTheme = ... # 0x0
-        ThemeQt                  : QtDataVisualization.Q3DTheme = ... # 0x0
-        ColorStyleObjectGradient : QtDataVisualization.Q3DTheme = ... # 0x1
-        ThemePrimaryColors       : QtDataVisualization.Q3DTheme = ... # 0x1
-        ColorStyleRangeGradient  : QtDataVisualization.Q3DTheme = ... # 0x2
-        ThemeDigia               : QtDataVisualization.Q3DTheme = ... # 0x2
-        ThemeStoneMoss           : QtDataVisualization.Q3DTheme = ... # 0x3
-        ThemeArmyBlue            : QtDataVisualization.Q3DTheme = ... # 0x4
-        ThemeRetro               : QtDataVisualization.Q3DTheme = ... # 0x5
-        ThemeEbony               : QtDataVisualization.Q3DTheme = ... # 0x6
-        ThemeIsabelle            : QtDataVisualization.Q3DTheme = ... # 0x7
-        ThemeUserDefined         : QtDataVisualization.Q3DTheme = ... # 0x8
+        ColorStyleUniform        : QtDataVisualization.Q3DTheme.ColorStyle = ... # 0x0
+        ThemeQt                  : QtDataVisualization.Q3DTheme.Theme = ... # 0x0
+        ColorStyleObjectGradient : QtDataVisualization.Q3DTheme.ColorStyle = ... # 0x1
+        ThemePrimaryColors       : QtDataVisualization.Q3DTheme.Theme = ... # 0x1
+        ColorStyleRangeGradient  : QtDataVisualization.Q3DTheme.ColorStyle = ... # 0x2
+        ThemeDigia               : QtDataVisualization.Q3DTheme.Theme = ... # 0x2
+        ThemeStoneMoss           : QtDataVisualization.Q3DTheme.Theme = ... # 0x3
+        ThemeArmyBlue            : QtDataVisualization.Q3DTheme.Theme = ... # 0x4
+        ThemeRetro               : QtDataVisualization.Q3DTheme.Theme = ... # 0x5
+        ThemeEbony               : QtDataVisualization.Q3DTheme.Theme = ... # 0x6
+        ThemeIsabelle            : QtDataVisualization.Q3DTheme.Theme = ... # 0x7
+        ThemeUserDefined         : QtDataVisualization.Q3DTheme.Theme = ... # 0x8
 
         class ColorStyle(object):
             ColorStyleUniform        : QtDataVisualization.Q3DTheme.ColorStyle = ... # 0x0
@@ -346,13 +346,13 @@ class QtDataVisualization(Shiboken.Object):
         def windowColor(self) -> PySide2.QtGui.QColor: ...
 
     class QAbstract3DAxis(PySide2.QtCore.QObject):
-        AxisOrientationNone      : QtDataVisualization.QAbstract3DAxis = ... # 0x0
-        AxisTypeNone             : QtDataVisualization.QAbstract3DAxis = ... # 0x0
-        AxisOrientationX         : QtDataVisualization.QAbstract3DAxis = ... # 0x1
-        AxisTypeCategory         : QtDataVisualization.QAbstract3DAxis = ... # 0x1
-        AxisOrientationY         : QtDataVisualization.QAbstract3DAxis = ... # 0x2
-        AxisTypeValue            : QtDataVisualization.QAbstract3DAxis = ... # 0x2
-        AxisOrientationZ         : QtDataVisualization.QAbstract3DAxis = ... # 0x4
+        AxisOrientationNone      : QtDataVisualization.QAbstract3DAxis.AxisOrientation = ... # 0x0
+        AxisTypeNone             : QtDataVisualization.QAbstract3DAxis.AxisType = ... # 0x0
+        AxisOrientationX         : QtDataVisualization.QAbstract3DAxis.AxisOrientation = ... # 0x1
+        AxisTypeCategory         : QtDataVisualization.QAbstract3DAxis.AxisType = ... # 0x1
+        AxisOrientationY         : QtDataVisualization.QAbstract3DAxis.AxisOrientation = ... # 0x2
+        AxisTypeValue            : QtDataVisualization.QAbstract3DAxis.AxisType = ... # 0x2
+        AxisOrientationZ         : QtDataVisualization.QAbstract3DAxis.AxisOrientation = ... # 0x4
 
         class AxisOrientation(object):
             AxisOrientationNone      : QtDataVisualization.QAbstract3DAxis.AxisOrientation = ... # 0x0
@@ -385,31 +385,31 @@ class QtDataVisualization(Shiboken.Object):
         def type(self) -> PySide2.QtDataVisualization.QtDataVisualization.QAbstract3DAxis.AxisType: ...
 
     class QAbstract3DGraph(PySide2.QtGui.QWindow):
-        ElementNone              : QtDataVisualization.QAbstract3DGraph = ... # 0x0
-        OptimizationDefault      : QtDataVisualization.QAbstract3DGraph = ... # 0x0
-        SelectionNone            : QtDataVisualization.QAbstract3DGraph = ... # 0x0
-        ShadowQualityNone        : QtDataVisualization.QAbstract3DGraph = ... # 0x0
-        ElementSeries            : QtDataVisualization.QAbstract3DGraph = ... # 0x1
-        OptimizationStatic       : QtDataVisualization.QAbstract3DGraph = ... # 0x1
-        SelectionItem            : QtDataVisualization.QAbstract3DGraph = ... # 0x1
-        ShadowQualityLow         : QtDataVisualization.QAbstract3DGraph = ... # 0x1
-        ElementAxisXLabel        : QtDataVisualization.QAbstract3DGraph = ... # 0x2
-        SelectionRow             : QtDataVisualization.QAbstract3DGraph = ... # 0x2
-        ShadowQualityMedium      : QtDataVisualization.QAbstract3DGraph = ... # 0x2
-        ElementAxisYLabel        : QtDataVisualization.QAbstract3DGraph = ... # 0x3
-        SelectionItemAndRow      : QtDataVisualization.QAbstract3DGraph = ... # 0x3
-        ShadowQualityHigh        : QtDataVisualization.QAbstract3DGraph = ... # 0x3
-        ElementAxisZLabel        : QtDataVisualization.QAbstract3DGraph = ... # 0x4
-        SelectionColumn          : QtDataVisualization.QAbstract3DGraph = ... # 0x4
-        ShadowQualitySoftLow     : QtDataVisualization.QAbstract3DGraph = ... # 0x4
-        ElementCustomItem        : QtDataVisualization.QAbstract3DGraph = ... # 0x5
-        SelectionItemAndColumn   : QtDataVisualization.QAbstract3DGraph = ... # 0x5
-        ShadowQualitySoftMedium  : QtDataVisualization.QAbstract3DGraph = ... # 0x5
-        SelectionRowAndColumn    : QtDataVisualization.QAbstract3DGraph = ... # 0x6
-        ShadowQualitySoftHigh    : QtDataVisualization.QAbstract3DGraph = ... # 0x6
-        SelectionItemRowAndColumn: QtDataVisualization.QAbstract3DGraph = ... # 0x7
-        SelectionSlice           : QtDataVisualization.QAbstract3DGraph = ... # 0x8
-        SelectionMultiSeries     : QtDataVisualization.QAbstract3DGraph = ... # 0x10
+        ElementNone              : QtDataVisualization.QAbstract3DGraph.ElementType = ... # 0x0
+        OptimizationDefault      : QtDataVisualization.QAbstract3DGraph.OptimizationHint = ... # 0x0
+        SelectionNone            : QtDataVisualization.QAbstract3DGraph.SelectionFlag = ... # 0x0
+        ShadowQualityNone        : QtDataVisualization.QAbstract3DGraph.ShadowQuality = ... # 0x0
+        ElementSeries            : QtDataVisualization.QAbstract3DGraph.ElementType = ... # 0x1
+        OptimizationStatic       : QtDataVisualization.QAbstract3DGraph.OptimizationHint = ... # 0x1
+        SelectionItem            : QtDataVisualization.QAbstract3DGraph.SelectionFlag = ... # 0x1
+        ShadowQualityLow         : QtDataVisualization.QAbstract3DGraph.ShadowQuality = ... # 0x1
+        ElementAxisXLabel        : QtDataVisualization.QAbstract3DGraph.ElementType = ... # 0x2
+        SelectionRow             : QtDataVisualization.QAbstract3DGraph.SelectionFlag = ... # 0x2
+        ShadowQualityMedium      : QtDataVisualization.QAbstract3DGraph.ShadowQuality = ... # 0x2
+        ElementAxisYLabel        : QtDataVisualization.QAbstract3DGraph.ElementType = ... # 0x3
+        SelectionItemAndRow      : QtDataVisualization.QAbstract3DGraph.SelectionFlag = ... # 0x3
+        ShadowQualityHigh        : QtDataVisualization.QAbstract3DGraph.ShadowQuality = ... # 0x3
+        ElementAxisZLabel        : QtDataVisualization.QAbstract3DGraph.ElementType = ... # 0x4
+        SelectionColumn          : QtDataVisualization.QAbstract3DGraph.SelectionFlag = ... # 0x4
+        ShadowQualitySoftLow     : QtDataVisualization.QAbstract3DGraph.ShadowQuality = ... # 0x4
+        ElementCustomItem        : QtDataVisualization.QAbstract3DGraph.ElementType = ... # 0x5
+        SelectionItemAndColumn   : QtDataVisualization.QAbstract3DGraph.SelectionFlag = ... # 0x5
+        ShadowQualitySoftMedium  : QtDataVisualization.QAbstract3DGraph.ShadowQuality = ... # 0x5
+        SelectionRowAndColumn    : QtDataVisualization.QAbstract3DGraph.SelectionFlag = ... # 0x6
+        ShadowQualitySoftHigh    : QtDataVisualization.QAbstract3DGraph.ShadowQuality = ... # 0x6
+        SelectionItemRowAndColumn: QtDataVisualization.QAbstract3DGraph.SelectionFlag = ... # 0x7
+        SelectionSlice           : QtDataVisualization.QAbstract3DGraph.SelectionFlag = ... # 0x8
+        SelectionMultiSeries     : QtDataVisualization.QAbstract3DGraph.SelectionFlag = ... # 0x10
 
         class ElementType(object):
             ElementNone              : QtDataVisualization.QAbstract3DGraph.ElementType = ... # 0x0
@@ -512,9 +512,9 @@ class QtDataVisualization(Shiboken.Object):
         def wheelEvent(self, event:PySide2.QtGui.QWheelEvent) -> None: ...
 
     class QAbstract3DInputHandler(PySide2.QtCore.QObject):
-        InputViewNone            : QtDataVisualization.QAbstract3DInputHandler = ... # 0x0
-        InputViewOnPrimary       : QtDataVisualization.QAbstract3DInputHandler = ... # 0x1
-        InputViewOnSecondary     : QtDataVisualization.QAbstract3DInputHandler = ... # 0x2
+        InputViewNone            : QtDataVisualization.QAbstract3DInputHandler.InputView = ... # 0x0
+        InputViewOnPrimary       : QtDataVisualization.QAbstract3DInputHandler.InputView = ... # 0x1
+        InputViewOnSecondary     : QtDataVisualization.QAbstract3DInputHandler.InputView = ... # 0x2
 
         class InputView(object):
             InputViewNone            : QtDataVisualization.QAbstract3DInputHandler.InputView = ... # 0x0
@@ -541,22 +541,22 @@ class QtDataVisualization(Shiboken.Object):
         def wheelEvent(self, event:PySide2.QtGui.QWheelEvent) -> None: ...
 
     class QAbstract3DSeries(PySide2.QtCore.QObject):
-        MeshUserDefined          : QtDataVisualization.QAbstract3DSeries = ... # 0x0
-        SeriesTypeNone           : QtDataVisualization.QAbstract3DSeries = ... # 0x0
-        MeshBar                  : QtDataVisualization.QAbstract3DSeries = ... # 0x1
-        SeriesTypeBar            : QtDataVisualization.QAbstract3DSeries = ... # 0x1
-        MeshCube                 : QtDataVisualization.QAbstract3DSeries = ... # 0x2
-        SeriesTypeScatter        : QtDataVisualization.QAbstract3DSeries = ... # 0x2
-        MeshPyramid              : QtDataVisualization.QAbstract3DSeries = ... # 0x3
-        MeshCone                 : QtDataVisualization.QAbstract3DSeries = ... # 0x4
-        SeriesTypeSurface        : QtDataVisualization.QAbstract3DSeries = ... # 0x4
-        MeshCylinder             : QtDataVisualization.QAbstract3DSeries = ... # 0x5
-        MeshBevelBar             : QtDataVisualization.QAbstract3DSeries = ... # 0x6
-        MeshBevelCube            : QtDataVisualization.QAbstract3DSeries = ... # 0x7
-        MeshSphere               : QtDataVisualization.QAbstract3DSeries = ... # 0x8
-        MeshMinimal              : QtDataVisualization.QAbstract3DSeries = ... # 0x9
-        MeshArrow                : QtDataVisualization.QAbstract3DSeries = ... # 0xa
-        MeshPoint                : QtDataVisualization.QAbstract3DSeries = ... # 0xb
+        MeshUserDefined          : QtDataVisualization.QAbstract3DSeries.Mesh = ... # 0x0
+        SeriesTypeNone           : QtDataVisualization.QAbstract3DSeries.SeriesType = ... # 0x0
+        MeshBar                  : QtDataVisualization.QAbstract3DSeries.Mesh = ... # 0x1
+        SeriesTypeBar            : QtDataVisualization.QAbstract3DSeries.SeriesType = ... # 0x1
+        MeshCube                 : QtDataVisualization.QAbstract3DSeries.Mesh = ... # 0x2
+        SeriesTypeScatter        : QtDataVisualization.QAbstract3DSeries.SeriesType = ... # 0x2
+        MeshPyramid              : QtDataVisualization.QAbstract3DSeries.Mesh = ... # 0x3
+        MeshCone                 : QtDataVisualization.QAbstract3DSeries.Mesh = ... # 0x4
+        SeriesTypeSurface        : QtDataVisualization.QAbstract3DSeries.SeriesType = ... # 0x4
+        MeshCylinder             : QtDataVisualization.QAbstract3DSeries.Mesh = ... # 0x5
+        MeshBevelBar             : QtDataVisualization.QAbstract3DSeries.Mesh = ... # 0x6
+        MeshBevelCube            : QtDataVisualization.QAbstract3DSeries.Mesh = ... # 0x7
+        MeshSphere               : QtDataVisualization.QAbstract3DSeries.Mesh = ... # 0x8
+        MeshMinimal              : QtDataVisualization.QAbstract3DSeries.Mesh = ... # 0x9
+        MeshArrow                : QtDataVisualization.QAbstract3DSeries.Mesh = ... # 0xa
+        MeshPoint                : QtDataVisualization.QAbstract3DSeries.Mesh = ... # 0xb
 
         class Mesh(object):
             MeshUserDefined          : QtDataVisualization.QAbstract3DSeries.Mesh = ... # 0x0
@@ -612,10 +612,10 @@ class QtDataVisualization(Shiboken.Object):
         def userDefinedMesh(self) -> str: ...
 
     class QAbstractDataProxy(PySide2.QtCore.QObject):
-        DataTypeNone             : QtDataVisualization.QAbstractDataProxy = ... # 0x0
-        DataTypeBar              : QtDataVisualization.QAbstractDataProxy = ... # 0x1
-        DataTypeScatter          : QtDataVisualization.QAbstractDataProxy = ... # 0x2
-        DataTypeSurface          : QtDataVisualization.QAbstractDataProxy = ... # 0x4
+        DataTypeNone             : QtDataVisualization.QAbstractDataProxy.DataType = ... # 0x0
+        DataTypeBar              : QtDataVisualization.QAbstractDataProxy.DataType = ... # 0x1
+        DataTypeScatter          : QtDataVisualization.QAbstractDataProxy.DataType = ... # 0x2
+        DataTypeSurface          : QtDataVisualization.QAbstractDataProxy.DataType = ... # 0x4
 
         class DataType(object):
             DataTypeNone             : QtDataVisualization.QAbstractDataProxy.DataType = ... # 0x0
@@ -845,10 +845,10 @@ class QtDataVisualization(Shiboken.Object):
         def setValueRanges(self, minX:float, maxX:float, minZ:float, maxZ:float) -> None: ...
 
     class QItemModelBarDataProxy(PySide2.QtDataVisualization.QBarDataProxy):
-        MMBFirst                 : QtDataVisualization.QItemModelBarDataProxy = ... # 0x0
-        MMBLast                  : QtDataVisualization.QItemModelBarDataProxy = ... # 0x1
-        MMBAverage               : QtDataVisualization.QItemModelBarDataProxy = ... # 0x2
-        MMBCumulative            : QtDataVisualization.QItemModelBarDataProxy = ... # 0x3
+        MMBFirst                 : QtDataVisualization.QItemModelBarDataProxy.MultiMatchBehavior = ... # 0x0
+        MMBLast                  : QtDataVisualization.QItemModelBarDataProxy.MultiMatchBehavior = ... # 0x1
+        MMBAverage               : QtDataVisualization.QItemModelBarDataProxy.MultiMatchBehavior = ... # 0x2
+        MMBCumulative            : QtDataVisualization.QItemModelBarDataProxy.MultiMatchBehavior = ... # 0x3
 
         class MultiMatchBehavior(object):
             MMBFirst                 : QtDataVisualization.QItemModelBarDataProxy.MultiMatchBehavior = ... # 0x0
@@ -953,10 +953,10 @@ class QtDataVisualization(Shiboken.Object):
         def zPosRoleReplace(self) -> str: ...
 
     class QItemModelSurfaceDataProxy(PySide2.QtDataVisualization.QSurfaceDataProxy):
-        MMBFirst                 : QtDataVisualization.QItemModelSurfaceDataProxy = ... # 0x0
-        MMBLast                  : QtDataVisualization.QItemModelSurfaceDataProxy = ... # 0x1
-        MMBAverage               : QtDataVisualization.QItemModelSurfaceDataProxy = ... # 0x2
-        MMBCumulativeY           : QtDataVisualization.QItemModelSurfaceDataProxy = ... # 0x3
+        MMBFirst                 : QtDataVisualization.QItemModelSurfaceDataProxy.MultiMatchBehavior = ... # 0x0
+        MMBLast                  : QtDataVisualization.QItemModelSurfaceDataProxy.MultiMatchBehavior = ... # 0x1
+        MMBAverage               : QtDataVisualization.QItemModelSurfaceDataProxy.MultiMatchBehavior = ... # 0x2
+        MMBCumulativeY           : QtDataVisualization.QItemModelSurfaceDataProxy.MultiMatchBehavior = ... # 0x3
 
         class MultiMatchBehavior(object):
             MMBFirst                 : QtDataVisualization.QItemModelSurfaceDataProxy.MultiMatchBehavior = ... # 0x0
@@ -1102,9 +1102,9 @@ class QtDataVisualization(Shiboken.Object):
         def setItems(self, index:int, items:typing.List) -> None: ...
 
     class QSurface3DSeries(PySide2.QtDataVisualization.QAbstract3DSeries):
-        DrawWireframe            : QtDataVisualization.QSurface3DSeries = ... # 0x1
-        DrawSurface              : QtDataVisualization.QSurface3DSeries = ... # 0x2
-        DrawSurfaceAndWireframe  : QtDataVisualization.QSurface3DSeries = ... # 0x3
+        DrawWireframe            : QtDataVisualization.QSurface3DSeries.DrawFlag = ... # 0x1
+        DrawSurface              : QtDataVisualization.QSurface3DSeries.DrawFlag = ... # 0x2
+        DrawSurfaceAndWireframe  : QtDataVisualization.QSurface3DSeries.DrawFlag = ... # 0x3
 
         class DrawFlag(object):
             DrawWireframe            : QtDataVisualization.QSurface3DSeries.DrawFlag = ... # 0x1

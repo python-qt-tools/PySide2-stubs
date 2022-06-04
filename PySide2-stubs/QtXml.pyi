@@ -272,9 +272,9 @@ class QDomEntityReference(PySide2.QtXml.QDomNode):
 
 
 class QDomImplementation(Shiboken.Object):
-    AcceptInvalidChars       : QDomImplementation = ... # 0x0
-    DropInvalidChars         : QDomImplementation = ... # 0x1
-    ReturnNullNode           : QDomImplementation = ... # 0x2
+    AcceptInvalidChars       : QDomImplementation.InvalidDataPolicy = ... # 0x0
+    DropInvalidChars         : QDomImplementation.InvalidDataPolicy = ... # 0x1
+    ReturnNullNode           : QDomImplementation.InvalidDataPolicy = ... # 0x2
 
     class InvalidDataPolicy(object):
         AcceptInvalidChars       : QDomImplementation.InvalidDataPolicy = ... # 0x0
@@ -322,22 +322,22 @@ class QDomNamedNodeMap(Shiboken.Object):
 
 
 class QDomNode(Shiboken.Object):
-    ElementNode              : QDomNode = ... # 0x1
-    EncodingFromDocument     : QDomNode = ... # 0x1
-    AttributeNode            : QDomNode = ... # 0x2
-    EncodingFromTextStream   : QDomNode = ... # 0x2
-    TextNode                 : QDomNode = ... # 0x3
-    CDATASectionNode         : QDomNode = ... # 0x4
-    EntityReferenceNode      : QDomNode = ... # 0x5
-    EntityNode               : QDomNode = ... # 0x6
-    ProcessingInstructionNode: QDomNode = ... # 0x7
-    CommentNode              : QDomNode = ... # 0x8
-    DocumentNode             : QDomNode = ... # 0x9
-    DocumentTypeNode         : QDomNode = ... # 0xa
-    DocumentFragmentNode     : QDomNode = ... # 0xb
-    NotationNode             : QDomNode = ... # 0xc
-    BaseNode                 : QDomNode = ... # 0x15
-    CharacterDataNode        : QDomNode = ... # 0x16
+    ElementNode              : QDomNode.NodeType = ... # 0x1
+    EncodingFromDocument     : QDomNode.EncodingPolicy = ... # 0x1
+    AttributeNode            : QDomNode.NodeType = ... # 0x2
+    EncodingFromTextStream   : QDomNode.EncodingPolicy = ... # 0x2
+    TextNode                 : QDomNode.NodeType = ... # 0x3
+    CDATASectionNode         : QDomNode.NodeType = ... # 0x4
+    EntityReferenceNode      : QDomNode.NodeType = ... # 0x5
+    EntityNode               : QDomNode.NodeType = ... # 0x6
+    ProcessingInstructionNode: QDomNode.NodeType = ... # 0x7
+    CommentNode              : QDomNode.NodeType = ... # 0x8
+    DocumentNode             : QDomNode.NodeType = ... # 0x9
+    DocumentTypeNode         : QDomNode.NodeType = ... # 0xa
+    DocumentFragmentNode     : QDomNode.NodeType = ... # 0xb
+    NotationNode             : QDomNode.NodeType = ... # 0xc
+    BaseNode                 : QDomNode.NodeType = ... # 0x15
+    CharacterDataNode        : QDomNode.NodeType = ... # 0x16
 
     class EncodingPolicy(object):
         EncodingFromDocument     : QDomNode.EncodingPolicy = ... # 0x1

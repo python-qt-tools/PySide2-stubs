@@ -54,10 +54,10 @@ import PySide2.QtTextToSpeech
 
 
 class QTextToSpeech(PySide2.QtCore.QObject):
-    Ready                    : QTextToSpeech = ... # 0x0
-    Speaking                 : QTextToSpeech = ... # 0x1
-    Paused                   : QTextToSpeech = ... # 0x2
-    BackendError             : QTextToSpeech = ... # 0x3
+    Ready                    : QTextToSpeech.State = ... # 0x0
+    Speaking                 : QTextToSpeech.State = ... # 0x1
+    Paused                   : QTextToSpeech.State = ... # 0x2
+    BackendError             : QTextToSpeech.State = ... # 0x3
 
     class State(object):
         Ready                    : QTextToSpeech.State = ... # 0x0
@@ -119,14 +119,14 @@ class QTextToSpeechEngine(PySide2.QtCore.QObject):
 
 
 class QVoice(Shiboken.Object):
-    Child                    : QVoice = ... # 0x0
-    Male                     : QVoice = ... # 0x0
-    Female                   : QVoice = ... # 0x1
-    Teenager                 : QVoice = ... # 0x1
-    Adult                    : QVoice = ... # 0x2
-    Unknown                  : QVoice = ... # 0x2
-    Senior                   : QVoice = ... # 0x3
-    Other                    : QVoice = ... # 0x4
+    Child                    : QVoice.Age = ... # 0x0
+    Male                     : QVoice.Gender = ... # 0x0
+    Female                   : QVoice.Gender = ... # 0x1
+    Teenager                 : QVoice.Age = ... # 0x1
+    Adult                    : QVoice.Age = ... # 0x2
+    Unknown                  : QVoice.Gender = ... # 0x2
+    Senior                   : QVoice.Age = ... # 0x3
+    Other                    : QVoice.Age = ... # 0x4
 
     class Age(object):
         Child                    : QVoice.Age = ... # 0x0

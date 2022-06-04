@@ -158,9 +158,9 @@ class QScxmlError(Shiboken.Object):
 
 
 class QScxmlEvent(Shiboken.Object):
-    PlatformEvent            : QScxmlEvent = ... # 0x0
-    InternalEvent            : QScxmlEvent = ... # 0x1
-    ExternalEvent            : QScxmlEvent = ... # 0x2
+    PlatformEvent            : QScxmlEvent.EventType = ... # 0x0
+    InternalEvent            : QScxmlEvent.EventType = ... # 0x1
+    ExternalEvent            : QScxmlEvent.EventType = ... # 0x2
 
     class EventType(object):
         PlatformEvent            : QScxmlEvent.EventType = ... # 0x0

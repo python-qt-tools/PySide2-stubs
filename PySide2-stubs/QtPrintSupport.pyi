@@ -58,18 +58,18 @@ import PySide2.QtPrintSupport
 
 
 class QAbstractPrintDialog(PySide2.QtWidgets.QDialog):
-    AllPages                 : QAbstractPrintDialog = ... # 0x0
-    None_                    : QAbstractPrintDialog = ... # 0x0
-    PrintToFile              : QAbstractPrintDialog = ... # 0x1
-    Selection                : QAbstractPrintDialog = ... # 0x1
-    PageRange                : QAbstractPrintDialog = ... # 0x2
-    PrintSelection           : QAbstractPrintDialog = ... # 0x2
-    CurrentPage              : QAbstractPrintDialog = ... # 0x3
-    PrintPageRange           : QAbstractPrintDialog = ... # 0x4
-    PrintShowPageSize        : QAbstractPrintDialog = ... # 0x8
-    PrintCollateCopies       : QAbstractPrintDialog = ... # 0x10
-    DontUseSheet             : QAbstractPrintDialog = ... # 0x20
-    PrintCurrentPage         : QAbstractPrintDialog = ... # 0x40
+    AllPages                 : QAbstractPrintDialog.PrintRange = ... # 0x0
+    None_                    : QAbstractPrintDialog.PrintDialogOption = ... # 0x0
+    PrintToFile              : QAbstractPrintDialog.PrintDialogOption = ... # 0x1
+    Selection                : QAbstractPrintDialog.PrintRange = ... # 0x1
+    PageRange                : QAbstractPrintDialog.PrintRange = ... # 0x2
+    PrintSelection           : QAbstractPrintDialog.PrintDialogOption = ... # 0x2
+    CurrentPage              : QAbstractPrintDialog.PrintRange = ... # 0x3
+    PrintPageRange           : QAbstractPrintDialog.PrintDialogOption = ... # 0x4
+    PrintShowPageSize        : QAbstractPrintDialog.PrintDialogOption = ... # 0x8
+    PrintCollateCopies       : QAbstractPrintDialog.PrintDialogOption = ... # 0x10
+    DontUseSheet             : QAbstractPrintDialog.PrintDialogOption = ... # 0x20
+    PrintCurrentPage         : QAbstractPrintDialog.PrintDialogOption = ... # 0x40
 
     class PrintDialogOption(object):
         None_                    : QAbstractPrintDialog.PrintDialogOption = ... # 0x0
@@ -148,38 +148,38 @@ class QPrintDialog(PySide2.QtPrintSupport.QAbstractPrintDialog):
 
 
 class QPrintEngine(Shiboken.Object):
-    PPK_CollateCopies        : QPrintEngine = ... # 0x0
-    PPK_ColorMode            : QPrintEngine = ... # 0x1
-    PPK_Creator              : QPrintEngine = ... # 0x2
-    PPK_DocumentName         : QPrintEngine = ... # 0x3
-    PPK_FullPage             : QPrintEngine = ... # 0x4
-    PPK_NumberOfCopies       : QPrintEngine = ... # 0x5
-    PPK_Orientation          : QPrintEngine = ... # 0x6
-    PPK_OutputFileName       : QPrintEngine = ... # 0x7
-    PPK_PageOrder            : QPrintEngine = ... # 0x8
-    PPK_PageRect             : QPrintEngine = ... # 0x9
-    PPK_PageSize             : QPrintEngine = ... # 0xa
-    PPK_PaperSize            : QPrintEngine = ... # 0xa
-    PPK_PaperRect            : QPrintEngine = ... # 0xb
-    PPK_PaperSource          : QPrintEngine = ... # 0xc
-    PPK_PrinterName          : QPrintEngine = ... # 0xd
-    PPK_PrinterProgram       : QPrintEngine = ... # 0xe
-    PPK_Resolution           : QPrintEngine = ... # 0xf
-    PPK_SelectionOption      : QPrintEngine = ... # 0x10
-    PPK_SupportedResolutions : QPrintEngine = ... # 0x11
-    PPK_WindowsPageSize      : QPrintEngine = ... # 0x12
-    PPK_FontEmbedding        : QPrintEngine = ... # 0x13
-    PPK_Duplex               : QPrintEngine = ... # 0x14
-    PPK_PaperSources         : QPrintEngine = ... # 0x15
-    PPK_CustomPaperSize      : QPrintEngine = ... # 0x16
-    PPK_PageMargins          : QPrintEngine = ... # 0x17
-    PPK_CopyCount            : QPrintEngine = ... # 0x18
-    PPK_SupportsMultipleCopies: QPrintEngine = ... # 0x19
-    PPK_PaperName            : QPrintEngine = ... # 0x1a
-    PPK_QPageSize            : QPrintEngine = ... # 0x1b
-    PPK_QPageMargins         : QPrintEngine = ... # 0x1c
-    PPK_QPageLayout          : QPrintEngine = ... # 0x1d
-    PPK_CustomBase           : QPrintEngine = ... # 0xff00
+    PPK_CollateCopies        : QPrintEngine.PrintEnginePropertyKey = ... # 0x0
+    PPK_ColorMode            : QPrintEngine.PrintEnginePropertyKey = ... # 0x1
+    PPK_Creator              : QPrintEngine.PrintEnginePropertyKey = ... # 0x2
+    PPK_DocumentName         : QPrintEngine.PrintEnginePropertyKey = ... # 0x3
+    PPK_FullPage             : QPrintEngine.PrintEnginePropertyKey = ... # 0x4
+    PPK_NumberOfCopies       : QPrintEngine.PrintEnginePropertyKey = ... # 0x5
+    PPK_Orientation          : QPrintEngine.PrintEnginePropertyKey = ... # 0x6
+    PPK_OutputFileName       : QPrintEngine.PrintEnginePropertyKey = ... # 0x7
+    PPK_PageOrder            : QPrintEngine.PrintEnginePropertyKey = ... # 0x8
+    PPK_PageRect             : QPrintEngine.PrintEnginePropertyKey = ... # 0x9
+    PPK_PageSize             : QPrintEngine.PrintEnginePropertyKey = ... # 0xa
+    PPK_PaperSize            : QPrintEngine.PrintEnginePropertyKey = ... # 0xa
+    PPK_PaperRect            : QPrintEngine.PrintEnginePropertyKey = ... # 0xb
+    PPK_PaperSource          : QPrintEngine.PrintEnginePropertyKey = ... # 0xc
+    PPK_PrinterName          : QPrintEngine.PrintEnginePropertyKey = ... # 0xd
+    PPK_PrinterProgram       : QPrintEngine.PrintEnginePropertyKey = ... # 0xe
+    PPK_Resolution           : QPrintEngine.PrintEnginePropertyKey = ... # 0xf
+    PPK_SelectionOption      : QPrintEngine.PrintEnginePropertyKey = ... # 0x10
+    PPK_SupportedResolutions : QPrintEngine.PrintEnginePropertyKey = ... # 0x11
+    PPK_WindowsPageSize      : QPrintEngine.PrintEnginePropertyKey = ... # 0x12
+    PPK_FontEmbedding        : QPrintEngine.PrintEnginePropertyKey = ... # 0x13
+    PPK_Duplex               : QPrintEngine.PrintEnginePropertyKey = ... # 0x14
+    PPK_PaperSources         : QPrintEngine.PrintEnginePropertyKey = ... # 0x15
+    PPK_CustomPaperSize      : QPrintEngine.PrintEnginePropertyKey = ... # 0x16
+    PPK_PageMargins          : QPrintEngine.PrintEnginePropertyKey = ... # 0x17
+    PPK_CopyCount            : QPrintEngine.PrintEnginePropertyKey = ... # 0x18
+    PPK_SupportsMultipleCopies: QPrintEngine.PrintEnginePropertyKey = ... # 0x19
+    PPK_PaperName            : QPrintEngine.PrintEnginePropertyKey = ... # 0x1a
+    PPK_QPageSize            : QPrintEngine.PrintEnginePropertyKey = ... # 0x1b
+    PPK_QPageMargins         : QPrintEngine.PrintEnginePropertyKey = ... # 0x1c
+    PPK_QPageLayout          : QPrintEngine.PrintEnginePropertyKey = ... # 0x1d
+    PPK_CustomBase           : QPrintEngine.PrintEnginePropertyKey = ... # 0xff00
 
     class PrintEnginePropertyKey(object):
         PPK_CollateCopies        : QPrintEngine.PrintEnginePropertyKey = ... # 0x0
@@ -242,12 +242,12 @@ class QPrintPreviewDialog(PySide2.QtWidgets.QDialog):
 
 
 class QPrintPreviewWidget(PySide2.QtWidgets.QWidget):
-    CustomZoom               : QPrintPreviewWidget = ... # 0x0
-    SinglePageView           : QPrintPreviewWidget = ... # 0x0
-    FacingPagesView          : QPrintPreviewWidget = ... # 0x1
-    FitToWidth               : QPrintPreviewWidget = ... # 0x1
-    AllPagesView             : QPrintPreviewWidget = ... # 0x2
-    FitInView                : QPrintPreviewWidget = ... # 0x2
+    CustomZoom               : QPrintPreviewWidget.ZoomMode = ... # 0x0
+    SinglePageView           : QPrintPreviewWidget.ViewMode = ... # 0x0
+    FacingPagesView          : QPrintPreviewWidget.ViewMode = ... # 0x1
+    FitToWidth               : QPrintPreviewWidget.ZoomMode = ... # 0x1
+    AllPagesView             : QPrintPreviewWidget.ViewMode = ... # 0x2
+    FitInView                : QPrintPreviewWidget.ZoomMode = ... # 0x2
 
     class ViewMode(object):
         SinglePageView           : QPrintPreviewWidget.ViewMode = ... # 0x0
@@ -290,53 +290,53 @@ class QPrintPreviewWidget(PySide2.QtWidgets.QWidget):
 
 
 class QPrinter(PySide2.QtGui.QPagedPaintDevice):
-    AllPages                 : QPrinter = ... # 0x0
-    DuplexNone               : QPrinter = ... # 0x0
-    FirstPageFirst           : QPrinter = ... # 0x0
-    GrayScale                : QPrinter = ... # 0x0
-    Idle                     : QPrinter = ... # 0x0
-    Millimeter               : QPrinter = ... # 0x0
-    NativeFormat             : QPrinter = ... # 0x0
-    OnlyOne                  : QPrinter = ... # 0x0
-    Portrait                 : QPrinter = ... # 0x0
-    ScreenResolution         : QPrinter = ... # 0x0
-    Upper                    : QPrinter = ... # 0x0
-    Active                   : QPrinter = ... # 0x1
-    Color                    : QPrinter = ... # 0x1
-    DuplexAuto               : QPrinter = ... # 0x1
-    Landscape                : QPrinter = ... # 0x1
-    LastPageFirst            : QPrinter = ... # 0x1
-    Lower                    : QPrinter = ... # 0x1
-    PdfFormat                : QPrinter = ... # 0x1
-    Point                    : QPrinter = ... # 0x1
-    PrinterResolution        : QPrinter = ... # 0x1
-    Selection                : QPrinter = ... # 0x1
-    Aborted                  : QPrinter = ... # 0x2
-    DuplexLongSide           : QPrinter = ... # 0x2
-    HighResolution           : QPrinter = ... # 0x2
-    Inch                     : QPrinter = ... # 0x2
-    Middle                   : QPrinter = ... # 0x2
-    PageRange                : QPrinter = ... # 0x2
-    CurrentPage              : QPrinter = ... # 0x3
-    DuplexShortSide          : QPrinter = ... # 0x3
-    Error                    : QPrinter = ... # 0x3
-    Manual                   : QPrinter = ... # 0x3
-    Pica                     : QPrinter = ... # 0x3
-    Didot                    : QPrinter = ... # 0x4
-    Envelope                 : QPrinter = ... # 0x4
-    Cicero                   : QPrinter = ... # 0x5
-    EnvelopeManual           : QPrinter = ... # 0x5
-    Auto                     : QPrinter = ... # 0x6
-    DevicePixel              : QPrinter = ... # 0x6
-    Tractor                  : QPrinter = ... # 0x7
-    SmallFormat              : QPrinter = ... # 0x8
-    LargeFormat              : QPrinter = ... # 0x9
-    LargeCapacity            : QPrinter = ... # 0xa
-    Cassette                 : QPrinter = ... # 0xb
-    FormSource               : QPrinter = ... # 0xc
-    MaxPageSource            : QPrinter = ... # 0xd
-    CustomSource             : QPrinter = ... # 0xe
-    LastPaperSource          : QPrinter = ... # 0xe
+    AllPages                 : QPrinter.PrintRange = ... # 0x0
+    DuplexNone               : QPrinter.DuplexMode = ... # 0x0
+    FirstPageFirst           : QPrinter.PageOrder = ... # 0x0
+    GrayScale                : QPrinter.ColorMode = ... # 0x0
+    Idle                     : QPrinter.PrinterState = ... # 0x0
+    Millimeter               : QPrinter.Unit = ... # 0x0
+    NativeFormat             : QPrinter.OutputFormat = ... # 0x0
+    OnlyOne                  : QPrinter.PaperSource = ... # 0x0
+    Portrait                 : QPrinter.Orientation = ... # 0x0
+    ScreenResolution         : QPrinter.PrinterMode = ... # 0x0
+    Upper                    : QPrinter.PaperSource = ... # 0x0
+    Active                   : QPrinter.PrinterState = ... # 0x1
+    Color                    : QPrinter.ColorMode = ... # 0x1
+    DuplexAuto               : QPrinter.DuplexMode = ... # 0x1
+    Landscape                : QPrinter.Orientation = ... # 0x1
+    LastPageFirst            : QPrinter.PageOrder = ... # 0x1
+    Lower                    : QPrinter.PaperSource = ... # 0x1
+    PdfFormat                : QPrinter.OutputFormat = ... # 0x1
+    Point                    : QPrinter.Unit = ... # 0x1
+    PrinterResolution        : QPrinter.PrinterMode = ... # 0x1
+    Selection                : QPrinter.PrintRange = ... # 0x1
+    Aborted                  : QPrinter.PrinterState = ... # 0x2
+    DuplexLongSide           : QPrinter.DuplexMode = ... # 0x2
+    HighResolution           : QPrinter.PrinterMode = ... # 0x2
+    Inch                     : QPrinter.Unit = ... # 0x2
+    Middle                   : QPrinter.PaperSource = ... # 0x2
+    PageRange                : QPrinter.PrintRange = ... # 0x2
+    CurrentPage              : QPrinter.PrintRange = ... # 0x3
+    DuplexShortSide          : QPrinter.DuplexMode = ... # 0x3
+    Error                    : QPrinter.PrinterState = ... # 0x3
+    Manual                   : QPrinter.PaperSource = ... # 0x3
+    Pica                     : QPrinter.Unit = ... # 0x3
+    Didot                    : QPrinter.Unit = ... # 0x4
+    Envelope                 : QPrinter.PaperSource = ... # 0x4
+    Cicero                   : QPrinter.Unit = ... # 0x5
+    EnvelopeManual           : QPrinter.PaperSource = ... # 0x5
+    Auto                     : QPrinter.PaperSource = ... # 0x6
+    DevicePixel              : QPrinter.Unit = ... # 0x6
+    Tractor                  : QPrinter.PaperSource = ... # 0x7
+    SmallFormat              : QPrinter.PaperSource = ... # 0x8
+    LargeFormat              : QPrinter.PaperSource = ... # 0x9
+    LargeCapacity            : QPrinter.PaperSource = ... # 0xa
+    Cassette                 : QPrinter.PaperSource = ... # 0xb
+    FormSource               : QPrinter.PaperSource = ... # 0xc
+    MaxPageSource            : QPrinter.PaperSource = ... # 0xd
+    CustomSource             : QPrinter.PaperSource = ... # 0xe
+    LastPaperSource          : QPrinter.PaperSource = ... # 0xe
 
     class ColorMode(object):
         GrayScale                : QPrinter.ColorMode = ... # 0x0

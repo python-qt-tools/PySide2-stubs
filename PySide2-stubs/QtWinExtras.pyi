@@ -93,10 +93,10 @@ class QWinJumpList(PySide2.QtCore.QObject):
 
 
 class QWinJumpListCategory(Shiboken.Object):
-    Custom                   : QWinJumpListCategory = ... # 0x0
-    Recent                   : QWinJumpListCategory = ... # 0x1
-    Frequent                 : QWinJumpListCategory = ... # 0x2
-    Tasks                    : QWinJumpListCategory = ... # 0x3
+    Custom                   : QWinJumpListCategory.Type = ... # 0x0
+    Recent                   : QWinJumpListCategory.Type = ... # 0x1
+    Frequent                 : QWinJumpListCategory.Type = ... # 0x2
+    Tasks                    : QWinJumpListCategory.Type = ... # 0x3
 
     class Type(object):
         Custom                   : QWinJumpListCategory.Type = ... # 0x0
@@ -125,9 +125,9 @@ class QWinJumpListCategory(Shiboken.Object):
 
 
 class QWinJumpListItem(Shiboken.Object):
-    Destination              : QWinJumpListItem = ... # 0x0
-    Link                     : QWinJumpListItem = ... # 0x1
-    Separator                : QWinJumpListItem = ... # 0x2
+    Destination              : QWinJumpListItem.Type = ... # 0x0
+    Link                     : QWinJumpListItem.Type = ... # 0x1
+    Separator                : QWinJumpListItem.Type = ... # 0x2
 
     class Type(object):
         Destination              : QWinJumpListItem.Type = ... # 0x0
@@ -233,12 +233,12 @@ class QWinThumbnailToolButton(PySide2.QtCore.QObject):
 
 
 class QtWin(Shiboken.Object):
-    FlipDefault              : QtWin = ... # 0x0
-    HBitmapNoAlpha           : QtWin = ... # 0x0
-    FlipExcludeBelow         : QtWin = ... # 0x1
-    HBitmapPremultipliedAlpha: QtWin = ... # 0x1
-    FlipExcludeAbove         : QtWin = ... # 0x2
-    HBitmapAlpha             : QtWin = ... # 0x2
+    FlipDefault              : QtWin.WindowFlip3DPolicy = ... # 0x0
+    HBitmapNoAlpha           : QtWin.HBitmapFormat = ... # 0x0
+    FlipExcludeBelow         : QtWin.WindowFlip3DPolicy = ... # 0x1
+    HBitmapPremultipliedAlpha: QtWin.HBitmapFormat = ... # 0x1
+    FlipExcludeAbove         : QtWin.WindowFlip3DPolicy = ... # 0x2
+    HBitmapAlpha             : QtWin.HBitmapFormat = ... # 0x2
 
     class HBitmapFormat(object):
         HBitmapNoAlpha           : QtWin.HBitmapFormat = ... # 0x0

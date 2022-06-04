@@ -70,59 +70,59 @@ class QAbstractNetworkCache(PySide2.QtCore.QObject):
 
 
 class QAbstractSocket(PySide2.QtCore.QIODevice):
-    UnknownNetworkLayerProtocol: QAbstractSocket = ... # -0x1
-    UnknownSocketError       : QAbstractSocket = ... # -0x1
-    UnknownSocketType        : QAbstractSocket = ... # -0x1
-    ConnectionRefusedError   : QAbstractSocket = ... # 0x0
-    DefaultForPlatform       : QAbstractSocket = ... # 0x0
-    IPv4Protocol             : QAbstractSocket = ... # 0x0
-    LowDelayOption           : QAbstractSocket = ... # 0x0
-    PauseNever               : QAbstractSocket = ... # 0x0
-    TcpSocket                : QAbstractSocket = ... # 0x0
-    UnconnectedState         : QAbstractSocket = ... # 0x0
-    HostLookupState          : QAbstractSocket = ... # 0x1
-    IPv6Protocol             : QAbstractSocket = ... # 0x1
-    KeepAliveOption          : QAbstractSocket = ... # 0x1
-    PauseOnSslErrors         : QAbstractSocket = ... # 0x1
-    RemoteHostClosedError    : QAbstractSocket = ... # 0x1
-    ShareAddress             : QAbstractSocket = ... # 0x1
-    UdpSocket                : QAbstractSocket = ... # 0x1
-    AnyIPProtocol            : QAbstractSocket = ... # 0x2
-    ConnectingState          : QAbstractSocket = ... # 0x2
-    DontShareAddress         : QAbstractSocket = ... # 0x2
-    HostNotFoundError        : QAbstractSocket = ... # 0x2
-    MulticastTtlOption       : QAbstractSocket = ... # 0x2
-    SctpSocket               : QAbstractSocket = ... # 0x2
-    ConnectedState           : QAbstractSocket = ... # 0x3
-    MulticastLoopbackOption  : QAbstractSocket = ... # 0x3
-    SocketAccessError        : QAbstractSocket = ... # 0x3
-    BoundState               : QAbstractSocket = ... # 0x4
-    ReuseAddressHint         : QAbstractSocket = ... # 0x4
-    SocketResourceError      : QAbstractSocket = ... # 0x4
-    TypeOfServiceOption      : QAbstractSocket = ... # 0x4
-    ListeningState           : QAbstractSocket = ... # 0x5
-    SendBufferSizeSocketOption: QAbstractSocket = ... # 0x5
-    SocketTimeoutError       : QAbstractSocket = ... # 0x5
-    ClosingState             : QAbstractSocket = ... # 0x6
-    DatagramTooLargeError    : QAbstractSocket = ... # 0x6
-    ReceiveBufferSizeSocketOption: QAbstractSocket = ... # 0x6
-    NetworkError             : QAbstractSocket = ... # 0x7
-    PathMtuSocketOption      : QAbstractSocket = ... # 0x7
-    AddressInUseError        : QAbstractSocket = ... # 0x8
-    SocketAddressNotAvailableError: QAbstractSocket = ... # 0x9
-    UnsupportedSocketOperationError: QAbstractSocket = ... # 0xa
-    UnfinishedSocketOperationError: QAbstractSocket = ... # 0xb
-    ProxyAuthenticationRequiredError: QAbstractSocket = ... # 0xc
-    SslHandshakeFailedError  : QAbstractSocket = ... # 0xd
-    ProxyConnectionRefusedError: QAbstractSocket = ... # 0xe
-    ProxyConnectionClosedError: QAbstractSocket = ... # 0xf
-    ProxyConnectionTimeoutError: QAbstractSocket = ... # 0x10
-    ProxyNotFoundError       : QAbstractSocket = ... # 0x11
-    ProxyProtocolError       : QAbstractSocket = ... # 0x12
-    OperationError           : QAbstractSocket = ... # 0x13
-    SslInternalError         : QAbstractSocket = ... # 0x14
-    SslInvalidUserDataError  : QAbstractSocket = ... # 0x15
-    TemporaryError           : QAbstractSocket = ... # 0x16
+    UnknownNetworkLayerProtocol: QAbstractSocket.NetworkLayerProtocol = ... # -0x1
+    UnknownSocketError       : QAbstractSocket.SocketError = ... # -0x1
+    UnknownSocketType        : QAbstractSocket.SocketType = ... # -0x1
+    ConnectionRefusedError   : QAbstractSocket.SocketError = ... # 0x0
+    DefaultForPlatform       : QAbstractSocket.BindFlag = ... # 0x0
+    IPv4Protocol             : QAbstractSocket.NetworkLayerProtocol = ... # 0x0
+    LowDelayOption           : QAbstractSocket.SocketOption = ... # 0x0
+    PauseNever               : QAbstractSocket.PauseMode = ... # 0x0
+    TcpSocket                : QAbstractSocket.SocketType = ... # 0x0
+    UnconnectedState         : QAbstractSocket.SocketState = ... # 0x0
+    HostLookupState          : QAbstractSocket.SocketState = ... # 0x1
+    IPv6Protocol             : QAbstractSocket.NetworkLayerProtocol = ... # 0x1
+    KeepAliveOption          : QAbstractSocket.SocketOption = ... # 0x1
+    PauseOnSslErrors         : QAbstractSocket.PauseMode = ... # 0x1
+    RemoteHostClosedError    : QAbstractSocket.SocketError = ... # 0x1
+    ShareAddress             : QAbstractSocket.BindFlag = ... # 0x1
+    UdpSocket                : QAbstractSocket.SocketType = ... # 0x1
+    AnyIPProtocol            : QAbstractSocket.NetworkLayerProtocol = ... # 0x2
+    ConnectingState          : QAbstractSocket.SocketState = ... # 0x2
+    DontShareAddress         : QAbstractSocket.BindFlag = ... # 0x2
+    HostNotFoundError        : QAbstractSocket.SocketError = ... # 0x2
+    MulticastTtlOption       : QAbstractSocket.SocketOption = ... # 0x2
+    SctpSocket               : QAbstractSocket.SocketType = ... # 0x2
+    ConnectedState           : QAbstractSocket.SocketState = ... # 0x3
+    MulticastLoopbackOption  : QAbstractSocket.SocketOption = ... # 0x3
+    SocketAccessError        : QAbstractSocket.SocketError = ... # 0x3
+    BoundState               : QAbstractSocket.SocketState = ... # 0x4
+    ReuseAddressHint         : QAbstractSocket.BindFlag = ... # 0x4
+    SocketResourceError      : QAbstractSocket.SocketError = ... # 0x4
+    TypeOfServiceOption      : QAbstractSocket.SocketOption = ... # 0x4
+    ListeningState           : QAbstractSocket.SocketState = ... # 0x5
+    SendBufferSizeSocketOption: QAbstractSocket.SocketOption = ... # 0x5
+    SocketTimeoutError       : QAbstractSocket.SocketError = ... # 0x5
+    ClosingState             : QAbstractSocket.SocketState = ... # 0x6
+    DatagramTooLargeError    : QAbstractSocket.SocketError = ... # 0x6
+    ReceiveBufferSizeSocketOption: QAbstractSocket.SocketOption = ... # 0x6
+    NetworkError             : QAbstractSocket.SocketError = ... # 0x7
+    PathMtuSocketOption      : QAbstractSocket.SocketOption = ... # 0x7
+    AddressInUseError        : QAbstractSocket.SocketError = ... # 0x8
+    SocketAddressNotAvailableError: QAbstractSocket.SocketError = ... # 0x9
+    UnsupportedSocketOperationError: QAbstractSocket.SocketError = ... # 0xa
+    UnfinishedSocketOperationError: QAbstractSocket.SocketError = ... # 0xb
+    ProxyAuthenticationRequiredError: QAbstractSocket.SocketError = ... # 0xc
+    SslHandshakeFailedError  : QAbstractSocket.SocketError = ... # 0xd
+    ProxyConnectionRefusedError: QAbstractSocket.SocketError = ... # 0xe
+    ProxyConnectionClosedError: QAbstractSocket.SocketError = ... # 0xf
+    ProxyConnectionTimeoutError: QAbstractSocket.SocketError = ... # 0x10
+    ProxyNotFoundError       : QAbstractSocket.SocketError = ... # 0x11
+    ProxyProtocolError       : QAbstractSocket.SocketError = ... # 0x12
+    OperationError           : QAbstractSocket.SocketError = ... # 0x13
+    SslInternalError         : QAbstractSocket.SocketError = ... # 0x14
+    SslInvalidUserDataError  : QAbstractSocket.SocketError = ... # 0x15
+    TemporaryError           : QAbstractSocket.SocketError = ... # 0x16
 
     class BindFlag(object):
         DefaultForPlatform       : QAbstractSocket.BindFlag = ... # 0x0
@@ -304,23 +304,23 @@ class QDnsHostAddressRecord(Shiboken.Object):
 
 
 class QDnsLookup(PySide2.QtCore.QObject):
-    NoError                  : QDnsLookup = ... # 0x0
-    A                        : QDnsLookup = ... # 0x1
-    ResolverError            : QDnsLookup = ... # 0x1
-    NS                       : QDnsLookup = ... # 0x2
-    OperationCancelledError  : QDnsLookup = ... # 0x2
-    InvalidRequestError      : QDnsLookup = ... # 0x3
-    InvalidReplyError        : QDnsLookup = ... # 0x4
-    CNAME                    : QDnsLookup = ... # 0x5
-    ServerFailureError       : QDnsLookup = ... # 0x5
-    ServerRefusedError       : QDnsLookup = ... # 0x6
-    NotFoundError            : QDnsLookup = ... # 0x7
-    PTR                      : QDnsLookup = ... # 0xc
-    MX                       : QDnsLookup = ... # 0xf
-    TXT                      : QDnsLookup = ... # 0x10
-    AAAA                     : QDnsLookup = ... # 0x1c
-    SRV                      : QDnsLookup = ... # 0x21
-    ANY                      : QDnsLookup = ... # 0xff
+    NoError                  : QDnsLookup.Error = ... # 0x0
+    A                        : QDnsLookup.Type = ... # 0x1
+    ResolverError            : QDnsLookup.Error = ... # 0x1
+    NS                       : QDnsLookup.Type = ... # 0x2
+    OperationCancelledError  : QDnsLookup.Error = ... # 0x2
+    InvalidRequestError      : QDnsLookup.Error = ... # 0x3
+    InvalidReplyError        : QDnsLookup.Error = ... # 0x4
+    CNAME                    : QDnsLookup.Type = ... # 0x5
+    ServerFailureError       : QDnsLookup.Error = ... # 0x5
+    ServerRefusedError       : QDnsLookup.Error = ... # 0x6
+    NotFoundError            : QDnsLookup.Error = ... # 0x7
+    PTR                      : QDnsLookup.Type = ... # 0xc
+    MX                       : QDnsLookup.Type = ... # 0xf
+    TXT                      : QDnsLookup.Type = ... # 0x10
+    AAAA                     : QDnsLookup.Type = ... # 0x1c
+    SRV                      : QDnsLookup.Type = ... # 0x21
+    ANY                      : QDnsLookup.Type = ... # 0xff
 
     class Error(object):
         NoError                  : QDnsLookup.Error = ... # 0x0
@@ -421,10 +421,10 @@ class QDnsTextRecord(Shiboken.Object):
 
 if sys.platform() == 'linux' or sys.platform() == 'win32':
     class QDtls(PySide2.QtCore.QObject):
-        HandshakeNotStarted      : QDtls = ... # 0x0
-        HandshakeInProgress      : QDtls = ... # 0x1
-        PeerVerificationFailed   : QDtls = ... # 0x2
-        HandshakeComplete        : QDtls = ... # 0x3
+        HandshakeNotStarted      : QDtls.HandshakeState = ... # 0x0
+        HandshakeInProgress      : QDtls.HandshakeState = ... # 0x1
+        PeerVerificationFailed   : QDtls.HandshakeState = ... # 0x2
+        HandshakeComplete        : QDtls.HandshakeState = ... # 0x3
 
         class HandshakeState(object):
             HandshakeNotStarted      : QDtls.HandshakeState = ... # 0x0
@@ -474,19 +474,19 @@ if sys.platform() == 'linux' or sys.platform() == 'win32':
 
 
 class QHostAddress(Shiboken.Object):
-    Null                     : QHostAddress = ... # 0x0
-    StrictConversion         : QHostAddress = ... # 0x0
-    Broadcast                : QHostAddress = ... # 0x1
-    ConvertV4MappedToIPv4    : QHostAddress = ... # 0x1
-    ConvertV4CompatToIPv4    : QHostAddress = ... # 0x2
-    LocalHost                : QHostAddress = ... # 0x2
-    LocalHostIPv6            : QHostAddress = ... # 0x3
-    Any                      : QHostAddress = ... # 0x4
-    ConvertUnspecifiedAddress: QHostAddress = ... # 0x4
-    AnyIPv6                  : QHostAddress = ... # 0x5
-    AnyIPv4                  : QHostAddress = ... # 0x6
-    ConvertLocalHost         : QHostAddress = ... # 0x8
-    TolerantConversion       : QHostAddress = ... # 0xff
+    Null                     : QHostAddress.SpecialAddress = ... # 0x0
+    StrictConversion         : QHostAddress.ConversionModeFlag = ... # 0x0
+    Broadcast                : QHostAddress.SpecialAddress = ... # 0x1
+    ConvertV4MappedToIPv4    : QHostAddress.ConversionModeFlag = ... # 0x1
+    ConvertV4CompatToIPv4    : QHostAddress.ConversionModeFlag = ... # 0x2
+    LocalHost                : QHostAddress.SpecialAddress = ... # 0x2
+    LocalHostIPv6            : QHostAddress.SpecialAddress = ... # 0x3
+    Any                      : QHostAddress.SpecialAddress = ... # 0x4
+    ConvertUnspecifiedAddress: QHostAddress.ConversionModeFlag = ... # 0x4
+    AnyIPv6                  : QHostAddress.SpecialAddress = ... # 0x5
+    AnyIPv4                  : QHostAddress.SpecialAddress = ... # 0x6
+    ConvertLocalHost         : QHostAddress.ConversionModeFlag = ... # 0x8
+    TolerantConversion       : QHostAddress.ConversionModeFlag = ... # 0xff
 
     class ConversionMode(object): ...
 
@@ -561,9 +561,9 @@ class QHostAddress(Shiboken.Object):
 
 
 class QHostInfo(Shiboken.Object):
-    NoError                  : QHostInfo = ... # 0x0
-    HostNotFound             : QHostInfo = ... # 0x1
-    UnknownError             : QHostInfo = ... # 0x2
+    NoError                  : QHostInfo.HostInfoError = ... # 0x0
+    HostNotFound             : QHostInfo.HostInfoError = ... # 0x1
+    UnknownError             : QHostInfo.HostInfoError = ... # 0x2
 
     class HostInfoError(object):
         NoError                  : QHostInfo.HostInfoError = ... # 0x0
@@ -599,7 +599,7 @@ class QHostInfo(Shiboken.Object):
 
 
 class QHstsPolicy(Shiboken.Object):
-    IncludeSubDomains        : QHstsPolicy = ... # 0x1
+    IncludeSubDomains        : QHstsPolicy.PolicyFlag = ... # 0x1
 
     class PolicyFlag(object):
         IncludeSubDomains        : QHstsPolicy.PolicyFlag = ... # 0x1
@@ -626,10 +626,10 @@ class QHstsPolicy(Shiboken.Object):
 
 
 class QHttpMultiPart(PySide2.QtCore.QObject):
-    MixedType                : QHttpMultiPart = ... # 0x0
-    RelatedType              : QHttpMultiPart = ... # 0x1
-    FormDataType             : QHttpMultiPart = ... # 0x2
-    AlternativeType          : QHttpMultiPart = ... # 0x3
+    MixedType                : QHttpMultiPart.ContentType = ... # 0x0
+    RelatedType              : QHttpMultiPart.ContentType = ... # 0x1
+    FormDataType             : QHttpMultiPart.ContentType = ... # 0x2
+    AlternativeType          : QHttpMultiPart.ContentType = ... # 0x3
 
     class ContentType(object):
         MixedType                : QHttpMultiPart.ContentType = ... # 0x0
@@ -676,11 +676,11 @@ class QIPv6Address(Shiboken.Object):
 
 
 class QLocalServer(PySide2.QtCore.QObject):
-    NoOptions                : QLocalServer = ... # 0x0
-    UserAccessOption         : QLocalServer = ... # 0x1
-    GroupAccessOption        : QLocalServer = ... # 0x2
-    OtherAccessOption        : QLocalServer = ... # 0x4
-    WorldAccessOption        : QLocalServer = ... # 0x7
+    NoOptions                : QLocalServer.SocketOption = ... # 0x0
+    UserAccessOption         : QLocalServer.SocketOption = ... # 0x1
+    GroupAccessOption        : QLocalServer.SocketOption = ... # 0x2
+    OtherAccessOption        : QLocalServer.SocketOption = ... # 0x4
+    WorldAccessOption        : QLocalServer.SocketOption = ... # 0x7
 
     class SocketOption(object):
         NoOptions                : QLocalServer.SocketOption = ... # 0x0
@@ -717,21 +717,21 @@ class QLocalServer(PySide2.QtCore.QObject):
 
 
 class QLocalSocket(PySide2.QtCore.QIODevice):
-    UnknownSocketError       : QLocalSocket = ... # -0x1
-    ConnectionRefusedError   : QLocalSocket = ... # 0x0
-    UnconnectedState         : QLocalSocket = ... # 0x0
-    PeerClosedError          : QLocalSocket = ... # 0x1
-    ConnectingState          : QLocalSocket = ... # 0x2
-    ServerNotFoundError      : QLocalSocket = ... # 0x2
-    ConnectedState           : QLocalSocket = ... # 0x3
-    SocketAccessError        : QLocalSocket = ... # 0x3
-    SocketResourceError      : QLocalSocket = ... # 0x4
-    SocketTimeoutError       : QLocalSocket = ... # 0x5
-    ClosingState             : QLocalSocket = ... # 0x6
-    DatagramTooLargeError    : QLocalSocket = ... # 0x6
-    ConnectionError          : QLocalSocket = ... # 0x7
-    UnsupportedSocketOperationError: QLocalSocket = ... # 0xa
-    OperationError           : QLocalSocket = ... # 0x13
+    UnknownSocketError       : QLocalSocket.LocalSocketError = ... # -0x1
+    ConnectionRefusedError   : QLocalSocket.LocalSocketError = ... # 0x0
+    UnconnectedState         : QLocalSocket.LocalSocketState = ... # 0x0
+    PeerClosedError          : QLocalSocket.LocalSocketError = ... # 0x1
+    ConnectingState          : QLocalSocket.LocalSocketState = ... # 0x2
+    ServerNotFoundError      : QLocalSocket.LocalSocketError = ... # 0x2
+    ConnectedState           : QLocalSocket.LocalSocketState = ... # 0x3
+    SocketAccessError        : QLocalSocket.LocalSocketError = ... # 0x3
+    SocketResourceError      : QLocalSocket.LocalSocketError = ... # 0x4
+    SocketTimeoutError       : QLocalSocket.LocalSocketError = ... # 0x5
+    ClosingState             : QLocalSocket.LocalSocketState = ... # 0x6
+    DatagramTooLargeError    : QLocalSocket.LocalSocketError = ... # 0x6
+    ConnectionError          : QLocalSocket.LocalSocketError = ... # 0x7
+    UnsupportedSocketOperationError: QLocalSocket.LocalSocketError = ... # 0xa
+    OperationError           : QLocalSocket.LocalSocketError = ... # 0x13
 
     class LocalSocketError(object):
         UnknownSocketError       : QLocalSocket.LocalSocketError = ... # -0x1
@@ -786,16 +786,16 @@ class QLocalSocket(PySide2.QtCore.QIODevice):
 
 
 class QNetworkAccessManager(PySide2.QtCore.QObject):
-    UnknownAccessibility     : QNetworkAccessManager = ... # -0x1
-    NotAccessible            : QNetworkAccessManager = ... # 0x0
-    UnknownOperation         : QNetworkAccessManager = ... # 0x0
-    Accessible               : QNetworkAccessManager = ... # 0x1
-    HeadOperation            : QNetworkAccessManager = ... # 0x1
-    GetOperation             : QNetworkAccessManager = ... # 0x2
-    PutOperation             : QNetworkAccessManager = ... # 0x3
-    PostOperation            : QNetworkAccessManager = ... # 0x4
-    DeleteOperation          : QNetworkAccessManager = ... # 0x5
-    CustomOperation          : QNetworkAccessManager = ... # 0x6
+    UnknownAccessibility     : QNetworkAccessManager.NetworkAccessibility = ... # -0x1
+    NotAccessible            : QNetworkAccessManager.NetworkAccessibility = ... # 0x0
+    UnknownOperation         : QNetworkAccessManager.Operation = ... # 0x0
+    Accessible               : QNetworkAccessManager.NetworkAccessibility = ... # 0x1
+    HeadOperation            : QNetworkAccessManager.Operation = ... # 0x1
+    GetOperation             : QNetworkAccessManager.Operation = ... # 0x2
+    PutOperation             : QNetworkAccessManager.Operation = ... # 0x3
+    PostOperation            : QNetworkAccessManager.Operation = ... # 0x4
+    DeleteOperation          : QNetworkAccessManager.Operation = ... # 0x5
+    CustomOperation          : QNetworkAccessManager.Operation = ... # 0x6
 
     class NetworkAccessibility(object):
         UnknownAccessibility     : QNetworkAccessManager.NetworkAccessibility = ... # -0x1
@@ -872,9 +872,9 @@ class QNetworkAccessManager(PySide2.QtCore.QObject):
 
 
 class QNetworkAddressEntry(Shiboken.Object):
-    DnsEligibilityUnknown    : QNetworkAddressEntry = ... # -0x1
-    DnsIneligible            : QNetworkAddressEntry = ... # 0x0
-    DnsEligible              : QNetworkAddressEntry = ... # 0x1
+    DnsEligibilityUnknown    : QNetworkAddressEntry.DnsEligibilityStatus = ... # -0x1
+    DnsIneligible            : QNetworkAddressEntry.DnsEligibilityStatus = ... # 0x0
+    DnsEligible              : QNetworkAddressEntry.DnsEligibilityStatus = ... # 0x1
 
     class DnsEligibilityStatus(object):
         DnsEligibilityUnknown    : QNetworkAddressEntry.DnsEligibilityStatus = ... # -0x1
@@ -936,31 +936,31 @@ class QNetworkCacheMetaData(Shiboken.Object):
 
 
 class QNetworkConfiguration(Shiboken.Object):
-    BearerUnknown            : QNetworkConfiguration = ... # 0x0
-    InternetAccessPoint      : QNetworkConfiguration = ... # 0x0
-    UnknownPurpose           : QNetworkConfiguration = ... # 0x0
-    BearerEthernet           : QNetworkConfiguration = ... # 0x1
-    PublicPurpose            : QNetworkConfiguration = ... # 0x1
-    ServiceNetwork           : QNetworkConfiguration = ... # 0x1
-    Undefined                : QNetworkConfiguration = ... # 0x1
-    BearerWLAN               : QNetworkConfiguration = ... # 0x2
-    Defined                  : QNetworkConfiguration = ... # 0x2
-    PrivatePurpose           : QNetworkConfiguration = ... # 0x2
-    UserChoice               : QNetworkConfiguration = ... # 0x2
-    Bearer2G                 : QNetworkConfiguration = ... # 0x3
-    Invalid                  : QNetworkConfiguration = ... # 0x3
-    ServiceSpecificPurpose   : QNetworkConfiguration = ... # 0x3
-    BearerCDMA2000           : QNetworkConfiguration = ... # 0x4
-    BearerWCDMA              : QNetworkConfiguration = ... # 0x5
-    BearerHSPA               : QNetworkConfiguration = ... # 0x6
-    Discovered               : QNetworkConfiguration = ... # 0x6
-    BearerBluetooth          : QNetworkConfiguration = ... # 0x7
-    BearerWiMAX              : QNetworkConfiguration = ... # 0x8
-    BearerEVDO               : QNetworkConfiguration = ... # 0x9
-    BearerLTE                : QNetworkConfiguration = ... # 0xa
-    Bearer3G                 : QNetworkConfiguration = ... # 0xb
-    Bearer4G                 : QNetworkConfiguration = ... # 0xc
-    Active                   : QNetworkConfiguration = ... # 0xe
+    BearerUnknown            : QNetworkConfiguration.BearerType = ... # 0x0
+    InternetAccessPoint      : QNetworkConfiguration.Type = ... # 0x0
+    UnknownPurpose           : QNetworkConfiguration.Purpose = ... # 0x0
+    BearerEthernet           : QNetworkConfiguration.BearerType = ... # 0x1
+    PublicPurpose            : QNetworkConfiguration.Purpose = ... # 0x1
+    ServiceNetwork           : QNetworkConfiguration.Type = ... # 0x1
+    Undefined                : QNetworkConfiguration.StateFlag = ... # 0x1
+    BearerWLAN               : QNetworkConfiguration.BearerType = ... # 0x2
+    Defined                  : QNetworkConfiguration.StateFlag = ... # 0x2
+    PrivatePurpose           : QNetworkConfiguration.Purpose = ... # 0x2
+    UserChoice               : QNetworkConfiguration.Type = ... # 0x2
+    Bearer2G                 : QNetworkConfiguration.BearerType = ... # 0x3
+    Invalid                  : QNetworkConfiguration.Type = ... # 0x3
+    ServiceSpecificPurpose   : QNetworkConfiguration.Purpose = ... # 0x3
+    BearerCDMA2000           : QNetworkConfiguration.BearerType = ... # 0x4
+    BearerWCDMA              : QNetworkConfiguration.BearerType = ... # 0x5
+    BearerHSPA               : QNetworkConfiguration.BearerType = ... # 0x6
+    Discovered               : QNetworkConfiguration.StateFlag = ... # 0x6
+    BearerBluetooth          : QNetworkConfiguration.BearerType = ... # 0x7
+    BearerWiMAX              : QNetworkConfiguration.BearerType = ... # 0x8
+    BearerEVDO               : QNetworkConfiguration.BearerType = ... # 0x9
+    BearerLTE                : QNetworkConfiguration.BearerType = ... # 0xa
+    Bearer3G                 : QNetworkConfiguration.BearerType = ... # 0xb
+    Bearer4G                 : QNetworkConfiguration.BearerType = ... # 0xc
+    Active                   : QNetworkConfiguration.StateFlag = ... # 0xe
 
     class BearerType(object):
         BearerUnknown            : QNetworkConfiguration.BearerType = ... # 0x0
@@ -1021,13 +1021,13 @@ class QNetworkConfiguration(Shiboken.Object):
 
 
 class QNetworkConfigurationManager(PySide2.QtCore.QObject):
-    CanStartAndStopInterfaces: QNetworkConfigurationManager = ... # 0x1
-    DirectConnectionRouting  : QNetworkConfigurationManager = ... # 0x2
-    SystemSessionSupport     : QNetworkConfigurationManager = ... # 0x4
-    ApplicationLevelRoaming  : QNetworkConfigurationManager = ... # 0x8
-    ForcedRoaming            : QNetworkConfigurationManager = ... # 0x10
-    DataStatistics           : QNetworkConfigurationManager = ... # 0x20
-    NetworkSessionRequired   : QNetworkConfigurationManager = ... # 0x40
+    CanStartAndStopInterfaces: QNetworkConfigurationManager.Capability = ... # 0x1
+    DirectConnectionRouting  : QNetworkConfigurationManager.Capability = ... # 0x2
+    SystemSessionSupport     : QNetworkConfigurationManager.Capability = ... # 0x4
+    ApplicationLevelRoaming  : QNetworkConfigurationManager.Capability = ... # 0x8
+    ForcedRoaming            : QNetworkConfigurationManager.Capability = ... # 0x10
+    DataStatistics           : QNetworkConfigurationManager.Capability = ... # 0x20
+    NetworkSessionRequired   : QNetworkConfigurationManager.Capability = ... # 0x40
 
     class Capabilities(object): ...
 
@@ -1051,8 +1051,8 @@ class QNetworkConfigurationManager(PySide2.QtCore.QObject):
 
 
 class QNetworkCookie(Shiboken.Object):
-    NameAndValueOnly         : QNetworkCookie = ... # 0x0
-    Full                     : QNetworkCookie = ... # 0x1
+    NameAndValueOnly         : QNetworkCookie.RawForm = ... # 0x0
+    Full                     : QNetworkCookie.RawForm = ... # 0x1
 
     class RawForm(object):
         NameAndValueOnly         : QNetworkCookie.RawForm = ... # 0x0
@@ -1153,27 +1153,27 @@ class QNetworkDiskCache(PySide2.QtNetwork.QAbstractNetworkCache):
 
 
 class QNetworkInterface(Shiboken.Object):
-    Unknown                  : QNetworkInterface = ... # 0x0
-    IsUp                     : QNetworkInterface = ... # 0x1
-    Loopback                 : QNetworkInterface = ... # 0x1
-    IsRunning                : QNetworkInterface = ... # 0x2
-    Virtual                  : QNetworkInterface = ... # 0x2
-    Ethernet                 : QNetworkInterface = ... # 0x3
-    CanBroadcast             : QNetworkInterface = ... # 0x4
-    Slip                     : QNetworkInterface = ... # 0x4
-    CanBus                   : QNetworkInterface = ... # 0x5
-    Ppp                      : QNetworkInterface = ... # 0x6
-    Fddi                     : QNetworkInterface = ... # 0x7
-    Ieee80211                : QNetworkInterface = ... # 0x8
-    IsLoopBack               : QNetworkInterface = ... # 0x8
-    Wifi                     : QNetworkInterface = ... # 0x8
-    Phonet                   : QNetworkInterface = ... # 0x9
-    Ieee802154               : QNetworkInterface = ... # 0xa
-    SixLoWPAN                : QNetworkInterface = ... # 0xb
-    Ieee80216                : QNetworkInterface = ... # 0xc
-    Ieee1394                 : QNetworkInterface = ... # 0xd
-    IsPointToPoint           : QNetworkInterface = ... # 0x10
-    CanMulticast             : QNetworkInterface = ... # 0x20
+    Unknown                  : QNetworkInterface.InterfaceType = ... # 0x0
+    IsUp                     : QNetworkInterface.InterfaceFlag = ... # 0x1
+    Loopback                 : QNetworkInterface.InterfaceType = ... # 0x1
+    IsRunning                : QNetworkInterface.InterfaceFlag = ... # 0x2
+    Virtual                  : QNetworkInterface.InterfaceType = ... # 0x2
+    Ethernet                 : QNetworkInterface.InterfaceType = ... # 0x3
+    CanBroadcast             : QNetworkInterface.InterfaceFlag = ... # 0x4
+    Slip                     : QNetworkInterface.InterfaceType = ... # 0x4
+    CanBus                   : QNetworkInterface.InterfaceType = ... # 0x5
+    Ppp                      : QNetworkInterface.InterfaceType = ... # 0x6
+    Fddi                     : QNetworkInterface.InterfaceType = ... # 0x7
+    Ieee80211                : QNetworkInterface.InterfaceType = ... # 0x8
+    IsLoopBack               : QNetworkInterface.InterfaceFlag = ... # 0x8
+    Wifi                     : QNetworkInterface.InterfaceType = ... # 0x8
+    Phonet                   : QNetworkInterface.InterfaceType = ... # 0x9
+    Ieee802154               : QNetworkInterface.InterfaceType = ... # 0xa
+    SixLoWPAN                : QNetworkInterface.InterfaceType = ... # 0xb
+    Ieee80216                : QNetworkInterface.InterfaceType = ... # 0xc
+    Ieee1394                 : QNetworkInterface.InterfaceType = ... # 0xd
+    IsPointToPoint           : QNetworkInterface.InterfaceFlag = ... # 0x10
+    CanMulticast             : QNetworkInterface.InterfaceFlag = ... # 0x20
 
     class InterfaceFlag(object):
         IsUp                     : QNetworkInterface.InterfaceFlag = ... # 0x1
@@ -1234,19 +1234,19 @@ class QNetworkInterface(Shiboken.Object):
 
 
 class QNetworkProxy(Shiboken.Object):
-    DefaultProxy             : QNetworkProxy = ... # 0x0
-    Socks5Proxy              : QNetworkProxy = ... # 0x1
-    TunnelingCapability      : QNetworkProxy = ... # 0x1
-    ListeningCapability      : QNetworkProxy = ... # 0x2
-    NoProxy                  : QNetworkProxy = ... # 0x2
-    HttpProxy                : QNetworkProxy = ... # 0x3
-    HttpCachingProxy         : QNetworkProxy = ... # 0x4
-    UdpTunnelingCapability   : QNetworkProxy = ... # 0x4
-    FtpCachingProxy          : QNetworkProxy = ... # 0x5
-    CachingCapability        : QNetworkProxy = ... # 0x8
-    HostNameLookupCapability : QNetworkProxy = ... # 0x10
-    SctpTunnelingCapability  : QNetworkProxy = ... # 0x20
-    SctpListeningCapability  : QNetworkProxy = ... # 0x40
+    DefaultProxy             : QNetworkProxy.ProxyType = ... # 0x0
+    Socks5Proxy              : QNetworkProxy.ProxyType = ... # 0x1
+    TunnelingCapability      : QNetworkProxy.Capability = ... # 0x1
+    ListeningCapability      : QNetworkProxy.Capability = ... # 0x2
+    NoProxy                  : QNetworkProxy.ProxyType = ... # 0x2
+    HttpProxy                : QNetworkProxy.ProxyType = ... # 0x3
+    HttpCachingProxy         : QNetworkProxy.ProxyType = ... # 0x4
+    UdpTunnelingCapability   : QNetworkProxy.Capability = ... # 0x4
+    FtpCachingProxy          : QNetworkProxy.ProxyType = ... # 0x5
+    CachingCapability        : QNetworkProxy.Capability = ... # 0x8
+    HostNameLookupCapability : QNetworkProxy.Capability = ... # 0x10
+    SctpTunnelingCapability  : QNetworkProxy.Capability = ... # 0x20
+    SctpListeningCapability  : QNetworkProxy.Capability = ... # 0x40
 
     class Capabilities(object): ...
 
@@ -1321,12 +1321,12 @@ class QNetworkProxyFactory(Shiboken.Object):
 
 
 class QNetworkProxyQuery(Shiboken.Object):
-    TcpSocket                : QNetworkProxyQuery = ... # 0x0
-    UdpSocket                : QNetworkProxyQuery = ... # 0x1
-    SctpSocket               : QNetworkProxyQuery = ... # 0x2
-    TcpServer                : QNetworkProxyQuery = ... # 0x64
-    UrlRequest               : QNetworkProxyQuery = ... # 0x65
-    SctpServer               : QNetworkProxyQuery = ... # 0x66
+    TcpSocket                : QNetworkProxyQuery.QueryType = ... # 0x0
+    UdpSocket                : QNetworkProxyQuery.QueryType = ... # 0x1
+    SctpSocket               : QNetworkProxyQuery.QueryType = ... # 0x2
+    TcpServer                : QNetworkProxyQuery.QueryType = ... # 0x64
+    UrlRequest               : QNetworkProxyQuery.QueryType = ... # 0x65
+    SctpServer               : QNetworkProxyQuery.QueryType = ... # 0x66
 
     class QueryType(object):
         TcpSocket                : QNetworkProxyQuery.QueryType = ... # 0x0
@@ -1373,40 +1373,40 @@ class QNetworkProxyQuery(Shiboken.Object):
 
 
 class QNetworkReply(PySide2.QtCore.QIODevice):
-    NoError                  : QNetworkReply = ... # 0x0
-    ConnectionRefusedError   : QNetworkReply = ... # 0x1
-    RemoteHostClosedError    : QNetworkReply = ... # 0x2
-    HostNotFoundError        : QNetworkReply = ... # 0x3
-    TimeoutError             : QNetworkReply = ... # 0x4
-    OperationCanceledError   : QNetworkReply = ... # 0x5
-    SslHandshakeFailedError  : QNetworkReply = ... # 0x6
-    TemporaryNetworkFailureError: QNetworkReply = ... # 0x7
-    NetworkSessionFailedError: QNetworkReply = ... # 0x8
-    BackgroundRequestNotAllowedError: QNetworkReply = ... # 0x9
-    TooManyRedirectsError    : QNetworkReply = ... # 0xa
-    InsecureRedirectError    : QNetworkReply = ... # 0xb
-    UnknownNetworkError      : QNetworkReply = ... # 0x63
-    ProxyConnectionRefusedError: QNetworkReply = ... # 0x65
-    ProxyConnectionClosedError: QNetworkReply = ... # 0x66
-    ProxyNotFoundError       : QNetworkReply = ... # 0x67
-    ProxyTimeoutError        : QNetworkReply = ... # 0x68
-    ProxyAuthenticationRequiredError: QNetworkReply = ... # 0x69
-    UnknownProxyError        : QNetworkReply = ... # 0xc7
-    ContentAccessDenied      : QNetworkReply = ... # 0xc9
-    ContentOperationNotPermittedError: QNetworkReply = ... # 0xca
-    ContentNotFoundError     : QNetworkReply = ... # 0xcb
-    AuthenticationRequiredError: QNetworkReply = ... # 0xcc
-    ContentReSendError       : QNetworkReply = ... # 0xcd
-    ContentConflictError     : QNetworkReply = ... # 0xce
-    ContentGoneError         : QNetworkReply = ... # 0xcf
-    UnknownContentError      : QNetworkReply = ... # 0x12b
-    ProtocolUnknownError     : QNetworkReply = ... # 0x12d
-    ProtocolInvalidOperationError: QNetworkReply = ... # 0x12e
-    ProtocolFailure          : QNetworkReply = ... # 0x18f
-    InternalServerError      : QNetworkReply = ... # 0x191
-    OperationNotImplementedError: QNetworkReply = ... # 0x192
-    ServiceUnavailableError  : QNetworkReply = ... # 0x193
-    UnknownServerError       : QNetworkReply = ... # 0x1f3
+    NoError                  : QNetworkReply.NetworkError = ... # 0x0
+    ConnectionRefusedError   : QNetworkReply.NetworkError = ... # 0x1
+    RemoteHostClosedError    : QNetworkReply.NetworkError = ... # 0x2
+    HostNotFoundError        : QNetworkReply.NetworkError = ... # 0x3
+    TimeoutError             : QNetworkReply.NetworkError = ... # 0x4
+    OperationCanceledError   : QNetworkReply.NetworkError = ... # 0x5
+    SslHandshakeFailedError  : QNetworkReply.NetworkError = ... # 0x6
+    TemporaryNetworkFailureError: QNetworkReply.NetworkError = ... # 0x7
+    NetworkSessionFailedError: QNetworkReply.NetworkError = ... # 0x8
+    BackgroundRequestNotAllowedError: QNetworkReply.NetworkError = ... # 0x9
+    TooManyRedirectsError    : QNetworkReply.NetworkError = ... # 0xa
+    InsecureRedirectError    : QNetworkReply.NetworkError = ... # 0xb
+    UnknownNetworkError      : QNetworkReply.NetworkError = ... # 0x63
+    ProxyConnectionRefusedError: QNetworkReply.NetworkError = ... # 0x65
+    ProxyConnectionClosedError: QNetworkReply.NetworkError = ... # 0x66
+    ProxyNotFoundError       : QNetworkReply.NetworkError = ... # 0x67
+    ProxyTimeoutError        : QNetworkReply.NetworkError = ... # 0x68
+    ProxyAuthenticationRequiredError: QNetworkReply.NetworkError = ... # 0x69
+    UnknownProxyError        : QNetworkReply.NetworkError = ... # 0xc7
+    ContentAccessDenied      : QNetworkReply.NetworkError = ... # 0xc9
+    ContentOperationNotPermittedError: QNetworkReply.NetworkError = ... # 0xca
+    ContentNotFoundError     : QNetworkReply.NetworkError = ... # 0xcb
+    AuthenticationRequiredError: QNetworkReply.NetworkError = ... # 0xcc
+    ContentReSendError       : QNetworkReply.NetworkError = ... # 0xcd
+    ContentConflictError     : QNetworkReply.NetworkError = ... # 0xce
+    ContentGoneError         : QNetworkReply.NetworkError = ... # 0xcf
+    UnknownContentError      : QNetworkReply.NetworkError = ... # 0x12b
+    ProtocolUnknownError     : QNetworkReply.NetworkError = ... # 0x12d
+    ProtocolInvalidOperationError: QNetworkReply.NetworkError = ... # 0x12e
+    ProtocolFailure          : QNetworkReply.NetworkError = ... # 0x18f
+    InternalServerError      : QNetworkReply.NetworkError = ... # 0x191
+    OperationNotImplementedError: QNetworkReply.NetworkError = ... # 0x192
+    ServiceUnavailableError  : QNetworkReply.NetworkError = ... # 0x193
+    UnknownServerError       : QNetworkReply.NetworkError = ... # 0x1f3
 
     class NetworkError(object):
         NoError                  : QNetworkReply.NetworkError = ... # 0x0
@@ -1485,66 +1485,66 @@ class QNetworkReply(PySide2.QtCore.QIODevice):
 
 
 class QNetworkRequest(Shiboken.Object):
-    AlwaysNetwork            : QNetworkRequest = ... # 0x0
-    Automatic                : QNetworkRequest = ... # 0x0
-    ContentTypeHeader        : QNetworkRequest = ... # 0x0
-    HttpStatusCodeAttribute  : QNetworkRequest = ... # 0x0
-    ManualRedirectPolicy     : QNetworkRequest = ... # 0x0
-    ContentLengthHeader      : QNetworkRequest = ... # 0x1
-    HighPriority             : QNetworkRequest = ... # 0x1
-    HttpReasonPhraseAttribute: QNetworkRequest = ... # 0x1
-    Manual                   : QNetworkRequest = ... # 0x1
-    NoLessSafeRedirectPolicy : QNetworkRequest = ... # 0x1
-    PreferNetwork            : QNetworkRequest = ... # 0x1
-    LocationHeader           : QNetworkRequest = ... # 0x2
-    PreferCache              : QNetworkRequest = ... # 0x2
-    RedirectionTargetAttribute: QNetworkRequest = ... # 0x2
-    SameOriginRedirectPolicy : QNetworkRequest = ... # 0x2
-    AlwaysCache              : QNetworkRequest = ... # 0x3
-    ConnectionEncryptedAttribute: QNetworkRequest = ... # 0x3
-    LastModifiedHeader       : QNetworkRequest = ... # 0x3
-    NormalPriority           : QNetworkRequest = ... # 0x3
-    UserVerifiedRedirectPolicy: QNetworkRequest = ... # 0x3
-    CacheLoadControlAttribute: QNetworkRequest = ... # 0x4
-    CookieHeader             : QNetworkRequest = ... # 0x4
-    CacheSaveControlAttribute: QNetworkRequest = ... # 0x5
-    LowPriority              : QNetworkRequest = ... # 0x5
-    SetCookieHeader          : QNetworkRequest = ... # 0x5
-    ContentDispositionHeader : QNetworkRequest = ... # 0x6
-    SourceIsFromCacheAttribute: QNetworkRequest = ... # 0x6
-    DoNotBufferUploadDataAttribute: QNetworkRequest = ... # 0x7
-    UserAgentHeader          : QNetworkRequest = ... # 0x7
-    HttpPipeliningAllowedAttribute: QNetworkRequest = ... # 0x8
-    ServerHeader             : QNetworkRequest = ... # 0x8
-    HttpPipeliningWasUsedAttribute: QNetworkRequest = ... # 0x9
-    IfModifiedSinceHeader    : QNetworkRequest = ... # 0x9
-    CustomVerbAttribute      : QNetworkRequest = ... # 0xa
-    ETagHeader               : QNetworkRequest = ... # 0xa
-    CookieLoadControlAttribute: QNetworkRequest = ... # 0xb
-    IfMatchHeader            : QNetworkRequest = ... # 0xb
-    AuthenticationReuseAttribute: QNetworkRequest = ... # 0xc
-    IfNoneMatchHeader        : QNetworkRequest = ... # 0xc
-    CookieSaveControlAttribute: QNetworkRequest = ... # 0xd
-    MaximumDownloadBufferSizeAttribute: QNetworkRequest = ... # 0xe
-    DownloadBufferAttribute  : QNetworkRequest = ... # 0xf
-    SynchronousRequestAttribute: QNetworkRequest = ... # 0x10
-    BackgroundRequestAttribute: QNetworkRequest = ... # 0x11
-    SpdyAllowedAttribute     : QNetworkRequest = ... # 0x12
-    SpdyWasUsedAttribute     : QNetworkRequest = ... # 0x13
-    EmitAllUploadProgressSignalsAttribute: QNetworkRequest = ... # 0x14
-    FollowRedirectsAttribute : QNetworkRequest = ... # 0x15
-    HTTP2AllowedAttribute    : QNetworkRequest = ... # 0x16
-    Http2AllowedAttribute    : QNetworkRequest = ... # 0x16
-    HTTP2WasUsedAttribute    : QNetworkRequest = ... # 0x17
-    Http2WasUsedAttribute    : QNetworkRequest = ... # 0x17
-    OriginalContentLengthAttribute: QNetworkRequest = ... # 0x18
-    RedirectPolicyAttribute  : QNetworkRequest = ... # 0x19
-    Http2DirectAttribute     : QNetworkRequest = ... # 0x1a
-    ResourceTypeAttribute    : QNetworkRequest = ... # 0x1b
-    AutoDeleteReplyOnFinishAttribute: QNetworkRequest = ... # 0x1c
-    User                     : QNetworkRequest = ... # 0x3e8
-    DefaultTransferTimeoutConstant: QNetworkRequest = ... # 0x7530
-    UserMax                  : QNetworkRequest = ... # 0x7fff
+    AlwaysNetwork            : QNetworkRequest.CacheLoadControl = ... # 0x0
+    Automatic                : QNetworkRequest.LoadControl = ... # 0x0
+    ContentTypeHeader        : QNetworkRequest.KnownHeaders = ... # 0x0
+    HttpStatusCodeAttribute  : QNetworkRequest.Attribute = ... # 0x0
+    ManualRedirectPolicy     : QNetworkRequest.RedirectPolicy = ... # 0x0
+    ContentLengthHeader      : QNetworkRequest.KnownHeaders = ... # 0x1
+    HighPriority             : QNetworkRequest.Priority = ... # 0x1
+    HttpReasonPhraseAttribute: QNetworkRequest.Attribute = ... # 0x1
+    Manual                   : QNetworkRequest.LoadControl = ... # 0x1
+    NoLessSafeRedirectPolicy : QNetworkRequest.RedirectPolicy = ... # 0x1
+    PreferNetwork            : QNetworkRequest.CacheLoadControl = ... # 0x1
+    LocationHeader           : QNetworkRequest.KnownHeaders = ... # 0x2
+    PreferCache              : QNetworkRequest.CacheLoadControl = ... # 0x2
+    RedirectionTargetAttribute: QNetworkRequest.Attribute = ... # 0x2
+    SameOriginRedirectPolicy : QNetworkRequest.RedirectPolicy = ... # 0x2
+    AlwaysCache              : QNetworkRequest.CacheLoadControl = ... # 0x3
+    ConnectionEncryptedAttribute: QNetworkRequest.Attribute = ... # 0x3
+    LastModifiedHeader       : QNetworkRequest.KnownHeaders = ... # 0x3
+    NormalPriority           : QNetworkRequest.Priority = ... # 0x3
+    UserVerifiedRedirectPolicy: QNetworkRequest.RedirectPolicy = ... # 0x3
+    CacheLoadControlAttribute: QNetworkRequest.Attribute = ... # 0x4
+    CookieHeader             : QNetworkRequest.KnownHeaders = ... # 0x4
+    CacheSaveControlAttribute: QNetworkRequest.Attribute = ... # 0x5
+    LowPriority              : QNetworkRequest.Priority = ... # 0x5
+    SetCookieHeader          : QNetworkRequest.KnownHeaders = ... # 0x5
+    ContentDispositionHeader : QNetworkRequest.KnownHeaders = ... # 0x6
+    SourceIsFromCacheAttribute: QNetworkRequest.Attribute = ... # 0x6
+    DoNotBufferUploadDataAttribute: QNetworkRequest.Attribute = ... # 0x7
+    UserAgentHeader          : QNetworkRequest.KnownHeaders = ... # 0x7
+    HttpPipeliningAllowedAttribute: QNetworkRequest.Attribute = ... # 0x8
+    ServerHeader             : QNetworkRequest.KnownHeaders = ... # 0x8
+    HttpPipeliningWasUsedAttribute: QNetworkRequest.Attribute = ... # 0x9
+    IfModifiedSinceHeader    : QNetworkRequest.KnownHeaders = ... # 0x9
+    CustomVerbAttribute      : QNetworkRequest.Attribute = ... # 0xa
+    ETagHeader               : QNetworkRequest.KnownHeaders = ... # 0xa
+    CookieLoadControlAttribute: QNetworkRequest.Attribute = ... # 0xb
+    IfMatchHeader            : QNetworkRequest.KnownHeaders = ... # 0xb
+    AuthenticationReuseAttribute: QNetworkRequest.Attribute = ... # 0xc
+    IfNoneMatchHeader        : QNetworkRequest.KnownHeaders = ... # 0xc
+    CookieSaveControlAttribute: QNetworkRequest.Attribute = ... # 0xd
+    MaximumDownloadBufferSizeAttribute: QNetworkRequest.Attribute = ... # 0xe
+    DownloadBufferAttribute  : QNetworkRequest.Attribute = ... # 0xf
+    SynchronousRequestAttribute: QNetworkRequest.Attribute = ... # 0x10
+    BackgroundRequestAttribute: QNetworkRequest.Attribute = ... # 0x11
+    SpdyAllowedAttribute     : QNetworkRequest.Attribute = ... # 0x12
+    SpdyWasUsedAttribute     : QNetworkRequest.Attribute = ... # 0x13
+    EmitAllUploadProgressSignalsAttribute: QNetworkRequest.Attribute = ... # 0x14
+    FollowRedirectsAttribute : QNetworkRequest.Attribute = ... # 0x15
+    HTTP2AllowedAttribute    : QNetworkRequest.Attribute = ... # 0x16
+    Http2AllowedAttribute    : QNetworkRequest.Attribute = ... # 0x16
+    HTTP2WasUsedAttribute    : QNetworkRequest.Attribute = ... # 0x17
+    Http2WasUsedAttribute    : QNetworkRequest.Attribute = ... # 0x17
+    OriginalContentLengthAttribute: QNetworkRequest.Attribute = ... # 0x18
+    RedirectPolicyAttribute  : QNetworkRequest.Attribute = ... # 0x19
+    Http2DirectAttribute     : QNetworkRequest.Attribute = ... # 0x1a
+    ResourceTypeAttribute    : QNetworkRequest.Attribute = ... # 0x1b
+    AutoDeleteReplyOnFinishAttribute: QNetworkRequest.Attribute = ... # 0x1c
+    User                     : QNetworkRequest.Attribute = ... # 0x3e8
+    DefaultTransferTimeoutConstant: QNetworkRequest.TransferTimeoutConstant = ... # 0x7530
+    UserMax                  : QNetworkRequest.Attribute = ... # 0x7fff
 
     class Attribute(object):
         HttpStatusCodeAttribute  : QNetworkRequest.Attribute = ... # 0x0
@@ -1655,20 +1655,20 @@ class QNetworkRequest(Shiboken.Object):
 
 
 class QNetworkSession(PySide2.QtCore.QObject):
-    Invalid                  : QNetworkSession = ... # 0x0
-    NoPolicy                 : QNetworkSession = ... # 0x0
-    UnknownSessionError      : QNetworkSession = ... # 0x0
-    NoBackgroundTrafficPolicy: QNetworkSession = ... # 0x1
-    NotAvailable             : QNetworkSession = ... # 0x1
-    SessionAbortedError      : QNetworkSession = ... # 0x1
-    Connecting               : QNetworkSession = ... # 0x2
-    RoamingError             : QNetworkSession = ... # 0x2
-    Connected                : QNetworkSession = ... # 0x3
-    OperationNotSupportedError: QNetworkSession = ... # 0x3
-    Closing                  : QNetworkSession = ... # 0x4
-    InvalidConfigurationError: QNetworkSession = ... # 0x4
-    Disconnected             : QNetworkSession = ... # 0x5
-    Roaming                  : QNetworkSession = ... # 0x6
+    Invalid                  : QNetworkSession.State = ... # 0x0
+    NoPolicy                 : QNetworkSession.UsagePolicy = ... # 0x0
+    UnknownSessionError      : QNetworkSession.SessionError = ... # 0x0
+    NoBackgroundTrafficPolicy: QNetworkSession.UsagePolicy = ... # 0x1
+    NotAvailable             : QNetworkSession.State = ... # 0x1
+    SessionAbortedError      : QNetworkSession.SessionError = ... # 0x1
+    Connecting               : QNetworkSession.State = ... # 0x2
+    RoamingError             : QNetworkSession.SessionError = ... # 0x2
+    Connected                : QNetworkSession.State = ... # 0x3
+    OperationNotSupportedError: QNetworkSession.SessionError = ... # 0x3
+    Closing                  : QNetworkSession.State = ... # 0x4
+    InvalidConfigurationError: QNetworkSession.SessionError = ... # 0x4
+    Disconnected             : QNetworkSession.State = ... # 0x5
+    Roaming                  : QNetworkSession.State = ... # 0x6
 
     class SessionError(object):
         UnknownSessionError      : QNetworkSession.SessionError = ... # 0x0
@@ -1759,44 +1759,44 @@ class QPasswordDigestor(Shiboken.Object):
 
 
 class QSsl(Shiboken.Object):
-    UnknownProtocol          : QSsl = ... # -0x1
-    EmailEntry               : QSsl = ... # 0x0
-    Opaque                   : QSsl = ... # 0x0
-    Pem                      : QSsl = ... # 0x0
-    PrivateKey               : QSsl = ... # 0x0
-    SslV3                    : QSsl = ... # 0x0
-    Der                      : QSsl = ... # 0x1
-    DnsEntry                 : QSsl = ... # 0x1
-    PublicKey                : QSsl = ... # 0x1
-    Rsa                      : QSsl = ... # 0x1
-    SslOptionDisableEmptyFragments: QSsl = ... # 0x1
-    SslV2                    : QSsl = ... # 0x1
-    Dsa                      : QSsl = ... # 0x2
-    IpAddressEntry           : QSsl = ... # 0x2
-    SslOptionDisableSessionTickets: QSsl = ... # 0x2
-    TlsV1_0                  : QSsl = ... # 0x2
-    Ec                       : QSsl = ... # 0x3
-    TlsV1_1                  : QSsl = ... # 0x3
-    Dh                       : QSsl = ... # 0x4
-    SslOptionDisableCompression: QSsl = ... # 0x4
-    TlsV1_2                  : QSsl = ... # 0x4
-    AnyProtocol              : QSsl = ... # 0x5
-    TlsV1SslV3               : QSsl = ... # 0x6
-    SecureProtocols          : QSsl = ... # 0x7
-    SslOptionDisableServerNameIndication: QSsl = ... # 0x8
-    TlsV1_0OrLater           : QSsl = ... # 0x8
-    TlsV1_1OrLater           : QSsl = ... # 0x9
-    TlsV1_2OrLater           : QSsl = ... # 0xa
-    DtlsV1_0                 : QSsl = ... # 0xb
-    DtlsV1_0OrLater          : QSsl = ... # 0xc
-    DtlsV1_2                 : QSsl = ... # 0xd
-    DtlsV1_2OrLater          : QSsl = ... # 0xe
-    TlsV1_3                  : QSsl = ... # 0xf
-    SslOptionDisableLegacyRenegotiation: QSsl = ... # 0x10
-    TlsV1_3OrLater           : QSsl = ... # 0x10
-    SslOptionDisableSessionSharing: QSsl = ... # 0x20
-    SslOptionDisableSessionPersistence: QSsl = ... # 0x40
-    SslOptionDisableServerCipherPreference: QSsl = ... # 0x80
+    UnknownProtocol          : QSsl.SslProtocol = ... # -0x1
+    EmailEntry               : QSsl.AlternativeNameEntryType = ... # 0x0
+    Opaque                   : QSsl.KeyAlgorithm = ... # 0x0
+    Pem                      : QSsl.EncodingFormat = ... # 0x0
+    PrivateKey               : QSsl.KeyType = ... # 0x0
+    SslV3                    : QSsl.SslProtocol = ... # 0x0
+    Der                      : QSsl.EncodingFormat = ... # 0x1
+    DnsEntry                 : QSsl.AlternativeNameEntryType = ... # 0x1
+    PublicKey                : QSsl.KeyType = ... # 0x1
+    Rsa                      : QSsl.KeyAlgorithm = ... # 0x1
+    SslOptionDisableEmptyFragments: QSsl.SslOption = ... # 0x1
+    SslV2                    : QSsl.SslProtocol = ... # 0x1
+    Dsa                      : QSsl.KeyAlgorithm = ... # 0x2
+    IpAddressEntry           : QSsl.AlternativeNameEntryType = ... # 0x2
+    SslOptionDisableSessionTickets: QSsl.SslOption = ... # 0x2
+    TlsV1_0                  : QSsl.SslProtocol = ... # 0x2
+    Ec                       : QSsl.KeyAlgorithm = ... # 0x3
+    TlsV1_1                  : QSsl.SslProtocol = ... # 0x3
+    Dh                       : QSsl.KeyAlgorithm = ... # 0x4
+    SslOptionDisableCompression: QSsl.SslOption = ... # 0x4
+    TlsV1_2                  : QSsl.SslProtocol = ... # 0x4
+    AnyProtocol              : QSsl.SslProtocol = ... # 0x5
+    TlsV1SslV3               : QSsl.SslProtocol = ... # 0x6
+    SecureProtocols          : QSsl.SslProtocol = ... # 0x7
+    SslOptionDisableServerNameIndication: QSsl.SslOption = ... # 0x8
+    TlsV1_0OrLater           : QSsl.SslProtocol = ... # 0x8
+    TlsV1_1OrLater           : QSsl.SslProtocol = ... # 0x9
+    TlsV1_2OrLater           : QSsl.SslProtocol = ... # 0xa
+    DtlsV1_0                 : QSsl.SslProtocol = ... # 0xb
+    DtlsV1_0OrLater          : QSsl.SslProtocol = ... # 0xc
+    DtlsV1_2                 : QSsl.SslProtocol = ... # 0xd
+    DtlsV1_2OrLater          : QSsl.SslProtocol = ... # 0xe
+    TlsV1_3                  : QSsl.SslProtocol = ... # 0xf
+    SslOptionDisableLegacyRenegotiation: QSsl.SslOption = ... # 0x10
+    TlsV1_3OrLater           : QSsl.SslProtocol = ... # 0x10
+    SslOptionDisableSessionSharing: QSsl.SslOption = ... # 0x20
+    SslOptionDisableSessionPersistence: QSsl.SslOption = ... # 0x40
+    SslOptionDisableServerCipherPreference: QSsl.SslOption = ... # 0x80
 
     class AlternativeNameEntryType(object):
         EmailEntry               : QSsl.AlternativeNameEntryType = ... # 0x0
@@ -1852,15 +1852,15 @@ class QSsl(Shiboken.Object):
 
 
 class QSslCertificate(Shiboken.Object):
-    Organization             : QSslCertificate = ... # 0x0
-    CommonName               : QSslCertificate = ... # 0x1
-    LocalityName             : QSslCertificate = ... # 0x2
-    OrganizationalUnitName   : QSslCertificate = ... # 0x3
-    CountryName              : QSslCertificate = ... # 0x4
-    StateOrProvinceName      : QSslCertificate = ... # 0x5
-    DistinguishedNameQualifier: QSslCertificate = ... # 0x6
-    SerialNumber             : QSslCertificate = ... # 0x7
-    EmailAddress             : QSslCertificate = ... # 0x8
+    Organization             : QSslCertificate.SubjectInfo = ... # 0x0
+    CommonName               : QSslCertificate.SubjectInfo = ... # 0x1
+    LocalityName             : QSslCertificate.SubjectInfo = ... # 0x2
+    OrganizationalUnitName   : QSslCertificate.SubjectInfo = ... # 0x3
+    CountryName              : QSslCertificate.SubjectInfo = ... # 0x4
+    StateOrProvinceName      : QSslCertificate.SubjectInfo = ... # 0x5
+    DistinguishedNameQualifier: QSslCertificate.SubjectInfo = ... # 0x6
+    SerialNumber             : QSslCertificate.SubjectInfo = ... # 0x7
+    EmailAddress             : QSslCertificate.SubjectInfo = ... # 0x8
 
     class PatternSyntax(object):
         RegularExpression        : QSslCertificate.PatternSyntax = ... # 0x0
@@ -1975,9 +1975,9 @@ class QSslCipher(Shiboken.Object):
 
 
 class QSslConfiguration(Shiboken.Object):
-    NextProtocolNegotiationNone: QSslConfiguration = ... # 0x0
-    NextProtocolNegotiationNegotiated: QSslConfiguration = ... # 0x1
-    NextProtocolNegotiationUnsupported: QSslConfiguration = ... # 0x2
+    NextProtocolNegotiationNone: QSslConfiguration.NextProtocolNegotiationStatus = ... # 0x0
+    NextProtocolNegotiationNegotiated: QSslConfiguration.NextProtocolNegotiationStatus = ... # 0x1
+    NextProtocolNegotiationUnsupported: QSslConfiguration.NextProtocolNegotiationStatus = ... # 0x2
 
     class NextProtocolNegotiationStatus(object):
         NextProtocolNegotiationNone: QSslConfiguration.NextProtocolNegotiationStatus = ... # 0x0
@@ -2056,9 +2056,9 @@ class QSslConfiguration(Shiboken.Object):
 
 
 class QSslDiffieHellmanParameters(Shiboken.Object):
-    NoError                  : QSslDiffieHellmanParameters = ... # 0x0
-    InvalidInputDataError    : QSslDiffieHellmanParameters = ... # 0x1
-    UnsafeParametersError    : QSslDiffieHellmanParameters = ... # 0x2
+    NoError                  : QSslDiffieHellmanParameters.Error = ... # 0x0
+    InvalidInputDataError    : QSslDiffieHellmanParameters.Error = ... # 0x1
+    UnsafeParametersError    : QSslDiffieHellmanParameters.Error = ... # 0x2
 
     class Error(object):
         NoError                  : QSslDiffieHellmanParameters.Error = ... # 0x0
@@ -2088,44 +2088,44 @@ class QSslDiffieHellmanParameters(Shiboken.Object):
 
 
 class QSslError(Shiboken.Object):
-    UnspecifiedError         : QSslError = ... # -0x1
-    NoError                  : QSslError = ... # 0x0
-    UnableToGetIssuerCertificate: QSslError = ... # 0x1
-    UnableToDecryptCertificateSignature: QSslError = ... # 0x2
-    UnableToDecodeIssuerPublicKey: QSslError = ... # 0x3
-    CertificateSignatureFailed: QSslError = ... # 0x4
-    CertificateNotYetValid   : QSslError = ... # 0x5
-    CertificateExpired       : QSslError = ... # 0x6
-    InvalidNotBeforeField    : QSslError = ... # 0x7
-    InvalidNotAfterField     : QSslError = ... # 0x8
-    SelfSignedCertificate    : QSslError = ... # 0x9
-    SelfSignedCertificateInChain: QSslError = ... # 0xa
-    UnableToGetLocalIssuerCertificate: QSslError = ... # 0xb
-    UnableToVerifyFirstCertificate: QSslError = ... # 0xc
-    CertificateRevoked       : QSslError = ... # 0xd
-    InvalidCaCertificate     : QSslError = ... # 0xe
-    PathLengthExceeded       : QSslError = ... # 0xf
-    InvalidPurpose           : QSslError = ... # 0x10
-    CertificateUntrusted     : QSslError = ... # 0x11
-    CertificateRejected      : QSslError = ... # 0x12
-    SubjectIssuerMismatch    : QSslError = ... # 0x13
-    AuthorityIssuerSerialNumberMismatch: QSslError = ... # 0x14
-    NoPeerCertificate        : QSslError = ... # 0x15
-    HostNameMismatch         : QSslError = ... # 0x16
-    NoSslSupport             : QSslError = ... # 0x17
-    CertificateBlacklisted   : QSslError = ... # 0x18
-    CertificateStatusUnknown : QSslError = ... # 0x19
-    OcspNoResponseFound      : QSslError = ... # 0x1a
-    OcspMalformedRequest     : QSslError = ... # 0x1b
-    OcspMalformedResponse    : QSslError = ... # 0x1c
-    OcspInternalError        : QSslError = ... # 0x1d
-    OcspTryLater             : QSslError = ... # 0x1e
-    OcspSigRequred           : QSslError = ... # 0x1f
-    OcspUnauthorized         : QSslError = ... # 0x20
-    OcspResponseCannotBeTrusted: QSslError = ... # 0x21
-    OcspResponseCertIdUnknown: QSslError = ... # 0x22
-    OcspResponseExpired      : QSslError = ... # 0x23
-    OcspStatusUnknown        : QSslError = ... # 0x24
+    UnspecifiedError         : QSslError.SslError = ... # -0x1
+    NoError                  : QSslError.SslError = ... # 0x0
+    UnableToGetIssuerCertificate: QSslError.SslError = ... # 0x1
+    UnableToDecryptCertificateSignature: QSslError.SslError = ... # 0x2
+    UnableToDecodeIssuerPublicKey: QSslError.SslError = ... # 0x3
+    CertificateSignatureFailed: QSslError.SslError = ... # 0x4
+    CertificateNotYetValid   : QSslError.SslError = ... # 0x5
+    CertificateExpired       : QSslError.SslError = ... # 0x6
+    InvalidNotBeforeField    : QSslError.SslError = ... # 0x7
+    InvalidNotAfterField     : QSslError.SslError = ... # 0x8
+    SelfSignedCertificate    : QSslError.SslError = ... # 0x9
+    SelfSignedCertificateInChain: QSslError.SslError = ... # 0xa
+    UnableToGetLocalIssuerCertificate: QSslError.SslError = ... # 0xb
+    UnableToVerifyFirstCertificate: QSslError.SslError = ... # 0xc
+    CertificateRevoked       : QSslError.SslError = ... # 0xd
+    InvalidCaCertificate     : QSslError.SslError = ... # 0xe
+    PathLengthExceeded       : QSslError.SslError = ... # 0xf
+    InvalidPurpose           : QSslError.SslError = ... # 0x10
+    CertificateUntrusted     : QSslError.SslError = ... # 0x11
+    CertificateRejected      : QSslError.SslError = ... # 0x12
+    SubjectIssuerMismatch    : QSslError.SslError = ... # 0x13
+    AuthorityIssuerSerialNumberMismatch: QSslError.SslError = ... # 0x14
+    NoPeerCertificate        : QSslError.SslError = ... # 0x15
+    HostNameMismatch         : QSslError.SslError = ... # 0x16
+    NoSslSupport             : QSslError.SslError = ... # 0x17
+    CertificateBlacklisted   : QSslError.SslError = ... # 0x18
+    CertificateStatusUnknown : QSslError.SslError = ... # 0x19
+    OcspNoResponseFound      : QSslError.SslError = ... # 0x1a
+    OcspMalformedRequest     : QSslError.SslError = ... # 0x1b
+    OcspMalformedResponse    : QSslError.SslError = ... # 0x1c
+    OcspInternalError        : QSslError.SslError = ... # 0x1d
+    OcspTryLater             : QSslError.SslError = ... # 0x1e
+    OcspSigRequred           : QSslError.SslError = ... # 0x1f
+    OcspUnauthorized         : QSslError.SslError = ... # 0x20
+    OcspResponseCannotBeTrusted: QSslError.SslError = ... # 0x21
+    OcspResponseCertIdUnknown: QSslError.SslError = ... # 0x22
+    OcspResponseExpired      : QSslError.SslError = ... # 0x23
+    OcspStatusUnknown        : QSslError.SslError = ... # 0x24
 
     class SslError(object):
         UnspecifiedError         : QSslError.SslError = ... # -0x1
@@ -2230,13 +2230,13 @@ class QSslPreSharedKeyAuthenticator(Shiboken.Object):
 
 
 class QSslSocket(PySide2.QtNetwork.QTcpSocket):
-    UnencryptedMode          : QSslSocket = ... # 0x0
-    VerifyNone               : QSslSocket = ... # 0x0
-    QueryPeer                : QSslSocket = ... # 0x1
-    SslClientMode            : QSslSocket = ... # 0x1
-    SslServerMode            : QSslSocket = ... # 0x2
-    VerifyPeer               : QSslSocket = ... # 0x2
-    AutoVerifyPeer           : QSslSocket = ... # 0x3
+    UnencryptedMode          : QSslSocket.SslMode = ... # 0x0
+    VerifyNone               : QSslSocket.PeerVerifyMode = ... # 0x0
+    QueryPeer                : QSslSocket.PeerVerifyMode = ... # 0x1
+    SslClientMode            : QSslSocket.SslMode = ... # 0x1
+    SslServerMode            : QSslSocket.SslMode = ... # 0x2
+    VerifyPeer               : QSslSocket.PeerVerifyMode = ... # 0x2
+    AutoVerifyPeer           : QSslSocket.PeerVerifyMode = ... # 0x3
 
     class PeerVerifyMode(object):
         VerifyNone               : QSslSocket.PeerVerifyMode = ... # 0x0

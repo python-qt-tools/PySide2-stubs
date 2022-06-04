@@ -61,10 +61,10 @@ class ListProperty(PySide2.QtCore.Property):
 
 
 class QJSEngine(PySide2.QtCore.QObject):
-    AllExtensions            : QJSEngine = ... # -0x1
-    TranslationExtension     : QJSEngine = ... # 0x1
-    ConsoleExtension         : QJSEngine = ... # 0x2
-    GarbageCollectionExtension: QJSEngine = ... # 0x4
+    AllExtensions            : QJSEngine.Extension = ... # -0x1
+    TranslationExtension     : QJSEngine.Extension = ... # 0x1
+    ConsoleExtension         : QJSEngine.Extension = ... # 0x2
+    GarbageCollectionExtension: QJSEngine.Extension = ... # 0x4
 
     class Extension(object):
         AllExtensions            : QJSEngine.Extension = ... # -0x1
@@ -102,16 +102,16 @@ class QJSEngine(PySide2.QtCore.QObject):
 
 
 class QJSValue(Shiboken.Object):
-    NoError                  : QJSValue = ... # 0x0
-    NullValue                : QJSValue = ... # 0x0
-    GenericError             : QJSValue = ... # 0x1
-    UndefinedValue           : QJSValue = ... # 0x1
-    EvalError                : QJSValue = ... # 0x2
-    RangeError               : QJSValue = ... # 0x3
-    ReferenceError           : QJSValue = ... # 0x4
-    SyntaxError              : QJSValue = ... # 0x5
-    TypeError                : QJSValue = ... # 0x6
-    URIError                 : QJSValue = ... # 0x7
+    NoError                  : QJSValue.ErrorType = ... # 0x0
+    NullValue                : QJSValue.SpecialValue = ... # 0x0
+    GenericError             : QJSValue.ErrorType = ... # 0x1
+    UndefinedValue           : QJSValue.SpecialValue = ... # 0x1
+    EvalError                : QJSValue.ErrorType = ... # 0x2
+    RangeError               : QJSValue.ErrorType = ... # 0x3
+    ReferenceError           : QJSValue.ErrorType = ... # 0x4
+    SyntaxError              : QJSValue.ErrorType = ... # 0x5
+    TypeError                : QJSValue.ErrorType = ... # 0x6
+    URIError                 : QJSValue.ErrorType = ... # 0x7
 
     class ErrorType(object):
         NoError                  : QJSValue.ErrorType = ... # 0x0
@@ -202,10 +202,10 @@ class QJSValueIterator(Shiboken.Object):
 
 
 class QQmlAbstractUrlInterceptor(Shiboken.Object):
-    QmlFile                  : QQmlAbstractUrlInterceptor = ... # 0x0
-    JavaScriptFile           : QQmlAbstractUrlInterceptor = ... # 0x1
-    QmldirFile               : QQmlAbstractUrlInterceptor = ... # 0x2
-    UrlString                : QQmlAbstractUrlInterceptor = ... # 0x1000
+    QmlFile                  : QQmlAbstractUrlInterceptor.DataType = ... # 0x0
+    JavaScriptFile           : QQmlAbstractUrlInterceptor.DataType = ... # 0x1
+    QmldirFile               : QQmlAbstractUrlInterceptor.DataType = ... # 0x2
+    UrlString                : QQmlAbstractUrlInterceptor.DataType = ... # 0x1000
 
     class DataType(object):
         QmlFile                  : QQmlAbstractUrlInterceptor.DataType = ... # 0x0
@@ -237,12 +237,12 @@ class QQmlApplicationEngine(PySide2.QtQml.QQmlEngine):
 
 
 class QQmlComponent(PySide2.QtCore.QObject):
-    Null                     : QQmlComponent = ... # 0x0
-    PreferSynchronous        : QQmlComponent = ... # 0x0
-    Asynchronous             : QQmlComponent = ... # 0x1
-    Ready                    : QQmlComponent = ... # 0x1
-    Loading                  : QQmlComponent = ... # 0x2
-    Error                    : QQmlComponent = ... # 0x3
+    Null                     : QQmlComponent.Status = ... # 0x0
+    PreferSynchronous        : QQmlComponent.CompilationMode = ... # 0x0
+    Asynchronous             : QQmlComponent.CompilationMode = ... # 0x1
+    Ready                    : QQmlComponent.Status = ... # 0x1
+    Loading                  : QQmlComponent.Status = ... # 0x2
+    Error                    : QQmlComponent.Status = ... # 0x3
 
     class CompilationMode(object):
         PreferSynchronous        : QQmlComponent.CompilationMode = ... # 0x0
@@ -317,8 +317,8 @@ class QQmlContext(PySide2.QtCore.QObject):
 
 
 class QQmlDebuggingEnabler(Shiboken.Object):
-    DoNotWaitForClient       : QQmlDebuggingEnabler = ... # 0x0
-    WaitForClient            : QQmlDebuggingEnabler = ... # 0x1
+    DoNotWaitForClient       : QQmlDebuggingEnabler.StartMode = ... # 0x0
+    WaitForClient            : QQmlDebuggingEnabler.StartMode = ... # 0x1
 
     class StartMode(object):
         DoNotWaitForClient       : QQmlDebuggingEnabler.StartMode = ... # 0x0
@@ -345,8 +345,8 @@ class QQmlDebuggingEnabler(Shiboken.Object):
 
 
 class QQmlEngine(PySide2.QtQml.QJSEngine):
-    CppOwnership             : QQmlEngine = ... # 0x0
-    JavaScriptOwnership      : QQmlEngine = ... # 0x1
+    CppOwnership             : QQmlEngine.ObjectOwnership = ... # 0x0
+    JavaScriptOwnership      : QQmlEngine.ObjectOwnership = ... # 0x1
 
     class ObjectOwnership(object):
         CppOwnership             : QQmlEngine.ObjectOwnership = ... # 0x0
@@ -462,10 +462,10 @@ class QQmlExtensionPlugin(PySide2.QtCore.QObject, PySide2.QtQml.QQmlExtensionInt
 
 
 class QQmlFile(Shiboken.Object):
-    Null                     : QQmlFile = ... # 0x0
-    Ready                    : QQmlFile = ... # 0x1
-    Error                    : QQmlFile = ... # 0x2
-    Loading                  : QQmlFile = ... # 0x3
+    Null                     : QQmlFile.Status = ... # 0x0
+    Ready                    : QQmlFile.Status = ... # 0x1
+    Error                    : QQmlFile.Status = ... # 0x2
+    Loading                  : QQmlFile.Status = ... # 0x3
 
     class Status(object):
         Null                     : QQmlFile.Status = ... # 0x0
@@ -538,12 +538,12 @@ class QQmlFileSelector(PySide2.QtCore.QObject):
 
 
 class QQmlImageProviderBase(Shiboken.Object):
-    Image                    : QQmlImageProviderBase = ... # 0x0
-    ForceAsynchronousImageLoading: QQmlImageProviderBase = ... # 0x1
-    Pixmap                   : QQmlImageProviderBase = ... # 0x1
-    Texture                  : QQmlImageProviderBase = ... # 0x2
-    Invalid                  : QQmlImageProviderBase = ... # 0x3
-    ImageResponse            : QQmlImageProviderBase = ... # 0x4
+    Image                    : QQmlImageProviderBase.ImageType = ... # 0x0
+    ForceAsynchronousImageLoading: QQmlImageProviderBase.Flag = ... # 0x1
+    Pixmap                   : QQmlImageProviderBase.ImageType = ... # 0x1
+    Texture                  : QQmlImageProviderBase.ImageType = ... # 0x2
+    Invalid                  : QQmlImageProviderBase.ImageType = ... # 0x3
+    ImageResponse            : QQmlImageProviderBase.ImageType = ... # 0x4
 
     class Flag(object):
         ForceAsynchronousImageLoading: QQmlImageProviderBase.Flag = ... # 0x1
@@ -572,13 +572,13 @@ class QQmlIncubationController(Shiboken.Object):
 
 
 class QQmlIncubator(Shiboken.Object):
-    Asynchronous             : QQmlIncubator = ... # 0x0
-    Null                     : QQmlIncubator = ... # 0x0
-    AsynchronousIfNested     : QQmlIncubator = ... # 0x1
-    Ready                    : QQmlIncubator = ... # 0x1
-    Loading                  : QQmlIncubator = ... # 0x2
-    Synchronous              : QQmlIncubator = ... # 0x2
-    Error                    : QQmlIncubator = ... # 0x3
+    Asynchronous             : QQmlIncubator.IncubationMode = ... # 0x0
+    Null                     : QQmlIncubator.Status = ... # 0x0
+    AsynchronousIfNested     : QQmlIncubator.IncubationMode = ... # 0x1
+    Ready                    : QQmlIncubator.Status = ... # 0x1
+    Loading                  : QQmlIncubator.Status = ... # 0x2
+    Synchronous              : QQmlIncubator.IncubationMode = ... # 0x2
+    Error                    : QQmlIncubator.Status = ... # 0x3
 
     class IncubationMode(object):
         Asynchronous             : QQmlIncubator.IncubationMode = ... # 0x0
@@ -654,13 +654,13 @@ class QQmlParserStatus(Shiboken.Object):
 
 
 class QQmlProperty(Shiboken.Object):
-    Invalid                  : QQmlProperty = ... # 0x0
-    InvalidCategory          : QQmlProperty = ... # 0x0
-    List                     : QQmlProperty = ... # 0x1
-    Property                 : QQmlProperty = ... # 0x1
-    Object                   : QQmlProperty = ... # 0x2
-    SignalProperty           : QQmlProperty = ... # 0x2
-    Normal                   : QQmlProperty = ... # 0x3
+    Invalid                  : QQmlProperty.Type = ... # 0x0
+    InvalidCategory          : QQmlProperty.PropertyTypeCategory = ... # 0x0
+    List                     : QQmlProperty.PropertyTypeCategory = ... # 0x1
+    Property                 : QQmlProperty.Type = ... # 0x1
+    Object                   : QQmlProperty.PropertyTypeCategory = ... # 0x2
+    SignalProperty           : QQmlProperty.Type = ... # 0x2
+    Normal                   : QQmlProperty.PropertyTypeCategory = ... # 0x3
 
     class PropertyTypeCategory(object):
         InvalidCategory          : QQmlProperty.PropertyTypeCategory = ... # 0x0

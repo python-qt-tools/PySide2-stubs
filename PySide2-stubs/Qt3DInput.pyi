@@ -112,8 +112,8 @@ class Qt3DInput(Shiboken.Object):
         def value(self) -> float: ...
 
     class QAxisAccumulator(PySide2.Qt3DCore.QComponent):
-        Velocity                 : Qt3DInput.QAxisAccumulator = ... # 0x0
-        Acceleration             : Qt3DInput.QAxisAccumulator = ... # 0x1
+        Velocity                 : Qt3DInput.QAxisAccumulator.SourceAxisType = ... # 0x0
+        Acceleration             : Qt3DInput.QAxisAccumulator.SourceAxisType = ... # 0x1
 
         class SourceAxisType(object):
             Velocity                 : Qt3DInput.QAxisAccumulator.SourceAxisType = ... # 0x0
@@ -238,10 +238,10 @@ class Qt3DInput(Shiboken.Object):
         def removeAxis(self, axis:PySide2.Qt3DInput.Qt3DInput.QAxis) -> None: ...
 
     class QMouseDevice(PySide2.Qt3DInput.QAbstractPhysicalDevice):
-        X                        : Qt3DInput.QMouseDevice = ... # 0x0
-        Y                        : Qt3DInput.QMouseDevice = ... # 0x1
-        WheelX                   : Qt3DInput.QMouseDevice = ... # 0x2
-        WheelY                   : Qt3DInput.QMouseDevice = ... # 0x3
+        X                        : Qt3DInput.QMouseDevice.Axis = ... # 0x0
+        Y                        : Qt3DInput.QMouseDevice.Axis = ... # 0x1
+        WheelX                   : Qt3DInput.QMouseDevice.Axis = ... # 0x2
+        WheelY                   : Qt3DInput.QMouseDevice.Axis = ... # 0x3
 
         class Axis(object):
             X                        : Qt3DInput.QMouseDevice.Axis = ... # 0x0
@@ -263,17 +263,17 @@ class Qt3DInput(Shiboken.Object):
         def updateAxesContinuously(self) -> bool: ...
 
     class QMouseEvent(PySide2.QtCore.QObject):
-        NoButton                 : Qt3DInput.QMouseEvent = ... # 0x0
-        NoModifier               : Qt3DInput.QMouseEvent = ... # 0x0
-        LeftButton               : Qt3DInput.QMouseEvent = ... # 0x1
-        RightButton              : Qt3DInput.QMouseEvent = ... # 0x2
-        MiddleButton             : Qt3DInput.QMouseEvent = ... # 0x4
-        BackButton               : Qt3DInput.QMouseEvent = ... # 0x8
-        ShiftModifier            : Qt3DInput.QMouseEvent = ... # 0x2000000
-        ControlModifier          : Qt3DInput.QMouseEvent = ... # 0x4000000
-        AltModifier              : Qt3DInput.QMouseEvent = ... # 0x8000000
-        MetaModifier             : Qt3DInput.QMouseEvent = ... # 0x10000000
-        KeypadModifier           : Qt3DInput.QMouseEvent = ... # 0x20000000
+        NoButton                 : Qt3DInput.QMouseEvent.Buttons = ... # 0x0
+        NoModifier               : Qt3DInput.QMouseEvent.Modifiers = ... # 0x0
+        LeftButton               : Qt3DInput.QMouseEvent.Buttons = ... # 0x1
+        RightButton              : Qt3DInput.QMouseEvent.Buttons = ... # 0x2
+        MiddleButton             : Qt3DInput.QMouseEvent.Buttons = ... # 0x4
+        BackButton               : Qt3DInput.QMouseEvent.Buttons = ... # 0x8
+        ShiftModifier            : Qt3DInput.QMouseEvent.Modifiers = ... # 0x2000000
+        ControlModifier          : Qt3DInput.QMouseEvent.Modifiers = ... # 0x4000000
+        AltModifier              : Qt3DInput.QMouseEvent.Modifiers = ... # 0x8000000
+        MetaModifier             : Qt3DInput.QMouseEvent.Modifiers = ... # 0x10000000
+        KeypadModifier           : Qt3DInput.QMouseEvent.Modifiers = ... # 0x20000000
 
         class Buttons(object):
             NoButton                 : Qt3DInput.QMouseEvent.Buttons = ... # 0x0
@@ -309,17 +309,17 @@ class Qt3DInput(Shiboken.Object):
         def sourceDevice(self) -> PySide2.Qt3DInput.Qt3DInput.QMouseDevice: ...
 
     class QWheelEvent(PySide2.QtCore.QObject):
-        NoButton                 : Qt3DInput.QWheelEvent = ... # 0x0
-        NoModifier               : Qt3DInput.QWheelEvent = ... # 0x0
-        LeftButton               : Qt3DInput.QWheelEvent = ... # 0x1
-        RightButton              : Qt3DInput.QWheelEvent = ... # 0x2
-        MiddleButton             : Qt3DInput.QWheelEvent = ... # 0x4
-        BackButton               : Qt3DInput.QWheelEvent = ... # 0x8
-        ShiftModifier            : Qt3DInput.QWheelEvent = ... # 0x2000000
-        ControlModifier          : Qt3DInput.QWheelEvent = ... # 0x4000000
-        AltModifier              : Qt3DInput.QWheelEvent = ... # 0x8000000
-        MetaModifier             : Qt3DInput.QWheelEvent = ... # 0x10000000
-        KeypadModifier           : Qt3DInput.QWheelEvent = ... # 0x20000000
+        NoButton                 : Qt3DInput.QWheelEvent.Buttons = ... # 0x0
+        NoModifier               : Qt3DInput.QWheelEvent.Modifiers = ... # 0x0
+        LeftButton               : Qt3DInput.QWheelEvent.Buttons = ... # 0x1
+        RightButton              : Qt3DInput.QWheelEvent.Buttons = ... # 0x2
+        MiddleButton             : Qt3DInput.QWheelEvent.Buttons = ... # 0x4
+        BackButton               : Qt3DInput.QWheelEvent.Buttons = ... # 0x8
+        ShiftModifier            : Qt3DInput.QWheelEvent.Modifiers = ... # 0x2000000
+        ControlModifier          : Qt3DInput.QWheelEvent.Modifiers = ... # 0x4000000
+        AltModifier              : Qt3DInput.QWheelEvent.Modifiers = ... # 0x8000000
+        MetaModifier             : Qt3DInput.QWheelEvent.Modifiers = ... # 0x10000000
+        KeypadModifier           : Qt3DInput.QWheelEvent.Modifiers = ... # 0x20000000
 
         class Buttons(object):
             NoButton                 : Qt3DInput.QWheelEvent.Buttons = ... # 0x0

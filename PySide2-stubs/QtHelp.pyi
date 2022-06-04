@@ -267,12 +267,12 @@ class QHelpSearchEngine(PySide2.QtCore.QObject):
 
 
 class QHelpSearchQuery(Shiboken.Object):
-    DEFAULT                  : QHelpSearchQuery = ... # 0x0
-    FUZZY                    : QHelpSearchQuery = ... # 0x1
-    WITHOUT                  : QHelpSearchQuery = ... # 0x2
-    PHRASE                   : QHelpSearchQuery = ... # 0x3
-    ALL                      : QHelpSearchQuery = ... # 0x4
-    ATLEAST                  : QHelpSearchQuery = ... # 0x5
+    DEFAULT                  : QHelpSearchQuery.FieldName = ... # 0x0
+    FUZZY                    : QHelpSearchQuery.FieldName = ... # 0x1
+    WITHOUT                  : QHelpSearchQuery.FieldName = ... # 0x2
+    PHRASE                   : QHelpSearchQuery.FieldName = ... # 0x3
+    ALL                      : QHelpSearchQuery.FieldName = ... # 0x4
+    ATLEAST                  : QHelpSearchQuery.FieldName = ... # 0x5
 
     class FieldName(object):
         DEFAULT                  : QHelpSearchQuery.FieldName = ... # 0x0

@@ -60,12 +60,12 @@ import PySide2.QtCharts
 class QtCharts(Shiboken.Object):
 
     class QAbstractAxis(PySide2.QtCore.QObject):
-        AxisTypeNoAxis           : QtCharts.QAbstractAxis = ... # 0x0
-        AxisTypeValue            : QtCharts.QAbstractAxis = ... # 0x1
-        AxisTypeBarCategory      : QtCharts.QAbstractAxis = ... # 0x2
-        AxisTypeCategory         : QtCharts.QAbstractAxis = ... # 0x4
-        AxisTypeDateTime         : QtCharts.QAbstractAxis = ... # 0x8
-        AxisTypeLogValue         : QtCharts.QAbstractAxis = ... # 0x10
+        AxisTypeNoAxis           : QtCharts.QAbstractAxis.AxisType = ... # 0x0
+        AxisTypeValue            : QtCharts.QAbstractAxis.AxisType = ... # 0x1
+        AxisTypeBarCategory      : QtCharts.QAbstractAxis.AxisType = ... # 0x2
+        AxisTypeCategory         : QtCharts.QAbstractAxis.AxisType = ... # 0x4
+        AxisTypeDateTime         : QtCharts.QAbstractAxis.AxisType = ... # 0x8
+        AxisTypeLogValue         : QtCharts.QAbstractAxis.AxisType = ... # 0x10
 
         class AxisType(object):
             AxisTypeNoAxis           : QtCharts.QAbstractAxis.AxisType = ... # 0x0
@@ -136,10 +136,10 @@ class QtCharts(Shiboken.Object):
         def type(self) -> PySide2.QtCharts.QtCharts.QAbstractAxis.AxisType: ...
 
     class QAbstractBarSeries(PySide2.QtCharts.QAbstractSeries):
-        LabelsCenter             : QtCharts.QAbstractBarSeries = ... # 0x0
-        LabelsInsideEnd          : QtCharts.QAbstractBarSeries = ... # 0x1
-        LabelsInsideBase         : QtCharts.QAbstractBarSeries = ... # 0x2
-        LabelsOutsideEnd         : QtCharts.QAbstractBarSeries = ... # 0x3
+        LabelsCenter             : QtCharts.QAbstractBarSeries.LabelsPosition = ... # 0x0
+        LabelsInsideEnd          : QtCharts.QAbstractBarSeries.LabelsPosition = ... # 0x1
+        LabelsInsideBase         : QtCharts.QAbstractBarSeries.LabelsPosition = ... # 0x2
+        LabelsOutsideEnd         : QtCharts.QAbstractBarSeries.LabelsPosition = ... # 0x3
 
         class LabelsPosition(object):
             LabelsCenter             : QtCharts.QAbstractBarSeries.LabelsPosition = ... # 0x0
@@ -170,19 +170,19 @@ class QtCharts(Shiboken.Object):
         def take(self, set:PySide2.QtCharts.QtCharts.QBarSet) -> bool: ...
 
     class QAbstractSeries(PySide2.QtCore.QObject):
-        SeriesTypeLine           : QtCharts.QAbstractSeries = ... # 0x0
-        SeriesTypeArea           : QtCharts.QAbstractSeries = ... # 0x1
-        SeriesTypeBar            : QtCharts.QAbstractSeries = ... # 0x2
-        SeriesTypeStackedBar     : QtCharts.QAbstractSeries = ... # 0x3
-        SeriesTypePercentBar     : QtCharts.QAbstractSeries = ... # 0x4
-        SeriesTypePie            : QtCharts.QAbstractSeries = ... # 0x5
-        SeriesTypeScatter        : QtCharts.QAbstractSeries = ... # 0x6
-        SeriesTypeSpline         : QtCharts.QAbstractSeries = ... # 0x7
-        SeriesTypeHorizontalBar  : QtCharts.QAbstractSeries = ... # 0x8
-        SeriesTypeHorizontalStackedBar: QtCharts.QAbstractSeries = ... # 0x9
-        SeriesTypeHorizontalPercentBar: QtCharts.QAbstractSeries = ... # 0xa
-        SeriesTypeBoxPlot        : QtCharts.QAbstractSeries = ... # 0xb
-        SeriesTypeCandlestick    : QtCharts.QAbstractSeries = ... # 0xc
+        SeriesTypeLine           : QtCharts.QAbstractSeries.SeriesType = ... # 0x0
+        SeriesTypeArea           : QtCharts.QAbstractSeries.SeriesType = ... # 0x1
+        SeriesTypeBar            : QtCharts.QAbstractSeries.SeriesType = ... # 0x2
+        SeriesTypeStackedBar     : QtCharts.QAbstractSeries.SeriesType = ... # 0x3
+        SeriesTypePercentBar     : QtCharts.QAbstractSeries.SeriesType = ... # 0x4
+        SeriesTypePie            : QtCharts.QAbstractSeries.SeriesType = ... # 0x5
+        SeriesTypeScatter        : QtCharts.QAbstractSeries.SeriesType = ... # 0x6
+        SeriesTypeSpline         : QtCharts.QAbstractSeries.SeriesType = ... # 0x7
+        SeriesTypeHorizontalBar  : QtCharts.QAbstractSeries.SeriesType = ... # 0x8
+        SeriesTypeHorizontalStackedBar: QtCharts.QAbstractSeries.SeriesType = ... # 0x9
+        SeriesTypeHorizontalPercentBar: QtCharts.QAbstractSeries.SeriesType = ... # 0xa
+        SeriesTypeBoxPlot        : QtCharts.QAbstractSeries.SeriesType = ... # 0xb
+        SeriesTypeCandlestick    : QtCharts.QAbstractSeries.SeriesType = ... # 0xc
 
         class SeriesType(object):
             SeriesTypeLine           : QtCharts.QAbstractSeries.SeriesType = ... # 0x0
@@ -402,11 +402,11 @@ class QtCharts(Shiboken.Object):
         def type(self) -> PySide2.QtCharts.QtCharts.QAbstractSeries.SeriesType: ...
 
     class QBoxSet(PySide2.QtCore.QObject):
-        LowerExtreme             : QtCharts.QBoxSet = ... # 0x0
-        LowerQuartile            : QtCharts.QBoxSet = ... # 0x1
-        Median                   : QtCharts.QBoxSet = ... # 0x2
-        UpperQuartile            : QtCharts.QBoxSet = ... # 0x3
-        UpperExtreme             : QtCharts.QBoxSet = ... # 0x4
+        LowerExtreme             : QtCharts.QBoxSet.ValuePositions = ... # 0x0
+        LowerQuartile            : QtCharts.QBoxSet.ValuePositions = ... # 0x1
+        Median                   : QtCharts.QBoxSet.ValuePositions = ... # 0x2
+        UpperQuartile            : QtCharts.QBoxSet.ValuePositions = ... # 0x3
+        UpperExtreme             : QtCharts.QBoxSet.ValuePositions = ... # 0x4
 
         class ValuePositions(object):
             LowerExtreme             : QtCharts.QBoxSet.ValuePositions = ... # 0x0
@@ -529,8 +529,8 @@ class QtCharts(Shiboken.Object):
         def timestamp(self) -> float: ...
 
     class QCategoryAxis(PySide2.QtCharts.QValueAxis):
-        AxisLabelsPositionCenter : QtCharts.QCategoryAxis = ... # 0x0
-        AxisLabelsPositionOnValue: QtCharts.QCategoryAxis = ... # 0x1
+        AxisLabelsPositionCenter : QtCharts.QCategoryAxis.AxisLabelsPosition = ... # 0x0
+        AxisLabelsPositionOnValue: QtCharts.QCategoryAxis.AxisLabelsPosition = ... # 0x1
 
         class AxisLabelsPosition(object):
             AxisLabelsPositionCenter : QtCharts.QCategoryAxis.AxisLabelsPosition = ... # 0x0
@@ -551,21 +551,21 @@ class QtCharts(Shiboken.Object):
         def type(self) -> PySide2.QtCharts.QtCharts.QAbstractAxis.AxisType: ...
 
     class QChart(PySide2.QtWidgets.QGraphicsWidget):
-        ChartThemeLight          : QtCharts.QChart = ... # 0x0
-        ChartTypeUndefined       : QtCharts.QChart = ... # 0x0
-        NoAnimation              : QtCharts.QChart = ... # 0x0
-        ChartThemeBlueCerulean   : QtCharts.QChart = ... # 0x1
-        ChartTypeCartesian       : QtCharts.QChart = ... # 0x1
-        GridAxisAnimations       : QtCharts.QChart = ... # 0x1
-        ChartThemeDark           : QtCharts.QChart = ... # 0x2
-        ChartTypePolar           : QtCharts.QChart = ... # 0x2
-        SeriesAnimations         : QtCharts.QChart = ... # 0x2
-        AllAnimations            : QtCharts.QChart = ... # 0x3
-        ChartThemeBrownSand      : QtCharts.QChart = ... # 0x3
-        ChartThemeBlueNcs        : QtCharts.QChart = ... # 0x4
-        ChartThemeHighContrast   : QtCharts.QChart = ... # 0x5
-        ChartThemeBlueIcy        : QtCharts.QChart = ... # 0x6
-        ChartThemeQt             : QtCharts.QChart = ... # 0x7
+        ChartThemeLight          : QtCharts.QChart.ChartTheme = ... # 0x0
+        ChartTypeUndefined       : QtCharts.QChart.ChartType = ... # 0x0
+        NoAnimation              : QtCharts.QChart.AnimationOption = ... # 0x0
+        ChartThemeBlueCerulean   : QtCharts.QChart.ChartTheme = ... # 0x1
+        ChartTypeCartesian       : QtCharts.QChart.ChartType = ... # 0x1
+        GridAxisAnimations       : QtCharts.QChart.AnimationOption = ... # 0x1
+        ChartThemeDark           : QtCharts.QChart.ChartTheme = ... # 0x2
+        ChartTypePolar           : QtCharts.QChart.ChartType = ... # 0x2
+        SeriesAnimations         : QtCharts.QChart.AnimationOption = ... # 0x2
+        AllAnimations            : QtCharts.QChart.AnimationOption = ... # 0x3
+        ChartThemeBrownSand      : QtCharts.QChart.ChartTheme = ... # 0x3
+        ChartThemeBlueNcs        : QtCharts.QChart.ChartTheme = ... # 0x4
+        ChartThemeHighContrast   : QtCharts.QChart.ChartTheme = ... # 0x5
+        ChartThemeBlueIcy        : QtCharts.QChart.ChartTheme = ... # 0x6
+        ChartThemeQt             : QtCharts.QChart.ChartTheme = ... # 0x7
 
         class AnimationOption(object):
             NoAnimation              : QtCharts.QChart.AnimationOption = ... # 0x0
@@ -660,10 +660,10 @@ class QtCharts(Shiboken.Object):
         def zoomReset(self) -> None: ...
 
     class QChartView(PySide2.QtWidgets.QGraphicsView):
-        NoRubberBand             : QtCharts.QChartView = ... # 0x0
-        VerticalRubberBand       : QtCharts.QChartView = ... # 0x1
-        HorizontalRubberBand     : QtCharts.QChartView = ... # 0x2
-        RectangleRubberBand      : QtCharts.QChartView = ... # 0x3
+        NoRubberBand             : QtCharts.QChartView.RubberBand = ... # 0x0
+        VerticalRubberBand       : QtCharts.QChartView.RubberBand = ... # 0x1
+        HorizontalRubberBand     : QtCharts.QChartView.RubberBand = ... # 0x2
+        RectangleRubberBand      : QtCharts.QChartView.RubberBand = ... # 0x3
 
         class RubberBand(object):
             NoRubberBand             : QtCharts.QChartView.RubberBand = ... # 0x0
@@ -820,10 +820,10 @@ class QtCharts(Shiboken.Object):
         def type(self) -> PySide2.QtCharts.QtCharts.QAbstractSeries.SeriesType: ...
 
     class QLegend(PySide2.QtWidgets.QGraphicsWidget):
-        MarkerShapeDefault       : QtCharts.QLegend = ... # 0x0
-        MarkerShapeRectangle     : QtCharts.QLegend = ... # 0x1
-        MarkerShapeCircle        : QtCharts.QLegend = ... # 0x2
-        MarkerShapeFromSeries    : QtCharts.QLegend = ... # 0x3
+        MarkerShapeDefault       : QtCharts.QLegend.MarkerShape = ... # 0x0
+        MarkerShapeRectangle     : QtCharts.QLegend.MarkerShape = ... # 0x1
+        MarkerShapeCircle        : QtCharts.QLegend.MarkerShape = ... # 0x2
+        MarkerShapeFromSeries    : QtCharts.QLegend.MarkerShape = ... # 0x3
 
         class MarkerShape(object):
             MarkerShapeDefault       : QtCharts.QLegend.MarkerShape = ... # 0x0
@@ -863,12 +863,12 @@ class QtCharts(Shiboken.Object):
         def showToolTips(self) -> bool: ...
 
     class QLegendMarker(PySide2.QtCore.QObject):
-        LegendMarkerTypeArea     : QtCharts.QLegendMarker = ... # 0x0
-        LegendMarkerTypeBar      : QtCharts.QLegendMarker = ... # 0x1
-        LegendMarkerTypePie      : QtCharts.QLegendMarker = ... # 0x2
-        LegendMarkerTypeXY       : QtCharts.QLegendMarker = ... # 0x3
-        LegendMarkerTypeBoxPlot  : QtCharts.QLegendMarker = ... # 0x4
-        LegendMarkerTypeCandlestick: QtCharts.QLegendMarker = ... # 0x5
+        LegendMarkerTypeArea     : QtCharts.QLegendMarker.LegendMarkerType = ... # 0x0
+        LegendMarkerTypeBar      : QtCharts.QLegendMarker.LegendMarkerType = ... # 0x1
+        LegendMarkerTypePie      : QtCharts.QLegendMarker.LegendMarkerType = ... # 0x2
+        LegendMarkerTypeXY       : QtCharts.QLegendMarker.LegendMarkerType = ... # 0x3
+        LegendMarkerTypeBoxPlot  : QtCharts.QLegendMarker.LegendMarkerType = ... # 0x4
+        LegendMarkerTypeCandlestick: QtCharts.QLegendMarker.LegendMarkerType = ... # 0x5
 
         class LegendMarkerType(object):
             LegendMarkerTypeArea     : QtCharts.QLegendMarker.LegendMarkerType = ... # 0x0
@@ -996,10 +996,10 @@ class QtCharts(Shiboken.Object):
         def verticalPosition(self) -> float: ...
 
     class QPieSlice(PySide2.QtCore.QObject):
-        LabelOutside             : QtCharts.QPieSlice = ... # 0x0
-        LabelInsideHorizontal    : QtCharts.QPieSlice = ... # 0x1
-        LabelInsideTangential    : QtCharts.QPieSlice = ... # 0x2
-        LabelInsideNormal        : QtCharts.QPieSlice = ... # 0x3
+        LabelOutside             : QtCharts.QPieSlice.LabelPosition = ... # 0x0
+        LabelInsideHorizontal    : QtCharts.QPieSlice.LabelPosition = ... # 0x1
+        LabelInsideTangential    : QtCharts.QPieSlice.LabelPosition = ... # 0x2
+        LabelInsideNormal        : QtCharts.QPieSlice.LabelPosition = ... # 0x3
 
         class LabelPosition(object):
             LabelOutside             : QtCharts.QPieSlice.LabelPosition = ... # 0x0
@@ -1048,8 +1048,8 @@ class QtCharts(Shiboken.Object):
         def value(self) -> float: ...
 
     class QPolarChart(PySide2.QtCharts.QChart):
-        PolarOrientationRadial   : QtCharts.QPolarChart = ... # 0x1
-        PolarOrientationAngular  : QtCharts.QPolarChart = ... # 0x2
+        PolarOrientationRadial   : QtCharts.QPolarChart.PolarOrientation = ... # 0x1
+        PolarOrientationAngular  : QtCharts.QPolarChart.PolarOrientation = ... # 0x2
 
         class PolarOrientation(object):
             PolarOrientationRadial   : QtCharts.QPolarChart.PolarOrientation = ... # 0x1
@@ -1067,8 +1067,8 @@ class QtCharts(Shiboken.Object):
         def axisPolarOrientation(axis:PySide2.QtCharts.QtCharts.QAbstractAxis) -> PySide2.QtCharts.QtCharts.QPolarChart.PolarOrientation: ...
 
     class QScatterSeries(PySide2.QtCharts.QXYSeries):
-        MarkerShapeCircle        : QtCharts.QScatterSeries = ... # 0x0
-        MarkerShapeRectangle     : QtCharts.QScatterSeries = ... # 0x1
+        MarkerShapeCircle        : QtCharts.QScatterSeries.MarkerShape = ... # 0x0
+        MarkerShapeRectangle     : QtCharts.QScatterSeries.MarkerShape = ... # 0x1
 
         class MarkerShape(object):
             MarkerShapeCircle        : QtCharts.QScatterSeries.MarkerShape = ... # 0x0
@@ -1190,8 +1190,8 @@ class QtCharts(Shiboken.Object):
         def yColumn(self) -> int: ...
 
     class QValueAxis(PySide2.QtCharts.QAbstractAxis):
-        TicksDynamic             : QtCharts.QValueAxis = ... # 0x0
-        TicksFixed               : QtCharts.QValueAxis = ... # 0x1
+        TicksDynamic             : QtCharts.QValueAxis.TickType = ... # 0x0
+        TicksFixed               : QtCharts.QValueAxis.TickType = ... # 0x1
 
         class TickType(object):
             TicksDynamic             : QtCharts.QValueAxis.TickType = ... # 0x0

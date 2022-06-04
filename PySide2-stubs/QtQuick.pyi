@@ -110,31 +110,31 @@ class QQuickImageResponse(PySide2.QtCore.QObject):
 
 
 class QQuickItem(PySide2.QtCore.QObject, PySide2.QtQml.QQmlParserStatus):
-    ItemChildAddedChange     : QQuickItem = ... # 0x0
-    TopLeft                  : QQuickItem = ... # 0x0
-    ItemChildRemovedChange   : QQuickItem = ... # 0x1
-    ItemClipsChildrenToShape : QQuickItem = ... # 0x1
-    Top                      : QQuickItem = ... # 0x1
-    ItemAcceptsInputMethod   : QQuickItem = ... # 0x2
-    ItemSceneChange          : QQuickItem = ... # 0x2
-    TopRight                 : QQuickItem = ... # 0x2
-    ItemVisibleHasChanged    : QQuickItem = ... # 0x3
-    Left                     : QQuickItem = ... # 0x3
-    Center                   : QQuickItem = ... # 0x4
-    ItemIsFocusScope         : QQuickItem = ... # 0x4
-    ItemParentHasChanged     : QQuickItem = ... # 0x4
-    ItemOpacityHasChanged    : QQuickItem = ... # 0x5
-    Right                    : QQuickItem = ... # 0x5
-    BottomLeft               : QQuickItem = ... # 0x6
-    ItemActiveFocusHasChanged: QQuickItem = ... # 0x6
-    Bottom                   : QQuickItem = ... # 0x7
-    ItemRotationHasChanged   : QQuickItem = ... # 0x7
-    BottomRight              : QQuickItem = ... # 0x8
-    ItemAntialiasingHasChanged: QQuickItem = ... # 0x8
-    ItemHasContents          : QQuickItem = ... # 0x8
-    ItemDevicePixelRatioHasChanged: QQuickItem = ... # 0x9
-    ItemEnabledHasChanged    : QQuickItem = ... # 0xa
-    ItemAcceptsDrops         : QQuickItem = ... # 0x10
+    ItemChildAddedChange     : QQuickItem.ItemChange = ... # 0x0
+    TopLeft                  : QQuickItem.TransformOrigin = ... # 0x0
+    ItemChildRemovedChange   : QQuickItem.ItemChange = ... # 0x1
+    ItemClipsChildrenToShape : QQuickItem.Flag = ... # 0x1
+    Top                      : QQuickItem.TransformOrigin = ... # 0x1
+    ItemAcceptsInputMethod   : QQuickItem.Flag = ... # 0x2
+    ItemSceneChange          : QQuickItem.ItemChange = ... # 0x2
+    TopRight                 : QQuickItem.TransformOrigin = ... # 0x2
+    ItemVisibleHasChanged    : QQuickItem.ItemChange = ... # 0x3
+    Left                     : QQuickItem.TransformOrigin = ... # 0x3
+    Center                   : QQuickItem.TransformOrigin = ... # 0x4
+    ItemIsFocusScope         : QQuickItem.Flag = ... # 0x4
+    ItemParentHasChanged     : QQuickItem.ItemChange = ... # 0x4
+    ItemOpacityHasChanged    : QQuickItem.ItemChange = ... # 0x5
+    Right                    : QQuickItem.TransformOrigin = ... # 0x5
+    BottomLeft               : QQuickItem.TransformOrigin = ... # 0x6
+    ItemActiveFocusHasChanged: QQuickItem.ItemChange = ... # 0x6
+    Bottom                   : QQuickItem.TransformOrigin = ... # 0x7
+    ItemRotationHasChanged   : QQuickItem.ItemChange = ... # 0x7
+    BottomRight              : QQuickItem.TransformOrigin = ... # 0x8
+    ItemAntialiasingHasChanged: QQuickItem.ItemChange = ... # 0x8
+    ItemHasContents          : QQuickItem.Flag = ... # 0x8
+    ItemDevicePixelRatioHasChanged: QQuickItem.ItemChange = ... # 0x9
+    ItemEnabledHasChanged    : QQuickItem.ItemChange = ... # 0xa
+    ItemAcceptsDrops         : QQuickItem.Flag = ... # 0x10
 
     class Flag(object):
         ItemClipsChildrenToShape : QQuickItem.Flag = ... # 0x1
@@ -336,10 +336,10 @@ class QQuickItemGrabResult(PySide2.QtCore.QObject):
 
 
 class QQuickPaintedItem(PySide2.QtQuick.QQuickItem):
-    Image                    : QQuickPaintedItem = ... # 0x0
-    FastFBOResizing          : QQuickPaintedItem = ... # 0x1
-    FramebufferObject        : QQuickPaintedItem = ... # 0x1
-    InvertedYFramebufferObject: QQuickPaintedItem = ... # 0x2
+    Image                    : QQuickPaintedItem.RenderTarget = ... # 0x0
+    FastFBOResizing          : QQuickPaintedItem.PerformanceHint = ... # 0x1
+    FramebufferObject        : QQuickPaintedItem.RenderTarget = ... # 0x1
+    InvertedYFramebufferObject: QQuickPaintedItem.RenderTarget = ... # 0x2
 
     class PerformanceHint(object):
         FastFBOResizing          : QQuickPaintedItem.PerformanceHint = ... # 0x1
@@ -431,12 +431,12 @@ class QQuickTransform(PySide2.QtCore.QObject):
 
 
 class QQuickView(PySide2.QtQuick.QQuickWindow):
-    Null                     : QQuickView = ... # 0x0
-    SizeViewToRootObject     : QQuickView = ... # 0x0
-    Ready                    : QQuickView = ... # 0x1
-    SizeRootObjectToView     : QQuickView = ... # 0x1
-    Loading                  : QQuickView = ... # 0x2
-    Error                    : QQuickView = ... # 0x3
+    Null                     : QQuickView.Status = ... # 0x0
+    SizeViewToRootObject     : QQuickView.ResizeMode = ... # 0x0
+    Ready                    : QQuickView.Status = ... # 0x1
+    SizeRootObjectToView     : QQuickView.ResizeMode = ... # 0x1
+    Loading                  : QQuickView.Status = ... # 0x2
+    Error                    : QQuickView.Status = ... # 0x3
 
     class ResizeMode(object):
         SizeViewToRootObject     : QQuickView.ResizeMode = ... # 0x0
@@ -480,21 +480,21 @@ class QQuickView(PySide2.QtQuick.QQuickWindow):
 
 
 class QQuickWindow(PySide2.QtGui.QWindow):
-    BeforeSynchronizingStage : QQuickWindow = ... # 0x0
-    NativeObjectTexture      : QQuickWindow = ... # 0x0
-    QtTextRendering          : QQuickWindow = ... # 0x0
-    AfterSynchronizingStage  : QQuickWindow = ... # 0x1
-    ContextNotAvailable      : QQuickWindow = ... # 0x1
-    NativeTextRendering      : QQuickWindow = ... # 0x1
-    TextureHasAlphaChannel   : QQuickWindow = ... # 0x1
-    BeforeRenderingStage     : QQuickWindow = ... # 0x2
-    TextureHasMipmaps        : QQuickWindow = ... # 0x2
-    AfterRenderingStage      : QQuickWindow = ... # 0x3
-    AfterSwapStage           : QQuickWindow = ... # 0x4
-    TextureOwnsGLTexture     : QQuickWindow = ... # 0x4
-    NoStage                  : QQuickWindow = ... # 0x5
-    TextureCanUseAtlas       : QQuickWindow = ... # 0x8
-    TextureIsOpaque          : QQuickWindow = ... # 0x10
+    BeforeSynchronizingStage : QQuickWindow.RenderStage = ... # 0x0
+    NativeObjectTexture      : QQuickWindow.NativeObjectType = ... # 0x0
+    QtTextRendering          : QQuickWindow.TextRenderType = ... # 0x0
+    AfterSynchronizingStage  : QQuickWindow.RenderStage = ... # 0x1
+    ContextNotAvailable      : QQuickWindow.SceneGraphError = ... # 0x1
+    NativeTextRendering      : QQuickWindow.TextRenderType = ... # 0x1
+    TextureHasAlphaChannel   : QQuickWindow.CreateTextureOption = ... # 0x1
+    BeforeRenderingStage     : QQuickWindow.RenderStage = ... # 0x2
+    TextureHasMipmaps        : QQuickWindow.CreateTextureOption = ... # 0x2
+    AfterRenderingStage      : QQuickWindow.RenderStage = ... # 0x3
+    AfterSwapStage           : QQuickWindow.RenderStage = ... # 0x4
+    TextureOwnsGLTexture     : QQuickWindow.CreateTextureOption = ... # 0x4
+    NoStage                  : QQuickWindow.RenderStage = ... # 0x5
+    TextureCanUseAtlas       : QQuickWindow.CreateTextureOption = ... # 0x8
+    TextureIsOpaque          : QQuickWindow.CreateTextureOption = ... # 0x10
 
     class CreateTextureOption(object):
         TextureHasAlphaChannel   : QQuickWindow.CreateTextureOption = ... # 0x1
@@ -596,10 +596,10 @@ class QQuickWindow(PySide2.QtGui.QWindow):
 
 
 class QSGAbstractRenderer(PySide2.QtCore.QObject):
-    ClearColorBuffer         : QSGAbstractRenderer = ... # 0x1
-    MatrixTransformFlipY     : QSGAbstractRenderer = ... # 0x1
-    ClearDepthBuffer         : QSGAbstractRenderer = ... # 0x2
-    ClearStencilBuffer       : QSGAbstractRenderer = ... # 0x4
+    ClearColorBuffer         : QSGAbstractRenderer.ClearModeBit = ... # 0x1
+    MatrixTransformFlipY     : QSGAbstractRenderer.MatrixTransformFlag = ... # 0x1
+    ClearDepthBuffer         : QSGAbstractRenderer.ClearModeBit = ... # 0x2
+    ClearStencilBuffer       : QSGAbstractRenderer.ClearModeBit = ... # 0x4
 
     class ClearMode(object): ...
 
@@ -671,10 +671,10 @@ class QSGDynamicTexture(PySide2.QtQuick.QSGTexture):
 
 
 class QSGEngine(PySide2.QtCore.QObject):
-    TextureHasAlphaChannel   : QSGEngine = ... # 0x1
-    TextureOwnsGLTexture     : QSGEngine = ... # 0x4
-    TextureCanUseAtlas       : QSGEngine = ... # 0x8
-    TextureIsOpaque          : QSGEngine = ... # 0x10
+    TextureHasAlphaChannel   : QSGEngine.CreateTextureOption = ... # 0x1
+    TextureOwnsGLTexture     : QSGEngine.CreateTextureOption = ... # 0x4
+    TextureCanUseAtlas       : QSGEngine.CreateTextureOption = ... # 0x8
+    TextureIsOpaque          : QSGEngine.CreateTextureOption = ... # 0x10
 
     class CreateTextureOption(object):
         TextureHasAlphaChannel   : QSGEngine.CreateTextureOption = ... # 0x1
@@ -694,34 +694,34 @@ class QSGEngine(PySide2.QtCore.QObject):
 
 
 class QSGGeometry(Shiboken.Object):
-    AlwaysUploadPattern      : QSGGeometry = ... # 0x0
-    DrawPoints               : QSGGeometry = ... # 0x0
-    UnknownAttribute         : QSGGeometry = ... # 0x0
-    DrawLines                : QSGGeometry = ... # 0x1
-    PositionAttribute        : QSGGeometry = ... # 0x1
-    StreamPattern            : QSGGeometry = ... # 0x1
-    ColorAttribute           : QSGGeometry = ... # 0x2
-    DrawLineLoop             : QSGGeometry = ... # 0x2
-    DynamicPattern           : QSGGeometry = ... # 0x2
-    DrawLineStrip            : QSGGeometry = ... # 0x3
-    StaticPattern            : QSGGeometry = ... # 0x3
-    TexCoordAttribute        : QSGGeometry = ... # 0x3
-    DrawTriangles            : QSGGeometry = ... # 0x4
-    TexCoord1Attribute       : QSGGeometry = ... # 0x4
-    DrawTriangleStrip        : QSGGeometry = ... # 0x5
-    TexCoord2Attribute       : QSGGeometry = ... # 0x5
-    DrawTriangleFan          : QSGGeometry = ... # 0x6
-    ByteType                 : QSGGeometry = ... # 0x1400
-    UnsignedByteType         : QSGGeometry = ... # 0x1401
-    ShortType                : QSGGeometry = ... # 0x1402
-    UnsignedShortType        : QSGGeometry = ... # 0x1403
-    IntType                  : QSGGeometry = ... # 0x1404
-    UnsignedIntType          : QSGGeometry = ... # 0x1405
-    FloatType                : QSGGeometry = ... # 0x1406
-    Bytes2Type               : QSGGeometry = ... # 0x1407
-    Bytes3Type               : QSGGeometry = ... # 0x1408
-    Bytes4Type               : QSGGeometry = ... # 0x1409
-    DoubleType               : QSGGeometry = ... # 0x140a
+    AlwaysUploadPattern      : QSGGeometry.DataPattern = ... # 0x0
+    DrawPoints               : QSGGeometry.DrawingMode = ... # 0x0
+    UnknownAttribute         : QSGGeometry.AttributeType = ... # 0x0
+    DrawLines                : QSGGeometry.DrawingMode = ... # 0x1
+    PositionAttribute        : QSGGeometry.AttributeType = ... # 0x1
+    StreamPattern            : QSGGeometry.DataPattern = ... # 0x1
+    ColorAttribute           : QSGGeometry.AttributeType = ... # 0x2
+    DrawLineLoop             : QSGGeometry.DrawingMode = ... # 0x2
+    DynamicPattern           : QSGGeometry.DataPattern = ... # 0x2
+    DrawLineStrip            : QSGGeometry.DrawingMode = ... # 0x3
+    StaticPattern            : QSGGeometry.DataPattern = ... # 0x3
+    TexCoordAttribute        : QSGGeometry.AttributeType = ... # 0x3
+    DrawTriangles            : QSGGeometry.DrawingMode = ... # 0x4
+    TexCoord1Attribute       : QSGGeometry.AttributeType = ... # 0x4
+    DrawTriangleStrip        : QSGGeometry.DrawingMode = ... # 0x5
+    TexCoord2Attribute       : QSGGeometry.AttributeType = ... # 0x5
+    DrawTriangleFan          : QSGGeometry.DrawingMode = ... # 0x6
+    ByteType                 : QSGGeometry.Type = ... # 0x1400
+    UnsignedByteType         : QSGGeometry.Type = ... # 0x1401
+    ShortType                : QSGGeometry.Type = ... # 0x1402
+    UnsignedShortType        : QSGGeometry.Type = ... # 0x1403
+    IntType                  : QSGGeometry.Type = ... # 0x1404
+    UnsignedIntType          : QSGGeometry.Type = ... # 0x1405
+    FloatType                : QSGGeometry.Type = ... # 0x1406
+    Bytes2Type               : QSGGeometry.Type = ... # 0x1407
+    Bytes3Type               : QSGGeometry.Type = ... # 0x1408
+    Bytes4Type               : QSGGeometry.Type = ... # 0x1409
+    DoubleType               : QSGGeometry.Type = ... # 0x140a
 
     class Attribute(Shiboken.Object):
 
@@ -873,29 +873,29 @@ class QSGMaterialType(Shiboken.Object):
 
 
 class QSGNode(Shiboken.Object):
-    BasicNodeType            : QSGNode = ... # 0x0
-    GeometryNodeType         : QSGNode = ... # 0x1
-    OwnedByParent            : QSGNode = ... # 0x1
-    DirtyUsePreprocess       : QSGNode = ... # 0x2
-    TransformNodeType        : QSGNode = ... # 0x2
-    UsePreprocess            : QSGNode = ... # 0x2
-    ClipNodeType             : QSGNode = ... # 0x3
-    OpacityNodeType          : QSGNode = ... # 0x4
-    RootNodeType             : QSGNode = ... # 0x5
-    RenderNodeType           : QSGNode = ... # 0x6
-    DirtySubtreeBlocked      : QSGNode = ... # 0x80
-    DirtyMatrix              : QSGNode = ... # 0x100
-    DirtyNodeAdded           : QSGNode = ... # 0x400
-    DirtyNodeRemoved         : QSGNode = ... # 0x800
-    DirtyGeometry            : QSGNode = ... # 0x1000
-    DirtyMaterial            : QSGNode = ... # 0x2000
-    DirtyOpacity             : QSGNode = ... # 0x4000
-    DirtyForceUpdate         : QSGNode = ... # 0x8000
-    DirtyPropagationMask     : QSGNode = ... # 0xc500
-    OwnsGeometry             : QSGNode = ... # 0x10000
-    OwnsMaterial             : QSGNode = ... # 0x20000
-    OwnsOpaqueMaterial       : QSGNode = ... # 0x40000
-    IsVisitableNode          : QSGNode = ... # 0x1000000
+    BasicNodeType            : QSGNode.NodeType = ... # 0x0
+    GeometryNodeType         : QSGNode.NodeType = ... # 0x1
+    OwnedByParent            : QSGNode.Flag = ... # 0x1
+    DirtyUsePreprocess       : QSGNode.DirtyStateBit = ... # 0x2
+    TransformNodeType        : QSGNode.NodeType = ... # 0x2
+    UsePreprocess            : QSGNode.Flag = ... # 0x2
+    ClipNodeType             : QSGNode.NodeType = ... # 0x3
+    OpacityNodeType          : QSGNode.NodeType = ... # 0x4
+    RootNodeType             : QSGNode.NodeType = ... # 0x5
+    RenderNodeType           : QSGNode.NodeType = ... # 0x6
+    DirtySubtreeBlocked      : QSGNode.DirtyStateBit = ... # 0x80
+    DirtyMatrix              : QSGNode.DirtyStateBit = ... # 0x100
+    DirtyNodeAdded           : QSGNode.DirtyStateBit = ... # 0x400
+    DirtyNodeRemoved         : QSGNode.DirtyStateBit = ... # 0x800
+    DirtyGeometry            : QSGNode.DirtyStateBit = ... # 0x1000
+    DirtyMaterial            : QSGNode.DirtyStateBit = ... # 0x2000
+    DirtyOpacity             : QSGNode.DirtyStateBit = ... # 0x4000
+    DirtyForceUpdate         : QSGNode.DirtyStateBit = ... # 0x8000
+    DirtyPropagationMask     : QSGNode.DirtyStateBit = ... # 0xc500
+    OwnsGeometry             : QSGNode.Flag = ... # 0x10000
+    OwnsMaterial             : QSGNode.Flag = ... # 0x20000
+    OwnsOpaqueMaterial       : QSGNode.Flag = ... # 0x40000
+    IsVisitableNode          : QSGNode.Flag = ... # 0x1000000
 
     class DirtyState(object): ...
 
@@ -988,9 +988,9 @@ class QSGSimpleRectNode(PySide2.QtQuick.QSGGeometryNode):
 
 
 class QSGSimpleTextureNode(PySide2.QtQuick.QSGGeometryNode):
-    NoTransform              : QSGSimpleTextureNode = ... # 0x0
-    MirrorHorizontally       : QSGSimpleTextureNode = ... # 0x1
-    MirrorVertically         : QSGSimpleTextureNode = ... # 0x2
+    NoTransform              : QSGSimpleTextureNode.TextureCoordinatesTransformFlag = ... # 0x0
+    MirrorHorizontally       : QSGSimpleTextureNode.TextureCoordinatesTransformFlag = ... # 0x1
+    MirrorVertically         : QSGSimpleTextureNode.TextureCoordinatesTransformFlag = ... # 0x2
 
     class TextureCoordinatesTransformFlag(object):
         NoTransform              : QSGSimpleTextureNode.TextureCoordinatesTransformFlag = ... # 0x0
@@ -1022,17 +1022,17 @@ class QSGSimpleTextureNode(PySide2.QtQuick.QSGGeometryNode):
 
 
 class QSGTexture(PySide2.QtCore.QObject):
-    AnisotropyNone           : QSGTexture = ... # 0x0
-    None_                    : QSGTexture = ... # 0x0
-    Repeat                   : QSGTexture = ... # 0x0
-    Anisotropy2x             : QSGTexture = ... # 0x1
-    ClampToEdge              : QSGTexture = ... # 0x1
-    Nearest                  : QSGTexture = ... # 0x1
-    Anisotropy4x             : QSGTexture = ... # 0x2
-    Linear                   : QSGTexture = ... # 0x2
-    MirroredRepeat           : QSGTexture = ... # 0x2
-    Anisotropy8x             : QSGTexture = ... # 0x3
-    Anisotropy16x            : QSGTexture = ... # 0x4
+    AnisotropyNone           : QSGTexture.AnisotropyLevel = ... # 0x0
+    None_                    : QSGTexture.Filtering = ... # 0x0
+    Repeat                   : QSGTexture.WrapMode = ... # 0x0
+    Anisotropy2x             : QSGTexture.AnisotropyLevel = ... # 0x1
+    ClampToEdge              : QSGTexture.WrapMode = ... # 0x1
+    Nearest                  : QSGTexture.Filtering = ... # 0x1
+    Anisotropy4x             : QSGTexture.AnisotropyLevel = ... # 0x2
+    Linear                   : QSGTexture.Filtering = ... # 0x2
+    MirroredRepeat           : QSGTexture.WrapMode = ... # 0x2
+    Anisotropy8x             : QSGTexture.AnisotropyLevel = ... # 0x3
+    Anisotropy16x            : QSGTexture.AnisotropyLevel = ... # 0x4
 
     class AnisotropyLevel(object):
         AnisotropyNone           : QSGTexture.AnisotropyLevel = ... # 0x0

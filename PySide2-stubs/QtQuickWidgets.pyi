@@ -58,12 +58,12 @@ import PySide2.QtQuickWidgets
 
 
 class QQuickWidget(PySide2.QtWidgets.QWidget):
-    Null                     : QQuickWidget = ... # 0x0
-    SizeViewToRootObject     : QQuickWidget = ... # 0x0
-    Ready                    : QQuickWidget = ... # 0x1
-    SizeRootObjectToView     : QQuickWidget = ... # 0x1
-    Loading                  : QQuickWidget = ... # 0x2
-    Error                    : QQuickWidget = ... # 0x3
+    Null                     : QQuickWidget.Status = ... # 0x0
+    SizeViewToRootObject     : QQuickWidget.ResizeMode = ... # 0x0
+    Ready                    : QQuickWidget.Status = ... # 0x1
+    SizeRootObjectToView     : QQuickWidget.ResizeMode = ... # 0x1
+    Loading                  : QQuickWidget.Status = ... # 0x2
+    Error                    : QQuickWidget.Status = ... # 0x3
 
     class ResizeMode(object):
         SizeViewToRootObject     : QQuickWidget.ResizeMode = ... # 0x0

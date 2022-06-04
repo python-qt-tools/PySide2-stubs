@@ -54,10 +54,10 @@ import PySide2.QtScript
 
 
 class QScriptClass(Shiboken.Object):
-    Callable                 : QScriptClass = ... # 0x0
-    HandlesReadAccess        : QScriptClass = ... # 0x1
-    HasInstance              : QScriptClass = ... # 0x1
-    HandlesWriteAccess       : QScriptClass = ... # 0x2
+    Callable                 : QScriptClass.Extension = ... # 0x0
+    HandlesReadAccess        : QScriptClass.QueryFlag = ... # 0x1
+    HasInstance              : QScriptClass.Extension = ... # 0x1
+    HandlesWriteAccess       : QScriptClass.QueryFlag = ... # 0x2
 
     class Extension(object):
         Callable                 : QScriptClass.Extension = ... # 0x0
@@ -97,14 +97,14 @@ class QScriptClassPropertyIterator(Shiboken.Object):
 
 
 class QScriptContext(Shiboken.Object):
-    NormalState              : QScriptContext = ... # 0x0
-    UnknownError             : QScriptContext = ... # 0x0
-    ExceptionState           : QScriptContext = ... # 0x1
-    ReferenceError           : QScriptContext = ... # 0x1
-    SyntaxError              : QScriptContext = ... # 0x2
-    TypeError                : QScriptContext = ... # 0x3
-    RangeError               : QScriptContext = ... # 0x4
-    URIError                 : QScriptContext = ... # 0x5
+    NormalState              : QScriptContext.ExecutionState = ... # 0x0
+    UnknownError             : QScriptContext.Error = ... # 0x0
+    ExceptionState           : QScriptContext.ExecutionState = ... # 0x1
+    ReferenceError           : QScriptContext.Error = ... # 0x1
+    SyntaxError              : QScriptContext.Error = ... # 0x2
+    TypeError                : QScriptContext.Error = ... # 0x3
+    RangeError               : QScriptContext.Error = ... # 0x4
+    URIError                 : QScriptContext.Error = ... # 0x5
 
     class Error(object):
         UnknownError             : QScriptContext.Error = ... # 0x0
@@ -144,10 +144,10 @@ class QScriptContext(Shiboken.Object):
 
 
 class QScriptContextInfo(Shiboken.Object):
-    ScriptFunction           : QScriptContextInfo = ... # 0x0
-    QtFunction               : QScriptContextInfo = ... # 0x1
-    QtPropertyFunction       : QScriptContextInfo = ... # 0x2
-    NativeFunction           : QScriptContextInfo = ... # 0x3
+    ScriptFunction           : QScriptContextInfo.FunctionType = ... # 0x0
+    QtFunction               : QScriptContextInfo.FunctionType = ... # 0x1
+    QtPropertyFunction       : QScriptContextInfo.FunctionType = ... # 0x2
+    NativeFunction           : QScriptContextInfo.FunctionType = ... # 0x3
 
     class FunctionType(object):
         ScriptFunction           : QScriptContextInfo.FunctionType = ... # 0x0
@@ -180,18 +180,18 @@ class QScriptContextInfo(Shiboken.Object):
 
 
 class QScriptEngine(PySide2.QtCore.QObject):
-    QtOwnership              : QScriptEngine = ... # 0x0
-    ExcludeChildObjects      : QScriptEngine = ... # 0x1
-    ScriptOwnership          : QScriptEngine = ... # 0x1
-    AutoOwnership            : QScriptEngine = ... # 0x2
-    ExcludeSuperClassMethods : QScriptEngine = ... # 0x2
-    ExcludeSuperClassProperties: QScriptEngine = ... # 0x4
-    ExcludeSuperClassContents: QScriptEngine = ... # 0x6
-    SkipMethodsInEnumeration : QScriptEngine = ... # 0x8
-    ExcludeDeleteLater       : QScriptEngine = ... # 0x10
-    ExcludeSlots             : QScriptEngine = ... # 0x20
-    AutoCreateDynamicProperties: QScriptEngine = ... # 0x100
-    PreferExistingWrapperObject: QScriptEngine = ... # 0x200
+    QtOwnership              : QScriptEngine.ValueOwnership = ... # 0x0
+    ExcludeChildObjects      : QScriptEngine.QObjectWrapOption = ... # 0x1
+    ScriptOwnership          : QScriptEngine.ValueOwnership = ... # 0x1
+    AutoOwnership            : QScriptEngine.ValueOwnership = ... # 0x2
+    ExcludeSuperClassMethods : QScriptEngine.QObjectWrapOption = ... # 0x2
+    ExcludeSuperClassProperties: QScriptEngine.QObjectWrapOption = ... # 0x4
+    ExcludeSuperClassContents: QScriptEngine.QObjectWrapOption = ... # 0x6
+    SkipMethodsInEnumeration : QScriptEngine.QObjectWrapOption = ... # 0x8
+    ExcludeDeleteLater       : QScriptEngine.QObjectWrapOption = ... # 0x10
+    ExcludeSlots             : QScriptEngine.QObjectWrapOption = ... # 0x20
+    AutoCreateDynamicProperties: QScriptEngine.QObjectWrapOption = ... # 0x100
+    PreferExistingWrapperObject: QScriptEngine.QObjectWrapOption = ... # 0x200
 
     class QObjectWrapOption(object):
         ExcludeChildObjects      : QScriptEngine.QObjectWrapOption = ... # 0x1
@@ -276,7 +276,7 @@ class QScriptEngine(PySide2.QtCore.QObject):
 
 
 class QScriptEngineAgent(Shiboken.Object):
-    DebuggerInvocationRequest: QScriptEngineAgent = ... # 0x0
+    DebuggerInvocationRequest: QScriptEngineAgent.Extension = ... # 0x0
 
     class Extension(object):
         DebuggerInvocationRequest: QScriptEngineAgent.Extension = ... # 0x0
@@ -345,20 +345,20 @@ class QScriptString(Shiboken.Object):
 
 
 class QScriptValue(Shiboken.Object):
-    UserRange                : QScriptValue = ... # -0x1000000
-    NullValue                : QScriptValue = ... # 0x0
-    ResolveLocal             : QScriptValue = ... # 0x0
-    ReadOnly                 : QScriptValue = ... # 0x1
-    ResolvePrototype         : QScriptValue = ... # 0x1
-    UndefinedValue           : QScriptValue = ... # 0x1
-    ResolveScope             : QScriptValue = ... # 0x2
-    Undeletable              : QScriptValue = ... # 0x2
-    ResolveFull              : QScriptValue = ... # 0x3
-    SkipInEnumeration        : QScriptValue = ... # 0x4
-    PropertyGetter           : QScriptValue = ... # 0x8
-    PropertySetter           : QScriptValue = ... # 0x10
-    QObjectMember            : QScriptValue = ... # 0x20
-    KeepExistingFlags        : QScriptValue = ... # 0x800
+    UserRange                : QScriptValue.PropertyFlag = ... # -0x1000000
+    NullValue                : QScriptValue.SpecialValue = ... # 0x0
+    ResolveLocal             : QScriptValue.ResolveFlag = ... # 0x0
+    ReadOnly                 : QScriptValue.PropertyFlag = ... # 0x1
+    ResolvePrototype         : QScriptValue.ResolveFlag = ... # 0x1
+    UndefinedValue           : QScriptValue.SpecialValue = ... # 0x1
+    ResolveScope             : QScriptValue.ResolveFlag = ... # 0x2
+    Undeletable              : QScriptValue.PropertyFlag = ... # 0x2
+    ResolveFull              : QScriptValue.ResolveFlag = ... # 0x3
+    SkipInEnumeration        : QScriptValue.PropertyFlag = ... # 0x4
+    PropertyGetter           : QScriptValue.PropertyFlag = ... # 0x8
+    PropertySetter           : QScriptValue.PropertyFlag = ... # 0x10
+    QObjectMember            : QScriptValue.PropertyFlag = ... # 0x20
+    KeepExistingFlags        : QScriptValue.PropertyFlag = ... # 0x800
 
     class PropertyFlag(object):
         UserRange                : QScriptValue.PropertyFlag = ... # -0x1000000

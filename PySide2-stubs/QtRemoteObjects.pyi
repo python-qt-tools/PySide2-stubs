@@ -98,8 +98,8 @@ class QRemoteObjectHost(PySide2.QtRemoteObjects.QRemoteObjectHostBase):
 
 
 class QRemoteObjectHostBase(PySide2.QtRemoteObjects.QRemoteObjectNode):
-    BuiltInSchemasOnly       : QRemoteObjectHostBase = ... # 0x0
-    AllowExternalRegistration: QRemoteObjectHostBase = ... # 0x1
+    BuiltInSchemasOnly       : QRemoteObjectHostBase.AllowedSchemas = ... # 0x0
+    AllowExternalRegistration: QRemoteObjectHostBase.AllowedSchemas = ... # 0x1
 
     class AllowedSchemas(object):
         BuiltInSchemasOnly       : QRemoteObjectHostBase.AllowedSchemas = ... # 0x0
@@ -118,18 +118,18 @@ class QRemoteObjectHostBase(PySide2.QtRemoteObjects.QRemoteObjectNode):
 
 
 class QRemoteObjectNode(PySide2.QtCore.QObject):
-    NoError                  : QRemoteObjectNode = ... # 0x0
-    RegistryNotAcquired      : QRemoteObjectNode = ... # 0x1
-    RegistryAlreadyHosted    : QRemoteObjectNode = ... # 0x2
-    NodeIsNoServer           : QRemoteObjectNode = ... # 0x3
-    ServerAlreadyCreated     : QRemoteObjectNode = ... # 0x4
-    UnintendedRegistryHosting: QRemoteObjectNode = ... # 0x5
-    OperationNotValidOnClientNode: QRemoteObjectNode = ... # 0x6
-    SourceNotRegistered      : QRemoteObjectNode = ... # 0x7
-    MissingObjectName        : QRemoteObjectNode = ... # 0x8
-    HostUrlInvalid           : QRemoteObjectNode = ... # 0x9
-    ProtocolMismatch         : QRemoteObjectNode = ... # 0xa
-    ListenFailed             : QRemoteObjectNode = ... # 0xb
+    NoError                  : QRemoteObjectNode.ErrorCode = ... # 0x0
+    RegistryNotAcquired      : QRemoteObjectNode.ErrorCode = ... # 0x1
+    RegistryAlreadyHosted    : QRemoteObjectNode.ErrorCode = ... # 0x2
+    NodeIsNoServer           : QRemoteObjectNode.ErrorCode = ... # 0x3
+    ServerAlreadyCreated     : QRemoteObjectNode.ErrorCode = ... # 0x4
+    UnintendedRegistryHosting: QRemoteObjectNode.ErrorCode = ... # 0x5
+    OperationNotValidOnClientNode: QRemoteObjectNode.ErrorCode = ... # 0x6
+    SourceNotRegistered      : QRemoteObjectNode.ErrorCode = ... # 0x7
+    MissingObjectName        : QRemoteObjectNode.ErrorCode = ... # 0x8
+    HostUrlInvalid           : QRemoteObjectNode.ErrorCode = ... # 0x9
+    ProtocolMismatch         : QRemoteObjectNode.ErrorCode = ... # 0xa
+    ListenFailed             : QRemoteObjectNode.ErrorCode = ... # 0xb
 
     class ErrorCode(object):
         NoError                  : QRemoteObjectNode.ErrorCode = ... # 0x0
@@ -169,8 +169,8 @@ class QRemoteObjectNode(PySide2.QtCore.QObject):
 
 
 class QRemoteObjectPendingCall(Shiboken.Object):
-    NoError                  : QRemoteObjectPendingCall = ... # 0x0
-    InvalidMessage           : QRemoteObjectPendingCall = ... # 0x1
+    NoError                  : QRemoteObjectPendingCall.Error = ... # 0x0
+    InvalidMessage           : QRemoteObjectPendingCall.Error = ... # 0x1
 
     class Error(object):
         NoError                  : QRemoteObjectPendingCall.Error = ... # 0x0
@@ -215,11 +215,11 @@ class QRemoteObjectRegistryHost(PySide2.QtRemoteObjects.QRemoteObjectHostBase):
 
 
 class QRemoteObjectReplica(PySide2.QtCore.QObject):
-    Uninitialized            : QRemoteObjectReplica = ... # 0x0
-    Default                  : QRemoteObjectReplica = ... # 0x1
-    Valid                    : QRemoteObjectReplica = ... # 0x2
-    Suspect                  : QRemoteObjectReplica = ... # 0x3
-    SignatureMismatch        : QRemoteObjectReplica = ... # 0x4
+    Uninitialized            : QRemoteObjectReplica.State = ... # 0x0
+    Default                  : QRemoteObjectReplica.State = ... # 0x1
+    Valid                    : QRemoteObjectReplica.State = ... # 0x2
+    Suspect                  : QRemoteObjectReplica.State = ... # 0x3
+    SignatureMismatch        : QRemoteObjectReplica.State = ... # 0x4
 
     class State(object):
         Uninitialized            : QRemoteObjectReplica.State = ... # 0x0

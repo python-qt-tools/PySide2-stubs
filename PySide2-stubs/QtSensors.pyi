@@ -54,9 +54,9 @@ import PySide2.QtSensors
 
 
 class QAccelerometer(PySide2.QtSensors.QSensor):
-    Combined                 : QAccelerometer = ... # 0x0
-    Gravity                  : QAccelerometer = ... # 0x1
-    User                     : QAccelerometer = ... # 0x2
+    Combined                 : QAccelerometer.AccelerationMode = ... # 0x0
+    Gravity                  : QAccelerometer.AccelerationMode = ... # 0x1
+    User                     : QAccelerometer.AccelerationMode = ... # 0x2
 
     class AccelerationMode(object):
         Combined                 : QAccelerometer.AccelerationMode = ... # 0x0
@@ -130,12 +130,12 @@ class QAmbientLightFilter(PySide2.QtSensors.QSensorFilter):
 
 
 class QAmbientLightReading(PySide2.QtSensors.QSensorReading):
-    Undefined                : QAmbientLightReading = ... # 0x0
-    Dark                     : QAmbientLightReading = ... # 0x1
-    Twilight                 : QAmbientLightReading = ... # 0x2
-    Light                    : QAmbientLightReading = ... # 0x3
-    Bright                   : QAmbientLightReading = ... # 0x4
-    Sunny                    : QAmbientLightReading = ... # 0x5
+    Undefined                : QAmbientLightReading.LightLevel = ... # 0x0
+    Dark                     : QAmbientLightReading.LightLevel = ... # 0x1
+    Twilight                 : QAmbientLightReading.LightLevel = ... # 0x2
+    Light                    : QAmbientLightReading.LightLevel = ... # 0x3
+    Bright                   : QAmbientLightReading.LightLevel = ... # 0x4
+    Sunny                    : QAmbientLightReading.LightLevel = ... # 0x5
 
     class LightLevel(object):
         Undefined                : QAmbientLightReading.LightLevel = ... # 0x0
@@ -450,13 +450,13 @@ class QOrientationFilter(PySide2.QtSensors.QSensorFilter):
 
 
 class QOrientationReading(PySide2.QtSensors.QSensorReading):
-    Undefined                : QOrientationReading = ... # 0x0
-    TopUp                    : QOrientationReading = ... # 0x1
-    TopDown                  : QOrientationReading = ... # 0x2
-    LeftUp                   : QOrientationReading = ... # 0x3
-    RightUp                  : QOrientationReading = ... # 0x4
-    FaceUp                   : QOrientationReading = ... # 0x5
-    FaceDown                 : QOrientationReading = ... # 0x6
+    Undefined                : QOrientationReading.Orientation = ... # 0x0
+    TopUp                    : QOrientationReading.Orientation = ... # 0x1
+    TopDown                  : QOrientationReading.Orientation = ... # 0x2
+    LeftUp                   : QOrientationReading.Orientation = ... # 0x3
+    RightUp                  : QOrientationReading.Orientation = ... # 0x4
+    FaceUp                   : QOrientationReading.Orientation = ... # 0x5
+    FaceDown                 : QOrientationReading.Orientation = ... # 0x6
 
     class Orientation(object):
         Undefined                : QOrientationReading.Orientation = ... # 0x0
@@ -566,18 +566,18 @@ class QRotationSensor(PySide2.QtSensors.QSensor):
 
 
 class QSensor(PySide2.QtCore.QObject):
-    Buffering                : QSensor = ... # 0x0
-    FixedOrientation         : QSensor = ... # 0x0
-    AlwaysOn                 : QSensor = ... # 0x1
-    AutomaticOrientation     : QSensor = ... # 0x1
-    GeoValues                : QSensor = ... # 0x2
-    UserOrientation          : QSensor = ... # 0x2
-    FieldOfView              : QSensor = ... # 0x3
-    AccelerationMode         : QSensor = ... # 0x4
-    SkipDuplicates           : QSensor = ... # 0x5
-    AxesOrientation          : QSensor = ... # 0x6
-    PressureSensorTemperature: QSensor = ... # 0x7
-    Reserved                 : QSensor = ... # 0x101
+    Buffering                : QSensor.Feature = ... # 0x0
+    FixedOrientation         : QSensor.AxesOrientationMode = ... # 0x0
+    AlwaysOn                 : QSensor.Feature = ... # 0x1
+    AutomaticOrientation     : QSensor.AxesOrientationMode = ... # 0x1
+    GeoValues                : QSensor.Feature = ... # 0x2
+    UserOrientation          : QSensor.AxesOrientationMode = ... # 0x2
+    FieldOfView              : QSensor.Feature = ... # 0x3
+    AccelerationMode         : QSensor.Feature = ... # 0x4
+    SkipDuplicates           : QSensor.Feature = ... # 0x5
+    AxesOrientation          : QSensor.Feature = ... # 0x6
+    PressureSensorTemperature: QSensor.Feature = ... # 0x7
+    Reserved                 : QSensor.Feature = ... # 0x101
 
     class AxesOrientationMode(object):
         FixedOrientation         : QSensor.AxesOrientationMode = ... # 0x0
@@ -763,19 +763,19 @@ class QTapFilter(PySide2.QtSensors.QSensorFilter):
 
 
 class QTapReading(PySide2.QtSensors.QSensorReading):
-    Undefined                : QTapReading = ... # 0x0
-    X                        : QTapReading = ... # 0x1
-    Y                        : QTapReading = ... # 0x2
-    Z                        : QTapReading = ... # 0x4
-    X_Pos                    : QTapReading = ... # 0x11
-    Y_Pos                    : QTapReading = ... # 0x22
-    Z_Pos                    : QTapReading = ... # 0x44
-    X_Neg                    : QTapReading = ... # 0x101
-    X_Both                   : QTapReading = ... # 0x111
-    Y_Neg                    : QTapReading = ... # 0x202
-    Y_Both                   : QTapReading = ... # 0x222
-    Z_Neg                    : QTapReading = ... # 0x404
-    Z_Both                   : QTapReading = ... # 0x444
+    Undefined                : QTapReading.TapDirection = ... # 0x0
+    X                        : QTapReading.TapDirection = ... # 0x1
+    Y                        : QTapReading.TapDirection = ... # 0x2
+    Z                        : QTapReading.TapDirection = ... # 0x4
+    X_Pos                    : QTapReading.TapDirection = ... # 0x11
+    Y_Pos                    : QTapReading.TapDirection = ... # 0x22
+    Z_Pos                    : QTapReading.TapDirection = ... # 0x44
+    X_Neg                    : QTapReading.TapDirection = ... # 0x101
+    X_Both                   : QTapReading.TapDirection = ... # 0x111
+    Y_Neg                    : QTapReading.TapDirection = ... # 0x202
+    Y_Both                   : QTapReading.TapDirection = ... # 0x222
+    Z_Neg                    : QTapReading.TapDirection = ... # 0x404
+    Z_Both                   : QTapReading.TapDirection = ... # 0x444
 
     class TapDirection(object):
         Undefined                : QTapReading.TapDirection = ... # 0x0

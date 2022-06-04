@@ -55,13 +55,13 @@ import PySide2.QtLocation
 
 
 class QGeoCodeReply(PySide2.QtCore.QObject):
-    NoError                  : QGeoCodeReply = ... # 0x0
-    EngineNotSetError        : QGeoCodeReply = ... # 0x1
-    CommunicationError       : QGeoCodeReply = ... # 0x2
-    ParseError               : QGeoCodeReply = ... # 0x3
-    UnsupportedOptionError   : QGeoCodeReply = ... # 0x4
-    CombinationError         : QGeoCodeReply = ... # 0x5
-    UnknownError             : QGeoCodeReply = ... # 0x6
+    NoError                  : QGeoCodeReply.Error = ... # 0x0
+    EngineNotSetError        : QGeoCodeReply.Error = ... # 0x1
+    CommunicationError       : QGeoCodeReply.Error = ... # 0x2
+    ParseError               : QGeoCodeReply.Error = ... # 0x3
+    UnsupportedOptionError   : QGeoCodeReply.Error = ... # 0x4
+    CombinationError         : QGeoCodeReply.Error = ... # 0x5
+    UnknownError             : QGeoCodeReply.Error = ... # 0x6
 
     class Error(object):
         NoError                  : QGeoCodeReply.Error = ... # 0x0
@@ -122,18 +122,18 @@ class QGeoCodingManagerEngine(PySide2.QtCore.QObject):
 
 
 class QGeoManeuver(Shiboken.Object):
-    NoDirection              : QGeoManeuver = ... # 0x0
-    DirectionForward         : QGeoManeuver = ... # 0x1
-    DirectionBearRight       : QGeoManeuver = ... # 0x2
-    DirectionLightRight      : QGeoManeuver = ... # 0x3
-    DirectionRight           : QGeoManeuver = ... # 0x4
-    DirectionHardRight       : QGeoManeuver = ... # 0x5
-    DirectionUTurnRight      : QGeoManeuver = ... # 0x6
-    DirectionUTurnLeft       : QGeoManeuver = ... # 0x7
-    DirectionHardLeft        : QGeoManeuver = ... # 0x8
-    DirectionLeft            : QGeoManeuver = ... # 0x9
-    DirectionLightLeft       : QGeoManeuver = ... # 0xa
-    DirectionBearLeft        : QGeoManeuver = ... # 0xb
+    NoDirection              : QGeoManeuver.InstructionDirection = ... # 0x0
+    DirectionForward         : QGeoManeuver.InstructionDirection = ... # 0x1
+    DirectionBearRight       : QGeoManeuver.InstructionDirection = ... # 0x2
+    DirectionLightRight      : QGeoManeuver.InstructionDirection = ... # 0x3
+    DirectionRight           : QGeoManeuver.InstructionDirection = ... # 0x4
+    DirectionHardRight       : QGeoManeuver.InstructionDirection = ... # 0x5
+    DirectionUTurnRight      : QGeoManeuver.InstructionDirection = ... # 0x6
+    DirectionUTurnLeft       : QGeoManeuver.InstructionDirection = ... # 0x7
+    DirectionHardLeft        : QGeoManeuver.InstructionDirection = ... # 0x8
+    DirectionLeft            : QGeoManeuver.InstructionDirection = ... # 0x9
+    DirectionLightLeft       : QGeoManeuver.InstructionDirection = ... # 0xa
+    DirectionBearLeft        : QGeoManeuver.InstructionDirection = ... # 0xb
 
     class InstructionDirection(object):
         NoDirection              : QGeoManeuver.InstructionDirection = ... # 0x0
@@ -203,12 +203,12 @@ class QGeoRoute(Shiboken.Object):
 
 
 class QGeoRouteReply(PySide2.QtCore.QObject):
-    NoError                  : QGeoRouteReply = ... # 0x0
-    EngineNotSetError        : QGeoRouteReply = ... # 0x1
-    CommunicationError       : QGeoRouteReply = ... # 0x2
-    ParseError               : QGeoRouteReply = ... # 0x3
-    UnsupportedOptionError   : QGeoRouteReply = ... # 0x4
-    UnknownError             : QGeoRouteReply = ... # 0x5
+    NoError                  : QGeoRouteReply.Error = ... # 0x0
+    EngineNotSetError        : QGeoRouteReply.Error = ... # 0x1
+    CommunicationError       : QGeoRouteReply.Error = ... # 0x2
+    ParseError               : QGeoRouteReply.Error = ... # 0x3
+    UnsupportedOptionError   : QGeoRouteReply.Error = ... # 0x4
+    UnknownError             : QGeoRouteReply.Error = ... # 0x5
 
     class Error(object):
         NoError                  : QGeoRouteReply.Error = ... # 0x0
@@ -236,34 +236,34 @@ class QGeoRouteReply(PySide2.QtCore.QObject):
 
 
 class QGeoRouteRequest(Shiboken.Object):
-    NeutralFeatureWeight     : QGeoRouteRequest = ... # 0x0
-    NoFeature                : QGeoRouteRequest = ... # 0x0
-    NoManeuvers              : QGeoRouteRequest = ... # 0x0
-    NoSegmentData            : QGeoRouteRequest = ... # 0x0
-    BasicManeuvers           : QGeoRouteRequest = ... # 0x1
-    BasicSegmentData         : QGeoRouteRequest = ... # 0x1
-    CarTravel                : QGeoRouteRequest = ... # 0x1
-    PreferFeatureWeight      : QGeoRouteRequest = ... # 0x1
-    ShortestRoute            : QGeoRouteRequest = ... # 0x1
-    TollFeature              : QGeoRouteRequest = ... # 0x1
-    FastestRoute             : QGeoRouteRequest = ... # 0x2
-    HighwayFeature           : QGeoRouteRequest = ... # 0x2
-    PedestrianTravel         : QGeoRouteRequest = ... # 0x2
-    RequireFeatureWeight     : QGeoRouteRequest = ... # 0x2
-    AvoidFeatureWeight       : QGeoRouteRequest = ... # 0x4
-    BicycleTravel            : QGeoRouteRequest = ... # 0x4
-    MostEconomicRoute        : QGeoRouteRequest = ... # 0x4
-    PublicTransitFeature     : QGeoRouteRequest = ... # 0x4
-    DisallowFeatureWeight    : QGeoRouteRequest = ... # 0x8
-    FerryFeature             : QGeoRouteRequest = ... # 0x8
-    MostScenicRoute          : QGeoRouteRequest = ... # 0x8
-    PublicTransitTravel      : QGeoRouteRequest = ... # 0x8
-    TruckTravel              : QGeoRouteRequest = ... # 0x10
-    TunnelFeature            : QGeoRouteRequest = ... # 0x10
-    DirtRoadFeature          : QGeoRouteRequest = ... # 0x20
-    ParksFeature             : QGeoRouteRequest = ... # 0x40
-    MotorPoolLaneFeature     : QGeoRouteRequest = ... # 0x80
-    TrafficFeature           : QGeoRouteRequest = ... # 0x100
+    NeutralFeatureWeight     : QGeoRouteRequest.FeatureWeight = ... # 0x0
+    NoFeature                : QGeoRouteRequest.FeatureType = ... # 0x0
+    NoManeuvers              : QGeoRouteRequest.ManeuverDetail = ... # 0x0
+    NoSegmentData            : QGeoRouteRequest.SegmentDetail = ... # 0x0
+    BasicManeuvers           : QGeoRouteRequest.ManeuverDetail = ... # 0x1
+    BasicSegmentData         : QGeoRouteRequest.SegmentDetail = ... # 0x1
+    CarTravel                : QGeoRouteRequest.TravelMode = ... # 0x1
+    PreferFeatureWeight      : QGeoRouteRequest.FeatureWeight = ... # 0x1
+    ShortestRoute            : QGeoRouteRequest.RouteOptimization = ... # 0x1
+    TollFeature              : QGeoRouteRequest.FeatureType = ... # 0x1
+    FastestRoute             : QGeoRouteRequest.RouteOptimization = ... # 0x2
+    HighwayFeature           : QGeoRouteRequest.FeatureType = ... # 0x2
+    PedestrianTravel         : QGeoRouteRequest.TravelMode = ... # 0x2
+    RequireFeatureWeight     : QGeoRouteRequest.FeatureWeight = ... # 0x2
+    AvoidFeatureWeight       : QGeoRouteRequest.FeatureWeight = ... # 0x4
+    BicycleTravel            : QGeoRouteRequest.TravelMode = ... # 0x4
+    MostEconomicRoute        : QGeoRouteRequest.RouteOptimization = ... # 0x4
+    PublicTransitFeature     : QGeoRouteRequest.FeatureType = ... # 0x4
+    DisallowFeatureWeight    : QGeoRouteRequest.FeatureWeight = ... # 0x8
+    FerryFeature             : QGeoRouteRequest.FeatureType = ... # 0x8
+    MostScenicRoute          : QGeoRouteRequest.RouteOptimization = ... # 0x8
+    PublicTransitTravel      : QGeoRouteRequest.TravelMode = ... # 0x8
+    TruckTravel              : QGeoRouteRequest.TravelMode = ... # 0x10
+    TunnelFeature            : QGeoRouteRequest.FeatureType = ... # 0x10
+    DirtRoadFeature          : QGeoRouteRequest.FeatureType = ... # 0x20
+    ParksFeature             : QGeoRouteRequest.FeatureType = ... # 0x40
+    MotorPoolLaneFeature     : QGeoRouteRequest.FeatureType = ... # 0x80
+    TrafficFeature           : QGeoRouteRequest.FeatureType = ... # 0x100
 
     class FeatureType(object):
         NoFeature                : QGeoRouteRequest.FeatureType = ... # 0x0
@@ -416,48 +416,48 @@ class QGeoRoutingManagerEngine(PySide2.QtCore.QObject):
 
 
 class QGeoServiceProvider(PySide2.QtCore.QObject):
-    AnyGeocodingFeatures     : QGeoServiceProvider = ... # -0x1
-    AnyMappingFeatures       : QGeoServiceProvider = ... # -0x1
-    AnyNavigationFeatures    : QGeoServiceProvider = ... # -0x1
-    AnyPlacesFeatures        : QGeoServiceProvider = ... # -0x1
-    AnyRoutingFeatures       : QGeoServiceProvider = ... # -0x1
-    NoError                  : QGeoServiceProvider = ... # 0x0
-    NoGeocodingFeatures      : QGeoServiceProvider = ... # 0x0
-    NoMappingFeatures        : QGeoServiceProvider = ... # 0x0
-    NoNavigationFeatures     : QGeoServiceProvider = ... # 0x0
-    NoPlacesFeatures         : QGeoServiceProvider = ... # 0x0
-    NoRoutingFeatures        : QGeoServiceProvider = ... # 0x0
-    NotSupportedError        : QGeoServiceProvider = ... # 0x1
-    OnlineGeocodingFeature   : QGeoServiceProvider = ... # 0x1
-    OnlineMappingFeature     : QGeoServiceProvider = ... # 0x1
-    OnlineNavigationFeature  : QGeoServiceProvider = ... # 0x1
-    OnlinePlacesFeature      : QGeoServiceProvider = ... # 0x1
-    OnlineRoutingFeature     : QGeoServiceProvider = ... # 0x1
-    OfflineGeocodingFeature  : QGeoServiceProvider = ... # 0x2
-    OfflineMappingFeature    : QGeoServiceProvider = ... # 0x2
-    OfflineNavigationFeature : QGeoServiceProvider = ... # 0x2
-    OfflinePlacesFeature     : QGeoServiceProvider = ... # 0x2
-    OfflineRoutingFeature    : QGeoServiceProvider = ... # 0x2
-    UnknownParameterError    : QGeoServiceProvider = ... # 0x2
-    MissingRequiredParameterError: QGeoServiceProvider = ... # 0x3
-    ConnectionError          : QGeoServiceProvider = ... # 0x4
-    LocalizedMappingFeature  : QGeoServiceProvider = ... # 0x4
-    LocalizedRoutingFeature  : QGeoServiceProvider = ... # 0x4
-    ReverseGeocodingFeature  : QGeoServiceProvider = ... # 0x4
-    SavePlaceFeature         : QGeoServiceProvider = ... # 0x4
-    LoaderError              : QGeoServiceProvider = ... # 0x5
-    LocalizedGeocodingFeature: QGeoServiceProvider = ... # 0x8
-    RemovePlaceFeature       : QGeoServiceProvider = ... # 0x8
-    RouteUpdatesFeature      : QGeoServiceProvider = ... # 0x8
-    AlternativeRoutesFeature : QGeoServiceProvider = ... # 0x10
-    SaveCategoryFeature      : QGeoServiceProvider = ... # 0x10
-    ExcludeAreasRoutingFeature: QGeoServiceProvider = ... # 0x20
-    RemoveCategoryFeature    : QGeoServiceProvider = ... # 0x20
-    PlaceRecommendationsFeature: QGeoServiceProvider = ... # 0x40
-    SearchSuggestionsFeature : QGeoServiceProvider = ... # 0x80
-    LocalizedPlacesFeature   : QGeoServiceProvider = ... # 0x100
-    NotificationsFeature     : QGeoServiceProvider = ... # 0x200
-    PlaceMatchingFeature     : QGeoServiceProvider = ... # 0x400
+    AnyGeocodingFeatures     : QGeoServiceProvider.GeocodingFeature = ... # -0x1
+    AnyMappingFeatures       : QGeoServiceProvider.MappingFeature = ... # -0x1
+    AnyNavigationFeatures    : QGeoServiceProvider.NavigationFeature = ... # -0x1
+    AnyPlacesFeatures        : QGeoServiceProvider.PlacesFeature = ... # -0x1
+    AnyRoutingFeatures       : QGeoServiceProvider.RoutingFeature = ... # -0x1
+    NoError                  : QGeoServiceProvider.Error = ... # 0x0
+    NoGeocodingFeatures      : QGeoServiceProvider.GeocodingFeature = ... # 0x0
+    NoMappingFeatures        : QGeoServiceProvider.MappingFeature = ... # 0x0
+    NoNavigationFeatures     : QGeoServiceProvider.NavigationFeature = ... # 0x0
+    NoPlacesFeatures         : QGeoServiceProvider.PlacesFeature = ... # 0x0
+    NoRoutingFeatures        : QGeoServiceProvider.RoutingFeature = ... # 0x0
+    NotSupportedError        : QGeoServiceProvider.Error = ... # 0x1
+    OnlineGeocodingFeature   : QGeoServiceProvider.GeocodingFeature = ... # 0x1
+    OnlineMappingFeature     : QGeoServiceProvider.MappingFeature = ... # 0x1
+    OnlineNavigationFeature  : QGeoServiceProvider.NavigationFeature = ... # 0x1
+    OnlinePlacesFeature      : QGeoServiceProvider.PlacesFeature = ... # 0x1
+    OnlineRoutingFeature     : QGeoServiceProvider.RoutingFeature = ... # 0x1
+    OfflineGeocodingFeature  : QGeoServiceProvider.GeocodingFeature = ... # 0x2
+    OfflineMappingFeature    : QGeoServiceProvider.MappingFeature = ... # 0x2
+    OfflineNavigationFeature : QGeoServiceProvider.NavigationFeature = ... # 0x2
+    OfflinePlacesFeature     : QGeoServiceProvider.PlacesFeature = ... # 0x2
+    OfflineRoutingFeature    : QGeoServiceProvider.RoutingFeature = ... # 0x2
+    UnknownParameterError    : QGeoServiceProvider.Error = ... # 0x2
+    MissingRequiredParameterError: QGeoServiceProvider.Error = ... # 0x3
+    ConnectionError          : QGeoServiceProvider.Error = ... # 0x4
+    LocalizedMappingFeature  : QGeoServiceProvider.MappingFeature = ... # 0x4
+    LocalizedRoutingFeature  : QGeoServiceProvider.RoutingFeature = ... # 0x4
+    ReverseGeocodingFeature  : QGeoServiceProvider.GeocodingFeature = ... # 0x4
+    SavePlaceFeature         : QGeoServiceProvider.PlacesFeature = ... # 0x4
+    LoaderError              : QGeoServiceProvider.Error = ... # 0x5
+    LocalizedGeocodingFeature: QGeoServiceProvider.GeocodingFeature = ... # 0x8
+    RemovePlaceFeature       : QGeoServiceProvider.PlacesFeature = ... # 0x8
+    RouteUpdatesFeature      : QGeoServiceProvider.RoutingFeature = ... # 0x8
+    AlternativeRoutesFeature : QGeoServiceProvider.RoutingFeature = ... # 0x10
+    SaveCategoryFeature      : QGeoServiceProvider.PlacesFeature = ... # 0x10
+    ExcludeAreasRoutingFeature: QGeoServiceProvider.RoutingFeature = ... # 0x20
+    RemoveCategoryFeature    : QGeoServiceProvider.PlacesFeature = ... # 0x20
+    PlaceRecommendationsFeature: QGeoServiceProvider.PlacesFeature = ... # 0x40
+    SearchSuggestionsFeature : QGeoServiceProvider.PlacesFeature = ... # 0x80
+    LocalizedPlacesFeature   : QGeoServiceProvider.PlacesFeature = ... # 0x100
+    NotificationsFeature     : QGeoServiceProvider.PlacesFeature = ... # 0x200
+    PlaceMatchingFeature     : QGeoServiceProvider.PlacesFeature = ... # 0x400
 
     class Error(object):
         NoError                  : QGeoServiceProvider.Error = ... # 0x0
@@ -666,11 +666,11 @@ class QPlaceContactDetail(Shiboken.Object):
 
 
 class QPlaceContent(Shiboken.Object):
-    NoType                   : QPlaceContent = ... # 0x0
-    ImageType                : QPlaceContent = ... # 0x1
-    ReviewType               : QPlaceContent = ... # 0x2
-    EditorialType            : QPlaceContent = ... # 0x3
-    CustomType               : QPlaceContent = ... # 0x100
+    NoType                   : QPlaceContent.Type = ... # 0x0
+    ImageType                : QPlaceContent.Type = ... # 0x1
+    ReviewType               : QPlaceContent.Type = ... # 0x2
+    EditorialType            : QPlaceContent.Type = ... # 0x3
+    CustomType               : QPlaceContent.Type = ... # 0x100
 
     class Type(object):
         NoType                   : QPlaceContent.Type = ... # 0x0
@@ -774,10 +774,10 @@ class QPlaceIcon(Shiboken.Object):
 
 
 class QPlaceIdReply(PySide2.QtLocation.QPlaceReply):
-    SavePlace                : QPlaceIdReply = ... # 0x0
-    SaveCategory             : QPlaceIdReply = ... # 0x1
-    RemovePlace              : QPlaceIdReply = ... # 0x2
-    RemoveCategory           : QPlaceIdReply = ... # 0x3
+    SavePlace                : QPlaceIdReply.OperationType = ... # 0x0
+    SaveCategory             : QPlaceIdReply.OperationType = ... # 0x1
+    RemovePlace              : QPlaceIdReply.OperationType = ... # 0x2
+    RemoveCategory           : QPlaceIdReply.OperationType = ... # 0x3
 
     class OperationType(object):
         SavePlace                : QPlaceIdReply.OperationType = ... # 0x0
@@ -916,23 +916,23 @@ class QPlaceRatings(Shiboken.Object):
 
 
 class QPlaceReply(PySide2.QtCore.QObject):
-    NoError                  : QPlaceReply = ... # 0x0
-    Reply                    : QPlaceReply = ... # 0x0
-    DetailsReply             : QPlaceReply = ... # 0x1
-    PlaceDoesNotExistError   : QPlaceReply = ... # 0x1
-    CategoryDoesNotExistError: QPlaceReply = ... # 0x2
-    SearchReply              : QPlaceReply = ... # 0x2
-    CommunicationError       : QPlaceReply = ... # 0x3
-    SearchSuggestionReply    : QPlaceReply = ... # 0x3
-    ContentReply             : QPlaceReply = ... # 0x4
-    ParseError               : QPlaceReply = ... # 0x4
-    IdReply                  : QPlaceReply = ... # 0x5
-    PermissionsError         : QPlaceReply = ... # 0x5
-    MatchReply               : QPlaceReply = ... # 0x6
-    UnsupportedError         : QPlaceReply = ... # 0x6
-    BadArgumentError         : QPlaceReply = ... # 0x7
-    CancelError              : QPlaceReply = ... # 0x8
-    UnknownError             : QPlaceReply = ... # 0x9
+    NoError                  : QPlaceReply.Error = ... # 0x0
+    Reply                    : QPlaceReply.Type = ... # 0x0
+    DetailsReply             : QPlaceReply.Type = ... # 0x1
+    PlaceDoesNotExistError   : QPlaceReply.Error = ... # 0x1
+    CategoryDoesNotExistError: QPlaceReply.Error = ... # 0x2
+    SearchReply              : QPlaceReply.Type = ... # 0x2
+    CommunicationError       : QPlaceReply.Error = ... # 0x3
+    SearchSuggestionReply    : QPlaceReply.Type = ... # 0x3
+    ContentReply             : QPlaceReply.Type = ... # 0x4
+    ParseError               : QPlaceReply.Error = ... # 0x4
+    IdReply                  : QPlaceReply.Type = ... # 0x5
+    PermissionsError         : QPlaceReply.Error = ... # 0x5
+    MatchReply               : QPlaceReply.Type = ... # 0x6
+    UnsupportedError         : QPlaceReply.Error = ... # 0x6
+    BadArgumentError         : QPlaceReply.Error = ... # 0x7
+    CancelError              : QPlaceReply.Error = ... # 0x8
+    UnknownError             : QPlaceReply.Error = ... # 0x9
 
     class Error(object):
         NoError                  : QPlaceReply.Error = ... # 0x0
@@ -1018,9 +1018,9 @@ class QPlaceSearchReply(PySide2.QtLocation.QPlaceReply):
 
 
 class QPlaceSearchRequest(Shiboken.Object):
-    UnspecifiedHint          : QPlaceSearchRequest = ... # 0x0
-    DistanceHint             : QPlaceSearchRequest = ... # 0x1
-    LexicalPlaceNameHint     : QPlaceSearchRequest = ... # 0x2
+    UnspecifiedHint          : QPlaceSearchRequest.RelevanceHint = ... # 0x0
+    DistanceHint             : QPlaceSearchRequest.RelevanceHint = ... # 0x1
+    LexicalPlaceNameHint     : QPlaceSearchRequest.RelevanceHint = ... # 0x2
 
     class RelevanceHint(object):
         UnspecifiedHint          : QPlaceSearchRequest.RelevanceHint = ... # 0x0
@@ -1051,9 +1051,9 @@ class QPlaceSearchRequest(Shiboken.Object):
 
 
 class QPlaceSearchResult(Shiboken.Object):
-    UnknownSearchResult      : QPlaceSearchResult = ... # 0x0
-    PlaceResult              : QPlaceSearchResult = ... # 0x1
-    ProposedSearchResult     : QPlaceSearchResult = ... # 0x2
+    UnknownSearchResult      : QPlaceSearchResult.SearchResultType = ... # 0x0
+    PlaceResult              : QPlaceSearchResult.SearchResultType = ... # 0x1
+    ProposedSearchResult     : QPlaceSearchResult.SearchResultType = ... # 0x2
 
     class SearchResultType(object):
         UnknownSearchResult      : QPlaceSearchResult.SearchResultType = ... # 0x0

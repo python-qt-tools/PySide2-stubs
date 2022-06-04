@@ -130,28 +130,28 @@ class QWebSocketCorsAuthenticator(Shiboken.Object):
 
 
 class QWebSocketProtocol(Shiboken.Object):
-    VersionUnknown           : QWebSocketProtocol = ... # -0x1
-    Version0                 : QWebSocketProtocol = ... # 0x0
-    Version4                 : QWebSocketProtocol = ... # 0x4
-    Version5                 : QWebSocketProtocol = ... # 0x5
-    Version6                 : QWebSocketProtocol = ... # 0x6
-    Version7                 : QWebSocketProtocol = ... # 0x7
-    Version8                 : QWebSocketProtocol = ... # 0x8
-    Version13                : QWebSocketProtocol = ... # 0xd
-    VersionLatest            : QWebSocketProtocol = ... # 0xd
-    CloseCodeNormal          : QWebSocketProtocol = ... # 0x3e8
-    CloseCodeGoingAway       : QWebSocketProtocol = ... # 0x3e9
-    CloseCodeProtocolError   : QWebSocketProtocol = ... # 0x3ea
-    CloseCodeDatatypeNotSupported: QWebSocketProtocol = ... # 0x3eb
-    CloseCodeReserved1004    : QWebSocketProtocol = ... # 0x3ec
-    CloseCodeMissingStatusCode: QWebSocketProtocol = ... # 0x3ed
-    CloseCodeAbnormalDisconnection: QWebSocketProtocol = ... # 0x3ee
-    CloseCodeWrongDatatype   : QWebSocketProtocol = ... # 0x3ef
-    CloseCodePolicyViolated  : QWebSocketProtocol = ... # 0x3f0
-    CloseCodeTooMuchData     : QWebSocketProtocol = ... # 0x3f1
-    CloseCodeMissingExtension: QWebSocketProtocol = ... # 0x3f2
-    CloseCodeBadOperation    : QWebSocketProtocol = ... # 0x3f3
-    CloseCodeTlsHandshakeFailed: QWebSocketProtocol = ... # 0x3f7
+    VersionUnknown           : QWebSocketProtocol.Version = ... # -0x1
+    Version0                 : QWebSocketProtocol.Version = ... # 0x0
+    Version4                 : QWebSocketProtocol.Version = ... # 0x4
+    Version5                 : QWebSocketProtocol.Version = ... # 0x5
+    Version6                 : QWebSocketProtocol.Version = ... # 0x6
+    Version7                 : QWebSocketProtocol.Version = ... # 0x7
+    Version8                 : QWebSocketProtocol.Version = ... # 0x8
+    Version13                : QWebSocketProtocol.Version = ... # 0xd
+    VersionLatest            : QWebSocketProtocol.Version = ... # 0xd
+    CloseCodeNormal          : QWebSocketProtocol.CloseCode = ... # 0x3e8
+    CloseCodeGoingAway       : QWebSocketProtocol.CloseCode = ... # 0x3e9
+    CloseCodeProtocolError   : QWebSocketProtocol.CloseCode = ... # 0x3ea
+    CloseCodeDatatypeNotSupported: QWebSocketProtocol.CloseCode = ... # 0x3eb
+    CloseCodeReserved1004    : QWebSocketProtocol.CloseCode = ... # 0x3ec
+    CloseCodeMissingStatusCode: QWebSocketProtocol.CloseCode = ... # 0x3ed
+    CloseCodeAbnormalDisconnection: QWebSocketProtocol.CloseCode = ... # 0x3ee
+    CloseCodeWrongDatatype   : QWebSocketProtocol.CloseCode = ... # 0x3ef
+    CloseCodePolicyViolated  : QWebSocketProtocol.CloseCode = ... # 0x3f0
+    CloseCodeTooMuchData     : QWebSocketProtocol.CloseCode = ... # 0x3f1
+    CloseCodeMissingExtension: QWebSocketProtocol.CloseCode = ... # 0x3f2
+    CloseCodeBadOperation    : QWebSocketProtocol.CloseCode = ... # 0x3f3
+    CloseCodeTlsHandshakeFailed: QWebSocketProtocol.CloseCode = ... # 0x3f7
 
     class CloseCode(object):
         CloseCodeNormal          : QWebSocketProtocol.CloseCode = ... # 0x3e8
@@ -181,8 +181,8 @@ class QWebSocketProtocol(Shiboken.Object):
 
 
 class QWebSocketServer(PySide2.QtCore.QObject):
-    SecureMode               : QWebSocketServer = ... # 0x0
-    NonSecureMode            : QWebSocketServer = ... # 0x1
+    SecureMode               : QWebSocketServer.SslMode = ... # 0x0
+    NonSecureMode            : QWebSocketServer.SslMode = ... # 0x1
 
     class SslMode(object):
         SecureMode               : QWebSocketServer.SslMode = ... # 0x0

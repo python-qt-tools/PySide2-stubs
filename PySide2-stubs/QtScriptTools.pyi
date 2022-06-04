@@ -56,32 +56,32 @@ import PySide2.QtScriptTools
 
 
 class QScriptEngineDebugger(PySide2.QtCore.QObject):
-    ConsoleWidget            : QScriptEngineDebugger = ... # 0x0
-    InterruptAction          : QScriptEngineDebugger = ... # 0x0
-    RunningState             : QScriptEngineDebugger = ... # 0x0
-    ContinueAction           : QScriptEngineDebugger = ... # 0x1
-    StackWidget              : QScriptEngineDebugger = ... # 0x1
-    SuspendedState           : QScriptEngineDebugger = ... # 0x1
-    ScriptsWidget            : QScriptEngineDebugger = ... # 0x2
-    StepIntoAction           : QScriptEngineDebugger = ... # 0x2
-    LocalsWidget             : QScriptEngineDebugger = ... # 0x3
-    StepOverAction           : QScriptEngineDebugger = ... # 0x3
-    CodeWidget               : QScriptEngineDebugger = ... # 0x4
-    StepOutAction            : QScriptEngineDebugger = ... # 0x4
-    CodeFinderWidget         : QScriptEngineDebugger = ... # 0x5
-    RunToCursorAction        : QScriptEngineDebugger = ... # 0x5
-    BreakpointsWidget        : QScriptEngineDebugger = ... # 0x6
-    RunToNewScriptAction     : QScriptEngineDebugger = ... # 0x6
-    DebugOutputWidget        : QScriptEngineDebugger = ... # 0x7
-    ToggleBreakpointAction   : QScriptEngineDebugger = ... # 0x7
-    ClearDebugOutputAction   : QScriptEngineDebugger = ... # 0x8
-    ErrorLogWidget           : QScriptEngineDebugger = ... # 0x8
-    ClearErrorLogAction      : QScriptEngineDebugger = ... # 0x9
-    ClearConsoleAction       : QScriptEngineDebugger = ... # 0xa
-    FindInScriptAction       : QScriptEngineDebugger = ... # 0xb
-    FindNextInScriptAction   : QScriptEngineDebugger = ... # 0xc
-    FindPreviousInScriptAction: QScriptEngineDebugger = ... # 0xd
-    GoToLineAction           : QScriptEngineDebugger = ... # 0xe
+    ConsoleWidget            : QScriptEngineDebugger.DebuggerWidget = ... # 0x0
+    InterruptAction          : QScriptEngineDebugger.DebuggerAction = ... # 0x0
+    RunningState             : QScriptEngineDebugger.DebuggerState = ... # 0x0
+    ContinueAction           : QScriptEngineDebugger.DebuggerAction = ... # 0x1
+    StackWidget              : QScriptEngineDebugger.DebuggerWidget = ... # 0x1
+    SuspendedState           : QScriptEngineDebugger.DebuggerState = ... # 0x1
+    ScriptsWidget            : QScriptEngineDebugger.DebuggerWidget = ... # 0x2
+    StepIntoAction           : QScriptEngineDebugger.DebuggerAction = ... # 0x2
+    LocalsWidget             : QScriptEngineDebugger.DebuggerWidget = ... # 0x3
+    StepOverAction           : QScriptEngineDebugger.DebuggerAction = ... # 0x3
+    CodeWidget               : QScriptEngineDebugger.DebuggerWidget = ... # 0x4
+    StepOutAction            : QScriptEngineDebugger.DebuggerAction = ... # 0x4
+    CodeFinderWidget         : QScriptEngineDebugger.DebuggerWidget = ... # 0x5
+    RunToCursorAction        : QScriptEngineDebugger.DebuggerAction = ... # 0x5
+    BreakpointsWidget        : QScriptEngineDebugger.DebuggerWidget = ... # 0x6
+    RunToNewScriptAction     : QScriptEngineDebugger.DebuggerAction = ... # 0x6
+    DebugOutputWidget        : QScriptEngineDebugger.DebuggerWidget = ... # 0x7
+    ToggleBreakpointAction   : QScriptEngineDebugger.DebuggerAction = ... # 0x7
+    ClearDebugOutputAction   : QScriptEngineDebugger.DebuggerAction = ... # 0x8
+    ErrorLogWidget           : QScriptEngineDebugger.DebuggerWidget = ... # 0x8
+    ClearErrorLogAction      : QScriptEngineDebugger.DebuggerAction = ... # 0x9
+    ClearConsoleAction       : QScriptEngineDebugger.DebuggerAction = ... # 0xa
+    FindInScriptAction       : QScriptEngineDebugger.DebuggerAction = ... # 0xb
+    FindNextInScriptAction   : QScriptEngineDebugger.DebuggerAction = ... # 0xc
+    FindPreviousInScriptAction: QScriptEngineDebugger.DebuggerAction = ... # 0xd
+    GoToLineAction           : QScriptEngineDebugger.DebuggerAction = ... # 0xe
 
     class DebuggerAction(object):
         InterruptAction          : QScriptEngineDebugger.DebuggerAction = ... # 0x0

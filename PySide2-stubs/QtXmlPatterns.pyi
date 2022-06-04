@@ -69,12 +69,12 @@ class QAbstractUriResolver(PySide2.QtCore.QObject):
 
 
 class QAbstractXmlNodeModel(Shiboken.Object):
-    Parent                   : QAbstractXmlNodeModel = ... # 0x0
-    FirstChild               : QAbstractXmlNodeModel = ... # 0x1
-    InheritNamespaces        : QAbstractXmlNodeModel = ... # 0x1
-    PreserveNamespaces       : QAbstractXmlNodeModel = ... # 0x2
-    PreviousSibling          : QAbstractXmlNodeModel = ... # 0x2
-    NextSibling              : QAbstractXmlNodeModel = ... # 0x3
+    Parent                   : QAbstractXmlNodeModel.SimpleAxis = ... # 0x0
+    FirstChild               : QAbstractXmlNodeModel.SimpleAxis = ... # 0x1
+    InheritNamespaces        : QAbstractXmlNodeModel.NodeCopySetting = ... # 0x1
+    PreserveNamespaces       : QAbstractXmlNodeModel.NodeCopySetting = ... # 0x2
+    PreviousSibling          : QAbstractXmlNodeModel.SimpleAxis = ... # 0x2
+    NextSibling              : QAbstractXmlNodeModel.SimpleAxis = ... # 0x3
 
     class NodeCopySetting(object):
         InheritNamespaces        : QAbstractXmlNodeModel.NodeCopySetting = ... # 0x1
@@ -225,16 +225,16 @@ class QXmlNamePool(Shiboken.Object):
 
 
 class QXmlNodeModelIndex(Shiboken.Object):
-    Precedes                 : QXmlNodeModelIndex = ... # -0x1
-    Is                       : QXmlNodeModelIndex = ... # 0x0
-    Attribute                : QXmlNodeModelIndex = ... # 0x1
-    Follows                  : QXmlNodeModelIndex = ... # 0x1
-    Comment                  : QXmlNodeModelIndex = ... # 0x2
-    Document                 : QXmlNodeModelIndex = ... # 0x4
-    Element                  : QXmlNodeModelIndex = ... # 0x8
-    Namespace                : QXmlNodeModelIndex = ... # 0x10
-    ProcessingInstruction    : QXmlNodeModelIndex = ... # 0x20
-    Text                     : QXmlNodeModelIndex = ... # 0x40
+    Precedes                 : QXmlNodeModelIndex.DocumentOrder = ... # -0x1
+    Is                       : QXmlNodeModelIndex.DocumentOrder = ... # 0x0
+    Attribute                : QXmlNodeModelIndex.NodeKind = ... # 0x1
+    Follows                  : QXmlNodeModelIndex.DocumentOrder = ... # 0x1
+    Comment                  : QXmlNodeModelIndex.NodeKind = ... # 0x2
+    Document                 : QXmlNodeModelIndex.NodeKind = ... # 0x4
+    Element                  : QXmlNodeModelIndex.NodeKind = ... # 0x8
+    Namespace                : QXmlNodeModelIndex.NodeKind = ... # 0x10
+    ProcessingInstruction    : QXmlNodeModelIndex.NodeKind = ... # 0x20
+    Text                     : QXmlNodeModelIndex.NodeKind = ... # 0x40
 
     class DocumentOrder(object):
         Precedes                 : QXmlNodeModelIndex.DocumentOrder = ... # -0x1
@@ -265,11 +265,11 @@ class QXmlNodeModelIndex(Shiboken.Object):
 
 
 class QXmlQuery(Shiboken.Object):
-    XQuery10                 : QXmlQuery = ... # 0x1
-    XSLT20                   : QXmlQuery = ... # 0x2
-    XmlSchema11IdentityConstraintSelector: QXmlQuery = ... # 0x400
-    XmlSchema11IdentityConstraintField: QXmlQuery = ... # 0x800
-    XPath20                  : QXmlQuery = ... # 0x1000
+    XQuery10                 : QXmlQuery.QueryLanguage = ... # 0x1
+    XSLT20                   : QXmlQuery.QueryLanguage = ... # 0x2
+    XmlSchema11IdentityConstraintSelector: QXmlQuery.QueryLanguage = ... # 0x400
+    XmlSchema11IdentityConstraintField: QXmlQuery.QueryLanguage = ... # 0x800
+    XPath20                  : QXmlQuery.QueryLanguage = ... # 0x1000
 
     class QueryLanguage(object):
         XQuery10                 : QXmlQuery.QueryLanguage = ... # 0x1
