@@ -57,12 +57,12 @@ import PySide2.QtX11Extras
 
 
 class QX11Info(Shiboken.Object):
-    PeekDefault              : QX11Info.PeekOption = ... # 0x0
-    PeekFromCachedIndex      : QX11Info.PeekOption = ... # 0x1
+    PeekDefault              : PeekOption = ... # 0x0
+    PeekFromCachedIndex      : PeekOption = ... # 0x1
 
     class PeekOption(object):
-        PeekDefault              : QX11Info.PeekOption = ... # 0x0
-        PeekFromCachedIndex      : QX11Info.PeekOption = ... # 0x1
+        PeekDefault              : PeekOption = ... # 0x0
+        PeekFromCachedIndex      : PeekOption = ... # 0x1
 
     class PeekOptions(object): ...
     @staticmethod

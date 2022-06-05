@@ -103,9 +103,9 @@ class QMacToolBar(PySide2.QtCore.QObject):
 
 
 class QMacToolBarItem(PySide2.QtCore.QObject):
-    NoStandardItem           : QMacToolBarItem = ... # 0x0
-    Space                    : QMacToolBarItem = ... # 0x1
-    FlexibleSpace            : QMacToolBarItem = ... # 0x2
+    NoStandardItem           : QMacToolBarItem.StandardItem = ... # 0x0
+    Space                    : QMacToolBarItem.StandardItem = ... # 0x1
+    FlexibleSpace            : QMacToolBarItem.StandardItem = ... # 0x2
 
     class StandardItem(object):
         NoStandardItem           : QMacToolBarItem.StandardItem = ... # 0x0
