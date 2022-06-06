@@ -17789,6 +17789,7 @@
     "QtMacExtras.QMacPasteboardMime.QMacPasteboardMimeType.MIME_ALL":            "PySide2.QtMacExtras.QMacPasteboardMime.QMacPasteboardMimeType",
     "QtMacExtras.QMacPasteboardMime.QMacPasteboardMimeType.MIME_QT_CONVERTOR":   "PySide2.QtMacExtras.QMacPasteboardMime.QMacPasteboardMimeType",
     "QtMacExtras.QMacPasteboardMime.QMacPasteboardMimeType.MIME_QT3_CONVERTOR":  "PySide2.QtMacExtras.QMacPasteboardMime.QMacPasteboardMimeType",
+    
     "QtMacExtras.QMacToolBarItem.NoStandardItem":               "PySide2.QtMacExtras.QMacToolBarItem.StandardItem",
     "QtMacExtras.QMacToolBarItem.Space":                        "PySide2.QtMacExtras.QMacToolBarItem.StandardItem",
     "QtMacExtras.QMacToolBarItem.FlexibleSpace":                "PySide2.QtMacExtras.QMacToolBarItem.StandardItem",
@@ -17797,10 +17798,10 @@
     "QtMacExtras.QMacToolBarItem.StandardItem.FlexibleSpace":   "PySide2.QtMacExtras.QMacToolBarItem.StandardItem",
 
 
-    "QtX11Extras.QX11Info.PeekDefault":                     "PySide2.QtX11Extras.PeekOption",
-    "QtX11Extras.QX11Info.PeekFromCachedIndex":             "PySide2.QtX11Extras.PeekOption",
-    "QtX11Extras.QX11Info.PeekOption.PeekDefault":          "PySide2.QtX11Extras.PeekOption",
-    "QtX11Extras.QX11Info.PeekOption.PeekFromCachedIndex":  "PySide2.QtX11Extras.PeekOption",
+    "QtX11Extras.QX11Info.PeekDefault":                     "PySide2.QtX11Extras.QX11Info.PeekOption",
+    "QtX11Extras.QX11Info.PeekFromCachedIndex":             "PySide2.QtX11Extras.QX11Info.PeekOption",
+    "QtX11Extras.QX11Info.PeekOption.PeekDefault":          "PySide2.QtX11Extras.QX11Info.PeekOption",
+    "QtX11Extras.QX11Info.PeekOption.PeekFromCachedIndex":  "PySide2.QtX11Extras.QX11Info.PeekOption",
 
     "__": "end of manually added"
 }
