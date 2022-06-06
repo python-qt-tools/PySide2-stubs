@@ -2371,12 +2371,12 @@ class QHoverEvent(PySide2.QtGui.QInputEvent):
 
 
 class QIcon(Shiboken.Object):
-    Normal                   : QIcon.Mode = ... # 0x0
-    On                       : QIcon.State = ... # 0x0
-    Disabled                 : QIcon.Mode = ... # 0x1
-    Off                      : QIcon.State = ... # 0x1
-    Active                   : QIcon.Mode = ... # 0x2
-    Selected                 : QIcon.Mode = ... # 0x3
+    Normal                   : QIcon = ... # 0x0
+    On                       : QIcon= ... # 0x0
+    Disabled                 : QIcon= ... # 0x1
+    Off                      : QIcon= ... # 0x1
+    Active                   : QIcon= ... # 0x2
+    Selected                 : QIcon= ... # 0x3
 
     class Mode(object):
         Normal                   : QIcon.Mode = ... # 0x0
