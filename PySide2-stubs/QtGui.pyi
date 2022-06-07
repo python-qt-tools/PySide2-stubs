@@ -2239,6 +2239,8 @@ class QGradient(Shiboken.Object):
 
 class QGuiApplication(PySide2.QtCore.QCoreApplication):
 
+    applicationStateChanged: PySide2.QtCore.Signal
+
     @typing.overload
     def __init__(self) -> None: ...
     @typing.overload
