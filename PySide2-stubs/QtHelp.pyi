@@ -86,6 +86,10 @@ class QHelpContentItem(Shiboken.Object):
 
 
 class QHelpContentModel(PySide2.QtCore.QAbstractItemModel):
+
+    contentsCreated: PySide2.QtCore.Signal
+    contentsCreationStarted: PySide2.QtCore.Signal
+
     def columnCount(self, parent:PySide2.QtCore.QModelIndex=...) -> int: ...
     def contentItemAt(self, index:PySide2.QtCore.QModelIndex) -> PySide2.QtHelp.QHelpContentItem: ...
     def createContents(self, customFilterName:str) -> None: ...
@@ -100,6 +104,9 @@ class QHelpContentModel(PySide2.QtCore.QAbstractItemModel):
 
 
 class QHelpContentWidget(PySide2.QtWidgets.QTreeView):
+
+    linkActivated: PySide2.QtCore.Signal
+
     def indexOf(self, link:PySide2.QtCore.QUrl) -> PySide2.QtCore.QModelIndex: ...
 
 
@@ -115,6 +122,13 @@ class QHelpEngine(PySide2.QtHelp.QHelpEngineCore):
 
 
 class QHelpEngineCore(PySide2.QtCore.QObject):
+
+    currentFilterChanged: PySide2.QtCore.Signal
+    readersAboutToBeInvalidated: PySide2.QtCore.Signal
+    setupFinished: PySide2.QtCore.Signal
+    setupStarted: PySide2.QtCore.Signal
+    warning: PySide2.QtCore.Signal
+
 
     def __init__(self, collectionFile:str, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
@@ -185,6 +199,9 @@ class QHelpFilterData(Shiboken.Object):
 
 class QHelpFilterEngine(PySide2.QtCore.QObject):
 
+    filterActivated: PySide2.QtCore.Signal
+
+
     def __init__(self, helpEngine:PySide2.QtHelp.QHelpEngineCore) -> None: ...
 
     def activeFilter(self) -> str: ...
@@ -215,6 +232,10 @@ class QHelpFilterSettingsWidget(PySide2.QtWidgets.QWidget):
 
 
 class QHelpIndexModel(PySide2.QtCore.QStringListModel):
+
+    indexCreated: PySide2.QtCore.Signal
+    indexCreationStarted: PySide2.QtCore.Signal
+
     @typing.overload
     def createIndex(self, customFilterName:str) -> None: ...
     @typing.overload
@@ -228,6 +249,12 @@ class QHelpIndexModel(PySide2.QtCore.QStringListModel):
 
 
 class QHelpIndexWidget(PySide2.QtWidgets.QListView):
+
+    documentActivated: PySide2.QtCore.Signal
+    documentsActivated: PySide2.QtCore.Signal
+    linkActivated: PySide2.QtCore.Signal
+    linksActivated: PySide2.QtCore.Signal
+
     def activateCurrentItem(self) -> None: ...
     def filterIndices(self, filter:str, wildcard:str=...) -> None: ...
 
@@ -244,6 +271,12 @@ class QHelpLink(Shiboken.Object):
 
 
 class QHelpSearchEngine(PySide2.QtCore.QObject):
+
+    indexingFinished: PySide2.QtCore.Signal
+    indexingStarted: PySide2.QtCore.Signal
+    searchingFinished: PySide2.QtCore.Signal
+    searchingStarted: PySide2.QtCore.Signal
+
 
     def __init__(self, helpEngine:PySide2.QtHelp.QHelpEngineCore, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
@@ -295,6 +328,9 @@ class QHelpSearchQuery(Shiboken.Object):
 
 class QHelpSearchQueryWidget(PySide2.QtWidgets.QWidget):
 
+    search: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtWidgets.QWidget]=...) -> None: ...
 
     def changeEvent(self, event:PySide2.QtCore.QEvent) -> None: ...
@@ -324,6 +360,9 @@ class QHelpSearchResult(Shiboken.Object):
 
 
 class QHelpSearchResultWidget(PySide2.QtWidgets.QWidget):
+
+    requestShowLink: PySide2.QtCore.Signal
+
     def changeEvent(self, event:PySide2.QtCore.QEvent) -> None: ...
     def linkAt(self, point:PySide2.QtCore.QPoint) -> PySide2.QtCore.QUrl: ...
 

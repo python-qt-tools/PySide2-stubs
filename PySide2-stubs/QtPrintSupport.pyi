@@ -127,6 +127,9 @@ class QPageSetupDialog(PySide2.QtWidgets.QDialog):
 
 class QPrintDialog(PySide2.QtPrintSupport.QAbstractPrintDialog):
 
+    accepted: PySide2.QtCore.Signal
+
+
     @typing.overload
     def __init__(self, parent:typing.Optional[PySide2.QtWidgets.QWidget]=...) -> None: ...
     @typing.overload
@@ -227,6 +230,9 @@ class QPrintEngine(Shiboken.Object):
 
 class QPrintPreviewDialog(PySide2.QtWidgets.QDialog):
 
+    paintRequested: PySide2.QtCore.Signal
+
+
     @typing.overload
     def __init__(self, parent:typing.Optional[PySide2.QtWidgets.QWidget]=..., flags:PySide2.QtCore.Qt.WindowFlags=...) -> None: ...
     @typing.overload
@@ -242,6 +248,10 @@ class QPrintPreviewDialog(PySide2.QtWidgets.QDialog):
 
 
 class QPrintPreviewWidget(PySide2.QtWidgets.QWidget):
+
+    paintRequested: PySide2.QtCore.Signal
+    previewChanged: PySide2.QtCore.Signal
+
     CustomZoom               : QPrintPreviewWidget.ZoomMode = ... # 0x0
     SinglePageView           : QPrintPreviewWidget.ViewMode = ... # 0x0
     FacingPagesView          : QPrintPreviewWidget.ViewMode = ... # 0x1

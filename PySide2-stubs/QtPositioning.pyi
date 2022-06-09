@@ -111,6 +111,12 @@ class QGeoAreaMonitorInfo(Shiboken.Object):
 
 
 class QGeoAreaMonitorSource(PySide2.QtCore.QObject):
+
+    areaEntered: PySide2.QtCore.Signal
+    areaExited: PySide2.QtCore.Signal
+    error: PySide2.QtCore.Signal
+    monitorExpired: PySide2.QtCore.Signal
+
     AnyAreaMonitorFeature    : QGeoAreaMonitorSource.AreaMonitorFeature = ... # -0x1
     AccessError              : QGeoAreaMonitorSource.Error = ... # 0x0
     InsufficientPositionInfo : QGeoAreaMonitorSource.Error = ... # 0x1
@@ -362,6 +368,12 @@ class QGeoPositionInfo(Shiboken.Object):
 
 
 class QGeoPositionInfoSource(PySide2.QtCore.QObject):
+
+    error: PySide2.QtCore.Signal
+    positionUpdated: PySide2.QtCore.Signal
+    supportedPositioningMethodsChanged: PySide2.QtCore.Signal
+    updateTimeout: PySide2.QtCore.Signal
+
     NonSatellitePositioningMethods: QGeoPositionInfoSource.PositioningMethod = ... # -0x100
     AllPositioningMethods    : QGeoPositionInfoSource.PositioningMethod = ... # -0x1
     AccessError              : QGeoPositionInfoSource.Error = ... # 0x0
@@ -509,6 +521,12 @@ class QGeoSatelliteInfo(Shiboken.Object):
 
 
 class QGeoSatelliteInfoSource(PySide2.QtCore.QObject):
+
+    error: PySide2.QtCore.Signal
+    requestTimeout: PySide2.QtCore.Signal
+    satellitesInUseUpdated: PySide2.QtCore.Signal
+    satellitesInViewUpdated: PySide2.QtCore.Signal
+
     UnknownSourceError       : QGeoSatelliteInfoSource.Error = ... # -0x1
     AccessError              : QGeoSatelliteInfoSource.Error = ... # 0x0
     ClosedError              : QGeoSatelliteInfoSource.Error = ... # 0x1

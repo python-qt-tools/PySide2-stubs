@@ -55,6 +55,10 @@ import PySide2.QtWebEngineCore
 
 
 class QWebEngineCookieStore(PySide2.QtCore.QObject):
+
+    cookieAdded: PySide2.QtCore.Signal
+    cookieRemoved: PySide2.QtCore.Signal
+
     def deleteAllCookies(self) -> None: ...
     def deleteCookie(self, cookie:PySide2.QtNetwork.QNetworkCookie, origin:PySide2.QtCore.QUrl=...) -> None: ...
     def deleteSessionCookies(self) -> None: ...

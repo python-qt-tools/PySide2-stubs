@@ -54,6 +54,9 @@ import PySide2.QtRemoteObjects
 
 
 class QAbstractItemModelReplica(PySide2.QtCore.QAbstractItemModel):
+
+    initialized: PySide2.QtCore.Signal
+
     def availableRoles(self) -> typing.List: ...
     def columnCount(self, parent:PySide2.QtCore.QModelIndex=...) -> int: ...
     def data(self, index:PySide2.QtCore.QModelIndex, role:int=...) -> typing.Any: ...
@@ -81,10 +84,19 @@ class QRemoteObjectAbstractPersistedStore(PySide2.QtCore.QObject):
     def saveProperties(self, repName:str, repSig:PySide2.QtCore.QByteArray, values:typing.Sequence) -> None: ...
 
 
-class QRemoteObjectDynamicReplica(PySide2.QtRemoteObjects.QRemoteObjectReplica): ...
+class QRemoteObjectDynamicReplica(PySide2.QtRemoteObjects.QRemoteObjectReplica):
+
+    initialized: PySide2.QtCore.Signal
+    notified: PySide2.QtCore.Signal
+    stateChanged: PySide2.QtCore.Signal
+
+    ...
 
 
 class QRemoteObjectHost(PySide2.QtRemoteObjects.QRemoteObjectHostBase):
+
+    hostUrlChanged: PySide2.QtCore.Signal
+
 
     @typing.overload
     def __init__(self, address:PySide2.QtCore.QUrl, parent:PySide2.QtCore.QObject) -> None: ...
@@ -118,6 +130,12 @@ class QRemoteObjectHostBase(PySide2.QtRemoteObjects.QRemoteObjectNode):
 
 
 class QRemoteObjectNode(PySide2.QtCore.QObject):
+
+    error: PySide2.QtCore.Signal
+    heartbeatIntervalChanged: PySide2.QtCore.Signal
+    remoteObjectAdded: PySide2.QtCore.Signal
+    remoteObjectRemoved: PySide2.QtCore.Signal
+
     NoError                  : QRemoteObjectNode.ErrorCode = ... # 0x0
     RegistryNotAcquired      : QRemoteObjectNode.ErrorCode = ... # 0x1
     RegistryAlreadyHosted    : QRemoteObjectNode.ErrorCode = ... # 0x2
@@ -191,6 +209,9 @@ class QRemoteObjectPendingCall(Shiboken.Object):
 
 class QRemoteObjectPendingCallWatcher(PySide2.QtCore.QObject, PySide2.QtRemoteObjects.QRemoteObjectPendingCall):
 
+    finished: PySide2.QtCore.Signal
+
+
     def __init__(self, call:PySide2.QtRemoteObjects.QRemoteObjectPendingCall, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def isFinished(self) -> bool: ...
@@ -198,6 +219,10 @@ class QRemoteObjectPendingCallWatcher(PySide2.QtCore.QObject, PySide2.QtRemoteOb
 
 
 class QRemoteObjectRegistry(PySide2.QtRemoteObjects.QRemoteObjectReplica):
+
+    remoteObjectAdded: PySide2.QtCore.Signal
+    remoteObjectRemoved: PySide2.QtCore.Signal
+
     def addSource(self, entry:typing.Tuple) -> None: ...
     def initialize(self) -> None: ...
     def pushToRegistryIfNeeded(self) -> None: ...
@@ -215,6 +240,11 @@ class QRemoteObjectRegistryHost(PySide2.QtRemoteObjects.QRemoteObjectHostBase):
 
 
 class QRemoteObjectReplica(PySide2.QtCore.QObject):
+
+    initialized: PySide2.QtCore.Signal
+    notified: PySide2.QtCore.Signal
+    stateChanged: PySide2.QtCore.Signal
+
     Uninitialized            : QRemoteObjectReplica.State = ... # 0x0
     Default                  : QRemoteObjectReplica.State = ... # 0x1
     Valid                    : QRemoteObjectReplica.State = ... # 0x2

@@ -97,6 +97,11 @@ class QAxBase(Shiboken.Object):
 
 class QAxObject(PySide2.QtCore.QObject, PySide2.QtAxContainer.QAxBase):
 
+    exception: PySide2.QtCore.Signal
+    propertyChanged: PySide2.QtCore.Signal
+    signal: PySide2.QtCore.Signal
+
+
     @typing.overload
     def __init__(self, c:str, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
     @typing.overload
@@ -109,6 +114,12 @@ class QAxObject(PySide2.QtCore.QObject, PySide2.QtAxContainer.QAxBase):
 
 
 class QAxScript(PySide2.QtCore.QObject):
+
+    entered: PySide2.QtCore.Signal
+    error: PySide2.QtCore.Signal
+    finished: PySide2.QtCore.Signal
+    stateChanged: PySide2.QtCore.Signal
+
     FunctionNames            : QAxScript.FunctionFlags = ... # 0x0
     FunctionSignatures       : QAxScript.FunctionFlags = ... # 0x1
 
@@ -157,6 +168,9 @@ class QAxScriptEngine(PySide2.QtAxContainer.QAxObject):
 
 class QAxScriptManager(PySide2.QtCore.QObject):
 
+    error: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def addObject(self, object:PySide2.QtAxContainer.QAxBase) -> None: ...
@@ -194,6 +208,11 @@ class QAxSelect(PySide2.QtWidgets.QDialog):
 
 
 class QAxWidget(PySide2.QtWidgets.QWidget, PySide2.QtAxContainer.QAxBase):
+
+    exception: PySide2.QtCore.Signal
+    propertyChanged: PySide2.QtCore.Signal
+    signal: PySide2.QtCore.Signal
+
 
     @typing.overload
     def __init__(self, c:str, parent:typing.Optional[PySide2.QtWidgets.QWidget]=..., f:PySide2.QtCore.Qt.WindowFlags=...) -> None: ...

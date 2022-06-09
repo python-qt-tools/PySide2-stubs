@@ -88,9 +88,15 @@ class Qt3DCore(Shiboken.Object):
         def unregisterBackendType(self, arg__1:PySide2.QtCore.QMetaObject) -> None: ...
 
     class QAbstractSkeleton(PySide2.Qt3DCore.QNode):
+
+        jointCountChanged: PySide2.QtCore.Signal
+
         def jointCount(self) -> int: ...
 
     class QArmature(PySide2.Qt3DCore.QComponent):
+
+        skeletonChanged: PySide2.QtCore.Signal
+
 
         def __init__(self, parent:typing.Optional[PySide2.Qt3DCore.Qt3DCore.QNode]=...) -> None: ...
 
@@ -144,6 +150,11 @@ class Qt3DCore(Shiboken.Object):
 
     class QComponent(PySide2.Qt3DCore.QNode):
 
+        addedToEntity: PySide2.QtCore.Signal
+        removedFromEntity: PySide2.QtCore.Signal
+        shareableChanged: PySide2.QtCore.Signal
+
+
         def __init__(self, parent:typing.Optional[PySide2.Qt3DCore.Qt3DCore.QNode]=...) -> None: ...
 
         def entities(self) -> typing.List: ...
@@ -192,6 +203,16 @@ class Qt3DCore(Shiboken.Object):
 
     class QJoint(PySide2.Qt3DCore.QNode):
 
+        inverseBindMatrixChanged: PySide2.QtCore.Signal
+        nameChanged: PySide2.QtCore.Signal
+        rotationChanged: PySide2.QtCore.Signal
+        rotationXChanged: PySide2.QtCore.Signal
+        rotationYChanged: PySide2.QtCore.Signal
+        rotationZChanged: PySide2.QtCore.Signal
+        scaleChanged: PySide2.QtCore.Signal
+        translationChanged: PySide2.QtCore.Signal
+
+
         def __init__(self, parent:typing.Optional[PySide2.Qt3DCore.Qt3DCore.QNode]=...) -> None: ...
 
         def addChildJoint(self, joint:PySide2.Qt3DCore.Qt3DCore.QJoint) -> None: ...
@@ -216,6 +237,12 @@ class Qt3DCore(Shiboken.Object):
         def translation(self) -> PySide2.QtGui.QVector3D: ...
 
     class QNode(PySide2.QtCore.QObject):
+
+        defaultPropertyTrackingModeChanged: PySide2.QtCore.Signal
+        enabledChanged: PySide2.QtCore.Signal
+        nodeDestroyed: PySide2.QtCore.Signal
+        parentChanged: PySide2.QtCore.Signal
+
         TrackFinalValues         : Qt3DCore.QNode.PropertyTrackingMode = ... # 0x0
         DontTrackValues          : Qt3DCore.QNode.PropertyTrackingMode = ... # 0x1
         TrackAllValues           : Qt3DCore.QNode.PropertyTrackingMode = ... # 0x2
@@ -365,12 +392,21 @@ class Qt3DCore(Shiboken.Object):
 
     class QSkeleton(PySide2.Qt3DCore.QAbstractSkeleton):
 
+        rootJointChanged: PySide2.QtCore.Signal
+
+
         def __init__(self, parent:typing.Optional[PySide2.Qt3DCore.Qt3DCore.QNode]=...) -> None: ...
 
         def rootJoint(self) -> PySide2.Qt3DCore.Qt3DCore.QJoint: ...
         def setRootJoint(self, rootJoint:PySide2.Qt3DCore.Qt3DCore.QJoint) -> None: ...
 
     class QSkeletonLoader(PySide2.Qt3DCore.QAbstractSkeleton):
+
+        createJointsEnabledChanged: PySide2.QtCore.Signal
+        rootJointChanged: PySide2.QtCore.Signal
+        sourceChanged: PySide2.QtCore.Signal
+        statusChanged: PySide2.QtCore.Signal
+
         NotReady                 : Qt3DCore.QSkeletonLoader.Status = ... # 0x0
         Ready                    : Qt3DCore.QSkeletonLoader.Status = ... # 0x1
         Error                    : Qt3DCore.QSkeletonLoader.Status = ... # 0x2
@@ -414,6 +450,17 @@ class Qt3DCore(Shiboken.Object):
         def setPropertyName(self, name:bytes) -> None: ...
 
     class QTransform(PySide2.Qt3DCore.QComponent):
+
+        matrixChanged: PySide2.QtCore.Signal
+        rotationChanged: PySide2.QtCore.Signal
+        rotationXChanged: PySide2.QtCore.Signal
+        rotationYChanged: PySide2.QtCore.Signal
+        rotationZChanged: PySide2.QtCore.Signal
+        scale3DChanged: PySide2.QtCore.Signal
+        scaleChanged: PySide2.QtCore.Signal
+        translationChanged: PySide2.QtCore.Signal
+        worldMatrixChanged: PySide2.QtCore.Signal
+
 
         def __init__(self, parent:typing.Optional[PySide2.Qt3DCore.Qt3DCore.QNode]=...) -> None: ...
 

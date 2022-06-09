@@ -197,6 +197,12 @@ class QWebEngineContextMenuData(Shiboken.Object):
 
 
 class QWebEngineDownloadItem(PySide2.QtCore.QObject):
+
+    downloadProgress: PySide2.QtCore.Signal
+    finished: PySide2.QtCore.Signal
+    isPausedChanged: PySide2.QtCore.Signal
+    stateChanged: PySide2.QtCore.Signal
+
     UnknownSaveFormat        : QWebEngineDownloadItem.SavePageFormat = ... # -0x1
     Attachment               : QWebEngineDownloadItem.DownloadType = ... # 0x0
     DownloadRequested        : QWebEngineDownloadItem.DownloadState = ... # 0x0
@@ -350,6 +356,39 @@ class QWebEngineHistoryItem(Shiboken.Object):
 
 
 class QWebEnginePage(PySide2.QtCore.QObject):
+
+    audioMutedChanged: PySide2.QtCore.Signal
+    authenticationRequired: PySide2.QtCore.Signal
+    contentsSizeChanged: PySide2.QtCore.Signal
+    featurePermissionRequestCanceled: PySide2.QtCore.Signal
+    featurePermissionRequested: PySide2.QtCore.Signal
+    findTextFinished: PySide2.QtCore.Signal
+    fullScreenRequested: PySide2.QtCore.Signal
+    geometryChangeRequested: PySide2.QtCore.Signal
+    iconChanged: PySide2.QtCore.Signal
+    iconUrlChanged: PySide2.QtCore.Signal
+    lifecycleStateChanged: PySide2.QtCore.Signal
+    linkHovered: PySide2.QtCore.Signal
+    loadFinished: PySide2.QtCore.Signal
+    loadProgress: PySide2.QtCore.Signal
+    loadStarted: PySide2.QtCore.Signal
+    pdfPrintingFinished: PySide2.QtCore.Signal
+    printRequested: PySide2.QtCore.Signal
+    proxyAuthenticationRequired: PySide2.QtCore.Signal
+    quotaRequested: PySide2.QtCore.Signal
+    recentlyAudibleChanged: PySide2.QtCore.Signal
+    recommendedStateChanged: PySide2.QtCore.Signal
+    registerProtocolHandlerRequested: PySide2.QtCore.Signal
+    renderProcessPidChanged: PySide2.QtCore.Signal
+    renderProcessTerminated: PySide2.QtCore.Signal
+    scrollPositionChanged: PySide2.QtCore.Signal
+    selectClientCertificate: PySide2.QtCore.Signal
+    selectionChanged: PySide2.QtCore.Signal
+    titleChanged: PySide2.QtCore.Signal
+    urlChanged: PySide2.QtCore.Signal
+    visibleChanged: PySide2.QtCore.Signal
+    windowCloseRequested: PySide2.QtCore.Signal
+
     NoWebAction              : QWebEnginePage.WebAction = ... # -0x1
     Back                     : QWebEnginePage.WebAction = ... # 0x0
     FileSelectOpen           : QWebEnginePage.FileSelectionMode = ... # 0x0
@@ -623,6 +662,9 @@ class QWebEnginePage(PySide2.QtCore.QObject):
 
 
 class QWebEngineProfile(PySide2.QtCore.QObject):
+
+    downloadRequested: PySide2.QtCore.Signal
+
     MemoryHttpCache          : QWebEngineProfile.HttpCacheType = ... # 0x0
     NoPersistentCookies      : QWebEngineProfile.PersistentCookiesPolicy = ... # 0x0
     AllowPersistentCookies   : QWebEngineProfile.PersistentCookiesPolicy = ... # 0x1
@@ -862,6 +904,17 @@ class QWebEngineSettings(Shiboken.Object):
 
 
 class QWebEngineView(PySide2.QtWidgets.QWidget):
+
+    iconChanged: PySide2.QtCore.Signal
+    iconUrlChanged: PySide2.QtCore.Signal
+    loadFinished: PySide2.QtCore.Signal
+    loadProgress: PySide2.QtCore.Signal
+    loadStarted: PySide2.QtCore.Signal
+    renderProcessTerminated: PySide2.QtCore.Signal
+    selectionChanged: PySide2.QtCore.Signal
+    titleChanged: PySide2.QtCore.Signal
+    urlChanged: PySide2.QtCore.Signal
+
 
     def __init__(self, parent:typing.Optional[PySide2.QtWidgets.QWidget]=...) -> None: ...
 

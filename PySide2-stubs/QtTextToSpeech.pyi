@@ -54,6 +54,14 @@ import PySide2.QtTextToSpeech
 
 
 class QTextToSpeech(PySide2.QtCore.QObject):
+
+    localeChanged: PySide2.QtCore.Signal
+    pitchChanged: PySide2.QtCore.Signal
+    rateChanged: PySide2.QtCore.Signal
+    stateChanged: PySide2.QtCore.Signal
+    voiceChanged: PySide2.QtCore.Signal
+    volumeChanged: PySide2.QtCore.Signal
+
     Ready                    : QTextToSpeech.State = ... # 0x0
     Speaking                 : QTextToSpeech.State = ... # 0x1
     Paused                   : QTextToSpeech.State = ... # 0x2
@@ -92,6 +100,9 @@ class QTextToSpeech(PySide2.QtCore.QObject):
 
 
 class QTextToSpeechEngine(PySide2.QtCore.QObject):
+
+    stateChanged: PySide2.QtCore.Signal
+
 
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 

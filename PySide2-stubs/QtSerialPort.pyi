@@ -54,6 +54,20 @@ import PySide2.QtSerialPort
 
 
 class QSerialPort(PySide2.QtCore.QIODevice):
+
+    baudRateChanged: PySide2.QtCore.Signal
+    breakEnabledChanged: PySide2.QtCore.Signal
+    dataBitsChanged: PySide2.QtCore.Signal
+    dataErrorPolicyChanged: PySide2.QtCore.Signal
+    dataTerminalReadyChanged: PySide2.QtCore.Signal
+    error: PySide2.QtCore.Signal
+    errorOccurred: PySide2.QtCore.Signal
+    flowControlChanged: PySide2.QtCore.Signal
+    parityChanged: PySide2.QtCore.Signal
+    requestToSendChanged: PySide2.QtCore.Signal
+    settingsRestoredOnCloseChanged: PySide2.QtCore.Signal
+    stopBitsChanged: PySide2.QtCore.Signal
+
     UnknownBaud              : QSerialPort.BaudRate = ... # -0x1
     UnknownDataBits          : QSerialPort.DataBits = ... # -0x1
     UnknownFlowControl       : QSerialPort.FlowControl = ... # -0x1

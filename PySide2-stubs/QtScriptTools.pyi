@@ -56,6 +56,10 @@ import PySide2.QtScriptTools
 
 
 class QScriptEngineDebugger(PySide2.QtCore.QObject):
+
+    evaluationResumed: PySide2.QtCore.Signal
+    evaluationSuspended: PySide2.QtCore.Signal
+
     ConsoleWidget            : QScriptEngineDebugger.DebuggerWidget = ... # 0x0
     InterruptAction          : QScriptEngineDebugger.DebuggerAction = ... # 0x0
     RunningState             : QScriptEngineDebugger.DebuggerState = ... # 0x0

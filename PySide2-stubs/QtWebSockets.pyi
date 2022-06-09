@@ -56,6 +56,10 @@ import PySide2.QtWebSockets
 
 class QMaskGenerator(PySide2.QtCore.QObject):
 
+    destroyed: PySide2.QtCore.Signal
+    objectNameChanged: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def nextMask(self) -> int: ...
@@ -63,6 +67,23 @@ class QMaskGenerator(PySide2.QtCore.QObject):
 
 
 class QWebSocket(PySide2.QtCore.QObject):
+
+    aboutToClose: PySide2.QtCore.Signal
+    binaryFrameReceived: PySide2.QtCore.Signal
+    binaryMessageReceived: PySide2.QtCore.Signal
+    bytesWritten: PySide2.QtCore.Signal
+    connected: PySide2.QtCore.Signal
+    disconnected: PySide2.QtCore.Signal
+    error: PySide2.QtCore.Signal
+    pong: PySide2.QtCore.Signal
+    preSharedKeyAuthenticationRequired: PySide2.QtCore.Signal
+    proxyAuthenticationRequired: PySide2.QtCore.Signal
+    readChannelFinished: PySide2.QtCore.Signal
+    sslErrors: PySide2.QtCore.Signal
+    stateChanged: PySide2.QtCore.Signal
+    textFrameReceived: PySide2.QtCore.Signal
+    textMessageReceived: PySide2.QtCore.Signal
+
 
     def __init__(self, origin:str=..., version:PySide2.QtWebSockets.QWebSocketProtocol.Version=..., parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
@@ -181,6 +202,16 @@ class QWebSocketProtocol(Shiboken.Object):
 
 
 class QWebSocketServer(PySide2.QtCore.QObject):
+
+    acceptError: PySide2.QtCore.Signal
+    closed: PySide2.QtCore.Signal
+    newConnection: PySide2.QtCore.Signal
+    originAuthenticationRequired: PySide2.QtCore.Signal
+    peerVerifyError: PySide2.QtCore.Signal
+    preSharedKeyAuthenticationRequired: PySide2.QtCore.Signal
+    serverError: PySide2.QtCore.Signal
+    sslErrors: PySide2.QtCore.Signal
+
     SecureMode               : QWebSocketServer.SslMode = ... # 0x0
     NonSecureMode            : QWebSocketServer.SslMode = ... # 0x1
 

@@ -73,6 +73,11 @@ class QAbstractAudioDeviceInfo(PySide2.QtCore.QObject):
 
 class QAbstractAudioInput(PySide2.QtCore.QObject):
 
+    errorChanged: PySide2.QtCore.Signal
+    notify: PySide2.QtCore.Signal
+    stateChanged: PySide2.QtCore.Signal
+
+
     def __init__(self) -> None: ...
 
     def bufferSize(self) -> int: ...
@@ -100,6 +105,11 @@ class QAbstractAudioInput(PySide2.QtCore.QObject):
 
 
 class QAbstractAudioOutput(PySide2.QtCore.QObject):
+
+    errorChanged: PySide2.QtCore.Signal
+    notify: PySide2.QtCore.Signal
+    stateChanged: PySide2.QtCore.Signal
+
 
     def __init__(self) -> None: ...
 
@@ -168,6 +178,9 @@ class QAbstractVideoBuffer(Shiboken.Object):
 
 class QAbstractVideoFilter(PySide2.QtCore.QObject):
 
+    activeChanged: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def createFilterRunnable(self) -> PySide2.QtMultimedia.QVideoFilterRunnable: ...
@@ -176,6 +189,12 @@ class QAbstractVideoFilter(PySide2.QtCore.QObject):
 
 
 class QAbstractVideoSurface(PySide2.QtCore.QObject):
+
+    activeChanged: PySide2.QtCore.Signal
+    nativeResolutionChanged: PySide2.QtCore.Signal
+    supportedFormatsChanged: PySide2.QtCore.Signal
+    surfaceFormatChanged: PySide2.QtCore.Signal
+
     NoError                  : QAbstractVideoSurface.Error = ... # 0x0
     UnsupportedFormatError   : QAbstractVideoSurface.Error = ... # 0x1
     IncorrectFormatError     : QAbstractVideoSurface.Error = ... # 0x2
@@ -299,6 +318,17 @@ class QAudioBuffer(Shiboken.Object):
 
 
 class QAudioDecoder(PySide2.QtMultimedia.QMediaObject):
+
+    bufferAvailableChanged: PySide2.QtCore.Signal
+    bufferReady: PySide2.QtCore.Signal
+    durationChanged: PySide2.QtCore.Signal
+    error: PySide2.QtCore.Signal
+    finished: PySide2.QtCore.Signal
+    formatChanged: PySide2.QtCore.Signal
+    positionChanged: PySide2.QtCore.Signal
+    sourceChanged: PySide2.QtCore.Signal
+    stateChanged: PySide2.QtCore.Signal
+
     NoError                  : QAudioDecoder.Error = ... # 0x0
     StoppedState             : QAudioDecoder.State = ... # 0x0
     DecodingState            : QAudioDecoder.State = ... # 0x1
@@ -342,6 +372,17 @@ class QAudioDecoder(PySide2.QtMultimedia.QMediaObject):
 
 
 class QAudioDecoderControl(PySide2.QtMultimedia.QMediaControl):
+
+    bufferAvailableChanged: PySide2.QtCore.Signal
+    bufferReady: PySide2.QtCore.Signal
+    durationChanged: PySide2.QtCore.Signal
+    error: PySide2.QtCore.Signal
+    finished: PySide2.QtCore.Signal
+    formatChanged: PySide2.QtCore.Signal
+    positionChanged: PySide2.QtCore.Signal
+    sourceChanged: PySide2.QtCore.Signal
+    stateChanged: PySide2.QtCore.Signal
+
 
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
@@ -476,6 +517,10 @@ class QAudioFormat(Shiboken.Object):
 
 class QAudioInput(PySide2.QtCore.QObject):
 
+    notify: PySide2.QtCore.Signal
+    stateChanged: PySide2.QtCore.Signal
+
+
     @typing.overload
     def __init__(self, audioDeviceInfo:PySide2.QtMultimedia.QAudioDeviceInfo, format:PySide2.QtMultimedia.QAudioFormat=..., parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
     @typing.overload
@@ -506,6 +551,10 @@ class QAudioInput(PySide2.QtCore.QObject):
 
 class QAudioInputSelectorControl(PySide2.QtMultimedia.QMediaControl):
 
+    activeInputChanged: PySide2.QtCore.Signal
+    availableInputsChanged: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def activeInput(self) -> str: ...
@@ -516,6 +565,10 @@ class QAudioInputSelectorControl(PySide2.QtMultimedia.QMediaControl):
 
 
 class QAudioOutput(PySide2.QtCore.QObject):
+
+    notify: PySide2.QtCore.Signal
+    stateChanged: PySide2.QtCore.Signal
+
 
     @typing.overload
     def __init__(self, audioDeviceInfo:PySide2.QtMultimedia.QAudioDeviceInfo, format:PySide2.QtMultimedia.QAudioFormat=..., parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
@@ -549,6 +602,10 @@ class QAudioOutput(PySide2.QtCore.QObject):
 
 class QAudioOutputSelectorControl(PySide2.QtMultimedia.QMediaControl):
 
+    activeOutputChanged: PySide2.QtCore.Signal
+    availableOutputsChanged: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def activeOutput(self) -> str: ...
@@ -559,6 +616,10 @@ class QAudioOutputSelectorControl(PySide2.QtMultimedia.QMediaControl):
 
 
 class QAudioProbe(PySide2.QtCore.QObject):
+
+    audioBufferProbed: PySide2.QtCore.Signal
+    flush: PySide2.QtCore.Signal
+
 
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
@@ -571,6 +632,10 @@ class QAudioProbe(PySide2.QtCore.QObject):
 
 class QAudioRecorder(PySide2.QtMultimedia.QMediaRecorder):
 
+    audioInputChanged: PySide2.QtCore.Signal
+    availableAudioInputsChanged: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def audioInput(self) -> str: ...
@@ -582,6 +647,9 @@ class QAudioRecorder(PySide2.QtMultimedia.QMediaRecorder):
 
 class QAudioRoleControl(PySide2.QtMultimedia.QMediaControl):
 
+    audioRoleChanged: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def audioRole(self) -> PySide2.QtMultimedia.QAudio.Role: ...
@@ -590,6 +658,16 @@ class QAudioRoleControl(PySide2.QtMultimedia.QMediaControl):
 
 
 class QCamera(PySide2.QtMultimedia.QMediaObject):
+
+    captureModeChanged: PySide2.QtCore.Signal
+    error: PySide2.QtCore.Signal
+    errorOccurred: PySide2.QtCore.Signal
+    lockFailed: PySide2.QtCore.Signal
+    lockStatusChanged: PySide2.QtCore.Signal
+    locked: PySide2.QtCore.Signal
+    stateChanged: PySide2.QtCore.Signal
+    statusChanged: PySide2.QtCore.Signal
+
     CaptureViewfinder        : QCamera.CaptureMode = ... # 0x0
     NoError                  : QCamera.Error = ... # 0x0
     NoLock                   : QCamera.LockType = ... # 0x0
@@ -751,6 +829,9 @@ class QCamera(PySide2.QtMultimedia.QMediaObject):
 
 class QCameraCaptureBufferFormatControl(PySide2.QtMultimedia.QMediaControl):
 
+    bufferFormatChanged: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def bufferFormat(self) -> PySide2.QtMultimedia.QVideoFrame.PixelFormat: ...
@@ -760,6 +841,9 @@ class QCameraCaptureBufferFormatControl(PySide2.QtMultimedia.QMediaControl):
 
 class QCameraCaptureDestinationControl(PySide2.QtMultimedia.QMediaControl):
 
+    captureDestinationChanged: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def captureDestination(self) -> PySide2.QtMultimedia.QCameraImageCapture.CaptureDestinations: ...
@@ -768,6 +852,12 @@ class QCameraCaptureDestinationControl(PySide2.QtMultimedia.QMediaControl):
 
 
 class QCameraControl(PySide2.QtMultimedia.QMediaControl):
+
+    captureModeChanged: PySide2.QtCore.Signal
+    error: PySide2.QtCore.Signal
+    stateChanged: PySide2.QtCore.Signal
+    statusChanged: PySide2.QtCore.Signal
+
     CaptureMode              : QCameraControl.PropertyChangeType = ... # 0x1
     ImageEncodingSettings    : QCameraControl.PropertyChangeType = ... # 0x2
     VideoEncodingSettings    : QCameraControl.PropertyChangeType = ... # 0x3
@@ -793,6 +883,15 @@ class QCameraControl(PySide2.QtMultimedia.QMediaControl):
 
 
 class QCameraExposure(PySide2.QtCore.QObject):
+
+    apertureChanged: PySide2.QtCore.Signal
+    apertureRangeChanged: PySide2.QtCore.Signal
+    exposureCompensationChanged: PySide2.QtCore.Signal
+    flashReady: PySide2.QtCore.Signal
+    isoSensitivityChanged: PySide2.QtCore.Signal
+    shutterSpeedChanged: PySide2.QtCore.Signal
+    shutterSpeedRangeChanged: PySide2.QtCore.Signal
+
     ExposureAuto             : QCameraExposure.ExposureMode = ... # 0x0
     ExposureManual           : QCameraExposure.ExposureMode = ... # 0x1
     FlashAuto                : QCameraExposure.FlashMode = ... # 0x1
@@ -901,6 +1000,11 @@ class QCameraExposure(PySide2.QtCore.QObject):
 
 
 class QCameraExposureControl(PySide2.QtMultimedia.QMediaControl):
+
+    actualValueChanged: PySide2.QtCore.Signal
+    parameterRangeChanged: PySide2.QtCore.Signal
+    requestedValueChanged: PySide2.QtCore.Signal
+
     ISO                      : QCameraExposureControl.ExposureParameter = ... # 0x0
     Aperture                 : QCameraExposureControl.ExposureParameter = ... # 0x1
     ShutterSpeed             : QCameraExposureControl.ExposureParameter = ... # 0x2
@@ -971,6 +1075,9 @@ class QCameraFeedbackControl(PySide2.QtMultimedia.QMediaControl):
 
 class QCameraFlashControl(PySide2.QtMultimedia.QMediaControl):
 
+    flashReady: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def flashMode(self) -> PySide2.QtMultimedia.QCameraExposure.FlashModes: ...
@@ -980,6 +1087,13 @@ class QCameraFlashControl(PySide2.QtMultimedia.QMediaControl):
 
 
 class QCameraFocus(PySide2.QtCore.QObject):
+
+    digitalZoomChanged: PySide2.QtCore.Signal
+    focusZonesChanged: PySide2.QtCore.Signal
+    maximumDigitalZoomChanged: PySide2.QtCore.Signal
+    maximumOpticalZoomChanged: PySide2.QtCore.Signal
+    opticalZoomChanged: PySide2.QtCore.Signal
+
     FocusPointAuto           : QCameraFocus.FocusPointMode = ... # 0x0
     FocusPointCenter         : QCameraFocus.FocusPointMode = ... # 0x1
     ManualFocus              : QCameraFocus.FocusMode = ... # 0x1
@@ -1025,6 +1139,12 @@ class QCameraFocus(PySide2.QtCore.QObject):
 
 class QCameraFocusControl(PySide2.QtMultimedia.QMediaControl):
 
+    customFocusPointChanged: PySide2.QtCore.Signal
+    focusModeChanged: PySide2.QtCore.Signal
+    focusPointModeChanged: PySide2.QtCore.Signal
+    focusZonesChanged: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def customFocusPoint(self) -> PySide2.QtCore.QPointF: ...
@@ -1066,6 +1186,17 @@ class QCameraFocusZone(Shiboken.Object):
 
 
 class QCameraImageCapture(PySide2.QtCore.QObject, PySide2.QtMultimedia.QMediaBindableInterface):
+
+    bufferFormatChanged: PySide2.QtCore.Signal
+    captureDestinationChanged: PySide2.QtCore.Signal
+    error: PySide2.QtCore.Signal
+    imageAvailable: PySide2.QtCore.Signal
+    imageCaptured: PySide2.QtCore.Signal
+    imageExposed: PySide2.QtCore.Signal
+    imageMetadataAvailable: PySide2.QtCore.Signal
+    imageSaved: PySide2.QtCore.Signal
+    readyForCaptureChanged: PySide2.QtCore.Signal
+
     NoError                  : QCameraImageCapture.Error = ... # 0x0
     SingleImageCapture       : QCameraImageCapture.DriveMode = ... # 0x0
     CaptureToFile            : QCameraImageCapture.CaptureDestination = ... # 0x1
@@ -1117,6 +1248,15 @@ class QCameraImageCapture(PySide2.QtCore.QObject, PySide2.QtMultimedia.QMediaBin
 
 
 class QCameraImageCaptureControl(PySide2.QtMultimedia.QMediaControl):
+
+    error: PySide2.QtCore.Signal
+    imageAvailable: PySide2.QtCore.Signal
+    imageCaptured: PySide2.QtCore.Signal
+    imageExposed: PySide2.QtCore.Signal
+    imageMetadataAvailable: PySide2.QtCore.Signal
+    imageSaved: PySide2.QtCore.Signal
+    readyForCaptureChanged: PySide2.QtCore.Signal
+
 
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
@@ -1265,6 +1405,9 @@ class QCameraInfoControl(PySide2.QtMultimedia.QMediaControl):
 
 class QCameraLocksControl(PySide2.QtMultimedia.QMediaControl):
 
+    lockStatusChanged: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def lockStatus(self, lock:PySide2.QtMultimedia.QCamera.LockType) -> PySide2.QtMultimedia.QCamera.LockStatus: ...
@@ -1336,6 +1479,14 @@ class QCameraViewfinderSettingsControl2(PySide2.QtMultimedia.QMediaControl):
 
 class QCameraZoomControl(PySide2.QtMultimedia.QMediaControl):
 
+    currentDigitalZoomChanged: PySide2.QtCore.Signal
+    currentOpticalZoomChanged: PySide2.QtCore.Signal
+    maximumDigitalZoomChanged: PySide2.QtCore.Signal
+    maximumOpticalZoomChanged: PySide2.QtCore.Signal
+    requestedDigitalZoomChanged: PySide2.QtCore.Signal
+    requestedOpticalZoomChanged: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def currentDigitalZoom(self) -> float: ...
@@ -1348,6 +1499,9 @@ class QCameraZoomControl(PySide2.QtMultimedia.QMediaControl):
 
 
 class QCustomAudioRoleControl(PySide2.QtMultimedia.QMediaControl):
+
+    customAudioRoleChanged: PySide2.QtCore.Signal
+
 
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
@@ -1393,10 +1547,17 @@ class QImageEncoderSettings(Shiboken.Object):
 
 class QMediaAudioProbeControl(PySide2.QtMultimedia.QMediaControl):
 
+    audioBufferProbed: PySide2.QtCore.Signal
+    flush: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
 
 class QMediaAvailabilityControl(PySide2.QtMultimedia.QMediaControl):
+
+    availabilityChanged: PySide2.QtCore.Signal
+
 
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
@@ -1456,6 +1617,11 @@ class QMediaControl(PySide2.QtCore.QObject):
 
 class QMediaGaplessPlaybackControl(PySide2.QtMultimedia.QMediaControl):
 
+    advancedToNextMedia: PySide2.QtCore.Signal
+    crossfadeTimeChanged: PySide2.QtCore.Signal
+    nextMediaChanged: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def crossfadeTime(self) -> float: ...
@@ -1467,6 +1633,9 @@ class QMediaGaplessPlaybackControl(PySide2.QtMultimedia.QMediaControl):
 
 class QMediaNetworkAccessControl(PySide2.QtMultimedia.QMediaControl):
 
+    configurationChanged: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def currentConfiguration(self) -> PySide2.QtNetwork.QNetworkConfiguration: ...
@@ -1474,6 +1643,12 @@ class QMediaNetworkAccessControl(PySide2.QtMultimedia.QMediaControl):
 
 
 class QMediaObject(PySide2.QtCore.QObject):
+
+    availabilityChanged: PySide2.QtCore.Signal
+    metaDataAvailableChanged: PySide2.QtCore.Signal
+    metaDataChanged: PySide2.QtCore.Signal
+    notifyIntervalChanged: PySide2.QtCore.Signal
+
 
     def __init__(self, parent:PySide2.QtCore.QObject, service:PySide2.QtMultimedia.QMediaService) -> None: ...
 
@@ -1492,6 +1667,25 @@ class QMediaObject(PySide2.QtCore.QObject):
 
 
 class QMediaPlayer(PySide2.QtMultimedia.QMediaObject):
+
+    audioAvailableChanged: PySide2.QtCore.Signal
+    audioRoleChanged: PySide2.QtCore.Signal
+    bufferStatusChanged: PySide2.QtCore.Signal
+    currentMediaChanged: PySide2.QtCore.Signal
+    customAudioRoleChanged: PySide2.QtCore.Signal
+    durationChanged: PySide2.QtCore.Signal
+    error: PySide2.QtCore.Signal
+    mediaChanged: PySide2.QtCore.Signal
+    mediaStatusChanged: PySide2.QtCore.Signal
+    mutedChanged: PySide2.QtCore.Signal
+    networkConfigurationChanged: PySide2.QtCore.Signal
+    playbackRateChanged: PySide2.QtCore.Signal
+    positionChanged: PySide2.QtCore.Signal
+    seekableChanged: PySide2.QtCore.Signal
+    stateChanged: PySide2.QtCore.Signal
+    videoAvailableChanged: PySide2.QtCore.Signal
+    volumeChanged: PySide2.QtCore.Signal
+
     NoError                  : QMediaPlayer.Error = ... # 0x0
     StoppedState             : QMediaPlayer.State = ... # 0x0
     UnknownMediaStatus       : QMediaPlayer.MediaStatus = ... # 0x0
@@ -1602,6 +1796,22 @@ class QMediaPlayer(PySide2.QtMultimedia.QMediaObject):
 
 class QMediaPlayerControl(PySide2.QtMultimedia.QMediaControl):
 
+    audioAvailableChanged: PySide2.QtCore.Signal
+    availablePlaybackRangesChanged: PySide2.QtCore.Signal
+    bufferStatusChanged: PySide2.QtCore.Signal
+    durationChanged: PySide2.QtCore.Signal
+    error: PySide2.QtCore.Signal
+    mediaChanged: PySide2.QtCore.Signal
+    mediaStatusChanged: PySide2.QtCore.Signal
+    mutedChanged: PySide2.QtCore.Signal
+    playbackRateChanged: PySide2.QtCore.Signal
+    positionChanged: PySide2.QtCore.Signal
+    seekableChanged: PySide2.QtCore.Signal
+    stateChanged: PySide2.QtCore.Signal
+    videoAvailableChanged: PySide2.QtCore.Signal
+    volumeChanged: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def availablePlaybackRanges(self) -> PySide2.QtMultimedia.QMediaTimeRange: ...
@@ -1629,6 +1839,18 @@ class QMediaPlayerControl(PySide2.QtMultimedia.QMediaControl):
 
 
 class QMediaPlaylist(PySide2.QtCore.QObject, PySide2.QtMultimedia.QMediaBindableInterface):
+
+    currentIndexChanged: PySide2.QtCore.Signal
+    currentMediaChanged: PySide2.QtCore.Signal
+    loadFailed: PySide2.QtCore.Signal
+    loaded: PySide2.QtCore.Signal
+    mediaAboutToBeInserted: PySide2.QtCore.Signal
+    mediaAboutToBeRemoved: PySide2.QtCore.Signal
+    mediaChanged: PySide2.QtCore.Signal
+    mediaInserted: PySide2.QtCore.Signal
+    mediaRemoved: PySide2.QtCore.Signal
+    playbackModeChanged: PySide2.QtCore.Signal
+
     CurrentItemOnce          : QMediaPlaylist.PlaybackMode = ... # 0x0
     NoError                  : QMediaPlaylist.Error = ... # 0x0
     CurrentItemInLoop        : QMediaPlaylist.PlaybackMode = ... # 0x1
@@ -1701,6 +1923,19 @@ class QMediaPlaylist(PySide2.QtCore.QObject, PySide2.QtMultimedia.QMediaBindable
 
 
 class QMediaRecorder(PySide2.QtCore.QObject, PySide2.QtMultimedia.QMediaBindableInterface):
+
+    actualLocationChanged: PySide2.QtCore.Signal
+    availabilityChanged: PySide2.QtCore.Signal
+    durationChanged: PySide2.QtCore.Signal
+    error: PySide2.QtCore.Signal
+    metaDataAvailableChanged: PySide2.QtCore.Signal
+    metaDataChanged: PySide2.QtCore.Signal
+    metaDataWritableChanged: PySide2.QtCore.Signal
+    mutedChanged: PySide2.QtCore.Signal
+    stateChanged: PySide2.QtCore.Signal
+    statusChanged: PySide2.QtCore.Signal
+    volumeChanged: PySide2.QtCore.Signal
+
     NoError                  : QMediaRecorder.Error = ... # 0x0
     StoppedState             : QMediaRecorder.State = ... # 0x0
     UnavailableStatus        : QMediaRecorder.Status = ... # 0x0
@@ -1780,6 +2015,15 @@ class QMediaRecorder(PySide2.QtCore.QObject, PySide2.QtMultimedia.QMediaBindable
 
 
 class QMediaRecorderControl(PySide2.QtMultimedia.QMediaControl):
+
+    actualLocationChanged: PySide2.QtCore.Signal
+    durationChanged: PySide2.QtCore.Signal
+    error: PySide2.QtCore.Signal
+    mutedChanged: PySide2.QtCore.Signal
+    stateChanged: PySide2.QtCore.Signal
+    statusChanged: PySide2.QtCore.Signal
+    volumeChanged: PySide2.QtCore.Signal
+
 
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
@@ -1933,6 +2177,10 @@ class QMediaServiceSupportedFormatsInterface(Shiboken.Object):
 
 
 class QMediaStreamsControl(PySide2.QtMultimedia.QMediaControl):
+
+    activeStreamsChanged: PySide2.QtCore.Signal
+    streamsChanged: PySide2.QtCore.Signal
+
     UnknownStream            : QMediaStreamsControl.StreamType = ... # 0x0
     VideoStream              : QMediaStreamsControl.StreamType = ... # 0x1
     AudioStream              : QMediaStreamsControl.StreamType = ... # 0x2
@@ -2018,10 +2266,18 @@ class QMediaTimeRange(Shiboken.Object):
 
 class QMediaVideoProbeControl(PySide2.QtMultimedia.QMediaControl):
 
+    flush: PySide2.QtCore.Signal
+    videoFrameProbed: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
 
 class QMetaDataReaderControl(PySide2.QtMultimedia.QMediaControl):
+
+    metaDataAvailableChanged: PySide2.QtCore.Signal
+    metaDataChanged: PySide2.QtCore.Signal
+
 
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
@@ -2031,6 +2287,11 @@ class QMetaDataReaderControl(PySide2.QtMultimedia.QMediaControl):
 
 
 class QMetaDataWriterControl(PySide2.QtMultimedia.QMediaControl):
+
+    metaDataAvailableChanged: PySide2.QtCore.Signal
+    metaDataChanged: PySide2.QtCore.Signal
+    writableChanged: PySide2.QtCore.Signal
+
 
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
@@ -2087,6 +2348,15 @@ class QMultimedia(Shiboken.Object):
 
 
 class QRadioData(PySide2.QtCore.QObject, PySide2.QtMultimedia.QMediaBindableInterface):
+
+    alternativeFrequenciesEnabledChanged: PySide2.QtCore.Signal
+    error: PySide2.QtCore.Signal
+    programTypeChanged: PySide2.QtCore.Signal
+    programTypeNameChanged: PySide2.QtCore.Signal
+    radioTextChanged: PySide2.QtCore.Signal
+    stationIdChanged: PySide2.QtCore.Signal
+    stationNameChanged: PySide2.QtCore.Signal
+
     NoError                  : QRadioData.Error = ... # 0x0
     Undefined                : QRadioData.ProgramType = ... # 0x0
     News                     : QRadioData.ProgramType = ... # 0x1
@@ -2214,6 +2484,15 @@ class QRadioData(PySide2.QtCore.QObject, PySide2.QtMultimedia.QMediaBindableInte
 
 class QRadioDataControl(PySide2.QtMultimedia.QMediaControl):
 
+    alternativeFrequenciesEnabledChanged: PySide2.QtCore.Signal
+    error: PySide2.QtCore.Signal
+    programTypeChanged: PySide2.QtCore.Signal
+    programTypeNameChanged: PySide2.QtCore.Signal
+    radioTextChanged: PySide2.QtCore.Signal
+    stationIdChanged: PySide2.QtCore.Signal
+    stationNameChanged: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def error(self) -> PySide2.QtMultimedia.QRadioData.Error: ...
@@ -2228,6 +2507,19 @@ class QRadioDataControl(PySide2.QtMultimedia.QMediaControl):
 
 
 class QRadioTuner(PySide2.QtMultimedia.QMediaObject):
+
+    antennaConnectedChanged: PySide2.QtCore.Signal
+    bandChanged: PySide2.QtCore.Signal
+    error: PySide2.QtCore.Signal
+    frequencyChanged: PySide2.QtCore.Signal
+    mutedChanged: PySide2.QtCore.Signal
+    searchingChanged: PySide2.QtCore.Signal
+    signalStrengthChanged: PySide2.QtCore.Signal
+    stateChanged: PySide2.QtCore.Signal
+    stationFound: PySide2.QtCore.Signal
+    stereoStatusChanged: PySide2.QtCore.Signal
+    volumeChanged: PySide2.QtCore.Signal
+
     AM                       : QRadioTuner.Band = ... # 0x0
     ActiveState              : QRadioTuner.State = ... # 0x0
     ForceStereo              : QRadioTuner.StereoMode = ... # 0x0
@@ -2305,6 +2597,19 @@ class QRadioTuner(PySide2.QtMultimedia.QMediaObject):
 
 class QRadioTunerControl(PySide2.QtMultimedia.QMediaControl):
 
+    antennaConnectedChanged: PySide2.QtCore.Signal
+    bandChanged: PySide2.QtCore.Signal
+    error: PySide2.QtCore.Signal
+    frequencyChanged: PySide2.QtCore.Signal
+    mutedChanged: PySide2.QtCore.Signal
+    searchingChanged: PySide2.QtCore.Signal
+    signalStrengthChanged: PySide2.QtCore.Signal
+    stateChanged: PySide2.QtCore.Signal
+    stationFound: PySide2.QtCore.Signal
+    stereoStatusChanged: PySide2.QtCore.Signal
+    volumeChanged: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def band(self) -> PySide2.QtMultimedia.QRadioTuner.Band: ...
@@ -2357,6 +2662,17 @@ class QSound(PySide2.QtCore.QObject):
 
 
 class QSoundEffect(PySide2.QtCore.QObject):
+
+    categoryChanged: PySide2.QtCore.Signal
+    loadedChanged: PySide2.QtCore.Signal
+    loopCountChanged: PySide2.QtCore.Signal
+    loopsRemainingChanged: PySide2.QtCore.Signal
+    mutedChanged: PySide2.QtCore.Signal
+    playingChanged: PySide2.QtCore.Signal
+    sourceChanged: PySide2.QtCore.Signal
+    statusChanged: PySide2.QtCore.Signal
+    volumeChanged: PySide2.QtCore.Signal
+
     Infinite                 : QSoundEffect.Loop = ... # -0x2
     Null                     : QSoundEffect.Status = ... # 0x0
     Loading                  : QSoundEffect.Status = ... # 0x1
@@ -2398,6 +2714,10 @@ class QSoundEffect(PySide2.QtCore.QObject):
 
 
 class QVideoDeviceSelectorControl(PySide2.QtMultimedia.QMediaControl):
+
+    devicesChanged: PySide2.QtCore.Signal
+    selectedDeviceChanged: PySide2.QtCore.Signal
+
 
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
@@ -2603,6 +2923,10 @@ class QVideoFrame(Shiboken.Object):
 
 class QVideoProbe(PySide2.QtCore.QObject):
 
+    flush: PySide2.QtCore.Signal
+    videoFrameProbed: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def isActive(self) -> bool: ...
@@ -2685,6 +3009,14 @@ class QVideoSurfaceFormat(Shiboken.Object):
 
 
 class QVideoWindowControl(PySide2.QtMultimedia.QMediaControl):
+
+    brightnessChanged: PySide2.QtCore.Signal
+    contrastChanged: PySide2.QtCore.Signal
+    fullScreenChanged: PySide2.QtCore.Signal
+    hueChanged: PySide2.QtCore.Signal
+    nativeSizeChanged: PySide2.QtCore.Signal
+    saturationChanged: PySide2.QtCore.Signal
+
 
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 

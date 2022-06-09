@@ -2,7 +2,7 @@ from typing import Dict, Type
 
 import importlib, json, pathlib
 
-JSON_OUTPUT_FNAME = 'qflags-types.json'
+JSON_OUTPUT_FNAME = pathlib.Path(__file__).parent / 'qflags-types.json'
 
 def collect_qflags_types_for_module(module_name: str, d: Dict[str, str]) -> None:
     '''Load module, inspect all QFlags types and fill dict with the information'''

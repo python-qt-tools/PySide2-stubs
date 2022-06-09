@@ -103,6 +103,9 @@ class QSvgGenerator(PySide2.QtGui.QPaintDevice):
 
 class QSvgRenderer(PySide2.QtCore.QObject):
 
+    repaintNeeded: PySide2.QtCore.Signal
+
+
     @typing.overload
     def __init__(self, contents:PySide2.QtCore.QByteArray, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
     @typing.overload

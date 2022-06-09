@@ -70,6 +70,15 @@ class QAbstractNetworkCache(PySide2.QtCore.QObject):
 
 
 class QAbstractSocket(PySide2.QtCore.QIODevice):
+
+    connected: PySide2.QtCore.Signal
+    disconnected: PySide2.QtCore.Signal
+    error: PySide2.QtCore.Signal
+    errorOccurred: PySide2.QtCore.Signal
+    hostFound: PySide2.QtCore.Signal
+    proxyAuthenticationRequired: PySide2.QtCore.Signal
+    stateChanged: PySide2.QtCore.Signal
+
     UnknownNetworkLayerProtocol: QAbstractSocket.NetworkLayerProtocol = ... # -0x1
     UnknownSocketError       : QAbstractSocket.SocketError = ... # -0x1
     UnknownSocketType        : QAbstractSocket.SocketType = ... # -0x1
@@ -304,6 +313,12 @@ class QDnsHostAddressRecord(Shiboken.Object):
 
 
 class QDnsLookup(PySide2.QtCore.QObject):
+
+    finished: PySide2.QtCore.Signal
+    nameChanged: PySide2.QtCore.Signal
+    nameserverChanged: PySide2.QtCore.Signal
+    typeChanged: PySide2.QtCore.Signal
+
     NoError                  : QDnsLookup.Error = ... # 0x0
     A                        : QDnsLookup.Type = ... # 0x1
     ResolverError            : QDnsLookup.Error = ... # 0x1
@@ -421,6 +436,10 @@ class QDnsTextRecord(Shiboken.Object):
 
 if sys.platform() == 'linux' or sys.platform() == 'win32':
     class QDtls(PySide2.QtCore.QObject):
+
+        handshakeTimeout: PySide2.QtCore.Signal
+        pskRequired: PySide2.QtCore.Signal
+
         HandshakeNotStarted      : QDtls.HandshakeState = ... # 0x0
         HandshakeInProgress      : QDtls.HandshakeState = ... # 0x1
         PeerVerificationFailed   : QDtls.HandshakeState = ... # 0x2
@@ -676,6 +695,9 @@ class QIPv6Address(Shiboken.Object):
 
 
 class QLocalServer(PySide2.QtCore.QObject):
+
+    newConnection: PySide2.QtCore.Signal
+
     NoOptions                : QLocalServer.SocketOption = ... # 0x0
     UserAccessOption         : QLocalServer.SocketOption = ... # 0x1
     GroupAccessOption        : QLocalServer.SocketOption = ... # 0x2
@@ -717,6 +739,13 @@ class QLocalServer(PySide2.QtCore.QObject):
 
 
 class QLocalSocket(PySide2.QtCore.QIODevice):
+
+    connected: PySide2.QtCore.Signal
+    disconnected: PySide2.QtCore.Signal
+    error: PySide2.QtCore.Signal
+    errorOccurred: PySide2.QtCore.Signal
+    stateChanged: PySide2.QtCore.Signal
+
     UnknownSocketError       : QLocalSocket.LocalSocketError = ... # -0x1
     ConnectionRefusedError   : QLocalSocket.LocalSocketError = ... # 0x0
     UnconnectedState         : QLocalSocket.LocalSocketState = ... # 0x0
@@ -786,6 +815,16 @@ class QLocalSocket(PySide2.QtCore.QIODevice):
 
 
 class QNetworkAccessManager(PySide2.QtCore.QObject):
+
+    authenticationRequired: PySide2.QtCore.Signal
+    encrypted: PySide2.QtCore.Signal
+    finished: PySide2.QtCore.Signal
+    networkAccessibleChanged: PySide2.QtCore.Signal
+    networkSessionConnected: PySide2.QtCore.Signal
+    preSharedKeyAuthenticationRequired: PySide2.QtCore.Signal
+    proxyAuthenticationRequired: PySide2.QtCore.Signal
+    sslErrors: PySide2.QtCore.Signal
+
     UnknownAccessibility     : QNetworkAccessManager.NetworkAccessibility = ... # -0x1
     NotAccessible            : QNetworkAccessManager.NetworkAccessibility = ... # 0x0
     UnknownOperation         : QNetworkAccessManager.Operation = ... # 0x0
@@ -1021,6 +1060,13 @@ class QNetworkConfiguration(Shiboken.Object):
 
 
 class QNetworkConfigurationManager(PySide2.QtCore.QObject):
+
+    configurationAdded: PySide2.QtCore.Signal
+    configurationChanged: PySide2.QtCore.Signal
+    configurationRemoved: PySide2.QtCore.Signal
+    onlineStateChanged: PySide2.QtCore.Signal
+    updateCompleted: PySide2.QtCore.Signal
+
     CanStartAndStopInterfaces: QNetworkConfigurationManager.Capability = ... # 0x1
     DirectConnectionRouting  : QNetworkConfigurationManager.Capability = ... # 0x2
     SystemSessionSupport     : QNetworkConfigurationManager.Capability = ... # 0x4
@@ -1373,6 +1419,19 @@ class QNetworkProxyQuery(Shiboken.Object):
 
 
 class QNetworkReply(PySide2.QtCore.QIODevice):
+
+    downloadProgress: PySide2.QtCore.Signal
+    encrypted: PySide2.QtCore.Signal
+    error: PySide2.QtCore.Signal
+    errorOccurred: PySide2.QtCore.Signal
+    finished: PySide2.QtCore.Signal
+    metaDataChanged: PySide2.QtCore.Signal
+    preSharedKeyAuthenticationRequired: PySide2.QtCore.Signal
+    redirectAllowed: PySide2.QtCore.Signal
+    redirected: PySide2.QtCore.Signal
+    sslErrors: PySide2.QtCore.Signal
+    uploadProgress: PySide2.QtCore.Signal
+
     NoError                  : QNetworkReply.NetworkError = ... # 0x0
     ConnectionRefusedError   : QNetworkReply.NetworkError = ... # 0x1
     RemoteHostClosedError    : QNetworkReply.NetworkError = ... # 0x2
@@ -1655,6 +1714,15 @@ class QNetworkRequest(Shiboken.Object):
 
 
 class QNetworkSession(PySide2.QtCore.QObject):
+
+    closed: PySide2.QtCore.Signal
+    error: PySide2.QtCore.Signal
+    newConfigurationActivated: PySide2.QtCore.Signal
+    opened: PySide2.QtCore.Signal
+    preferredConfigurationChanged: PySide2.QtCore.Signal
+    stateChanged: PySide2.QtCore.Signal
+    usagePoliciesChanged: PySide2.QtCore.Signal
+
     Invalid                  : QNetworkSession.State = ... # 0x0
     NoPolicy                 : QNetworkSession.UsagePolicy = ... # 0x0
     UnknownSessionError      : QNetworkSession.SessionError = ... # 0x0
@@ -2230,6 +2298,15 @@ class QSslPreSharedKeyAuthenticator(Shiboken.Object):
 
 
 class QSslSocket(PySide2.QtNetwork.QTcpSocket):
+
+    encrypted: PySide2.QtCore.Signal
+    encryptedBytesWritten: PySide2.QtCore.Signal
+    modeChanged: PySide2.QtCore.Signal
+    newSessionTicketReceived: PySide2.QtCore.Signal
+    peerVerifyError: PySide2.QtCore.Signal
+    preSharedKeyAuthenticationRequired: PySide2.QtCore.Signal
+    sslErrors: PySide2.QtCore.Signal
+
     UnencryptedMode          : QSslSocket.SslMode = ... # 0x0
     VerifyNone               : QSslSocket.PeerVerifyMode = ... # 0x0
     QueryPeer                : QSslSocket.PeerVerifyMode = ... # 0x1
@@ -2363,6 +2440,10 @@ class QSslSocket(PySide2.QtNetwork.QTcpSocket):
 
 
 class QTcpServer(PySide2.QtCore.QObject):
+
+    acceptError: PySide2.QtCore.Signal
+    newConnection: PySide2.QtCore.Signal
+
 
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 

@@ -54,6 +54,9 @@ import PySide2.QtSensors
 
 
 class QAccelerometer(PySide2.QtSensors.QSensor):
+
+    accelerationModeChanged: PySide2.QtCore.Signal
+
     Combined                 : QAccelerometer.AccelerationMode = ... # 0x0
     Gravity                  : QAccelerometer.AccelerationMode = ... # 0x1
     User                     : QAccelerometer.AccelerationMode = ... # 0x2
@@ -361,6 +364,10 @@ class QLidFilter(PySide2.QtSensors.QSensorFilter):
 
 class QLidReading(PySide2.QtSensors.QSensorReading):
 
+    backLidChanged: PySide2.QtCore.Signal
+    frontLidChanged: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:PySide2.QtCore.QObject) -> None: ...
 
     def backLidClosed(self) -> bool: ...
@@ -398,6 +405,9 @@ class QLightReading(PySide2.QtSensors.QSensorReading):
 
 class QLightSensor(PySide2.QtSensors.QSensor):
 
+    fieldOfViewChanged: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def fieldOfView(self) -> float: ...
@@ -406,6 +416,9 @@ class QLightSensor(PySide2.QtSensors.QSensor):
 
 
 class QMagnetometer(PySide2.QtSensors.QSensor):
+
+    returnGeoValuesChanged: PySide2.QtCore.Signal
+
 
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
@@ -558,6 +571,9 @@ class QRotationReading(PySide2.QtSensors.QSensorReading):
 
 class QRotationSensor(PySide2.QtSensors.QSensor):
 
+    hasZChanged: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def hasZ(self) -> bool: ...
@@ -566,6 +582,22 @@ class QRotationSensor(PySide2.QtSensors.QSensor):
 
 
 class QSensor(PySide2.QtCore.QObject):
+
+    activeChanged: PySide2.QtCore.Signal
+    alwaysOnChanged: PySide2.QtCore.Signal
+    availableSensorsChanged: PySide2.QtCore.Signal
+    axesOrientationModeChanged: PySide2.QtCore.Signal
+    bufferSizeChanged: PySide2.QtCore.Signal
+    busyChanged: PySide2.QtCore.Signal
+    currentOrientationChanged: PySide2.QtCore.Signal
+    dataRateChanged: PySide2.QtCore.Signal
+    efficientBufferSizeChanged: PySide2.QtCore.Signal
+    maxBufferSizeChanged: PySide2.QtCore.Signal
+    readingChanged: PySide2.QtCore.Signal
+    sensorError: PySide2.QtCore.Signal
+    skipDuplicatesChanged: PySide2.QtCore.Signal
+    userOrientationChanged: PySide2.QtCore.Signal
+
     Buffering                : QSensor.Feature = ... # 0x0
     FixedOrientation         : QSensor.AxesOrientationMode = ... # 0x0
     AlwaysOn                 : QSensor.Feature = ... # 0x1
@@ -688,6 +720,9 @@ class QSensorFilter(Shiboken.Object):
 
 class QSensorGestureManager(PySide2.QtCore.QObject):
 
+    newSensorGestureAvailable: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def gestureIds(self) -> typing.List: ...
@@ -707,6 +742,9 @@ class QSensorGesturePluginInterface(Shiboken.Object):
 
 
 class QSensorGestureRecognizer(PySide2.QtCore.QObject):
+
+    detected: PySide2.QtCore.Signal
+
 
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
@@ -802,6 +840,9 @@ class QTapReading(PySide2.QtSensors.QSensorReading):
 
 
 class QTapSensor(PySide2.QtSensors.QSensor):
+
+    returnDoubleTapEventsChanged: PySide2.QtCore.Signal
+
 
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 

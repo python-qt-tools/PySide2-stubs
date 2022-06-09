@@ -58,6 +58,18 @@ class QtDataVisualization(Shiboken.Object):
 
     class Q3DBars(PySide2.QtDataVisualization.QAbstract3DGraph):
 
+        barSpacingChanged: PySide2.QtCore.Signal
+        barSpacingRelativeChanged: PySide2.QtCore.Signal
+        barThicknessChanged: PySide2.QtCore.Signal
+        columnAxisChanged: PySide2.QtCore.Signal
+        floorLevelChanged: PySide2.QtCore.Signal
+        multiSeriesUniformChanged: PySide2.QtCore.Signal
+        primarySeriesChanged: PySide2.QtCore.Signal
+        rowAxisChanged: PySide2.QtCore.Signal
+        selectedSeriesChanged: PySide2.QtCore.Signal
+        valueAxisChanged: PySide2.QtCore.Signal
+
+
         def __init__(self, format:typing.Optional[PySide2.QtGui.QSurfaceFormat]=..., parent:typing.Optional[PySide2.QtGui.QWindow]=...) -> None: ...
 
         def addAxis(self, axis:PySide2.QtDataVisualization.QtDataVisualization.QAbstract3DAxis) -> None: ...
@@ -88,6 +100,17 @@ class QtDataVisualization(Shiboken.Object):
         def valueAxis(self) -> PySide2.QtDataVisualization.QtDataVisualization.QValue3DAxis: ...
 
     class Q3DCamera(PySide2.QtDataVisualization.Q3DObject):
+
+        cameraPresetChanged: PySide2.QtCore.Signal
+        maxZoomLevelChanged: PySide2.QtCore.Signal
+        minZoomLevelChanged: PySide2.QtCore.Signal
+        targetChanged: PySide2.QtCore.Signal
+        wrapXRotationChanged: PySide2.QtCore.Signal
+        wrapYRotationChanged: PySide2.QtCore.Signal
+        xRotationChanged: PySide2.QtCore.Signal
+        yRotationChanged: PySide2.QtCore.Signal
+        zoomLevelChanged: PySide2.QtCore.Signal
+
         CameraPresetNone         : QtDataVisualization.Q3DCamera.CameraPreset = ... # -0x1
         CameraPresetFrontLow     : QtDataVisualization.Q3DCamera.CameraPreset = ... # 0x0
         CameraPresetFront        : QtDataVisualization.Q3DCamera.CameraPreset = ... # 0x1
@@ -166,6 +189,12 @@ class QtDataVisualization(Shiboken.Object):
 
     class Q3DInputHandler(PySide2.QtDataVisualization.QAbstract3DInputHandler):
 
+        rotationEnabledChanged: PySide2.QtCore.Signal
+        selectionEnabledChanged: PySide2.QtCore.Signal
+        zoomAtTargetEnabledChanged: PySide2.QtCore.Signal
+        zoomEnabledChanged: PySide2.QtCore.Signal
+
+
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
         def isRotationEnabled(self) -> bool: ...
@@ -183,12 +212,18 @@ class QtDataVisualization(Shiboken.Object):
 
     class Q3DLight(PySide2.QtDataVisualization.Q3DObject):
 
+        autoPositionChanged: PySide2.QtCore.Signal
+
+
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
         def isAutoPosition(self) -> bool: ...
         def setAutoPosition(self, enabled:bool) -> None: ...
 
     class Q3DObject(PySide2.QtCore.QObject):
+
+        positionChanged: PySide2.QtCore.Signal
+
 
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
@@ -200,6 +235,12 @@ class QtDataVisualization(Shiboken.Object):
         def setPosition(self, position:PySide2.QtGui.QVector3D) -> None: ...
 
     class Q3DScatter(PySide2.QtDataVisualization.QAbstract3DGraph):
+
+        axisXChanged: PySide2.QtCore.Signal
+        axisYChanged: PySide2.QtCore.Signal
+        axisZChanged: PySide2.QtCore.Signal
+        selectedSeriesChanged: PySide2.QtCore.Signal
+
 
         def __init__(self, format:typing.Optional[PySide2.QtGui.QSurfaceFormat]=..., parent:typing.Optional[PySide2.QtGui.QWindow]=...) -> None: ...
 
@@ -218,6 +259,18 @@ class QtDataVisualization(Shiboken.Object):
         def setAxisZ(self, axis:PySide2.QtDataVisualization.QtDataVisualization.QValue3DAxis) -> None: ...
 
     class Q3DScene(PySide2.QtCore.QObject):
+
+        activeCameraChanged: PySide2.QtCore.Signal
+        activeLightChanged: PySide2.QtCore.Signal
+        devicePixelRatioChanged: PySide2.QtCore.Signal
+        graphPositionQueryChanged: PySide2.QtCore.Signal
+        primarySubViewportChanged: PySide2.QtCore.Signal
+        secondarySubViewportChanged: PySide2.QtCore.Signal
+        secondarySubviewOnTopChanged: PySide2.QtCore.Signal
+        selectionQueryPositionChanged: PySide2.QtCore.Signal
+        slicingActiveChanged: PySide2.QtCore.Signal
+        viewportChanged: PySide2.QtCore.Signal
+
 
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
@@ -247,6 +300,13 @@ class QtDataVisualization(Shiboken.Object):
 
     class Q3DSurface(PySide2.QtDataVisualization.QAbstract3DGraph):
 
+        axisXChanged: PySide2.QtCore.Signal
+        axisYChanged: PySide2.QtCore.Signal
+        axisZChanged: PySide2.QtCore.Signal
+        flipHorizontalGridChanged: PySide2.QtCore.Signal
+        selectedSeriesChanged: PySide2.QtCore.Signal
+
+
         def __init__(self, format:typing.Optional[PySide2.QtGui.QSurfaceFormat]=..., parent:typing.Optional[PySide2.QtGui.QWindow]=...) -> None: ...
 
         def addAxis(self, axis:PySide2.QtDataVisualization.QtDataVisualization.QValue3DAxis) -> None: ...
@@ -266,6 +326,30 @@ class QtDataVisualization(Shiboken.Object):
         def setFlipHorizontalGrid(self, flip:bool) -> None: ...
 
     class Q3DTheme(PySide2.QtCore.QObject):
+
+        ambientLightStrengthChanged: PySide2.QtCore.Signal
+        backgroundColorChanged: PySide2.QtCore.Signal
+        backgroundEnabledChanged: PySide2.QtCore.Signal
+        baseColorsChanged: PySide2.QtCore.Signal
+        baseGradientsChanged: PySide2.QtCore.Signal
+        colorStyleChanged: PySide2.QtCore.Signal
+        fontChanged: PySide2.QtCore.Signal
+        gridEnabledChanged: PySide2.QtCore.Signal
+        gridLineColorChanged: PySide2.QtCore.Signal
+        highlightLightStrengthChanged: PySide2.QtCore.Signal
+        labelBackgroundColorChanged: PySide2.QtCore.Signal
+        labelBackgroundEnabledChanged: PySide2.QtCore.Signal
+        labelBorderEnabledChanged: PySide2.QtCore.Signal
+        labelTextColorChanged: PySide2.QtCore.Signal
+        lightColorChanged: PySide2.QtCore.Signal
+        lightStrengthChanged: PySide2.QtCore.Signal
+        multiHighlightColorChanged: PySide2.QtCore.Signal
+        multiHighlightGradientChanged: PySide2.QtCore.Signal
+        singleHighlightColorChanged: PySide2.QtCore.Signal
+        singleHighlightGradientChanged: PySide2.QtCore.Signal
+        typeChanged: PySide2.QtCore.Signal
+        windowColorChanged: PySide2.QtCore.Signal
+
         ColorStyleUniform        : QtDataVisualization.Q3DTheme.ColorStyle = ... # 0x0
         ThemeQt                  : QtDataVisualization.Q3DTheme.Theme = ... # 0x0
         ColorStyleObjectGradient : QtDataVisualization.Q3DTheme.ColorStyle = ... # 0x1
@@ -346,6 +430,18 @@ class QtDataVisualization(Shiboken.Object):
         def windowColor(self) -> PySide2.QtGui.QColor: ...
 
     class QAbstract3DAxis(PySide2.QtCore.QObject):
+
+        autoAdjustRangeChanged: PySide2.QtCore.Signal
+        labelAutoRotationChanged: PySide2.QtCore.Signal
+        labelsChanged: PySide2.QtCore.Signal
+        maxChanged: PySide2.QtCore.Signal
+        minChanged: PySide2.QtCore.Signal
+        orientationChanged: PySide2.QtCore.Signal
+        rangeChanged: PySide2.QtCore.Signal
+        titleChanged: PySide2.QtCore.Signal
+        titleFixedChanged: PySide2.QtCore.Signal
+        titleVisibilityChanged: PySide2.QtCore.Signal
+
         AxisOrientationNone      : QtDataVisualization.QAbstract3DAxis.AxisOrientation = ... # 0x0
         AxisTypeNone             : QtDataVisualization.QAbstract3DAxis.AxisType = ... # 0x0
         AxisOrientationX         : QtDataVisualization.QAbstract3DAxis.AxisOrientation = ... # 0x1
@@ -385,6 +481,26 @@ class QtDataVisualization(Shiboken.Object):
         def type(self) -> PySide2.QtDataVisualization.QtDataVisualization.QAbstract3DAxis.AxisType: ...
 
     class QAbstract3DGraph(PySide2.QtGui.QWindow):
+
+        activeInputHandlerChanged: PySide2.QtCore.Signal
+        activeThemeChanged: PySide2.QtCore.Signal
+        aspectRatioChanged: PySide2.QtCore.Signal
+        currentFpsChanged: PySide2.QtCore.Signal
+        horizontalAspectRatioChanged: PySide2.QtCore.Signal
+        localeChanged: PySide2.QtCore.Signal
+        marginChanged: PySide2.QtCore.Signal
+        measureFpsChanged: PySide2.QtCore.Signal
+        optimizationHintsChanged: PySide2.QtCore.Signal
+        orthoProjectionChanged: PySide2.QtCore.Signal
+        polarChanged: PySide2.QtCore.Signal
+        queriedGraphPositionChanged: PySide2.QtCore.Signal
+        radialLabelOffsetChanged: PySide2.QtCore.Signal
+        reflectionChanged: PySide2.QtCore.Signal
+        reflectivityChanged: PySide2.QtCore.Signal
+        selectedElementChanged: PySide2.QtCore.Signal
+        selectionModeChanged: PySide2.QtCore.Signal
+        shadowQualityChanged: PySide2.QtCore.Signal
+
         ElementNone              : QtDataVisualization.QAbstract3DGraph.ElementType = ... # 0x0
         OptimizationDefault      : QtDataVisualization.QAbstract3DGraph.OptimizationHint = ... # 0x0
         SelectionNone            : QtDataVisualization.QAbstract3DGraph.SelectionFlag = ... # 0x0
@@ -512,6 +628,11 @@ class QtDataVisualization(Shiboken.Object):
         def wheelEvent(self, event:PySide2.QtGui.QWheelEvent) -> None: ...
 
     class QAbstract3DInputHandler(PySide2.QtCore.QObject):
+
+        inputViewChanged: PySide2.QtCore.Signal
+        positionChanged: PySide2.QtCore.Signal
+        sceneChanged: PySide2.QtCore.Signal
+
         InputViewNone            : QtDataVisualization.QAbstract3DInputHandler.InputView = ... # 0x0
         InputViewOnPrimary       : QtDataVisualization.QAbstract3DInputHandler.InputView = ... # 0x1
         InputViewOnSecondary     : QtDataVisualization.QAbstract3DInputHandler.InputView = ... # 0x2
@@ -541,6 +662,24 @@ class QtDataVisualization(Shiboken.Object):
         def wheelEvent(self, event:PySide2.QtGui.QWheelEvent) -> None: ...
 
     class QAbstract3DSeries(PySide2.QtCore.QObject):
+
+        baseColorChanged: PySide2.QtCore.Signal
+        baseGradientChanged: PySide2.QtCore.Signal
+        colorStyleChanged: PySide2.QtCore.Signal
+        itemLabelChanged: PySide2.QtCore.Signal
+        itemLabelFormatChanged: PySide2.QtCore.Signal
+        itemLabelVisibilityChanged: PySide2.QtCore.Signal
+        meshChanged: PySide2.QtCore.Signal
+        meshRotationChanged: PySide2.QtCore.Signal
+        meshSmoothChanged: PySide2.QtCore.Signal
+        multiHighlightColorChanged: PySide2.QtCore.Signal
+        multiHighlightGradientChanged: PySide2.QtCore.Signal
+        nameChanged: PySide2.QtCore.Signal
+        singleHighlightColorChanged: PySide2.QtCore.Signal
+        singleHighlightGradientChanged: PySide2.QtCore.Signal
+        userDefinedMeshChanged: PySide2.QtCore.Signal
+        visibilityChanged: PySide2.QtCore.Signal
+
         MeshUserDefined          : QtDataVisualization.QAbstract3DSeries.Mesh = ... # 0x0
         SeriesTypeNone           : QtDataVisualization.QAbstract3DSeries.SeriesType = ... # 0x0
         MeshBar                  : QtDataVisualization.QAbstract3DSeries.Mesh = ... # 0x1
@@ -626,6 +765,11 @@ class QtDataVisualization(Shiboken.Object):
 
     class QBar3DSeries(PySide2.QtDataVisualization.QAbstract3DSeries):
 
+        dataProxyChanged: PySide2.QtCore.Signal
+        meshAngleChanged: PySide2.QtCore.Signal
+        selectedBarChanged: PySide2.QtCore.Signal
+
+
         @typing.overload
         def __init__(self, dataProxy:PySide2.QtDataVisualization.QtDataVisualization.QBarDataProxy, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
         @typing.overload
@@ -660,6 +804,18 @@ class QtDataVisualization(Shiboken.Object):
         def value(self) -> float: ...
 
     class QBarDataProxy(PySide2.QtDataVisualization.QAbstractDataProxy):
+
+        arrayReset: PySide2.QtCore.Signal
+        columnLabelsChanged: PySide2.QtCore.Signal
+        itemChanged: PySide2.QtCore.Signal
+        rowCountChanged: PySide2.QtCore.Signal
+        rowLabelsChanged: PySide2.QtCore.Signal
+        rowsAdded: PySide2.QtCore.Signal
+        rowsChanged: PySide2.QtCore.Signal
+        rowsInserted: PySide2.QtCore.Signal
+        rowsRemoved: PySide2.QtCore.Signal
+        seriesChanged: PySide2.QtCore.Signal
+
 
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
@@ -713,12 +869,26 @@ class QtDataVisualization(Shiboken.Object):
 
     class QCategory3DAxis(PySide2.QtDataVisualization.QAbstract3DAxis):
 
+        labelsChanged: PySide2.QtCore.Signal
+
+
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
         def labels(self) -> typing.List: ...
         def setLabels(self, labels:typing.Sequence) -> None: ...
 
     class QCustom3DItem(PySide2.QtCore.QObject):
+
+        meshFileChanged: PySide2.QtCore.Signal
+        positionAbsoluteChanged: PySide2.QtCore.Signal
+        positionChanged: PySide2.QtCore.Signal
+        rotationChanged: PySide2.QtCore.Signal
+        scalingAbsoluteChanged: PySide2.QtCore.Signal
+        scalingChanged: PySide2.QtCore.Signal
+        shadowCastingChanged: PySide2.QtCore.Signal
+        textureFileChanged: PySide2.QtCore.Signal
+        visibleChanged: PySide2.QtCore.Signal
+
 
         @typing.overload
         def __init__(self, meshFile:str, position:PySide2.QtGui.QVector3D, scaling:PySide2.QtGui.QVector3D, rotation:PySide2.QtGui.QQuaternion, texture:PySide2.QtGui.QImage, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
@@ -748,6 +918,15 @@ class QtDataVisualization(Shiboken.Object):
 
     class QCustom3DLabel(PySide2.QtDataVisualization.QCustom3DItem):
 
+        backgroundColorChanged: PySide2.QtCore.Signal
+        backgroundEnabledChanged: PySide2.QtCore.Signal
+        borderEnabledChanged: PySide2.QtCore.Signal
+        facingCameraChanged: PySide2.QtCore.Signal
+        fontChanged: PySide2.QtCore.Signal
+        textChanged: PySide2.QtCore.Signal
+        textColorChanged: PySide2.QtCore.Signal
+
+
         @typing.overload
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
         @typing.overload
@@ -769,6 +948,26 @@ class QtDataVisualization(Shiboken.Object):
         def textColor(self) -> PySide2.QtGui.QColor: ...
 
     class QCustom3DVolume(PySide2.QtDataVisualization.QCustom3DItem):
+
+        alphaMultiplierChanged: PySide2.QtCore.Signal
+        colorTableChanged: PySide2.QtCore.Signal
+        drawSliceFramesChanged: PySide2.QtCore.Signal
+        drawSlicesChanged: PySide2.QtCore.Signal
+        preserveOpacityChanged: PySide2.QtCore.Signal
+        sliceFrameColorChanged: PySide2.QtCore.Signal
+        sliceFrameGapsChanged: PySide2.QtCore.Signal
+        sliceFrameThicknessesChanged: PySide2.QtCore.Signal
+        sliceFrameWidthsChanged: PySide2.QtCore.Signal
+        sliceIndexXChanged: PySide2.QtCore.Signal
+        sliceIndexYChanged: PySide2.QtCore.Signal
+        sliceIndexZChanged: PySide2.QtCore.Signal
+        textureDataChanged: PySide2.QtCore.Signal
+        textureDepthChanged: PySide2.QtCore.Signal
+        textureFormatChanged: PySide2.QtCore.Signal
+        textureHeightChanged: PySide2.QtCore.Signal
+        textureWidthChanged: PySide2.QtCore.Signal
+        useHighDefShaderChanged: PySide2.QtCore.Signal
+
 
         @typing.overload
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
@@ -823,6 +1022,14 @@ class QtDataVisualization(Shiboken.Object):
 
     class QHeightMapSurfaceDataProxy(PySide2.QtDataVisualization.QSurfaceDataProxy):
 
+        heightMapChanged: PySide2.QtCore.Signal
+        heightMapFileChanged: PySide2.QtCore.Signal
+        maxXValueChanged: PySide2.QtCore.Signal
+        maxZValueChanged: PySide2.QtCore.Signal
+        minXValueChanged: PySide2.QtCore.Signal
+        minZValueChanged: PySide2.QtCore.Signal
+
+
         @typing.overload
         def __init__(self, filename:str, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
         @typing.overload
@@ -845,6 +1052,27 @@ class QtDataVisualization(Shiboken.Object):
         def setValueRanges(self, minX:float, maxX:float, minZ:float, maxZ:float) -> None: ...
 
     class QItemModelBarDataProxy(PySide2.QtDataVisualization.QBarDataProxy):
+
+        autoColumnCategoriesChanged: PySide2.QtCore.Signal
+        autoRowCategoriesChanged: PySide2.QtCore.Signal
+        columnCategoriesChanged: PySide2.QtCore.Signal
+        columnRoleChanged: PySide2.QtCore.Signal
+        columnRolePatternChanged: PySide2.QtCore.Signal
+        columnRoleReplaceChanged: PySide2.QtCore.Signal
+        itemModelChanged: PySide2.QtCore.Signal
+        multiMatchBehaviorChanged: PySide2.QtCore.Signal
+        rotationRoleChanged: PySide2.QtCore.Signal
+        rotationRolePatternChanged: PySide2.QtCore.Signal
+        rotationRoleReplaceChanged: PySide2.QtCore.Signal
+        rowCategoriesChanged: PySide2.QtCore.Signal
+        rowRoleChanged: PySide2.QtCore.Signal
+        rowRolePatternChanged: PySide2.QtCore.Signal
+        rowRoleReplaceChanged: PySide2.QtCore.Signal
+        useModelCategoriesChanged: PySide2.QtCore.Signal
+        valueRoleChanged: PySide2.QtCore.Signal
+        valueRolePatternChanged: PySide2.QtCore.Signal
+        valueRoleReplaceChanged: PySide2.QtCore.Signal
+
         MMBFirst                 : QtDataVisualization.QItemModelBarDataProxy.MultiMatchBehavior = ... # 0x0
         MMBLast                  : QtDataVisualization.QItemModelBarDataProxy.MultiMatchBehavior = ... # 0x1
         MMBAverage               : QtDataVisualization.QItemModelBarDataProxy.MultiMatchBehavior = ... # 0x2
@@ -915,6 +1143,21 @@ class QtDataVisualization(Shiboken.Object):
 
     class QItemModelScatterDataProxy(PySide2.QtDataVisualization.QScatterDataProxy):
 
+        itemModelChanged: PySide2.QtCore.Signal
+        rotationRoleChanged: PySide2.QtCore.Signal
+        rotationRolePatternChanged: PySide2.QtCore.Signal
+        rotationRoleReplaceChanged: PySide2.QtCore.Signal
+        xPosRoleChanged: PySide2.QtCore.Signal
+        xPosRolePatternChanged: PySide2.QtCore.Signal
+        xPosRoleReplaceChanged: PySide2.QtCore.Signal
+        yPosRoleChanged: PySide2.QtCore.Signal
+        yPosRolePatternChanged: PySide2.QtCore.Signal
+        yPosRoleReplaceChanged: PySide2.QtCore.Signal
+        zPosRoleChanged: PySide2.QtCore.Signal
+        zPosRolePatternChanged: PySide2.QtCore.Signal
+        zPosRoleReplaceChanged: PySide2.QtCore.Signal
+
+
         @typing.overload
         def __init__(self, itemModel:PySide2.QtCore.QAbstractItemModel, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
         @typing.overload
@@ -953,6 +1196,30 @@ class QtDataVisualization(Shiboken.Object):
         def zPosRoleReplace(self) -> str: ...
 
     class QItemModelSurfaceDataProxy(PySide2.QtDataVisualization.QSurfaceDataProxy):
+
+        autoColumnCategoriesChanged: PySide2.QtCore.Signal
+        autoRowCategoriesChanged: PySide2.QtCore.Signal
+        columnCategoriesChanged: PySide2.QtCore.Signal
+        columnRoleChanged: PySide2.QtCore.Signal
+        columnRolePatternChanged: PySide2.QtCore.Signal
+        columnRoleReplaceChanged: PySide2.QtCore.Signal
+        itemModelChanged: PySide2.QtCore.Signal
+        multiMatchBehaviorChanged: PySide2.QtCore.Signal
+        rowCategoriesChanged: PySide2.QtCore.Signal
+        rowRoleChanged: PySide2.QtCore.Signal
+        rowRolePatternChanged: PySide2.QtCore.Signal
+        rowRoleReplaceChanged: PySide2.QtCore.Signal
+        useModelCategoriesChanged: PySide2.QtCore.Signal
+        xPosRoleChanged: PySide2.QtCore.Signal
+        xPosRolePatternChanged: PySide2.QtCore.Signal
+        xPosRoleReplaceChanged: PySide2.QtCore.Signal
+        yPosRoleChanged: PySide2.QtCore.Signal
+        yPosRolePatternChanged: PySide2.QtCore.Signal
+        yPosRoleReplaceChanged: PySide2.QtCore.Signal
+        zPosRoleChanged: PySide2.QtCore.Signal
+        zPosRolePatternChanged: PySide2.QtCore.Signal
+        zPosRoleReplaceChanged: PySide2.QtCore.Signal
+
         MMBFirst                 : QtDataVisualization.QItemModelSurfaceDataProxy.MultiMatchBehavior = ... # 0x0
         MMBLast                  : QtDataVisualization.QItemModelSurfaceDataProxy.MultiMatchBehavior = ... # 0x1
         MMBAverage               : QtDataVisualization.QItemModelSurfaceDataProxy.MultiMatchBehavior = ... # 0x2
@@ -1029,6 +1296,11 @@ class QtDataVisualization(Shiboken.Object):
 
     class QLogValue3DAxisFormatter(PySide2.QtDataVisualization.QValue3DAxisFormatter):
 
+        autoSubGridChanged: PySide2.QtCore.Signal
+        baseChanged: PySide2.QtCore.Signal
+        showEdgeLabelsChanged: PySide2.QtCore.Signal
+
+
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
         def autoSubGrid(self) -> bool: ...
@@ -1044,6 +1316,11 @@ class QtDataVisualization(Shiboken.Object):
         def valueAt(self, position:float) -> float: ...
 
     class QScatter3DSeries(PySide2.QtDataVisualization.QAbstract3DSeries):
+
+        dataProxyChanged: PySide2.QtCore.Signal
+        itemSizeChanged: PySide2.QtCore.Signal
+        selectedItemChanged: PySide2.QtCore.Signal
+
 
         @typing.overload
         def __init__(self, dataProxy:PySide2.QtDataVisualization.QtDataVisualization.QScatterDataProxy, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
@@ -1086,6 +1363,15 @@ class QtDataVisualization(Shiboken.Object):
 
     class QScatterDataProxy(PySide2.QtDataVisualization.QAbstractDataProxy):
 
+        arrayReset: PySide2.QtCore.Signal
+        itemCountChanged: PySide2.QtCore.Signal
+        itemsAdded: PySide2.QtCore.Signal
+        itemsChanged: PySide2.QtCore.Signal
+        itemsInserted: PySide2.QtCore.Signal
+        itemsRemoved: PySide2.QtCore.Signal
+        seriesChanged: PySide2.QtCore.Signal
+
+
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
         def addItem(self, item:PySide2.QtDataVisualization.QtDataVisualization.QScatterDataItem) -> int: ...
@@ -1102,6 +1388,15 @@ class QtDataVisualization(Shiboken.Object):
         def setItems(self, index:int, items:typing.List) -> None: ...
 
     class QSurface3DSeries(PySide2.QtDataVisualization.QAbstract3DSeries):
+
+        dataProxyChanged: PySide2.QtCore.Signal
+        drawModeChanged: PySide2.QtCore.Signal
+        flatShadingEnabledChanged: PySide2.QtCore.Signal
+        flatShadingSupportedChanged: PySide2.QtCore.Signal
+        selectedPointChanged: PySide2.QtCore.Signal
+        textureChanged: PySide2.QtCore.Signal
+        textureFileChanged: PySide2.QtCore.Signal
+
         DrawWireframe            : QtDataVisualization.QSurface3DSeries.DrawFlag = ... # 0x1
         DrawSurface              : QtDataVisualization.QSurface3DSeries.DrawFlag = ... # 0x2
         DrawSurfaceAndWireframe  : QtDataVisualization.QSurface3DSeries.DrawFlag = ... # 0x3
@@ -1157,6 +1452,17 @@ class QtDataVisualization(Shiboken.Object):
 
     class QSurfaceDataProxy(PySide2.QtDataVisualization.QAbstractDataProxy):
 
+        arrayReset: PySide2.QtCore.Signal
+        columnCountChanged: PySide2.QtCore.Signal
+        itemChanged: PySide2.QtCore.Signal
+        rowCountChanged: PySide2.QtCore.Signal
+        rowsAdded: PySide2.QtCore.Signal
+        rowsChanged: PySide2.QtCore.Signal
+        rowsInserted: PySide2.QtCore.Signal
+        rowsRemoved: PySide2.QtCore.Signal
+        seriesChanged: PySide2.QtCore.Signal
+
+
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
         def addRow(self, row:typing.List) -> int: ...
@@ -1187,6 +1493,13 @@ class QtDataVisualization(Shiboken.Object):
         def touchEvent(self, event:PySide2.QtGui.QTouchEvent) -> None: ...
 
     class QValue3DAxis(PySide2.QtDataVisualization.QAbstract3DAxis):
+
+        formatterChanged: PySide2.QtCore.Signal
+        labelFormatChanged: PySide2.QtCore.Signal
+        reversedChanged: PySide2.QtCore.Signal
+        segmentCountChanged: PySide2.QtCore.Signal
+        subSegmentCountChanged: PySide2.QtCore.Signal
+
 
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 

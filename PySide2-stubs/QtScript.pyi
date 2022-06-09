@@ -180,6 +180,9 @@ class QScriptContextInfo(Shiboken.Object):
 
 
 class QScriptEngine(PySide2.QtCore.QObject):
+
+    signalHandlerException: PySide2.QtCore.Signal
+
     QtOwnership              : QScriptEngine.ValueOwnership = ... # 0x0
     ExcludeChildObjects      : QScriptEngine.QObjectWrapOption = ... # 0x1
     ScriptOwnership          : QScriptEngine.ValueOwnership = ... # 0x1

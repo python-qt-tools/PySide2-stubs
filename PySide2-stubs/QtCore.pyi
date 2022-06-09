@@ -84,6 +84,12 @@ class Property(object):
 
 
 class QAbstractAnimation(PySide2.QtCore.QObject):
+
+    currentLoopChanged: PySide2.QtCore.Signal
+    directionChanged: PySide2.QtCore.Signal
+    finished: PySide2.QtCore.Signal
+    stateChanged: PySide2.QtCore.Signal
+
     Forward                  : QAbstractAnimation.Direction = ... # 0x0
     KeepWhenStopped          : QAbstractAnimation.DeletionPolicy = ... # 0x0
     Stopped                  : QAbstractAnimation.State = ... # 0x0
@@ -132,6 +138,10 @@ class QAbstractAnimation(PySide2.QtCore.QObject):
 
 class QAbstractEventDispatcher(PySide2.QtCore.QObject):
 
+    aboutToBlock: PySide2.QtCore.Signal
+    awake: PySide2.QtCore.Signal
+
+
     class TimerInfo(Shiboken.Object):
 
         def __init__(self, id:int, i:int, t:PySide2.QtCore.Qt.TimerType) -> None: ...
@@ -168,6 +178,26 @@ class QAbstractEventDispatcher(PySide2.QtCore.QObject):
 
 
 class QAbstractItemModel(PySide2.QtCore.QObject):
+
+    columnsAboutToBeInserted: PySide2.QtCore.Signal
+    columnsAboutToBeMoved: PySide2.QtCore.Signal
+    columnsAboutToBeRemoved: PySide2.QtCore.Signal
+    columnsInserted: PySide2.QtCore.Signal
+    columnsMoved: PySide2.QtCore.Signal
+    columnsRemoved: PySide2.QtCore.Signal
+    dataChanged: PySide2.QtCore.Signal
+    headerDataChanged: PySide2.QtCore.Signal
+    layoutAboutToBeChanged: PySide2.QtCore.Signal
+    layoutChanged: PySide2.QtCore.Signal
+    modelAboutToBeReset: PySide2.QtCore.Signal
+    modelReset: PySide2.QtCore.Signal
+    rowsAboutToBeInserted: PySide2.QtCore.Signal
+    rowsAboutToBeMoved: PySide2.QtCore.Signal
+    rowsAboutToBeRemoved: PySide2.QtCore.Signal
+    rowsInserted: PySide2.QtCore.Signal
+    rowsMoved: PySide2.QtCore.Signal
+    rowsRemoved: PySide2.QtCore.Signal
+
     NoLayoutChangeHint       : QAbstractItemModel.LayoutChangeHint = ... # 0x0
     VerticalSortHint         : QAbstractItemModel.LayoutChangeHint = ... # 0x1
     HorizontalSortHint       : QAbstractItemModel.LayoutChangeHint = ... # 0x2
@@ -283,6 +313,9 @@ class QAbstractNativeEventFilter(Shiboken.Object):
 
 class QAbstractProxyModel(PySide2.QtCore.QAbstractItemModel):
 
+    sourceModelChanged: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def buddy(self, index:PySide2.QtCore.QModelIndex) -> PySide2.QtCore.QModelIndex: ...
@@ -318,6 +351,11 @@ class QAbstractProxyModel(PySide2.QtCore.QAbstractItemModel):
 
 class QAbstractState(PySide2.QtCore.QObject):
 
+    activeChanged: PySide2.QtCore.Signal
+    entered: PySide2.QtCore.Signal
+    exited: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QState]=...) -> None: ...
 
     def active(self) -> bool: ...
@@ -344,6 +382,11 @@ class QAbstractTableModel(PySide2.QtCore.QAbstractItemModel):
 
 
 class QAbstractTransition(PySide2.QtCore.QObject):
+
+    targetStateChanged: PySide2.QtCore.Signal
+    targetStatesChanged: PySide2.QtCore.Signal
+    triggered: PySide2.QtCore.Signal
+
     ExternalTransition       : QAbstractTransition.TransitionType = ... # 0x0
     InternalTransition       : QAbstractTransition.TransitionType = ... # 0x1
 
@@ -1467,6 +1510,13 @@ class QConcatenateTablesProxyModel(PySide2.QtCore.QAbstractItemModel):
 
 
 class QCoreApplication(PySide2.QtCore.QObject):
+
+    aboutToQuit: PySide2.QtCore.Signal
+    applicationNameChanged: PySide2.QtCore.Signal
+    applicationVersionChanged: PySide2.QtCore.Signal
+    organizationDomainChanged: PySide2.QtCore.Signal
+    organizationNameChanged: PySide2.QtCore.Signal
+
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -3247,6 +3297,10 @@ class QFileSelector(PySide2.QtCore.QObject):
 
 class QFileSystemWatcher(PySide2.QtCore.QObject):
 
+    directoryChanged: PySide2.QtCore.Signal
+    fileChanged: PySide2.QtCore.Signal
+
+
     @typing.overload
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
     @typing.overload
@@ -3359,6 +3413,11 @@ class QGenericReturnArgument(PySide2.QtCore.QGenericArgument):
 
 
 class QHistoryState(PySide2.QtCore.QAbstractState):
+
+    defaultStateChanged: PySide2.QtCore.Signal
+    defaultTransitionChanged: PySide2.QtCore.Signal
+    historyTypeChanged: PySide2.QtCore.Signal
+
     ShallowHistory           : QHistoryState.HistoryType = ... # 0x0
     DeepHistory              : QHistoryState.HistoryType = ... # 0x1
 
@@ -3383,6 +3442,14 @@ class QHistoryState(PySide2.QtCore.QAbstractState):
 
 
 class QIODevice(PySide2.QtCore.QObject):
+
+    aboutToClose: PySide2.QtCore.Signal
+    bytesWritten: PySide2.QtCore.Signal
+    channelBytesWritten: PySide2.QtCore.Signal
+    channelReadyRead: PySide2.QtCore.Signal
+    readChannelFinished: PySide2.QtCore.Signal
+    readyRead: PySide2.QtCore.Signal
+
     NotOpen                  : QIODevice.OpenModeFlag = ... # 0x0
     ReadOnly                 : QIODevice.OpenModeFlag = ... # 0x1
     WriteOnly                : QIODevice.OpenModeFlag = ... # 0x2
@@ -3576,6 +3643,13 @@ class QItemSelection(Shiboken.Object):
 
 
 class QItemSelectionModel(PySide2.QtCore.QObject):
+
+    currentChanged: PySide2.QtCore.Signal
+    currentColumnChanged: PySide2.QtCore.Signal
+    currentRowChanged: PySide2.QtCore.Signal
+    modelChanged: PySide2.QtCore.Signal
+    selectionChanged: PySide2.QtCore.Signal
+
     NoUpdate                 : QItemSelectionModel.SelectionFlag = ... # 0x0
     Clear                    : QItemSelectionModel.SelectionFlag = ... # 0x1
     Select                   : QItemSelectionModel.SelectionFlag = ... # 0x2
@@ -6405,6 +6479,10 @@ class QMutexLocker(Shiboken.Object):
 
 class QObject(Shiboken.Object):
 
+    destroyed: PySide2.QtCore.Signal
+    objectNameChanged: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def blockSignals(self, b:bool) -> bool: ...
@@ -6672,6 +6750,15 @@ class QPointF(Shiboken.Object):
 
 
 class QProcess(PySide2.QtCore.QIODevice):
+
+    error: PySide2.QtCore.Signal
+    errorOccurred: PySide2.QtCore.Signal
+    finished: PySide2.QtCore.Signal
+    readyReadStandardError: PySide2.QtCore.Signal
+    readyReadStandardOutput: PySide2.QtCore.Signal
+    started: PySide2.QtCore.Signal
+    stateChanged: PySide2.QtCore.Signal
+
     FailedToStart            : QProcess.ProcessError = ... # 0x0
     ManagedInputChannel      : QProcess.InputChannelMode = ... # 0x0
     NormalExit               : QProcess.ExitStatus = ... # 0x0
@@ -7453,6 +7540,9 @@ class QSemaphoreReleaser(Shiboken.Object):
 
 class QSequentialAnimationGroup(PySide2.QtCore.QAnimationGroup):
 
+    currentAnimationChanged: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def addPause(self, msecs:int) -> PySide2.QtCore.QPauseAnimation: ...
@@ -7590,6 +7680,13 @@ class QSignalBlocker(Shiboken.Object):
 
 
 class QSignalMapper(PySide2.QtCore.QObject):
+
+    mapped: PySide2.QtCore.Signal
+    mappedInt: PySide2.QtCore.Signal
+    mappedObject: PySide2.QtCore.Signal
+    mappedString: PySide2.QtCore.Signal
+    mappedWidget: PySide2.QtCore.Signal
+
 
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
@@ -7752,6 +7849,9 @@ class QSocketDescriptor(Shiboken.Object):
 
 
 class QSocketNotifier(PySide2.QtCore.QObject):
+
+    activated: PySide2.QtCore.Signal
+
     Read                     : QSocketNotifier.Type = ... # 0x0
     Write                    : QSocketNotifier.Type = ... # 0x1
     Exception                : QSocketNotifier.Type = ... # 0x2
@@ -7774,6 +7874,15 @@ class QSocketNotifier(PySide2.QtCore.QObject):
 
 
 class QSortFilterProxyModel(PySide2.QtCore.QAbstractProxyModel):
+
+    dynamicSortFilterChanged: PySide2.QtCore.Signal
+    filterCaseSensitivityChanged: PySide2.QtCore.Signal
+    filterRoleChanged: PySide2.QtCore.Signal
+    recursiveFilteringEnabledChanged: PySide2.QtCore.Signal
+    sortCaseSensitivityChanged: PySide2.QtCore.Signal
+    sortLocaleAwareChanged: PySide2.QtCore.Signal
+    sortRoleChanged: PySide2.QtCore.Signal
+
 
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
@@ -7919,6 +8028,13 @@ class QStandardPaths(Shiboken.Object):
 
 
 class QState(PySide2.QtCore.QAbstractState):
+
+    childModeChanged: PySide2.QtCore.Signal
+    errorStateChanged: PySide2.QtCore.Signal
+    finished: PySide2.QtCore.Signal
+    initialStateChanged: PySide2.QtCore.Signal
+    propertiesAssigned: PySide2.QtCore.Signal
+
     DontRestoreProperties    : QState.RestorePolicy = ... # 0x0
     ExclusiveStates          : QState.ChildMode = ... # 0x0
     ParallelStates           : QState.ChildMode = ... # 0x1
@@ -7960,6 +8076,11 @@ class QState(PySide2.QtCore.QAbstractState):
 
 
 class QStateMachine(PySide2.QtCore.QState):
+
+    runningChanged: PySide2.QtCore.Signal
+    started: PySide2.QtCore.Signal
+    stopped: PySide2.QtCore.Signal
+
     NoError                  : QStateMachine.Error = ... # 0x0
     NormalPriority           : QStateMachine.EventPriority = ... # 0x0
     HighPriority             : QStateMachine.EventPriority = ... # 0x1
@@ -8678,6 +8799,10 @@ class QTextStreamManipulator(Shiboken.Object):
 
 
 class QThread(PySide2.QtCore.QObject):
+
+    finished: PySide2.QtCore.Signal
+    started: PySide2.QtCore.Signal
+
     IdlePriority             : QThread.Priority = ... # 0x0
     LowestPriority           : QThread.Priority = ... # 0x1
     LowPriority              : QThread.Priority = ... # 0x2
@@ -8811,6 +8936,12 @@ class QTime(Shiboken.Object):
 
 
 class QTimeLine(PySide2.QtCore.QObject):
+
+    finished: PySide2.QtCore.Signal
+    frameChanged: PySide2.QtCore.Signal
+    stateChanged: PySide2.QtCore.Signal
+    valueChanged: PySide2.QtCore.Signal
+
     EaseInCurve              : QTimeLine.CurveShape = ... # 0x0
     Forward                  : QTimeLine.Direction = ... # 0x0
     NotRunning               : QTimeLine.State = ... # 0x0
@@ -9324,6 +9455,9 @@ class QUuid(Shiboken.Object):
 
 class QVariantAnimation(PySide2.QtCore.QAbstractAnimation):
 
+    valueChanged: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def currentValue(self) -> typing.Any: ...
@@ -9400,6 +9534,9 @@ class QWaitCondition(Shiboken.Object):
 
 if sys.platform() == 'win32':
     class QWinEventNotifier(PySide2.QtCore.QObject):
+
+        activated: PySide2.QtCore.Signal
+
 
         @typing.overload
         def __init__(self, hEvent:int, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...

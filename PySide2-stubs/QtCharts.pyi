@@ -60,6 +60,34 @@ import PySide2.QtCharts
 class QtCharts(Shiboken.Object):
 
     class QAbstractAxis(PySide2.QtCore.QObject):
+
+        colorChanged: PySide2.QtCore.Signal
+        gridLineColorChanged: PySide2.QtCore.Signal
+        gridLinePenChanged: PySide2.QtCore.Signal
+        gridVisibleChanged: PySide2.QtCore.Signal
+        labelsAngleChanged: PySide2.QtCore.Signal
+        labelsBrushChanged: PySide2.QtCore.Signal
+        labelsColorChanged: PySide2.QtCore.Signal
+        labelsEditableChanged: PySide2.QtCore.Signal
+        labelsFontChanged: PySide2.QtCore.Signal
+        labelsVisibleChanged: PySide2.QtCore.Signal
+        linePenChanged: PySide2.QtCore.Signal
+        lineVisibleChanged: PySide2.QtCore.Signal
+        minorGridLineColorChanged: PySide2.QtCore.Signal
+        minorGridLinePenChanged: PySide2.QtCore.Signal
+        minorGridVisibleChanged: PySide2.QtCore.Signal
+        reverseChanged: PySide2.QtCore.Signal
+        shadesBorderColorChanged: PySide2.QtCore.Signal
+        shadesBrushChanged: PySide2.QtCore.Signal
+        shadesColorChanged: PySide2.QtCore.Signal
+        shadesPenChanged: PySide2.QtCore.Signal
+        shadesVisibleChanged: PySide2.QtCore.Signal
+        titleBrushChanged: PySide2.QtCore.Signal
+        titleFontChanged: PySide2.QtCore.Signal
+        titleTextChanged: PySide2.QtCore.Signal
+        titleVisibleChanged: PySide2.QtCore.Signal
+        visibleChanged: PySide2.QtCore.Signal
+
         AxisTypeNoAxis           : QtCharts.QAbstractAxis.AxisType = ... # 0x0
         AxisTypeValue            : QtCharts.QAbstractAxis.AxisType = ... # 0x1
         AxisTypeBarCategory      : QtCharts.QAbstractAxis.AxisType = ... # 0x2
@@ -136,6 +164,21 @@ class QtCharts(Shiboken.Object):
         def type(self) -> PySide2.QtCharts.QtCharts.QAbstractAxis.AxisType: ...
 
     class QAbstractBarSeries(PySide2.QtCharts.QAbstractSeries):
+
+        barsetsAdded: PySide2.QtCore.Signal
+        barsetsRemoved: PySide2.QtCore.Signal
+        clicked: PySide2.QtCore.Signal
+        countChanged: PySide2.QtCore.Signal
+        doubleClicked: PySide2.QtCore.Signal
+        hovered: PySide2.QtCore.Signal
+        labelsAngleChanged: PySide2.QtCore.Signal
+        labelsFormatChanged: PySide2.QtCore.Signal
+        labelsPositionChanged: PySide2.QtCore.Signal
+        labelsPrecisionChanged: PySide2.QtCore.Signal
+        labelsVisibleChanged: PySide2.QtCore.Signal
+        pressed: PySide2.QtCore.Signal
+        released: PySide2.QtCore.Signal
+
         LabelsCenter             : QtCharts.QAbstractBarSeries.LabelsPosition = ... # 0x0
         LabelsInsideEnd          : QtCharts.QAbstractBarSeries.LabelsPosition = ... # 0x1
         LabelsInsideBase         : QtCharts.QAbstractBarSeries.LabelsPosition = ... # 0x2
@@ -170,6 +213,12 @@ class QtCharts(Shiboken.Object):
         def take(self, set:PySide2.QtCharts.QtCharts.QBarSet) -> bool: ...
 
     class QAbstractSeries(PySide2.QtCore.QObject):
+
+        nameChanged: PySide2.QtCore.Signal
+        opacityChanged: PySide2.QtCore.Signal
+        useOpenGLChanged: PySide2.QtCore.Signal
+        visibleChanged: PySide2.QtCore.Signal
+
         SeriesTypeLine           : QtCharts.QAbstractSeries.SeriesType = ... # 0x0
         SeriesTypeArea           : QtCharts.QAbstractSeries.SeriesType = ... # 0x1
         SeriesTypeBar            : QtCharts.QAbstractSeries.SeriesType = ... # 0x2
@@ -223,6 +272,21 @@ class QtCharts(Shiboken.Object):
 
     class QAreaSeries(PySide2.QtCharts.QAbstractSeries):
 
+        borderColorChanged: PySide2.QtCore.Signal
+        clicked: PySide2.QtCore.Signal
+        colorChanged: PySide2.QtCore.Signal
+        doubleClicked: PySide2.QtCore.Signal
+        hovered: PySide2.QtCore.Signal
+        pointLabelsClippingChanged: PySide2.QtCore.Signal
+        pointLabelsColorChanged: PySide2.QtCore.Signal
+        pointLabelsFontChanged: PySide2.QtCore.Signal
+        pointLabelsFormatChanged: PySide2.QtCore.Signal
+        pointLabelsVisibilityChanged: PySide2.QtCore.Signal
+        pressed: PySide2.QtCore.Signal
+        released: PySide2.QtCore.Signal
+        selected: PySide2.QtCore.Signal
+
+
         @typing.overload
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
         @typing.overload
@@ -255,6 +319,13 @@ class QtCharts(Shiboken.Object):
         def upperSeries(self) -> PySide2.QtCharts.QtCharts.QLineSeries: ...
 
     class QBarCategoryAxis(PySide2.QtCharts.QAbstractAxis):
+
+        categoriesChanged: PySide2.QtCore.Signal
+        countChanged: PySide2.QtCore.Signal
+        maxChanged: PySide2.QtCore.Signal
+        minChanged: PySide2.QtCore.Signal
+        rangeChanged: PySide2.QtCore.Signal
+
 
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
@@ -321,6 +392,24 @@ class QtCharts(Shiboken.Object):
 
     class QBarSet(PySide2.QtCore.QObject):
 
+        borderColorChanged: PySide2.QtCore.Signal
+        brushChanged: PySide2.QtCore.Signal
+        clicked: PySide2.QtCore.Signal
+        colorChanged: PySide2.QtCore.Signal
+        doubleClicked: PySide2.QtCore.Signal
+        hovered: PySide2.QtCore.Signal
+        labelBrushChanged: PySide2.QtCore.Signal
+        labelChanged: PySide2.QtCore.Signal
+        labelColorChanged: PySide2.QtCore.Signal
+        labelFontChanged: PySide2.QtCore.Signal
+        penChanged: PySide2.QtCore.Signal
+        pressed: PySide2.QtCore.Signal
+        released: PySide2.QtCore.Signal
+        valueChanged: PySide2.QtCore.Signal
+        valuesAdded: PySide2.QtCore.Signal
+        valuesRemoved: PySide2.QtCore.Signal
+
+
         def __init__(self, label:str, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
         def __lshift__(self, value:float) -> PySide2.QtCharts.QtCharts.QBarSet: ...
@@ -379,6 +468,20 @@ class QtCharts(Shiboken.Object):
 
     class QBoxPlotSeries(PySide2.QtCharts.QAbstractSeries):
 
+        boxOutlineVisibilityChanged: PySide2.QtCore.Signal
+        boxWidthChanged: PySide2.QtCore.Signal
+        boxsetsAdded: PySide2.QtCore.Signal
+        boxsetsRemoved: PySide2.QtCore.Signal
+        brushChanged: PySide2.QtCore.Signal
+        clicked: PySide2.QtCore.Signal
+        countChanged: PySide2.QtCore.Signal
+        doubleClicked: PySide2.QtCore.Signal
+        hovered: PySide2.QtCore.Signal
+        penChanged: PySide2.QtCore.Signal
+        pressed: PySide2.QtCore.Signal
+        released: PySide2.QtCore.Signal
+
+
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
         @typing.overload
@@ -402,6 +505,18 @@ class QtCharts(Shiboken.Object):
         def type(self) -> PySide2.QtCharts.QtCharts.QAbstractSeries.SeriesType: ...
 
     class QBoxSet(PySide2.QtCore.QObject):
+
+        brushChanged: PySide2.QtCore.Signal
+        cleared: PySide2.QtCore.Signal
+        clicked: PySide2.QtCore.Signal
+        doubleClicked: PySide2.QtCore.Signal
+        hovered: PySide2.QtCore.Signal
+        penChanged: PySide2.QtCore.Signal
+        pressed: PySide2.QtCore.Signal
+        released: PySide2.QtCore.Signal
+        valueChanged: PySide2.QtCore.Signal
+        valuesChanged: PySide2.QtCore.Signal
+
         LowerExtreme             : QtCharts.QBoxSet.ValuePositions = ... # 0x0
         LowerQuartile            : QtCharts.QBoxSet.ValuePositions = ... # 0x1
         Median                   : QtCharts.QBoxSet.ValuePositions = ... # 0x2
@@ -445,6 +560,10 @@ class QtCharts(Shiboken.Object):
 
     class QCandlestickModelMapper(PySide2.QtCore.QObject):
 
+        modelReplaced: PySide2.QtCore.Signal
+        seriesReplaced: PySide2.QtCore.Signal
+
+
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
         def close(self) -> int: ...
@@ -468,6 +587,26 @@ class QtCharts(Shiboken.Object):
         def timestamp(self) -> int: ...
 
     class QCandlestickSeries(PySide2.QtCharts.QAbstractSeries):
+
+        bodyOutlineVisibilityChanged: PySide2.QtCore.Signal
+        bodyWidthChanged: PySide2.QtCore.Signal
+        brushChanged: PySide2.QtCore.Signal
+        candlestickSetsAdded: PySide2.QtCore.Signal
+        candlestickSetsRemoved: PySide2.QtCore.Signal
+        capsVisibilityChanged: PySide2.QtCore.Signal
+        capsWidthChanged: PySide2.QtCore.Signal
+        clicked: PySide2.QtCore.Signal
+        countChanged: PySide2.QtCore.Signal
+        decreasingColorChanged: PySide2.QtCore.Signal
+        doubleClicked: PySide2.QtCore.Signal
+        hovered: PySide2.QtCore.Signal
+        increasingColorChanged: PySide2.QtCore.Signal
+        maximumColumnWidthChanged: PySide2.QtCore.Signal
+        minimumColumnWidthChanged: PySide2.QtCore.Signal
+        penChanged: PySide2.QtCore.Signal
+        pressed: PySide2.QtCore.Signal
+        released: PySide2.QtCore.Signal
+
 
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
@@ -508,6 +647,20 @@ class QtCharts(Shiboken.Object):
 
     class QCandlestickSet(PySide2.QtCore.QObject):
 
+        brushChanged: PySide2.QtCore.Signal
+        clicked: PySide2.QtCore.Signal
+        closeChanged: PySide2.QtCore.Signal
+        doubleClicked: PySide2.QtCore.Signal
+        highChanged: PySide2.QtCore.Signal
+        hovered: PySide2.QtCore.Signal
+        lowChanged: PySide2.QtCore.Signal
+        openChanged: PySide2.QtCore.Signal
+        penChanged: PySide2.QtCore.Signal
+        pressed: PySide2.QtCore.Signal
+        released: PySide2.QtCore.Signal
+        timestampChanged: PySide2.QtCore.Signal
+
+
         @typing.overload
         def __init__(self, open:float, high:float, low:float, close:float, timestamp:float=..., parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
         @typing.overload
@@ -529,6 +682,10 @@ class QtCharts(Shiboken.Object):
         def timestamp(self) -> float: ...
 
     class QCategoryAxis(PySide2.QtCharts.QValueAxis):
+
+        categoriesChanged: PySide2.QtCore.Signal
+        labelsPositionChanged: PySide2.QtCore.Signal
+
         AxisLabelsPositionCenter : QtCharts.QCategoryAxis.AxisLabelsPosition = ... # 0x0
         AxisLabelsPositionOnValue: QtCharts.QCategoryAxis.AxisLabelsPosition = ... # 0x1
 
@@ -551,6 +708,9 @@ class QtCharts(Shiboken.Object):
         def type(self) -> PySide2.QtCharts.QtCharts.QAbstractAxis.AxisType: ...
 
     class QChart(PySide2.QtWidgets.QGraphicsWidget):
+
+        plotAreaChanged: PySide2.QtCore.Signal
+
         ChartThemeLight          : QtCharts.QChart.ChartTheme = ... # 0x0
         ChartTypeUndefined       : QtCharts.QChart.ChartType = ... # 0x0
         NoAnimation              : QtCharts.QChart.AnimationOption = ... # 0x0
@@ -691,6 +851,13 @@ class QtCharts(Shiboken.Object):
 
     class QDateTimeAxis(PySide2.QtCharts.QAbstractAxis):
 
+        formatChanged: PySide2.QtCore.Signal
+        maxChanged: PySide2.QtCore.Signal
+        minChanged: PySide2.QtCore.Signal
+        rangeChanged: PySide2.QtCore.Signal
+        tickCountChanged: PySide2.QtCore.Signal
+
+
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
         def format(self) -> str: ...
@@ -715,6 +882,14 @@ class QtCharts(Shiboken.Object):
 
     class QHBarModelMapper(PySide2.QtCharts.QBarModelMapper):
 
+        columnCountChanged: PySide2.QtCore.Signal
+        firstBarSetRowChanged: PySide2.QtCore.Signal
+        firstColumnChanged: PySide2.QtCore.Signal
+        lastBarSetRowChanged: PySide2.QtCore.Signal
+        modelReplaced: PySide2.QtCore.Signal
+        seriesReplaced: PySide2.QtCore.Signal
+
+
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
         def columnCount(self) -> int: ...
@@ -732,6 +907,14 @@ class QtCharts(Shiboken.Object):
 
     class QHBoxPlotModelMapper(PySide2.QtCharts.QBoxPlotModelMapper):
 
+        columnCountChanged: PySide2.QtCore.Signal
+        firstBoxSetRowChanged: PySide2.QtCore.Signal
+        firstColumnChanged: PySide2.QtCore.Signal
+        lastBoxSetRowChanged: PySide2.QtCore.Signal
+        modelReplaced: PySide2.QtCore.Signal
+        seriesReplaced: PySide2.QtCore.Signal
+
+
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
         def columnCount(self) -> int: ...
@@ -748,6 +931,15 @@ class QtCharts(Shiboken.Object):
         def setSeries(self, series:PySide2.QtCharts.QtCharts.QBoxPlotSeries) -> None: ...
 
     class QHCandlestickModelMapper(PySide2.QtCharts.QCandlestickModelMapper):
+
+        closeColumnChanged: PySide2.QtCore.Signal
+        firstSetRowChanged: PySide2.QtCore.Signal
+        highColumnChanged: PySide2.QtCore.Signal
+        lastSetRowChanged: PySide2.QtCore.Signal
+        lowColumnChanged: PySide2.QtCore.Signal
+        openColumnChanged: PySide2.QtCore.Signal
+        timestampColumnChanged: PySide2.QtCore.Signal
+
 
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
@@ -769,6 +961,14 @@ class QtCharts(Shiboken.Object):
 
     class QHPieModelMapper(PySide2.QtCharts.QPieModelMapper):
 
+        columnCountChanged: PySide2.QtCore.Signal
+        firstColumnChanged: PySide2.QtCore.Signal
+        labelsRowChanged: PySide2.QtCore.Signal
+        modelReplaced: PySide2.QtCore.Signal
+        seriesReplaced: PySide2.QtCore.Signal
+        valuesRowChanged: PySide2.QtCore.Signal
+
+
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
         def columnCount(self) -> int: ...
@@ -785,6 +985,14 @@ class QtCharts(Shiboken.Object):
         def valuesRow(self) -> int: ...
 
     class QHXYModelMapper(PySide2.QtCharts.QXYModelMapper):
+
+        columnCountChanged: PySide2.QtCore.Signal
+        firstColumnChanged: PySide2.QtCore.Signal
+        modelReplaced: PySide2.QtCore.Signal
+        seriesReplaced: PySide2.QtCore.Signal
+        xRowChanged: PySide2.QtCore.Signal
+        yRowChanged: PySide2.QtCore.Signal
+
 
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
@@ -820,6 +1028,16 @@ class QtCharts(Shiboken.Object):
         def type(self) -> PySide2.QtCharts.QtCharts.QAbstractSeries.SeriesType: ...
 
     class QLegend(PySide2.QtWidgets.QGraphicsWidget):
+
+        backgroundVisibleChanged: PySide2.QtCore.Signal
+        borderColorChanged: PySide2.QtCore.Signal
+        colorChanged: PySide2.QtCore.Signal
+        fontChanged: PySide2.QtCore.Signal
+        labelColorChanged: PySide2.QtCore.Signal
+        markerShapeChanged: PySide2.QtCore.Signal
+        reverseMarkersChanged: PySide2.QtCore.Signal
+        showToolTipsChanged: PySide2.QtCore.Signal
+
         MarkerShapeDefault       : QtCharts.QLegend.MarkerShape = ... # 0x0
         MarkerShapeRectangle     : QtCharts.QLegend.MarkerShape = ... # 0x1
         MarkerShapeCircle        : QtCharts.QLegend.MarkerShape = ... # 0x2
@@ -863,6 +1081,17 @@ class QtCharts(Shiboken.Object):
         def showToolTips(self) -> bool: ...
 
     class QLegendMarker(PySide2.QtCore.QObject):
+
+        brushChanged: PySide2.QtCore.Signal
+        clicked: PySide2.QtCore.Signal
+        fontChanged: PySide2.QtCore.Signal
+        hovered: PySide2.QtCore.Signal
+        labelBrushChanged: PySide2.QtCore.Signal
+        labelChanged: PySide2.QtCore.Signal
+        penChanged: PySide2.QtCore.Signal
+        shapeChanged: PySide2.QtCore.Signal
+        visibleChanged: PySide2.QtCore.Signal
+
         LegendMarkerTypeArea     : QtCharts.QLegendMarker.LegendMarkerType = ... # 0x0
         LegendMarkerTypeBar      : QtCharts.QLegendMarker.LegendMarkerType = ... # 0x1
         LegendMarkerTypePie      : QtCharts.QLegendMarker.LegendMarkerType = ... # 0x2
@@ -901,6 +1130,15 @@ class QtCharts(Shiboken.Object):
         def type(self) -> PySide2.QtCharts.QtCharts.QAbstractSeries.SeriesType: ...
 
     class QLogValueAxis(PySide2.QtCharts.QAbstractAxis):
+
+        baseChanged: PySide2.QtCore.Signal
+        labelFormatChanged: PySide2.QtCore.Signal
+        maxChanged: PySide2.QtCore.Signal
+        minChanged: PySide2.QtCore.Signal
+        minorTickCountChanged: PySide2.QtCore.Signal
+        rangeChanged: PySide2.QtCore.Signal
+        tickCountChanged: PySide2.QtCore.Signal
+
 
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
@@ -962,6 +1200,17 @@ class QtCharts(Shiboken.Object):
 
     class QPieSeries(PySide2.QtCharts.QAbstractSeries):
 
+        added: PySide2.QtCore.Signal
+        clicked: PySide2.QtCore.Signal
+        countChanged: PySide2.QtCore.Signal
+        doubleClicked: PySide2.QtCore.Signal
+        hovered: PySide2.QtCore.Signal
+        pressed: PySide2.QtCore.Signal
+        released: PySide2.QtCore.Signal
+        removed: PySide2.QtCore.Signal
+        sumChanged: PySide2.QtCore.Signal
+
+
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
         def __lshift__(self, slice:PySide2.QtCharts.QtCharts.QPieSlice) -> PySide2.QtCharts.QtCharts.QPieSeries: ...
@@ -996,6 +1245,27 @@ class QtCharts(Shiboken.Object):
         def verticalPosition(self) -> float: ...
 
     class QPieSlice(PySide2.QtCore.QObject):
+
+        angleSpanChanged: PySide2.QtCore.Signal
+        borderColorChanged: PySide2.QtCore.Signal
+        borderWidthChanged: PySide2.QtCore.Signal
+        brushChanged: PySide2.QtCore.Signal
+        clicked: PySide2.QtCore.Signal
+        colorChanged: PySide2.QtCore.Signal
+        doubleClicked: PySide2.QtCore.Signal
+        hovered: PySide2.QtCore.Signal
+        labelBrushChanged: PySide2.QtCore.Signal
+        labelChanged: PySide2.QtCore.Signal
+        labelColorChanged: PySide2.QtCore.Signal
+        labelFontChanged: PySide2.QtCore.Signal
+        labelVisibleChanged: PySide2.QtCore.Signal
+        penChanged: PySide2.QtCore.Signal
+        percentageChanged: PySide2.QtCore.Signal
+        pressed: PySide2.QtCore.Signal
+        released: PySide2.QtCore.Signal
+        startAngleChanged: PySide2.QtCore.Signal
+        valueChanged: PySide2.QtCore.Signal
+
         LabelOutside             : QtCharts.QPieSlice.LabelPosition = ... # 0x0
         LabelInsideHorizontal    : QtCharts.QPieSlice.LabelPosition = ... # 0x1
         LabelInsideTangential    : QtCharts.QPieSlice.LabelPosition = ... # 0x2
@@ -1067,6 +1337,12 @@ class QtCharts(Shiboken.Object):
         def axisPolarOrientation(axis:PySide2.QtCharts.QtCharts.QAbstractAxis) -> PySide2.QtCharts.QtCharts.QPolarChart.PolarOrientation: ...
 
     class QScatterSeries(PySide2.QtCharts.QXYSeries):
+
+        borderColorChanged: PySide2.QtCore.Signal
+        colorChanged: PySide2.QtCore.Signal
+        markerShapeChanged: PySide2.QtCore.Signal
+        markerSizeChanged: PySide2.QtCore.Signal
+
         MarkerShapeCircle        : QtCharts.QScatterSeries.MarkerShape = ... # 0x0
         MarkerShapeRectangle     : QtCharts.QScatterSeries.MarkerShape = ... # 0x1
 
@@ -1103,6 +1379,14 @@ class QtCharts(Shiboken.Object):
 
     class QVBarModelMapper(PySide2.QtCharts.QBarModelMapper):
 
+        firstBarSetColumnChanged: PySide2.QtCore.Signal
+        firstRowChanged: PySide2.QtCore.Signal
+        lastBarSetColumnChanged: PySide2.QtCore.Signal
+        modelReplaced: PySide2.QtCore.Signal
+        rowCountChanged: PySide2.QtCore.Signal
+        seriesReplaced: PySide2.QtCore.Signal
+
+
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
         def firstBarSetColumn(self) -> int: ...
@@ -1120,6 +1404,14 @@ class QtCharts(Shiboken.Object):
 
     class QVBoxPlotModelMapper(PySide2.QtCharts.QBoxPlotModelMapper):
 
+        firstBoxSetColumnChanged: PySide2.QtCore.Signal
+        firstRowChanged: PySide2.QtCore.Signal
+        lastBoxSetColumnChanged: PySide2.QtCore.Signal
+        modelReplaced: PySide2.QtCore.Signal
+        rowCountChanged: PySide2.QtCore.Signal
+        seriesReplaced: PySide2.QtCore.Signal
+
+
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
         def firstBoxSetColumn(self) -> int: ...
@@ -1136,6 +1428,15 @@ class QtCharts(Shiboken.Object):
         def setSeries(self, series:PySide2.QtCharts.QtCharts.QBoxPlotSeries) -> None: ...
 
     class QVCandlestickModelMapper(PySide2.QtCharts.QCandlestickModelMapper):
+
+        closeRowChanged: PySide2.QtCore.Signal
+        firstSetColumnChanged: PySide2.QtCore.Signal
+        highRowChanged: PySide2.QtCore.Signal
+        lastSetColumnChanged: PySide2.QtCore.Signal
+        lowRowChanged: PySide2.QtCore.Signal
+        openRowChanged: PySide2.QtCore.Signal
+        timestampRowChanged: PySide2.QtCore.Signal
+
 
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
@@ -1157,6 +1458,14 @@ class QtCharts(Shiboken.Object):
 
     class QVPieModelMapper(PySide2.QtCharts.QPieModelMapper):
 
+        firstRowChanged: PySide2.QtCore.Signal
+        labelsColumnChanged: PySide2.QtCore.Signal
+        modelReplaced: PySide2.QtCore.Signal
+        rowCountChanged: PySide2.QtCore.Signal
+        seriesReplaced: PySide2.QtCore.Signal
+        valuesColumnChanged: PySide2.QtCore.Signal
+
+
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
         def firstRow(self) -> int: ...
@@ -1174,6 +1483,14 @@ class QtCharts(Shiboken.Object):
 
     class QVXYModelMapper(PySide2.QtCharts.QXYModelMapper):
 
+        firstRowChanged: PySide2.QtCore.Signal
+        modelReplaced: PySide2.QtCore.Signal
+        rowCountChanged: PySide2.QtCore.Signal
+        seriesReplaced: PySide2.QtCore.Signal
+        xColumnChanged: PySide2.QtCore.Signal
+        yColumnChanged: PySide2.QtCore.Signal
+
+
         def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
         def firstRow(self) -> int: ...
@@ -1190,6 +1507,17 @@ class QtCharts(Shiboken.Object):
         def yColumn(self) -> int: ...
 
     class QValueAxis(PySide2.QtCharts.QAbstractAxis):
+
+        labelFormatChanged: PySide2.QtCore.Signal
+        maxChanged: PySide2.QtCore.Signal
+        minChanged: PySide2.QtCore.Signal
+        minorTickCountChanged: PySide2.QtCore.Signal
+        rangeChanged: PySide2.QtCore.Signal
+        tickAnchorChanged: PySide2.QtCore.Signal
+        tickCountChanged: PySide2.QtCore.Signal
+        tickIntervalChanged: PySide2.QtCore.Signal
+        tickTypeChanged: PySide2.QtCore.Signal
+
         TicksDynamic             : QtCharts.QValueAxis.TickType = ... # 0x0
         TicksFixed               : QtCharts.QValueAxis.TickType = ... # 0x1
 
@@ -1255,6 +1583,25 @@ class QtCharts(Shiboken.Object):
         def ySection(self) -> int: ...
 
     class QXYSeries(PySide2.QtCharts.QAbstractSeries):
+
+        clicked: PySide2.QtCore.Signal
+        colorChanged: PySide2.QtCore.Signal
+        doubleClicked: PySide2.QtCore.Signal
+        hovered: PySide2.QtCore.Signal
+        penChanged: PySide2.QtCore.Signal
+        pointAdded: PySide2.QtCore.Signal
+        pointLabelsClippingChanged: PySide2.QtCore.Signal
+        pointLabelsColorChanged: PySide2.QtCore.Signal
+        pointLabelsFontChanged: PySide2.QtCore.Signal
+        pointLabelsFormatChanged: PySide2.QtCore.Signal
+        pointLabelsVisibilityChanged: PySide2.QtCore.Signal
+        pointRemoved: PySide2.QtCore.Signal
+        pointReplaced: PySide2.QtCore.Signal
+        pointsRemoved: PySide2.QtCore.Signal
+        pointsReplaced: PySide2.QtCore.Signal
+        pressed: PySide2.QtCore.Signal
+        released: PySide2.QtCore.Signal
+
         @typing.overload
         def __lshift__(self, point:PySide2.QtCore.QPointF) -> PySide2.QtCharts.QtCharts.QXYSeries: ...
         @typing.overload

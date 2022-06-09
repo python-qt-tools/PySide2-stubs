@@ -61,6 +61,9 @@ class ListProperty(PySide2.QtCore.Property):
 
 
 class QJSEngine(PySide2.QtCore.QObject):
+
+    uiLanguageChanged: PySide2.QtCore.Signal
+
     AllExtensions            : QJSEngine.Extension = ... # -0x1
     TranslationExtension     : QJSEngine.Extension = ... # 0x1
     ConsoleExtension         : QJSEngine.Extension = ... # 0x2
@@ -220,6 +223,9 @@ class QQmlAbstractUrlInterceptor(Shiboken.Object):
 
 class QQmlApplicationEngine(PySide2.QtQml.QQmlEngine):
 
+    objectCreated: PySide2.QtCore.Signal
+
+
     @typing.overload
     def __init__(self, filePath:str, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
     @typing.overload
@@ -237,6 +243,10 @@ class QQmlApplicationEngine(PySide2.QtQml.QQmlEngine):
 
 
 class QQmlComponent(PySide2.QtCore.QObject):
+
+    progressChanged: PySide2.QtCore.Signal
+    statusChanged: PySide2.QtCore.Signal
+
     Null                     : QQmlComponent.Status = ... # 0x0
     PreferSynchronous        : QQmlComponent.CompilationMode = ... # 0x0
     Asynchronous             : QQmlComponent.CompilationMode = ... # 0x1
@@ -345,6 +355,11 @@ class QQmlDebuggingEnabler(Shiboken.Object):
 
 
 class QQmlEngine(PySide2.QtQml.QJSEngine):
+
+    exit: PySide2.QtCore.Signal
+    quit: PySide2.QtCore.Signal
+    warnings: PySide2.QtCore.Signal
+
     CppOwnership             : QQmlEngine.ObjectOwnership = ... # 0x0
     JavaScriptOwnership      : QQmlEngine.ObjectOwnership = ... # 0x1
 
@@ -420,6 +435,9 @@ class QQmlError(Shiboken.Object):
 
 
 class QQmlExpression(PySide2.QtCore.QObject):
+
+    valueChanged: PySide2.QtCore.Signal
+
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -739,6 +757,9 @@ class QQmlProperty(Shiboken.Object):
 
 
 class QQmlPropertyMap(PySide2.QtCore.QObject):
+
+    valueChanged: PySide2.QtCore.Signal
+
 
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 

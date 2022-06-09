@@ -58,6 +58,10 @@ import PySide2.QtQuickWidgets
 
 
 class QQuickWidget(PySide2.QtWidgets.QWidget):
+
+    sceneGraphError: PySide2.QtCore.Signal
+    statusChanged: PySide2.QtCore.Signal
+
     Null                     : QQuickWidget.Status = ... # 0x0
     SizeViewToRootObject     : QQuickWidget.ResizeMode = ... # 0x0
     Ready                    : QQuickWidget.Status = ... # 0x1

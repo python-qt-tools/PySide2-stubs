@@ -64,6 +64,10 @@ class QQuickAsyncImageProvider(PySide2.QtQuick.QQuickImageProvider):
 
 class QQuickFramebufferObject(PySide2.QtQuick.QQuickItem):
 
+    mirrorVerticallyChanged: PySide2.QtCore.Signal
+    textureFollowsItemSizeChanged: PySide2.QtCore.Signal
+
+
     class Renderer(Shiboken.Object):
 
         def __init__(self) -> None: ...
@@ -102,6 +106,9 @@ class QQuickImageProvider(PySide2.QtQml.QQmlImageProviderBase):
 
 class QQuickImageResponse(PySide2.QtCore.QObject):
 
+    finished: PySide2.QtCore.Signal
+
+
     def __init__(self) -> None: ...
 
     def cancel(self) -> None: ...
@@ -110,6 +117,35 @@ class QQuickImageResponse(PySide2.QtCore.QObject):
 
 
 class QQuickItem(PySide2.QtCore.QObject, PySide2.QtQml.QQmlParserStatus):
+
+    activeFocusChanged: PySide2.QtCore.Signal
+    activeFocusOnTabChanged: PySide2.QtCore.Signal
+    antialiasingChanged: PySide2.QtCore.Signal
+    baselineOffsetChanged: PySide2.QtCore.Signal
+    childrenChanged: PySide2.QtCore.Signal
+    childrenRectChanged: PySide2.QtCore.Signal
+    clipChanged: PySide2.QtCore.Signal
+    containmentMaskChanged: PySide2.QtCore.Signal
+    enabledChanged: PySide2.QtCore.Signal
+    focusChanged: PySide2.QtCore.Signal
+    heightChanged: PySide2.QtCore.Signal
+    implicitHeightChanged: PySide2.QtCore.Signal
+    implicitWidthChanged: PySide2.QtCore.Signal
+    opacityChanged: PySide2.QtCore.Signal
+    parentChanged: PySide2.QtCore.Signal
+    rotationChanged: PySide2.QtCore.Signal
+    scaleChanged: PySide2.QtCore.Signal
+    smoothChanged: PySide2.QtCore.Signal
+    stateChanged: PySide2.QtCore.Signal
+    transformOriginChanged: PySide2.QtCore.Signal
+    visibleChanged: PySide2.QtCore.Signal
+    visibleChildrenChanged: PySide2.QtCore.Signal
+    widthChanged: PySide2.QtCore.Signal
+    windowChanged: PySide2.QtCore.Signal
+    xChanged: PySide2.QtCore.Signal
+    yChanged: PySide2.QtCore.Signal
+    zChanged: PySide2.QtCore.Signal
+
     ItemChildAddedChange     : QQuickItem.ItemChange = ... # 0x0
     TopLeft                  : QQuickItem.TransformOrigin = ... # 0x0
     ItemChildRemovedChange   : QQuickItem.ItemChange = ... # 0x1
@@ -329,6 +365,9 @@ class QQuickItem(PySide2.QtCore.QObject, PySide2.QtQml.QQmlParserStatus):
 
 
 class QQuickItemGrabResult(PySide2.QtCore.QObject):
+
+    ready: PySide2.QtCore.Signal
+
     def event(self, arg__1:PySide2.QtCore.QEvent) -> bool: ...
     def image(self) -> PySide2.QtGui.QImage: ...
     def saveToFile(self, fileName:str) -> bool: ...
@@ -336,6 +375,13 @@ class QQuickItemGrabResult(PySide2.QtCore.QObject):
 
 
 class QQuickPaintedItem(PySide2.QtQuick.QQuickItem):
+
+    contentsScaleChanged: PySide2.QtCore.Signal
+    contentsSizeChanged: PySide2.QtCore.Signal
+    fillColorChanged: PySide2.QtCore.Signal
+    renderTargetChanged: PySide2.QtCore.Signal
+    textureSizeChanged: PySide2.QtCore.Signal
+
     Image                    : QQuickPaintedItem.RenderTarget = ... # 0x0
     FastFBOResizing          : QQuickPaintedItem.PerformanceHint = ... # 0x1
     FramebufferObject        : QQuickPaintedItem.RenderTarget = ... # 0x1
@@ -387,6 +433,10 @@ class QQuickPaintedItem(PySide2.QtQuick.QQuickItem):
 
 class QQuickRenderControl(PySide2.QtCore.QObject):
 
+    renderRequested: PySide2.QtCore.Signal
+    sceneChanged: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def grab(self) -> PySide2.QtGui.QImage: ...
@@ -431,6 +481,9 @@ class QQuickTransform(PySide2.QtCore.QObject):
 
 
 class QQuickView(PySide2.QtQuick.QQuickWindow):
+
+    statusChanged: PySide2.QtCore.Signal
+
     Null                     : QQuickView.Status = ... # 0x0
     SizeViewToRootObject     : QQuickView.ResizeMode = ... # 0x0
     Ready                    : QQuickView.Status = ... # 0x1
@@ -480,6 +533,24 @@ class QQuickView(PySide2.QtQuick.QQuickWindow):
 
 
 class QQuickWindow(PySide2.QtGui.QWindow):
+
+    activeFocusItemChanged: PySide2.QtCore.Signal
+    afterAnimating: PySide2.QtCore.Signal
+    afterRenderPassRecording: PySide2.QtCore.Signal
+    afterRendering: PySide2.QtCore.Signal
+    afterSynchronizing: PySide2.QtCore.Signal
+    beforeRenderPassRecording: PySide2.QtCore.Signal
+    beforeRendering: PySide2.QtCore.Signal
+    beforeSynchronizing: PySide2.QtCore.Signal
+    closing: PySide2.QtCore.Signal
+    colorChanged: PySide2.QtCore.Signal
+    frameSwapped: PySide2.QtCore.Signal
+    openglContextCreated: PySide2.QtCore.Signal
+    sceneGraphAboutToStop: PySide2.QtCore.Signal
+    sceneGraphError: PySide2.QtCore.Signal
+    sceneGraphInitialized: PySide2.QtCore.Signal
+    sceneGraphInvalidated: PySide2.QtCore.Signal
+
     BeforeSynchronizingStage : QQuickWindow.RenderStage = ... # 0x0
     NativeObjectTexture      : QQuickWindow.NativeObjectType = ... # 0x0
     QtTextRendering          : QQuickWindow.TextRenderType = ... # 0x0
@@ -596,6 +667,9 @@ class QQuickWindow(PySide2.QtGui.QWindow):
 
 
 class QSGAbstractRenderer(PySide2.QtCore.QObject):
+
+    sceneGraphChanged: PySide2.QtCore.Signal
+
     ClearColorBuffer         : QSGAbstractRenderer.ClearModeBit = ... # 0x1
     MatrixTransformFlipY     : QSGAbstractRenderer.MatrixTransformFlag = ... # 0x1
     ClearDepthBuffer         : QSGAbstractRenderer.ClearModeBit = ... # 0x2
@@ -1077,6 +1151,9 @@ class QSGTexture(PySide2.QtCore.QObject):
 
 
 class QSGTextureProvider(PySide2.QtCore.QObject):
+
+    textureChanged: PySide2.QtCore.Signal
+
 
     def __init__(self) -> None: ...
 

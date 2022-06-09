@@ -169,6 +169,14 @@ class QWinTaskbarButton(PySide2.QtCore.QObject):
 
 class QWinTaskbarProgress(PySide2.QtCore.QObject):
 
+    maximumChanged: PySide2.QtCore.Signal
+    minimumChanged: PySide2.QtCore.Signal
+    pausedChanged: PySide2.QtCore.Signal
+    stoppedChanged: PySide2.QtCore.Signal
+    valueChanged: PySide2.QtCore.Signal
+    visibilityChanged: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def hide(self) -> None: ...
@@ -193,6 +201,10 @@ class QWinTaskbarProgress(PySide2.QtCore.QObject):
 
 class QWinThumbnailToolBar(PySide2.QtCore.QObject):
 
+    iconicLivePreviewPixmapRequested: PySide2.QtCore.Signal
+    iconicThumbnailPixmapRequested: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def addButton(self, button:PySide2.QtWinExtras.QWinThumbnailToolButton) -> None: ...
@@ -212,6 +224,10 @@ class QWinThumbnailToolBar(PySide2.QtCore.QObject):
 
 
 class QWinThumbnailToolButton(PySide2.QtCore.QObject):
+
+    changed: PySide2.QtCore.Signal
+    clicked: PySide2.QtCore.Signal
+
 
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 

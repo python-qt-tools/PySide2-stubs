@@ -68,6 +68,9 @@ class QCameraViewfinder(PySide2.QtMultimediaWidgets.QVideoWidget):
 
 class QGraphicsVideoItem(PySide2.QtWidgets.QGraphicsObject, PySide2.QtMultimedia.QMediaBindableInterface):
 
+    nativeSizeChanged: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtWidgets.QGraphicsItem]=...) -> None: ...
 
     def aspectRatioMode(self) -> PySide2.QtCore.Qt.AspectRatioMode: ...
@@ -87,6 +90,13 @@ class QGraphicsVideoItem(PySide2.QtWidgets.QGraphicsObject, PySide2.QtMultimedia
 
 
 class QVideoWidget(PySide2.QtWidgets.QWidget, PySide2.QtMultimedia.QMediaBindableInterface):
+
+    brightnessChanged: PySide2.QtCore.Signal
+    contrastChanged: PySide2.QtCore.Signal
+    fullScreenChanged: PySide2.QtCore.Signal
+    hueChanged: PySide2.QtCore.Signal
+    saturationChanged: PySide2.QtCore.Signal
+
 
     def __init__(self, parent:typing.Optional[PySide2.QtWidgets.QWidget]=...) -> None: ...
 
@@ -116,6 +126,13 @@ class QVideoWidget(PySide2.QtWidgets.QWidget, PySide2.QtMultimedia.QMediaBindabl
 
 
 class QVideoWidgetControl(PySide2.QtMultimedia.QMediaControl):
+
+    brightnessChanged: PySide2.QtCore.Signal
+    contrastChanged: PySide2.QtCore.Signal
+    fullScreenChanged: PySide2.QtCore.Signal
+    hueChanged: PySide2.QtCore.Signal
+    saturationChanged: PySide2.QtCore.Signal
+
 
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 

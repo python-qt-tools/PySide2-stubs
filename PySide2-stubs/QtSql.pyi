@@ -170,6 +170,9 @@ class QSqlDatabase(Shiboken.Object):
 
 
 class QSqlDriver(PySide2.QtCore.QObject):
+
+    notification: PySide2.QtCore.Signal
+
     FieldName                : QSqlDriver.IdentifierType = ... # 0x0
     Transactions             : QSqlDriver.DriverFeature = ... # 0x0
     UnknownDbms              : QSqlDriver.DbmsType = ... # 0x0
@@ -679,6 +682,12 @@ class QSqlResult(Shiboken.Object):
 
 
 class QSqlTableModel(PySide2.QtSql.QSqlQueryModel):
+
+    beforeDelete: PySide2.QtCore.Signal
+    beforeInsert: PySide2.QtCore.Signal
+    beforeUpdate: PySide2.QtCore.Signal
+    primeInsert: PySide2.QtCore.Signal
+
     OnFieldChange            : QSqlTableModel.EditStrategy = ... # 0x0
     OnRowChange              : QSqlTableModel.EditStrategy = ... # 0x1
     OnManualSubmit           : QSqlTableModel.EditStrategy = ... # 0x2

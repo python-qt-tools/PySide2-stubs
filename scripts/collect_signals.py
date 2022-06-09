@@ -39,9 +39,8 @@ def collect_class_signals_for_class(class_fqn: str, class_type: Type, d: Dict[st
 
         # tricky way to find an instance of Shiboken.EnumType
         if isinstance(class_attr_value, Signal):
-            attr_fqn = f'{class_fqn}.{class_attr_name}'
-            d[attr_fqn] = 'Signal'
-            # print(attr_fqn, 'Signal')
+            d[class_fqn] = d.get(class_fqn, list())
+            d[class_fqn].append(class_attr_name)
         else:
             collect_class_signals_for_class(f'{class_fqn}.{class_attr_name}', class_attr_value, d)
 

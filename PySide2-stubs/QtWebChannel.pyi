@@ -55,6 +55,9 @@ import PySide2.QtWebChannel
 
 class QWebChannel(PySide2.QtCore.QObject):
 
+    blockUpdatesChanged: PySide2.QtCore.Signal
+
+
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
     def blockUpdates(self) -> bool: ...
@@ -68,6 +71,9 @@ class QWebChannel(PySide2.QtCore.QObject):
 
 
 class QWebChannelAbstractTransport(PySide2.QtCore.QObject):
+
+    messageReceived: PySide2.QtCore.Signal
+
 
     def __init__(self, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 

@@ -55,6 +55,11 @@ import PySide2.QtLocation
 
 
 class QGeoCodeReply(PySide2.QtCore.QObject):
+
+    aborted: PySide2.QtCore.Signal
+    error: PySide2.QtCore.Signal
+    finished: PySide2.QtCore.Signal
+
     NoError                  : QGeoCodeReply.Error = ... # 0x0
     EngineNotSetError        : QGeoCodeReply.Error = ... # 0x1
     CommunicationError       : QGeoCodeReply.Error = ... # 0x2
@@ -95,6 +100,10 @@ class QGeoCodeReply(PySide2.QtCore.QObject):
 
 
 class QGeoCodingManager(PySide2.QtCore.QObject):
+
+    error: PySide2.QtCore.Signal
+    finished: PySide2.QtCore.Signal
+
     @typing.overload
     def geocode(self, address:PySide2.QtPositioning.QGeoAddress, bounds:PySide2.QtPositioning.QGeoShape=...) -> PySide2.QtLocation.QGeoCodeReply: ...
     @typing.overload
@@ -107,6 +116,10 @@ class QGeoCodingManager(PySide2.QtCore.QObject):
 
 
 class QGeoCodingManagerEngine(PySide2.QtCore.QObject):
+
+    error: PySide2.QtCore.Signal
+    finished: PySide2.QtCore.Signal
+
 
     def __init__(self, parameters:typing.Dict, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
@@ -203,6 +216,11 @@ class QGeoRoute(Shiboken.Object):
 
 
 class QGeoRouteReply(PySide2.QtCore.QObject):
+
+    aborted: PySide2.QtCore.Signal
+    error: PySide2.QtCore.Signal
+    finished: PySide2.QtCore.Signal
+
     NoError                  : QGeoRouteReply.Error = ... # 0x0
     EngineNotSetError        : QGeoRouteReply.Error = ... # 0x1
     CommunicationError       : QGeoRouteReply.Error = ... # 0x2
@@ -373,6 +391,10 @@ class QGeoRouteSegment(Shiboken.Object):
 
 
 class QGeoRoutingManager(PySide2.QtCore.QObject):
+
+    error: PySide2.QtCore.Signal
+    finished: PySide2.QtCore.Signal
+
     def calculateRoute(self, request:PySide2.QtLocation.QGeoRouteRequest) -> PySide2.QtLocation.QGeoRouteReply: ...
     def locale(self) -> PySide2.QtCore.QLocale: ...
     def managerName(self) -> str: ...
@@ -390,6 +412,10 @@ class QGeoRoutingManager(PySide2.QtCore.QObject):
 
 
 class QGeoRoutingManagerEngine(PySide2.QtCore.QObject):
+
+    error: PySide2.QtCore.Signal
+    finished: PySide2.QtCore.Signal
+
 
     def __init__(self, parameters:typing.Dict, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
@@ -809,6 +835,17 @@ class QPlaceImage(PySide2.QtLocation.QPlaceContent):
 
 
 class QPlaceManager(PySide2.QtCore.QObject):
+
+    categoryAdded: PySide2.QtCore.Signal
+    categoryRemoved: PySide2.QtCore.Signal
+    categoryUpdated: PySide2.QtCore.Signal
+    dataChanged: PySide2.QtCore.Signal
+    error: PySide2.QtCore.Signal
+    finished: PySide2.QtCore.Signal
+    placeAdded: PySide2.QtCore.Signal
+    placeRemoved: PySide2.QtCore.Signal
+    placeUpdated: PySide2.QtCore.Signal
+
     def category(self, categoryId:str) -> PySide2.QtLocation.QPlaceCategory: ...
     def childCategories(self, parentId:str=...) -> typing.List: ...
     def childCategoryIds(self, parentId:str=...) -> typing.List: ...
@@ -832,6 +869,17 @@ class QPlaceManager(PySide2.QtCore.QObject):
 
 
 class QPlaceManagerEngine(PySide2.QtCore.QObject):
+
+    categoryAdded: PySide2.QtCore.Signal
+    categoryRemoved: PySide2.QtCore.Signal
+    categoryUpdated: PySide2.QtCore.Signal
+    dataChanged: PySide2.QtCore.Signal
+    error: PySide2.QtCore.Signal
+    finished: PySide2.QtCore.Signal
+    placeAdded: PySide2.QtCore.Signal
+    placeRemoved: PySide2.QtCore.Signal
+    placeUpdated: PySide2.QtCore.Signal
+
 
     def __init__(self, parameters:typing.Dict, parent:typing.Optional[PySide2.QtCore.QObject]=...) -> None: ...
 
@@ -916,6 +964,12 @@ class QPlaceRatings(Shiboken.Object):
 
 
 class QPlaceReply(PySide2.QtCore.QObject):
+
+    aborted: PySide2.QtCore.Signal
+    contentUpdated: PySide2.QtCore.Signal
+    error: PySide2.QtCore.Signal
+    finished: PySide2.QtCore.Signal
+
     NoError                  : QPlaceReply.Error = ... # 0x0
     Reply                    : QPlaceReply.Type = ... # 0x0
     DetailsReply             : QPlaceReply.Type = ... # 0x1
