@@ -245,3 +245,4 @@ def test_on_multi_flag_class() -> None:
 	pytest.raises(TypeError, f3)
 	pytest.raises(TypeError, f4)
 
+
