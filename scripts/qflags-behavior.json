@@ -1,0 +1,3472 @@
+{
+    "Qt3DCore.Qt3DCore.ChangeFlag.ChangeFlag": [
+        "OneFlag",
+        "ChangeFlag",
+        "ChangeFlags"
+    ],
+    "Qt3DCore.Qt3DCore.ChangeFlag.ChangeFlags": [
+        "MultiFlag",
+        "ChangeFlag",
+        "ChangeFlags"
+    ],
+    "Qt3DCore.Qt3DCore.ChangeFlag": [
+        "OneFlag",
+        "ChangeFlag",
+        "ChangeFlags"
+    ],
+    "Qt3DCore.Qt3DCore.ChangeFlags": [
+        "MultiFlag",
+        "ChangeFlag",
+        "ChangeFlags"
+    ],
+    "Qt3DCore.Qt3DCore.QSceneChange.DeliveryFlag.DeliveryFlag": [
+        "OneFlag",
+        "DeliveryFlag",
+        "DeliveryFlags"
+    ],
+    "Qt3DCore.Qt3DCore.QSceneChange.DeliveryFlag.DeliveryFlags": [
+        "MultiFlag",
+        "DeliveryFlag",
+        "DeliveryFlags"
+    ],
+    "Qt3DCore.Qt3DCore.QSceneChange.DeliveryFlag": [
+        "OneFlag",
+        "DeliveryFlag",
+        "DeliveryFlags"
+    ],
+    "Qt3DCore.Qt3DCore.QSceneChange.DeliveryFlags": [
+        "MultiFlag",
+        "DeliveryFlag",
+        "DeliveryFlags"
+    ],
+    "Qt3DRender.Qt3DRender.QClearBuffers.BufferType.BufferType": [
+        "OneFlag",
+        "BufferType",
+        "BufferTypeFlags"
+    ],
+    "Qt3DRender.Qt3DRender.QClearBuffers.BufferType.BufferTypeFlags": [
+        "MultiFlag",
+        "BufferType",
+        "BufferTypeFlags"
+    ],
+    "Qt3DRender.Qt3DRender.QClearBuffers.BufferType": [
+        "OneFlag",
+        "BufferType",
+        "BufferTypeFlags"
+    ],
+    "Qt3DRender.Qt3DRender.QClearBuffers.BufferTypeFlags": [
+        "MultiFlag",
+        "BufferType",
+        "BufferTypeFlags"
+    ],
+    "Qt3DRender.Qt3DRender.QMemoryBarrier.Operation.Operation": [
+        "OneFlag",
+        "Operation",
+        "Operations"
+    ],
+    "Qt3DRender.Qt3DRender.QMemoryBarrier.Operation.Operations": [
+        "MultiFlag",
+        "Operation",
+        "Operations"
+    ],
+    "Qt3DRender.Qt3DRender.QMemoryBarrier.Operation": [
+        "OneFlag",
+        "Operation",
+        "Operations"
+    ],
+    "Qt3DRender.Qt3DRender.QMemoryBarrier.Operations": [
+        "MultiFlag",
+        "Operation",
+        "Operations"
+    ],
+    "QtCharts.QtCharts.QChartView.RubberBand.RubberBand": [
+        "OneFlag",
+        "RubberBand",
+        "RubberBands"
+    ],
+    "QtCharts.QtCharts.QChartView.RubberBand.RubberBands": [
+        "MultiFlag",
+        "RubberBand",
+        "RubberBands"
+    ],
+    "QtCharts.QtCharts.QChartView.RubberBand": [
+        "OneFlag",
+        "RubberBand",
+        "RubberBands"
+    ],
+    "QtCharts.QtCharts.QChartView.RubberBands": [
+        "MultiFlag",
+        "RubberBand",
+        "RubberBands"
+    ],
+    "QtCharts.QtCharts.QChart.AnimationOption.AnimationOption": [
+        "OneFlag",
+        "AnimationOption",
+        "AnimationOptions"
+    ],
+    "QtCharts.QtCharts.QChart.AnimationOption.AnimationOptions": [
+        "MultiFlag",
+        "AnimationOption",
+        "AnimationOptions"
+    ],
+    "QtCharts.QtCharts.QChart.AnimationOption": [
+        "OneFlag",
+        "AnimationOption",
+        "AnimationOptions"
+    ],
+    "QtCharts.QtCharts.QChart.AnimationOptions": [
+        "MultiFlag",
+        "AnimationOption",
+        "AnimationOptions"
+    ],
+    "QtCharts.QtCharts.QPolarChart.PolarOrientation.PolarOrientation": [
+        "OneFlag",
+        "PolarOrientation",
+        "PolarOrientations"
+    ],
+    "QtCharts.QtCharts.QPolarChart.PolarOrientation.PolarOrientations": [
+        "MultiFlag",
+        "PolarOrientation",
+        "PolarOrientations"
+    ],
+    "QtCharts.QtCharts.QPolarChart.PolarOrientation": [
+        "OneFlag",
+        "PolarOrientation",
+        "PolarOrientations"
+    ],
+    "QtCharts.QtCharts.QPolarChart.PolarOrientations": [
+        "MultiFlag",
+        "PolarOrientation",
+        "PolarOrientations"
+    ],
+    "QtConcurrent.QtConcurrent.ReduceOption.ReduceOption": [
+        "OneFlag",
+        "ReduceOption",
+        "ReduceOptions"
+    ],
+    "QtConcurrent.QtConcurrent.ReduceOption.ReduceOptions": [
+        "MultiFlag",
+        "ReduceOption",
+        "ReduceOptions"
+    ],
+    "QtConcurrent.QtConcurrent.ReduceOption": [
+        "OneFlag",
+        "ReduceOption",
+        "ReduceOptions"
+    ],
+    "QtConcurrent.QtConcurrent.ReduceOptions": [
+        "MultiFlag",
+        "ReduceOption",
+        "ReduceOptions"
+    ],
+    "QtCore.Qt.KeyboardModifier.KeyboardModifier": [
+        "OneFlag",
+        "KeyboardModifier",
+        "KeyboardModifiers"
+    ],
+    "QtCore.Qt.KeyboardModifier.KeyboardModifiers": [
+        "MultiFlag",
+        "KeyboardModifier",
+        "KeyboardModifiers"
+    ],
+    "QtCore.Qt.KeyboardModifier": [
+        "OneFlag",
+        "KeyboardModifier",
+        "KeyboardModifiers"
+    ],
+    "QtCore.Qt.KeyboardModifiers": [
+        "MultiFlag",
+        "KeyboardModifier",
+        "KeyboardModifiers"
+    ],
+    "QtCore.Qt.MouseButton.MouseButton": [
+        "OneFlag",
+        "MouseButton",
+        "MouseButtons"
+    ],
+    "QtCore.Qt.MouseButton.MouseButtons": [
+        "MultiFlag",
+        "MouseButton",
+        "MouseButtons"
+    ],
+    "QtCore.Qt.MouseButton": [
+        "OneFlag",
+        "MouseButton",
+        "MouseButtons"
+    ],
+    "QtCore.Qt.MouseButtons": [
+        "MultiFlag",
+        "MouseButton",
+        "MouseButtons"
+    ],
+    "QtCore.Qt.Orientation.Orientation": [
+        "OneFlag",
+        "Orientation",
+        "Orientations"
+    ],
+    "QtCore.Qt.Orientation.Orientations": [
+        "MultiFlag",
+        "Orientation",
+        "Orientations"
+    ],
+    "QtCore.Qt.Orientation": [
+        "OneFlag",
+        "Orientation",
+        "Orientations"
+    ],
+    "QtCore.Qt.Orientations": [
+        "MultiFlag",
+        "Orientation",
+        "Orientations"
+    ],
+    "QtCore.Qt.SplitBehaviorFlags.SplitBehaviorFlags": [
+        "OneFlag",
+        "SplitBehaviorFlags",
+        "SplitBehavior"
+    ],
+    "QtCore.Qt.SplitBehaviorFlags.SplitBehavior": [
+        "MultiFlag",
+        "SplitBehaviorFlags",
+        "SplitBehavior"
+    ],
+    "QtCore.Qt.SplitBehaviorFlags": [
+        "OneFlag",
+        "SplitBehaviorFlags",
+        "SplitBehavior"
+    ],
+    "QtCore.Qt.SplitBehavior": [
+        "MultiFlag",
+        "SplitBehaviorFlags",
+        "SplitBehavior"
+    ],
+    "QtCore.Qt.AlignmentFlag.AlignmentFlag": [
+        "OneFlag",
+        "AlignmentFlag",
+        "Alignment"
+    ],
+    "QtCore.Qt.AlignmentFlag.Alignment": [
+        "MultiFlag",
+        "AlignmentFlag",
+        "Alignment"
+    ],
+    "QtCore.Qt.AlignmentFlag": [
+        "OneFlag",
+        "AlignmentFlag",
+        "Alignment"
+    ],
+    "QtCore.Qt.Alignment": [
+        "MultiFlag",
+        "AlignmentFlag",
+        "Alignment"
+    ],
+    "QtCore.Qt.WindowType.WindowType": [
+        "OneFlag",
+        "WindowType",
+        "WindowFlags"
+    ],
+    "QtCore.Qt.WindowType.WindowFlags": [
+        "MultiFlag",
+        "WindowType",
+        "WindowFlags"
+    ],
+    "QtCore.Qt.WindowType": [
+        "OneFlag",
+        "WindowType",
+        "WindowFlags"
+    ],
+    "QtCore.Qt.WindowFlags": [
+        "MultiFlag",
+        "WindowType",
+        "WindowFlags"
+    ],
+    "QtCore.Qt.WindowState.WindowState": [
+        "OneFlag",
+        "WindowState",
+        "WindowStates"
+    ],
+    "QtCore.Qt.WindowState.WindowStates": [
+        "MultiFlag",
+        "WindowState",
+        "WindowStates"
+    ],
+    "QtCore.Qt.WindowState": [
+        "OneFlag",
+        "WindowState",
+        "WindowStates"
+    ],
+    "QtCore.Qt.WindowStates": [
+        "MultiFlag",
+        "WindowState",
+        "WindowStates"
+    ],
+    "QtCore.Qt.ApplicationState.ApplicationState": [
+        "OneFlag",
+        "ApplicationState",
+        "ApplicationStates"
+    ],
+    "QtCore.Qt.ApplicationState.ApplicationStates": [
+        "MultiFlag",
+        "ApplicationState",
+        "ApplicationStates"
+    ],
+    "QtCore.Qt.ApplicationState": [
+        "OneFlag",
+        "ApplicationState",
+        "ApplicationStates"
+    ],
+    "QtCore.Qt.ApplicationStates": [
+        "MultiFlag",
+        "ApplicationState",
+        "ApplicationStates"
+    ],
+    "QtCore.Qt.ScreenOrientation.ScreenOrientation": [
+        "OneFlag",
+        "ScreenOrientation",
+        "ScreenOrientations"
+    ],
+    "QtCore.Qt.ScreenOrientation.ScreenOrientations": [
+        "MultiFlag",
+        "ScreenOrientation",
+        "ScreenOrientations"
+    ],
+    "QtCore.Qt.ScreenOrientation": [
+        "OneFlag",
+        "ScreenOrientation",
+        "ScreenOrientations"
+    ],
+    "QtCore.Qt.ScreenOrientations": [
+        "MultiFlag",
+        "ScreenOrientation",
+        "ScreenOrientations"
+    ],
+    "QtCore.Qt.ImageConversionFlag.ImageConversionFlag": [
+        "OneFlag",
+        "ImageConversionFlag",
+        "ImageConversionFlags"
+    ],
+    "QtCore.Qt.ImageConversionFlag.ImageConversionFlags": [
+        "MultiFlag",
+        "ImageConversionFlag",
+        "ImageConversionFlags"
+    ],
+    "QtCore.Qt.ImageConversionFlag": [
+        "OneFlag",
+        "ImageConversionFlag",
+        "ImageConversionFlags"
+    ],
+    "QtCore.Qt.ImageConversionFlags": [
+        "MultiFlag",
+        "ImageConversionFlag",
+        "ImageConversionFlags"
+    ],
+    "QtCore.Qt.DockWidgetArea.DockWidgetArea": [
+        "OneFlag",
+        "DockWidgetArea",
+        "DockWidgetAreas"
+    ],
+    "QtCore.Qt.DockWidgetArea.DockWidgetAreas": [
+        "MultiFlag",
+        "DockWidgetArea",
+        "DockWidgetAreas"
+    ],
+    "QtCore.Qt.DockWidgetArea": [
+        "OneFlag",
+        "DockWidgetArea",
+        "DockWidgetAreas"
+    ],
+    "QtCore.Qt.DockWidgetAreas": [
+        "MultiFlag",
+        "DockWidgetArea",
+        "DockWidgetAreas"
+    ],
+    "QtCore.Qt.ToolBarArea.ToolBarArea": [
+        "OneFlag",
+        "ToolBarArea",
+        "ToolBarAreas"
+    ],
+    "QtCore.Qt.ToolBarArea.ToolBarAreas": [
+        "MultiFlag",
+        "ToolBarArea",
+        "ToolBarAreas"
+    ],
+    "QtCore.Qt.ToolBarArea": [
+        "OneFlag",
+        "ToolBarArea",
+        "ToolBarAreas"
+    ],
+    "QtCore.Qt.ToolBarAreas": [
+        "MultiFlag",
+        "ToolBarArea",
+        "ToolBarAreas"
+    ],
+    "QtCore.Qt.Edge.Edge": [
+        "OneFlag",
+        "Edge",
+        "Edges"
+    ],
+    "QtCore.Qt.Edge.Edges": [
+        "MultiFlag",
+        "Edge",
+        "Edges"
+    ],
+    "QtCore.Qt.Edge": [
+        "OneFlag",
+        "Edge",
+        "Edges"
+    ],
+    "QtCore.Qt.Edges": [
+        "MultiFlag",
+        "Edge",
+        "Edges"
+    ],
+    "QtCore.Qt.InputMethodQuery.InputMethodQuery": [
+        "OneFlag",
+        "InputMethodQuery",
+        "InputMethodQueries"
+    ],
+    "QtCore.Qt.InputMethodQuery.InputMethodQueries": [
+        "MultiFlag",
+        "InputMethodQuery",
+        "InputMethodQueries"
+    ],
+    "QtCore.Qt.InputMethodQuery": [
+        "OneFlag",
+        "InputMethodQuery",
+        "InputMethodQueries"
+    ],
+    "QtCore.Qt.InputMethodQueries": [
+        "MultiFlag",
+        "InputMethodQuery",
+        "InputMethodQueries"
+    ],
+    "QtCore.Qt.InputMethodHint.InputMethodHint": [
+        "OneFlag",
+        "InputMethodHint",
+        "InputMethodHints"
+    ],
+    "QtCore.Qt.InputMethodHint.InputMethodHints": [
+        "MultiFlag",
+        "InputMethodHint",
+        "InputMethodHints"
+    ],
+    "QtCore.Qt.InputMethodHint": [
+        "OneFlag",
+        "InputMethodHint",
+        "InputMethodHints"
+    ],
+    "QtCore.Qt.InputMethodHints": [
+        "MultiFlag",
+        "InputMethodHint",
+        "InputMethodHints"
+    ],
+    "QtCore.Qt.FindChildOption.FindChildOption": [
+        "OneFlag",
+        "FindChildOption",
+        "FindChildOptions"
+    ],
+    "QtCore.Qt.FindChildOption.FindChildOptions": [
+        "MultiFlag",
+        "FindChildOption",
+        "FindChildOptions"
+    ],
+    "QtCore.Qt.FindChildOption": [
+        "OneFlag",
+        "FindChildOption",
+        "FindChildOptions"
+    ],
+    "QtCore.Qt.FindChildOptions": [
+        "MultiFlag",
+        "FindChildOption",
+        "FindChildOptions"
+    ],
+    "QtCore.Qt.DropAction.DropAction": [
+        "OneFlag",
+        "DropAction",
+        "DropActions"
+    ],
+    "QtCore.Qt.DropAction.DropActions": [
+        "MultiFlag",
+        "DropAction",
+        "DropActions"
+    ],
+    "QtCore.Qt.DropAction": [
+        "OneFlag",
+        "DropAction",
+        "DropActions"
+    ],
+    "QtCore.Qt.DropActions": [
+        "MultiFlag",
+        "DropAction",
+        "DropActions"
+    ],
+    "QtCore.Qt.ItemFlag.ItemFlag": [
+        "OneFlag",
+        "ItemFlag",
+        "ItemFlags"
+    ],
+    "QtCore.Qt.ItemFlag.ItemFlags": [
+        "MultiFlag",
+        "ItemFlag",
+        "ItemFlags"
+    ],
+    "QtCore.Qt.ItemFlag": [
+        "OneFlag",
+        "ItemFlag",
+        "ItemFlags"
+    ],
+    "QtCore.Qt.ItemFlags": [
+        "MultiFlag",
+        "ItemFlag",
+        "ItemFlags"
+    ],
+    "QtCore.Qt.MatchFlag.MatchFlag": [
+        "OneFlag",
+        "MatchFlag",
+        "MatchFlags"
+    ],
+    "QtCore.Qt.MatchFlag.MatchFlags": [
+        "MultiFlag",
+        "MatchFlag",
+        "MatchFlags"
+    ],
+    "QtCore.Qt.MatchFlag": [
+        "OneFlag",
+        "MatchFlag",
+        "MatchFlags"
+    ],
+    "QtCore.Qt.MatchFlags": [
+        "MultiFlag",
+        "MatchFlag",
+        "MatchFlags"
+    ],
+    "QtCore.Qt.TextInteractionFlag.TextInteractionFlag": [
+        "OneFlag",
+        "TextInteractionFlag",
+        "TextInteractionFlags"
+    ],
+    "QtCore.Qt.TextInteractionFlag.TextInteractionFlags": [
+        "MultiFlag",
+        "TextInteractionFlag",
+        "TextInteractionFlags"
+    ],
+    "QtCore.Qt.TextInteractionFlag": [
+        "OneFlag",
+        "TextInteractionFlag",
+        "TextInteractionFlags"
+    ],
+    "QtCore.Qt.TextInteractionFlags": [
+        "MultiFlag",
+        "TextInteractionFlag",
+        "TextInteractionFlags"
+    ],
+    "QtCore.Qt.TouchPointState.TouchPointState": [
+        "OneFlag",
+        "TouchPointState",
+        "TouchPointStates"
+    ],
+    "QtCore.Qt.TouchPointState.TouchPointStates": [
+        "MultiFlag",
+        "TouchPointState",
+        "TouchPointStates"
+    ],
+    "QtCore.Qt.TouchPointState": [
+        "OneFlag",
+        "TouchPointState",
+        "TouchPointStates"
+    ],
+    "QtCore.Qt.TouchPointStates": [
+        "MultiFlag",
+        "TouchPointState",
+        "TouchPointStates"
+    ],
+    "QtCore.Qt.GestureFlag.GestureFlag": [
+        "OneFlag",
+        "GestureFlag",
+        "GestureFlags"
+    ],
+    "QtCore.Qt.GestureFlag.GestureFlags": [
+        "MultiFlag",
+        "GestureFlag",
+        "GestureFlags"
+    ],
+    "QtCore.Qt.GestureFlag": [
+        "OneFlag",
+        "GestureFlag",
+        "GestureFlags"
+    ],
+    "QtCore.Qt.GestureFlags": [
+        "MultiFlag",
+        "GestureFlag",
+        "GestureFlags"
+    ],
+    "QtCore.Qt.MouseEventFlag.MouseEventFlag": [
+        "OneFlag",
+        "MouseEventFlag",
+        "MouseEventFlags"
+    ],
+    "QtCore.Qt.MouseEventFlag.MouseEventFlags": [
+        "MultiFlag",
+        "MouseEventFlag",
+        "MouseEventFlags"
+    ],
+    "QtCore.Qt.MouseEventFlag": [
+        "OneFlag",
+        "MouseEventFlag",
+        "MouseEventFlags"
+    ],
+    "QtCore.Qt.MouseEventFlags": [
+        "MultiFlag",
+        "MouseEventFlag",
+        "MouseEventFlags"
+    ],
+    "QtCore.QTextStream.NumberFlag.NumberFlag": [
+        "OneFlag",
+        "NumberFlag",
+        "NumberFlags"
+    ],
+    "QtCore.QTextStream.NumberFlag.NumberFlags": [
+        "MultiFlag",
+        "NumberFlag",
+        "NumberFlags"
+    ],
+    "QtCore.QTextStream.NumberFlag": [
+        "OneFlag",
+        "NumberFlag",
+        "NumberFlags"
+    ],
+    "QtCore.QTextStream.NumberFlags": [
+        "MultiFlag",
+        "NumberFlag",
+        "NumberFlags"
+    ],
+    "QtCore.QTextCodec.ConversionFlag.ConversionFlag": [
+        "OneFlag",
+        "ConversionFlag",
+        "ConversionFlags"
+    ],
+    "QtCore.QTextCodec.ConversionFlag.ConversionFlags": [
+        "MultiFlag",
+        "ConversionFlag",
+        "ConversionFlags"
+    ],
+    "QtCore.QTextCodec.ConversionFlag": [
+        "OneFlag",
+        "ConversionFlag",
+        "ConversionFlags"
+    ],
+    "QtCore.QTextCodec.ConversionFlags": [
+        "MultiFlag",
+        "ConversionFlag",
+        "ConversionFlags"
+    ],
+    "QtCore.QTextBoundaryFinder.BoundaryReason.BoundaryReason": [
+        "OneFlag",
+        "BoundaryReason",
+        "BoundaryReasons"
+    ],
+    "QtCore.QTextBoundaryFinder.BoundaryReason.BoundaryReasons": [
+        "MultiFlag",
+        "BoundaryReason",
+        "BoundaryReasons"
+    ],
+    "QtCore.QTextBoundaryFinder.BoundaryReason": [
+        "OneFlag",
+        "BoundaryReason",
+        "BoundaryReasons"
+    ],
+    "QtCore.QTextBoundaryFinder.BoundaryReasons": [
+        "MultiFlag",
+        "BoundaryReason",
+        "BoundaryReasons"
+    ],
+    "QtCore.QStandardPaths.LocateOption.LocateOption": [
+        "OneFlag",
+        "LocateOption",
+        "LocateOptions"
+    ],
+    "QtCore.QStandardPaths.LocateOption.LocateOptions": [
+        "MultiFlag",
+        "LocateOption",
+        "LocateOptions"
+    ],
+    "QtCore.QStandardPaths.LocateOption": [
+        "OneFlag",
+        "LocateOption",
+        "LocateOptions"
+    ],
+    "QtCore.QStandardPaths.LocateOptions": [
+        "MultiFlag",
+        "LocateOption",
+        "LocateOptions"
+    ],
+    "QtCore.QRegularExpression.PatternOption.PatternOption": [
+        "OneFlag",
+        "PatternOption",
+        "PatternOptions"
+    ],
+    "QtCore.QRegularExpression.PatternOption.PatternOptions": [
+        "MultiFlag",
+        "PatternOption",
+        "PatternOptions"
+    ],
+    "QtCore.QRegularExpression.PatternOption": [
+        "OneFlag",
+        "PatternOption",
+        "PatternOptions"
+    ],
+    "QtCore.QRegularExpression.PatternOptions": [
+        "MultiFlag",
+        "PatternOption",
+        "PatternOptions"
+    ],
+    "QtCore.QRegularExpression.MatchOption.MatchOption": [
+        "OneFlag",
+        "MatchOption",
+        "MatchOptions"
+    ],
+    "QtCore.QRegularExpression.MatchOption.MatchOptions": [
+        "MultiFlag",
+        "MatchOption",
+        "MatchOptions"
+    ],
+    "QtCore.QRegularExpression.MatchOption": [
+        "OneFlag",
+        "MatchOption",
+        "MatchOptions"
+    ],
+    "QtCore.QRegularExpression.MatchOptions": [
+        "MultiFlag",
+        "MatchOption",
+        "MatchOptions"
+    ],
+    "QtCore.QLocale.NumberOption.NumberOption": [
+        "OneFlag",
+        "NumberOption",
+        "NumberOptions"
+    ],
+    "QtCore.QLocale.NumberOption.NumberOptions": [
+        "MultiFlag",
+        "NumberOption",
+        "NumberOptions"
+    ],
+    "QtCore.QLocale.NumberOption": [
+        "OneFlag",
+        "NumberOption",
+        "NumberOptions"
+    ],
+    "QtCore.QLocale.NumberOptions": [
+        "MultiFlag",
+        "NumberOption",
+        "NumberOptions"
+    ],
+    "QtCore.QLocale.DataSizeFormat.DataSizeFormat": [
+        "OneFlag",
+        "DataSizeFormat",
+        "DataSizeFormats"
+    ],
+    "QtCore.QLocale.DataSizeFormat.DataSizeFormats": [
+        "MultiFlag",
+        "DataSizeFormat",
+        "DataSizeFormats"
+    ],
+    "QtCore.QLocale.DataSizeFormat": [
+        "OneFlag",
+        "DataSizeFormat",
+        "DataSizeFormats"
+    ],
+    "QtCore.QLocale.DataSizeFormats": [
+        "MultiFlag",
+        "DataSizeFormat",
+        "DataSizeFormats"
+    ],
+    "QtCore.QItemSelectionModel.SelectionFlag.SelectionFlag": [
+        "OneFlag",
+        "SelectionFlag",
+        "SelectionFlags"
+    ],
+    "QtCore.QItemSelectionModel.SelectionFlag.SelectionFlags": [
+        "MultiFlag",
+        "SelectionFlag",
+        "SelectionFlags"
+    ],
+    "QtCore.QItemSelectionModel.SelectionFlag": [
+        "OneFlag",
+        "SelectionFlag",
+        "SelectionFlags"
+    ],
+    "QtCore.QItemSelectionModel.SelectionFlags": [
+        "MultiFlag",
+        "SelectionFlag",
+        "SelectionFlags"
+    ],
+    "QtCore.QIODevice.OpenModeFlag.OpenModeFlag": [
+        "OneFlag",
+        "OpenModeFlag",
+        "OpenMode"
+    ],
+    "QtCore.QIODevice.OpenModeFlag.OpenMode": [
+        "MultiFlag",
+        "OpenModeFlag",
+        "OpenMode"
+    ],
+    "QtCore.QIODevice.OpenModeFlag": [
+        "OneFlag",
+        "OpenModeFlag",
+        "OpenMode"
+    ],
+    "QtCore.QIODevice.OpenMode": [
+        "MultiFlag",
+        "OpenModeFlag",
+        "OpenMode"
+    ],
+    "QtCore.QFileDevice.Permission.Permission": [
+        "OneFlag",
+        "Permission",
+        "Permissions"
+    ],
+    "QtCore.QFileDevice.Permission.Permissions": [
+        "MultiFlag",
+        "Permission",
+        "Permissions"
+    ],
+    "QtCore.QFileDevice.Permission": [
+        "OneFlag",
+        "Permission",
+        "Permissions"
+    ],
+    "QtCore.QFileDevice.Permissions": [
+        "MultiFlag",
+        "Permission",
+        "Permissions"
+    ],
+    "QtCore.QFileDevice.FileHandleFlag.FileHandleFlag": [
+        "OneFlag",
+        "FileHandleFlag",
+        "FileHandleFlags"
+    ],
+    "QtCore.QFileDevice.FileHandleFlag.FileHandleFlags": [
+        "MultiFlag",
+        "FileHandleFlag",
+        "FileHandleFlags"
+    ],
+    "QtCore.QFileDevice.FileHandleFlag": [
+        "OneFlag",
+        "FileHandleFlag",
+        "FileHandleFlags"
+    ],
+    "QtCore.QFileDevice.FileHandleFlags": [
+        "MultiFlag",
+        "FileHandleFlag",
+        "FileHandleFlags"
+    ],
+    "QtCore.QEventLoop.ProcessEventsFlag.ProcessEventsFlag": [
+        "OneFlag",
+        "ProcessEventsFlag",
+        "ProcessEventsFlags"
+    ],
+    "QtCore.QEventLoop.ProcessEventsFlag.ProcessEventsFlags": [
+        "MultiFlag",
+        "ProcessEventsFlag",
+        "ProcessEventsFlags"
+    ],
+    "QtCore.QEventLoop.ProcessEventsFlag": [
+        "OneFlag",
+        "ProcessEventsFlag",
+        "ProcessEventsFlags"
+    ],
+    "QtCore.QEventLoop.ProcessEventsFlags": [
+        "MultiFlag",
+        "ProcessEventsFlag",
+        "ProcessEventsFlags"
+    ],
+    "QtCore.QDirIterator.IteratorFlag.IteratorFlag": [
+        "OneFlag",
+        "IteratorFlag",
+        "IteratorFlags"
+    ],
+    "QtCore.QDirIterator.IteratorFlag.IteratorFlags": [
+        "MultiFlag",
+        "IteratorFlag",
+        "IteratorFlags"
+    ],
+    "QtCore.QDirIterator.IteratorFlag": [
+        "OneFlag",
+        "IteratorFlag",
+        "IteratorFlags"
+    ],
+    "QtCore.QDirIterator.IteratorFlags": [
+        "MultiFlag",
+        "IteratorFlag",
+        "IteratorFlags"
+    ],
+    "QtCore.QDir.Filter.Filter": [
+        "OneFlag",
+        "Filter",
+        "Filters"
+    ],
+    "QtCore.QDir.Filter.Filters": [
+        "MultiFlag",
+        "Filter",
+        "Filters"
+    ],
+    "QtCore.QDir.Filter": [
+        "OneFlag",
+        "Filter",
+        "Filters"
+    ],
+    "QtCore.QDir.Filters": [
+        "MultiFlag",
+        "Filter",
+        "Filters"
+    ],
+    "QtCore.QDir.SortFlag.SortFlag": [
+        "OneFlag",
+        "SortFlag",
+        "SortFlags"
+    ],
+    "QtCore.QDir.SortFlag.SortFlags": [
+        "MultiFlag",
+        "SortFlag",
+        "SortFlags"
+    ],
+    "QtCore.QDir.SortFlag": [
+        "OneFlag",
+        "SortFlag",
+        "SortFlags"
+    ],
+    "QtCore.QDir.SortFlags": [
+        "MultiFlag",
+        "SortFlag",
+        "SortFlags"
+    ],
+    "QtCore.QCommandLineOption.Flag.Flag": [
+        "OneFlag",
+        "Flag",
+        "Flags"
+    ],
+    "QtCore.QCommandLineOption.Flag.Flags": [
+        "MultiFlag",
+        "Flag",
+        "Flags"
+    ],
+    "QtCore.QCommandLineOption.Flag": [
+        "OneFlag",
+        "Flag",
+        "Flags"
+    ],
+    "QtCore.QCommandLineOption.Flags": [
+        "MultiFlag",
+        "Flag",
+        "Flags"
+    ],
+    "QtCore.QByteArray.Base64Option.Base64Option": [
+        "OneFlag",
+        "Base64Option",
+        "Base64Options"
+    ],
+    "QtCore.QByteArray.Base64Option.Base64Options": [
+        "MultiFlag",
+        "Base64Option",
+        "Base64Options"
+    ],
+    "QtCore.QByteArray.Base64Option": [
+        "OneFlag",
+        "Base64Option",
+        "Base64Options"
+    ],
+    "QtCore.QByteArray.Base64Options": [
+        "MultiFlag",
+        "Base64Option",
+        "Base64Options"
+    ],
+    "QtCore.QUrl.ComponentFormattingOption.ComponentFormattingOption": [
+        "OneFlag",
+        "ComponentFormattingOption",
+        "FormattingOptions"
+    ],
+    "QtCore.QUrl.ComponentFormattingOption.FormattingOptions": [
+        "MultiFlag",
+        "ComponentFormattingOption",
+        "FormattingOptions"
+    ],
+    "QtCore.QUrl.ComponentFormattingOption": [
+        "OneFlag",
+        "ComponentFormattingOption",
+        "FormattingOptions"
+    ],
+    "QtCore.QUrl.FormattingOptions": [
+        "MultiFlag",
+        "ComponentFormattingOption",
+        "FormattingOptions"
+    ],
+    "QtCore.QUrl.UserInputResolutionOption.UserInputResolutionOption": [
+        "OneFlag",
+        "UserInputResolutionOption",
+        "UserInputResolutionOptions"
+    ],
+    "QtCore.QUrl.UserInputResolutionOption.UserInputResolutionOptions": [
+        "MultiFlag",
+        "UserInputResolutionOption",
+        "UserInputResolutionOptions"
+    ],
+    "QtCore.QUrl.UserInputResolutionOption": [
+        "OneFlag",
+        "UserInputResolutionOption",
+        "UserInputResolutionOptions"
+    ],
+    "QtCore.QUrl.UserInputResolutionOptions": [
+        "MultiFlag",
+        "UserInputResolutionOption",
+        "UserInputResolutionOptions"
+    ],
+    "QtCore.QCborValue.EncodingOption.EncodingOption": [
+        "OneFlag",
+        "EncodingOption",
+        "EncodingOptions"
+    ],
+    "QtCore.QCborValue.EncodingOption.EncodingOptions": [
+        "MultiFlag",
+        "EncodingOption",
+        "EncodingOptions"
+    ],
+    "QtCore.QCborValue.EncodingOption": [
+        "OneFlag",
+        "EncodingOption",
+        "EncodingOptions"
+    ],
+    "QtCore.QCborValue.EncodingOptions": [
+        "MultiFlag",
+        "EncodingOption",
+        "EncodingOptions"
+    ],
+    "QtCore.QCborValue.DiagnosticNotationOption.DiagnosticNotationOption": [
+        "OneFlag",
+        "DiagnosticNotationOption",
+        "DiagnosticNotationOptions"
+    ],
+    "QtCore.QCborValue.DiagnosticNotationOption.DiagnosticNotationOptions": [
+        "MultiFlag",
+        "DiagnosticNotationOption",
+        "DiagnosticNotationOptions"
+    ],
+    "QtCore.QCborValue.DiagnosticNotationOption": [
+        "OneFlag",
+        "DiagnosticNotationOption",
+        "DiagnosticNotationOptions"
+    ],
+    "QtCore.QCborValue.DiagnosticNotationOptions": [
+        "MultiFlag",
+        "DiagnosticNotationOption",
+        "DiagnosticNotationOptions"
+    ],
+    "QtCore.QAbstractItemModel.CheckIndexOption.CheckIndexOption": [
+        "OneFlag",
+        "CheckIndexOption",
+        "CheckIndexOptions"
+    ],
+    "QtCore.QAbstractItemModel.CheckIndexOption.CheckIndexOptions": [
+        "MultiFlag",
+        "CheckIndexOption",
+        "CheckIndexOptions"
+    ],
+    "QtDataVisualization.QtDataVisualization.QSurface3DSeries.DrawFlag.DrawFlag": [
+        "OneFlag",
+        "DrawFlag",
+        "DrawFlags"
+    ],
+    "QtDataVisualization.QtDataVisualization.QSurface3DSeries.DrawFlag.DrawFlags": [
+        "MultiFlag",
+        "DrawFlag",
+        "DrawFlags"
+    ],
+    "QtDataVisualization.QtDataVisualization.QSurface3DSeries.DrawFlag": [
+        "OneFlag",
+        "DrawFlag",
+        "DrawFlags"
+    ],
+    "QtDataVisualization.QtDataVisualization.QSurface3DSeries.DrawFlags": [
+        "MultiFlag",
+        "DrawFlag",
+        "DrawFlags"
+    ],
+    "QtDataVisualization.QtDataVisualization.QAbstract3DGraph.SelectionFlag.SelectionFlag": [
+        "OneFlag",
+        "SelectionFlag",
+        "SelectionFlags"
+    ],
+    "QtDataVisualization.QtDataVisualization.QAbstract3DGraph.SelectionFlag.SelectionFlags": [
+        "MultiFlag",
+        "SelectionFlag",
+        "SelectionFlags"
+    ],
+    "QtDataVisualization.QtDataVisualization.QAbstract3DGraph.SelectionFlag": [
+        "OneFlag",
+        "SelectionFlag",
+        "SelectionFlags"
+    ],
+    "QtDataVisualization.QtDataVisualization.QAbstract3DGraph.SelectionFlags": [
+        "MultiFlag",
+        "SelectionFlag",
+        "SelectionFlags"
+    ],
+    "QtDataVisualization.QtDataVisualization.QAbstract3DGraph.OptimizationHint.OptimizationHint": [
+        "OneFlag",
+        "OptimizationHint",
+        "OptimizationHints"
+    ],
+    "QtDataVisualization.QtDataVisualization.QAbstract3DGraph.OptimizationHint.OptimizationHints": [
+        "MultiFlag",
+        "OptimizationHint",
+        "OptimizationHints"
+    ],
+    "QtDataVisualization.QtDataVisualization.QAbstract3DGraph.OptimizationHint": [
+        "OneFlag",
+        "OptimizationHint",
+        "OptimizationHints"
+    ],
+    "QtDataVisualization.QtDataVisualization.QAbstract3DGraph.OptimizationHints": [
+        "MultiFlag",
+        "OptimizationHint",
+        "OptimizationHints"
+    ],
+    "QtGui.QTouchDevice.CapabilityFlag.CapabilityFlag": [
+        "OneFlag",
+        "CapabilityFlag",
+        "Capabilities"
+    ],
+    "QtGui.QTouchDevice.CapabilityFlag.Capabilities": [
+        "MultiFlag",
+        "CapabilityFlag",
+        "Capabilities"
+    ],
+    "QtGui.QTouchDevice.CapabilityFlag": [
+        "OneFlag",
+        "CapabilityFlag",
+        "Capabilities"
+    ],
+    "QtGui.QTouchDevice.Capabilities": [
+        "MultiFlag",
+        "CapabilityFlag",
+        "Capabilities"
+    ],
+    "QtGui.QTextOption.Flag.Flag": [
+        "OneFlag",
+        "Flag",
+        "Flags"
+    ],
+    "QtGui.QTextOption.Flag.Flags": [
+        "MultiFlag",
+        "Flag",
+        "Flags"
+    ],
+    "QtGui.QTextOption.Flag": [
+        "OneFlag",
+        "Flag",
+        "Flags"
+    ],
+    "QtGui.QTextOption.Flags": [
+        "MultiFlag",
+        "Flag",
+        "Flags"
+    ],
+    "QtGui.QTextItem.RenderFlag.RenderFlag": [
+        "OneFlag",
+        "RenderFlag",
+        "RenderFlags"
+    ],
+    "QtGui.QTextItem.RenderFlag.RenderFlags": [
+        "MultiFlag",
+        "RenderFlag",
+        "RenderFlags"
+    ],
+    "QtGui.QTextItem.RenderFlag": [
+        "OneFlag",
+        "RenderFlag",
+        "RenderFlags"
+    ],
+    "QtGui.QTextItem.RenderFlags": [
+        "MultiFlag",
+        "RenderFlag",
+        "RenderFlags"
+    ],
+    "QtGui.QTextFormat.PageBreakFlag.PageBreakFlag": [
+        "OneFlag",
+        "PageBreakFlag",
+        "PageBreakFlags"
+    ],
+    "QtGui.QTextFormat.PageBreakFlag.PageBreakFlags": [
+        "MultiFlag",
+        "PageBreakFlag",
+        "PageBreakFlags"
+    ],
+    "QtGui.QTextFormat.PageBreakFlag": [
+        "OneFlag",
+        "PageBreakFlag",
+        "PageBreakFlags"
+    ],
+    "QtGui.QTextFormat.PageBreakFlags": [
+        "MultiFlag",
+        "PageBreakFlag",
+        "PageBreakFlags"
+    ],
+    "QtGui.QSurfaceFormat.FormatOption.FormatOption": [
+        "OneFlag",
+        "FormatOption",
+        "FormatOptions"
+    ],
+    "QtGui.QSurfaceFormat.FormatOption.FormatOptions": [
+        "MultiFlag",
+        "FormatOption",
+        "FormatOptions"
+    ],
+    "QtGui.QSurfaceFormat.FormatOption": [
+        "OneFlag",
+        "FormatOption",
+        "FormatOptions"
+    ],
+    "QtGui.QSurfaceFormat.FormatOptions": [
+        "MultiFlag",
+        "FormatOption",
+        "FormatOptions"
+    ],
+    "QtGui.QRawFont.LayoutFlag.LayoutFlag": [
+        "OneFlag",
+        "LayoutFlag",
+        "LayoutFlags"
+    ],
+    "QtGui.QRawFont.LayoutFlag.LayoutFlags": [
+        "MultiFlag",
+        "LayoutFlag",
+        "LayoutFlags"
+    ],
+    "QtGui.QRawFont.LayoutFlag": [
+        "OneFlag",
+        "LayoutFlag",
+        "LayoutFlags"
+    ],
+    "QtGui.QRawFont.LayoutFlags": [
+        "MultiFlag",
+        "LayoutFlag",
+        "LayoutFlags"
+    ],
+    "QtGui.QPaintEngine.PaintEngineFeature.PaintEngineFeature": [
+        "OneFlag",
+        "PaintEngineFeature",
+        "PaintEngineFeatures"
+    ],
+    "QtGui.QPaintEngine.PaintEngineFeature.PaintEngineFeatures": [
+        "MultiFlag",
+        "PaintEngineFeature",
+        "PaintEngineFeatures"
+    ],
+    "QtGui.QPaintEngine.PaintEngineFeature": [
+        "OneFlag",
+        "PaintEngineFeature",
+        "PaintEngineFeatures"
+    ],
+    "QtGui.QPaintEngine.PaintEngineFeatures": [
+        "MultiFlag",
+        "PaintEngineFeature",
+        "PaintEngineFeatures"
+    ],
+    "QtGui.QPaintEngine.DirtyFlag.DirtyFlag": [
+        "OneFlag",
+        "DirtyFlag",
+        "DirtyFlags"
+    ],
+    "QtGui.QPaintEngine.DirtyFlag.DirtyFlags": [
+        "MultiFlag",
+        "DirtyFlag",
+        "DirtyFlags"
+    ],
+    "QtGui.QPaintEngine.DirtyFlag": [
+        "OneFlag",
+        "DirtyFlag",
+        "DirtyFlags"
+    ],
+    "QtGui.QPaintEngine.DirtyFlags": [
+        "MultiFlag",
+        "DirtyFlag",
+        "DirtyFlags"
+    ],
+    "QtGui.QOpenGLTexture.Feature.Feature": [
+        "OneFlag",
+        "Feature",
+        "Features"
+    ],
+    "QtGui.QOpenGLTexture.Feature.Features": [
+        "MultiFlag",
+        "Feature",
+        "Features"
+    ],
+    "QtGui.QOpenGLTexture.Feature": [
+        "OneFlag",
+        "Feature",
+        "Features"
+    ],
+    "QtGui.QOpenGLTexture.Features": [
+        "MultiFlag",
+        "Feature",
+        "Features"
+    ],
+    "QtGui.QOpenGLFunctions.OpenGLFeature.OpenGLFeature": [
+        "OneFlag",
+        "OpenGLFeature",
+        "OpenGLFeatures"
+    ],
+    "QtGui.QOpenGLFunctions.OpenGLFeature.OpenGLFeatures": [
+        "MultiFlag",
+        "OpenGLFeature",
+        "OpenGLFeatures"
+    ],
+    "QtGui.QOpenGLFunctions.OpenGLFeature": [
+        "OneFlag",
+        "OpenGLFeature",
+        "OpenGLFeatures"
+    ],
+    "QtGui.QOpenGLFunctions.OpenGLFeatures": [
+        "MultiFlag",
+        "OpenGLFeature",
+        "OpenGLFeatures"
+    ],
+    "QtGui.QOpenGLDebugMessage.Source.Source": [
+        "OneFlag",
+        "Source",
+        "Sources"
+    ],
+    "QtGui.QOpenGLDebugMessage.Source.Sources": [
+        "MultiFlag",
+        "Source",
+        "Sources"
+    ],
+    "QtGui.QOpenGLDebugMessage.Source": [
+        "OneFlag",
+        "Source",
+        "Sources"
+    ],
+    "QtGui.QOpenGLDebugMessage.Sources": [
+        "MultiFlag",
+        "Source",
+        "Sources"
+    ],
+    "QtGui.QOpenGLDebugMessage.Type.Type": [
+        "OneFlag",
+        "Type",
+        "Types"
+    ],
+    "QtGui.QOpenGLDebugMessage.Type.Types": [
+        "MultiFlag",
+        "Type",
+        "Types"
+    ],
+    "QtGui.QOpenGLDebugMessage.Type": [
+        "OneFlag",
+        "Type",
+        "Types"
+    ],
+    "QtGui.QOpenGLDebugMessage.Types": [
+        "MultiFlag",
+        "Type",
+        "Types"
+    ],
+    "QtGui.QOpenGLDebugMessage.Severity.Severity": [
+        "OneFlag",
+        "Severity",
+        "Severities"
+    ],
+    "QtGui.QOpenGLDebugMessage.Severity.Severities": [
+        "MultiFlag",
+        "Severity",
+        "Severities"
+    ],
+    "QtGui.QOpenGLDebugMessage.Severity": [
+        "OneFlag",
+        "Severity",
+        "Severities"
+    ],
+    "QtGui.QOpenGLDebugMessage.Severities": [
+        "MultiFlag",
+        "Severity",
+        "Severities"
+    ],
+    "QtGui.QOpenGLBuffer.RangeAccessFlag.RangeAccessFlag": [
+        "OneFlag",
+        "RangeAccessFlag",
+        "RangeAccessFlags"
+    ],
+    "QtGui.QOpenGLBuffer.RangeAccessFlag.RangeAccessFlags": [
+        "MultiFlag",
+        "RangeAccessFlag",
+        "RangeAccessFlags"
+    ],
+    "QtGui.QOpenGLBuffer.RangeAccessFlag": [
+        "OneFlag",
+        "RangeAccessFlag",
+        "RangeAccessFlags"
+    ],
+    "QtGui.QOpenGLBuffer.RangeAccessFlags": [
+        "MultiFlag",
+        "RangeAccessFlag",
+        "RangeAccessFlags"
+    ],
+    "QtGui.QImageIOHandler.Transformation.Transformation": [
+        "OneFlag",
+        "Transformation",
+        "Transformations"
+    ],
+    "QtGui.QImageIOHandler.Transformation.Transformations": [
+        "MultiFlag",
+        "Transformation",
+        "Transformations"
+    ],
+    "QtGui.QImageIOHandler.Transformation": [
+        "OneFlag",
+        "Transformation",
+        "Transformations"
+    ],
+    "QtGui.QImageIOHandler.Transformations": [
+        "MultiFlag",
+        "Transformation",
+        "Transformations"
+    ],
+    "QtGui.QAccessible.RelationFlag.RelationFlag": [
+        "OneFlag",
+        "RelationFlag",
+        "Relation"
+    ],
+    "QtGui.QAccessible.RelationFlag.Relation": [
+        "MultiFlag",
+        "RelationFlag",
+        "Relation"
+    ],
+    "QtGui.QAccessible.RelationFlag": [
+        "OneFlag",
+        "RelationFlag",
+        "Relation"
+    ],
+    "QtGui.QAccessible.Relation": [
+        "MultiFlag",
+        "RelationFlag",
+        "Relation"
+    ],
+    "QtGui.QPainter.RenderHint.RenderHint": [
+        "OneFlag",
+        "RenderHint",
+        "RenderHints"
+    ],
+    "QtGui.QPainter.RenderHint.RenderHints": [
+        "MultiFlag",
+        "RenderHint",
+        "RenderHints"
+    ],
+    "QtGui.QPainter.RenderHint": [
+        "OneFlag",
+        "RenderHint",
+        "RenderHints"
+    ],
+    "QtGui.QPainter.RenderHints": [
+        "MultiFlag",
+        "RenderHint",
+        "RenderHints"
+    ],
+    "QtGui.QPainter.PixmapFragmentHint.PixmapFragmentHint": [
+        "OneFlag",
+        "PixmapFragmentHint",
+        "PixmapFragmentHints"
+    ],
+    "QtGui.QPainter.PixmapFragmentHint.PixmapFragmentHints": [
+        "MultiFlag",
+        "PixmapFragmentHint",
+        "PixmapFragmentHints"
+    ],
+    "QtGui.QPainter.PixmapFragmentHint": [
+        "OneFlag",
+        "PixmapFragmentHint",
+        "PixmapFragmentHints"
+    ],
+    "QtGui.QPainter.PixmapFragmentHints": [
+        "MultiFlag",
+        "PixmapFragmentHint",
+        "PixmapFragmentHints"
+    ],
+    "QtGui.QOpenGLShader.ShaderTypeBit.ShaderTypeBit": [
+        "OneFlag",
+        "ShaderTypeBit",
+        "ShaderType"
+    ],
+    "QtGui.QOpenGLShader.ShaderTypeBit.ShaderType": [
+        "MultiFlag",
+        "ShaderTypeBit",
+        "ShaderType"
+    ],
+    "QtGui.QOpenGLShader.ShaderTypeBit": [
+        "OneFlag",
+        "ShaderTypeBit",
+        "ShaderType"
+    ],
+    "QtGui.QOpenGLShader.ShaderType": [
+        "MultiFlag",
+        "ShaderTypeBit",
+        "ShaderType"
+    ],
+    "QtGui.QTouchEvent.TouchPoint.InfoFlag.InfoFlag": [
+        "OneFlag",
+        "InfoFlag",
+        "InfoFlags"
+    ],
+    "QtGui.QTouchEvent.TouchPoint.InfoFlag.InfoFlags": [
+        "MultiFlag",
+        "InfoFlag",
+        "InfoFlags"
+    ],
+    "QtGui.QTouchEvent.TouchPoint.InfoFlag": [
+        "OneFlag",
+        "InfoFlag",
+        "InfoFlags"
+    ],
+    "QtGui.QTouchEvent.TouchPoint.InfoFlags": [
+        "MultiFlag",
+        "InfoFlag",
+        "InfoFlags"
+    ],
+    "QtGui.QTextDocument.MarkdownFeature.MarkdownFeature": [
+        "OneFlag",
+        "MarkdownFeature",
+        "MarkdownFeatures"
+    ],
+    "QtGui.QTextDocument.MarkdownFeature.MarkdownFeatures": [
+        "MultiFlag",
+        "MarkdownFeature",
+        "MarkdownFeatures"
+    ],
+    "QtGui.QTextDocument.MarkdownFeature": [
+        "OneFlag",
+        "MarkdownFeature",
+        "MarkdownFeatures"
+    ],
+    "QtGui.QTextDocument.MarkdownFeatures": [
+        "MultiFlag",
+        "MarkdownFeature",
+        "MarkdownFeatures"
+    ],
+    "QtGui.QTextDocument.FindFlag.FindFlag": [
+        "OneFlag",
+        "FindFlag",
+        "FindFlags"
+    ],
+    "QtGui.QTextDocument.FindFlag.FindFlags": [
+        "MultiFlag",
+        "FindFlag",
+        "FindFlags"
+    ],
+    "QtGui.QTextDocument.FindFlag": [
+        "OneFlag",
+        "FindFlag",
+        "FindFlags"
+    ],
+    "QtGui.QTextDocument.FindFlags": [
+        "MultiFlag",
+        "FindFlag",
+        "FindFlags"
+    ],
+    "QtLocation.QGeoRouteRequest.TravelMode.TravelMode": [
+        "OneFlag",
+        "TravelMode",
+        "TravelModes"
+    ],
+    "QtLocation.QGeoRouteRequest.TravelMode.TravelModes": [
+        "MultiFlag",
+        "TravelMode",
+        "TravelModes"
+    ],
+    "QtLocation.QGeoRouteRequest.TravelMode": [
+        "OneFlag",
+        "TravelMode",
+        "TravelModes"
+    ],
+    "QtLocation.QGeoRouteRequest.TravelModes": [
+        "MultiFlag",
+        "TravelMode",
+        "TravelModes"
+    ],
+    "QtLocation.QGeoRouteRequest.FeatureType.FeatureType": [
+        "OneFlag",
+        "FeatureType",
+        "FeatureTypes"
+    ],
+    "QtLocation.QGeoRouteRequest.FeatureType.FeatureTypes": [
+        "MultiFlag",
+        "FeatureType",
+        "FeatureTypes"
+    ],
+    "QtLocation.QGeoRouteRequest.FeatureType": [
+        "OneFlag",
+        "FeatureType",
+        "FeatureTypes"
+    ],
+    "QtLocation.QGeoRouteRequest.FeatureTypes": [
+        "MultiFlag",
+        "FeatureType",
+        "FeatureTypes"
+    ],
+    "QtLocation.QGeoRouteRequest.FeatureWeight.FeatureWeight": [
+        "OneFlag",
+        "FeatureWeight",
+        "FeatureWeights"
+    ],
+    "QtLocation.QGeoRouteRequest.FeatureWeight.FeatureWeights": [
+        "MultiFlag",
+        "FeatureWeight",
+        "FeatureWeights"
+    ],
+    "QtLocation.QGeoRouteRequest.FeatureWeight": [
+        "OneFlag",
+        "FeatureWeight",
+        "FeatureWeights"
+    ],
+    "QtLocation.QGeoRouteRequest.FeatureWeights": [
+        "MultiFlag",
+        "FeatureWeight",
+        "FeatureWeights"
+    ],
+    "QtLocation.QGeoRouteRequest.RouteOptimization.RouteOptimization": [
+        "OneFlag",
+        "RouteOptimization",
+        "RouteOptimizations"
+    ],
+    "QtLocation.QGeoRouteRequest.RouteOptimization.RouteOptimizations": [
+        "MultiFlag",
+        "RouteOptimization",
+        "RouteOptimizations"
+    ],
+    "QtLocation.QGeoRouteRequest.RouteOptimization": [
+        "OneFlag",
+        "RouteOptimization",
+        "RouteOptimizations"
+    ],
+    "QtLocation.QGeoRouteRequest.RouteOptimizations": [
+        "MultiFlag",
+        "RouteOptimization",
+        "RouteOptimizations"
+    ],
+    "QtLocation.QGeoRouteRequest.SegmentDetail.SegmentDetail": [
+        "OneFlag",
+        "SegmentDetail",
+        "SegmentDetails"
+    ],
+    "QtLocation.QGeoRouteRequest.SegmentDetail.SegmentDetails": [
+        "MultiFlag",
+        "SegmentDetail",
+        "SegmentDetails"
+    ],
+    "QtLocation.QGeoRouteRequest.SegmentDetail": [
+        "OneFlag",
+        "SegmentDetail",
+        "SegmentDetails"
+    ],
+    "QtLocation.QGeoRouteRequest.SegmentDetails": [
+        "MultiFlag",
+        "SegmentDetail",
+        "SegmentDetails"
+    ],
+    "QtLocation.QGeoRouteRequest.ManeuverDetail.ManeuverDetail": [
+        "OneFlag",
+        "ManeuverDetail",
+        "ManeuverDetails"
+    ],
+    "QtLocation.QGeoRouteRequest.ManeuverDetail.ManeuverDetails": [
+        "MultiFlag",
+        "ManeuverDetail",
+        "ManeuverDetails"
+    ],
+    "QtLocation.QGeoRouteRequest.ManeuverDetail": [
+        "OneFlag",
+        "ManeuverDetail",
+        "ManeuverDetails"
+    ],
+    "QtLocation.QGeoRouteRequest.ManeuverDetails": [
+        "MultiFlag",
+        "ManeuverDetail",
+        "ManeuverDetails"
+    ],
+    "QtLocation.QGeoServiceProvider.RoutingFeature.RoutingFeature": [
+        "OneFlag",
+        "RoutingFeature",
+        "RoutingFeatures"
+    ],
+    "QtLocation.QGeoServiceProvider.RoutingFeature.RoutingFeatures": [
+        "MultiFlag",
+        "RoutingFeature",
+        "RoutingFeatures"
+    ],
+    "QtLocation.QGeoServiceProvider.RoutingFeature": [
+        "OneFlag",
+        "RoutingFeature",
+        "RoutingFeatures"
+    ],
+    "QtLocation.QGeoServiceProvider.RoutingFeatures": [
+        "MultiFlag",
+        "RoutingFeature",
+        "RoutingFeatures"
+    ],
+    "QtLocation.QGeoServiceProvider.GeocodingFeature.GeocodingFeature": [
+        "OneFlag",
+        "GeocodingFeature",
+        "GeocodingFeatures"
+    ],
+    "QtLocation.QGeoServiceProvider.GeocodingFeature.GeocodingFeatures": [
+        "MultiFlag",
+        "GeocodingFeature",
+        "GeocodingFeatures"
+    ],
+    "QtLocation.QGeoServiceProvider.GeocodingFeature": [
+        "OneFlag",
+        "GeocodingFeature",
+        "GeocodingFeatures"
+    ],
+    "QtLocation.QGeoServiceProvider.GeocodingFeatures": [
+        "MultiFlag",
+        "GeocodingFeature",
+        "GeocodingFeatures"
+    ],
+    "QtLocation.QGeoServiceProvider.MappingFeature.MappingFeature": [
+        "OneFlag",
+        "MappingFeature",
+        "MappingFeatures"
+    ],
+    "QtLocation.QGeoServiceProvider.MappingFeature.MappingFeatures": [
+        "MultiFlag",
+        "MappingFeature",
+        "MappingFeatures"
+    ],
+    "QtLocation.QGeoServiceProvider.MappingFeature": [
+        "OneFlag",
+        "MappingFeature",
+        "MappingFeatures"
+    ],
+    "QtLocation.QGeoServiceProvider.MappingFeatures": [
+        "MultiFlag",
+        "MappingFeature",
+        "MappingFeatures"
+    ],
+    "QtLocation.QGeoServiceProvider.PlacesFeature.PlacesFeature": [
+        "OneFlag",
+        "PlacesFeature",
+        "PlacesFeatures"
+    ],
+    "QtLocation.QGeoServiceProvider.PlacesFeature.PlacesFeatures": [
+        "MultiFlag",
+        "PlacesFeature",
+        "PlacesFeatures"
+    ],
+    "QtLocation.QGeoServiceProvider.PlacesFeature": [
+        "OneFlag",
+        "PlacesFeature",
+        "PlacesFeatures"
+    ],
+    "QtLocation.QGeoServiceProvider.PlacesFeatures": [
+        "MultiFlag",
+        "PlacesFeature",
+        "PlacesFeatures"
+    ],
+    "QtLocation.QGeoServiceProvider.NavigationFeature.NavigationFeature": [
+        "OneFlag",
+        "NavigationFeature",
+        "NavigationFeatures"
+    ],
+    "QtLocation.QGeoServiceProvider.NavigationFeature.NavigationFeatures": [
+        "MultiFlag",
+        "NavigationFeature",
+        "NavigationFeatures"
+    ],
+    "QtLocation.QGeoServiceProvider.NavigationFeature": [
+        "OneFlag",
+        "NavigationFeature",
+        "NavigationFeatures"
+    ],
+    "QtLocation.QGeoServiceProvider.NavigationFeatures": [
+        "MultiFlag",
+        "NavigationFeature",
+        "NavigationFeatures"
+    ],
+    "QtMultimedia.QVideoFilterRunnable.RunFlag.RunFlag": [
+        "OneFlag",
+        "RunFlag",
+        "RunFlags"
+    ],
+    "QtMultimedia.QVideoFilterRunnable.RunFlag.RunFlags": [
+        "MultiFlag",
+        "RunFlag",
+        "RunFlags"
+    ],
+    "QtMultimedia.QVideoFilterRunnable.RunFlag": [
+        "OneFlag",
+        "RunFlag",
+        "RunFlags"
+    ],
+    "QtMultimedia.QVideoFilterRunnable.RunFlags": [
+        "MultiFlag",
+        "RunFlag",
+        "RunFlags"
+    ],
+    "QtMultimedia.QMediaServiceProviderHint.Feature.Feature": [
+        "OneFlag",
+        "Feature",
+        "Features"
+    ],
+    "QtMultimedia.QMediaServiceProviderHint.Feature.Features": [
+        "MultiFlag",
+        "Feature",
+        "Features"
+    ],
+    "QtMultimedia.QMediaServiceProviderHint.Feature": [
+        "OneFlag",
+        "Feature",
+        "Features"
+    ],
+    "QtMultimedia.QMediaServiceProviderHint.Features": [
+        "MultiFlag",
+        "Feature",
+        "Features"
+    ],
+    "QtMultimedia.QMediaPlayer.Flag.Flag": [
+        "OneFlag",
+        "Flag",
+        "Flags"
+    ],
+    "QtMultimedia.QMediaPlayer.Flag.Flags": [
+        "MultiFlag",
+        "Flag",
+        "Flags"
+    ],
+    "QtMultimedia.QMediaPlayer.Flag": [
+        "OneFlag",
+        "Flag",
+        "Flags"
+    ],
+    "QtMultimedia.QMediaPlayer.Flags": [
+        "MultiFlag",
+        "Flag",
+        "Flags"
+    ],
+    "QtMultimedia.QCamera.CaptureMode.CaptureMode": [
+        "OneFlag",
+        "CaptureMode",
+        "CaptureModes"
+    ],
+    "QtMultimedia.QCamera.CaptureMode.CaptureModes": [
+        "MultiFlag",
+        "CaptureMode",
+        "CaptureModes"
+    ],
+    "QtMultimedia.QCamera.CaptureMode": [
+        "OneFlag",
+        "CaptureMode",
+        "CaptureModes"
+    ],
+    "QtMultimedia.QCamera.CaptureModes": [
+        "MultiFlag",
+        "CaptureMode",
+        "CaptureModes"
+    ],
+    "QtMultimedia.QCamera.LockType.LockType": [
+        "OneFlag",
+        "LockType",
+        "LockTypes"
+    ],
+    "QtMultimedia.QCamera.LockType.LockTypes": [
+        "MultiFlag",
+        "LockType",
+        "LockTypes"
+    ],
+    "QtMultimedia.QCamera.LockType": [
+        "OneFlag",
+        "LockType",
+        "LockTypes"
+    ],
+    "QtMultimedia.QCamera.LockTypes": [
+        "MultiFlag",
+        "LockType",
+        "LockTypes"
+    ],
+    "QtMultimedia.QCameraImageCapture.CaptureDestination.CaptureDestination": [
+        "OneFlag",
+        "CaptureDestination",
+        "CaptureDestinations"
+    ],
+    "QtMultimedia.QCameraImageCapture.CaptureDestination.CaptureDestinations": [
+        "MultiFlag",
+        "CaptureDestination",
+        "CaptureDestinations"
+    ],
+    "QtMultimedia.QCameraImageCapture.CaptureDestination": [
+        "OneFlag",
+        "CaptureDestination",
+        "CaptureDestinations"
+    ],
+    "QtMultimedia.QCameraImageCapture.CaptureDestinations": [
+        "MultiFlag",
+        "CaptureDestination",
+        "CaptureDestinations"
+    ],
+    "QtMultimedia.QCameraFocus.FocusMode.FocusMode": [
+        "OneFlag",
+        "FocusMode",
+        "FocusModes"
+    ],
+    "QtMultimedia.QCameraFocus.FocusMode.FocusModes": [
+        "MultiFlag",
+        "FocusMode",
+        "FocusModes"
+    ],
+    "QtMultimedia.QCameraFocus.FocusMode": [
+        "OneFlag",
+        "FocusMode",
+        "FocusModes"
+    ],
+    "QtMultimedia.QCameraFocus.FocusModes": [
+        "MultiFlag",
+        "FocusMode",
+        "FocusModes"
+    ],
+    "QtMultimedia.QCameraExposure.FlashMode.FlashMode": [
+        "OneFlag",
+        "FlashMode",
+        "FlashModes"
+    ],
+    "QtMultimedia.QCameraExposure.FlashMode.FlashModes": [
+        "MultiFlag",
+        "FlashMode",
+        "FlashModes"
+    ],
+    "QtMultimedia.QCameraExposure.FlashMode": [
+        "OneFlag",
+        "FlashMode",
+        "FlashModes"
+    ],
+    "QtMultimedia.QCameraExposure.FlashModes": [
+        "MultiFlag",
+        "FlashMode",
+        "FlashModes"
+    ],
+    "QtNetwork.QSsl.SslOption.SslOption": [
+        "OneFlag",
+        "SslOption",
+        "SslOptions"
+    ],
+    "QtNetwork.QSsl.SslOption.SslOptions": [
+        "MultiFlag",
+        "SslOption",
+        "SslOptions"
+    ],
+    "QtNetwork.QSsl.SslOption": [
+        "OneFlag",
+        "SslOption",
+        "SslOptions"
+    ],
+    "QtNetwork.QSsl.SslOptions": [
+        "MultiFlag",
+        "SslOption",
+        "SslOptions"
+    ],
+    "QtNetwork.QNetworkProxy.Capability.Capability": [
+        "OneFlag",
+        "Capability",
+        "Capabilities"
+    ],
+    "QtNetwork.QNetworkProxy.Capability.Capabilities": [
+        "MultiFlag",
+        "Capability",
+        "Capabilities"
+    ],
+    "QtNetwork.QNetworkProxy.Capability": [
+        "OneFlag",
+        "Capability",
+        "Capabilities"
+    ],
+    "QtNetwork.QNetworkProxy.Capabilities": [
+        "MultiFlag",
+        "Capability",
+        "Capabilities"
+    ],
+    "QtNetwork.QNetworkInterface.InterfaceFlag.InterfaceFlag": [
+        "OneFlag",
+        "InterfaceFlag",
+        "InterfaceFlags"
+    ],
+    "QtNetwork.QNetworkInterface.InterfaceFlag.InterfaceFlags": [
+        "MultiFlag",
+        "InterfaceFlag",
+        "InterfaceFlags"
+    ],
+    "QtNetwork.QNetworkInterface.InterfaceFlag": [
+        "OneFlag",
+        "InterfaceFlag",
+        "InterfaceFlags"
+    ],
+    "QtNetwork.QNetworkInterface.InterfaceFlags": [
+        "MultiFlag",
+        "InterfaceFlag",
+        "InterfaceFlags"
+    ],
+    "QtNetwork.QNetworkConfiguration.StateFlag.StateFlag": [
+        "OneFlag",
+        "StateFlag",
+        "StateFlags"
+    ],
+    "QtNetwork.QNetworkConfiguration.StateFlag.StateFlags": [
+        "MultiFlag",
+        "StateFlag",
+        "StateFlags"
+    ],
+    "QtNetwork.QNetworkConfiguration.StateFlag": [
+        "OneFlag",
+        "StateFlag",
+        "StateFlags"
+    ],
+    "QtNetwork.QNetworkConfiguration.StateFlags": [
+        "MultiFlag",
+        "StateFlag",
+        "StateFlags"
+    ],
+    "QtNetwork.QHstsPolicy.PolicyFlag.PolicyFlag": [
+        "OneFlag",
+        "PolicyFlag",
+        "PolicyFlags"
+    ],
+    "QtNetwork.QHstsPolicy.PolicyFlag.PolicyFlags": [
+        "MultiFlag",
+        "PolicyFlag",
+        "PolicyFlags"
+    ],
+    "QtNetwork.QHstsPolicy.PolicyFlag": [
+        "OneFlag",
+        "PolicyFlag",
+        "PolicyFlags"
+    ],
+    "QtNetwork.QHstsPolicy.PolicyFlags": [
+        "MultiFlag",
+        "PolicyFlag",
+        "PolicyFlags"
+    ],
+    "QtNetwork.QHostAddress.ConversionModeFlag.ConversionModeFlag": [
+        "OneFlag",
+        "ConversionModeFlag",
+        "ConversionMode"
+    ],
+    "QtNetwork.QHostAddress.ConversionModeFlag.ConversionMode": [
+        "MultiFlag",
+        "ConversionModeFlag",
+        "ConversionMode"
+    ],
+    "QtNetwork.QHostAddress.ConversionModeFlag": [
+        "OneFlag",
+        "ConversionModeFlag",
+        "ConversionMode"
+    ],
+    "QtNetwork.QHostAddress.ConversionMode": [
+        "MultiFlag",
+        "ConversionModeFlag",
+        "ConversionMode"
+    ],
+    "QtNetwork.QAbstractSocket.BindFlag.BindFlag": [
+        "OneFlag",
+        "BindFlag",
+        "BindMode"
+    ],
+    "QtNetwork.QAbstractSocket.BindFlag.BindMode": [
+        "MultiFlag",
+        "BindFlag",
+        "BindMode"
+    ],
+    "QtNetwork.QAbstractSocket.BindFlag": [
+        "OneFlag",
+        "BindFlag",
+        "BindMode"
+    ],
+    "QtNetwork.QAbstractSocket.BindMode": [
+        "MultiFlag",
+        "BindFlag",
+        "BindMode"
+    ],
+    "QtNetwork.QAbstractSocket.PauseMode.PauseMode": [
+        "OneFlag",
+        "PauseMode",
+        "PauseModes"
+    ],
+    "QtNetwork.QAbstractSocket.PauseMode.PauseModes": [
+        "MultiFlag",
+        "PauseMode",
+        "PauseModes"
+    ],
+    "QtNetwork.QAbstractSocket.PauseMode": [
+        "OneFlag",
+        "PauseMode",
+        "PauseModes"
+    ],
+    "QtNetwork.QAbstractSocket.PauseModes": [
+        "MultiFlag",
+        "PauseMode",
+        "PauseModes"
+    ],
+    "QtNetwork.QNetworkSession.UsagePolicy.UsagePolicy": [
+        "OneFlag",
+        "UsagePolicy",
+        "UsagePolicies"
+    ],
+    "QtNetwork.QNetworkSession.UsagePolicy.UsagePolicies": [
+        "MultiFlag",
+        "UsagePolicy",
+        "UsagePolicies"
+    ],
+    "QtNetwork.QNetworkSession.UsagePolicy": [
+        "OneFlag",
+        "UsagePolicy",
+        "UsagePolicies"
+    ],
+    "QtNetwork.QNetworkSession.UsagePolicies": [
+        "MultiFlag",
+        "UsagePolicy",
+        "UsagePolicies"
+    ],
+    "QtNetwork.QNetworkConfigurationManager.Capability.Capability": [
+        "OneFlag",
+        "Capability",
+        "Capabilities"
+    ],
+    "QtNetwork.QNetworkConfigurationManager.Capability.Capabilities": [
+        "MultiFlag",
+        "Capability",
+        "Capabilities"
+    ],
+    "QtNetwork.QNetworkConfigurationManager.Capability": [
+        "OneFlag",
+        "Capability",
+        "Capabilities"
+    ],
+    "QtNetwork.QNetworkConfigurationManager.Capabilities": [
+        "MultiFlag",
+        "Capability",
+        "Capabilities"
+    ],
+    "QtNetwork.QLocalServer.SocketOption.SocketOption": [
+        "OneFlag",
+        "SocketOption",
+        "SocketOptions"
+    ],
+    "QtNetwork.QLocalServer.SocketOption.SocketOptions": [
+        "MultiFlag",
+        "SocketOption",
+        "SocketOptions"
+    ],
+    "QtNetwork.QLocalServer.SocketOption": [
+        "OneFlag",
+        "SocketOption",
+        "SocketOptions"
+    ],
+    "QtNetwork.QLocalServer.SocketOptions": [
+        "MultiFlag",
+        "SocketOption",
+        "SocketOptions"
+    ],
+    "QtOpenGL.QGLFormat.OpenGLVersionFlag.OpenGLVersionFlag": [
+        "OneFlag",
+        "OpenGLVersionFlag",
+        "OpenGLVersionFlags"
+    ],
+    "QtOpenGL.QGLFormat.OpenGLVersionFlag.OpenGLVersionFlags": [
+        "MultiFlag",
+        "OpenGLVersionFlag",
+        "OpenGLVersionFlags"
+    ],
+    "QtOpenGL.QGLFormat.OpenGLVersionFlag": [
+        "OneFlag",
+        "OpenGLVersionFlag",
+        "OpenGLVersionFlags"
+    ],
+    "QtOpenGL.QGLFormat.OpenGLVersionFlags": [
+        "MultiFlag",
+        "OpenGLVersionFlag",
+        "OpenGLVersionFlags"
+    ],
+    "QtOpenGL.QGLContext.BindOption.BindOption": [
+        "OneFlag",
+        "BindOption",
+        "BindOptions"
+    ],
+    "QtOpenGL.QGLContext.BindOption.BindOptions": [
+        "MultiFlag",
+        "BindOption",
+        "BindOptions"
+    ],
+    "QtOpenGL.QGLContext.BindOption": [
+        "OneFlag",
+        "BindOption",
+        "BindOptions"
+    ],
+    "QtOpenGL.QGLContext.BindOptions": [
+        "MultiFlag",
+        "BindOption",
+        "BindOptions"
+    ],
+    "QtOpenGL.QGL.FormatOption.FormatOption": [
+        "OneFlag",
+        "FormatOption",
+        "FormatOptions"
+    ],
+    "QtOpenGL.QGL.FormatOption.FormatOptions": [
+        "MultiFlag",
+        "FormatOption",
+        "FormatOptions"
+    ],
+    "QtOpenGL.QGL.FormatOption": [
+        "OneFlag",
+        "FormatOption",
+        "FormatOptions"
+    ],
+    "QtOpenGL.QGL.FormatOptions": [
+        "MultiFlag",
+        "FormatOption",
+        "FormatOptions"
+    ],
+    "QtOpenGL.QGLShader.ShaderTypeBit.ShaderTypeBit": [
+        "OneFlag",
+        "ShaderTypeBit",
+        "ShaderType"
+    ],
+    "QtOpenGL.QGLShader.ShaderTypeBit.ShaderType": [
+        "MultiFlag",
+        "ShaderTypeBit",
+        "ShaderType"
+    ],
+    "QtOpenGL.QGLShader.ShaderTypeBit": [
+        "OneFlag",
+        "ShaderTypeBit",
+        "ShaderType"
+    ],
+    "QtOpenGL.QGLShader.ShaderType": [
+        "MultiFlag",
+        "ShaderTypeBit",
+        "ShaderType"
+    ],
+    "QtPositioning.QGeoAreaMonitorSource.AreaMonitorFeature.AreaMonitorFeature": [
+        "OneFlag",
+        "AreaMonitorFeature",
+        "AreaMonitorFeatures"
+    ],
+    "QtPositioning.QGeoAreaMonitorSource.AreaMonitorFeature.AreaMonitorFeatures": [
+        "MultiFlag",
+        "AreaMonitorFeature",
+        "AreaMonitorFeatures"
+    ],
+    "QtPositioning.QGeoAreaMonitorSource.AreaMonitorFeature": [
+        "OneFlag",
+        "AreaMonitorFeature",
+        "AreaMonitorFeatures"
+    ],
+    "QtPositioning.QGeoAreaMonitorSource.AreaMonitorFeatures": [
+        "MultiFlag",
+        "AreaMonitorFeature",
+        "AreaMonitorFeatures"
+    ],
+    "QtPositioning.QGeoPositionInfoSource.PositioningMethod.PositioningMethod": [
+        "OneFlag",
+        "PositioningMethod",
+        "PositioningMethods"
+    ],
+    "QtPositioning.QGeoPositionInfoSource.PositioningMethod.PositioningMethods": [
+        "MultiFlag",
+        "PositioningMethod",
+        "PositioningMethods"
+    ],
+    "QtPositioning.QGeoPositionInfoSource.PositioningMethod": [
+        "OneFlag",
+        "PositioningMethod",
+        "PositioningMethods"
+    ],
+    "QtPositioning.QGeoPositionInfoSource.PositioningMethods": [
+        "MultiFlag",
+        "PositioningMethod",
+        "PositioningMethods"
+    ],
+    "QtPrintSupport.QAbstractPrintDialog.PrintDialogOption.PrintDialogOption": [
+        "OneFlag",
+        "PrintDialogOption",
+        "PrintDialogOptions"
+    ],
+    "QtPrintSupport.QAbstractPrintDialog.PrintDialogOption.PrintDialogOptions": [
+        "MultiFlag",
+        "PrintDialogOption",
+        "PrintDialogOptions"
+    ],
+    "QtPrintSupport.QAbstractPrintDialog.PrintDialogOption": [
+        "OneFlag",
+        "PrintDialogOption",
+        "PrintDialogOptions"
+    ],
+    "QtPrintSupport.QAbstractPrintDialog.PrintDialogOptions": [
+        "MultiFlag",
+        "PrintDialogOption",
+        "PrintDialogOptions"
+    ],
+    "QtQml.QQmlImageProviderBase.Flag.Flag": [
+        "OneFlag",
+        "Flag",
+        "Flags"
+    ],
+    "QtQml.QQmlImageProviderBase.Flag.Flags": [
+        "MultiFlag",
+        "Flag",
+        "Flags"
+    ],
+    "QtQml.QQmlImageProviderBase.Flag": [
+        "OneFlag",
+        "Flag",
+        "Flags"
+    ],
+    "QtQml.QQmlImageProviderBase.Flags": [
+        "MultiFlag",
+        "Flag",
+        "Flags"
+    ],
+    "QtQml.QJSEngine.Extension.Extension": [
+        "OneFlag",
+        "Extension",
+        "Extensions"
+    ],
+    "QtQml.QJSEngine.Extension.Extensions": [
+        "MultiFlag",
+        "Extension",
+        "Extensions"
+    ],
+    "QtQml.QJSEngine.Extension": [
+        "OneFlag",
+        "Extension",
+        "Extensions"
+    ],
+    "QtQml.QJSEngine.Extensions": [
+        "MultiFlag",
+        "Extension",
+        "Extensions"
+    ],
+    "QtQuick.QSGNode.Flag.Flag": [
+        "OneFlag",
+        "Flag",
+        "Flags"
+    ],
+    "QtQuick.QSGNode.Flag.Flags": [
+        "MultiFlag",
+        "Flag",
+        "Flags"
+    ],
+    "QtQuick.QSGNode.Flag": [
+        "OneFlag",
+        "Flag",
+        "Flags"
+    ],
+    "QtQuick.QSGNode.Flags": [
+        "MultiFlag",
+        "Flag",
+        "Flags"
+    ],
+    "QtQuick.QSGNode.DirtyStateBit.DirtyStateBit": [
+        "OneFlag",
+        "DirtyStateBit",
+        "DirtyState"
+    ],
+    "QtQuick.QSGNode.DirtyStateBit.DirtyState": [
+        "MultiFlag",
+        "DirtyStateBit",
+        "DirtyState"
+    ],
+    "QtQuick.QSGNode.DirtyStateBit": [
+        "OneFlag",
+        "DirtyStateBit",
+        "DirtyState"
+    ],
+    "QtQuick.QSGNode.DirtyState": [
+        "MultiFlag",
+        "DirtyStateBit",
+        "DirtyState"
+    ],
+    "QtQuick.QSGSimpleTextureNode.TextureCoordinatesTransformFlag.TextureCoordinatesTransformFlag": [
+        "OneFlag",
+        "TextureCoordinatesTransformFlag",
+        "TextureCoordinatesTransformMode"
+    ],
+    "QtQuick.QSGSimpleTextureNode.TextureCoordinatesTransformFlag.TextureCoordinatesTransformMode": [
+        "MultiFlag",
+        "TextureCoordinatesTransformFlag",
+        "TextureCoordinatesTransformMode"
+    ],
+    "QtQuick.QSGSimpleTextureNode.TextureCoordinatesTransformFlag": [
+        "OneFlag",
+        "TextureCoordinatesTransformFlag",
+        "TextureCoordinatesTransformMode"
+    ],
+    "QtQuick.QSGSimpleTextureNode.TextureCoordinatesTransformMode": [
+        "MultiFlag",
+        "TextureCoordinatesTransformFlag",
+        "TextureCoordinatesTransformMode"
+    ],
+    "QtQuick.QQuickWindow.CreateTextureOption.CreateTextureOption": [
+        "OneFlag",
+        "CreateTextureOption",
+        "CreateTextureOptions"
+    ],
+    "QtQuick.QQuickWindow.CreateTextureOption.CreateTextureOptions": [
+        "MultiFlag",
+        "CreateTextureOption",
+        "CreateTextureOptions"
+    ],
+    "QtQuick.QQuickWindow.CreateTextureOption": [
+        "OneFlag",
+        "CreateTextureOption",
+        "CreateTextureOptions"
+    ],
+    "QtQuick.QQuickWindow.CreateTextureOptions": [
+        "MultiFlag",
+        "CreateTextureOption",
+        "CreateTextureOptions"
+    ],
+    "QtQuick.QSGEngine.CreateTextureOption.CreateTextureOption": [
+        "OneFlag",
+        "CreateTextureOption",
+        "CreateTextureOptions"
+    ],
+    "QtQuick.QSGEngine.CreateTextureOption.CreateTextureOptions": [
+        "MultiFlag",
+        "CreateTextureOption",
+        "CreateTextureOptions"
+    ],
+    "QtQuick.QSGEngine.CreateTextureOption": [
+        "OneFlag",
+        "CreateTextureOption",
+        "CreateTextureOptions"
+    ],
+    "QtQuick.QSGEngine.CreateTextureOptions": [
+        "MultiFlag",
+        "CreateTextureOption",
+        "CreateTextureOptions"
+    ],
+    "QtQuick.QSGAbstractRenderer.ClearModeBit.ClearModeBit": [
+        "OneFlag",
+        "ClearModeBit",
+        "ClearMode"
+    ],
+    "QtQuick.QSGAbstractRenderer.ClearModeBit.ClearMode": [
+        "MultiFlag",
+        "ClearModeBit",
+        "ClearMode"
+    ],
+    "QtQuick.QSGAbstractRenderer.ClearModeBit": [
+        "OneFlag",
+        "ClearModeBit",
+        "ClearMode"
+    ],
+    "QtQuick.QSGAbstractRenderer.ClearMode": [
+        "MultiFlag",
+        "ClearModeBit",
+        "ClearMode"
+    ],
+    "QtQuick.QSGAbstractRenderer.MatrixTransformFlag.MatrixTransformFlag": [
+        "OneFlag",
+        "MatrixTransformFlag",
+        "MatrixTransformFlags"
+    ],
+    "QtQuick.QSGAbstractRenderer.MatrixTransformFlag.MatrixTransformFlags": [
+        "MultiFlag",
+        "MatrixTransformFlag",
+        "MatrixTransformFlags"
+    ],
+    "QtQuick.QSGAbstractRenderer.MatrixTransformFlag": [
+        "OneFlag",
+        "MatrixTransformFlag",
+        "MatrixTransformFlags"
+    ],
+    "QtQuick.QSGAbstractRenderer.MatrixTransformFlags": [
+        "MultiFlag",
+        "MatrixTransformFlag",
+        "MatrixTransformFlags"
+    ],
+    "QtQuick.QQuickItem.Flag.Flag": [
+        "OneFlag",
+        "Flag",
+        "Flags"
+    ],
+    "QtQuick.QQuickItem.Flag.Flags": [
+        "MultiFlag",
+        "Flag",
+        "Flags"
+    ],
+    "QtQuick.QQuickItem.Flag": [
+        "OneFlag",
+        "Flag",
+        "Flags"
+    ],
+    "QtQuick.QQuickItem.Flags": [
+        "MultiFlag",
+        "Flag",
+        "Flags"
+    ],
+    "QtQuick.QQuickPaintedItem.PerformanceHint.PerformanceHint": [
+        "OneFlag",
+        "PerformanceHint",
+        "PerformanceHints"
+    ],
+    "QtQuick.QQuickPaintedItem.PerformanceHint.PerformanceHints": [
+        "MultiFlag",
+        "PerformanceHint",
+        "PerformanceHints"
+    ],
+    "QtQuick.QQuickPaintedItem.PerformanceHint": [
+        "OneFlag",
+        "PerformanceHint",
+        "PerformanceHints"
+    ],
+    "QtQuick.QQuickPaintedItem.PerformanceHints": [
+        "MultiFlag",
+        "PerformanceHint",
+        "PerformanceHints"
+    ],
+    "QtScript.QScriptValue.ResolveFlag.ResolveFlag": [
+        "OneFlag",
+        "ResolveFlag",
+        "ResolveFlags"
+    ],
+    "QtScript.QScriptValue.ResolveFlag.ResolveFlags": [
+        "MultiFlag",
+        "ResolveFlag",
+        "ResolveFlags"
+    ],
+    "QtScript.QScriptValue.ResolveFlag": [
+        "OneFlag",
+        "ResolveFlag",
+        "ResolveFlags"
+    ],
+    "QtScript.QScriptValue.ResolveFlags": [
+        "MultiFlag",
+        "ResolveFlag",
+        "ResolveFlags"
+    ],
+    "QtScript.QScriptValue.PropertyFlag.PropertyFlag": [
+        "OneFlag",
+        "PropertyFlag",
+        "PropertyFlags"
+    ],
+    "QtScript.QScriptValue.PropertyFlag.PropertyFlags": [
+        "MultiFlag",
+        "PropertyFlag",
+        "PropertyFlags"
+    ],
+    "QtScript.QScriptValue.PropertyFlag": [
+        "OneFlag",
+        "PropertyFlag",
+        "PropertyFlags"
+    ],
+    "QtScript.QScriptValue.PropertyFlags": [
+        "MultiFlag",
+        "PropertyFlag",
+        "PropertyFlags"
+    ],
+    "QtScript.QScriptEngine.QObjectWrapOption.QObjectWrapOption": [
+        "OneFlag",
+        "QObjectWrapOption",
+        "QObjectWrapOptions"
+    ],
+    "QtScript.QScriptEngine.QObjectWrapOption.QObjectWrapOptions": [
+        "MultiFlag",
+        "QObjectWrapOption",
+        "QObjectWrapOptions"
+    ],
+    "QtScript.QScriptEngine.QObjectWrapOption": [
+        "OneFlag",
+        "QObjectWrapOption",
+        "QObjectWrapOptions"
+    ],
+    "QtScript.QScriptEngine.QObjectWrapOptions": [
+        "MultiFlag",
+        "QObjectWrapOption",
+        "QObjectWrapOptions"
+    ],
+    "QtSerialPort.QSerialPort.Direction.Direction": [
+        "OneFlag",
+        "Direction",
+        "Directions"
+    ],
+    "QtSerialPort.QSerialPort.Direction.Directions": [
+        "MultiFlag",
+        "Direction",
+        "Directions"
+    ],
+    "QtSerialPort.QSerialPort.Direction": [
+        "OneFlag",
+        "Direction",
+        "Directions"
+    ],
+    "QtSerialPort.QSerialPort.Directions": [
+        "MultiFlag",
+        "Direction",
+        "Directions"
+    ],
+    "QtSerialPort.QSerialPort.PinoutSignal.PinoutSignal": [
+        "OneFlag",
+        "PinoutSignal",
+        "PinoutSignals"
+    ],
+    "QtSerialPort.QSerialPort.PinoutSignal.PinoutSignals": [
+        "MultiFlag",
+        "PinoutSignal",
+        "PinoutSignals"
+    ],
+    "QtSerialPort.QSerialPort.PinoutSignal": [
+        "OneFlag",
+        "PinoutSignal",
+        "PinoutSignals"
+    ],
+    "QtSerialPort.QSerialPort.PinoutSignals": [
+        "MultiFlag",
+        "PinoutSignal",
+        "PinoutSignals"
+    ],
+    "QtSql.QSql.ParamTypeFlag.ParamTypeFlag": [
+        "OneFlag",
+        "ParamTypeFlag",
+        "ParamType"
+    ],
+    "QtSql.QSql.ParamTypeFlag.ParamType": [
+        "MultiFlag",
+        "ParamTypeFlag",
+        "ParamType"
+    ],
+    "QtSql.QSql.ParamTypeFlag": [
+        "OneFlag",
+        "ParamTypeFlag",
+        "ParamType"
+    ],
+    "QtSql.QSql.ParamType": [
+        "MultiFlag",
+        "ParamTypeFlag",
+        "ParamType"
+    ],
+    "QtWebEngineCore.QWebEngineUrlScheme.Flag.Flag": [
+        "OneFlag",
+        "Flag",
+        "Flags"
+    ],
+    "QtWebEngineCore.QWebEngineUrlScheme.Flag.Flags": [
+        "MultiFlag",
+        "Flag",
+        "Flags"
+    ],
+    "QtWebEngineCore.QWebEngineUrlScheme.Flag": [
+        "OneFlag",
+        "Flag",
+        "Flags"
+    ],
+    "QtWebEngineCore.QWebEngineUrlScheme.Flags": [
+        "MultiFlag",
+        "Flag",
+        "Flags"
+    ],
+    "QtWebEngineWidgets.QWebEngineContextMenuData.MediaFlag.MediaFlag": [
+        "OneFlag",
+        "MediaFlag",
+        "MediaFlags"
+    ],
+    "QtWebEngineWidgets.QWebEngineContextMenuData.MediaFlag.MediaFlags": [
+        "MultiFlag",
+        "MediaFlag",
+        "MediaFlags"
+    ],
+    "QtWebEngineWidgets.QWebEngineContextMenuData.MediaFlag": [
+        "OneFlag",
+        "MediaFlag",
+        "MediaFlags"
+    ],
+    "QtWebEngineWidgets.QWebEngineContextMenuData.MediaFlags": [
+        "MultiFlag",
+        "MediaFlag",
+        "MediaFlags"
+    ],
+    "QtWebEngineWidgets.QWebEngineContextMenuData.EditFlag.EditFlag": [
+        "OneFlag",
+        "EditFlag",
+        "EditFlags"
+    ],
+    "QtWebEngineWidgets.QWebEngineContextMenuData.EditFlag.EditFlags": [
+        "MultiFlag",
+        "EditFlag",
+        "EditFlags"
+    ],
+    "QtWebEngineWidgets.QWebEngineContextMenuData.EditFlag": [
+        "OneFlag",
+        "EditFlag",
+        "EditFlags"
+    ],
+    "QtWebEngineWidgets.QWebEngineContextMenuData.EditFlags": [
+        "MultiFlag",
+        "EditFlag",
+        "EditFlags"
+    ],
+    "QtWebEngineWidgets.QWebEnginePage.FindFlag.FindFlag": [
+        "OneFlag",
+        "FindFlag",
+        "FindFlags"
+    ],
+    "QtWebEngineWidgets.QWebEnginePage.FindFlag.FindFlags": [
+        "MultiFlag",
+        "FindFlag",
+        "FindFlags"
+    ],
+    "QtWebEngineWidgets.QWebEnginePage.FindFlag": [
+        "OneFlag",
+        "FindFlag",
+        "FindFlags"
+    ],
+    "QtWebEngineWidgets.QWebEnginePage.FindFlags": [
+        "MultiFlag",
+        "FindFlag",
+        "FindFlags"
+    ],
+    "QtWidgets.QTreeWidgetItemIterator.IteratorFlag.IteratorFlag": [
+        "OneFlag",
+        "IteratorFlag",
+        "IteratorFlags"
+    ],
+    "QtWidgets.QTreeWidgetItemIterator.IteratorFlag.IteratorFlags": [
+        "MultiFlag",
+        "IteratorFlag",
+        "IteratorFlags"
+    ],
+    "QtWidgets.QTreeWidgetItemIterator.IteratorFlag": [
+        "OneFlag",
+        "IteratorFlag",
+        "IteratorFlags"
+    ],
+    "QtWidgets.QTreeWidgetItemIterator.IteratorFlags": [
+        "MultiFlag",
+        "IteratorFlag",
+        "IteratorFlags"
+    ],
+    "QtWidgets.QSizePolicy.ControlType.ControlType": [
+        "OneFlag",
+        "ControlType",
+        "ControlTypes"
+    ],
+    "QtWidgets.QSizePolicy.ControlType.ControlTypes": [
+        "MultiFlag",
+        "ControlType",
+        "ControlTypes"
+    ],
+    "QtWidgets.QSizePolicy.ControlType": [
+        "OneFlag",
+        "ControlType",
+        "ControlTypes"
+    ],
+    "QtWidgets.QSizePolicy.ControlTypes": [
+        "MultiFlag",
+        "ControlType",
+        "ControlTypes"
+    ],
+    "QtWidgets.QGestureRecognizer.ResultFlag.ResultFlag": [
+        "OneFlag",
+        "ResultFlag",
+        "Result"
+    ],
+    "QtWidgets.QGestureRecognizer.ResultFlag.Result": [
+        "MultiFlag",
+        "ResultFlag",
+        "Result"
+    ],
+    "QtWidgets.QGestureRecognizer.ResultFlag": [
+        "OneFlag",
+        "ResultFlag",
+        "Result"
+    ],
+    "QtWidgets.QGestureRecognizer.Result": [
+        "MultiFlag",
+        "ResultFlag",
+        "Result"
+    ],
+    "QtWidgets.QFileIconProvider.Option.Option": [
+        "OneFlag",
+        "Option",
+        "Options"
+    ],
+    "QtWidgets.QFileIconProvider.Option.Options": [
+        "MultiFlag",
+        "Option",
+        "Options"
+    ],
+    "QtWidgets.QFileIconProvider.Option": [
+        "OneFlag",
+        "Option",
+        "Options"
+    ],
+    "QtWidgets.QFileIconProvider.Options": [
+        "MultiFlag",
+        "Option",
+        "Options"
+    ],
+    "QtWidgets.QGraphicsItem.GraphicsItemFlag.GraphicsItemFlag": [
+        "OneFlag",
+        "GraphicsItemFlag",
+        "GraphicsItemFlags"
+    ],
+    "QtWidgets.QGraphicsItem.GraphicsItemFlag.GraphicsItemFlags": [
+        "MultiFlag",
+        "GraphicsItemFlag",
+        "GraphicsItemFlags"
+    ],
+    "QtWidgets.QGraphicsItem.GraphicsItemFlag": [
+        "OneFlag",
+        "GraphicsItemFlag",
+        "GraphicsItemFlags"
+    ],
+    "QtWidgets.QGraphicsItem.GraphicsItemFlags": [
+        "MultiFlag",
+        "GraphicsItemFlag",
+        "GraphicsItemFlags"
+    ],
+    "QtWidgets.QStyleOptionToolBar.ToolBarFeature.ToolBarFeature": [
+        "OneFlag",
+        "ToolBarFeature",
+        "ToolBarFeatures"
+    ],
+    "QtWidgets.QStyleOptionToolBar.ToolBarFeature.ToolBarFeatures": [
+        "MultiFlag",
+        "ToolBarFeature",
+        "ToolBarFeatures"
+    ],
+    "QtWidgets.QStyleOptionToolBar.ToolBarFeature": [
+        "OneFlag",
+        "ToolBarFeature",
+        "ToolBarFeatures"
+    ],
+    "QtWidgets.QStyleOptionToolBar.ToolBarFeatures": [
+        "MultiFlag",
+        "ToolBarFeature",
+        "ToolBarFeatures"
+    ],
+    "QtWidgets.QStyleOptionToolButton.ToolButtonFeature.ToolButtonFeature": [
+        "OneFlag",
+        "ToolButtonFeature",
+        "ToolButtonFeatures"
+    ],
+    "QtWidgets.QStyleOptionToolButton.ToolButtonFeature.ToolButtonFeatures": [
+        "MultiFlag",
+        "ToolButtonFeature",
+        "ToolButtonFeatures"
+    ],
+    "QtWidgets.QStyleOptionToolButton.ToolButtonFeature": [
+        "OneFlag",
+        "ToolButtonFeature",
+        "ToolButtonFeatures"
+    ],
+    "QtWidgets.QStyleOptionToolButton.ToolButtonFeatures": [
+        "MultiFlag",
+        "ToolButtonFeature",
+        "ToolButtonFeatures"
+    ],
+    "QtWidgets.QStyleOptionButton.ButtonFeature.ButtonFeature": [
+        "OneFlag",
+        "ButtonFeature",
+        "ButtonFeatures"
+    ],
+    "QtWidgets.QStyleOptionButton.ButtonFeature.ButtonFeatures": [
+        "MultiFlag",
+        "ButtonFeature",
+        "ButtonFeatures"
+    ],
+    "QtWidgets.QStyleOptionButton.ButtonFeature": [
+        "OneFlag",
+        "ButtonFeature",
+        "ButtonFeatures"
+    ],
+    "QtWidgets.QStyleOptionButton.ButtonFeatures": [
+        "MultiFlag",
+        "ButtonFeature",
+        "ButtonFeatures"
+    ],
+    "QtWidgets.QStyleOptionTab.CornerWidget.CornerWidget": [
+        "OneFlag",
+        "CornerWidget",
+        "CornerWidgets"
+    ],
+    "QtWidgets.QStyleOptionTab.CornerWidget.CornerWidgets": [
+        "MultiFlag",
+        "CornerWidget",
+        "CornerWidgets"
+    ],
+    "QtWidgets.QStyleOptionTab.CornerWidget": [
+        "OneFlag",
+        "CornerWidget",
+        "CornerWidgets"
+    ],
+    "QtWidgets.QStyleOptionTab.CornerWidgets": [
+        "MultiFlag",
+        "CornerWidget",
+        "CornerWidgets"
+    ],
+    "QtWidgets.QStyleOptionTab.TabFeature.TabFeature": [
+        "OneFlag",
+        "TabFeature",
+        "TabFeatures"
+    ],
+    "QtWidgets.QStyleOptionTab.TabFeature.TabFeatures": [
+        "MultiFlag",
+        "TabFeature",
+        "TabFeatures"
+    ],
+    "QtWidgets.QStyleOptionTab.TabFeature": [
+        "OneFlag",
+        "TabFeature",
+        "TabFeatures"
+    ],
+    "QtWidgets.QStyleOptionTab.TabFeatures": [
+        "MultiFlag",
+        "TabFeature",
+        "TabFeatures"
+    ],
+    "QtWidgets.QStyleOptionFrame.FrameFeature.FrameFeature": [
+        "OneFlag",
+        "FrameFeature",
+        "FrameFeatures"
+    ],
+    "QtWidgets.QStyleOptionFrame.FrameFeature.FrameFeatures": [
+        "MultiFlag",
+        "FrameFeature",
+        "FrameFeatures"
+    ],
+    "QtWidgets.QStyleOptionFrame.FrameFeature": [
+        "OneFlag",
+        "FrameFeature",
+        "FrameFeatures"
+    ],
+    "QtWidgets.QStyleOptionFrame.FrameFeatures": [
+        "MultiFlag",
+        "FrameFeature",
+        "FrameFeatures"
+    ],
+    "QtWidgets.QStyle.StateFlag.StateFlag": [
+        "OneFlag",
+        "StateFlag",
+        "State"
+    ],
+    "QtWidgets.QStyle.StateFlag.State": [
+        "MultiFlag",
+        "StateFlag",
+        "State"
+    ],
+    "QtWidgets.QStyle.StateFlag": [
+        "OneFlag",
+        "StateFlag",
+        "State"
+    ],
+    "QtWidgets.QStyle.State": [
+        "MultiFlag",
+        "StateFlag",
+        "State"
+    ],
+    "QtWidgets.QStyle.SubControl.SubControl": [
+        "OneFlag",
+        "SubControl",
+        "SubControls"
+    ],
+    "QtWidgets.QStyle.SubControl.SubControls": [
+        "MultiFlag",
+        "SubControl",
+        "SubControls"
+    ],
+    "QtWidgets.QStyle.SubControl": [
+        "OneFlag",
+        "SubControl",
+        "SubControls"
+    ],
+    "QtWidgets.QStyle.SubControls": [
+        "MultiFlag",
+        "SubControl",
+        "SubControls"
+    ],
+    "QtWidgets.QGraphicsScene.SceneLayer.SceneLayer": [
+        "OneFlag",
+        "SceneLayer",
+        "SceneLayers"
+    ],
+    "QtWidgets.QGraphicsScene.SceneLayer.SceneLayers": [
+        "MultiFlag",
+        "SceneLayer",
+        "SceneLayers"
+    ],
+    "QtWidgets.QGraphicsScene.SceneLayer": [
+        "OneFlag",
+        "SceneLayer",
+        "SceneLayers"
+    ],
+    "QtWidgets.QGraphicsScene.SceneLayers": [
+        "MultiFlag",
+        "SceneLayer",
+        "SceneLayers"
+    ],
+    "QtWidgets.QWidget.RenderFlag.RenderFlag": [
+        "OneFlag",
+        "RenderFlag",
+        "RenderFlags"
+    ],
+    "QtWidgets.QWidget.RenderFlag.RenderFlags": [
+        "MultiFlag",
+        "RenderFlag",
+        "RenderFlags"
+    ],
+    "QtWidgets.QWidget.RenderFlag": [
+        "OneFlag",
+        "RenderFlag",
+        "RenderFlags"
+    ],
+    "QtWidgets.QWidget.RenderFlags": [
+        "MultiFlag",
+        "RenderFlag",
+        "RenderFlags"
+    ],
+    "QtWidgets.QFontComboBox.FontFilter.FontFilter": [
+        "OneFlag",
+        "FontFilter",
+        "FontFilters"
+    ],
+    "QtWidgets.QFontComboBox.FontFilter.FontFilters": [
+        "MultiFlag",
+        "FontFilter",
+        "FontFilters"
+    ],
+    "QtWidgets.QFontComboBox.FontFilter": [
+        "OneFlag",
+        "FontFilter",
+        "FontFilters"
+    ],
+    "QtWidgets.QFontComboBox.FontFilters": [
+        "MultiFlag",
+        "FontFilter",
+        "FontFilters"
+    ],
+    "QtWidgets.QStyleOptionViewItem.ViewItemFeature.ViewItemFeature": [
+        "OneFlag",
+        "ViewItemFeature",
+        "ViewItemFeatures"
+    ],
+    "QtWidgets.QStyleOptionViewItem.ViewItemFeature.ViewItemFeatures": [
+        "MultiFlag",
+        "ViewItemFeature",
+        "ViewItemFeatures"
+    ],
+    "QtWidgets.QStyleOptionViewItem.ViewItemFeature": [
+        "OneFlag",
+        "ViewItemFeature",
+        "ViewItemFeatures"
+    ],
+    "QtWidgets.QStyleOptionViewItem.ViewItemFeatures": [
+        "MultiFlag",
+        "ViewItemFeature",
+        "ViewItemFeatures"
+    ],
+    "QtWidgets.QAbstractSpinBox.StepEnabledFlag.StepEnabledFlag": [
+        "OneFlag",
+        "StepEnabledFlag",
+        "StepEnabled"
+    ],
+    "QtWidgets.QAbstractSpinBox.StepEnabledFlag.StepEnabled": [
+        "MultiFlag",
+        "StepEnabledFlag",
+        "StepEnabled"
+    ],
+    "QtWidgets.QAbstractSpinBox.StepEnabledFlag": [
+        "OneFlag",
+        "StepEnabledFlag",
+        "StepEnabled"
+    ],
+    "QtWidgets.QAbstractSpinBox.StepEnabled": [
+        "MultiFlag",
+        "StepEnabledFlag",
+        "StepEnabled"
+    ],
+    "QtWidgets.QDateTimeEdit.Section.Section": [
+        "OneFlag",
+        "Section",
+        "Sections"
+    ],
+    "QtWidgets.QDateTimeEdit.Section.Sections": [
+        "MultiFlag",
+        "Section",
+        "Sections"
+    ],
+    "QtWidgets.QDateTimeEdit.Section": [
+        "OneFlag",
+        "Section",
+        "Sections"
+    ],
+    "QtWidgets.QDateTimeEdit.Sections": [
+        "MultiFlag",
+        "Section",
+        "Sections"
+    ],
+    "QtWidgets.QTextEdit.AutoFormattingFlag.AutoFormattingFlag": [
+        "OneFlag",
+        "AutoFormattingFlag",
+        "AutoFormatting"
+    ],
+    "QtWidgets.QTextEdit.AutoFormattingFlag.AutoFormatting": [
+        "MultiFlag",
+        "AutoFormattingFlag",
+        "AutoFormatting"
+    ],
+    "QtWidgets.QTextEdit.AutoFormattingFlag": [
+        "OneFlag",
+        "AutoFormattingFlag",
+        "AutoFormatting"
+    ],
+    "QtWidgets.QTextEdit.AutoFormatting": [
+        "MultiFlag",
+        "AutoFormattingFlag",
+        "AutoFormatting"
+    ],
+    "QtWidgets.QAbstractItemView.EditTrigger.EditTrigger": [
+        "OneFlag",
+        "EditTrigger",
+        "EditTriggers"
+    ],
+    "QtWidgets.QAbstractItemView.EditTrigger.EditTriggers": [
+        "MultiFlag",
+        "EditTrigger",
+        "EditTriggers"
+    ],
+    "QtWidgets.QAbstractItemView.EditTrigger": [
+        "OneFlag",
+        "EditTrigger",
+        "EditTriggers"
+    ],
+    "QtWidgets.QAbstractItemView.EditTriggers": [
+        "MultiFlag",
+        "EditTrigger",
+        "EditTriggers"
+    ],
+    "QtWidgets.QMdiArea.AreaOption.AreaOption": [
+        "OneFlag",
+        "AreaOption",
+        "AreaOptions"
+    ],
+    "QtWidgets.QMdiArea.AreaOption.AreaOptions": [
+        "MultiFlag",
+        "AreaOption",
+        "AreaOptions"
+    ],
+    "QtWidgets.QMdiArea.AreaOption": [
+        "OneFlag",
+        "AreaOption",
+        "AreaOptions"
+    ],
+    "QtWidgets.QMdiArea.AreaOptions": [
+        "MultiFlag",
+        "AreaOption",
+        "AreaOptions"
+    ],
+    "QtWidgets.QGraphicsView.CacheModeFlag.CacheModeFlag": [
+        "OneFlag",
+        "CacheModeFlag",
+        "CacheMode"
+    ],
+    "QtWidgets.QGraphicsView.CacheModeFlag.CacheMode": [
+        "MultiFlag",
+        "CacheModeFlag",
+        "CacheMode"
+    ],
+    "QtWidgets.QGraphicsView.CacheModeFlag": [
+        "OneFlag",
+        "CacheModeFlag",
+        "CacheMode"
+    ],
+    "QtWidgets.QGraphicsView.CacheMode": [
+        "MultiFlag",
+        "CacheModeFlag",
+        "CacheMode"
+    ],
+    "QtWidgets.QGraphicsView.OptimizationFlag.OptimizationFlag": [
+        "OneFlag",
+        "OptimizationFlag",
+        "OptimizationFlags"
+    ],
+    "QtWidgets.QGraphicsView.OptimizationFlag.OptimizationFlags": [
+        "MultiFlag",
+        "OptimizationFlag",
+        "OptimizationFlags"
+    ],
+    "QtWidgets.QGraphicsView.OptimizationFlag": [
+        "OneFlag",
+        "OptimizationFlag",
+        "OptimizationFlags"
+    ],
+    "QtWidgets.QGraphicsView.OptimizationFlags": [
+        "MultiFlag",
+        "OptimizationFlag",
+        "OptimizationFlags"
+    ],
+    "QtWidgets.QDockWidget.DockWidgetFeature.DockWidgetFeature": [
+        "OneFlag",
+        "DockWidgetFeature",
+        "DockWidgetFeatures"
+    ],
+    "QtWidgets.QDockWidget.DockWidgetFeature.DockWidgetFeatures": [
+        "MultiFlag",
+        "DockWidgetFeature",
+        "DockWidgetFeatures"
+    ],
+    "QtWidgets.QDockWidget.DockWidgetFeature": [
+        "OneFlag",
+        "DockWidgetFeature",
+        "DockWidgetFeatures"
+    ],
+    "QtWidgets.QDockWidget.DockWidgetFeatures": [
+        "MultiFlag",
+        "DockWidgetFeature",
+        "DockWidgetFeatures"
+    ],
+    "QtWidgets.QMdiSubWindow.SubWindowOption.SubWindowOption": [
+        "OneFlag",
+        "SubWindowOption",
+        "SubWindowOptions"
+    ],
+    "QtWidgets.QMdiSubWindow.SubWindowOption.SubWindowOptions": [
+        "MultiFlag",
+        "SubWindowOption",
+        "SubWindowOptions"
+    ],
+    "QtWidgets.QMdiSubWindow.SubWindowOption": [
+        "OneFlag",
+        "SubWindowOption",
+        "SubWindowOptions"
+    ],
+    "QtWidgets.QMdiSubWindow.SubWindowOptions": [
+        "MultiFlag",
+        "SubWindowOption",
+        "SubWindowOptions"
+    ],
+    "QtWidgets.QDialogButtonBox.StandardButton.StandardButton": [
+        "OneFlag",
+        "StandardButton",
+        "StandardButtons"
+    ],
+    "QtWidgets.QDialogButtonBox.StandardButton.StandardButtons": [
+        "MultiFlag",
+        "StandardButton",
+        "StandardButtons"
+    ],
+    "QtWidgets.QDialogButtonBox.StandardButton": [
+        "OneFlag",
+        "StandardButton",
+        "StandardButtons"
+    ],
+    "QtWidgets.QDialogButtonBox.StandardButtons": [
+        "MultiFlag",
+        "StandardButton",
+        "StandardButtons"
+    ],
+    "QtWidgets.QMainWindow.DockOption.DockOption": [
+        "OneFlag",
+        "DockOption",
+        "DockOptions"
+    ],
+    "QtWidgets.QMainWindow.DockOption.DockOptions": [
+        "MultiFlag",
+        "DockOption",
+        "DockOptions"
+    ],
+    "QtWidgets.QMainWindow.DockOption": [
+        "OneFlag",
+        "DockOption",
+        "DockOptions"
+    ],
+    "QtWidgets.QMainWindow.DockOptions": [
+        "MultiFlag",
+        "DockOption",
+        "DockOptions"
+    ],
+    "QtWidgets.QMessageBox.StandardButton.StandardButton": [
+        "OneFlag",
+        "StandardButton",
+        "StandardButtons"
+    ],
+    "QtWidgets.QMessageBox.StandardButton.StandardButtons": [
+        "MultiFlag",
+        "StandardButton",
+        "StandardButtons"
+    ],
+    "QtWidgets.QMessageBox.StandardButton": [
+        "OneFlag",
+        "StandardButton",
+        "StandardButtons"
+    ],
+    "QtWidgets.QMessageBox.StandardButtons": [
+        "MultiFlag",
+        "StandardButton",
+        "StandardButtons"
+    ],
+    "QtWidgets.QFontDialog.FontDialogOption.FontDialogOption": [
+        "OneFlag",
+        "FontDialogOption",
+        "FontDialogOptions"
+    ],
+    "QtWidgets.QFontDialog.FontDialogOption.FontDialogOptions": [
+        "MultiFlag",
+        "FontDialogOption",
+        "FontDialogOptions"
+    ],
+    "QtWidgets.QFontDialog.FontDialogOption": [
+        "OneFlag",
+        "FontDialogOption",
+        "FontDialogOptions"
+    ],
+    "QtWidgets.QFontDialog.FontDialogOptions": [
+        "MultiFlag",
+        "FontDialogOption",
+        "FontDialogOptions"
+    ],
+    "QtWidgets.QColorDialog.ColorDialogOption.ColorDialogOption": [
+        "OneFlag",
+        "ColorDialogOption",
+        "ColorDialogOptions"
+    ],
+    "QtWidgets.QColorDialog.ColorDialogOption.ColorDialogOptions": [
+        "MultiFlag",
+        "ColorDialogOption",
+        "ColorDialogOptions"
+    ],
+    "QtWidgets.QColorDialog.ColorDialogOption": [
+        "OneFlag",
+        "ColorDialogOption",
+        "ColorDialogOptions"
+    ],
+    "QtWidgets.QColorDialog.ColorDialogOptions": [
+        "MultiFlag",
+        "ColorDialogOption",
+        "ColorDialogOptions"
+    ],
+    "QtWidgets.QWizard.WizardOption.WizardOption": [
+        "OneFlag",
+        "WizardOption",
+        "WizardOptions"
+    ],
+    "QtWidgets.QWizard.WizardOption.WizardOptions": [
+        "MultiFlag",
+        "WizardOption",
+        "WizardOptions"
+    ],
+    "QtWidgets.QWizard.WizardOption": [
+        "OneFlag",
+        "WizardOption",
+        "WizardOptions"
+    ],
+    "QtWidgets.QWizard.WizardOptions": [
+        "MultiFlag",
+        "WizardOption",
+        "WizardOptions"
+    ],
+    "QtWidgets.QGraphicsEffect.ChangeFlag.ChangeFlag": [
+        "OneFlag",
+        "ChangeFlag",
+        "ChangeFlags"
+    ],
+    "QtWidgets.QGraphicsEffect.ChangeFlag.ChangeFlags": [
+        "MultiFlag",
+        "ChangeFlag",
+        "ChangeFlags"
+    ],
+    "QtWidgets.QGraphicsEffect.ChangeFlag": [
+        "OneFlag",
+        "ChangeFlag",
+        "ChangeFlags"
+    ],
+    "QtWidgets.QGraphicsEffect.ChangeFlags": [
+        "MultiFlag",
+        "ChangeFlag",
+        "ChangeFlags"
+    ],
+    "QtWidgets.QGraphicsBlurEffect.BlurHint.BlurHint": [
+        "OneFlag",
+        "BlurHint",
+        "BlurHints"
+    ],
+    "QtWidgets.QGraphicsBlurEffect.BlurHint.BlurHints": [
+        "MultiFlag",
+        "BlurHint",
+        "BlurHints"
+    ],
+    "QtWidgets.QGraphicsBlurEffect.BlurHint": [
+        "OneFlag",
+        "BlurHint",
+        "BlurHints"
+    ],
+    "QtWidgets.QGraphicsBlurEffect.BlurHints": [
+        "MultiFlag",
+        "BlurHint",
+        "BlurHints"
+    ],
+    "QtWidgets.QPinchGesture.ChangeFlag.ChangeFlag": [
+        "OneFlag",
+        "ChangeFlag",
+        "ChangeFlags"
+    ],
+    "QtWidgets.QPinchGesture.ChangeFlag.ChangeFlags": [
+        "MultiFlag",
+        "ChangeFlag",
+        "ChangeFlags"
+    ],
+    "QtWidgets.QPinchGesture.ChangeFlag": [
+        "OneFlag",
+        "ChangeFlag",
+        "ChangeFlags"
+    ],
+    "QtWidgets.QPinchGesture.ChangeFlags": [
+        "MultiFlag",
+        "ChangeFlag",
+        "ChangeFlags"
+    ],
+    "QtWidgets.QFileDialog.Option.Option": [
+        "OneFlag",
+        "Option",
+        "Options"
+    ],
+    "QtWidgets.QFileDialog.Option.Options": [
+        "MultiFlag",
+        "Option",
+        "Options"
+    ],
+    "QtWidgets.QFileDialog.Option": [
+        "OneFlag",
+        "Option",
+        "Options"
+    ],
+    "QtWidgets.QFileDialog.Options": [
+        "MultiFlag",
+        "Option",
+        "Options"
+    ],
+    "QtWidgets.QFileSystemModel.Option.Option": [
+        "OneFlag",
+        "Option",
+        "Options"
+    ],
+    "QtWidgets.QFileSystemModel.Option.Options": [
+        "MultiFlag",
+        "Option",
+        "Options"
+    ],
+    "QtWidgets.QFileSystemModel.Option": [
+        "OneFlag",
+        "Option",
+        "Options"
+    ],
+    "QtWidgets.QFileSystemModel.Options": [
+        "MultiFlag",
+        "Option",
+        "Options"
+    ]
+}
