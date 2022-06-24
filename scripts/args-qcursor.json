@@ -1,0 +1,18 @@
+{
+    "collected": {
+        "QtGui.QCursor.__init__().cursor": "QCursor",
+        "QtGui.QCursor.swap().other": "QCursor",
+        "QtGui.QGuiApplication.changeOverrideCursor().arg__1": "QCursor",
+        "QtGui.QGuiApplication.setOverrideCursor().arg__1": "QCursor",
+        "QtWidgets.QGraphicsItem.setCursor().cursor": "QCursor",
+        "QtWidgets.QWidget.grabMouse().arg__1": "QCursor"
+    },
+    "fixed": {
+        "QtGui.QCursor.__init__().cursor": "QCursor",
+        "QtGui.QCursor.swap().other": "QCursor",
+        "QtGui.QGuiApplication.changeOverrideCursor().arg__1": "QCursor",
+        "QtGui.QGuiApplication.setOverrideCursor().arg__1": "QCursor",
+        "QtWidgets.QGraphicsItem.setCursor().cursor": "QCursor",
+        "QtWidgets.QWidget.grabMouse().arg__1": "QCursor"
+    }
+}
