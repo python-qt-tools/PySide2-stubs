@@ -1,7 +1,6 @@
 
 
-
-Version 5.15.2.1.2: (in progress)
+Version 5.15.2.1.2:
 ===================
 Many core improvements over previous version
 
@@ -9,8 +8,8 @@ Many core improvements over previous version
 * add all missing signals to the stubs (many were missing)
 * incorrect methods names are no longer silently ignored
 * fix all QFlags values incorrectly declared as the QFlag wrapping class
-* fix all method accepting a QCursor to accept also a `Qt.CursorShape`
-* add conversion from QByteArray to bytes
+* fix all method accepting a `QCursor` to accept also a `Qt.CursorShape`
+* add conversion from `QByteArray` to bytes
 * add `exec()` to QDialog
 * fix `data()` and `setData()` to accept Qt.ItemDataRole
 * add all method for operations on QFlag: `__or__`, `__xor__`, ...

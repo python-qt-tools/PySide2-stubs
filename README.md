@@ -5,21 +5,35 @@
 
 # Mypy stubs for the PySide2 (Qt5 for Python)
 
-*Author :* Philippe Fremy (with inspiration from the [PyQt5-stubs project](https://github.com/python-qt-tools/PyQt5-stubs/))
+*Author :* Philippe Fremy
 
-If you want to use `mypy` with your `PySide2` project and found the official stubs to be of insufficient quality, 
-you are at the right place. This project improves the official stubs delivered by [Qt5 for Python/PySide2](https://pypi.org/project/PySide2/).
+The official typing stubs delivered along [Qt5 for Python/PySide2](https://pypi.org/project/PySide2/) are insufficent 
+for proper typing verification with `mypy`. This package fixes this by providing curated and updated stubs.
 
 ### Improvements:
-* fix Signal with method emit()
-* fix qVersion() returning string, not bytes
-* fix QMessageBox.warning, information, critical, question, about, aboutQt to accept None as parent argument
-* fix QAction.setShortcut() to accept string as argument
-* fix QTreeWidgetItem comparison with <
-* fix QTimer.timeout undeclared signal
-* fix QLineEdit.setText() to accept None
+* fix `Signal` to make it accept method emit()
+* fix `qVersion()` returns string, not bytes
+* fix `QMessageBox.warning`, information, critical, question, about, aboutQt to accept None as parent argument
+* fix `QProgressDialog.setCancelButton()` accepting None
+* fix `QTreeWidgetItem` comparison with `<`
+* fix `Signal.connect()` return value to bool instead of None
+* fix `QTimer.timeout` undeclared signal
+* support all `QSize` and `QSizeF` operations
+* fix `QLineEdit.setText()` to accept None
+* add `QDialogButtonBox.StandardButton` `__or__` operations
+* fix missing methods being undetected for all Qt objects
+* add all missing signals to the stubs (many were missing)
+* fix all method accepting a `QCursor` to accept also a `Qt.CursorShape`
+* add conversion from `QByteArray` to bytes
+* add `exec()` to QDialog
+* fix `data()` and `setData()` to accept Qt.ItemDataRole
+* add all method for operations on QFlag derived classes: `__or__`, `__xor__`, ...
+* fix all method accepting a QColor to accept also a `Qt.GlobalColor`
 
-See [CHANGELOG.md](CHANGELOG.md) for more details.
+
+See [CHANGELOG.md](CHANGELOG.md) for full details.
+
+This effort was inspired by the [PyQt5-stubs](https://pypi.org/project/PyQt5-stubs/) project.
 
 Please note that this work is far from complete. Don't hesitate to report problems or propose improvements.
 
@@ -36,7 +50,7 @@ Simply install the official PySide2-stubs with pip:
 
 Or use the latest version from Github:
 
-    $ pip install git+https://github.com/bluebird75/PySide2-stubs
+    $ pip install git+https://github.com/python-qt-tools/PySide2-stubs
 
 
 That's it, in both cases, the new stubs are picked up automatically by `mypy`. Typechecking process should be much better.
