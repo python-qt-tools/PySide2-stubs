@@ -14,6 +14,8 @@ Many core improvements over previous version
 * fix `data()` and `setData()` to accept Qt.ItemDataRole
 * add all method for operations on QFlag: `__or__`, `__xor__`, ...
 * fix all method accepting a QColor to accept also a `Qt.GlobalColor`
+* fix signature of `QCoreApplication.translate()`
+* fix `QLabel.setAlignment()` to accept also Qt.AlignmentFlag
 
 
 Version 5.15.2.1.0:

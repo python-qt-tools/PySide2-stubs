@@ -29,6 +29,8 @@ for proper typing verification with `mypy`. This package fixes this by providing
 * fix `data()` and `setData()` to accept Qt.ItemDataRole
 * add all method for operations on QFlag derived classes: `__or__`, `__xor__`, ...
 * fix all method accepting a QColor to accept also a `Qt.GlobalColor`
+* fix signature of `QCoreApplication.translate()`
+* fix `QLabel.setAlignment()` to accept also Qt.AlignmentFlag
 
 
 See [CHANGELOG.md](CHANGELOG.md) for full details.
