@@ -12,7 +12,7 @@ jobs:
 
     runs-on: windows-latest
     strategy:
-      fail-fast: true
+      # fail-fast: true
       matrix:
         include:
           # oldest version of pyhon / mypy which works
@@ -37,6 +37,7 @@ jobs:
         python -m pip install pytest
         python -m pip install mypy==${{ matrix.mypy-version }}
         pip install -e .
-        pip freeze
+        # pip freeze
+        pip list
         pytest -v
 
