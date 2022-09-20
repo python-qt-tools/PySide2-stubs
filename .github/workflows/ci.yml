@@ -16,12 +16,12 @@ jobs:
       matrix:
         include:
           # oldest version of pyhon / mypy which works
-          - python-version: ["3.6"]
-            mypy-version: ["0.940"]
+          - python-version: "3.6"
+            mypy-version: "0.940"
 
           # latest version of everything
-          - python-version: ["3.10"]
-            mypy-version: ["0.971"]
+          - python-version: "3.10"
+            mypy-version: "0.971"
 
     steps:
     - uses: actions/checkout@v3
