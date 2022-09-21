@@ -1,3 +1,4 @@
 .env*
 /dist/
 /PySide2_stubs.egg-info
+.mypy_cache
