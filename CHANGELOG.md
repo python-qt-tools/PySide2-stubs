@@ -1,4 +1,8 @@
 
+To be released
+==============
+* remove `@staticmethod` applied to functions
+
 
 Version 5.15.2.1.2:
 ===================
