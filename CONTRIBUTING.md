@@ -15,8 +15,6 @@ This is the easiest/quickest way in terms of setup.
 
 1. Clone pyside2-stubs
 
-   pip install -r dev-requirements.txt
-
 
 2. Add test showing the incorrect stub. For example, I noticed that QAction.setShortcut() was declared to support
    only QKeySequence whereas a simple string is also supported.
@@ -32,9 +30,12 @@ This is the easiest/quickest way in terms of setup.
 3. Fix the PySide2 stubs. In my case, I changed the signature of QAction.setShortcut()
 
    from:
+
+
       def setShortcut(a: QKeySequence) -> None: ...
    
    to:
+
       def setShortcut(a: typing.Union[QKeySequence, str]) -> None: ...
 
 
@@ -56,18 +57,20 @@ Here, you take all the steps to reproduce a complete stub testing environement t
 
 2. Create a virtual environment (I used .env as a name for my virtual environment) and activate it.
 
-   > python -m venv .env  
-   > .env\scripts\activate
+
+      $ python -m venv .env  
+      $ .env\scripts\activate
 
 
 3. Install the required packages for running the tests.
 
-    pip install -r dev-requirements.txt
+       pip install -r dev-requirements.txt
 
 
 4. Make your current directory an editable installed package.
 
-   pip install -e .
+
+      pip install -e .
 
    Note: currently, with pip 22 and above, and mypy 0.971, the editable installation is not picked by mypy.
          For the CI, I need to force pip to version 21.2 for it to work. You may need to force pip also to this version.
@@ -151,8 +154,11 @@ Here, you take all the steps to reproduce a complete stub testing environement t
 8. Fix the PySide2 stubs. In my case, I changed the signature of QAction.setShortcut() 
 
    from:
+
        def setShortcut(a: QKeySequence) -> None: ...
+
    to:
+
        def setShortcut(a: typing.Union[QKeySequence, str]) -> None: ...
 
 

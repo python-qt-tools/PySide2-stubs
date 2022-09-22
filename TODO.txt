@@ -1,37 +1,31 @@
 
 General TODO:
 =============
-- Signal.connect() arguments are dead wrong
-- All nested QFlags are incorrect in the parent class
-    Example:
-
-    class Qt:
-        [...]
-        AnchorLeft: Qt = ...
-
-    [...]
-    class AnchorPoint:
-        AnchorLeft: AnchorPoint = ...
-
-    The first declaration has an incorrect type
-
-- QGuiApplication() and QApplication() are missing the instance() method
-- all method in QCoreApplication are static ???
-- all classes are missing signals
 - some functions are decorated with @staticmethod !
 - more tests from PyQt5-stubs
+- explain how to make a new release
+- create dev-requirements.txt
+
+
+to check:
+- Signal.connect() arguments are dead wrong
+- QGuiApplication() and QApplication() are missing the instance() method
+- all method in QCoreApplication are static ???
 
 
 
-First Release:
-==============
-- [done] CI running in GitHub
-- [done] setup.cfg working
-- all platform specific stubs
-- [bof] run mypy locally on our stubs and fix errors
-- [done] add show error codes to mypy call
-- update README properly
+Won't do:
+========
+- run mypy locally on our stubs and fix errors
+    => too many errors not fixable easily like empty containers type: List instead List[str], ...
 
 Done:
 ====
+- make it work: run pytest inside GitHub action
+- explain how to add a new test
+- explain how scripts/ work
+- [done] add show error codes to mypy call
+- all platform specific stubs
+- [done] update README properly
+- [done] setup.cfg working
 - all tests from PyQt5 working
