@@ -1,17 +1,7 @@
 
 General TODO:
 =============
-- some functions are decorated with @staticmethod !
-- more tests from PyQt5-stubs
 - explain how to make a new release
-- create dev-requirements.txt
-
-
-to check:
-- Signal.connect() arguments are dead wrong
-- QGuiApplication() and QApplication() are missing the instance() method
-- all method in QCoreApplication are static ???
-
 
 
 Won't do:
@@ -21,6 +11,12 @@ Won't do:
 
 Done:
 ====
+- Signal.connect() arguments are dead wrong
+- all method in QCoreApplication are static ???
+- QGuiApplication() and QApplication() are missing the instance() method
+- more tests from PyQt5-stubs
+- [done] some functions are decorated with @staticmethod !
+- [done] create dev-requirements.txt
 - make it work: run pytest inside GitHub action
 - explain how to add a new test
 - explain how scripts/ work
