@@ -3,6 +3,13 @@ from typing import Optional
 from PySide2.QtWidgets import QTreeWidget, QTreeWidgetItem
 
 t = QTreeWidget()
-item = t.topLevelItem(400)
+topItem = t.topLevelItem(400)
+
+item = QTreeWidgetItem(t, ['abc'])
+
+# it should be possible to remove the item widget for an item
+t.setItemWidget(item, 0, None)
+
 # default type returned by topLevelItem() should allow None value
-item = None
+topItem = None
+

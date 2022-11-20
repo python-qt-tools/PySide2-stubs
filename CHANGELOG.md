@@ -3,6 +3,7 @@ To be released
 ==============
 * remove `@staticmethod` applied to functions
 * fix `QTabBar.setButtonWidget()` to accept `None` as a widget argument
+* fix `QTreeWidget.setItemWidget()`  and `QListWidget.setItemWidget()` to accept `None` as a widget argument
 
 
 Version 5.15.2.1.2:
