@@ -13780,6 +13780,10 @@ Func_args_T1_T2_T3_T4_T5_T6_returns_RetT = typing.Callable[[T1, T2, T3, T4, T5, 
 ###        For 7 arguments, only the return value is typechecked if the result is provided.
 
 @typing.overload
+def Slot(*some_types: typing.Type, result: typing.Type = ...) \
+        -> typing.Callable[[typing.Callable[..., RetT]],
+                           typing.Callable[..., RetT]]: ...
+@typing.overload
 def Slot(t1: typing.Type[T1]) \
         -> typing.Callable[ [Func_args_T1_return_RetT[T1, RetT]],
                             Func_args_T1_return_RetT[T1, RetT]
@@ -13837,11 +13841,6 @@ def Slot(t1: typing.Type[T1], t2: typing.Type[T2], t3: typing.Type[T3], t4: typi
         -> typing.Callable[[Func_args_T1_T2_T3_T4_T5_returns_RetT[T1, T2, T3, T4, T5, RetT]],
                            Func_args_T1_T2_T3_T4_T5_returns_RetT[T1, T2, T3, T4, T5, RetT]
         ]: ...
-@typing.overload
-def Slot(*some_types: typing.Type, result: typing.Type = ...) \
-        -> typing.Callable[[typing.Callable[..., RetT]],
-                           typing.Callable[..., RetT]]: ...
-
 
 
 def QEnum(arg__1:object) -> object: ...
