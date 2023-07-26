@@ -10,7 +10,6 @@ class SomeClassWithSignal(QObject):
 
     def __init__(self) -> None:
         super().__init__()  # note: this is mandatory for mypy to pickup the class attribute access
-        self.connect(self,SIGNAL('clicked()'),self.my_slot_no_arg)
 
     def my_slot_no_arg(self) -> None:
         pass
@@ -20,6 +19,8 @@ class SomeClassWithSignal(QObject):
 
 
 instance = SomeClassWithSignal()
+
+SomeClassWithSignal.connect(instance, SIGNAL('clicked()'), instance.my_slot_no_arg)
 
 connection = True
 connection = instance.signal_no_arg.connect(instance.my_slot_no_arg)

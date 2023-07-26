@@ -13766,12 +13766,12 @@ T3 = typing.TypeVar('T3')
 T4 = typing.TypeVar('T4')
 T5 = typing.TypeVar('T5')
 T6 = typing.TypeVar('T6')
-Func_args_T1_return_RetT = typing.Callable[[T1], RetT]
-Func_args_T1_T2_returns_RetT = typing.Callable[[T1, T2], RetT]
-Func_args_T1_T2_T3_returns_RetT = typing.Callable[[T1, T2, T3], RetT]
-Func_args_T1_T2_T3_T4_returns_RetT = typing.Callable[[T1, T2, T3, T4], RetT]
-Func_args_T1_T2_T3_T4_T5_returns_RetT = typing.Callable[[T1, T2, T3, T4, T5], RetT]
-Func_args_T1_T2_T3_T4_T5_T6_returns_RetT = typing.Callable[[T1, T2, T3, T4, T5, T6], RetT]
+Method_args_T1_return_RetT                 = typing.Callable[[typing.Any, T1], RetT]
+Method_args_T1_T2_returns_RetT             = typing.Callable[[typing.Any, T1, T2], RetT]
+Method_args_T1_T2_T3_returns_RetT          = typing.Callable[[typing.Any, T1, T2, T3], RetT]
+Method_args_T1_T2_T3_T4_returns_RetT       = typing.Callable[[typing.Any, T1, T2, T3, T4], RetT]
+Method_args_T1_T2_T3_T4_T5_returns_RetT    = typing.Callable[[typing.Any, T1, T2, T3, T4, T5], RetT]
+Method_args_T1_T2_T3_T4_T5_T6_returns_RetT = typing.Callable[[typing.Any, T1, T2, T3, T4, T5, T6], RetT]
 
 ### Note:  Order matters, put the defintions with 'result' after the defintions with multiple arguments
 ### Note2: This will typecheck up to 5 arguments, with an optional result keyword argument
@@ -13781,61 +13781,61 @@ Func_args_T1_T2_T3_T4_T5_T6_returns_RetT = typing.Callable[[T1, T2, T3, T4, T5, 
 
 @typing.overload
 def Slot(t1: typing.Type[T1]) \
-        -> typing.Callable[ [Func_args_T1_return_RetT[T1, RetT]],
-                            Func_args_T1_return_RetT[T1, RetT]
+        -> typing.Callable[ [Method_args_T1_return_RetT[T1, RetT]],
+                            Method_args_T1_return_RetT[T1, RetT]
         ]:
     return object
 @typing.overload
 def Slot(t1: typing.Type[T1], t2: typing.Type[T2]) \
-        -> typing.Callable[[Func_args_T1_T2_returns_RetT[T1, T2, RetT]],
-                            Func_args_T1_T2_returns_RetT[T1, T2, RetT]
+        -> typing.Callable[[Method_args_T1_T2_returns_RetT[T1, T2, RetT]],
+                            Method_args_T1_T2_returns_RetT[T1, T2, RetT]
                         ]: ...
 @typing.overload
 def Slot(t1: typing.Type[T1], t2: typing.Type[T2], t3: typing.Type[T3]) \
-        -> typing.Callable[[Func_args_T1_T2_T3_returns_RetT[T1, T2, T3, RetT]],
-                           Func_args_T1_T2_T3_returns_RetT[T1, T2, T3, RetT]
+        -> typing.Callable[[Method_args_T1_T2_T3_returns_RetT[T1, T2, T3, RetT]],
+                            Method_args_T1_T2_T3_returns_RetT[T1, T2, T3, RetT]
         ]: ...
 @typing.overload
 def Slot(t1: typing.Type[T1], t2: typing.Type[T2], t3: typing.Type[T3], t4: typing.Type[T4]) \
-        -> typing.Callable[[Func_args_T1_T2_T3_T4_returns_RetT[T1, T2, T3, T4, RetT]],
-                           Func_args_T1_T2_T3_T4_returns_RetT[T1, T2, T3, T4, RetT]
+        -> typing.Callable[[Method_args_T1_T2_T3_T4_returns_RetT[T1, T2, T3, T4, RetT]],
+                            Method_args_T1_T2_T3_T4_returns_RetT[T1, T2, T3, T4, RetT]
         ]: ...
 @typing.overload
 def Slot(t1: typing.Type[T1], t2: typing.Type[T2], t3: typing.Type[T3], t4: typing.Type[T4], t5: typing.Type[T5]) \
-        -> typing.Callable[[Func_args_T1_T2_T3_T4_T5_returns_RetT[T1, T2, T3, T4, T5, RetT]],
-                           Func_args_T1_T2_T3_T4_T5_returns_RetT[T1, T2, T3, T4, T5, RetT]
+        -> typing.Callable[[Method_args_T1_T2_T3_T4_T5_returns_RetT[T1, T2, T3, T4, T5, RetT]],
+                            Method_args_T1_T2_T3_T4_T5_returns_RetT[T1, T2, T3, T4, T5, RetT]
         ]: ...
 ### Note: we must declare a T6 version, so that the T5 version + result works correctly
 @typing.overload
 def Slot(t1: typing.Type[T1], t2: typing.Type[T2], t3: typing.Type[T3], t4: typing.Type[T4], t5: typing.Type[T5], t6: typing.Type[T6]) \
-        -> typing.Callable[[Func_args_T1_T2_T3_T4_T5_T6_returns_RetT[T1, T2, T3, T4, T5, T6, RetT]],
-                           Func_args_T1_T2_T3_T4_T5_T6_returns_RetT[T1, T2, T3, T4, T5, T6, RetT]
+        -> typing.Callable[[Method_args_T1_T2_T3_T4_T5_T6_returns_RetT[T1, T2, T3, T4, T5, T6, RetT]],
+                            Method_args_T1_T2_T3_T4_T5_T6_returns_RetT[T1, T2, T3, T4, T5, T6, RetT]
                         ]: ...
 @typing.overload
 def Slot(t1: typing.Type[T1], result: typing.Type[RetT]) \
-        -> typing.Callable[ [Func_args_T1_return_RetT[T1, RetT]],
-                            Func_args_T1_return_RetT[T1, RetT]
+        -> typing.Callable[ [Method_args_T1_return_RetT[T1, RetT]],
+                             Method_args_T1_return_RetT[T1, RetT]
         ]:
     return object
 @typing.overload
 def Slot(t1: typing.Type[T1], t2: typing.Type[T2], result: typing.Type[RetT]) \
-        -> typing.Callable[[Func_args_T1_T2_returns_RetT[T1, T2, RetT]],
-                           Func_args_T1_T2_returns_RetT[T1, T2, RetT]
+        -> typing.Callable[[Method_args_T1_T2_returns_RetT[T1, T2, RetT]],
+                            Method_args_T1_T2_returns_RetT[T1, T2, RetT]
         ]: ...
 @typing.overload
 def Slot(t1: typing.Type[T1], t2: typing.Type[T2], t3: typing.Type[T3], result: typing.Type[RetT]) \
-        -> typing.Callable[[Func_args_T1_T2_T3_returns_RetT[T1, T2, T3, RetT]],
-                           Func_args_T1_T2_T3_returns_RetT[T1, T2, T3, RetT]
+        -> typing.Callable[[Method_args_T1_T2_T3_returns_RetT[T1, T2, T3, RetT]],
+                           Method_args_T1_T2_T3_returns_RetT[T1, T2, T3, RetT]
         ]: ...
 @typing.overload
 def Slot(t1: typing.Type[T1], t2: typing.Type[T2], t3: typing.Type[T3], t4: typing.Type[T4], result: typing.Type[RetT]) \
-        -> typing.Callable[[Func_args_T1_T2_T3_T4_returns_RetT[T1, T2, T3, T4, RetT]],
-                           Func_args_T1_T2_T3_T4_returns_RetT[T1, T2, T3, T4, RetT]
+        -> typing.Callable[[Method_args_T1_T2_T3_T4_returns_RetT[T1, T2, T3, T4, RetT]],
+                           Method_args_T1_T2_T3_T4_returns_RetT[T1, T2, T3, T4, RetT]
         ]: ...
 @typing.overload
 def Slot(t1: typing.Type[T1], t2: typing.Type[T2], t3: typing.Type[T3], t4: typing.Type[T4], t5: typing.Type[T5], result: typing.Type[RetT]) \
-        -> typing.Callable[[Func_args_T1_T2_T3_T4_T5_returns_RetT[T1, T2, T3, T4, T5, RetT]],
-                           Func_args_T1_T2_T3_T4_T5_returns_RetT[T1, T2, T3, T4, T5, RetT]
+        -> typing.Callable[[Method_args_T1_T2_T3_T4_T5_returns_RetT[T1, T2, T3, T4, T5, RetT]],
+                           Method_args_T1_T2_T3_T4_T5_returns_RetT[T1, T2, T3, T4, T5, RetT]
         ]: ...
 @typing.overload
 def Slot(*some_types: typing.Type, result: typing.Type = ...) \
