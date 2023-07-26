@@ -4,6 +4,9 @@ To be released
 * remove `@staticmethod` applied to functions
 * fix `QTabBar.setButtonWidget()` to accept `None` as a widget argument
 * fix `QTreeWidget.setItemWidget()`  and `QListWidget.setItemWidget()` to accept `None` as a widget argument
+* fix functions `qCritical`, `qDebug`, `qFatal`, `qWarning`, `qtTrId`, `SLOT` to accept `str` instead of `bytes`
+* fix `QObject` methods `property`, `setProperty`, `tr`, `inherits` to accept `str` instead of `bytes`
+* fix `QObject` methods `connect` and `disconnect` to accept `str` instead of `bytes`
 
 
 Version 5.15.2.1.2:
