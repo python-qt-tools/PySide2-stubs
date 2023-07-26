@@ -7,6 +7,8 @@ To be released
 * fix functions `qCritical`, `qDebug`, `qFatal`, `qWarning`, `qtTrId`, `SLOT` to accept `str` instead of `bytes`
 * fix `QObject` methods `property`, `setProperty`, `tr`, `inherits` to accept `str` instead of `bytes`
 * fix `QObject` methods `connect` and `disconnect` to accept `str` instead of `bytes`
+* fix `setAlignement` methods to accept `Qt.AlignmentFlag` (like `Qt.AlignRight`), see PR #5 
+* fix `QLayout` derivative to accept `None` as parent argument
 
 
 Version 5.15.2.1.2:
