@@ -13,16 +13,16 @@ The CI way
 
 This is the easiest/quickest way in terms of setup.
 
-1. Create a fork pyside2-stubs
+1. Create a fork of `pyside2-stubs`
 
 
-2. Clone your forked repo of pyside2-stubs
+2. Clone your forked repo of `pyside2-stubs`
 
 
-2. Add test showing the incorrect stub. For example, I noticed that QAction.setShortcut() was declared to support
-   only QKeySequence whereas a simple string is also supported.
+3. Add test showing the incorrect stub. For example, I noticed that `QAction.setShortcut()` was declared to support
+   only `QKeySequence` whereas a simple string is also supported.
 
-   So I created a new file tests\qaction.py using the correct code usage, but detected incorrectly by mypy:
+   So I created a new file `tests\qaction.py` using the correct code usage, but detected incorrectly by mypy:
 
         from PySide2.QtWidgets import QAction
 
@@ -30,7 +30,7 @@ This is the easiest/quickest way in terms of setup.
         a.setShortcut('Ctrl+F')
 
 
-3. Fix the PySide2 stubs. In my case, I changed the signature of QAction.setShortcut()
+4. Fix the PySide2 stubs. In my case, I changed the signature of `QAction.setShortcut()`
 
    from:
 
@@ -42,10 +42,10 @@ This is the easiest/quickest way in terms of setup.
         def setShortcut(a: typing.Union[QKeySequence, str]) -> None: ...
 
 
-4. Commit the change and push it to your repo.
+5. Commit the change and push it to your repo.
 
 
-5. Create a pull request against pyside2-stubs. The PR will run the CI for your change and ensure that all tests continue
+6. Create a pull request against `pyside2-stubs`. The PR will run the CI for your change and ensure that all tests continue
    to pass successfully. I'll be happy to merge the result.
 
 
@@ -56,23 +56,25 @@ The manual way
 
 Here, you take all the steps to reproduce a complete stub testing environement to include your change.
 
-1. Clone pyside2-stubs
+1. Create a fork of `pyside2-stubs`
 
-2. Create a virtual environment (I used .env as a name for my virtual environment) and activate it.
+2. Clone your forked repo of `pyside2-stubs`
+
+3. Create a virtual environment (I used `.env` as a name for my virtual environment) and activate it.
 
 
         python -m venv .env  
         .env\scripts\activate
 
 
-3. Install the required packages for running the tests.
+4. Install the required packages for running the tests.
 
         python -m pip install -r dev-requirements.txt
 
-    Note: running pip as a python module is necessary because dev-requirements.txt modify pip itself.
+    Note: running pip as a python module is necessary because `dev-requirements.txt` modify pip itself.
           This can be confirmed by trying to run `pip install -r dev-requirements.txt`
 
-4. Make your current directory an editable installed package.
+5. Make your current directory an editable installed package.
 
 
         pip install -e .
@@ -81,7 +83,7 @@ Here, you take all the steps to reproduce a complete stub testing environement t
          For the CI, I need to force pip to version 21.2 for it to work. You may need to force pip also to this version.
 
 
-5. Make sure the tests run correctly as they are:
+6. Make sure the tests run correctly as they are:
 
         $ pytest -v
         [...]
@@ -91,7 +93,7 @@ Here, you take all the steps to reproduce a complete stub testing environement t
     There should be no failure reported.
 
    
-6. Add test showing the incorrect stub definitions. For example, I noticed that `QAction.setShortcut()` was declared to support
+7. Add test showing the incorrect stub definitions. For example, I noticed that `QAction.setShortcut()` was declared to support
    only `QKeySequence` whereas a simple string is also supported.
 
    So I created a new file `tests\qaction.py` using the correct code usage, but detected incorrectly by mypy:
@@ -102,7 +104,7 @@ Here, you take all the steps to reproduce a complete stub testing environement t
         a.setShortcut('Ctrl+F')
 
 
-7. Run the tests again. Your new file should be picked up and reported as an error by the mypy test.
+8. Run the tests again. Your new file should be picked up and reported as an error by the mypy test.
 
 
         (.env2) c:\oss\PyQt-stubs\PySide2-stubs>pytest -v
@@ -156,7 +158,7 @@ Here, you take all the steps to reproduce a complete stub testing environement t
     Note that you can run your new test only by uing: pytest -k "your test name" -v
 
 
-8. Fix the PySide2 stubs. In my case, I changed the signature of QAction.setShortcut() 
+9. Fix the PySide2 stubs. In my case, I changed the signature of `QAction.setShortcut()` 
 
    from:
 
@@ -167,7 +169,7 @@ Here, you take all the steps to reproduce a complete stub testing environement t
        def setShortcut(a: typing.Union[QKeySequence, str]) -> None: ...
 
 
-9. Rerun the tests. If it looks like mypy is still using the old stubs, delete .mypy-cache . It helps.
+10. Rerun the tests. If it looks like mypy is still using the old stubs, delete `.mypy-cache` . It helps.
    You should now see no error, but two more tests successful.
 
         $ pytest -v
@@ -175,6 +177,6 @@ Here, you take all the steps to reproduce a complete stub testing environement t
         ================================================= 62 passed in 13.07s =================================================
         $
 
-10. Commit your changes and push them to your repository.
+11. Commit your changes and push them to your repository.
 
-11. Create a pull request. I'll be glad to merge it. The CI will run basically the same tests that you did over your changes.
+12. Create a pull request. I'll be glad to merge it. The CI will run basically the same tests that you did over your changes.
