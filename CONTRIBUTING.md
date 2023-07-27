@@ -67,8 +67,10 @@ Here, you take all the steps to reproduce a complete stub testing environement t
 
 3. Install the required packages for running the tests.
 
-        pip install -r dev-requirements.txt
+        python -m pip install -r dev-requirements.txt
 
+    Note: running pip as a python module is necessary because dev-requirements.txt modify pip itself.
+          This can be confirmed by trying to run `pip install -r dev-requirements.txt`
 
 4. Make your current directory an editable installed package.
 
