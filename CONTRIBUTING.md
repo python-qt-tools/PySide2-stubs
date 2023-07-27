@@ -13,7 +13,10 @@ The CI way
 
 This is the easiest/quickest way in terms of setup.
 
-1. Clone pyside2-stubs
+1. Create a fork pyside2-stubs
+
+
+2. Clone your forked repo of pyside2-stubs
 
 
 2. Add test showing the incorrect stub. For example, I noticed that QAction.setShortcut() was declared to support
@@ -32,11 +35,11 @@ This is the easiest/quickest way in terms of setup.
    from:
 
 
-      def setShortcut(a: QKeySequence) -> None: ...
+        def setShortcut(a: QKeySequence) -> None: ...
    
    to:
 
-      def setShortcut(a: typing.Union[QKeySequence, str]) -> None: ...
+        def setShortcut(a: typing.Union[QKeySequence, str]) -> None: ...
 
 
 4. Commit the change and push it to your repo.
@@ -58,19 +61,19 @@ Here, you take all the steps to reproduce a complete stub testing environement t
 2. Create a virtual environment (I used .env as a name for my virtual environment) and activate it.
 
 
-      $ python -m venv .env  
-      $ .env\scripts\activate
+        python -m venv .env  
+        .env\scripts\activate
 
 
 3. Install the required packages for running the tests.
 
-       pip install -r dev-requirements.txt
+        pip install -r dev-requirements.txt
 
 
 4. Make your current directory an editable installed package.
 
 
-      pip install -e .
+        pip install -e .
 
    Note: currently, with pip 22 and above, and mypy 0.971, the editable installation is not picked by mypy.
          For the CI, I need to force pip to version 21.2 for it to work. You may need to force pip also to this version.
