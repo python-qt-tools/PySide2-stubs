@@ -54,7 +54,7 @@ This is the easiest/quickest way in terms of setup.
 The manual way
 --------------
 
-Here, you take all the steps to reproduce a complete stub testing environement to include your change.
+Here, you take all the steps to reproduce a complete stub testing environment to include your change.
 
 1. Create a fork of `pyside2-stubs`
 
@@ -155,7 +155,7 @@ Here, you take all the steps to reproduce a complete stub testing environement t
         (.env2) c:\oss\PyQt-stubs\PySide2-stubs>
 
 
-    Note that you can run your new test only by uing: pytest -k "your test name" -v
+    Note that you can run your new test only by using: `pytest -k "your test name" -v`
 
 
 9. Fix the PySide2 stubs. In my case, I changed the signature of `QAction.setShortcut()` 
