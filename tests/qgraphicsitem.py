@@ -5,3 +5,4 @@ a = QGraphicsItem()
 a.setData(Qt.UserRole, {1: 11, 2: 22})
 _ = a.data(Qt.UserRole)
 
+a.setFlags(QGraphicsItem.ItemSendsScenePositionChanges)
