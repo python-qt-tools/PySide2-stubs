@@ -48,6 +48,7 @@ import sys
 # Module PySide2.QtCore
 import PySide2
 
+import enum
 import typing
 
 import shiboken2 as Shiboken
@@ -13866,10 +13867,12 @@ def Slot(*some_types: typing.Type, result: typing.Type = ...) \
                            typing.Callable[..., RetT]]: ...
 
 
+_ET = typing.TypeVar("_ET", bound="enum.Enum")
+_FT = typing.TypeVar("_FT", bound="enum.Flag")
 
-def QEnum(arg__1:object) -> object: ...
+def QEnum(arg__1: typing.Type[_ET]) -> typing.Type[_ET]: ...
 
-def QFlag(arg__1:object) -> object: ...
+def QFlag(arg__1: typing.Type[_FT]) -> typing.Type[_FT]: ...
 
 def QT_TRANSLATE_NOOP(arg__1:object, arg__2:object) -> object: ...
 
