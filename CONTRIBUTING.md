@@ -77,10 +77,10 @@ Here, you take all the steps to reproduce a complete stub testing environment to
 5. Make your current directory an editable installed package.
 
 
-        pip install -e .
+        pip install -e . --config-settings editable_mode=strict
 
-   Note: currently, with pip 22 and above, and mypy 0.971, the editable installation is not picked by mypy.
-         For the CI, I need to force pip to version 21.2 for it to work. You may need to force pip also to this version.
+   Note: the `editable_mode` option is required for Mypy to pick up the editable installation as of recent versions of setuptools.
+         See https://github.com/python/mypy/issues/13392.
 
 
 6. Make sure the tests run correctly as they are:
