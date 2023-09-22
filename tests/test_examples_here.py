@@ -1,3 +1,4 @@
+import subprocess
 from typing import Iterator, cast
 
 import os
@@ -5,6 +6,7 @@ from pathlib import Path
 
 import pytest
 from mypy import api
+from pyright import cli
 from PySide2.QtWidgets import QApplication
 
 TESTS_DIR = Path(__file__).parent
@@ -42,6 +44,23 @@ def test_examples_with_mypy(filepath: Path) -> None:
     assert stdout.startswith("Success: no issues found")
     assert not stderr
     assert exitcode == 0
+
+@pytest.mark.parametrize(
+    "filepath",
+    list(gen_file_list()),
+    ids=[v.relative_to(TESTS_DIR).as_posix() for v in gen_file_list()],
+)
+def test_examples_with_pyright(filepath: Path) -> None:
+    """Run pyright over example files."""
+    proc = cast("subprocess.CompletedProcess[str]", cli.run(os.fspath(filepath), capture_output=True, text=True))
+    if proc.stdout:
+        print(proc.stdout)
+    if proc.stderr:
+        print(proc.stderr)
+
+    assert proc.stdout.startswith("0 errors, 0 warnings")
+    assert not proc.stderr
+    assert proc.returncode == 0
 
 
 @pytest.mark.parametrize(

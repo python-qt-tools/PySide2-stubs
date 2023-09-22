@@ -1,3 +1,5 @@
+# pyright: reportUnusedExpression=false
+
 from typing import List
 
 from PySide2.QtGui import QPolygon
