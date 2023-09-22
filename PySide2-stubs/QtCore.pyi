@@ -54,7 +54,7 @@ import shiboken2 as Shiboken
 
 import PySide2.QtCore
 
-QObjectT = typing.TypeVar('QObjectT', bound='QOjbect')
+QObjectT = typing.TypeVar('QObjectT', bound='QObject')
 
 class ClassInfo(object):
 
