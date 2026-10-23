@@ -48,9 +48,13 @@ As a derived work from PySide2, the stubs are delivered under the LGPL v2.1 . Se
 
 # Installation
 
-Simply install the official PySide2-stubs with pip:
+Install the stubs without installing PySide2:
 
     $ pip install PySide2-stubs
+
+To also install the PySide2 binding, use the `pyside2` extra:
+
+    $ pip install "PySide2-stubs[pyside2]"
 
 Or use the latest version from Github:
 
