@@ -48,9 +48,17 @@ As a derived work from PySide2, the stubs are delivered under the LGPL v2.1 . Se
 
 # Installation
 
-Simply install the official PySide2-stubs with pip:
+Install the stubs with pip:
 
     $ pip install PySide2-stubs
+
+To have the dependency resolver enforce the declared PySide2 version
+compatibility constraints, select the `pyside2` extra:
+
+    $ pip install "PySide2-stubs[pyside2]"
+
+Selecting this extra may also cause pip to install or change PySide2 as a side
+effect of satisfying those constraints.
 
 Or use the latest version from Github:
 
