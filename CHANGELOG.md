@@ -1,7 +1,7 @@
 
 To be released
 ==============
-* Make PySide2 an optional dependency, installed with the `pyside2` extra.
+* Make the PySide2 version compatibility constraint optional through the `pyside2` extra.
 * remove `@staticmethod` applied to functions
 * fix `QTabBar.setButtonWidget()` to accept `None` as a widget argument
 * fix `QTreeWidget.setItemWidget()`  and `QListWidget.setItemWidget()` to accept `None` as a widget argument
